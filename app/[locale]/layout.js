@@ -3,6 +3,8 @@ import { getSupportedLocales } from '@/lib/i18n';
 import { getSeoMeta } from '@/lib/metadata-translations';
 import { notFound } from 'next/navigation';
 
+const ROOT_URL = "https://www.labubuwholesale.com";
+
 export async function generateStaticParams() {
   return getSupportedLocales().map((locale) => ({
     locale: locale,
@@ -23,27 +25,33 @@ export async function generateMetadata({ params }) {
   };
 
   const canonicalUrl = locale === 'en' 
-    ? 'https://www.labubuwholesale.com' 
-    : `https://www.labubuwholesale.com/${locale}`;
+    ? ROOT_URL 
+    : `${ROOT_URL}/${locale}`;
   
   return {
     title,
     description,
+    robots: {
+      index: true,
+      follow: true,
+    },
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': 'https://www.labubuwholesale.com',
-        'es': 'https://www.labubuwholesale.com/es',
-        'fr': 'https://www.labubuwholesale.com/fr',
-        'de': 'https://www.labubuwholesale.com/de',
-        'ja': 'https://www.labubuwholesale.com/ja',
-        'ko': 'https://www.labubuwholesale.com/ko',
+        'en': ROOT_URL,
+        'es': `${ROOT_URL}/es`,
+        'fr': `${ROOT_URL}/fr`,
+        'de': `${ROOT_URL}/de`,
+        'ja': `${ROOT_URL}/ja`,
+        'ko': `${ROOT_URL}/ko`,
+        'x-default': ROOT_URL,
       },
     },
     openGraph: {
       title,
       description,
       url: canonicalUrl,
+      siteName: "Labubu Wholesale",
       locale: localeMap[locale] || 'en_US',
       type: 'website',
       images: [
