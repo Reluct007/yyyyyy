@@ -110,12 +110,42 @@ module.exports = {
    ```
 4. 在 `theme.config.js` 中注册
 
-## 🚢 部署到 Cloudflare Pages
+## 🚢 部署到 Vercel
 
-设置:
-- Root directory: `themes/labubu`
-- Build command: `npm run pages:build`
-- Build output: `.vercel/output/static`
+### 1. 连接 GitHub 仓库
+在 Vercel Dashboard 中导入项目
+
+### 2. 配置项目设置
+- **Root Directory**: `themes/labubu`
+- **Framework Preset**: Next.js
+- **Build Command**: `npm run build`
+- **Output Directory**: `.next`
+
+### 3. 配置环境变量
+在 Vercel 项目设置 → Environment Variables 中添加:
+
+| 变量名 | 说明 |
+|--------|------|
+| `RESEND_API_KEY` | Resend API 密钥 ([获取](https://resend.com/api-keys)) |
+| `CONTACT_EMAIL` | 接收表单提交的邮箱 |
+| `FROM_EMAIL` | 发件人邮箱 (需在 Resend 验证域名) |
+
+### 4. 配置 Resend
+1. 注册 [Resend](https://resend.com) 账号
+2. 添加并验证你的域名
+3. 创建 API Key
+4. 将 API Key 添加到 Vercel 环境变量
+
+## 📧 邮件功能
+
+项目集成了 Resend 邮件服务，支持:
+- **联系表单**: 客户询价/留言 → 发送到管理员邮箱
+- **订阅表单**: 用户订阅 → 通知管理员 + 发送欢迎邮件
+
+### 本地测试
+1. 复制 `.env.example` 为 `.env.local`
+2. 填入你的 Resend API Key
+3. 测试时可使用 `onboarding@resend.dev` 作为发件人
 
 ## 📝 修改内容
 

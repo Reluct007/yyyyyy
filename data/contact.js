@@ -4,7 +4,7 @@ export const contact = {
   header: {
     title: "Contact Us",
     description: "Have questions or need assistance? We're here to help! Reach out to our friendly team through any of the channels below.",
-    image: "/contact/About-us.webp",
+    image: "/themes/labubu/contact/About-us.webp",
     features: [
       "Exceptional Quality: We ensure that every product meets the highest standards of quality and durability",
       "Customer-Centric Solutions: Our products are designed to brighten your daily life, adding creativity and joy to your home, workspace, and personal moments",
