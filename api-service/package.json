@@ -1,0 +1,8 @@
+{
+  "name": "labubu-api-service",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "resend": "^6.6.0"
+  }
+}

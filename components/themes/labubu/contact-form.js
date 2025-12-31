@@ -164,16 +164,19 @@ export default function ContactForm({ locale = 'en' }) {
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
-    const formData = new FormData();
-    formData.append("name", data.name);
-    formData.append("company", data.company);
-    formData.append("email", data.email);
-    formData.append("phone", data.phone);
-    formData.append("quantity", data.quantity);
-    formData.append("message", data.message);
+    
+    // API 服务地址 (Vercel)
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://labubu-api.vercel.app';
 
     try {
-      const response = await axios.post("/api/contact", formData);
+      const response = await axios.post(`${API_URL}/api/contact`, {
+        name: data.name,
+        company: data.company,
+        email: data.email,
+        phone: data.phone,
+        quantity: data.quantity,
+        message: data.message
+      });
       if (response.data.success) {
         toast.success(response.data.msg);
         setData({

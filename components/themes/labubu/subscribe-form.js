@@ -22,8 +22,12 @@ export default function SubscribeForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // API 服务地址 (Vercel)
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://labubu-api.vercel.app';
+    
     try {
-      const response = await axios.post("/api/subscribe", { email }, {
+      const response = await axios.post(`${API_URL}/api/subscribe`, { email }, {
         headers: { 'Content-Type': 'application/json' }
       });
       if (response.data.success) {
