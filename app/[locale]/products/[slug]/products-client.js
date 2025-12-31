@@ -10,16 +10,19 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useLanguage } from '@/lib/language-context';
+import { useSearchParams } from 'next/navigation';
 
 // Get Header Info from original data (for fallback)
 const headerInfo = (slug) => products.products.find(product => slugify(product.title, { lower: true, strict: true }) === slug);
 
-export default function ProductsClient({ params, searchParams, locale: routeLocale }) {
+function ProductsContent({ params, locale: routeLocale }) {
   const { translations, locale: contextLocale } = useLanguage();
   const locale = routeLocale || contextLocale || 'en';
   const [mounted, setMounted] = useState(false);
+  const searchParams = useSearchParams();
+  const page = Math.max(1, parseInt(searchParams?.get('page'), 10) || 1);
   
   useEffect(() => {
     setMounted(true);
@@ -179,7 +182,6 @@ export default function ProductsClient({ params, searchParams, locale: routeLoca
   // Pagination
   const itemsPerPage = 52;
   const maxPageNumbers = 5;
-  const page = Math.max(1, parseInt(searchParams?.page, 10) || 1);
   const totalPages = Math.max(1, Math.ceil(productArray.length / itemsPerPage)); // Ensure at least 1 page
   const startIndex = (page - 1) * itemsPerPage;
   const productsPage = productArray.slice(startIndex, startIndex + itemsPerPage);
@@ -266,6 +268,14 @@ export default function ProductsClient({ params, searchParams, locale: routeLoca
         </div>
       </section>
     </>
+  );
+}
+
+export default function ProductsClient({ params, locale }) {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProductsContent params={params} locale={locale} />
+    </Suspense>
   );
 }
 

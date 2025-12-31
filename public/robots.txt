@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /product/*SS40_BG85*
+Disallow: /product/*_SX38_SY50_CR*
+Disallow: /product/*_BR-120_PKdp-play-icon-overlay__*
+Disallow: /cdn-cgi/*
+
+Sitemap: https://www.labubuwholesale.com/sitemap.xml

@@ -1,0 +1,109 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const ROOT_URL = "https://www.labubuwholesale.com";
+const locales = ['en', 'es', 'fr', 'de', 'ja', 'ko'];
+
+// Import data
+const { products } = await import('../data/products.js');
+const { product } = await import('../data/product.js');
+
+function slugify(text) {
+  return text
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-');
+}
+
+function generateSitemap() {
+  const urls = [];
+  const currentDate = new Date().toISOString().split('T')[0];
+
+  // Homepage - all languages
+  locales.forEach(locale => {
+    const baseUrl = locale === 'en' ? ROOT_URL : `${ROOT_URL}/${locale}`;
+    urls.push(`  <url>
+    <loc>${baseUrl}/</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>${locale === 'en' ? '1.0' : '0.9'}</priority>
+  </url>`);
+  });
+
+  // Products page
+  locales.forEach(locale => {
+    const baseUrl = locale === 'en' ? ROOT_URL : `${ROOT_URL}/${locale}`;
+    urls.push(`  <url>
+    <loc>${baseUrl}/products/</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>`);
+  });
+
+  // Product categories
+  const productCategories = products?.products || [];
+  productCategories.forEach((p) => {
+    const slug = slugify(p.title);
+    locales.forEach(locale => {
+      const baseUrl = locale === 'en' ? ROOT_URL : `${ROOT_URL}/${locale}`;
+      urls.push(`  <url>
+    <loc>${baseUrl}/products/${slug}/</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>`);
+    });
+  });
+
+  // Product details
+  const productItems = product || [];
+  productItems.forEach((p) => {
+    if (!p.title || p.title.length < 3) return;
+    const slug = slugify(p.title);
+    if (!slug || slug.length < 3) return;
+    
+    locales.forEach(locale => {
+      const baseUrl = locale === 'en' ? ROOT_URL : `${ROOT_URL}/${locale}`;
+      urls.push(`  <url>
+    <loc>${baseUrl}/product/${slug}/</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`);
+    });
+  });
+
+  // Static pages
+  const staticPages = ['about', 'contact', 'privacy-policy', 'terms-conditions', 'faq'];
+  staticPages.forEach(page => {
+    locales.forEach(locale => {
+      const baseUrl = locale === 'en' ? ROOT_URL : `${ROOT_URL}/${locale}`;
+      urls.push(`  <url>
+    <loc>${baseUrl}/${page}/</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>`);
+    });
+  });
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.join('\n')}
+</urlset>`;
+
+  // Write to public folder
+  const outputPath = path.join(__dirname, '../public/sitemap.xml');
+  fs.writeFileSync(outputPath, sitemap);
+  console.log('Sitemap generated:', outputPath);
+}
+
+generateSitemap();

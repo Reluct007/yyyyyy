@@ -25,18 +25,17 @@ export async function generateStaticParams() {
   return params;
 }
 
-export async function generateMetadata({ params, searchParams }) {
-  const { locale, slug } = params;
-  const page = Math.max(1, parseInt(searchParams?.page, 10) || 1);
-  return generateProductsMetadata(slug, locale || 'en', page);
+export async function generateMetadata({ params }) {
+  const { locale, slug } = await params;
+  return generateProductsMetadata(slug, locale || 'en', 1);
 }
 
-export default function Product({ params, searchParams }) {
-  const { locale, slug } = params;
+export default async function Product({ params }) {
+  const { locale, slug } = await params;
   
   // Get Banner Header Info - always use original data for slug matching
   const originalHeader = headerInfo(slug);
   if (!originalHeader) notFound();
 
-  return <ProductsClient params={{ slug }} searchParams={searchParams} locale={locale} />;
+  return <ProductsClient params={{ slug }} locale={locale} />;
 }

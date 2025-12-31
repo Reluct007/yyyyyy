@@ -14,15 +14,16 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params, searchParams }) {
-  const page = Math.max(1, parseInt(searchParams?.page, 10) || 1);
-  return generateProductsMetadata(params.slug, 'en', page);
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  return generateProductsMetadata(slug, 'en', 1);
 }
 
-export default function Product({ params, searchParams }) {
+export default async function Product({ params }) {
+  const { slug } = await params;
   // Get Banner Header Info - always use original data for slug matching
-  const originalHeader = headerInfo(params.slug);
+  const originalHeader = headerInfo(slug);
   if (!originalHeader) notFound();
 
-  return <ProductsClient params={params} searchParams={searchParams} />;
+  return <ProductsClient params={{ slug }} />;
 }

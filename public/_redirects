@@ -1,0 +1,52 @@
+# Non-www to www redirect (handled by Cloudflare DNS)
+
+# Terms redirect
+/terms-and-conditions /terms-conditions/ 301
+
+# Email protection redirect
+/cdn-cgi/l/email-protection /contact/ 301
+
+# Invalid product categories
+/products/blind-boxes /products/labubu/ 301
+/products/plush-toys /products/labubu/ 301
+/products/bags /products/ 301
+
+# French category redirects
+/fr/products/poupees /fr/products/dolls/ 301
+/fr/products/jouets-danimaux /fr/products/animals-toy/ 301
+
+# Spanish category redirects
+/es/products/munecas /es/products/dolls/ 301
+/es/products/juguetes-de-animales /es/products/animals-toy/ 301
+
+# German category redirects
+/de/products/puppen /de/products/dolls/ 301
+/de/products/tier-spielzeug /de/products/animals-toy/ 301
+
+# Product without slug
+/product /products/ 301
+/product/ /products/ 301
+
+# Blog redirects
+/blog / 301
+/blog/* / 301
+
+# Invalid product URLs
+/product/the-goo-goo-dolls-live-in-buffalo-july-4th-2004-dvd /products/ 301
+/product/2-set-car-seat-for-10-17cm-dolls /products/labubu/ 301
+/product/doll-clothes-compatible-with-labubu-2-set-outfits4-pieces /products/labubu/ 301
+/product/clothes-for-labubu-dolls-cute-shark-outfit /products/labubu/ 301
+/product/large-clear-figure-display-bag-with-keychain-case-6 /products/labubu/ 301
+/product/labubu-sketch-collection-figurine-138-inch-height /products/labubu/ 301
+/product/glitter-girls-14-inch-fashion-doll /products/dolls/ 301
+/product/11-soft-and-cuddly-baby-doll-realistic-features /products/dolls/ 301
+
+# Old blog posts
+/rise-of-remote-work-culture / 301
+/sustainable-living-eco-friendly-practices / 301
+/impact-of-5g-technology / 301
+/cybersecurity-best-practices-businesses / 301
+/artificial-intelligence-healthcare / 301
+/digital-marketing-trends-2024 / 301
+/the-future-of-smart-home-technology / 301
+/financial-planning-young-professionals / 301
