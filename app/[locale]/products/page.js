@@ -1,4 +1,4 @@
-import Header from "@/components/common/header";
+import Header from "@/components/themes/labubu/header";
 import { ChevronRight } from "lucide-react";
 import { getProductsByLanguage } from "@/data/auto-translate";
 import { getSupportedLocales, getTranslations } from "@/lib/i18n";

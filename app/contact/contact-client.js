@@ -1,7 +1,7 @@
 'use client';
 
-import ContactForm from "@/components/common/contact-form";
-import Header from "@/components/common/header";
+import ContactForm from "@/components/themes/labubu/contact-form";
+import Header from "@/components/themes/labubu/header";
 import { contact } from "@/data/contact";
 import { useLanguage } from '@/lib/language-context';
 import { useEffect, useState } from 'react';

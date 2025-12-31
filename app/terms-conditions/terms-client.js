@@ -1,6 +1,6 @@
 'use client';
 
-import Policy from "@/components/common/policy";
+import Policy from "@/components/themes/labubu/policy";
 import { terms } from "@/data/terms";
 import { useLanguage } from '@/lib/language-context';
 import { useEffect, useState } from 'react';
