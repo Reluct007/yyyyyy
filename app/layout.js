@@ -13,8 +13,6 @@ const inter = Inter({
   preload: true,
 });
 
-export const runtime = "edge";
-
 export const metadata = {
   metadataBase: new URL('https://www.labubuwholesale.com'),
   title: {
