@@ -1,6 +1,6 @@
 'use client';
 
-import ContactForm from "@/components/common/contact-form";
+import ContactForm from "@/components/themes/labubu/contact-form";
 import { MapPinHouse, Headset, MailSearch, CalendarClock } from "lucide-react";
 import { useLanguage } from '@/lib/language-context';
 

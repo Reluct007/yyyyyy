@@ -4,7 +4,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { navigationMenuTriggerStyle } from '@/components/ui/navigation-menu';
 import { Button, buttonVariants } from '@/components/ui/button';
-import ContactForm from '@/components/common/contact-form';
+import ContactForm from '@/components/themes/labubu/contact-form';
 import { Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
