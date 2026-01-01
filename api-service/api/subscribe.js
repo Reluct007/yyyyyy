@@ -1,10 +1,25 @@
 import { Resend } from 'resend';
+import { kv } from '@vercel/kv';
 
-const emailConfig = {
-  contactEmail: process.env.CONTACT_EMAIL || 'info@labubuwholesale.com',
-  fromEmail: process.env.FROM_EMAIL || 'noreply@labubuwholesale.com',
-  fromName: 'Labubu Wholesale',
-};
+const CONFIG_KEY = 'site_config';
+
+// 获取邮件配置
+async function getEmailConfig() {
+  let config = {};
+  
+  try {
+    config = await kv.get(CONFIG_KEY) || {};
+  } catch (e) {
+    console.log('KV not available, using env vars');
+  }
+
+  return {
+    contactEmail: config.contactEmail || process.env.CONTACT_EMAIL || 'info@labubuwholesale.com',
+    fromEmail: config.fromEmail || process.env.FROM_EMAIL || 'noreply@labubuwholesale.com',
+    fromName: config.fromName || 'Labubu Wholesale',
+    siteName: config.siteName || 'Labubu Wholesale',
+  };
+}
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -21,6 +36,8 @@ export default async function handler(req, res) {
       return res.status(400).json({ success: false, msg: 'Please enter a valid email' });
     }
 
+    // 获取动态配置
+    const emailConfig = await getEmailConfig();
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     // 通知管理员
@@ -35,9 +52,9 @@ export default async function handler(req, res) {
     await resend.emails.send({
       from: `${emailConfig.fromName} <${emailConfig.fromEmail}>`,
       to: email,
-      subject: 'Welcome to Labubu Wholesale Newsletter!',
+      subject: `Welcome to ${emailConfig.siteName} Newsletter!`,
       html: `
-        <h1 style="color: #f97316;">Welcome to Labubu Wholesale!</h1>
+        <h1 style="color: #f97316;">Welcome to ${emailConfig.siteName}!</h1>
         <p>Thank you for subscribing to our newsletter.</p>
         <p>You'll be the first to know about new products and exclusive deals!</p>
       `,

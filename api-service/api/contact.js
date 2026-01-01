@@ -1,10 +1,24 @@
 import { Resend } from 'resend';
+import { kv } from '@vercel/kv';
 
-const emailConfig = {
-  contactEmail: process.env.CONTACT_EMAIL || 'info@labubuwholesale.com',
-  fromEmail: process.env.FROM_EMAIL || 'noreply@labubuwholesale.com',
-  fromName: 'Labubu Wholesale',
-};
+const CONFIG_KEY = 'site_config';
+
+// 获取邮件配置
+async function getEmailConfig() {
+  let config = {};
+  
+  try {
+    config = await kv.get(CONFIG_KEY) || {};
+  } catch (e) {
+    console.log('KV not available, using env vars');
+  }
+
+  return {
+    contactEmail: config.contactEmail || process.env.CONTACT_EMAIL || 'info@labubuwholesale.com',
+    fromEmail: config.fromEmail || process.env.FROM_EMAIL || 'noreply@labubuwholesale.com',
+    fromName: config.fromName || 'Labubu Wholesale',
+  };
+}
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -21,6 +35,8 @@ export default async function handler(req, res) {
       return res.status(400).json({ success: false, msg: 'Please fill in all required fields' });
     }
 
+    // 获取动态配置
+    const emailConfig = await getEmailConfig();
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     await resend.emails.send({

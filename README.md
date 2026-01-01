@@ -8,6 +8,7 @@
 - [环境要求](#环境要求)
 - [本地开发](#本地开发)
 - [部署指南](#部署指南)
+- [后台管理](#后台管理)
 - [主题开发](#主题开发)
 - [邮件服务配置](#邮件服务配置)
 - [环境变量说明](#环境变量说明)
@@ -25,6 +26,8 @@ GitHub 仓库
     │
     └──→ Vercel (API 服务)
          - 邮件发送服务
+         - 后台管理 API
+         - 配置存储 (Vercel KV)
          - Serverless Functions
 ```
 
@@ -34,12 +37,20 @@ GitHub 仓库
 labubu/
 ├── api-service/                 # 📧 API 服务 (部署到 Vercel)
 │   ├── api/
+│   │   ├── admin/              # 后台管理 API
+│   │   │   ├── login.js        # 管理员登录
+│   │   │   ├── config.js       # 配置管理
+│   │   │   └── themes.js       # 主题列表
 │   │   ├── contact.js          # 联系表单 API
 │   │   └── subscribe.js        # 订阅表单 API
 │   ├── package.json
 │   └── vercel.json
 │
 ├── app/                         # 🌐 Next.js 页面
+│   ├── admin/                  # 🔐 后台管理页面
+│   │   ├── page.js             # 登录页
+│   │   ├── layout.js           # 后台布局
+│   │   └── dashboard/          # 仪表盘
 │   ├── [locale]/               # 多语言路由
 │   ├── about/
 │   ├── contact/
@@ -210,10 +221,48 @@ npm run build
 | `RESEND_API_KEY` | `re_xxxxxxxx` | Resend API 密钥 |
 | `CONTACT_EMAIL` | `your@email.com` | 接收表单邮件的邮箱 |
 | `FROM_EMAIL` | `noreply@yourdomain.com` | 发件人邮箱 (需在 Resend 验证域名) |
+| `ADMIN_USERNAME` | `admin` | 后台管理员用户名 |
+| `ADMIN_PASSWORD` | `your-password` | 后台管理员密码 |
+| `JWT_SECRET` | `random-secret-key` | JWT 签名密钥 |
 
-#### 步骤 4：部署
+#### 步骤 4：启用 Vercel KV
+
+1. 进入 Vercel 项目 → Storage
+2. 点击 "Create Database" → 选择 "KV"
+3. 创建后自动添加环境变量
+
+#### 步骤 5：部署
 
 点击 "Deploy"，等待部署完成。
+
+---
+
+## 🔐 后台管理
+
+### 访问后台
+
+访问 `https://your-site.com/admin` 进入后台登录页面。
+
+### 功能说明
+
+后台管理支持以下功能：
+
+1. **主题切换** - 选择当前激活的主题
+2. **邮件设置** - 配置接收邮箱、发件邮箱、发件人名称
+3. **网站设置** - 配置网站名称、描述
+
+### 配置优先级
+
+邮件配置的优先级：
+1. 后台设置的值（存储在 Vercel KV）
+2. Vercel 环境变量
+3. 代码中的默认值
+
+### 注意事项
+
+- 主题切换后需要重新构建前端才能生效
+- 邮件设置修改后立即生效，无需重新部署
+- 发件邮箱的域名必须在 Resend 中验证
 
 ---
 
