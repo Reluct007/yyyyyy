@@ -1,45 +1,38 @@
-import { Resend } from 'resend';
-import { kvGet } from '../lib/cloudflare-kv.js';
+import { jsonResponse } from '../utils/response.js';
+import { sendEmail } from '../utils/resend.js';
 
 const CONFIG_KEY = 'site_config';
 
 // 获取邮件配置
-async function getEmailConfig() {
+async function getEmailConfig(env) {
   let config = {};
   
   try {
-    config = await kvGet(CONFIG_KEY) || {};
+    const stored = await env.CONFIG_KV.get(CONFIG_KEY, 'json');
+    if (stored) config = stored;
   } catch (e) {
     console.log('KV not available, using env vars');
   }
 
   return {
-    contactEmail: config.contactEmail || process.env.CONTACT_EMAIL || 'info@labubuwholesale.com',
-    fromEmail: config.fromEmail || process.env.FROM_EMAIL || 'noreply@labubuwholesale.com',
+    contactEmail: config.contactEmail || env.CONTACT_EMAIL || 'info@labubuwholesale.com',
+    fromEmail: config.fromEmail || env.FROM_EMAIL || 'noreply@labubuwholesale.com',
     fromName: config.fromName || 'Labubu Wholesale',
   };
 }
 
-export default async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-
-  if (req.method === 'OPTIONS') return res.status(200).end();
-  if (req.method !== 'POST') return res.status(405).json({ success: false, msg: 'Method not allowed' });
-
+export async function handleContact(request, env) {
   try {
-    const { name, email, company, phone, quantity, message } = req.body;
+    const { name, email, company, phone, quantity, message } = await request.json();
 
     if (!name || !email || !message) {
-      return res.status(400).json({ success: false, msg: 'Please fill in all required fields' });
+      return jsonResponse({ success: false, msg: 'Please fill in all required fields' }, 400);
     }
 
     // 获取动态配置
-    const emailConfig = await getEmailConfig();
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    const emailConfig = await getEmailConfig(env);
 
-    await resend.emails.send({
+    await sendEmail(env.RESEND_API_KEY, {
       from: `${emailConfig.fromName} <${emailConfig.fromEmail}>`,
       to: emailConfig.contactEmail,
       subject: `New Quote Request - ${name}`,
@@ -56,9 +49,9 @@ export default async function handler(req, res) {
       `,
     });
 
-    return res.status(200).json({ success: true, msg: 'Message sent successfully!' });
+    return jsonResponse({ success: true, msg: 'Message sent successfully!' });
   } catch (error) {
     console.error('Contact error:', error);
-    return res.status(500).json({ success: false, msg: 'Failed to send message' });
+    return jsonResponse({ success: false, msg: 'Failed to send message' }, 500);
   }
 }

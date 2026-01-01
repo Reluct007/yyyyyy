@@ -4,7 +4,7 @@
  * POST /api/admin/config - 更新配置
  */
 
-import { kv } from '@vercel/kv';
+import { kvGet, kvSet } from '../../lib/cloudflare-kv.js';
 
 // 验证 JWT Token
 function verifyToken(token, secret) {
@@ -59,7 +59,7 @@ export default async function handler(req, res) {
       const authHeader = req.headers.authorization;
       const isAdmin = authHeader && verifyToken(authHeader.replace('Bearer ', ''), jwtSecret);
 
-      let config = await kv.get(CONFIG_KEY);
+      let config = await kvGet(CONFIG_KEY);
       
       if (!config) {
         config = defaultConfig;
@@ -112,7 +112,7 @@ export default async function handler(req, res) {
       const updates = req.body;
 
       // 获取当前配置
-      let config = await kv.get(CONFIG_KEY);
+      let config = await kvGet(CONFIG_KEY);
       if (!config) {
         config = defaultConfig;
       }
@@ -126,7 +126,7 @@ export default async function handler(req, res) {
       };
 
       // 保存配置
-      await kv.set(CONFIG_KEY, newConfig);
+      await kvSet(CONFIG_KEY, newConfig);
 
       return res.status(200).json({
         success: true,

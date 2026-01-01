@@ -2,8 +2,8 @@
   "name": "labubu-api-service",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "dependencies": {
-    "resend": "^6.6.0",
-    "@vercel/kv": "^2.0.0"
+    "resend": "^6.6.0"
   }
 }

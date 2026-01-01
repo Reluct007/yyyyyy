@@ -1,5 +1,5 @@
 import { Resend } from 'resend';
-import { kv } from '@vercel/kv';
+import { kvGet } from '../lib/cloudflare-kv.js';
 
 const CONFIG_KEY = 'site_config';
 
@@ -8,7 +8,7 @@ async function getEmailConfig() {
   let config = {};
   
   try {
-    config = await kv.get(CONFIG_KEY) || {};
+    config = await kvGet(CONFIG_KEY) || {};
   } catch (e) {
     console.log('KV not available, using env vars');
   }
