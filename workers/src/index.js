@@ -43,6 +43,21 @@ export default {
     }
 
     try {
+      // 根路径 - API 状态
+      if (path === '/' || path === '') {
+        return jsonResponse({
+          success: true,
+          msg: 'Labubu API is running',
+          endpoints: [
+            'POST /api/contact',
+            'POST /api/subscribe',
+            'POST /api/admin/login',
+            'GET/POST /api/admin/config',
+            'GET /api/admin/themes'
+          ]
+        });
+      }
+
       // 路由
       if (path === '/api/contact' && request.method === 'POST') {
         return await handleContact(request, env);

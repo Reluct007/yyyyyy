@@ -4,14 +4,14 @@ compatibility_date = "2024-01-01"
 
 # KV 命名空间绑定
 [[kv_namespaces]]
-binding = "labubu"
+binding = "CONFIG_KV"
 id = "3770414ddf9b4f3588e33c5bbe371046"  # 替换为你的 KV Namespace ID
 
 [vars]
 # 这些值应该在 Cloudflare Dashboard 中设置为 Secrets
-# RESEND_API_KEY = "re_byaHyotz_6jbVrRGzzZTjgXMnwk4VWiRb"
-# CONTACT_EMAIL = "yoo@hhooh.com"
-# FROM_EMAIL = "noreply@saysno.com"
-# ADMIN_USERNAME = "world"
-# ADMIN_PASSWORD = "dl0101"
-# JWT_SECRET = "imgbed_zDCzp8fXhoCvgC9mNneH9BqcNtbJ7K45"
+# RESEND_API_KEY = ""
+# CONTACT_EMAIL = ""
+# FROM_EMAIL = ""
+# ADMIN_USERNAME = ""
+# ADMIN_PASSWORD = ""
+# JWT_SECRET = ""
