@@ -5,40 +5,40 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { Button, buttonVariants } from "@/components/ui/button";
 import ContactForm from "@/components/themes/b/contact-form";
-import { navbar } from "@/components/themes/b/data/home";
+import { themeBrand, themeNavButton, themeNavMenu } from "@/components/themes/b/data/theme";
 import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from '@/lib/language-context';
 
-export default function Navbar({ data = navbar }) {
+export default function Navbar({ data }) {
   const { translations, locale } = useLanguage();
   
-  const menuItems = [
-    { label: translations.nav?.home || "Home", href: locale === 'en' ? "/" : `/${locale}` },
-    { label: translations.nav?.products || "Products", href: locale === 'en' ? "/products" : `/${locale}/products` },
-    { label: translations.nav?.about || "About", href: locale === 'en' ? "/about" : `/${locale}/about` },
-    { label: translations.nav?.contact || "Contact", href: locale === 'en' ? "/contact" : `/${locale}/contact` }
-  ];
+  // 使用主题配置，支持外部覆盖
+  const brandName = data?.brand?.name || themeBrand.name;
+  const brandLogo = data?.brand?.logo || themeBrand.logo;
+  const buttonText = data?.button?.text || themeNavButton.text;
+  const dialogTitle = data?.button?.title || themeNavButton.title;
+  const dialogDescription = data?.button?.description || themeNavButton.description;
 
-  const brandName = data.brand?.name || data.brand || "B For Anything";
-  const brandLogo = data.brand?.logo || data.logo || "/themes/b/logo.png";
-  const buttonText = data.button?.text || translations.nav?.getQuote || "Free Quote";
-  const dialogTitle = data.button?.title || "Request a Free Quote";
-  const dialogDescription = data.button?.description || "Please provide details...";
+  // 导航菜单支持多语言
+  const menuItems = themeNavMenu.map(item => ({
+    label: translations.nav?.[item.label.toLowerCase()] || item.label,
+    href: locale === 'en' ? item.href : `/${locale}${item.href === '/' ? '' : item.href}`
+  }));
 
   return (
     <section className="shadow-sm py-4">
-      <div className="container mx-auto px-4">
+      <div className="container">
         {/* Desktop Menu */}
-        <nav className="hidden lg:flex justify-between items-center">
+        <nav className="hidden lg:flex justify-between">
           <Link href={locale === 'en' ? "/" : `/${locale}`} className="flex items-center gap-4">
             <Image src={brandLogo} className="w-8" alt={brandName} width={100} height={100} />
             <span className="text-xl font-bold">{brandName}</span>
           </Link>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
             {menuItems.map((item, index) => (
               <Link 
                 key={index} 
@@ -52,7 +52,7 @@ export default function Navbar({ data = navbar }) {
 
           <Dialog>
             <DialogTrigger asChild>
-              <Button>{buttonText}</Button>
+              <Button>{translations.nav?.getQuote || buttonText}</Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[625px] p-8">
               <DialogHeader>
@@ -96,18 +96,20 @@ export default function Navbar({ data = navbar }) {
                   ))}
                 </div>
 
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button className="w-full">{buttonText}</Button>
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-[625px] p-6 rounded-lg">
-                    <DialogHeader>
-                      <DialogTitle>{dialogTitle}</DialogTitle>
-                      <DialogDescription>{dialogDescription}</DialogDescription>
-                    </DialogHeader>
-                    <ContactForm locale={locale} />
-                  </DialogContent>
-                </Dialog>
+                <div className="flex flex-col gap-2">
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button>{translations.nav?.getQuote || buttonText}</Button>
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-[625px] p-6 lg:p-8 rounded-lg">
+                      <DialogHeader>
+                        <DialogTitle>{dialogTitle}</DialogTitle>
+                        <DialogDescription>{dialogDescription}</DialogDescription>
+                      </DialogHeader>
+                      <ContactForm locale={locale} />
+                    </DialogContent>
+                  </Dialog>
+                </div>
               </SheetContent>
             </Sheet>
           </div>

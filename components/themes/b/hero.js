@@ -2,7 +2,8 @@
 
 import { ArrowRight, ShieldCheck, TextSearch, SquareCheckBig, MonitorSmartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { hero } from "@/components/themes/b/data/home";
+import { home } from "@/data/home";
+import { themeHero } from "@/components/themes/b/data/theme";
 import { useLanguage } from '@/lib/language-context';
 import Image from "next/image";
 import Link from "next/link";
@@ -14,47 +15,37 @@ const icon_list = [
   <MonitorSmartphone key="monitor" className="h-6 w-6 text-primary" />
 ];
 
-export default function Hero({ data = hero }) {
+export default function Hero({ data }) {
   const { translations } = useLanguage();
   
-  const buttons = data.button || [
-    { title: "Explore Products", variant: "default", href: "/products" },
-    { title: "Contact Us", variant: "outline", href: "/contact" }
-  ];
+  // 共享数据来自 @/data/home，主题配置来自 theme.js
+  const sharedData = home.hero;
+  const title = translations.home?.hero?.title || data?.title || sharedData.title;
+  const description = translations.home?.hero?.description || data?.description || sharedData.description;
   
-  const features = data.feature || [
-    { title: "Premium Quality", description: "ISO certified manufacturing" },
-    { title: "Custom Design", description: "Tailored to your specifications" },
-    { title: "Fast Delivery", description: "Efficient production timelines" },
-    { title: "24/7 Support", description: "Always here to help" }
-  ];
-
-  const bgImage = data.bg_image || data.image || "/themes/b/home/hero-bg.jpg";
+  // 主题特有配置
+  const bgImage = themeHero.bg_image;
+  const buttons = themeHero.button;
+  const features = themeHero.feature;
 
   return (
     <div className="relative w-full overflow-hidden">
-      {/* Background Image */}
+      {/* Bg Image */}
       <div className="absolute inset-0 z-0">
-        <Image 
-          src={bgImage} 
-          alt={data.title} 
-          className="w-full h-full object-cover" 
-          fill 
-          priority
-        />
+        <Image src={bgImage} alt={title} className="w-full h-full object-cover" fill priority />
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
       {/* CTA Content */}
-      <div className="relative z-10 container mx-auto px-4 py-24 md:py-32 lg:py-40">
+      <div className="relative z-10 container py-24 md:py-32 lg:py-40">
         <div className="max-w-3xl">
           <h1 className="mb-6 text-4xl md:text-5xl lg:text-6xl font-bold text-white">
-            {translations.home?.hero?.title || data.title}
+            {title}
           </h1>
-          <p className="max-w-2xl mb-8 text-lg md:text-xl text-white/90">
-            {translations.home?.hero?.description || data.description}
+          <p className="max-w-2xl mb-8 text-lg md:text-lg text-white/90">
+            {description}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-8">
             {buttons.map((item, index) => (
               <Link key={index} href={item.href}>
                 <Button 
@@ -73,12 +64,12 @@ export default function Hero({ data = hero }) {
 
       {/* Footer Features */}
       <div className="relative z-10 bg-white/10 backdrop-blur-sm dark:bg-black/30 py-6 border-t border-white/10">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {features.map((item, index) => (
               <div key={index} className="flex items-center">
                 <div className="rounded-full bg-primary/20 p-3 mr-4">
-                  {icon_list[index % icon_list.length]}
+                  {icon_list[index]}
                 </div>
                 <div>
                   <h3 className="font-semibold text-white">{item.title}</h3>

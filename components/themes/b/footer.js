@@ -1,18 +1,15 @@
 'use client';
 
 import Link from "next/link";
-import { footer } from "@/components/themes/b/data/home";
+import { themeFooter } from "@/components/themes/b/data/theme";
 import { useLanguage } from '@/lib/language-context';
 
-export default function Footer({ data = footer }) {
+export default function Footer({ data }) {
   const { translations, locale } = useLanguage();
   
-  const policies = data.policies || [
-    { title: "Terms of Service", href: '/terms-and-conditions' },
-    { title: "Privacy Policy", href: '/privacy-policy' }
-  ];
-
-  const brandText = data.brand || `© 2025 B For Anything. All rights reserved.`;
+  // 使用主题配置，支持外部覆盖
+  const policies = data?.policies || themeFooter.policies;
+  const brandText = data?.brand || themeFooter.brand;
 
   return (
     <section className="container mx-auto px-4 pb-8">

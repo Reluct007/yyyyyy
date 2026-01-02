@@ -46,7 +46,7 @@ export default function ProductionCapacity({ data }) {
   };
 
   return (
-    <section className="container py-16 md:py-24">
+    <section className="container mx-auto px-4 py-16 md:py-24">
       {/* Section header */}
       <div className="mb-12 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">

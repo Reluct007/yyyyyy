@@ -3,30 +3,29 @@
 import SubscribeForm from "@/components/themes/b/subscribe-form";
 import { Book, ChevronRight, File } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { cta } from "@/components/themes/b/data/home";
+import { basic } from "@/data/basic";
+import { themeCta } from "@/components/themes/b/data/theme";
 import { useLanguage } from '@/lib/language-context';
 import Link from "next/link";
 
-export default function CTA({ data = cta }) {
+export default function CTA({ data }) {
   const { translations } = useLanguage();
   
-  // 默认卡片配置
-  const defaultCards = [
-    { title: "Contact Us", href: "/contact", icon: "File", description: "Get in touch with our team." },
-    { title: "About Us", href: "/about", icon: "Book", description: "Learn more about our company." }
-  ];
-
-  const cards = data.cards || defaultCards;
+  // 共享数据来自 @/data/basic，主题配置来自 theme.js
+  const sharedData = basic.cta;
+  const title = translations.home?.cta?.title || data?.title || sharedData.title;
+  const description = translations.home?.cta?.description || data?.description || sharedData.description;
+  const cards = themeCta.cards;
 
   return (
-    <section className="container py-16 md:py-24">
+    <section className="container mx-auto px-4 py-16 md:py-24">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-6 lg:px-20 lg:py-16 rounded-lg border shadow-sm">
         <div>
           <h2 className="mb-4 text-3xl md:text-4xl font-bold">
-            {translations.home?.cta?.title || data.title}
+            {title}
           </h2>
           <p className="mb-6 text-muted-foreground">
-            {translations.home?.cta?.description || data.description}
+            {description}
           </p>
           <div className="w-full lg:w-3/4">
             <SubscribeForm />
