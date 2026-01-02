@@ -1,12 +1,13 @@
+'use client';
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Check, Sliders, PenTool, Layers, Cpu, Gauge } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { customizableOptions } from "@/data/home";
 import Image from "next/image";
 
 const icon_list = [<Layers className="h-5 w-5" />, <Sliders className="h-5 w-5" />, <PenTool className="h-5 w-5" />, <Gauge className="h-5 w-5" />, <Cpu className="h-5 w-5" />];
 
-export default function CustomizableOptions({ data = customizableOptions }) {
+export default function CustomizableOptions({ data }) {
 	return (
 		<section className="container pt-24">
 			<div className="mb-12 text-center">

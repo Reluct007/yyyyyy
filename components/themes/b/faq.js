@@ -1,59 +1,58 @@
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-import { faq } from "@/data/home";
-import Link from "next/link";
+'use client';
 
-export default function FAQ({ data = faq }) {
-	const jsonLd = {
-		"@context": "https://schema.org",
-		"@type": "FAQPage",
-		mainEntity: data.items.map((item) => ({
-			"@type": "Question",
-			name: item.question,
-			acceptedAnswer: {
-				"@type": "Answer",
-				text: item.answer
-			}
-		}))
-	};
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import slugify from "slugify";
+import { useLanguage } from '@/lib/language-context';
 
-	return (
-		<>
-			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-			<section className="container pt-16 md:pt-24">
-				{/* Section header */}
-				<div className="mb-12 text-center">
-					<h2 className="text-3xl md:text-4xl font-bold mb-4">
-						{(() => {
-							const parts = data.title.split(data.focus);
-							return (
-								<>
-									{parts[0]}
-									<span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text font-bold">{data.focus}</span>
-									{parts[1]}
-								</>
-							);
-						})()}
-					</h2>
-					<p className="max-w-3xl mx-auto text-muted-foreground">{data.description}</p>
-				</div>
+export default function FAQ({ data }) {
+  const { translations } = useLanguage();
+  
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": data.items.flatMap((item) =>
+      item.faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    )
+  };
 
-				<div className="flex flex-col gap-8">
-					<Accordion type="single" collapsible className="w-full AccordionRoot">
-						{data.items.map((item, index) => (
-							<AccordionItem key={index} value={`question-${index}`}>
-								<AccordionTrigger className="font-medium text-muted-foreground hover:text-muted-foreground/60 hover:no-underline">{item.question}</AccordionTrigger>
-								<AccordionContent className="text-base text-accent-foreground/80">{item.answer}</AccordionContent>
-							</AccordionItem>
-						))}
-					</Accordion>
-					<h3 className="font-medium text-accent-foreground/80">
-						{data.cta_prefix}{" "}
-						<Link href={data.cta_link} className="text-primary transition-all border-primary hover:border-b-2">
-							{data.cta_text}
-						</Link>
-					</h3>
-				</div>
-			</section>
-		</>
-	);
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <section className="py-16 px-4 bg-muted/20">
+        <div className="container mx-auto">
+          <div className="mx-auto flex flex-col max-w-screen-md items-center space-y-4 mb-12">
+            <h2 className="text-center text-3xl md:text-4xl font-bold tracking-tight">
+              {translations.footer?.support || data.title}
+            </h2>
+            <p className="text-center text-muted-foreground text-lg leading-relaxed">
+              {translations.contact?.description || data.description}
+            </p>
+          </div>
+          <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {data.items.map((item, index) => (
+              <div key={index} className="bg-card border rounded-2xl px-8 py-6 shadow-sm">
+                <h3 className="pb-6 text-xl font-semibold">{item.title}</h3>
+                <div className="h-px border-t border-solid"></div>
+                <Accordion type="single" collapsible>
+                  {item.faqs.map((faq) => (
+                    <AccordionItem key={slugify(faq.question, { lower: true, strict: true })} value={slugify(faq.question, { lower: true, strict: true })}>
+                      <AccordionTrigger><div className="text-base text-left font-medium">{faq.question}</div></AccordionTrigger>
+                      <AccordionContent><div className="text-base text-muted-foreground">{faq.answer}</div></AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }

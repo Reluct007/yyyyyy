@@ -1,10 +1,11 @@
-import CollectionCard from "@/components/widgets/collection-card";
-import { featuredCategories } from "@/data/home";
+'use client';
+
+import CollectionCard from "@/components/themes/b/collection-card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-export default function FeaturedCategories({ data = featuredCategories }) {
+export default function FeaturedCategories({ data }) {
 	return (
 		<section className="container pt-16 md:pt-24">
 			{/* Section header */}

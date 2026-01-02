@@ -1,10 +1,11 @@
+'use client';
+
 import { MessageSquare, FileText, Pencil, Clipboard, Flashlight, ThumbsUp } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { customizableProcess } from "@/data/home";
 
 const icon_list = [<MessageSquare className="h-8 w-8 text-primary" />, <FileText className="h-8 w-8 text-primary" />, <Pencil className="h-8 w-8 text-primary" />, <Clipboard className="h-8 w-8 text-primary" />, <Flashlight className="h-8 w-8 text-primary" />, <ThumbsUp className="h-8 w-8 text-primary" />];
 
-export default function CustomizableProcess({ data = customizableProcess }) {
+export default function CustomizableProcess({ data }) {
 	return (
 		<section className="container pt-16 md:pt-24">
 			{/* Section header */}

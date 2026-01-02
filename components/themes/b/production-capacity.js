@@ -1,12 +1,11 @@
 "use client";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { productionCapacity } from "@/data/home";
 import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
 
-export default function ProductionCapacity({ data = productionCapacity }) {
+export default function ProductionCapacity({ data }) {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
