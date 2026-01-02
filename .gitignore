@@ -11,6 +11,7 @@ dist/
 .vercel/
 .cloudflare/
 .open-next/
+public/themes/
 
 # 环境变量
 .env
