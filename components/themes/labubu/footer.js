@@ -7,7 +7,7 @@ import { useLanguage } from '@/lib/language-context';
 export default function Footer({ data = basic.info }) {
   const { translations, locale } = useLanguage();
   
-  const termsUrl = locale === 'en' ? '/terms-conditions' : `/${locale}/terms-of-service`;
+  const termsUrl = locale === 'en' ? '/terms-and-conditions' : `/${locale}/terms-of-service`;
   const privacyUrl = locale === 'en' ? '/privacy-policy' : `/${locale}/privacy-policy`;
   
   return (

@@ -35,7 +35,7 @@ export const basic = {
       },
       {
         label: "Terms",
-        href: "/terms-conditions"
+        href: "/terms-and-conditions"
       }
     ]
   },
