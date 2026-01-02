@@ -95,6 +95,33 @@ async function fetchConfig() {
 
     console.log(`✨ Updated ${updatedCount} files`);
 
+    // 更新数据文件中的主题资源路径
+    const dataDir = join(rootDir, 'data');
+    const dataFiles = readdirSync(dataDir).filter(f => f.endsWith('.js'));
+    
+    let dataUpdatedCount = 0;
+    for (const file of dataFiles) {
+      const filePath = join(dataDir, file);
+      let content = readFileSync(filePath, 'utf-8');
+      
+      // 替换 /themes/xxx/ 路径为当前主题
+      const themePathPattern = /\/themes\/[^\/]+\//g;
+      const newThemePath = `/themes/${activeTheme}/`;
+      
+      if (content.match(themePathPattern)) {
+        const newContent = content.replace(themePathPattern, newThemePath);
+        if (newContent !== content) {
+          writeFileSync(filePath, newContent);
+          console.log(`  ✅ data/${file} (theme paths updated)`);
+          dataUpdatedCount++;
+        }
+      }
+    }
+    
+    if (dataUpdatedCount > 0) {
+      console.log(`✨ Updated ${dataUpdatedCount} data files`);
+    }
+
   } catch (error) {
     console.log('⚠️  Error fetching config:', error.message);
   }
