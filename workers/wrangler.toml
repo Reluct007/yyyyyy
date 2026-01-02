@@ -15,3 +15,4 @@ id = "3770414ddf9b4f3588e33c5bbe371046"
 # - ADMIN_USERNAME
 # - ADMIN_PASSWORD
 # - JWT_SECRET
+# - DEPLOY_HOOK_URL (可选，用于主题切换时自动重新构建)
