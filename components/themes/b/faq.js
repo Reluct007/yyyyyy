@@ -1,13 +1,14 @@
 'use client';
 
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { faq as defaultFaq } from "@/components/themes/b/data/home";
 import { useLanguage } from '@/lib/language-context';
 import Link from "next/link";
 
-export default function FAQ({ data }) {
+export default function FAQ({ data = defaultFaq }) {
   const { translations } = useLanguage();
 
-  // 扁平化 FAQ 数据（支持两种格式）
+  // 支持两种格式的 FAQ 数据
   const faqItems = data.items?.flatMap(item => 
     item.faqs ? item.faqs : [item]
   ) || [];

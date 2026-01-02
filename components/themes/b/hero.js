@@ -2,6 +2,7 @@
 
 import { ArrowRight, ShieldCheck, TextSearch, SquareCheckBig, MonitorSmartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { hero } from "@/components/themes/b/data/home";
 import { useLanguage } from '@/lib/language-context';
 import Image from "next/image";
 import Link from "next/link";
@@ -13,26 +14,22 @@ const icon_list = [
   <MonitorSmartphone key="monitor" className="h-6 w-6 text-primary" />
 ];
 
-export default function Hero({ data }) {
+export default function Hero({ data = hero }) {
   const { translations } = useLanguage();
   
-  // 默认按钮配置
-  const defaultButtons = [
+  const buttons = data.button || [
     { title: "Explore Products", variant: "default", href: "/products" },
     { title: "Contact Us", variant: "outline", href: "/contact" }
   ];
   
-  // 默认特性配置
-  const defaultFeatures = [
+  const features = data.feature || [
     { title: "Premium Quality", description: "ISO certified manufacturing" },
     { title: "Custom Design", description: "Tailored to your specifications" },
     { title: "Fast Delivery", description: "Efficient production timelines" },
     { title: "24/7 Support", description: "Always here to help" }
   ];
 
-  const buttons = data.button || defaultButtons;
-  const features = data.feature || defaultFeatures;
-  const bgImage = data.bg_image || data.image || "/themes/b/home/hero-bg.webp";
+  const bgImage = data.bg_image || data.image || "/themes/b/home/hero-bg.jpg";
 
   return (
     <div className="relative w-full overflow-hidden">
@@ -49,7 +46,7 @@ export default function Hero({ data }) {
       </div>
 
       {/* CTA Content */}
-      <div className="relative z-10 container py-24 md:py-32 lg:py-40">
+      <div className="relative z-10 container mx-auto px-4 py-24 md:py-32 lg:py-40">
         <div className="max-w-3xl">
           <h1 className="mb-6 text-4xl md:text-5xl lg:text-6xl font-bold text-white">
             {translations.home?.hero?.title || data.title}
@@ -76,7 +73,7 @@ export default function Hero({ data }) {
 
       {/* Footer Features */}
       <div className="relative z-10 bg-white/10 backdrop-blur-sm dark:bg-black/30 py-6 border-t border-white/10">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((item, index) => (
               <div key={index} className="flex items-center">

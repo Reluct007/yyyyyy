@@ -3,11 +3,11 @@
 import SubscribeForm from "@/components/themes/b/subscribe-form";
 import { Book, ChevronRight, File } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { basic } from "@/data/basic";
+import { cta } from "@/components/themes/b/data/home";
 import { useLanguage } from '@/lib/language-context';
 import Link from "next/link";
 
-export default function CTA({ data = basic.cta }) {
+export default function CTA({ data = cta }) {
   const { translations } = useLanguage();
   
   // 默认卡片配置

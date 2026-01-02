@@ -5,14 +5,14 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { Button, buttonVariants } from "@/components/ui/button";
 import ContactForm from "@/components/themes/b/contact-form";
+import { navbar } from "@/components/themes/b/data/home";
 import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import { basic } from "@/data/basic";
 import { useLanguage } from '@/lib/language-context';
 
-export default function Navbar({ data = basic.navbar }) {
+export default function Navbar({ data = navbar }) {
   const { translations, locale } = useLanguage();
   
   const menuItems = [
@@ -22,14 +22,20 @@ export default function Navbar({ data = basic.navbar }) {
     { label: translations.nav?.contact || "Contact", href: locale === 'en' ? "/contact" : `/${locale}/contact` }
   ];
 
+  const brandName = data.brand?.name || data.brand || "B For Anything";
+  const brandLogo = data.brand?.logo || data.logo || "/themes/b/logo.png";
+  const buttonText = data.button?.text || translations.nav?.getQuote || "Free Quote";
+  const dialogTitle = data.button?.title || "Request a Free Quote";
+  const dialogDescription = data.button?.description || "Please provide details...";
+
   return (
-    <section className="shadow-sm py-4 border-b">
-      <div className="container">
+    <section className="shadow-sm py-4">
+      <div className="container mx-auto px-4">
         {/* Desktop Menu */}
         <nav className="hidden lg:flex justify-between items-center">
           <Link href={locale === 'en' ? "/" : `/${locale}`} className="flex items-center gap-4">
-            <Image src={data.logo} className="w-8" alt={data.brand} width={100} height={100} />
-            <span className="text-xl font-bold">{data.brand}</span>
+            <Image src={brandLogo} className="w-8" alt={brandName} width={100} height={100} />
+            <span className="text-xl font-bold">{brandName}</span>
           </Link>
 
           <div className="flex items-center gap-2">
@@ -46,12 +52,12 @@ export default function Navbar({ data = basic.navbar }) {
 
           <Dialog>
             <DialogTrigger asChild>
-              <Button>{translations.nav?.getQuote || data.buttonText}</Button>
+              <Button>{buttonText}</Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[625px] p-8">
               <DialogHeader>
-                <DialogTitle>{data.dialogTitle}</DialogTitle>
-                <DialogDescription>{data.dialogDescription}</DialogDescription>
+                <DialogTitle>{dialogTitle}</DialogTitle>
+                <DialogDescription>{dialogDescription}</DialogDescription>
               </DialogHeader>
               <ContactForm locale={locale} />
             </DialogContent>
@@ -62,8 +68,8 @@ export default function Navbar({ data = basic.navbar }) {
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
             <Link href={locale === 'en' ? "/" : `/${locale}`} className="flex items-center gap-4">
-              <Image src={data.logo} className="w-8" alt={data.brand} width={100} height={100} />
-              <span className="text-xl font-bold">{data.brand}</span>
+              <Image src={brandLogo} className="w-8" alt={brandName} width={100} height={100} />
+              <span className="text-xl font-bold">{brandName}</span>
             </Link>
 
             <Sheet>
@@ -76,8 +82,8 @@ export default function Navbar({ data = basic.navbar }) {
                 <SheetHeader>
                   <SheetTitle>
                     <Link href="/" className="flex items-center gap-2">
-                      <Image src={data.logo} className="w-8" alt={data.brand} width={100} height={100} />
-                      <span className="text-xl font-bold">{data.brand}</span>
+                      <Image src={brandLogo} className="w-8" alt={brandName} width={100} height={100} />
+                      <span className="text-xl font-bold">{brandName}</span>
                     </Link>
                   </SheetTitle>
                 </SheetHeader>
@@ -92,12 +98,12 @@ export default function Navbar({ data = basic.navbar }) {
 
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button className="w-full">{translations.nav?.getQuote || data.buttonText}</Button>
+                    <Button className="w-full">{buttonText}</Button>
                   </DialogTrigger>
                   <DialogContent className="sm:max-w-[625px] p-6 rounded-lg">
                     <DialogHeader>
-                      <DialogTitle>{data.dialogTitle}</DialogTitle>
-                      <DialogDescription>{data.dialogDescription}</DialogDescription>
+                      <DialogTitle>{dialogTitle}</DialogTitle>
+                      <DialogDescription>{dialogDescription}</DialogDescription>
                     </DialogHeader>
                     <ContactForm locale={locale} />
                   </DialogContent>
