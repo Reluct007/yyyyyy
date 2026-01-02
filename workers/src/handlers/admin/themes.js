@@ -8,6 +8,12 @@ const availableThemes = {
     description: 'Labubu 批发主题 - 设计师收藏品',
     preview: '/themes/labubu/logo1.webp',
   },
+  b: {
+    id: 'b',
+    name: 'Theme B',
+    description: '主题 B',
+    preview: '/themes/b/logo1.webp',
+  },
 };
 
 export async function handleThemes(request, env) {
