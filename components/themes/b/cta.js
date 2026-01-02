@@ -1,49 +1,29 @@
-import SubscribeForm from "@/components/widgets/subscribe-form";
-import { Book, ChevronRight, File } from "lucide-react";
-import { Card } from "@/components/ui/card";
-import { cta } from "@/data/home";
-import Link from "next/link";
+'use client';
 
-export default function CTA({ data = cta }) {
-	return (
-		<section className="container py-16 md:py-24">
-			<div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-6 lg:px-20 lg:py-16 rounded-lg border shadow-sm">
-				<div>
-					<h2 className="mb-2 text-3xl md:text-4xl font-bold">
-						{(() => {
-							const parts = data.title.split(data.focus);
-							return (
-								<>
-									{parts[0]}
-									<span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text font-bold">{data.focus}</span>
-									{parts[1]}
-								</>
-							);
-						})()}
-					</h2>
-					<p className="mb-4 text-muted-foreground">{data.description}</p>
-					<div className="w-full lg:w-3/4">
-						<SubscribeForm />
-					</div>
-				</div>
+import SubscribeForm from "@/components/themes/b/subscribe-form";
+import { basic } from "@/data/basic";
+import { useLanguage } from '@/lib/language-context';
 
-				<div className="flex flex-col gap-4">
-					{data.cards.map((card, index) => (
-						<Link key={index} href={card.href}>
-							<Card className="flex items-center justify-between gap-2 px-6 py-4 hover:bg-accent">
-								<div className="flex items-start gap-2">
-									{card.icon === "File" ? <File className="size-5" /> : <Book className="size-5" />}
-									<div>
-										<h3 className="mb-2 font-medium leading-4">{card.title}</h3>
-										<p className="text-sm text-muted-foreground">{card.description}</p>
-									</div>
-								</div>
-								<ChevronRight className="size-6" />
-							</Card>
-						</Link>
-					))}
-				</div>
-			</div>
-		</section>
-	);
+export default function CTA({ data = basic.cta }) {
+  const { translations } = useLanguage();
+  
+  return (
+    <section className="py-16 px-4 bg-gradient-to-br from-primary/5 via-background to-primary/10">
+      <div className="container mx-auto">
+        <div className="flex w-full flex-col gap-8 p-8 overflow-hidden rounded-2xl bg-card border shadow-lg lg:gap-12 lg:p-12 lg:flex-row lg:items-center">
+          <div className="flex-1">
+            <h3 className="mb-4 text-3xl md:text-4xl font-bold tracking-tight">
+              {translations.home?.cta?.title || data.title}
+            </h3>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              {translations.home?.cta?.description || data.description}
+            </p>
+          </div>
+          <div className="flex-shrink-0 w-full lg:w-auto">
+            <SubscribeForm />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
