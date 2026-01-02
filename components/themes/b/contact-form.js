@@ -1,12 +1,12 @@
 "use client";
 
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
-import { useState } from 'react';
-import Link from 'next/link';
+import { useState } from "react";
+import Link from "next/link";
 import axios from "axios";
 
 export default function ContactForm({ locale = 'en' }) {
@@ -29,7 +29,7 @@ export default function ContactForm({ locale = 'en' }) {
     e.preventDefault();
     setLoading(true);
     
-    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://labubu-api.vercel.app';
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://labubu-api.reluct007.workers.dev';
 
     try {
       const response = await axios.post(`${API_URL}/api/contact`, data);
@@ -50,39 +50,79 @@ export default function ContactForm({ locale = 'en' }) {
 
   return (
     <form onSubmit={onSubmitHandler}>
-      <div className="w-full space-y-5 rounded-2xl border bg-card p-6 shadow-lg">
+      <div className="w-full rounded-lg border shadow-md space-y-6 p-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="name" className="block mb-2 text-sm font-medium">
-              Name<span className="text-red-500 pl-1">*</span>
+            <label htmlFor="name" className="block mb-2.5 text-sm font-medium">
+              Name<span className="pl-1 text-red-500">*</span>
             </label>
-            <Input id="name" name="name" value={data.name} onChange={onChangeHandler} required disabled={loading} />
+            <Input 
+              id="name" 
+              name="name" 
+              type="text" 
+              value={data.name} 
+              onChange={onChangeHandler} 
+              disabled={loading} 
+              required 
+            />
           </div>
           <div>
-            <label htmlFor="company" className="block mb-2 text-sm font-medium">Company</label>
-            <Input id="company" name="company" value={data.company} onChange={onChangeHandler} disabled={loading} />
+            <label htmlFor="company" className="block mb-2.5 text-sm font-medium">
+              Company
+            </label>
+            <Input 
+              id="company" 
+              name="company" 
+              type="text" 
+              value={data.company} 
+              onChange={onChangeHandler} 
+              disabled={loading} 
+            />
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="email" className="block mb-2 text-sm font-medium">
-              Email<span className="text-red-500 pl-1">*</span>
+            <label htmlFor="email" className="block mb-2.5 text-sm font-medium">
+              Email<span className="pl-1 text-red-500">*</span>
             </label>
-            <Input id="email" name="email" type="email" value={data.email} onChange={onChangeHandler} required disabled={loading} />
+            <Input 
+              id="email" 
+              name="email" 
+              type="email" 
+              value={data.email} 
+              onChange={onChangeHandler} 
+              disabled={loading} 
+              required 
+            />
           </div>
           <div>
-            <label htmlFor="phone" className="block mb-2 text-sm font-medium">Phone</label>
-            <Input id="phone" name="phone" type="tel" value={data.phone} onChange={onChangeHandler} disabled={loading} />
+            <label htmlFor="phone" className="block mb-2.5 text-sm font-medium">
+              Phone
+            </label>
+            <Input 
+              id="phone" 
+              name="phone" 
+              type="tel" 
+              value={data.phone} 
+              onChange={onChangeHandler} 
+              disabled={loading} 
+            />
           </div>
         </div>
         <div>
-          <label htmlFor="quantity" className="block mb-2 text-sm font-medium">Quantity</label>
-          <Select onValueChange={(value) => setData(prev => ({ ...prev, quantity: value }))} value={data.quantity} disabled={loading}>
+          <label htmlFor="quantity" className="block mb-2.5 text-sm font-medium">
+            Quote Quantity
+          </label>
+          <Select 
+            onValueChange={(value) => setData(prev => ({ ...prev, quantity: value }))} 
+            value={data.quantity} 
+            disabled={loading}
+          >
             <SelectTrigger id="quantity">
-              <SelectValue placeholder="Select quantity" />
+              <SelectValue placeholder="Select" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="300">300</SelectItem>
+              <SelectItem value="100">100</SelectItem>
               <SelectItem value="500">500</SelectItem>
               <SelectItem value="1000">1000</SelectItem>
               <SelectItem value="3000">3000</SelectItem>
@@ -92,18 +132,29 @@ export default function ContactForm({ locale = 'en' }) {
           </Select>
         </div>
         <div>
-          <label htmlFor="message" className="block mb-2 text-sm font-medium">
-            Message<span className="text-red-500 pl-1">*</span>
+          <label htmlFor="message" className="block mb-2.5 text-sm font-medium">
+            Message<span className="pl-1 text-red-500">*</span>
           </label>
-          <Textarea id="message" name="message" value={data.message} onChange={onChangeHandler} className="min-h-[180px]" required disabled={loading} />
+          <Textarea 
+            id="message" 
+            name="message" 
+            value={data.message} 
+            onChange={onChangeHandler} 
+            className="min-h-[180px]" 
+            disabled={loading} 
+            required 
+          />
         </div>
-        <div className="flex flex-col space-y-3 pt-2">
+        <div className="flex flex-col space-y-2 pt-2">
           <Button type="submit" disabled={loading}>
             {loading ? "Submitting..." : "Get Free Quote"}
           </Button>
-          <p className="text-xs text-muted-foreground">
-            View our <Link href={privacyUrl} className="underline hover:text-foreground">privacy policy</Link>.
-          </p>
+          <div className="text-xs text-muted-foreground">
+            View our{" "}
+            <Link href={privacyUrl} className="underline hover:text-foreground">
+              privacy policy
+            </Link>.
+          </div>
         </div>
       </div>
     </form>

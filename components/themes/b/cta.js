@@ -1,27 +1,57 @@
 'use client';
 
 import SubscribeForm from "@/components/themes/b/subscribe-form";
+import { Book, ChevronRight, File } from "lucide-react";
+import { Card } from "@/components/ui/card";
 import { basic } from "@/data/basic";
 import { useLanguage } from '@/lib/language-context';
+import Link from "next/link";
 
 export default function CTA({ data = basic.cta }) {
   const { translations } = useLanguage();
   
+  // 默认卡片配置
+  const defaultCards = [
+    { title: "Contact Us", href: "/contact", icon: "File", description: "Get in touch with our team." },
+    { title: "About Us", href: "/about", icon: "Book", description: "Learn more about our company." }
+  ];
+
+  const cards = data.cards || defaultCards;
+
   return (
-    <section className="py-16 px-4 bg-gradient-to-br from-primary/5 via-background to-primary/10">
-      <div className="container mx-auto">
-        <div className="flex w-full flex-col gap-8 p-8 overflow-hidden rounded-2xl bg-card border shadow-lg lg:gap-12 lg:p-12 lg:flex-row lg:items-center">
-          <div className="flex-1">
-            <h3 className="mb-4 text-3xl md:text-4xl font-bold tracking-tight">
-              {translations.home?.cta?.title || data.title}
-            </h3>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              {translations.home?.cta?.description || data.description}
-            </p>
-          </div>
-          <div className="flex-shrink-0 w-full lg:w-auto">
+    <section className="container py-16 md:py-24">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-6 lg:px-20 lg:py-16 rounded-lg border shadow-sm">
+        <div>
+          <h2 className="mb-4 text-3xl md:text-4xl font-bold">
+            {translations.home?.cta?.title || data.title}
+          </h2>
+          <p className="mb-6 text-muted-foreground">
+            {translations.home?.cta?.description || data.description}
+          </p>
+          <div className="w-full lg:w-3/4">
             <SubscribeForm />
           </div>
+        </div>
+
+        <div className="flex flex-col gap-4">
+          {cards.map((card, index) => (
+            <Link key={index} href={card.href}>
+              <Card className="flex items-center justify-between gap-2 px-6 py-4 hover:bg-accent transition-colors">
+                <div className="flex items-start gap-4">
+                  {card.icon === "File" ? (
+                    <File className="size-5 mt-0.5 text-primary" />
+                  ) : (
+                    <Book className="size-5 mt-0.5 text-primary" />
+                  )}
+                  <div>
+                    <h3 className="mb-1 font-medium">{card.title}</h3>
+                    <p className="text-sm text-muted-foreground">{card.description}</p>
+                  </div>
+                </div>
+                <ChevronRight className="size-5 text-muted-foreground" />
+              </Card>
+            </Link>
+          ))}
         </div>
       </div>
     </section>

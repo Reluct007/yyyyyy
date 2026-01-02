@@ -7,25 +7,28 @@ import { useLanguage } from '@/lib/language-context';
 export default function Footer({ data = basic.info }) {
   const { translations, locale } = useLanguage();
   
-  const termsUrl = locale === 'en' ? '/terms-and-conditions' : `/${locale}/terms-of-service`;
-  const privacyUrl = locale === 'en' ? '/privacy-policy' : `/${locale}/privacy-policy`;
-  
+  const policies = [
+    { 
+      title: translations.footer?.terms || "Terms of Service", 
+      href: locale === 'en' ? '/terms-and-conditions' : `/${locale}/terms-of-service` 
+    },
+    { 
+      title: translations.footer?.privacy || "Privacy Policy", 
+      href: locale === 'en' ? '/privacy-policy' : `/${locale}/privacy-policy` 
+    }
+  ];
+
   return (
-    <section className="py-10 px-4 bg-muted/20">
-      <div className="container mx-auto">
-        <footer>
-          <div className="flex flex-col justify-between gap-4 border-t pt-8 text-sm text-muted-foreground md:flex-row md:items-center">
-            <p>© 2025 {data.brand}. {translations.footer?.copyright || "All rights reserved."}</p>
-            <ul className="flex gap-6">
-              <li className="underline hover:text-foreground transition-colors">
-                <Link href={termsUrl}>{translations.footer?.terms || "Terms & Conditions"}</Link>
-              </li>
-              <li className="underline hover:text-foreground transition-colors">
-                <Link href={privacyUrl}>{translations.footer?.privacy || "Privacy Policy"}</Link>
-              </li>
-            </ul>
-          </div>
-        </footer>
+    <section className="container pb-8">
+      <div className="flex flex-col md:flex-row justify-between md:items-center border-t pt-8 text-sm text-muted-foreground">
+        <p>© 2025 {data.brand}. {translations.footer?.copyright || "All rights reserved."}</p>
+        <ul className="flex gap-4 mt-4 md:mt-0">
+          {policies.map((policy, index) => (
+            <li key={index} className="hover:text-primary transition-colors">
+              <Link href={policy.href}>{policy.title}</Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

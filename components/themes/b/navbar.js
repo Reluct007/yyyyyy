@@ -1,48 +1,52 @@
 'use client';
 
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
-import { navigationMenuTriggerStyle } from '@/components/ui/navigation-menu';
-import { Button, buttonVariants } from '@/components/ui/button';
-import ContactForm from '@/components/themes/b/contact-form';
-import { Menu } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import Link from 'next/link';
-import Image from 'next/image';
-import { basic } from '@/data/basic';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
+import { Button, buttonVariants } from "@/components/ui/button";
+import ContactForm from "@/components/themes/b/contact-form";
+import { Menu } from "lucide-react";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import Link from "next/link";
+import { basic } from "@/data/basic";
 import { useLanguage } from '@/lib/language-context';
 
 export default function Navbar({ data = basic.navbar }) {
   const { translations, locale } = useLanguage();
   
+  const menuItems = [
+    { label: translations.nav?.home || "Home", href: locale === 'en' ? "/" : `/${locale}` },
+    { label: translations.nav?.products || "Products", href: locale === 'en' ? "/products" : `/${locale}/products` },
+    { label: translations.nav?.about || "About", href: locale === 'en' ? "/about" : `/${locale}/about` },
+    { label: translations.nav?.contact || "Contact", href: locale === 'en' ? "/contact" : `/${locale}/contact` }
+  ];
+
   return (
-    <section className="shadow-sm py-4 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40">
-      <div className="container mx-auto">
+    <section className="shadow-sm py-4 border-b">
+      <div className="container">
         {/* Desktop Menu */}
         <nav className="hidden lg:flex justify-between items-center">
-          <Link href={locale === 'en' ? "/" : `/${locale}`} className="flex items-center gap-3">
-            <Image src={data.logo} className="w-8" alt={`${data.brand} logo`} width={100} height={100} />
+          <Link href={locale === 'en' ? "/" : `/${locale}`} className="flex items-center gap-4">
+            <Image src={data.logo} className="w-8" alt={data.brand} width={100} height={100} />
             <span className="text-xl font-bold">{data.brand}</span>
           </Link>
 
-          <div className="flex items-center gap-6">
-            <Link href={locale === 'en' ? "/" : `/${locale}`} className={cn(navigationMenuTriggerStyle, buttonVariants({ variant: "ghost" }), "text-base")}>
-              {translations.nav?.home || "Home"}
-            </Link>
-            <Link href={locale === 'en' ? "/products" : `/${locale}/products`} className={cn(navigationMenuTriggerStyle, buttonVariants({ variant: "ghost" }), "text-base")}>
-              {translations.nav?.products || "Products"}
-            </Link>
-            <Link href={locale === 'en' ? "/about" : `/${locale}/about`} className={cn(navigationMenuTriggerStyle, buttonVariants({ variant: "ghost" }), "text-base")}>
-              {translations.nav?.about || "About"}
-            </Link>
-            <Link href={locale === 'en' ? "/contact" : `/${locale}/contact`} className={cn(navigationMenuTriggerStyle, buttonVariants({ variant: "ghost" }), "text-base")}>
-              {translations.nav?.contact || "Contact"}
-            </Link>
+          <div className="flex items-center gap-2">
+            {menuItems.map((item, index) => (
+              <Link 
+                key={index} 
+                href={item.href} 
+                className={cn(navigationMenuTriggerStyle, buttonVariants({ variant: "ghost" }))}
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
 
           <Dialog>
             <DialogTrigger asChild>
-              <Button className="px-6">{translations.nav?.getQuote || data.buttonText}</Button>
+              <Button>{translations.nav?.getQuote || data.buttonText}</Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[625px] p-8">
               <DialogHeader>
@@ -57,8 +61,8 @@ export default function Navbar({ data = basic.navbar }) {
         {/* Mobile Menu */}
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
-            <Link href={locale === 'en' ? "/" : `/${locale}`} className="flex items-center gap-3">
-              <Image src={data.logo} className="w-8" alt={`${data.brand} logo`} width={100} height={100} />
+            <Link href={locale === 'en' ? "/" : `/${locale}`} className="flex items-center gap-4">
+              <Image src={data.logo} className="w-8" alt={data.brand} width={100} height={100} />
               <span className="text-xl font-bold">{data.brand}</span>
             </Link>
 
@@ -72,17 +76,18 @@ export default function Navbar({ data = basic.navbar }) {
                 <SheetHeader>
                   <SheetTitle>
                     <Link href="/" className="flex items-center gap-2">
-                      <Image src={data.logo} className="w-8" alt={`${data.brand} logo`} width={100} height={100} />
+                      <Image src={data.logo} className="w-8" alt={data.brand} width={100} height={100} />
                       <span className="text-xl font-bold">{data.brand}</span>
                     </Link>
                   </SheetTitle>
                 </SheetHeader>
 
                 <div className="my-8 flex flex-col gap-6">
-                  <Link href={locale === 'en' ? "/" : `/${locale}`} className="text-base">{translations.nav?.home || "Home"}</Link>
-                  <Link href={locale === 'en' ? "/products" : `/${locale}/products`} className="text-base">{translations.nav?.products || "Products"}</Link>
-                  <Link href={locale === 'en' ? "/about" : `/${locale}/about`} className="text-base">{translations.nav?.about || "About"}</Link>
-                  <Link href={locale === 'en' ? "/contact" : `/${locale}/contact`} className="text-base">{translations.nav?.contact || "Contact"}</Link>
+                  {menuItems.map((item, index) => (
+                    <Link key={index} href={item.href} className="text-base">
+                      {item.label}
+                    </Link>
+                  ))}
                 </div>
 
                 <Dialog>

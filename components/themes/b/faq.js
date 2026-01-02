@@ -1,56 +1,66 @@
 'use client';
 
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import slugify from "slugify";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { useLanguage } from '@/lib/language-context';
+import Link from "next/link";
 
 export default function FAQ({ data }) {
   const { translations } = useLanguage();
-  
+
+  // 扁平化 FAQ 数据（支持两种格式）
+  const faqItems = data.items?.flatMap(item => 
+    item.faqs ? item.faqs : [item]
+  ) || [];
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": data.items.flatMap((item) =>
-      item.faqs.map((faq) => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.answer
-        }
-      }))
-    )
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer
+      }
+    }))
   };
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <section className="py-16 px-4 bg-muted/20">
-        <div className="container mx-auto">
-          <div className="mx-auto flex flex-col max-w-screen-md items-center space-y-4 mb-12">
-            <h2 className="text-center text-3xl md:text-4xl font-bold tracking-tight">
-              {translations.footer?.support || data.title}
-            </h2>
-            <p className="text-center text-muted-foreground text-lg leading-relaxed">
-              {translations.contact?.description || data.description}
-            </p>
-          </div>
-          <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {data.items.map((item, index) => (
-              <div key={index} className="bg-card border rounded-2xl px-8 py-6 shadow-sm">
-                <h3 className="pb-6 text-xl font-semibold">{item.title}</h3>
-                <div className="h-px border-t border-solid"></div>
-                <Accordion type="single" collapsible>
-                  {item.faqs.map((faq) => (
-                    <AccordionItem key={slugify(faq.question, { lower: true, strict: true })} value={slugify(faq.question, { lower: true, strict: true })}>
-                      <AccordionTrigger><div className="text-base text-left font-medium">{faq.question}</div></AccordionTrigger>
-                      <AccordionContent><div className="text-base text-muted-foreground">{faq.answer}</div></AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </div>
+      <section className="container py-16 md:py-24">
+        {/* Section header */}
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            {translations.footer?.support || data.title}
+          </h2>
+          <p className="max-w-3xl mx-auto text-muted-foreground">
+            {translations.contact?.description || data.description}
+          </p>
+        </div>
+
+        <div className="max-w-3xl mx-auto flex flex-col gap-8">
+          <Accordion type="single" collapsible className="w-full">
+            {faqItems.map((item, index) => (
+              <AccordionItem key={index} value={`question-${index}`}>
+                <AccordionTrigger className="font-medium text-left hover:no-underline">
+                  {item.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground">
+                  {item.answer}
+                </AccordionContent>
+              </AccordionItem>
             ))}
-          </div>
+          </Accordion>
+          
+          {data.cta_text && (
+            <p className="font-medium text-center">
+              {data.cta_prefix || "Still have questions?"}{" "}
+              <Link href={data.cta_link || "/contact"} className="text-primary hover:underline">
+                {data.cta_text}
+              </Link>
+            </p>
+          )}
         </div>
       </section>
     </>
