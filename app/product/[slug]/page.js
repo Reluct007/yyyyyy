@@ -1,13 +1,14 @@
 import { product } from "@/data/product";
+import { basic } from "@/data/basic";
 import slugify from "slugify";
-import { generateProductMetadata } from '@/lib/product-metadata';
-import Image from "next/image";
 import Link from 'next/link';
+import Image from 'next/image';
 import { ChevronRight, ArrowDownRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import ContactForm from '@/components/features/contact-form';
+import ProductGallery from '@/components/features/product-gallery';
 
-const ROOT_URL = "https://www.labubuwholesale.com";
+const ROOT_URL = basic.seo.url;
 
 // 查找产品
 const findProduct = (slug) => product.find(item => slugify(item.title, { lower: true, strict: true }) === slug);
@@ -29,30 +30,49 @@ export async function generateStaticParams() {
   }));
 }
 
-// 生成 metadata（服务端）
+// 生成 metadata
 export async function generateMetadata({ params }) {
   const slug = params?.slug;
   if (!slug) {
     return {
-      title: "Product Not Found - Labubu Wholesale",
-      description: "The requested product could not be found",
+      title: "Product Not Found",
       robots: { index: false, follow: false },
     };
   }
   
-  const originalProduct = findProduct(slug);
-  if (!originalProduct) {
+  const productItem = findProduct(slug);
+  if (!productItem) {
     return {
-      title: "Product Not Found - Labubu Wholesale",
-      description: "The requested product could not be found",
+      title: "Product Not Found",
       robots: { index: false, follow: false },
     };
   }
-  
-  return generateProductMetadata(slug, 'en');
+
+  const description = productItem.description?.length > 160 
+    ? productItem.description.substring(0, 157) + '...' 
+    : productItem.description;
+
+  return {
+    title: `${productItem.title} | ${basic.info.brand}`,
+    description: description,
+    alternates: {
+      canonical: `${ROOT_URL}/product/${slug}/`,
+    },
+    openGraph: {
+      title: productItem.title,
+      description: description,
+      url: `${ROOT_URL}/product/${slug}/`,
+      type: "website",
+      images: productItem.image ? [{
+        url: `${ROOT_URL}${productItem.image}`,
+        width: 800,
+        height: 800,
+        alt: productItem.title,
+      }] : undefined,
+    },
+  };
 }
 
-// 服务端组件 - 纯静态生成
 export default function ProductPage({ params }) {
   const slug = params?.slug;
   const productItem = findProduct(slug);
@@ -71,7 +91,7 @@ export default function ProductPage({ params }) {
 
   const productId = slugify(productItem.title, { lower: true, strict: true });
   
-  // 获取相关产品（服务端计算）
+  // 获取相关产品
   const allProducts = getValidProducts().map(p => ({
     ...p,
     id: slugify(p.title, { lower: true, strict: true })
@@ -80,7 +100,7 @@ export default function ProductPage({ params }) {
     .filter(item => item.id !== productId)
     .slice(0, 8);
 
-  // JSON-LD 结构化数据（服务端生成）
+  // JSON-LD 结构化数据
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -93,12 +113,12 @@ export default function ProductPage({ params }) {
       "@type": "ListItem",
       "position": 2,
       "name": "Products",
-      "item": `${ROOT_URL}/products`
+      "item": `${ROOT_URL}/products/`
     }, {
       "@type": "ListItem",
       "position": 3,
       "name": productItem.title,
-      "item": `${ROOT_URL}/product/${productId}`
+      "item": `${ROOT_URL}/product/${productId}/`
     }]
   };
 
@@ -110,23 +130,18 @@ export default function ProductPage({ params }) {
     "image": productItem.image ? `${ROOT_URL}${productItem.image}` : undefined,
     "brand": {
       "@type": "Brand",
-      "name": "Labubu Wholesale"
+      "name": basic.info.brand
     },
     "offers": {
       "@type": "Offer",
       "availability": "https://schema.org/InStock",
       "priceCurrency": "USD",
-      "seller": {
-        "@type": "Organization",
-        "name": "Labubu Wholesale"
-      }
     },
-    "url": `${ROOT_URL}/product/${productId}`
+    "url": `${ROOT_URL}/product/${productId}/`
   };
 
   return (
     <>
-      {/* JSON-LD 结构化数据 - 服务端输出 */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
@@ -136,7 +151,6 @@ export default function ProductPage({ params }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
       />
 
-      {/* 产品详情 */}
       <section className="py-8 px-2">
         <div className="container mx-auto space-y-8">
           {/* 标题和描述 */}
@@ -149,38 +163,12 @@ export default function ProductPage({ params }) {
             </p>
           </div>
 
-          {/* 图片展示 - 左侧主图，右侧副图网格 */}
-          <div className="grid gap-4 md:grid-cols-2">
-            {/* 主图 */}
-            {productItem.image && (
-              <div className="aspect-square">
-                <Image
-                  src={productItem.image}
-                  alt={`${productItem.title} - Premium designer collectible from Labubu Wholesale`}
-                  className="w-full h-full border border-border rounded-lg object-contain bg-white"
-                  width={800}
-                  height={800}
-                  priority
-                />
-              </div>
-            )}
-            {/* 副图网格 */}
-            {productItem.images && productItem.images.length > 0 && (
-              <div className="grid grid-cols-2 gap-4">
-                {productItem.images.slice(0, 6).map((image, index) => (
-                  <div key={index} className="aspect-square">
-                    <Image
-                      src={image}
-                      alt={`${productItem.title} - View ${index + 1}`}
-                      className="w-full h-full border border-border rounded-lg object-contain bg-white"
-                      width={400}
-                      height={400}
-                    />
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+          {/* 图片画廊 - 客户端组件 */}
+          <ProductGallery 
+            mainImage={productItem.image}
+            images={productItem.images || []}
+            title={productItem.title}
+          />
 
           {/* 特性和联系表单 */}
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -218,43 +206,31 @@ export default function ProductPage({ params }) {
             {relatedProducts.map((item, index) => (
               <div key={index} className="rounded-lg border h-full">
                 <div className="relative">
-                  <Link
-                    href={`/product/${item.id}`}
-                    aria-label={`View ${item.title} product details`}
-                  >
+                  <Link href={`/product/${item.id}/`}>
                     <Image
                       src={item.image}
-                      alt={`${item.title} - Designer collectible product`}
-                      className="w-full rounded-t-lg object-cover"
+                      alt={item.title}
+                      className="w-full rounded-t-lg object-cover aspect-square"
                       width={400}
-                      height={300}
+                      height={400}
                     />
                   </Link>
                   <Badge variant="outline" className="absolute left-5 top-5 bg-primary-foreground">
-                    <Link
-                      href={`/products/${slugify(item.category, { lower: true, strict: true })}`}
-                      aria-label={`Browse ${item.category} products`}
-                    >
+                    <Link href={`/products/${slugify(item.category, { lower: true, strict: true })}/`}>
                       {item.category}
                     </Link>
                   </Badge>
                 </div>
                 <div className="p-4 space-y-2">
-                  <Link
-                    href={`/product/${item.id}`}
-                    aria-label={`Learn more about ${item.title}`}
-                  >
-                    <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <Link href={`/product/${item.id}/`}>
+                    <h3 className="text-lg font-semibold line-clamp-2">{item.title}</h3>
                   </Link>
-                  <p className="text-base text-muted-foreground">
-                    {item.description.length > 120
-                      ? `${item.description.substring(0, 120)}...`
-                      : item.description}
+                  <p className="text-base text-muted-foreground line-clamp-3">
+                    {item.description}
                   </p>
                   <Link
-                    href={`/product/${item.id}`}
-                    className="flex items-center gap-2 text-sm text-muted-foreground"
-                    aria-label={`Get details about ${item.title}`}
+                    href={`/product/${item.id}/`}
+                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
                   >
                     Learn More <ChevronRight className="w-4" />
                   </Link>
