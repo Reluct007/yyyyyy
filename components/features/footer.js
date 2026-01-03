@@ -3,14 +3,11 @@
 import Link from "next/link";
 import { basic } from "@/data/basic";
 import { useLanguage } from '@/lib/language-context';
-import { useSiteConfig } from '@/lib/site-config-context';
 
 export default function Footer({ data = basic.info }) {
   const { translations, locale } = useLanguage();
-  const { config } = useSiteConfig();
   
-  // 使用后台配置覆盖默认值
-  const brandName = config.siteName || data.brand;
+  const brandName = data.brand;
   
   const termsUrl = locale === 'en' ? '/terms-and-conditions' : `/${locale}/terms-of-service`;
   const privacyUrl = locale === 'en' ? '/privacy-policy' : `/${locale}/privacy-policy`;
@@ -34,4 +31,4 @@ export default function Footer({ data = basic.info }) {
       </div>
     </section>
   );
-};
+}

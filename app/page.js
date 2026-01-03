@@ -4,35 +4,22 @@ import TwoColumn from "@/components/features/two-column";
 import FourColumn from "@/components/features/four-column";
 import Testimonials from "@/components/features/testimonials";
 import FAQ from "@/components/features/faq";
-import CTA from "@/components/features/cta";
 import { home } from "@/data/home";
-import { getSiteConfig } from "@/lib/get-site-config";
+import { basic } from "@/data/basic";
 
-// 强制动态渲染
-export const dynamic = 'force-dynamic';
-
-// 动态生成首页 metadata
-export async function generateMetadata() {
-  const config = await getSiteConfig();
-  
-  return {
-    title: config.seoTitle,
-    description: config.seoDescription,
-    alternates: {
-      canonical: "https://www.labubuwholesale.com",
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
-    openGraph: {
-      title: config.seoTitle,
-      description: config.seoDescription,
-      url: "https://www.labubuwholesale.com",
-      type: "website",
-    },
-  };
-}
+export const metadata = {
+  title: basic.seo.title,
+  description: basic.seo.description,
+  alternates: {
+    canonical: basic.seo.url,
+  },
+  openGraph: {
+    title: basic.seo.title,
+    description: basic.seo.description,
+    url: basic.seo.url,
+    type: "website",
+  },
+};
 
 export default function Home({ data = home }) {
   return (

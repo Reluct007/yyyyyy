@@ -11,15 +11,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { basic } from '@/data/basic';
 import { useLanguage } from '@/lib/language-context';
-import { useSiteConfig } from '@/lib/site-config-context';
 
 export default function Navbar({ data = basic.navbar }) {
   const { translations, locale } = useLanguage();
-  const { config } = useSiteConfig();
   
-  // 使用后台配置覆盖默认值
-  const brandName = config.siteName || data.brand;
-  const logo = config.logo || data.logo;
+  const brandName = data.brand;
+  const logo = data.logo;
   
   return (
     <section className="shadow-sm py-4">
@@ -27,7 +24,7 @@ export default function Navbar({ data = basic.navbar }) {
         {/* Desktop Menu */}
         <nav className="hidden lg:flex justify-between items-center" role="navigation" aria-label="Main navigation">
           <Link href={locale === 'en' ? "/" : `/${locale}`} className="flex items-center gap-4">
-            <Image src={logo} className="w-8" alt={`${brandName} logo - Designer collectibles wholesale`} width={100} height={100} />
+            <Image src={logo} className="w-8" alt={`${brandName} logo`} width={100} height={100} />
             <span className="text-xl font-bold">{brandName}</span>
           </Link>
 
@@ -61,11 +58,12 @@ export default function Navbar({ data = basic.navbar }) {
             </DialogContent>
           </Dialog>
         </nav>
+
         {/* Mobile Menu */}
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
             <Link href={locale === 'en' ? "/" : `/${locale}`} className="flex items-center gap-4">
-              <Image src={logo} className="w-8" alt={`${brandName} logo - Designer collectibles wholesale`} width={100} height={100} />
+              <Image src={logo} className="w-8" alt={`${brandName} logo`} width={100} height={100} />
               <span className="text-xl font-bold">{brandName}</span>
             </Link>
 
@@ -79,7 +77,7 @@ export default function Navbar({ data = basic.navbar }) {
                 <SheetHeader>
                   <SheetTitle>
                     <Link href="/" className="flex items-center gap-2">
-                      <Image src={logo} className="w-8" alt={`${brandName} logo - Designer collectibles wholesale`} width={100} height={100} />
+                      <Image src={logo} className="w-8" alt={`${brandName} logo`} width={100} height={100} />
                       <span className="text-xl font-bold">{brandName}</span>
                     </Link>
                   </SheetTitle>
@@ -121,4 +119,4 @@ export default function Navbar({ data = basic.navbar }) {
       </div>
     </section>
   );
-};
+}
