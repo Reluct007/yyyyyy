@@ -7,112 +7,118 @@ import ScrollToTop from "@/components/features/scroll-to-top";
 import { Toaster } from "@/components/ui/sonner";
 import { LanguageProvider } from "@/lib/language-context";
 import { SiteConfigProvider } from "@/lib/site-config-context";
+import { getSiteConfig } from "@/lib/get-site-config";
 
 const inter = Inter({ 
   subsets: ["latin"],
-  display: 'swap', // SEO: font-display: swap
+  display: 'swap',
   preload: true,
 });
 
-export const metadata = {
-  metadataBase: new URL('https://www.labubuwholesale.com'),
-  title: {
-    default: "Labubu Wholesale - Premium Designer Collectibles & Custom Toys",
-    template: "%s | Labubu Wholesale",
-  },
-  description: "Premium Labubu wholesale collectibles for distributors & retailers. Custom designer toys, vinyl figures, and plush collectibles. Quality guaranteed.",
-  keywords: ["labubu", "wholesale", "designer toys", "collectibles", "vinyl figures", "plush toys", "blind box"],
-  authors: [{ name: "Labubu Wholesale" }],
-  creator: "Labubu Wholesale",
-  publisher: "Labubu Wholesale",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+// 动态生成 metadata
+export async function generateMetadata() {
+  const config = await getSiteConfig();
+  
+  const keywords = config.seoKeywords 
+    ? config.seoKeywords.split(',').map(k => k.trim())
+    : ["labubu", "wholesale", "designer toys", "collectibles"];
+
+  return {
+    metadataBase: new URL('https://www.labubuwholesale.com'),
+    title: {
+      default: config.seoTitle,
+      template: `%s | ${config.siteName}`,
+    },
+    description: config.seoDescription,
+    keywords: keywords,
+    authors: [{ name: config.siteName }],
+    creator: config.siteName,
+    publisher: config.siteName,
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  alternates: {
-    canonical: 'https://www.labubuwholesale.com',
-    languages: {
-      'en': 'https://www.labubuwholesale.com',
-      'es': 'https://www.labubuwholesale.com/es',
-      'fr': 'https://www.labubuwholesale.com/fr',
-      'de': 'https://www.labubuwholesale.com/de',
-      'ja': 'https://www.labubuwholesale.com/ja',
-      'ko': 'https://www.labubuwholesale.com/ko',
-      'x-default': 'https://www.labubuwholesale.com',
-    },
-  },
-  openGraph: {
-    title: "Labubu Wholesale - Premium Designer Collectibles & Custom Toys",
-    description: "Premium Labubu wholesale collectibles for distributors & retailers. Custom designer toys, vinyl figures, and plush collectibles. Quality guaranteed.",
-    url: "https://www.labubuwholesale.com",
-    siteName: "Labubu Wholesale",
-    images: [
-      {
-        url: "/opengraph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Labubu Wholesale - Premium Designer Collectibles",
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
       },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Labubu Wholesale - Premium Designer Collectibles & Custom Toys",
-    description: "Premium Labubu wholesale collectibles for distributors & retailers.",
-    images: ["/opengraph-image.png"],
-  },
-  verification: {
-    // 在这里添加 Google Search Console 验证码
-    // google: 'your-google-verification-code',
-  },
-};
+    },
+    alternates: {
+      canonical: 'https://www.labubuwholesale.com',
+      languages: {
+        'en': 'https://www.labubuwholesale.com',
+        'es': 'https://www.labubuwholesale.com/es',
+        'fr': 'https://www.labubuwholesale.com/fr',
+        'de': 'https://www.labubuwholesale.com/de',
+        'ja': 'https://www.labubuwholesale.com/ja',
+        'ko': 'https://www.labubuwholesale.com/ko',
+        'x-default': 'https://www.labubuwholesale.com',
+      },
+    },
+    openGraph: {
+      title: config.seoTitle,
+      description: config.seoDescription,
+      url: "https://www.labubuwholesale.com",
+      siteName: config.siteName,
+      images: [
+        {
+          url: "/opengraph-image.png",
+          width: 1200,
+          height: 630,
+          alt: `${config.siteName} - Premium Designer Collectibles`,
+        },
+      ],
+      locale: "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: config.seoTitle,
+      description: config.seoDescription,
+      images: ["/opengraph-image.png"],
+    },
+  };
+}
 
-// Organization Structured Data (JSON-LD)
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Labubu Wholesale",
-  "url": "https://www.labubuwholesale.com",
-  "logo": "https://www.labubuwholesale.com/logo1.webp",
-  "description": "Labubu Wholesale specializes in high-quality designer collectibles that blend art and trend culture. We offer customized Labubu products for distributors and retailers.",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "customer service",
-    "email": "info@labubuwholesale.com",
-    "url": "https://www.labubuwholesale.com/contact"
-  },
-  "sameAs": [
-    "https://www.labubuwholesale.com"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "US"
-  }
-};
+export default async function RootLayout({ children }) {
+  const config = await getSiteConfig();
+  
+  // Organization Structured Data (JSON-LD)
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": config.siteName,
+    "url": "https://www.labubuwholesale.com",
+    "logo": "https://www.labubuwholesale.com/logo1.webp",
+    "description": config.seoDescription,
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "info@labubuwholesale.com",
+      "url": "https://www.labubuwholesale.com/contact"
+    },
+    "sameAs": ["https://www.labubuwholesale.com"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US"
+    }
+  };
 
-// Website Structured Data
-const websiteJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Labubu Wholesale",
-  "url": "https://www.labubuwholesale.com",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://www.labubuwholesale.com/products?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-};
+  // Website Structured Data
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": config.siteName,
+    "url": "https://www.labubuwholesale.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.labubuwholesale.com/products?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
 
-export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>

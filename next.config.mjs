@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
+  // 移除 output: 'export'，启用 SSR
   images: {
     unoptimized: true,
   },

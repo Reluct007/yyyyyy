@@ -321,11 +321,11 @@ export default function AdminDashboard() {
                   </div>
 
                   {/* Info Notice */}
-                  <div className="flex items-start gap-3 p-4 bg-amber-50 rounded-xl border border-amber-100">
-                    <AlertCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
-                    <div className="text-sm text-amber-700">
-                      <p className="font-medium mb-1">Rebuild Required</p>
-                      <p>SEO changes require a site rebuild to take effect. Click "Save & Rebuild" to apply changes. The rebuild takes about 1-2 minutes.</p>
+                  <div className="flex items-start gap-3 p-4 bg-green-50 rounded-xl border border-green-100">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <div className="text-sm text-green-700">
+                      <p className="font-medium mb-1">Live Updates</p>
+                      <p>SEO changes take effect immediately. The site will use the new settings on the next page load (within 1 minute due to caching).</p>
                     </div>
                   </div>
                 </div>
@@ -465,30 +465,22 @@ export default function AdminDashboard() {
               </div>
             )}
 
-            {/* Save Buttons */}
-            <div className="mt-6 flex flex-col sm:flex-row justify-end gap-3">
+            {/* Save Button */}
+            <div className="mt-6 flex justify-end">
               <button
                 onClick={() => handleSave(false)}
                 disabled={saving}
-                className="flex items-center justify-center gap-2 px-6 py-3 bg-white border border-gray-200 text-gray-700 font-medium rounded-xl hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-              >
-                <Save className="w-5 h-5" />
-                <span>Save Only</span>
-              </button>
-              <button
-                onClick={() => handleSave(true)}
-                disabled={saving || deploying}
                 className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-medium rounded-xl hover:from-orange-600 hover:to-orange-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg shadow-orange-500/25"
               >
-                {deploying ? (
+                {saving ? (
                   <>
-                    <RefreshCw className="w-5 h-5 animate-spin" />
-                    <span>Rebuilding...</span>
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    <span>Saving...</span>
                   </>
                 ) : (
                   <>
-                    <RefreshCw className="w-5 h-5" />
-                    <span>Save & Rebuild</span>
+                    <Save className="w-5 h-5" />
+                    <span>Save Changes</span>
                   </>
                 )}
               </button>

@@ -1,0 +1,9 @@
+name = "labubu-site"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".open-next"
+
+# 绑定 KV 存储（可选，用于缓存）
+# [[kv_namespaces]]
+# binding = "CACHE_KV"
+# id = "your-kv-id"
