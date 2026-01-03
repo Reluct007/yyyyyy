@@ -1,32 +1,45 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 
 export default function ProductGallery({ mainImage, images = [], title }) {
-  // 合并主图和副图
   const allImages = mainImage ? [mainImage, ...images] : images;
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [showScrollHint, setShowScrollHint] = useState(false);
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
-  const mainImageRef = useRef(null);
+  const scrollContainerRef = useRef(null);
   
   if (allImages.length === 0) return null;
   
   const selectedImage = allImages[selectedIndex];
   
-  // 切换到上一张
+  // 检查是否需要显示滚动提示
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      setShowScrollHint(container.scrollHeight > container.clientHeight);
+    }
+  }, [allImages]);
+
+  // 滚动时隐藏提示
+  const handleScroll = () => {
+    const container = scrollContainerRef.current;
+    if (container && container.scrollTop > 20) {
+      setShowScrollHint(false);
+    }
+  };
+  
   const prevImage = () => {
     setSelectedIndex(prev => prev === 0 ? allImages.length - 1 : prev - 1);
   };
   
-  // 切换到下一张
   const nextImage = () => {
     setSelectedIndex(prev => prev === allImages.length - 1 ? 0 : prev + 1);
   };
   
-  // 触摸事件
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
   };
@@ -41,10 +54,10 @@ export default function ProductGallery({ mainImage, images = [], title }) {
   
   return (
     <>
-      {/* 桌面端布局：左侧大图 + 右侧 2列网格（高度与左侧一致，超出滚动） */}
+      {/* 桌面端布局 */}
       <div className="hidden md:grid md:grid-cols-2 gap-4">
         {/* 左侧大图 */}
-        <div ref={mainImageRef} className="aspect-square bg-white border border-border rounded-lg overflow-hidden">
+        <div className="aspect-square bg-white border border-border rounded-lg overflow-hidden">
           <Image
             src={selectedImage}
             alt={`${title} - Main view`}
@@ -56,35 +69,56 @@ export default function ProductGallery({ mainImage, images = [], title }) {
           />
         </div>
         
-        {/* 右侧 2列网格 - 高度与左侧一致，超出滚动 */}
-        <div className="aspect-square overflow-y-auto pr-2 scrollbar-thin">
-          <div className="grid grid-cols-2 gap-3">
-            {allImages.map((image, index) => (
-              <button
-                key={index}
-                onClick={() => setSelectedIndex(index)}
-                className={`aspect-square bg-white rounded-lg overflow-hidden transition-all ${
-                  selectedIndex === index 
-                    ? 'border-2 border-primary ring-4 ring-primary/20 shadow-lg' 
-                    : 'border border-border hover:border-primary/50'
-                }`}
-              >
-                <Image
-                  src={image}
-                  alt={`${title} - View ${index + 1}`}
-                  className={`w-full h-full object-contain transition-opacity ${
-                    selectedIndex === index ? 'opacity-100' : 'opacity-80 hover:opacity-100'
+        {/* 右侧缩略图区域 */}
+        <div className="relative aspect-square">
+          {/* 滚动容器 - 隐藏滚动条 */}
+          <div 
+            ref={scrollContainerRef}
+            onScroll={handleScroll}
+            className="h-full overflow-y-auto scrollbar-hide"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            <div className="grid grid-cols-2 gap-3 pb-4">
+              {allImages.map((image, index) => (
+                <button
+                  key={index}
+                  onClick={() => setSelectedIndex(index)}
+                  className={`aspect-square bg-white rounded-lg overflow-hidden transition-all ${
+                    selectedIndex === index 
+                      ? 'border-2 border-primary ring-4 ring-primary/20 shadow-lg' 
+                      : 'border border-border hover:border-primary/50'
                   }`}
-                  width={400}
-                  height={400}
-                />
-              </button>
-            ))}
+                >
+                  <Image
+                    src={image}
+                    alt={`${title} - View ${index + 1}`}
+                    className={`w-full h-full object-contain transition-opacity ${
+                      selectedIndex === index ? 'opacity-100' : 'opacity-80 hover:opacity-100'
+                    }`}
+                    width={400}
+                    height={400}
+                  />
+                </button>
+              ))}
+            </div>
           </div>
+          
+          {/* 底部渐变遮罩和滚动提示 */}
+          {showScrollHint && (
+            <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
+              <div className="h-24 bg-gradient-to-t from-background via-background/80 to-transparent" />
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex flex-col items-center">
+                <div className="bg-primary/10 backdrop-blur-sm rounded-full px-3 py-1.5 flex items-center gap-1.5 text-primary">
+                  <ChevronDown className="w-4 h-4 animate-bounce" />
+                  <span className="text-xs font-medium">Scroll for more</span>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
-      {/* 移动端布局：滑动切换 */}
+      {/* 移动端布局 */}
       <div className="md:hidden relative">
         <div 
           className="aspect-square bg-white border border-border rounded-lg overflow-hidden"
@@ -130,6 +164,13 @@ export default function ProductGallery({ mainImage, images = [], title }) {
           </>
         )}
       </div>
+
+      {/* 隐藏滚动条的全局样式 */}
+      <style jsx global>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </>
   );
 }
