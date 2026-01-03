@@ -361,16 +361,16 @@ export default function AdminDashboard() {
                       className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
                     />
                     <p className="mt-2 text-sm text-gray-500">
-                      Displayed in navbar and footer (updates immediately)
+                      Displayed in navbar, footer, and page titles
                     </p>
                   </div>
 
                   {/* Info Notice */}
-                  <div className="flex items-start gap-3 p-4 bg-green-50 rounded-xl border border-green-100">
-                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <div className="text-sm text-green-700">
-                      <p className="font-medium mb-1">Live Updates</p>
-                      <p>Site Name changes are reflected immediately in the navbar and footer after saving. Just refresh the page.</p>
+                  <div className="flex items-start gap-3 p-4 bg-blue-50 rounded-xl border border-blue-100">
+                    <AlertCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                    <div className="text-sm text-blue-700">
+                      <p className="font-medium mb-1">SEO Settings</p>
+                      <p>To configure page title, meta description, and keywords for search engines, go to the <button onClick={() => setActiveTab('seo')} className="underline font-medium">SEO Settings</button> tab.</p>
                     </div>
                   </div>
                 </div>
