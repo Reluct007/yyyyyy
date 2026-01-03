@@ -14,14 +14,16 @@ import {
   AlertCircle,
   User,
   Clock,
-  Info
+  Search,
+  RefreshCw
 } from 'lucide-react';
 
 export default function AdminDashboard() {
   const [config, setConfig] = useState(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
-  const [activeTab, setActiveTab] = useState('email');
+  const [deploying, setDeploying] = useState(false);
+  const [activeTab, setActiveTab] = useState('seo');
   const [message, setMessage] = useState({ type: '', text: '' });
   const router = useRouter();
 
@@ -32,7 +34,9 @@ export default function AdminDashboard() {
     fromEmail: '',
     fromName: '',
     siteName: '',
-    siteDescription: '',
+    seoTitle: '',
+    seoDescription: '',
+    seoKeywords: '',
   });
 
   useEffect(() => {
@@ -64,7 +68,9 @@ export default function AdminDashboard() {
           fromEmail: configData.config.fromEmail || '',
           fromName: configData.config.fromName || 'Labubu Wholesale',
           siteName: configData.config.siteName || 'Labubu Wholesale',
-          siteDescription: configData.config.siteDescription || '',
+          seoTitle: configData.config.seoTitle || '',
+          seoDescription: configData.config.seoDescription || '',
+          seoKeywords: configData.config.seoKeywords || '',
         });
       }
     } catch (err) {
@@ -75,7 +81,7 @@ export default function AdminDashboard() {
     }
   };
 
-  const handleSave = async () => {
+  const handleSave = async (triggerDeploy = false) => {
     const token = localStorage.getItem('admin_token');
     if (!token) {
       router.push('/admin');
@@ -83,6 +89,7 @@ export default function AdminDashboard() {
     }
 
     setSaving(true);
+    if (triggerDeploy) setDeploying(true);
     setMessage({ type: '', text: '' });
 
     try {
@@ -92,15 +99,19 @@ export default function AdminDashboard() {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`,
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, triggerDeploy }),
       });
 
       const data = await res.json();
 
       if (data.success) {
-        setMessage({ type: 'success', text: 'Settings saved successfully!' });
+        if (data.deploy?.triggered) {
+          setMessage({ type: 'success', text: 'Settings saved! Site rebuild started. Changes will be live in 1-2 minutes.' });
+        } else {
+          setMessage({ type: 'success', text: 'Settings saved successfully!' });
+        }
         setConfig(data.config);
-        setTimeout(() => setMessage({ type: '', text: '' }), 3000);
+        setTimeout(() => setMessage({ type: '', text: '' }), 5000);
       } else {
         setMessage({ type: 'error', text: data.msg || 'Failed to save' });
       }
@@ -108,6 +119,7 @@ export default function AdminDashboard() {
       setMessage({ type: 'error', text: 'Connection error' });
     } finally {
       setSaving(false);
+      setDeploying(false);
     }
   };
 
@@ -128,8 +140,9 @@ export default function AdminDashboard() {
   }
 
   const tabs = [
-    { id: 'email', label: 'Email Settings', icon: Mail },
+    { id: 'seo', label: 'SEO Settings', icon: Search },
     { id: 'site', label: 'Site Info', icon: Globe },
+    { id: 'email', label: 'Email Settings', icon: Mail },
   ];
 
   return (
@@ -172,17 +185,17 @@ export default function AdminDashboard() {
       <main className="max-w-6xl mx-auto px-6 py-8">
         {/* Message Toast */}
         {message.text && (
-          <div className={`fixed top-20 right-6 z-20 flex items-center gap-3 px-4 py-3 rounded-xl shadow-lg transition-all ${
+          <div className={`fixed top-20 right-6 z-20 flex items-center gap-3 px-4 py-3 rounded-xl shadow-lg transition-all max-w-md ${
             message.type === 'success' 
               ? 'bg-green-50 border border-green-200 text-green-700' 
               : 'bg-red-50 border border-red-200 text-red-700'
           }`}>
             {message.type === 'success' ? (
-              <CheckCircle className="w-5 h-5" />
+              <CheckCircle className="w-5 h-5 flex-shrink-0" />
             ) : (
-              <AlertCircle className="w-5 h-5" />
+              <AlertCircle className="w-5 h-5 flex-shrink-0" />
             )}
-            <span className="font-medium">{message.text}</span>
+            <span className="font-medium text-sm">{message.text}</span>
           </div>
         )}
 
@@ -234,6 +247,136 @@ export default function AdminDashboard() {
 
           {/* Content Area */}
           <div className="lg:col-span-3">
+            {/* SEO Settings Tab */}
+            {activeTab === 'seo' && (
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                <div className="px-6 py-5 border-b border-gray-100 bg-gradient-to-r from-purple-50 to-white">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center">
+                      <Search className="w-5 h-5 text-purple-600" />
+                    </div>
+                    <div>
+                      <h2 className="text-lg font-semibold text-gray-900">SEO Settings</h2>
+                      <p className="text-sm text-gray-500">Configure search engine optimization</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-6 space-y-6">
+                  {/* SEO Title */}
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      Page Title (Title Tag)
+                    </label>
+                    <input
+                      type="text"
+                      value={formData.seoTitle}
+                      onChange={(e) => setFormData({ ...formData, seoTitle: e.target.value })}
+                      placeholder="Labubu Wholesale - Premium Designer Collectibles & Custom Toys"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                    />
+                    <div className="mt-2 flex justify-between text-sm">
+                      <span className="text-gray-500">Recommended: 50-60 characters</span>
+                      <span className={`${formData.seoTitle.length > 60 ? 'text-amber-600' : 'text-gray-400'}`}>
+                        {formData.seoTitle.length}/60
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* SEO Description */}
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      Meta Description
+                    </label>
+                    <textarea
+                      value={formData.seoDescription}
+                      onChange={(e) => setFormData({ ...formData, seoDescription: e.target.value })}
+                      rows={3}
+                      placeholder="Premium Labubu wholesale collectibles for distributors & retailers. Custom designer toys, vinyl figures, and plush collectibles."
+                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all resize-none"
+                    />
+                    <div className="mt-2 flex justify-between text-sm">
+                      <span className="text-gray-500">Recommended: 150-160 characters</span>
+                      <span className={`${formData.seoDescription.length > 160 ? 'text-amber-600' : 'text-gray-400'}`}>
+                        {formData.seoDescription.length}/160
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* SEO Keywords */}
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      Meta Keywords
+                    </label>
+                    <input
+                      type="text"
+                      value={formData.seoKeywords}
+                      onChange={(e) => setFormData({ ...formData, seoKeywords: e.target.value })}
+                      placeholder="labubu, wholesale, designer toys, collectibles, vinyl figures"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                    />
+                    <p className="mt-2 text-sm text-gray-500">
+                      Separate keywords with commas
+                    </p>
+                  </div>
+
+                  {/* Info Notice */}
+                  <div className="flex items-start gap-3 p-4 bg-amber-50 rounded-xl border border-amber-100">
+                    <AlertCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
+                    <div className="text-sm text-amber-700">
+                      <p className="font-medium mb-1">Rebuild Required</p>
+                      <p>SEO changes require a site rebuild to take effect. Click "Save & Rebuild" to apply changes. The rebuild takes about 1-2 minutes.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Site Settings Tab */}
+            {activeTab === 'site' && (
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                <div className="px-6 py-5 border-b border-gray-100 bg-gradient-to-r from-blue-50 to-white">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
+                      <Globe className="w-5 h-5 text-blue-600" />
+                    </div>
+                    <div>
+                      <h2 className="text-lg font-semibold text-gray-900">Site Information</h2>
+                      <p className="text-sm text-gray-500">Configure your website branding</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-6 space-y-6">
+                  {/* Site Name */}
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      Site Name / Brand
+                    </label>
+                    <input
+                      type="text"
+                      value={formData.siteName}
+                      onChange={(e) => setFormData({ ...formData, siteName: e.target.value })}
+                      placeholder="Your Website Name"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                    />
+                    <p className="mt-2 text-sm text-gray-500">
+                      Displayed in navbar and footer (updates immediately)
+                    </p>
+                  </div>
+
+                  {/* Info Notice */}
+                  <div className="flex items-start gap-3 p-4 bg-green-50 rounded-xl border border-green-100">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <div className="text-sm text-green-700">
+                      <p className="font-medium mb-1">Live Updates</p>
+                      <p>Site Name changes are reflected immediately in the navbar and footer after saving. Just refresh the page.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Email Settings Tab */}
             {activeTab === 'email' && (
               <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
@@ -244,7 +387,7 @@ export default function AdminDashboard() {
                     </div>
                     <div>
                       <h2 className="text-lg font-semibold text-gray-900">Email Settings</h2>
-                      <p className="text-sm text-gray-500">Configure email notifications for form submissions</p>
+                      <p className="text-sm text-gray-500">Configure email notifications</p>
                     </div>
                   </div>
                 </div>
@@ -297,7 +440,7 @@ export default function AdminDashboard() {
                     <div className="mt-2 flex items-start gap-2 p-3 bg-amber-50 rounded-lg border border-amber-100">
                       <AlertCircle className="w-4 h-4 text-amber-600 mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-amber-700">
-                        Domain must be verified in Resend dashboard before use
+                        Domain must be verified in Resend dashboard
                       </span>
                     </div>
                   </div>
@@ -315,91 +458,37 @@ export default function AdminDashboard() {
                       className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
                     />
                     <p className="mt-2 text-sm text-gray-500">
-                      Display name shown in email recipients' inbox
+                      Display name shown in recipients' inbox
                     </p>
                   </div>
                 </div>
               </div>
             )}
 
-            {/* Site Settings Tab */}
-            {activeTab === 'site' && (
-              <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-                <div className="px-6 py-5 border-b border-gray-100 bg-gradient-to-r from-blue-50 to-white">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
-                      <Globe className="w-5 h-5 text-blue-600" />
-                    </div>
-                    <div>
-                      <h2 className="text-lg font-semibold text-gray-900">Site Information</h2>
-                      <p className="text-sm text-gray-500">Configure your website branding</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="p-6 space-y-6">
-                  {/* Site Name */}
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Site Name / Brand
-                    </label>
-                    <input
-                      type="text"
-                      value={formData.siteName}
-                      onChange={(e) => setFormData({ ...formData, siteName: e.target.value })}
-                      placeholder="Your Website Name"
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
-                    />
-                    <p className="mt-2 text-sm text-gray-500">
-                      Displayed in navbar, footer, and page titles
-                    </p>
-                  </div>
-
-                  {/* Site Description */}
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Site Description
-                    </label>
-                    <textarea
-                      value={formData.siteDescription}
-                      onChange={(e) => setFormData({ ...formData, siteDescription: e.target.value })}
-                      rows={4}
-                      placeholder="Brief description of your website..."
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all resize-none"
-                    />
-                    <p className="mt-2 text-sm text-gray-500">
-                      Used for SEO meta description
-                    </p>
-                  </div>
-
-                  {/* Info Notice */}
-                  <div className="flex items-start gap-3 p-4 bg-green-50 rounded-xl border border-green-100">
-                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <div className="text-sm text-green-700">
-                      <p className="font-medium mb-1">Live Updates</p>
-                      <p>Changes to Site Name will be reflected in the navbar and footer immediately after saving. Refresh the page to see updates.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Save Button */}
-            <div className="mt-6 flex justify-end">
+            {/* Save Buttons */}
+            <div className="mt-6 flex flex-col sm:flex-row justify-end gap-3">
               <button
-                onClick={handleSave}
+                onClick={() => handleSave(false)}
                 disabled={saving}
-                className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-medium rounded-xl hover:from-orange-600 hover:to-orange-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg shadow-orange-500/25"
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-white border border-gray-200 text-gray-700 font-medium rounded-xl hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
               >
-                {saving ? (
+                <Save className="w-5 h-5" />
+                <span>Save Only</span>
+              </button>
+              <button
+                onClick={() => handleSave(true)}
+                disabled={saving || deploying}
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-medium rounded-xl hover:from-orange-600 hover:to-orange-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg shadow-orange-500/25"
+              >
+                {deploying ? (
                   <>
-                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                    <span>Saving...</span>
+                    <RefreshCw className="w-5 h-5 animate-spin" />
+                    <span>Rebuilding...</span>
                   </>
                 ) : (
                   <>
-                    <Save className="w-5 h-5" />
-                    <span>Save Changes</span>
+                    <RefreshCw className="w-5 h-5" />
+                    <span>Save & Rebuild</span>
                   </>
                 )}
               </button>

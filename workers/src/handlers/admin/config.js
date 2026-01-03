@@ -9,8 +9,25 @@ const defaultConfig = {
   fromEmail: '',
   fromName: 'Labubu Wholesale',
   siteName: 'Labubu Wholesale',
-  siteDescription: 'Premium designer collectibles',
+  seoTitle: '',
+  seoDescription: '',
+  seoKeywords: '',
 };
+
+// 触发 Cloudflare Pages 重新构建
+async function triggerDeploy(deployHookUrl) {
+  if (!deployHookUrl) return { triggered: false, reason: 'No deploy hook configured' };
+  
+  try {
+    const res = await fetch(deployHookUrl, { method: 'POST' });
+    if (res.ok) {
+      return { triggered: true };
+    }
+    return { triggered: false, reason: `Deploy hook returned ${res.status}` };
+  } catch (error) {
+    return { triggered: false, reason: error.message };
+  }
+}
 
 export async function handleConfig(request, env) {
   const jwtSecret = env.JWT_SECRET || 'your-secret-key-change-in-production';
@@ -37,7 +54,9 @@ export async function handleConfig(request, env) {
           success: true,
           config: {
             siteName: config.siteName,
-            siteDescription: config.siteDescription,
+            seoTitle: config.seoTitle,
+            seoDescription: config.seoDescription,
+            seoKeywords: config.seoKeywords,
           }
         });
       }
@@ -73,6 +92,7 @@ export async function handleConfig(request, env) {
       }
 
       const updates = await request.json();
+      const { triggerDeploy: shouldDeploy, ...configUpdates } = updates;
 
       // 获取当前配置
       let config = await env.CONFIG_KV.get(CONFIG_KEY, 'json');
@@ -81,7 +101,7 @@ export async function handleConfig(request, env) {
       // 合并更新
       const newConfig = {
         ...config,
-        ...updates,
+        ...configUpdates,
         updatedAt: new Date().toISOString(),
         updatedBy: payload.username,
       };
@@ -89,10 +109,19 @@ export async function handleConfig(request, env) {
       // 保存配置
       await env.CONFIG_KV.put(CONFIG_KEY, JSON.stringify(newConfig));
 
+      // 如果需要触发重新构建
+      let deployResult = null;
+      if (shouldDeploy && env.DEPLOY_HOOK_URL) {
+        deployResult = await triggerDeploy(env.DEPLOY_HOOK_URL);
+      }
+
       return jsonResponse({
         success: true,
-        msg: 'Config updated successfully',
+        msg: deployResult?.triggered 
+          ? 'Config saved. Site rebuild started.' 
+          : 'Config updated successfully',
         config: newConfig,
+        deploy: deployResult,
       });
     } catch (error) {
       console.error('Update config error:', error);
