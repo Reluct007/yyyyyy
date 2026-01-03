@@ -1,163 +1,275 @@
 # 部署文档
 
-## 快速部署
+本文档介绍如何在新电脑上快速部署此项目。
 
-### 前提条件
+## 📋 前提条件
 
-- GitHub 账号
-- Cloudflare 账号
-- Resend 账号（用于邮件服务）
+### 必需账号
 
----
+| 账号 | 用途 | 注册地址 |
+|------|------|----------|
+| GitHub | 代码托管 | https://github.com |
+| Cloudflare | 网站托管 | https://cloudflare.com |
+| Resend | 邮件服务 | https://resend.com |
 
-## 第一步：部署前端 (Cloudflare Pages)
+### 必需软件
 
-### 1. 创建 Pages 项目
+| 软件 | 版本 | 安装方式 |
+|------|------|----------|
+| Node.js | 20+ | https://nodejs.org 或 `brew install node` |
+| Git | 最新版 | https://git-scm.com 或 `brew install git` |
+| Wrangler | 3.0+ | `npm install -g wrangler` |
+
+### 验证安装
+
+```bash
+node -v      # 应显示 v20.x.x 或更高
+npm -v       # 应显示 10.x.x 或更高
+git --version
+wrangler -v  # 应显示 3.x.x 或更高
+```
+
+## 🔧 本地环境搭建
+
+### 1. 克隆代码
+
+```bash
+git clone <your-repo-url>
+cd labubu
+```
+
+### 2. 安装依赖
+
+```bash
+# 前端依赖
+npm install
+
+# API 依赖
+cd workers
+npm install
+cd ..
+```
+
+### 3. 本地运行
+
+```bash
+# 终端 1: 启动前端
+npm run dev
+
+# 终端 2: 启动 API (可选)
+cd workers && npm run dev
+```
+
+### 4. 验证
+
+- 前端: http://localhost:3000
+- API: http://localhost:8787
+
+## 🌐 部署前端 (Cloudflare Pages)
+
+### 步骤 1: 创建 Pages 项目
 
 1. 登录 [Cloudflare Dashboard](https://dash.cloudflare.com/)
-2. 进入 **Workers & Pages**
+2. 左侧菜单选择 **Workers & Pages**
 3. 点击 **Create** → **Pages** → **Connect to Git**
-4. 授权并选择你的 GitHub 仓库
+4. 授权 GitHub 并选择仓库
 
-### 2. 配置构建设置
+### 步骤 2: 配置构建设置
 
-```
-生产分支:        main
-构建命令:        npm run build
-构建输出目录:    out
-根目录:          (留空)
-```
+| 配置项 | 值 |
+|--------|-----|
+| 生产分支 | `main` |
+| 构建命令 | `npm run build` |
+| 构建输出目录 | `out` |
+| 根目录 | `labubu` (如果是子目录) |
 
-### 3. 配置环境变量
+### 步骤 3: 配置环境变量
 
-在 **Settings** → **Environment variables** 添加：
+在 **Settings** → **Environment variables** 添加:
 
 | 变量名 | 值 | 说明 |
-|-------|-----|------|
-| `NEXT_PUBLIC_API_URL` | `https://api.yourdomain.com` | Workers API 地址 |
+|--------|-----|------|
+| `NEXT_PUBLIC_API_URL` | `https://api.yooyooy.com` | API 地址 |
 | `NODE_VERSION` | `20` | Node.js 版本 |
 
-### 4. 部署
+### 步骤 4: 部署
 
 点击 **Save and Deploy**，等待构建完成。
 
-### 5. 自定义域名
+### 步骤 5: 绑定自定义域名
 
-**Custom domains** → **Set up a custom domain** → 输入你的域名
+1. 进入项目 → **Custom domains**
+2. 点击 **Set up a custom domain**
+3. 输入域名 (如 `yooyooy.com`)
+4. 按提示配置 DNS
 
----
+## ⚡ 部署 API (Cloudflare Workers)
 
-## 第二步：部署 API (Cloudflare Workers)
-
-### 1. 安装 Wrangler CLI
+### 步骤 1: 登录 Wrangler
 
 ```bash
-npm install -g wrangler
 wrangler login
+# 浏览器会打开授权页面，点击允许
 ```
 
-### 2. 进入 workers 目录
+### 步骤 2: 配置 Secrets
 
 ```bash
 cd workers
-npm install
-```
 
-### 3. 配置 Secrets
-
-```bash
-# Resend API 密钥
+# 设置 Resend API 密钥
 wrangler secret put RESEND_API_KEY
+# 输入你的 Resend API Key
 
-# 接收表单的邮箱
+# 设置接收邮件的邮箱
 wrangler secret put CONTACT_EMAIL
+# 输入接收表单的邮箱地址
 
-# 发件邮箱 (需在 Resend 验证域名)
+# 设置发件邮箱
 wrangler secret put FROM_EMAIL
+# 输入已在 Resend 验证的发件邮箱
 ```
 
-### 4. 部署
+### 步骤 3: 部署
 
 ```bash
 npm run deploy
+# 或
+wrangler deploy --keep-vars
 ```
 
-### 5. 自定义域名
+### 步骤 4: 绑定自定义域名
 
 1. Cloudflare Dashboard → Workers & Pages
 2. 选择你的 Worker
 3. **Settings** → **Triggers** → **Custom Domains**
-4. 添加域名，如 `api.yourdomain.com`
+4. 添加域名 `api.yooyooy.com`
 
----
+## 📧 配置 Resend 邮件服务
 
-## 环境变量汇总
+### 步骤 1: 创建 API Key
 
-### Cloudflare Pages
+1. 登录 [Resend Dashboard](https://resend.com/api-keys)
+2. 点击 **Create API Key**
+3. 复制 API Key (只显示一次)
 
-| 变量名 | 说明 | 示例 |
-|-------|------|------|
-| `NEXT_PUBLIC_API_URL` | API 地址 | `https://api.yourdomain.com` |
-| `NODE_VERSION` | Node 版本 | `20` |
+### 步骤 2: 验证发件域名
 
-### Cloudflare Workers (Secrets)
+1. 进入 [Domains](https://resend.com/domains)
+2. 点击 **Add Domain**
+3. 输入你的域名 (如 `yooyooy.com`)
+4. 按提示添加 DNS 记录:
+   - MX 记录
+   - TXT 记录 (SPF)
+   - TXT 记录 (DKIM)
+5. 等待验证完成 (通常几分钟)
+
+### 步骤 3: 配置发件邮箱
+
+验证域名后，可使用该域名下任意邮箱作为发件人:
+- `noreply@yooyooy.com`
+- `contact@yooyooy.com`
+
+## 📊 环境变量汇总
+
+### Cloudflare Pages 环境变量
+
+| 变量名 | 示例值 | 说明 |
+|--------|--------|------|
+| `NEXT_PUBLIC_API_URL` | `https://api.yooyooy.com` | Workers API 地址 |
+| `NODE_VERSION` | `20` | Node.js 版本 |
+
+### Cloudflare Workers Secrets
 
 | 变量名 | 说明 |
-|-------|------|
+|--------|------|
 | `RESEND_API_KEY` | Resend API 密钥 |
 | `CONTACT_EMAIL` | 接收表单的邮箱 |
-| `FROM_EMAIL` | 发件邮箱 |
+| `FROM_EMAIL` | 发件邮箱 (需验证域名) |
 
----
+## 🔄 更新部署
 
-## 更新部署
+### 前端更新
 
-### 自动部署
+```bash
+# 推送代码到 main 分支，自动触发构建
+git add .
+git commit -m "update"
+git push origin main
+```
 
-推送代码到 `main` 分支，Cloudflare Pages 自动触发构建。
-
-### 手动触发
-
-Cloudflare Dashboard → Pages → 你的项目 → **Deployments** → **Retry deployment**
-
-### 更新 Workers
+### API 更新
 
 ```bash
 cd workers
 npm run deploy
 ```
 
----
+### 手动触发重新构建
 
-## 常见问题
+Cloudflare Dashboard → Pages → 项目 → Deployments → **Retry deployment**
 
-### Q: 修改了 SEO 配置没有生效？
+## ❓ 常见问题
 
-A: SEO 配置在 `data/basic.js` 文件中，修改后需要推送代码触发重新构建。
+### Q: 构建失败，提示 Node 版本问题？
+
+A: 确保在 Cloudflare Pages 环境变量中设置 `NODE_VERSION=20`
 
 ### Q: 表单提交失败？
 
-A: 检查以下配置：
-1. `NEXT_PUBLIC_API_URL` 环境变量是否正确
+检查以下配置:
+1. `NEXT_PUBLIC_API_URL` 是否正确
 2. Workers 是否部署成功
-3. Resend API Key 是否有效
-4. FROM_EMAIL 的域名是否在 Resend 验证
+3. Workers Secrets 是否配置
+4. Resend API Key 是否有效
+5. FROM_EMAIL 域名是否已验证
+
+### Q: 修改 SEO 配置没生效？
+
+A: SEO 配置在 `data/basic.js`，修改后需推送代码触发重新构建
 
 ### Q: 如何查看构建日志？
 
-A: Cloudflare Dashboard → Pages → 你的项目 → Deployments → 点击具体部署查看日志
+A: Cloudflare Dashboard → Pages → 项目 → Deployments → 点击具体部署
 
----
-
-## 本地测试
+### Q: 如何查看 Workers 日志？
 
 ```bash
-# 安装依赖
-npm install
-
-# 开发模式
-npm run dev
-
-# 构建测试
-npm run build
+cd workers
+npm run tail
+# 或
+wrangler tail
 ```
+
+### Q: 新电脑如何快速部署？
+
+```bash
+# 1. 安装 Node.js 20+
+# 2. 安装 Wrangler
+npm install -g wrangler
+
+# 3. 克隆代码
+git clone <repo-url>
+cd labubu
+
+# 4. 安装依赖
+npm install
+cd workers && npm install && cd ..
+
+# 5. 登录 Cloudflare
+wrangler login
+
+# 6. 部署 Workers
+cd workers && npm run deploy
+
+# 7. 前端通过 GitHub 推送自动部署
+git push origin main
+```
+
+## 🔗 有用链接
+
+- [Cloudflare Pages 文档](https://developers.cloudflare.com/pages/)
+- [Cloudflare Workers 文档](https://developers.cloudflare.com/workers/)
+- [Wrangler CLI 文档](https://developers.cloudflare.com/workers/wrangler/)
+- [Resend 文档](https://resend.com/docs)
+- [Next.js 静态导出](https://nextjs.org/docs/app/building-your-application/deploying/static-exports)
