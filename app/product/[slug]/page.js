@@ -153,14 +153,11 @@ export default function ProductPage({ params }) {
 
       <section className="py-8 px-2">
         <div className="container mx-auto space-y-8">
-          {/* 标题和描述 */}
+          {/* 标题 */}
           <div className="flex flex-col gap-2">
             <h1 className="text-pretty text-2xl font-semibold lg:text-4xl">
               {productItem.title}
             </h1>
-            <p className="max-w-4xl text-muted-foreground text-lg">
-              {productItem.description}
-            </p>
           </div>
 
           {/* 图片画廊 - 客户端组件 */}
@@ -169,6 +166,11 @@ export default function ProductPage({ params }) {
             images={productItem.images || []}
             title={productItem.title}
           />
+
+          {/* 描述 */}
+          <p className="max-w-4xl text-muted-foreground text-lg">
+            {productItem.description}
+          </p>
 
           {/* 特性和联系表单 */}
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
