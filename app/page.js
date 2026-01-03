@@ -1,10 +1,10 @@
-import Hero from "@/components/themes/labubu/hero";
-import ThreeColumn from "@/components/themes/labubu/three-column";
-import TwoColumn from "@/components/themes/labubu/two-column";
-import FourColumn from "@/components/themes/labubu/four-column";
-import Testimonials from "@/components/themes/labubu/testimonials";
-import FAQ from "@/components/themes/labubu/faq";
-import CTA from "@/components/themes/labubu/cta";
+import Hero from "@/components/features/hero";
+import ThreeColumn from "@/components/features/three-column";
+import TwoColumn from "@/components/features/two-column";
+import FourColumn from "@/components/features/four-column";
+import Testimonials from "@/components/features/testimonials";
+import FAQ from "@/components/features/faq";
+import CTA from "@/components/features/cta";
 import { home } from "@/data/home";
 
 export const metadata = {

@@ -1,4 +1,4 @@
-import Header from "@/components/themes/labubu/header";
+import Header from "@/components/features/header";
 import { ChevronRight } from "lucide-react";
 import { products } from "@/data/products";
 import Image from "next/image";

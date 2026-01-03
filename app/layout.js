@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/themes/labubu/navbar";
-import CTA from "@/components/themes/labubu/cta";
-import Footer from "@/components/themes/labubu/footer";
-import ScrollToTop from "@/components/themes/labubu/scroll-to-top";
+import Navbar from "@/components/features/navbar";
+import CTA from "@/components/features/cta";
+import Footer from "@/components/features/footer";
+import ScrollToTop from "@/components/features/scroll-to-top";
 import { Toaster } from "@/components/ui/sonner";
 import { LanguageProvider } from "@/lib/language-context";
 

@@ -1,6 +1,6 @@
 'use client';
 
-import SubscribeForm from "@/components/themes/labubu/subscribe-form";
+import SubscribeForm from "@/components/features/subscribe-form";
 import { basic } from "@/data/basic";
 import { useLanguage } from '@/lib/language-context';
 

@@ -6,7 +6,6 @@ import Link from 'next/link';
 
 export default function AdminDashboard() {
   const [config, setConfig] = useState(null);
-  const [themes, setThemes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState({ type: '', text: '' });
@@ -19,7 +18,6 @@ export default function AdminDashboard() {
     contactEmail: '',
     fromEmail: '',
     fromName: '',
-    activeTheme: '',
     siteName: '',
     siteDescription: '',
   });
@@ -37,7 +35,6 @@ export default function AdminDashboard() {
 
   const loadData = async (token) => {
     try {
-      // 加载配置
       const configRes = await fetch(`${API_URL}/api/admin/config`, {
         headers: { 'Authorization': `Bearer ${token}` },
       });
@@ -57,17 +54,9 @@ export default function AdminDashboard() {
           contactEmail: configData.config.contactEmail || '',
           fromEmail: configData.config.fromEmail || '',
           fromName: configData.config.fromName || 'Labubu Wholesale',
-          activeTheme: configData.config.activeTheme || 'labubu',
           siteName: configData.config.siteName || 'Labubu Wholesale',
           siteDescription: configData.config.siteDescription || '',
         });
-      }
-
-      // 加载主题列表
-      const themesRes = await fetch(`${API_URL}/api/admin/themes`);
-      const themesData = await themesRes.json();
-      if (themesData.success) {
-        setThemes(themesData.themes);
       }
     } catch (err) {
       console.error('Load error:', err);
@@ -157,31 +146,6 @@ export default function AdminDashboard() {
             {message.text}
           </div>
         )}
-
-        {/* Theme Settings */}
-        <section className="bg-white rounded-lg shadow p-6 mb-6">
-          <h2 className="text-xl font-semibold mb-4">Theme Settings</h2>
-          
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">
-              Active Theme
-            </label>
-            <select
-              value={formData.activeTheme}
-              onChange={(e) => setFormData({ ...formData, activeTheme: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-            >
-              {themes.map((theme) => (
-                <option key={theme.id} value={theme.id}>
-                  {theme.name}
-                </option>
-              ))}
-            </select>
-            <p className="text-sm text-gray-500 mt-1">
-              Note: Theme switching requires frontend rebuild to take effect.
-            </p>
-          </div>
-        </section>
 
         {/* Email Settings */}
         <section className="bg-white rounded-lg shadow p-6 mb-6">

@@ -7,7 +7,6 @@ import { handleContact } from './handlers/contact.js';
 import { handleSubscribe } from './handlers/subscribe.js';
 import { handleLogin } from './handlers/admin/login.js';
 import { handleConfig } from './handlers/admin/config.js';
-import { handleThemes } from './handlers/admin/themes.js';
 
 // CORS 头
 const corsHeaders = {
@@ -52,8 +51,7 @@ export default {
             'POST /api/contact',
             'POST /api/subscribe',
             'POST /api/admin/login',
-            'GET/POST /api/admin/config',
-            'GET /api/admin/themes'
+            'GET/POST /api/admin/config'
           ]
         });
       }
@@ -73,10 +71,6 @@ export default {
 
       if (path === '/api/admin/config') {
         return await handleConfig(request, env);
-      }
-
-      if (path === '/api/admin/themes' && request.method === 'GET') {
-        return await handleThemes(request, env);
       }
 
       // 404

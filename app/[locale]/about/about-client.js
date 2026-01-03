@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import Header from "@/components/themes/labubu/header";
+import Header from "@/components/features/header";
 import { CheckCircle } from 'lucide-react';
 import Image from "next/image";
 import { about } from "@/data/about";

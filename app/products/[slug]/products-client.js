@@ -2,7 +2,7 @@
 
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 import { Badge } from "@/components/ui/badge";
-import Header from "@/components/themes/labubu/header";
+import Header from "@/components/features/header";
 import { ChevronRight } from "lucide-react";
 import { products } from "@/data/products";
 import { getAllProductsByLanguage } from "@/data/auto-translate";

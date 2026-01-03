@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from 'next/link';
 import { ChevronRight, ArrowDownRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import ContactForm from '@/components/themes/labubu/contact-form';
+import ContactForm from '@/components/features/contact-form';
 
 const ROOT_URL = "https://www.labubuwholesale.com";
 

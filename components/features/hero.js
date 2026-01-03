@@ -3,7 +3,7 @@
 import { Badge } from "@/components/ui/badge";
 import { ArrowDownRight } from "lucide-react";
 import Image from "next/image";
-import SubscribeForm from "@/components/themes/labubu/subscribe-form";
+import SubscribeForm from "@/components/features/subscribe-form";
 import { useLanguage } from '@/lib/language-context';
 
 export default function Hero({data}) {

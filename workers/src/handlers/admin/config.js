@@ -8,25 +8,9 @@ const defaultConfig = {
   contactEmail: '',
   fromEmail: '',
   fromName: 'Labubu Wholesale',
-  activeTheme: 'labubu',
   siteName: 'Labubu Wholesale',
   siteDescription: 'Premium designer collectibles',
 };
-
-// 触发 Cloudflare Pages 重新构建
-async function triggerDeploy(deployHookUrl) {
-  if (!deployHookUrl) return { triggered: false, reason: 'No deploy hook configured' };
-  
-  try {
-    const res = await fetch(deployHookUrl, { method: 'POST' });
-    if (res.ok) {
-      return { triggered: true };
-    }
-    return { triggered: false, reason: `Deploy hook returned ${res.status}` };
-  } catch (error) {
-    return { triggered: false, reason: error.message };
-  }
-}
 
 export async function handleConfig(request, env) {
   const jwtSecret = env.JWT_SECRET || 'your-secret-key-change-in-production';
@@ -52,7 +36,6 @@ export async function handleConfig(request, env) {
         return jsonResponse({
           success: true,
           config: {
-            activeTheme: config.activeTheme,
             siteName: config.siteName,
             siteDescription: config.siteDescription,
           }
@@ -106,19 +89,10 @@ export async function handleConfig(request, env) {
       // 保存配置
       await env.CONFIG_KV.put(CONFIG_KEY, JSON.stringify(newConfig));
 
-      // 如果主题变了，触发重新构建
-      let deployResult = null;
-      if (updates.activeTheme && updates.activeTheme !== config.activeTheme) {
-        deployResult = await triggerDeploy(env.DEPLOY_HOOK_URL);
-      }
-
       return jsonResponse({
         success: true,
-        msg: deployResult?.triggered 
-          ? 'Config saved. Rebuild triggered, please wait a few minutes.' 
-          : 'Config updated successfully',
+        msg: 'Config updated successfully',
         config: newConfig,
-        deploy: deployResult
       });
     } catch (error) {
       console.error('Update config error:', error);

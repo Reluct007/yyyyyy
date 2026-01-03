@@ -2,10 +2,10 @@
   "name": "labubu-project",
   "version": "1.0.0",
   "private": true,
-  "description": "Labubu Wholesale - Multi-theme website project",
+  "description": "Labubu Wholesale Website",
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/fetch-config.mjs && node scripts/copy-theme-assets.mjs && node scripts/generate-sitemap.mjs",
+    "prebuild": "node scripts/copy-theme-assets.mjs && node scripts/generate-sitemap.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
