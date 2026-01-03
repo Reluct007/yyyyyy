@@ -6,6 +6,7 @@ import Footer from "@/components/features/footer";
 import ScrollToTop from "@/components/features/scroll-to-top";
 import { Toaster } from "@/components/ui/sonner";
 import { LanguageProvider } from "@/lib/language-context";
+import { SiteConfigProvider } from "@/lib/site-config-context";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -138,14 +139,16 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={inter.className}>
-        <LanguageProvider>
-          <Navbar />
-          <main>{children}</main>
-          <CTA />
-          <Footer />
-          <ScrollToTop />
-          <Toaster richColors position="top-right" />
-        </LanguageProvider>
+        <SiteConfigProvider>
+          <LanguageProvider>
+            <Navbar />
+            <main>{children}</main>
+            <CTA />
+            <Footer />
+            <ScrollToTop />
+            <Toaster richColors position="top-right" />
+          </LanguageProvider>
+        </SiteConfigProvider>
       </body>
     </html>
   );

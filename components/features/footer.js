@@ -3,9 +3,14 @@
 import Link from "next/link";
 import { basic } from "@/data/basic";
 import { useLanguage } from '@/lib/language-context';
+import { useSiteConfig } from '@/lib/site-config-context';
 
 export default function Footer({ data = basic.info }) {
   const { translations, locale } = useLanguage();
+  const { config } = useSiteConfig();
+  
+  // 使用后台配置覆盖默认值
+  const brandName = config.siteName || data.brand;
   
   const termsUrl = locale === 'en' ? '/terms-and-conditions' : `/${locale}/terms-of-service`;
   const privacyUrl = locale === 'en' ? '/privacy-policy' : `/${locale}/privacy-policy`;
@@ -15,7 +20,7 @@ export default function Footer({ data = basic.info }) {
       <div className="container mx-auto">
         <footer>
           <div className="flex flex-col justify-between gap-6 border-t border-border/50 pt-8 text-sm text-muted-foreground md:flex-row md:items-center">
-            <p className="text-base">© 2025 {data.brand}. {translations.footer?.copyright || "All rights reserved."}</p>
+            <p className="text-base">© 2025 {brandName}. {translations.footer?.copyright || "All rights reserved."}</p>
             <ul className="flex gap-6">
               <li className="underline hover:text-primary transition-colors">
                 <Link href={termsUrl}>{translations.footer?.terms || "Terms & Conditions"}</Link>
