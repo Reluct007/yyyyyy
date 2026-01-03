@@ -14,6 +14,8 @@ export default function ProductGallery({ mainImage, images = [], title }) {
   if (allImages.length === 0) return null;
   
   const selectedImage = allImages[selectedIndex];
+  // 右侧显示的副图（排除当前选中的图片）
+  const sideImages = allImages.filter((_, i) => i !== selectedIndex).slice(0, 6);
   
   // 切换到上一张
   const prevImage = () => {
@@ -35,20 +37,62 @@ export default function ProductGallery({ mainImage, images = [], title }) {
     touchEndX.current = e.changedTouches[0].clientX;
     const diff = touchStartX.current - touchEndX.current;
     
-    // 滑动超过 50px 触发切换
     if (Math.abs(diff) > 50) {
       if (diff > 0) {
-        nextImage(); // 左滑 -> 下一张
+        nextImage();
       } else {
-        prevImage(); // 右滑 -> 上一张
+        prevImage();
       }
+    }
+  };
+
+  // 点击副图切换
+  const handleSideImageClick = (image) => {
+    const index = allImages.findIndex(img => img === image);
+    if (index !== -1) {
+      setSelectedIndex(index);
     }
   };
   
   return (
-    <div className="grid gap-4 md:grid-cols-[1fr_120px]">
-      {/* 主图区域 */}
-      <div className="relative">
+    <>
+      {/* 桌面端布局：左侧大图 + 右侧 2x3 网格 */}
+      <div className="hidden md:grid md:grid-cols-2 gap-4">
+        {/* 左侧大图 */}
+        <div className="aspect-square bg-white border border-border rounded-lg overflow-hidden">
+          <Image
+            src={selectedImage}
+            alt={`${title} - Main view`}
+            className="w-full h-full object-contain cursor-pointer"
+            width={800}
+            height={800}
+            priority
+            onClick={nextImage}
+          />
+        </div>
+        
+        {/* 右侧 2x3 副图网格 */}
+        <div className="grid grid-cols-2 gap-3">
+          {sideImages.map((image, index) => (
+            <button
+              key={index}
+              onClick={() => handleSideImageClick(image)}
+              className="aspect-square bg-white border border-border rounded-lg overflow-hidden hover:border-primary transition-colors"
+            >
+              <Image
+                src={image}
+                alt={`${title} - View ${index + 2}`}
+                className="w-full h-full object-contain"
+                width={400}
+                height={400}
+              />
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* 移动端布局：滑动切换 */}
+      <div className="md:hidden relative">
         <div 
           className="aspect-square bg-white border border-border rounded-lg overflow-hidden"
           onTouchStart={handleTouchStart}
@@ -64,27 +108,26 @@ export default function ProductGallery({ mainImage, images = [], title }) {
           />
         </div>
         
-        {/* 移动端指示器和箭头 */}
         {allImages.length > 1 && (
           <>
-            {/* 左右箭头 - 仅移动端显示 */}
+            {/* 左右箭头 */}
             <button 
               onClick={prevImage}
-              className="md:hidden absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center shadow-md"
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center shadow-md"
               aria-label="Previous image"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button 
               onClick={nextImage}
-              className="md:hidden absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center shadow-md"
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center shadow-md"
               aria-label="Next image"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
             
-            {/* 底部指示点 - 仅移动端显示 */}
-            <div className="md:hidden absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+            {/* 底部指示点 */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
               {allImages.slice(0, 7).map((_, index) => (
                 <button
                   key={index}
@@ -101,29 +144,6 @@ export default function ProductGallery({ mainImage, images = [], title }) {
           </>
         )}
       </div>
-      
-      {/* 右侧缩略图列表 - 仅桌面端显示 */}
-      <div className="hidden md:flex flex-col gap-2 overflow-y-auto max-h-[600px] pr-2">
-        {allImages.slice(0, 7).map((image, index) => (
-          <button
-            key={index}
-            onClick={() => setSelectedIndex(index)}
-            className={`flex-shrink-0 w-full aspect-square rounded-lg overflow-hidden border-2 transition-all ${
-              selectedIndex === index 
-                ? 'border-primary ring-2 ring-primary/20' 
-                : 'border-border hover:border-primary/50'
-            }`}
-          >
-            <Image
-              src={image}
-              alt={`${title} - Thumbnail ${index + 1}`}
-              className="w-full h-full object-contain bg-white"
-              width={120}
-              height={120}
-            />
-          </button>
-        ))}
-      </div>
-    </div>
+    </>
   );
 }
