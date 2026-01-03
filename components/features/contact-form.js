@@ -165,8 +165,8 @@ export default function ContactForm({ locale = 'en' }) {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     
-    // API 服务地址 (Vercel)
-    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://labubu-api.vercel.app';
+    // API 服务地址
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.yooyooy.com';
 
     try {
       const response = await axios.post(`${API_URL}/api/contact`, {

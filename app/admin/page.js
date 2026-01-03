@@ -11,7 +11,7 @@ export default function AdminLogin() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://labubu-api.vercel.app';
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.yooyooy.com';
 
   useEffect(() => {
     const token = localStorage.getItem('admin_token');
