@@ -10,6 +10,7 @@ export default function ProductGallery({ mainImage, images = [], title }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
+  const mainImageRef = useRef(null);
   
   if (allImages.length === 0) return null;
   
@@ -40,46 +41,46 @@ export default function ProductGallery({ mainImage, images = [], title }) {
   
   return (
     <>
-      {/* 桌面端布局：左侧大图 + 右侧 2x2 网格（可滚动） */}
-      <div className="hidden md:grid md:grid-cols-2 gap-4 items-start">
+      {/* 桌面端布局：左侧大图 + 右侧 2列网格（高度与左侧一致，超出滚动） */}
+      <div className="hidden md:grid md:grid-cols-2 gap-4">
         {/* 左侧大图 */}
-        <div className="sticky top-4">
-          <div className="aspect-square bg-white border border-border rounded-lg overflow-hidden">
-            <Image
-              src={selectedImage}
-              alt={`${title} - Main view`}
-              className="w-full h-full object-contain cursor-pointer"
-              width={800}
-              height={800}
-              priority
-              onClick={nextImage}
-            />
-          </div>
+        <div ref={mainImageRef} className="aspect-square bg-white border border-border rounded-lg overflow-hidden">
+          <Image
+            src={selectedImage}
+            alt={`${title} - Main view`}
+            className="w-full h-full object-contain cursor-pointer"
+            width={800}
+            height={800}
+            priority
+            onClick={nextImage}
+          />
         </div>
         
-        {/* 右侧 2x2 副图网格 - 显示所有图片，当前选中的高亮 */}
-        <div className="grid grid-cols-2 gap-3 auto-rows-fr">
-          {allImages.map((image, index) => (
-            <button
-              key={index}
-              onClick={() => setSelectedIndex(index)}
-              className={`aspect-square bg-white rounded-lg overflow-hidden transition-all ${
-                selectedIndex === index 
-                  ? 'border-2 border-primary ring-4 ring-primary/20 shadow-lg' 
-                  : 'border border-border hover:border-primary/50'
-              }`}
-            >
-              <Image
-                src={image}
-                alt={`${title} - View ${index + 1}`}
-                className={`w-full h-full object-contain transition-opacity ${
-                  selectedIndex === index ? 'opacity-100' : 'opacity-80 hover:opacity-100'
+        {/* 右侧 2列网格 - 高度与左侧一致，超出滚动 */}
+        <div className="aspect-square overflow-y-auto pr-2 scrollbar-thin">
+          <div className="grid grid-cols-2 gap-3">
+            {allImages.map((image, index) => (
+              <button
+                key={index}
+                onClick={() => setSelectedIndex(index)}
+                className={`aspect-square bg-white rounded-lg overflow-hidden transition-all ${
+                  selectedIndex === index 
+                    ? 'border-2 border-primary ring-4 ring-primary/20 shadow-lg' 
+                    : 'border border-border hover:border-primary/50'
                 }`}
-                width={400}
-                height={400}
-              />
-            </button>
-          ))}
+              >
+                <Image
+                  src={image}
+                  alt={`${title} - View ${index + 1}`}
+                  className={`w-full h-full object-contain transition-opacity ${
+                    selectedIndex === index ? 'opacity-100' : 'opacity-80 hover:opacity-100'
+                  }`}
+                  width={400}
+                  height={400}
+                />
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
