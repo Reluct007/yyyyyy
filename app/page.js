@@ -6,24 +6,33 @@ import Testimonials from "@/components/features/testimonials";
 import FAQ from "@/components/features/faq";
 import CTA from "@/components/features/cta";
 import { home } from "@/data/home";
+import { getSiteConfig } from "@/lib/get-site-config";
 
-export const metadata = {
-  title: "Labubu Wholesale - Premium Designer Collectibles & Custom Toys",
-  description: "Premium Labubu wholesale collectibles for distributors & retailers. Custom designer toys, vinyl figures, and plush collectibles. Quality guaranteed.",
-  alternates: {
-    canonical: "https://www.labubuwholesale.com",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  openGraph: {
-    title: "Labubu Wholesale - Premium Designer Collectibles & Custom Toys",
-    description: "Premium Labubu wholesale collectibles for distributors & retailers. Custom designer toys, vinyl figures, and plush collectibles. Quality guaranteed.",
-    url: "https://www.labubuwholesale.com",
-    type: "website",
-  },
-};
+// 强制动态渲染
+export const dynamic = 'force-dynamic';
+
+// 动态生成首页 metadata
+export async function generateMetadata() {
+  const config = await getSiteConfig();
+  
+  return {
+    title: config.seoTitle,
+    description: config.seoDescription,
+    alternates: {
+      canonical: "https://www.labubuwholesale.com",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    openGraph: {
+      title: config.seoTitle,
+      description: config.seoDescription,
+      url: "https://www.labubuwholesale.com",
+      type: "website",
+    },
+  };
+}
 
 export default function Home({ data = home }) {
   return (

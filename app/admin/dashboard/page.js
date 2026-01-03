@@ -27,7 +27,7 @@ export default function AdminDashboard() {
   const [message, setMessage] = useState({ type: '', text: '' });
   const router = useRouter();
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://labubu-api.vercel.app';
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.yooyooy.com';
 
   const [formData, setFormData] = useState({
     contactEmail: '',

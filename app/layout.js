@@ -9,6 +9,10 @@ import { LanguageProvider } from "@/lib/language-context";
 import { SiteConfigProvider } from "@/lib/site-config-context";
 import { getSiteConfig } from "@/lib/get-site-config";
 
+// 强制动态渲染，确保每次请求都获取最新配置
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 const inter = Inter({ 
   subsets: ["latin"],
   display: 'swap',
