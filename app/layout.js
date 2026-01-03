@@ -81,7 +81,7 @@ const organizationJsonLd = {
   "@type": "Organization",
   "name": "Labubu Wholesale",
   "url": "https://www.labubuwholesale.com",
-  "logo": "https://www.labubuwholesale.com/themes/labubu/logo1.webp",
+  "logo": "https://www.labubuwholesale.com/logo1.webp",
   "description": "Labubu Wholesale specializes in high-quality designer collectibles that blend art and trend culture. We offer customized Labubu products for distributors and retailers.",
   "contactPoint": {
     "@type": "ContactPoint",
@@ -126,8 +126,8 @@ export default function RootLayout({ children }) {
         />
         
         {/* Preload critical resources */}
-        <link rel="preload" href="/themes/labubu/logo1.webp" as="image" />
-        <link rel="preload" href="/themes/labubu/home/Cover-image.webp" as="image" />
+        <link rel="preload" href="/logo1.webp" as="image" />
+        <link rel="preload" href="/home/Cover-image.webp" as="image" />
         
         {/* DNS prefetch & preconnect for external resources */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />

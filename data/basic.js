@@ -6,7 +6,7 @@ export const basic = {
   },
   navbar: {
     brand: "Labubu Wholesale",
-    logo: "/themes/labubu/logo1.webp",
+    logo: "/logo1.webp",
     buttonText: "Free Quote",
     dialogTitle: "Request a Free Quote",
     dialogDescription: "Please provide any additional details or specific requirements...",

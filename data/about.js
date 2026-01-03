@@ -4,7 +4,7 @@ export const about = {
   header: {
     title: "About Us",
     description: "At Labubu Wholesale, we design collectible art toys that blend playful creativity with exceptional craftsmanship. Our mission is to bring joy, originality, and long-term value to collectors worldwide.",
-    image: "/themes/labubu/about/1.webp",
+    image: "/about/1.webp",
     features: [
       "Efficient Production: Our factory is equipped with advanced machinery and smart technology, combining automated cutting and high-tech intelligent systems. With rapid response capabilities and scalable production, we ensure highly efficient and precise processes, guaranteeing timely and reliable delivery.",
       "Premium Quality: Each piece is crafted with precision and made to the highest standards, ensuring lasting durability and detail.",
@@ -15,7 +15,7 @@ export const about = {
   },
   intro: {
     title: "Our Story",
-    image: "/themes/labubu/about/3.webp",
+    image: "/about/3.webp",
     descriptions: [
       "Founded in 2023, we have adhered to a customer-first philosophy, carefully crafting every product and earning the trust of a growing global client base.",
       "Our dedicated R&D team drives continuous innovation in both technology and design, ensuring stable quality and setting new benchmarks for the industry.",
@@ -63,38 +63,38 @@ export const about = {
   ],
   gallery: [
     {
-      image: "/themes/labubu/about/a2.webp",
+      image: "/about/a2.webp",
       alt: "About Us"
     },
     {
-      image: "/themes/labubu/about/a3.webp",
+      image: "/about/a3.webp",
       alt: "About Us"
     },
     {
-      image: "/themes/labubu/about/a4.webp",
+      image: "/about/a4.webp",
       alt: "About Us"
     },
     {
-      image: "/themes/labubu/about/4.webp",
+      image: "/about/4.webp",
       alt: "About Us"
     },
   ],
   testimonials: [
     {
       name: "Michael Lee",
-      image: "/themes/labubu/about/r3.webp",
+      image: "/about/r3.webp",
       title: "Founder of PlayCollect Studio",
       description: "Partnering with this factory has been an excellent decision. Their attention to detail and consistent quality have made our product line stand out in the market."
     },
     {
       name: "Laura Chen",
-      image: "/themes/labubu/about/r2.webp",
+      image: "/about/r2.webp",
       title: "Purchasing Director at Global Merch Group",
       description: "From material selection to final packaging, every step reflects professionalism. Working with them gives us confidence and peace of mind."
     },
     {
       name: "Emily Carter",
-      image: "/themes/labubu/about/r1.webp",
+      image: "/about/r1.webp",
       title: "Operations Manager at ToyVerse Ltd",
       description: "The team’s ability to deliver large orders on time, without compromising quality, we’ve been able to scale faster and build stronger trust with our customers."
     }

@@ -1,7 +1,7 @@
 export const home = {
   hero: {
     "badge": "Welcome to Our Store",
-    "image": "/themes/labubu/home/Cover-image.webp",
+    "image": "/home/Cover-image.webp",
     "title": "Customized Labubu Wholesale",
     "description": "Welcome to the World of Labubu – Where Art Meets Trend! Discover exclusive designer collectibles that bring charm, creativity, and style to your space."
   },
@@ -11,21 +11,21 @@ export const home = {
     items: [
       {
         badge: "Labubu",
-        image: "/themes/labubu/home/1.webp",
+        image: "/home/1.webp",
         title: "Labubu Collection",
         slug: "/products/labubu",
         description: "LABUBU creates stylish, high-quality designer toys that blend art and trend culture. With careful craftsmanship and unique character design, each product is made to delight, collect, and inspire.",
       },
       {
         badge: "Dolls",
-        image: "/themes/labubu/home/c.webp",
+        image: "/home/c.webp",
         title: "Dolls Collection",
         slug: "/products/dolls",
         description: "Dolls brings imagination to life with stylish, collectible figures that blend playful charm, artistic design, and timeless appeal—crafted to be loved, displayed, and desired."
       },
       {
         badge: "Animals Toy",
-        image: "/themes/labubu/home/image.webp",
+        image: "/home/image.webp",
         title: "Animals Toy Collection",
         slug: "/products/animals-toy",
         description: "Animals Toy sparks wonder with adorable, collectible figures inspired by the wild—where playful design meets heartfelt charm, made to be treasured, shared, and displayed."
@@ -61,13 +61,13 @@ export const home = {
         "description": "Elevate your retail offerings with our exclusive range of labubu plush collectibles, designed for business clients seeking unique, high-quality products that captivate and engage audiences."
       },
       {
-        "image": "/themes/labubu/home/blind-box-figures,-the-monsters-coca-cola-series-vinyl-face-blind-box-1.webp",
+        "image": "/home/blind-box-figures,-the-monsters-coca-cola-series-vinyl-face-blind-box-1.webp",
         "title": "Blind Box Figures, The Monsters COCA-COLA Series-Vinyl Face Blind Box",
         "slug": "/product/blind-box-figures-the-monsters-coca-cola-series-vinyl-face-blind-box",
         "description": "Enhance your retail offerings with our custom labubu figures, designed for businesses seeking unique collectible products to attract and engage customers."
       },
       {
-        "image": "/themes/labubu/home/car-seat-for-dolls,-to-display-doll-toy-ornaments-decorations-accessories-1.webp",
+        "image": "/home/car-seat-for-dolls,-to-display-doll-toy-ornaments-decorations-accessories-1.webp",
         "title": "Car Seat for Dolls, To Display Doll Toy Ornaments Decorations Accessories",
         "slug": "/product/car-seat-for-dolls-to-display-doll-toy-ornaments-decorations-accessories",
         "description": "Unlock the potential in your inventory with our premium doll safety seats, designed specifically for distributors and retailers in the plush toys market."
@@ -91,19 +91,19 @@ export const home = {
     "description": "Our products are designed to brighten your daily life, adding creativity and joy to your home, workspace, and personal moments.",
     "items": [
       {
-        "image": "/themes/labubu/home/Labels.webp",
+        "image": "/home/Labels.webp",
         "badge": "Blind Boxes",
         "title": "Custom Blind Box Labels",
         "description": "Add a personal touch to your blind box collection with custom name tags, dates, or short messages – perfect for gifting or commemorating special moments."
       },
       {
-        "image": "/themes/labubu/home/Customization.webp",
+        "image": "/home/Customization.webp",
         "badge": "Plush Toys",
         "title": "Plush Accessory Customization",
         "description": "Choose from a variety of outfits, hats, or props to dress up your plush Labubu. Make your toy truly one-of-a-kind."
       },
       {
-        "image": "/themes/labubu/home/Packaging.webp",
+        "image": "/home/Packaging.webp",
         "badge": "Accessories",
         "title": "Custom Gift Box Packaging",
         "description": "Create a personalized unboxing experience with customizable gift boxes, featuring your favorite themes, colors, or event tags."
@@ -115,19 +115,19 @@ export const home = {
     "description": "Our products are designed to brighten your daily life, adding creativity and joy to your home, workspace, and personal moments.",
     "items": [
       {
-        "image": "/themes/labubu/home/1.webp",
+        "image": "/home/1.webp",
         "badge": "Step 1",
         "title": "Choose Your Product",
         "description": "Pick from our eligible customizable items – blind boxes, plush toys, or accessories."
       },
       {
-        "image": "/themes/labubu/home/2.webp",
+        "image": "/home/2.webp",
         "badge": "Step 2",
         "title": "Personalize the Details",
         "description": "Add names, dates, messages, or select special accessories and packaging themes."
       },
       {
-        "image": "/themes/labubu/home/3.webp",
+        "image": "/home/3.webp",
         "badge": "Step 3",
         "title": "Confirm & Craft",
         "description": "Once confirmed, our team begins crafting your custom Labubu with care and precision."
@@ -215,7 +215,7 @@ export const home = {
     "title": "About Us",
     "description": "Our products are designed to brighten your daily life, adding creativity and joy to your home, workspace, and personal moments.",
     "subtitle": "Our Story",
-    "image": "/themes/labubu/about/3.webp",
+    "image": "/about/3.webp",
     "descriptions": [
       "Founded in 2023, we have adhered to a customer-first philosophy, carefully crafting every product and earning the trust of a growing global client base.",
       "Our dedicated R&D team drives continuous innovation in both technology and design, ensuring stable quality and setting new benchmarks for the industry.",
