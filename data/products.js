@@ -4,7 +4,7 @@ export const products = {
     description: "Discover our latest product collection, where we share insights, tips, and updates on the latest trends in the industry.",
     image: "/home/Customization.webp",
     features: [
-      "Exceptional Quality:We ensure every Labubu collectible meets the highest standards of craftsmanship and durability",
+      "Exceptional Quality: We ensure every collectible meets the highest standards of craftsmanship and durability",
       "Charm & Creativity: Our designs combine playfulness and artistic flair, making each product both delightful and display-worthy",
       "Versatile Appeal: From home décor to thoughtful gifts, our collection fits into every lifestyle and occasion",
       "Sustainable Practices: Our commitment to sustainability is reflected in eco-conscious materials and mindful production methods"
@@ -19,7 +19,7 @@ export const products = {
         "Exceptional Quality: We ensure every blind box figure is crafted with premium materials and precise detailing, built to last and be loved",
         "Comfort and Style: Our blind boxes combine the thrill of mystery with bold, artistic character design – perfect for collectors and fans alike",
         "Versatile Appeal: From shelf displays to desk décor, our figures bring charm to any space and make unforgettable gifts",
-        "Sustainable Practices: We’re committed to eco-conscious packaging and responsible production, adding joy to your collection with less impact on the planet"
+        "Sustainable Practices: We're committed to eco-conscious packaging and responsible production, adding joy to your collection with less impact on the planet"
       ]
     },
     {
@@ -27,7 +27,7 @@ export const products = {
       description: "Dolls brings imagination to life with stylish, collectible figures that blend playful charm, artistic design, and timeless appeal—crafted to be loved, displayed, and desired.",
       image: "/home/c.webp",
       features: [
-        "Exceptional Craftsmanship: Every Dolls figure is thoughtfully sculpted with premium materials and fine detailing, offering a collectible that’s made to be cherished for years",
+        "Exceptional Craftsmanship: Every Dolls figure is thoughtfully sculpted with premium materials and fine detailing, offering a collectible that's made to be cherished for years",
         "Art Meets Emotion: Blending elegant aesthetics with expressive character design, Dolls brings heartfelt charm and modern style to every mystery unboxing experience",
         "Display-Ready Magic: Whether on your shelf, workspace, or as a meaningful gift, Dolls figures add a touch of personality and beauty to any space",
         "Mindful Creation: We embrace sustainable packaging and responsible production to deliver joy that feels good—for you and the planet"
@@ -41,7 +41,18 @@ export const products = {
         "Premium Craftsmanship: Every Animals Toy blind box is made with high-quality materials and intricate details, built to stand the test of time—and affection",
         "Whimsical Design: Each figure captures the spirit of the wild with playful, imaginative character design that surprises and delights with every unboxing",
         "Everyday Delight: From cozy shelves to creative workspaces, Animals Toy figures add a dash of personality and joy—perfect for display or gifting",
-        "Eco-Friendly Promise: We care about the world our animals come from, which is why we use sustainable packaging and ethical production practices in every stepEco-Friendly Promise: Inspired by the beauty of the animal world, we’re committed to sustainable packaging and mindful production—because caring for nature starts with the small things"
+        "Eco-Friendly Promise: We care about the world our animals come from, which is why we use sustainable packaging and ethical production practices"
+      ]
+    },
+    {
+      title: "Children's Doll",
+      description: "Children's Doll collection features magnetic dress-up dolls and creative play sets designed to spark imagination, enhance fine motor skills, and provide hours of screen-free entertainment for kids.",
+      image: "/product/81KWxgv15hL.webp",
+      features: [
+        "Educational Play: Our magnetic dress-up dolls help develop fine motor skills, creativity, and storytelling abilities in children aged 3-7",
+        "Safe & Durable: Made with high-quality, child-safe materials and strong magnets that withstand frequent play and travel",
+        "Endless Creativity: Mix and match outfits, accessories, and themes to create countless unique combinations",
+        "Travel-Friendly: Compact magnetic storage boxes make these perfect companions for road trips, flights, and on-the-go entertainment"
       ]
     }
   ]

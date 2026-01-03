@@ -149,29 +149,34 @@ export default function ProductPage({ params }) {
             </p>
           </div>
 
-          {/* 图片展示 */}
+          {/* 图片展示 - 左侧主图，右侧副图网格 */}
           <div className="grid gap-4 md:grid-cols-2">
+            {/* 主图 */}
             {productItem.image && (
-              <Image
-                src={productItem.image}
-                alt={`${productItem.title} - Premium designer collectible from Labubu Wholesale`}
-                className="w-full border border-border rounded-lg h-full object-cover"
-                width={800}
-                height={600}
-                priority
-              />
+              <div className="aspect-square">
+                <Image
+                  src={productItem.image}
+                  alt={`${productItem.title} - Premium designer collectible from Labubu Wholesale`}
+                  className="w-full h-full border border-border rounded-lg object-contain bg-white"
+                  width={800}
+                  height={800}
+                  priority
+                />
+              </div>
             )}
+            {/* 副图网格 */}
             {productItem.images && productItem.images.length > 0 && (
-              <div className="grid gap-4 md:grid-cols-2">
-                {productItem.images.map((image, index) => (
-                  <Image
-                    key={index}
-                    src={image}
-                    alt={`${productItem.title} - View ${index + 1}`}
-                    className="w-full border border-border rounded-lg object-cover"
-                    width={400}
-                    height={300}
-                  />
+              <div className="grid grid-cols-2 gap-4">
+                {productItem.images.slice(0, 6).map((image, index) => (
+                  <div key={index} className="aspect-square">
+                    <Image
+                      src={image}
+                      alt={`${productItem.title} - View ${index + 1}`}
+                      className="w-full h-full border border-border rounded-lg object-contain bg-white"
+                      width={400}
+                      height={400}
+                    />
+                  </div>
                 ))}
               </div>
             )}

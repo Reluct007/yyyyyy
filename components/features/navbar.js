@@ -2,21 +2,30 @@
 
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
-import { navigationMenuTriggerStyle } from '@/components/ui/navigation-menu';
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from '@/components/ui/navigation-menu';
 import { Button, buttonVariants } from '@/components/ui/button';
 import ContactForm from '@/components/features/contact-form';
-import { Menu } from 'lucide-react';
+import { Menu, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import Image from 'next/image';
 import { basic } from '@/data/basic';
+import { products } from '@/data/products';
 import { useLanguage } from '@/lib/language-context';
+import slugify from 'slugify';
 
 export default function Navbar({ data = basic.navbar }) {
   const { translations, locale } = useLanguage();
   
   const brandName = data.brand;
   const logo = data.logo;
+  
+  // 从 products.js 获取分类列表
+  const categories = products.products.map(p => ({
+    title: p.title,
+    slug: slugify(p.title, { lower: true, strict: true }),
+    description: p.description.substring(0, 80) + '...'
+  }));
   
   return (
     <section className="shadow-sm py-4">
@@ -28,17 +37,60 @@ export default function Navbar({ data = basic.navbar }) {
             <span className="text-xl font-bold">{brandName}</span>
           </Link>
 
-          <div className="flex items-center gap-8">
-            <Link href={locale === 'en' ? "/" : `/${locale}`} className={cn(navigationMenuTriggerStyle, buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
+          <div className="flex items-center gap-2">
+            <Link href={locale === 'en' ? "/" : `/${locale}`} className={cn(navigationMenuTriggerStyle(), buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
               {translations.nav?.home || "Home"}
             </Link>
-            <Link href={locale === 'en' ? "/products" : `/${locale}/products`} className={cn(navigationMenuTriggerStyle, buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
-              {translations.nav?.products || "Products"}
-            </Link>
-            <Link href={locale === 'en' ? "/about" : `/${locale}/about`} className={cn(navigationMenuTriggerStyle, buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
+            
+            {/* Products 下拉菜单 */}
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-base font-medium">
+                    {translations.nav?.products || "Products"}
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
+                      <li className="col-span-2">
+                        <NavigationMenuLink asChild>
+                          <Link
+                            href={locale === 'en' ? "/products" : `/${locale}/products`}
+                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          >
+                            <div className="mb-2 text-lg font-medium">
+                              All Products
+                            </div>
+                            <p className="text-sm leading-tight text-muted-foreground">
+                              Browse our complete collection of designer toys and collectibles
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      {categories.map((category) => (
+                        <li key={category.slug}>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href={locale === 'en' ? `/products/${category.slug}` : `/${locale}/products/${category.slug}`}
+                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            >
+                              <div className="text-sm font-medium leading-none">{category.title}</div>
+                              <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                {category.description}
+                              </p>
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+
+            <Link href={locale === 'en' ? "/about" : `/${locale}/about`} className={cn(navigationMenuTriggerStyle(), buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
               {translations.nav?.about || "About"}
             </Link>
-            <Link href={locale === 'en' ? "/contact" : `/${locale}/contact`} className={cn(navigationMenuTriggerStyle, buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
+            <Link href={locale === 'en' ? "/contact" : `/${locale}/contact`} className={cn(navigationMenuTriggerStyle(), buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
               {translations.nav?.contact || "Contact"}
             </Link>
           </div>
@@ -83,17 +135,33 @@ export default function Navbar({ data = basic.navbar }) {
                   </SheetTitle>
                 </SheetHeader>
 
-                <div className="my-8 flex flex-col gap-6">
-                  <Link href={locale === 'en' ? "/" : `/${locale}`} className="text-base">
+                <div className="my-8 flex flex-col gap-4">
+                  <Link href={locale === 'en' ? "/" : `/${locale}`} className="text-base font-medium">
                     {translations.nav?.home || "Home"}
                   </Link>
-                  <Link href={locale === 'en' ? "/products" : `/${locale}/products`} className="text-base">
-                    {translations.nav?.products || "Products"}
-                  </Link>
-                  <Link href={locale === 'en' ? "/about" : `/${locale}/about`} className="text-base">
+                  
+                  {/* Products with subcategories */}
+                  <div className="space-y-2">
+                    <Link href={locale === 'en' ? "/products" : `/${locale}/products`} className="text-base font-medium">
+                      {translations.nav?.products || "Products"}
+                    </Link>
+                    <div className="pl-4 space-y-2 border-l-2 border-muted">
+                      {categories.map((category) => (
+                        <Link 
+                          key={category.slug}
+                          href={locale === 'en' ? `/products/${category.slug}` : `/${locale}/products/${category.slug}`} 
+                          className="block text-sm text-muted-foreground hover:text-foreground"
+                        >
+                          {category.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <Link href={locale === 'en' ? "/about" : `/${locale}/about`} className="text-base font-medium">
                     {translations.nav?.about || "About"}
                   </Link>
-                  <Link href={locale === 'en' ? "/contact" : `/${locale}/contact`} className="text-base">
+                  <Link href={locale === 'en' ? "/contact" : `/${locale}/contact`} className="text-base font-medium">
                     {translations.nav?.contact || "Contact"}
                   </Link>
                 </div>
