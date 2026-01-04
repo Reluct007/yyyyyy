@@ -7,8 +7,8 @@ const CONFIG_KEY = 'site_config';
 const defaultConfig = {
   contactEmail: '',
   fromEmail: '',
-  fromName: 'Labubu Wholesale',
-  siteName: 'Labubu Wholesale',
+  fromName: 'Poker Kit',
+  siteName: 'Poker Kit',
   seoTitle: '',
   seoDescription: '',
   seoKeywords: '',

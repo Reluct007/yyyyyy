@@ -281,7 +281,7 @@ export const faqContent = {
       <p>Labubu Wholesale is a premium supplier of designer collectibles and custom toys for distributors and retailers worldwide.</p>
       
       <h3>How can I place an order?</h3>
-      <p>Please contact us through our contact form or email us directly at info@labubuwholesale.com with your requirements.</p>
+      <p>Please contact us through our contact form or email us directly at larry@pokerset.com with your requirements.</p>
       
       <h3>What is the minimum order quantity?</h3>
       <p>Minimum order quantities vary by product. Please contact us for specific details.</p>
@@ -306,7 +306,7 @@ export const faqContent = {
       <p>Labubu Wholesale es un proveedor premium de coleccionables de diseñador y juguetes personalizados para distribuidores y minoristas en todo el mundo.</p>
       
       <h3>¿Cómo puedo realizar un pedido?</h3>
-      <p>Por favor contáctenos a través de nuestro formulario de contacto o envíenos un correo electrónico directamente a info@labubuwholesale.com con sus requisitos.</p>
+      <p>Por favor contáctenos a través de nuestro formulario de contacto o envíenos un correo electrónico directamente a larry@pokerset.com con sus requisitos.</p>
       
       <h3>¿Cuál es la cantidad mínima de pedido?</h3>
       <p>Las cantidades mínimas de pedido varían según el producto. Por favor contáctenos para obtener detalles específicos.</p>
@@ -331,7 +331,7 @@ export const faqContent = {
       <p>Labubu Wholesale est un fournisseur premium de figurines de designer et de jouets personnalisés pour les distributeurs et détaillants du monde entier.</p>
       
       <h3>Comment puis-je passer une commande?</h3>
-      <p>Veuillez nous contacter via notre formulaire de contact ou nous envoyer un e-mail directement à info@labubuwholesale.com avec vos besoins.</p>
+      <p>Veuillez nous contacter via notre formulaire de contact ou nous envoyer un e-mail directement à larry@pokerset.com avec vos besoins.</p>
       
       <h3>Quelle est la quantité minimale de commande?</h3>
       <p>Les quantités minimales de commande varient selon le produit. Veuillez nous contacter pour des détails spécifiques.</p>
@@ -356,7 +356,7 @@ export const faqContent = {
       <p>Labubu Wholesale ist ein Premium-Anbieter von Designer-Sammlerstücken und maßgefertigten Spielzeugen für Händler und Einzelhändler weltweit.</p>
       
       <h3>Wie kann ich eine Bestellung aufgeben?</h3>
-      <p>Bitte kontaktieren Sie uns über unser Kontaktformular oder senden Sie uns direkt eine E-Mail an info@labubuwholesale.com mit Ihren Anforderungen.</p>
+      <p>Bitte kontaktieren Sie uns über unser Kontaktformular oder senden Sie uns direkt eine E-Mail an larry@pokerset.com mit Ihren Anforderungen.</p>
       
       <h3>Was ist die Mindestbestellmenge?</h3>
       <p>Die Mindestbestellmengen variieren je nach Produkt. Bitte kontaktieren Sie uns für spezifische Details.</p>
@@ -381,7 +381,7 @@ export const faqContent = {
       <p>Labubu Wholesaleは、世界中のディストリビューターと小売店向けのデザイナーコレクタブルとカスタムトイのプレミアムサプライヤーです。</p>
       
       <h3>注文するにはどうすればよいですか？</h3>
-      <p>お問い合わせフォームからご連絡いただくか、info@labubuwholesale.comまで直接メールでご要望をお送りください。</p>
+      <p>お問い合わせフォームからご連絡いただくか、larry@pokerset.comまで直接メールでご要望をお送りください。</p>
       
       <h3>最小注文数量はいくつですか？</h3>
       <p>最小注文数量は製品によって異なります。詳細についてはお問い合わせください。</p>
@@ -406,7 +406,7 @@ export const faqContent = {
       <p>Labubu Wholesale은 전 세계 유통업자와 소매업자를 위한 디자이너 컬렉터블 및 맞춤 토이의 프리미엄 공급업체입니다.</p>
       
       <h3>주문은 어떻게 하나요?</h3>
-      <p>문의 양식을 통해 연락하시거나 info@labubuwholesale.com으로 직접 이메일을 보내주시면 됩니다.</p>
+      <p>문의 양식을 통해 연락하시거나 larry@pokerset.com으로 직접 이메일을 보내주시면 됩니다.</p>
       
       <h3>최소 주문 수량은 얼마인가요?</h3>
       <p>최소 주문 수량은 제품에 따라 다릅니다. 자세한 내용은 문의해 주세요.</p>
@@ -550,7 +550,7 @@ export const returnContent = {
       <p>Items must be unused, in original packaging, and returned within 30 days of receipt.</p>
       
       <h2>Return Process</h2>
-      <p>Contact us at info@labubuwholesale.com to initiate a return. We will provide return instructions and address.</p>
+      <p>Contact us at larry@pokerset.com to initiate a return. We will provide return instructions and address.</p>
       
       <h2>Refunds</h2>
       <p>Refunds will be processed within 7-10 business days after we receive the returned items.</p>
@@ -569,7 +569,7 @@ export const returnContent = {
       <p>Los artículos deben estar sin usar, en su embalaje original y devolverse dentro de los 30 días posteriores a la recepción.</p>
       
       <h2>Proceso de Devolución</h2>
-      <p>Contáctenos en info@labubuwholesale.com para iniciar una devolución. Le proporcionaremos instrucciones y dirección de devolución.</p>
+      <p>Contáctenos en larry@pokerset.com para iniciar una devolución. Le proporcionaremos instrucciones y dirección de devolución.</p>
       
       <h2>Reembolsos</h2>
       <p>Los reembolsos se procesarán dentro de 7-10 días hábiles después de que recibamos los artículos devueltos.</p>
@@ -588,7 +588,7 @@ export const returnContent = {
       <p>Les articles doivent être inutilisés, dans leur emballage d'origine et retournés dans les 30 jours suivant la réception.</p>
       
       <h2>Processus de Retour</h2>
-      <p>Contactez-nous à info@labubuwholesale.com pour initier un retour. Nous fournirons des instructions et une adresse de retour.</p>
+      <p>Contactez-nous à larry@pokerset.com pour initier un retour. Nous fournirons des instructions et une adresse de retour.</p>
       
       <h2>Remboursements</h2>
       <p>Les remboursements seront traités dans les 7-10 jours ouvrables après réception des articles retournés.</p>
@@ -607,7 +607,7 @@ export const returnContent = {
       <p>Artikel müssen unbenutzt, in Originalverpackung sein und innerhalb von 30 Tagen nach Erhalt zurückgegeben werden.</p>
       
       <h2>Rückgabeprozess</h2>
-      <p>Kontaktieren Sie uns unter info@labubuwholesale.com, um eine Rücksendung einzuleiten. Wir stellen Rücksendeanweisungen und Adresse bereit.</p>
+      <p>Kontaktieren Sie uns unter larry@pokerset.com, um eine Rücksendung einzuleiten. Wir stellen Rücksendeanweisungen und Adresse bereit.</p>
       
       <h2>Rückerstattungen</h2>
       <p>Rückerstattungen werden innerhalb von 7-10 Werktagen nach Erhalt der zurückgesendeten Artikel bearbeitet.</p>
@@ -626,7 +626,7 @@ export const returnContent = {
       <p>商品は未使用で、元のパッケージに入っており、受領後30日以内に返品する必要があります。</p>
       
       <h2>返品プロセス</h2>
-      <p>返品を開始するには、info@labubuwholesale.comまでご連絡ください。返品の手順と住所をお知らせします。</p>
+      <p>返品を開始するには、larry@pokerset.comまでご連絡ください。返品の手順と住所をお知らせします。</p>
       
       <h2>返金</h2>
       <p>返品された商品を受け取ってから7〜10営業日以内に返金が処理されます。</p>
@@ -645,7 +645,7 @@ export const returnContent = {
       <p>상품은 미사용 상태여야 하며, 원래 포장 상태로 수령 후 30일 이내에 반품해야 합니다.</p>
       
       <h2>반품 프로세스</h2>
-      <p>반품을 시작하려면 info@labubuwholesale.com으로 문의하세요. 반품 지침과 주소를 제공해 드립니다.</p>
+      <p>반품을 시작하려면 larry@pokerset.com으로 문의하세요. 반품 지침과 주소를 제공해 드립니다.</p>
       
       <h2>환불</h2>
       <p>반품된 상품을 받은 후 7-10 영업일 이내에 환불이 처리됩니다.</p>
