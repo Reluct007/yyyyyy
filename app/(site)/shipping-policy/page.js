@@ -1,24 +1,24 @@
 import { getSeoMeta } from "@/lib/metadata-translations";
 import { getContent } from "@/data/content";
 import { basic } from "@/data/basic";
-import { withTrailingSlash } from "@/lib/seo-url";
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/data/i18n";
+import { buildAlternates } from "@/lib/hreflang";
 
-const SITE_URL = withTrailingSlash(basic.seo.url);
+const alternates = buildAlternates({
+  siteUrl: basic.seo.url,
+  logicalPath: "/shipping-policy/",
+  locale: DEFAULT_LOCALE,
+  locales: SUPPORTED_LOCALES,
+  defaultLocale: DEFAULT_LOCALE,
+});
 const { title, description } = getSeoMeta("shipping", "en");
 
 export const metadata = {
   title,
   description,
   alternates: {
-    canonical: `${SITE_URL}shipping-policy/`,
-    languages: {
-      en: `${SITE_URL}shipping-policy/`,
-      es: `${SITE_URL}es/shipping-policy/`,
-      fr: `${SITE_URL}fr/shipping-policy/`,
-      de: `${SITE_URL}de/shipping-policy/`,
-      ja: `${SITE_URL}ja/shipping-policy/`,
-      ko: `${SITE_URL}ko/shipping-policy/`,
-    },
+    canonical: alternates.canonical,
+    languages: alternates.languages,
   },
   robots: {
     index: true,
@@ -27,7 +27,7 @@ export const metadata = {
   openGraph: {
     title,
     description,
-    url: `${SITE_URL}shipping-policy/`,
+    url: alternates.canonical,
     type: "website",
   },
 };

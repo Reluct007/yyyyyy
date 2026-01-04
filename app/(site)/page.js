@@ -6,29 +6,28 @@ import Testimonials from "@/components/features/testimonials";
 import FAQ from "@/components/features/faq";
 import { home } from "@/data/home";
 import { basic } from "@/data/basic";
-import { withTrailingSlash } from "@/lib/seo-url";
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/data/i18n";
+import { buildAlternates } from "@/lib/hreflang";
 
-const SITE_URL = withTrailingSlash(basic.seo.url);
+const alternates = buildAlternates({
+  siteUrl: basic.seo.url,
+  logicalPath: "/",
+  locale: DEFAULT_LOCALE,
+  locales: SUPPORTED_LOCALES,
+  defaultLocale: DEFAULT_LOCALE,
+});
 
 export const metadata = {
   title: basic.seo.title,
   description: basic.seo.description,
   alternates: {
-    canonical: SITE_URL,
-    languages: {
-      en: SITE_URL,
-      es: `${SITE_URL}es/`,
-      fr: `${SITE_URL}fr/`,
-      de: `${SITE_URL}de/`,
-      ja: `${SITE_URL}ja/`,
-      ko: `${SITE_URL}ko/`,
-      "x-default": SITE_URL,
-    },
+    canonical: alternates.canonical,
+    languages: alternates.languages,
   },
   openGraph: {
     title: basic.seo.title,
     description: basic.seo.description,
-    url: SITE_URL,
+    url: alternates.canonical,
     type: "website",
   },
 };

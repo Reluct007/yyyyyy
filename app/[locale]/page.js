@@ -7,29 +7,28 @@ import FAQ from "@/components/features/faq";
 import { home } from "@/data/home";
 import { basic } from "@/data/basic";
 import { getSeoMeta } from "@/lib/metadata-translations";
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/data/i18n";
+import { buildAlternates } from "@/lib/hreflang";
 
 const ROOT_URL = basic.seo.url.replace(/\/$/, "");
 
 export async function generateMetadata({ params }) {
   const { locale } = params;
-  const canonicalUrl = locale === 'en' 
-    ? `${ROOT_URL}/` 
-    : `${ROOT_URL}/${locale}/`;
+  const alternates = buildAlternates({
+    siteUrl: ROOT_URL,
+    logicalPath: "/",
+    locale,
+    locales: SUPPORTED_LOCALES,
+    defaultLocale: DEFAULT_LOCALE,
+  });
   const { title, description } = getSeoMeta('home', locale);
   
   return {
     title,
     description,
     alternates: {
-      canonical: canonicalUrl,
-      languages: {
-        'en': `${ROOT_URL}/`,
-        'es': `${ROOT_URL}/es/`,
-        'fr': `${ROOT_URL}/fr/`,
-        'de': `${ROOT_URL}/de/`,
-        'ja': `${ROOT_URL}/ja/`,
-        'ko': `${ROOT_URL}/ko/`,
-      },
+      canonical: alternates.canonical,
+      languages: alternates.languages,
     },
     robots: {
       index: true,
@@ -38,7 +37,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title,
       description,
-      url: canonicalUrl,
+      url: alternates.canonical,
       type: "website",
     },
   };

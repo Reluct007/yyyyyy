@@ -1,9 +1,9 @@
 'use client';
 
-import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
+import { Pagination, PaginationContent, PaginationItem, PaginationLink } from "@/components/ui/pagination";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/features/header";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 import { products } from "@/data/products";
 import { getAllProductsByLanguage } from "@/data/auto-translate";
 import Image from "next/image";
@@ -15,11 +15,13 @@ import { basic } from "@/data/basic";
 // Get Header Info from original data (for fallback)
 const headerInfo = (slug) => products.products.find(product => slugify(product.title, { lower: true, strict: true }) === slug);
 
-function ProductsContent({ params, page = 1 }) {
-  const { translations, locale } = useLanguage();
+function ProductsContent({ params, locale: routeLocale, page = 1 }) {
+  const { translations, locale: contextLocale } = useLanguage();
+  const locale = routeLocale || contextLocale || 'en';
   const currentPage = Math.max(1, Number(page) || 1);
 
   // Get Banner Header Info - always use original data for slug matching
+  // Note: Server-side page.js already checks if header exists, so we can safely assume it exists here
   const originalHeader = headerInfo(params.slug);
   if (!originalHeader) return null;
   
@@ -59,17 +61,49 @@ function ProductsContent({ params, page = 1 }) {
     }
   };
 
+  // UI文本翻译
+  const uiTranslations = {
+    learnMore: {
+      en: "Learn More",
+      es: "Leer Más",
+      fr: "En Savoir Plus",
+      de: "Mehr Erfahren",
+      ja: "詳細を見る",
+      ko: "더 알아보기"
+    },
+    previous: {
+      en: "Previous",
+      es: "Anterior",
+      fr: "Précédent",
+      de: "Zurück",
+      ja: "前へ",
+      ko: "이전"
+    },
+    next: {
+      en: "Next",
+      es: "Siguiente",
+      fr: "Suivant",
+      de: "Weiter",
+      ja: "次へ",
+      ko: "다음"
+    }
+  };
+
   // 翻译函数
   const translateFeature = (feature, locale) => {
     if (!feature || typeof feature !== 'string') return feature;
     return featuresTranslations[feature]?.[locale] || feature;
   };
   
+  const t = (key) => uiTranslations[key]?.[locale] || uiTranslations[key]?.en || key;
+  
   // 创建翻译后的header数据
   const header = {
     ...originalHeader,
     features: originalHeader.features.map(feature => translateFeature(feature, locale))
   };
+
+  const ROOT_URL = basic.seo.url.replace(/\/$/, "");
 
   // Structured Data
   const jsonLd = {
@@ -79,23 +113,54 @@ function ProductsContent({ params, page = 1 }) {
       "@type": "ListItem",
       "position": 1,
       "name": translations.nav?.home || "Home",
-      "item": `${basic.seo.url}/`
+      "item": `${ROOT_URL}/`
     }, {
       "@type": "ListItem",
       "position": 2,
       "name": translations.nav?.products || "Products Collection",
-      "item": `${basic.seo.url}/products/`
+      "item": `${ROOT_URL}/collection/`
     }, {
       "@type": "ListItem",
       "position": 3,
       "name": header.title,
-      "item": `${basic.seo.url}/products/${params.slug}/`
+      "item": `${ROOT_URL}${locale === 'en' ? `/collection/${params.slug}/` : `/${locale}/collection/${params.slug}/`}`
     }]
   };
 
   // Filter Product Data - use i18n data if available
+  // Get all products in the current locale
   const allProducts = getAllProductsByLanguage(locale);
-  const productArray = allProducts.filter(item => item.category === header.title).map(item => ({
+  
+  // Map translated category names back to English for filtering
+  const categoryToEnglish = {
+    // English
+    "Labubu": "Labubu",
+    "Dolls": "Dolls", 
+    "Animals Toy": "Animals Toy",
+    // Spanish
+    "Muñecas": "Dolls",
+    "Juguetes de Animales": "Animals Toy",
+    // French
+    "Poupées": "Dolls",
+    "Jouets d'Animaux": "Animals Toy",
+    // German
+    "Puppen": "Dolls",
+    "Tier-Spielzeug": "Animals Toy",
+    // Japanese
+    "ドール": "Dolls",
+    "アニマルトイ": "Animals Toy",
+    "ラブブ": "Labubu",
+    // Korean
+    "인형": "Dolls",
+    "동물 장난감": "Animals Toy",
+    "라부부": "Labubu"
+  };
+  
+  // Filter products by matching the translated category back to original English category
+  const productArray = allProducts.filter(item => {
+    const englishCategory = categoryToEnglish[item.category] || item.category;
+    return englishCategory === originalHeader.title;
+  }).map(item => ({
     image: item.image,
     category: item.category,
     title: item.title,
@@ -106,15 +171,15 @@ function ProductsContent({ params, page = 1 }) {
   // Pagination
   const itemsPerPage = 52;
   const maxPageNumbers = 5;
-  const totalPages = Math.max(1, Math.ceil(productArray.length / itemsPerPage));
-  const isPageOutOfRange = currentPage > totalPages;
+  const totalPages = Math.max(1, Math.ceil(productArray.length / itemsPerPage)); // Ensure at least 1 page
+  const isPageOutOfRange = productArray.length > 0 && currentPage > totalPages; // Only out of range if there are products
   if (isPageOutOfRange) return null;
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const productsPage = productArray.slice(startIndex, startIndex + itemsPerPage);
   const prevPage = Math.max(1, currentPage - 1);
   const nextPage = currentPage + 1;
-  const categoryBasePath = `/products/${params.slug}/`;
+  const categoryBasePath = `/${locale}/collection/${params.slug}/`;
   const getPageHref = (pageNumber) => (
     pageNumber === 1 ? categoryBasePath : `${categoryBasePath}page/${pageNumber}/`
   );
@@ -143,16 +208,16 @@ function ProductsContent({ params, page = 1 }) {
             {productsPage.map((item, index) => (
               <div key={index} className="rounded-lg border h-full">
                 <div className="relative">
-                  <Link href={`/product/${item.id || slugify(item.title, { lower: true, strict: true })}`}><Image src={item.image} alt={item.title} className="w-full rounded-t-lg" width={400} height={300} /></Link>
+                  <Link href={locale === 'en' ? `/product/${item.id || slugify(item.title, { lower: true, strict: true })}` : `/${locale}/product/${item.id || slugify(item.title, { lower: true, strict: true })}`}><Image src={item.image} alt={item.title} className="w-full rounded-t-lg" width={400} height={300} /></Link>
                   <Badge variant="outline" className="absolute left-5 top-5 bg-primary-foreground">
-                    <Link href={`/products/${slugify(item.category, { lower: true, strict: true })}`}>{item.category}</Link>
+                    <Link href={locale === 'en' ? `/collection/${slugify(item.category, { lower: true, strict: true })}` : `/${locale}/collection/${slugify(item.category, { lower: true, strict: true })}`}>{item.category}</Link>
                   </Badge>
                 </div>
                 <div className="p-4 space-y-2">
-                  <Link href={`/product/${item.id || slugify(item.title, { lower: true, strict: true })}`}><h3 className="text-lg font-semibold">{item.title}</h3></Link>
+                  <Link href={locale === 'en' ? `/product/${item.id || slugify(item.title, { lower: true, strict: true })}` : `/${locale}/product/${item.id || slugify(item.title, { lower: true, strict: true })}`}><h3 className="text-lg font-semibold">{item.title}</h3></Link>
                   <p className="text-base text-muted-foreground">{item.description.length > 120 ? `${item.description.substring(0, 120)}...` : item.description}</p>
-                  <Link href={`/product/${item.id || slugify(item.title, { lower: true, strict: true })}`} className="flex items-center gap-2 text-sm text-muted-foreground">
-                    {translations.product?.learnMore || "Learn More"} <ChevronRight className="w-4" />
+                  <Link href={locale === 'en' ? `/product/${item.id || slugify(item.title, { lower: true, strict: true })}` : `/${locale}/product/${item.id || slugify(item.title, { lower: true, strict: true })}`} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    {t('learnMore')} <ChevronRight className="w-4" />
                   </Link>
                 </div>
               </div>
@@ -163,11 +228,33 @@ function ProductsContent({ params, page = 1 }) {
           {!isPageOutOfRange ? (
             <Pagination className="mt-8">
               <PaginationContent className="w-full">
-                <PaginationItem><PaginationPrevious href={currentPage !== 1 ? getPageHref(prevPage) : undefined} aria-disabled={currentPage === 1} /></PaginationItem>
+                <PaginationItem>
+                  <PaginationLink 
+                    href={currentPage !== 1 ? getPageHref(prevPage) : undefined} 
+                    aria-disabled={currentPage === 1}
+                    aria-label="Go to previous page"
+                    size="default"
+                    className="gap-1 pl-2.5"
+                  >
+                    <ChevronLeft className="h-4 w-4" />
+                    <span>{t('previous')}</span>
+                  </PaginationLink>
+                </PaginationItem>
                 {pageNumbers.map(pageNumber => (
                   <PaginationItem key={pageNumber}><PaginationLink href={getPageHref(pageNumber)} isActive={currentPage === pageNumber}>{pageNumber}</PaginationLink></PaginationItem>
                 ))}
-                <PaginationItem><PaginationNext href={currentPage !== totalPages ? getPageHref(nextPage) : undefined} aria-disabled={currentPage === totalPages} /></PaginationItem>
+                <PaginationItem>
+                  <PaginationLink 
+                    href={currentPage !== totalPages ? getPageHref(nextPage) : undefined} 
+                    aria-disabled={currentPage === totalPages}
+                    aria-label="Go to next page"
+                    size="default"
+                    className="gap-1 pr-2.5"
+                  >
+                    <span>{t('next')}</span>
+                    <ChevronRight className="h-4 w-4" />
+                  </PaginationLink>
+                </PaginationItem>
               </PaginationContent>
             </Pagination>
           ) : (
@@ -179,6 +266,6 @@ function ProductsContent({ params, page = 1 }) {
   );
 }
 
-export default function ProductsClient({ params, page = 1 }) {
-  return <ProductsContent params={params} page={page} />;
+export default function ProductsClient({ params, locale, page = 1 }) {
+  return <ProductsContent params={params} locale={locale} page={page} />;
 }

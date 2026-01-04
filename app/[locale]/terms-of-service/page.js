@@ -1,27 +1,28 @@
 import { getSeoMeta } from "@/lib/metadata-translations";
 import { getContent } from "@/data/content";
 import { basic } from "@/data/basic";
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/data/i18n";
+import { buildAlternates } from "@/lib/hreflang";
 
 const ROOT_URL = basic.seo.url.replace(/\/$/, "");
 
 export async function generateMetadata({ params }) {
   const { locale } = params;
-  const canonicalUrl = `${ROOT_URL}${locale === 'en' ? '/terms-of-service/' : `/${locale}/terms-of-service/`}`;
+  const alternates = buildAlternates({
+    siteUrl: ROOT_URL,
+    logicalPath: "/terms-of-service/",
+    locale,
+    locales: SUPPORTED_LOCALES,
+    defaultLocale: DEFAULT_LOCALE,
+  });
   const { title, description } = getSeoMeta('terms', locale);
   
   return {
     title,
     description,
     alternates: {
-      canonical: canonicalUrl,
-      languages: {
-        'en': `${ROOT_URL}/terms-of-service/`,
-        'es': `${ROOT_URL}/es/terms-of-service/`,
-        'fr': `${ROOT_URL}/fr/terms-of-service/`,
-        'de': `${ROOT_URL}/de/terms-of-service/`,
-        'ja': `${ROOT_URL}/ja/terms-of-service/`,
-        'ko': `${ROOT_URL}/ko/terms-of-service/`
-      },
+      canonical: alternates.canonical,
+      languages: alternates.languages,
     },
     robots: {
       index: true,
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title,
       description,
-      url: canonicalUrl,
+      url: alternates.canonical,
       type: "website",
     },
   };

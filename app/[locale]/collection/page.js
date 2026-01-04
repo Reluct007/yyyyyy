@@ -8,6 +8,8 @@ import slugify from "slugify";
 import { getSeoMeta } from "@/lib/metadata-translations";
 import { basic } from "@/data/basic";
 import { withTrailingSlash } from "@/lib/seo-url";
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/data/i18n";
+import { buildAlternates } from "@/lib/hreflang";
 
 const SITE_URL = withTrailingSlash(basic.seo.url);
 
@@ -18,7 +20,14 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { locale } = params;
-  const canonicalUrl = `${SITE_URL}${locale}/products/`;
+  const alternates = buildAlternates({
+    siteUrl: SITE_URL,
+    logicalPath: "/collection/",
+    locale,
+    locales: SUPPORTED_LOCALES,
+    defaultLocale: DEFAULT_LOCALE,
+  });
+  const canonicalUrl = alternates.canonical;
   const { title, description } = getSeoMeta('products', locale);
   
   return {
@@ -26,14 +35,7 @@ export async function generateMetadata({ params }) {
     description,
     alternates: {
       canonical: canonicalUrl,
-      languages: {
-        'en': `${SITE_URL}products/`,
-        'es': `${SITE_URL}es/products/`,
-        'fr': `${SITE_URL}fr/products/`,
-        'de': `${SITE_URL}de/products/`,
-        'ja': `${SITE_URL}ja/products/`,
-        'ko': `${SITE_URL}ko/products/`
-      },
+      languages: alternates.languages,
     },
     robots: {
       index: true,
@@ -70,7 +72,7 @@ export default function ProductsPage({ params }) {
       "@type": "ListItem",
       "position": 2,
       "name": translations.nav?.products || "Products Collection",
-      "item": `${SITE_URL}${locale}/products/`
+      "item": `${SITE_URL}${locale}/collection/`
     }]
   };
 
@@ -91,7 +93,7 @@ export default function ProductsPage({ params }) {
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {productsData.products.map((item, index) => {
               const itemSlug = slugify(item.title, { lower: true, strict: true });
-              const itemUrl = `${urlPrefix}/products/${itemSlug}`;
+              const itemUrl = `${urlPrefix}/collection/${itemSlug}`;
               
               return (
                 <div key={index} className="rounded-lg border">

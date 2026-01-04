@@ -1,24 +1,24 @@
 import { getSeoMeta } from "@/lib/metadata-translations";
 import { getContent } from "@/data/content";
 import { basic } from "@/data/basic";
-import { withTrailingSlash } from "@/lib/seo-url";
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/data/i18n";
+import { buildAlternates } from "@/lib/hreflang";
 
-const SITE_URL = withTrailingSlash(basic.seo.url);
+const alternates = buildAlternates({
+  siteUrl: basic.seo.url,
+  logicalPath: "/terms-of-service/",
+  locale: DEFAULT_LOCALE,
+  locales: SUPPORTED_LOCALES,
+  defaultLocale: DEFAULT_LOCALE,
+});
 const { title, description } = getSeoMeta("terms", "en");
 
 export const metadata = {
   title,
   description,
   alternates: {
-    canonical: `${SITE_URL}terms-of-service/`,
-    languages: {
-      en: `${SITE_URL}terms-of-service/`,
-      es: `${SITE_URL}es/terms-of-service/`,
-      fr: `${SITE_URL}fr/terms-of-service/`,
-      de: `${SITE_URL}de/terms-of-service/`,
-      ja: `${SITE_URL}ja/terms-of-service/`,
-      ko: `${SITE_URL}ko/terms-of-service/`,
-    },
+    canonical: alternates.canonical,
+    languages: alternates.languages,
   },
   robots: {
     index: true,
@@ -27,7 +27,7 @@ export const metadata = {
   openGraph: {
     title,
     description,
-    url: `${SITE_URL}terms-of-service/`,
+    url: alternates.canonical,
     type: "website",
   },
 };

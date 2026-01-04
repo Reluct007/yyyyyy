@@ -19,7 +19,7 @@ export const basic = {
     dialogDescription: "Please provide any additional details or specific requirements...",
     menu: [
       { label: "Home", href: "/" },
-      { label: "Products", href: "/products" },
+      { label: "Products", href: "/collection" },
       { label: "About", href: "/about" },
       { label: "Contact", href: "/contact" }
     ],

@@ -7,6 +7,7 @@ import { ChevronRight, ArrowDownRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import ContactForm from '@/components/features/contact-form';
 import ProductGallery from '@/components/features/product-gallery';
+import { generateProductMetadata } from "@/lib/product-metadata";
 
 const ROOT_URL = basic.seo.url;
 
@@ -33,44 +34,7 @@ export async function generateStaticParams() {
 // 生成 metadata
 export async function generateMetadata({ params }) {
   const { slug } = (await params) || {};
-  if (!slug) {
-    return {
-      title: "Product Not Found",
-      robots: { index: false, follow: false },
-    };
-  }
-  
-  const productItem = findProduct(slug);
-  if (!productItem) {
-    return {
-      title: "Product Not Found",
-      robots: { index: false, follow: false },
-    };
-  }
-
-  const description = productItem.description?.length > 160 
-    ? productItem.description.substring(0, 157) + '...' 
-    : productItem.description;
-
-  return {
-    title: `${productItem.title} | ${basic.info.brand}`,
-    description: description,
-    alternates: {
-      canonical: `${ROOT_URL}/product/${slug}/`,
-    },
-    openGraph: {
-      title: productItem.title,
-      description: description,
-      url: `${ROOT_URL}/product/${slug}/`,
-      type: "website",
-      images: productItem.image ? [{
-        url: `${ROOT_URL}${productItem.image}`,
-        width: 800,
-        height: 800,
-        alt: productItem.title,
-      }] : undefined,
-    },
-  };
+  return generateProductMetadata(slug, "en");
 }
 
 export default async function ProductPage({ params }) {
@@ -82,7 +46,7 @@ export default async function ProductPage({ params }) {
       <section className="py-16 px-4 text-center">
         <h1 className="text-2xl font-semibold">Product Not Found</h1>
         <p className="text-muted-foreground mt-2">The requested product could not be found.</p>
-        <Link href="/products" className="text-primary mt-4 inline-block">
+        <Link href="/collection" className="text-primary mt-4 inline-block">
           Browse All Products
         </Link>
       </section>
@@ -113,7 +77,7 @@ export default async function ProductPage({ params }) {
       "@type": "ListItem",
       "position": 2,
       "name": "Products",
-      "item": `${ROOT_URL}/products/`
+      "item": `${ROOT_URL}/collection/`
     }, {
       "@type": "ListItem",
       "position": 3,
@@ -213,7 +177,7 @@ export default async function ProductPage({ params }) {
                     />
                   </Link>
                   <Badge variant="outline" className="absolute left-5 top-5 bg-primary-foreground">
-                    <Link href={`/products/${slugify(item.category, { lower: true, strict: true })}/`}>
+                    <Link href={`/collection/${slugify(item.category, { lower: true, strict: true })}/`}>
                       {item.category}
                     </Link>
                   </Badge>
