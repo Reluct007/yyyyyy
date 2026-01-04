@@ -5,6 +5,7 @@ import { ArrowDownRight } from "lucide-react";
 import Image from "next/image";
 import SubscribeForm from "@/components/features/subscribe-form";
 import { useLanguage } from '@/lib/language-context';
+import { basic } from "@/data/basic";
 
 export default function Hero({data}) {
   const { translations } = useLanguage();
@@ -32,10 +33,11 @@ export default function Hero({data}) {
             <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-primary/10 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition duration-1000"></div>
             <Image 
               src={data.image} 
-              alt={`${translations.home?.hero?.title || data.title} - Premium designer collectibles from Labubu Wholesale`} 
+              alt={`${translations.home?.hero?.title || data.title} - ${basic.info.brand}`} 
               className="relative max-h-[500px] w-full rounded-2xl object-cover shadow-2xl group-hover:scale-105 transition-transform duration-500" 
               width={800} 
               height={500} 
+              priority
             />
           </div>
         </div>

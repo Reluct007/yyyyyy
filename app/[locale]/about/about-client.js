@@ -6,6 +6,7 @@ import Header from "@/components/features/header";
 import { CheckCircle } from 'lucide-react';
 import Image from "next/image";
 import { about } from "@/data/about";
+import { basic } from "@/data/basic";
 import { useLanguage } from '@/lib/language-context';
 import { useEffect, useState } from 'react';
 
@@ -120,12 +121,12 @@ export default function AboutClient({ data = about }) {
       "@type": "ListItem",
       "position": 1,
       "name": globalTranslations.nav?.home || "Home",
-      "item": `https://www.labubuwholesale.com`
+      "item": basic.seo.url
     }, {
       "@type": "ListItem",
       "position": 2,
       "name": globalTranslations.nav?.about || translatedData.header.title,
-      "item": `https://www.labubuwholesale.com${locale === 'en' ? '/about' : `/${locale}/about`}`
+      "item": `${basic.seo.url}${locale === 'en' ? '/about' : `/${locale}/about`}`
     }]
   };
 
@@ -209,4 +210,3 @@ export default function AboutClient({ data = about }) {
     </>
   );
 }
-

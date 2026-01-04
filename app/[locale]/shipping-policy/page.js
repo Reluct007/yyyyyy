@@ -1,9 +1,12 @@
 import { getSeoMeta } from "@/lib/metadata-translations";
 import { getContent } from "@/data/content";
+import { basic } from "@/data/basic";
+
+const ROOT_URL = basic.seo.url.replace(/\/$/, "");
 
 export async function generateMetadata({ params }) {
   const { locale } = params;
-  const canonicalUrl = `https://www.labubuwholesale.com${locale === 'en' ? '/shipping-policy/' : `/${locale}/shipping-policy/`}`;
+  const canonicalUrl = `${ROOT_URL}${locale === 'en' ? '/shipping-policy/' : `/${locale}/shipping-policy/`}`;
   const { title, description } = getSeoMeta('shipping', locale);
   
   return {
@@ -12,12 +15,12 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': 'https://www.labubuwholesale.com/shipping-policy/',
-        'es': 'https://www.labubuwholesale.com/es/shipping-policy/',
-        'fr': 'https://www.labubuwholesale.com/fr/shipping-policy/',
-        'de': 'https://www.labubuwholesale.com/de/shipping-policy/',
-        'ja': 'https://www.labubuwholesale.com/ja/shipping-policy/',
-        'ko': 'https://www.labubuwholesale.com/ko/shipping-policy/'
+        'en': `${ROOT_URL}/shipping-policy/`,
+        'es': `${ROOT_URL}/es/shipping-policy/`,
+        'fr': `${ROOT_URL}/fr/shipping-policy/`,
+        'de': `${ROOT_URL}/de/shipping-policy/`,
+        'ja': `${ROOT_URL}/ja/shipping-policy/`,
+        'ko': `${ROOT_URL}/ko/shipping-policy/`
       },
     },
     robots: {

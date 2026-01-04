@@ -10,6 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 import { useLanguage } from '@/lib/language-context';
+import { basic } from "@/data/basic";
 
 // Get Header Info from original data (for fallback)
 const headerInfo = (slug) => products.products.find(product => slugify(product.title, { lower: true, strict: true }) === slug);
@@ -102,7 +103,7 @@ function ProductsContent({ params, locale: routeLocale, page = 1 }) {
     features: originalHeader.features.map(feature => translateFeature(feature, locale))
   };
 
-  const ROOT_URL = "https://www.labubuwholesale.com";
+  const ROOT_URL = basic.seo.url.replace(/\/$/, "");
 
   // Structured Data
   const jsonLd = {

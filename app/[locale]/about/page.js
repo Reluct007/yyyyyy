@@ -1,10 +1,13 @@
 import { about } from "@/data/about";
 import AboutClient from './about-client';
 import { getSeoMeta } from "@/lib/metadata-translations";
+import { basic } from "@/data/basic";
+
+const ROOT_URL = basic.seo.url.replace(/\/$/, "");
 
 export async function generateMetadata({ params }) {
   const { locale } = params;
-  const canonicalUrl = `https://www.labubuwholesale.com${locale === 'en' ? '/about/' : `/${locale}/about/`}`;
+  const canonicalUrl = `${ROOT_URL}${locale === 'en' ? '/about/' : `/${locale}/about/`}`;
   const { title, description } = getSeoMeta('about', locale);
   
   return {

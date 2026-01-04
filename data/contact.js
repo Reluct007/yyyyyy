@@ -25,7 +25,7 @@ export const contact = {
     },
     {
       title: "Get in Touch",
-      content: "info@labubuwholesale.com",
+      content: "larry@pokerset.com",
       icon: <MailSearch className="size-8 shrink-0" />
     },
     {

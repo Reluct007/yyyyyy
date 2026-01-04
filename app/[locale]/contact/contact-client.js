@@ -3,6 +3,7 @@
 import ContactForm from "@/components/features/contact-form";
 import Header from "@/components/features/header";
 import { contact } from "@/data/contact";
+import { basic } from "@/data/basic";
 import { useLanguage } from '@/lib/language-context';
 import { useEffect, useState } from 'react';
 
@@ -140,12 +141,12 @@ export default function ContactClient({ data = contact }) {
       "@type": "ListItem",
       "position": 1,
       "name": globalTranslations.nav?.home || "Home",
-      "item": `https://www.labubuwholesale.com`
+      "item": basic.seo.url
     }, {
       "@type": "ListItem",
       "position": 2,
       "name": globalTranslations.nav?.contact || translatedData.header.title,
-      "item": `https://www.labubuwholesale.com${locale === 'en' ? '/contact' : `/${locale}/contact`}`
+      "item": `${basic.seo.url}${locale === 'en' ? '/contact' : `/${locale}/contact`}`
     }]
   };
 
@@ -187,4 +188,3 @@ export default function ContactClient({ data = contact }) {
     </>
   );
 }
-

@@ -10,6 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 import { useLanguage } from '@/lib/language-context';
+import { basic } from "@/data/basic";
 
 // Get Header Info from original data (for fallback)
 const headerInfo = (slug) => products.products.find(product => slugify(product.title, { lower: true, strict: true }) === slug);
@@ -78,17 +79,17 @@ function ProductsContent({ params, page = 1 }) {
       "@type": "ListItem",
       "position": 1,
       "name": translations.nav?.home || "Home",
-      "item": `https://www.labubuwholesale.com/`
+      "item": `${basic.seo.url}/`
     }, {
       "@type": "ListItem",
       "position": 2,
       "name": translations.nav?.products || "Products Collection",
-      "item": `https://www.labubuwholesale.com/products/`
+      "item": `${basic.seo.url}/products/`
     }, {
       "@type": "ListItem",
       "position": 3,
       "name": header.title,
-      "item": `https://www.labubuwholesale.com/products/${params.slug}/`
+      "item": `${basic.seo.url}/products/${params.slug}/`
     }]
   };
 

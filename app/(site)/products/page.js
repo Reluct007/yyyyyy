@@ -1,24 +1,30 @@
 import Header from "@/components/features/header";
 import { ChevronRight } from "lucide-react";
 import { products } from "@/data/products";
+import { basic } from "@/data/basic";
 import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 
+const ROOT_URL = basic.seo.url.replace(/\/$/, "");
+const PAGE_TITLE = `Products Collection | ${basic.info.brand}`;
+const PAGE_DESCRIPTION = products.header.description;
+const CANONICAL_URL = `${ROOT_URL}/products/`;
+
 export const metadata = {
-  title: "Products Collection - Labubu Wholesale",
-  description: "Browse our complete collection of premium Labubu collectibles. High-quality vinyl figures, plush toys, and designer collectibles for distributors and retailers.",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   alternates: {
-    canonical: "https://www.labubuwholesale.com/products/",
+    canonical: CANONICAL_URL,
   },
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "Products Collection - Labubu Wholesale",
-    description: "Browse our complete collection of premium Labubu collectibles. High-quality vinyl figures, plush toys, and designer collectibles for distributors and retailers.",
-    url: "https://www.labubuwholesale.com/products/",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: CANONICAL_URL,
     type: "website",
   },
 };
@@ -31,12 +37,12 @@ const jsonLd = {
     "@type": "ListItem",
     "position": 1,
     "name": "Home",
-    "item": "https://www.labubuwholesale.com/"
+    "item": `${ROOT_URL}/`
   }, {
     "@type": "ListItem",
     "position": 2,
     "name": "Products Collection",
-    "item": "https://www.labubuwholesale.com/products/"
+    "item": CANONICAL_URL
   }]
 };
 

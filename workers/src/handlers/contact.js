@@ -15,9 +15,9 @@ async function getEmailConfig(env) {
   }
 
   return {
-    contactEmail: config.contactEmail || env.CONTACT_EMAIL || 'info@labubuwholesale.com',
-    fromEmail: config.fromEmail || env.FROM_EMAIL || 'noreply@labubuwholesale.com',
-    fromName: config.fromName || 'Labubu Wholesale',
+    contactEmail: config.contactEmail || env.CONTACT_EMAIL || 'larry@pokerset.com',
+    fromEmail: config.fromEmail || env.FROM_EMAIL || 'noreply@pokerset.com',
+    fromName: config.fromName || 'Poker Kit',
   };
 }
 

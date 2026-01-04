@@ -1,19 +1,25 @@
 import AboutClient from './about-client';
+import { basic } from "@/data/basic";
+
+const ROOT_URL = basic.seo.url.replace(/\/$/, "");
+const PAGE_TITLE = `About Us | ${basic.info.brand}`;
+const PAGE_DESCRIPTION = `Learn about ${basic.info.brand}. Our story, mission, and commitment to quality.`;
+const CANONICAL_URL = `${ROOT_URL}/about/`;
 
 export const metadata = {
-  title: "About Us - Labubu Wholesale",
-  description: "Learn about Labubu Wholesale - Premium designer collectibles manufacturer. Our story, mission, and commitment to quality craftsmanship.",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   alternates: {
-    canonical: "https://www.labubuwholesale.com/about/",
+    canonical: CANONICAL_URL,
   },
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "About Us - Labubu Wholesale",
-    description: "Learn about Labubu Wholesale - Premium designer collectibles manufacturer. Our story, mission, and commitment to quality craftsmanship.",
-    url: "https://www.labubuwholesale.com/about/",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: CANONICAL_URL,
     type: "website",
   },
 };

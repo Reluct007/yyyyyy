@@ -32,7 +32,7 @@ export async function generateStaticParams() {
 
 // 生成 metadata
 export async function generateMetadata({ params }) {
-  const slug = params?.slug;
+  const { slug } = (await params) || {};
   if (!slug) {
     return {
       title: "Product Not Found",
@@ -73,8 +73,8 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function ProductPage({ params }) {
-  const slug = params?.slug;
+export default async function ProductPage({ params }) {
+  const { slug } = (await params) || {};
   const productItem = findProduct(slug);
   
   if (!productItem) {

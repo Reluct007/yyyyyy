@@ -17,7 +17,7 @@ const inter = Inter({
 
 export async function generateStaticParams() {
   return getNonDefaultLocales().map((locale) => ({
-    locale: locale,
+    locale,
   }));
 }
 
@@ -56,7 +56,7 @@ export async function generateMetadata({ params }) {
           url: '/opengraph-image.png',
           width: 1200,
           height: 630,
-          alt: `${basic.info.brand} - Premium Designer Collectibles`,
+          alt: `${basic.info.brand} - ${title}`,
         },
       ],
     },
@@ -83,7 +83,7 @@ export default function LocaleLayout({ children, params }) {
     "@type": "Organization",
     "name": basic.info.brand,
     "url": SITE_URL,
-    "logo": `${basic.seo.url}/logo1.webp`,
+    "logo": `${SITE_URL}logo1.webp`,
     "description": basic.seo.description,
     "contactPoint": {
       "@type": "ContactPoint",
@@ -119,6 +119,10 @@ export default function LocaleLayout({ children, params }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={inter.className}>
         <RootChrome>{children}</RootChrome>

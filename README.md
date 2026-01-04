@@ -1,4 +1,4 @@
-# Labubu Wholesale
+# Poker Kit
 
 Next.js 纯静态电商网站，支持多语言、产品展示、联系表单。部署在 Cloudflare 平台。
 
@@ -16,7 +16,7 @@ Next.js 纯静态电商网站，支持多语言、产品展示、联系表单。
 ```
 Cloudflare
 ├── Pages (前端静态网站)
-│   - 站点根域名: `data/basic.js` 的 `basic.seo.url`（例如 `https://www.labubuwholesale.com`）
+│   - 站点根域名: `data/basic.js` 的 `basic.seo.url`（例如 `https://pokerset.com`）
 │   - Next.js 静态导出到 /out 目录
 │   - 全球 CDN 加速
 │
@@ -29,7 +29,7 @@ Cloudflare
 ## 📁 目录结构
 
 ```
-labubu/
+poker-set/
 ├── app/                    # Next.js 页面
 │   ├── [locale]/          # 多语言路由 (en/es/fr/de/ja/ko)
 │   ├── product/[slug]/    # 产品详情页
@@ -64,7 +64,7 @@ labubu/
 
 ```bash
 git clone <your-repo-url>
-cd labubu
+cd poker-set
 ```
 
 ### 2. 安装依赖
@@ -94,6 +94,7 @@ pnpm -C workers dev
 pnpm build
 # 输出到 out/ 目录
 # 构建前会自动重新生成 public/sitemap.xml
+# 说明：当前 build 使用 Turbopack（next build --turbopack）
 ```
 
 ## CI
@@ -125,6 +126,24 @@ export const basic = {
 };
 ```
 
+### 主题颜色（全站）
+
+本项目使用「CSS 变量 + Tailwind 映射」的方式管理主题色：
+
+- 颜色源头在 `app/globals.css`：`:root` 为浅色主题，`.dark` 为深色主题
+- `tailwind.config.js` 将这些变量映射为 Tailwind 的颜色 token（例如 `bg-primary` / `text-primary`）
+
+要修改品牌主色/按钮高亮等，调整 `app/globals.css` 中的 `--primary`（以及同色系的 `--ring`）。注意这里的值是 **HSL 三元组**（不带 `hsl()`），例如：
+
+```css
+:root {
+  --primary: 24.6 95% 53.1%;
+}
+.dark {
+  --primary: 20.5 90.2% 48.2%;
+}
+```
+
 ### 产品数据
 
 编辑 `data/product.js` 添加产品:
@@ -136,7 +155,7 @@ export const product = [
     description: "产品描述",
     image: "/product/image.webp",
     images: ["/product/img1.webp", "/product/img2.webp"],
-    category: "Labubu",  // 分类名称
+    category: "Poker Equipment",  // 分类名称
     features: [
       { title: "特性1", description: "描述" },
     ]
@@ -149,10 +168,18 @@ export const product = [
 编辑 `data/products.js` 管理分类:
 
 ```javascript
-export const products = [
-  { title: "Labubu", description: "分类描述" },
-  { title: "Dolls", description: "分类描述" },
-];
+export const products = {
+  header: {
+    title: "Poker Sets Collection",
+    description: "页面描述",
+    image: "/home/Customization.webp",
+    features: ["特性 1", "特性 2"]
+  },
+  products: [
+    { title: "Poker Equipment", description: "分类描述", image: "/home/Customization.webp", features: ["特性 1"] },
+    { title: "Poker Chips", description: "分类描述", image: "/home/image.webp", features: ["特性 1"] },
+  ]
+};
 ```
 
 ## 📧 邮件服务配置
