@@ -11,8 +11,8 @@ import { getSeoMeta } from "@/lib/metadata-translations";
 export async function generateMetadata({ params }) {
   const { locale } = params;
   const canonicalUrl = locale === 'en' 
-    ? 'https://www.labubuwholesale.com' 
-    : `https://www.labubuwholesale.com/${locale}`;
+    ? 'https://www.labubuwholesale.com/' 
+    : `https://www.labubuwholesale.com/${locale}/`;
   const { title, description } = getSeoMeta('home', locale);
   
   return {
@@ -21,12 +21,12 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': 'https://www.labubuwholesale.com',
-        'es': 'https://www.labubuwholesale.com/es',
-        'fr': 'https://www.labubuwholesale.com/fr',
-        'de': 'https://www.labubuwholesale.com/de',
-        'ja': 'https://www.labubuwholesale.com/ja',
-        'ko': 'https://www.labubuwholesale.com/ko',
+        'en': 'https://www.labubuwholesale.com/',
+        'es': 'https://www.labubuwholesale.com/es/',
+        'fr': 'https://www.labubuwholesale.com/fr/',
+        'de': 'https://www.labubuwholesale.com/de/',
+        'ja': 'https://www.labubuwholesale.com/ja/',
+        'ko': 'https://www.labubuwholesale.com/ko/',
       },
     },
     robots: {

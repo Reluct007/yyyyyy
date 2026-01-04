@@ -4,7 +4,7 @@ import { getSeoMeta } from "@/lib/metadata-translations";
 
 export async function generateMetadata({ params }) {
   const { locale } = params;
-  const canonicalUrl = `https://www.labubuwholesale.com${locale === 'en' ? '/about' : `/${locale}/about`}`;
+  const canonicalUrl = `https://www.labubuwholesale.com${locale === 'en' ? '/about/' : `/${locale}/about/`}`;
   const { title, description } = getSeoMeta('about', locale);
   
   return {

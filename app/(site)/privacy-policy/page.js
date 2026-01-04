@@ -4,7 +4,7 @@ export const metadata = {
   title: "Privacy Policy - Labubu Wholesale",
   description: "Privacy Policy for Labubu Wholesale. Learn how we collect, use, and protect your personal information.",
   alternates: {
-    canonical: "https://www.labubuwholesale.com/privacy-policy",
+    canonical: "https://www.labubuwholesale.com/privacy-policy/",
   },
   robots: {
     index: true,
@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: "Privacy Policy - Labubu Wholesale",
     description: "Privacy Policy for Labubu Wholesale. Learn how we collect, use, and protect your personal information.",
-    url: "https://www.labubuwholesale.com/privacy-policy",
+    url: "https://www.labubuwholesale.com/privacy-policy/",
     type: "website",
   },
 };

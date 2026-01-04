@@ -1,9 +1,20 @@
-import { LanguageProvider } from '@/lib/language-context';
-import { getSupportedLocales } from '@/lib/i18n';
-import { getSeoMeta } from '@/lib/metadata-translations';
-import { notFound } from 'next/navigation';
+import { Inter } from "next/font/google";
+import "../globals.css";
+import RootChrome from "@/components/layout/root-chrome";
+import { basic } from "@/data/basic";
+import { getSupportedLocales } from "@/lib/i18n";
+import { getSeoMeta } from "@/lib/metadata-translations";
+import { withTrailingSlash } from "@/lib/seo-url";
+import { notFound } from "next/navigation";
 
 const ROOT_URL = "https://www.labubuwholesale.com";
+const SITE_URL = withTrailingSlash(basic.seo.url);
+
+const inter = Inter({ 
+  subsets: ["latin"],
+  display: 'swap',
+  preload: true,
+});
 
 export async function generateStaticParams() {
   return getSupportedLocales().map((locale) => ({
@@ -25,10 +36,11 @@ export async function generateMetadata({ params }) {
   };
 
   const canonicalUrl = locale === 'en' 
-    ? ROOT_URL 
-    : `${ROOT_URL}/${locale}`;
+    ? `${ROOT_URL}/`
+    : `${ROOT_URL}/${locale}/`;
   
   return {
+    metadataBase: new URL(SITE_URL),
     title,
     description,
     robots: {
@@ -38,13 +50,13 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': ROOT_URL,
-        'es': `${ROOT_URL}/es`,
-        'fr': `${ROOT_URL}/fr`,
-        'de': `${ROOT_URL}/de`,
-        'ja': `${ROOT_URL}/ja`,
-        'ko': `${ROOT_URL}/ko`,
-        'x-default': ROOT_URL,
+        'en': `${ROOT_URL}/`,
+        'es': `${ROOT_URL}/es/`,
+        'fr': `${ROOT_URL}/fr/`,
+        'de': `${ROOT_URL}/de/`,
+        'ja': `${ROOT_URL}/ja/`,
+        'ko': `${ROOT_URL}/ko/`,
+        'x-default': `${ROOT_URL}/`,
       },
     },
     openGraph: {
@@ -80,9 +92,52 @@ export default function LocaleLayout({ children, params }) {
     notFound();
   }
 
+  // Organization Structured Data (JSON-LD)
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": basic.info.brand,
+    "url": SITE_URL,
+    "logo": `${basic.seo.url}/logo1.webp`,
+    "description": basic.seo.description,
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": basic.info.email,
+      "url": `${SITE_URL}contact/`
+    },
+    "sameAs": [SITE_URL],
+  };
+
+  // Website Structured Data
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": basic.info.brand,
+    "url": SITE_URL,
+  };
+
   return (
-    <LanguageProvider>
-      {children}
-    </LanguageProvider>
+    <html lang={locale}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <link rel="preload" href="/logo1.webp" as="image" />
+        <link rel="preload" href="/home/Cover-image.webp" as="image" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
+      <body className={inter.className}>
+        <RootChrome>{children}</RootChrome>
+      </body>
+    </html>
   );
 }

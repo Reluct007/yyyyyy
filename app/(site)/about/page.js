@@ -5,7 +5,7 @@ export const metadata = {
   title: "About Us - Labubu Wholesale",
   description: "Learn about Labubu Wholesale - Premium designer collectibles manufacturer. Our story, mission, and commitment to quality craftsmanship.",
   alternates: {
-    canonical: "https://www.labubuwholesale.com/about",
+    canonical: "https://www.labubuwholesale.com/about/",
   },
   robots: {
     index: true,
@@ -14,7 +14,7 @@ export const metadata = {
   openGraph: {
     title: "About Us - Labubu Wholesale",
     description: "Learn about Labubu Wholesale - Premium designer collectibles manufacturer. Our story, mission, and commitment to quality craftsmanship.",
-    url: "https://www.labubuwholesale.com/about",
+    url: "https://www.labubuwholesale.com/about/",
     type: "website",
   },
 };

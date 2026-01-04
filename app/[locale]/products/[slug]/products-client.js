@@ -1,36 +1,28 @@
 'use client';
 
-import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
+import { Pagination, PaginationContent, PaginationItem, PaginationLink } from "@/components/ui/pagination";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/features/header";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { products } from "@/data/products";
 import { getAllProductsByLanguage } from "@/data/auto-translate";
-import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
-import { useEffect, useState, Suspense } from 'react';
 import { useLanguage } from '@/lib/language-context';
-import { useSearchParams } from 'next/navigation';
 
 // Get Header Info from original data (for fallback)
 const headerInfo = (slug) => products.products.find(product => slugify(product.title, { lower: true, strict: true }) === slug);
 
-function ProductsContent({ params, locale: routeLocale }) {
+function ProductsContent({ params, locale: routeLocale, page = 1 }) {
   const { translations, locale: contextLocale } = useLanguage();
   const locale = routeLocale || contextLocale || 'en';
-  const [mounted, setMounted] = useState(false);
-  const searchParams = useSearchParams();
-  const page = Math.max(1, parseInt(searchParams?.get('page'), 10) || 1);
-  
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const currentPage = Math.max(1, Number(page) || 1);
 
   // Get Banner Header Info - always use original data for slug matching
   // Note: Server-side page.js already checks if header exists, so we can safely assume it exists here
   const originalHeader = headerInfo(params.slug);
+  if (!originalHeader) return null;
   
   // Features翻译映射
   const featuresTranslations = {
@@ -110,10 +102,6 @@ function ProductsContent({ params, locale: routeLocale }) {
     features: originalHeader.features.map(feature => translateFeature(feature, locale))
   };
 
-  if (!mounted) {
-    return <div>Loading...</div>;
-  }
-
   const ROOT_URL = "https://www.labubuwholesale.com";
 
   // Structured Data
@@ -124,17 +112,17 @@ function ProductsContent({ params, locale: routeLocale }) {
       "@type": "ListItem",
       "position": 1,
       "name": translations.nav?.home || "Home",
-      "item": ROOT_URL
+      "item": `${ROOT_URL}/`
     }, {
       "@type": "ListItem",
       "position": 2,
       "name": translations.nav?.products || "Products Collection",
-      "item": `${ROOT_URL}/products`
+      "item": `${ROOT_URL}/products/`
     }, {
       "@type": "ListItem",
       "position": 3,
       "name": header.title,
-      "item": `${ROOT_URL}${locale === 'en' ? `/products/${params.slug}` : `/${locale}/products/${params.slug}`}`
+      "item": `${ROOT_URL}${locale === 'en' ? `/products/${params.slug}/` : `/${locale}/products/${params.slug}/`}`
     }]
   };
 
@@ -183,13 +171,19 @@ function ProductsContent({ params, locale: routeLocale }) {
   const itemsPerPage = 52;
   const maxPageNumbers = 5;
   const totalPages = Math.max(1, Math.ceil(productArray.length / itemsPerPage)); // Ensure at least 1 page
-  const startIndex = (page - 1) * itemsPerPage;
+  const isPageOutOfRange = productArray.length > 0 && currentPage > totalPages; // Only out of range if there are products
+  if (isPageOutOfRange) return null;
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
   const productsPage = productArray.slice(startIndex, startIndex + itemsPerPage);
-  const prevPage = Math.max(1, page - 1);
-  const nextPage = page + 1;
-  const isPageOutOfRange = productArray.length > 0 && page > totalPages; // Only out of range if there are products
+  const prevPage = Math.max(1, currentPage - 1);
+  const nextPage = currentPage + 1;
+  const categoryBasePath = `/${locale}/products/${params.slug}/`;
+  const getPageHref = (pageNumber) => (
+    pageNumber === 1 ? categoryBasePath : `${categoryBasePath}page/${pageNumber}/`
+  );
   const startPage = Math.max(1, Math.min(
-    page - Math.floor(maxPageNumbers / 2),
+    currentPage - Math.floor(maxPageNumbers / 2),
     totalPages - maxPageNumbers + 1
   ));
   const pageNumbers = Array.from(
@@ -235,8 +229,8 @@ function ProductsContent({ params, locale: routeLocale }) {
               <PaginationContent className="w-full">
                 <PaginationItem>
                   <PaginationLink 
-                    href={page !== 1 ? `?page=${prevPage}` : undefined} 
-                    aria-disabled={page === 1}
+                    href={currentPage !== 1 ? getPageHref(prevPage) : undefined} 
+                    aria-disabled={currentPage === 1}
                     aria-label="Go to previous page"
                     size="default"
                     className="gap-1 pl-2.5"
@@ -246,12 +240,12 @@ function ProductsContent({ params, locale: routeLocale }) {
                   </PaginationLink>
                 </PaginationItem>
                 {pageNumbers.map(pageNumber => (
-                  <PaginationItem key={pageNumber}><PaginationLink href={`?page=${pageNumber}`} isActive={page === pageNumber}>{pageNumber}</PaginationLink></PaginationItem>
+                  <PaginationItem key={pageNumber}><PaginationLink href={getPageHref(pageNumber)} isActive={currentPage === pageNumber}>{pageNumber}</PaginationLink></PaginationItem>
                 ))}
                 <PaginationItem>
                   <PaginationLink 
-                    href={page !== totalPages ? `?page=${nextPage}` : undefined} 
-                    aria-disabled={page === totalPages}
+                    href={currentPage !== totalPages ? getPageHref(nextPage) : undefined} 
+                    aria-disabled={currentPage === totalPages}
                     aria-label="Go to next page"
                     size="default"
                     className="gap-1 pr-2.5"
@@ -263,7 +257,7 @@ function ProductsContent({ params, locale: routeLocale }) {
               </PaginationContent>
             </Pagination>
           ) : (
-            notFound()
+            null
           )}
         </div>
       </section>
@@ -271,11 +265,6 @@ function ProductsContent({ params, locale: routeLocale }) {
   );
 }
 
-export default function ProductsClient({ params, locale }) {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <ProductsContent params={params} locale={locale} />
-    </Suspense>
-  );
+export default function ProductsClient({ params, locale, page = 1 }) {
+  return <ProductsContent params={params} locale={locale} page={page} />;
 }
-

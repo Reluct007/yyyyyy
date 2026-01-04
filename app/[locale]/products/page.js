@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { locale } = params;
   const urlPrefix = locale === 'en' ? '' : `/${locale}`;
-  const canonicalUrl = `${ROOT_URL}${urlPrefix}/products`;
+  const canonicalUrl = `${ROOT_URL}${urlPrefix}/products/`;
   const { title, description } = getSeoMeta('products', locale);
   
   return {
@@ -26,12 +26,12 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': `${ROOT_URL}/products`,
-        'es': `${ROOT_URL}/es/products`,
-        'fr': `${ROOT_URL}/fr/products`,
-        'de': `${ROOT_URL}/de/products`,
-        'ja': `${ROOT_URL}/ja/products`,
-        'ko': `${ROOT_URL}/ko/products`
+        'en': `${ROOT_URL}/products/`,
+        'es': `${ROOT_URL}/es/products/`,
+        'fr': `${ROOT_URL}/fr/products/`,
+        'de': `${ROOT_URL}/de/products/`,
+        'ja': `${ROOT_URL}/ja/products/`,
+        'ko': `${ROOT_URL}/ko/products/`
       },
     },
     robots: {
@@ -64,12 +64,12 @@ export default function ProductsPage({ params }) {
       "@type": "ListItem",
       "position": 1,
       "name": translations.nav?.home || "Home",
-      "item": ROOT_URL
+      "item": `${ROOT_URL}/`
     }, {
       "@type": "ListItem",
       "position": 2,
       "name": translations.nav?.products || "Products Collection",
-      "item": `${ROOT_URL}${urlPrefix}/products`
+      "item": `${ROOT_URL}${urlPrefix}/products/`
     }]
   };
 

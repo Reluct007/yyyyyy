@@ -3,7 +3,7 @@ import { getContent } from "@/data/content";
 
 export async function generateMetadata({ params }) {
   const { locale } = params;
-  const canonicalUrl = `https://www.labubuwholesale.com${locale === 'en' ? '/return-policy' : `/${locale}/return-policy`}`;
+  const canonicalUrl = `https://www.labubuwholesale.com${locale === 'en' ? '/return-policy/' : `/${locale}/return-policy/`}`;
   const { title, description } = getSeoMeta('return', locale);
   
   return {
@@ -12,12 +12,12 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': 'https://www.labubuwholesale.com/return-policy',
-        'es': 'https://www.labubuwholesale.com/es/return-policy',
-        'fr': 'https://www.labubuwholesale.com/fr/return-policy',
-        'de': 'https://www.labubuwholesale.com/de/return-policy',
-        'ja': 'https://www.labubuwholesale.com/ja/return-policy',
-        'ko': 'https://www.labubuwholesale.com/ko/return-policy'
+        'en': 'https://www.labubuwholesale.com/return-policy/',
+        'es': 'https://www.labubuwholesale.com/es/return-policy/',
+        'fr': 'https://www.labubuwholesale.com/fr/return-policy/',
+        'de': 'https://www.labubuwholesale.com/de/return-policy/',
+        'ja': 'https://www.labubuwholesale.com/ja/return-policy/',
+        'ko': 'https://www.labubuwholesale.com/ko/return-policy/'
       },
     },
     robots: {

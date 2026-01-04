@@ -49,4 +49,3 @@ export default function PrivacyClient() {
 
   return <Policy data={translatedData} />;
 }
-

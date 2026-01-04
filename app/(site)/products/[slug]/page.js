@@ -25,5 +25,5 @@ export default async function Product({ params }) {
   const originalHeader = headerInfo(slug);
   if (!originalHeader) notFound();
 
-  return <ProductsClient params={{ slug }} />;
+  return <ProductsClient params={{ slug }} page={1} />;
 }

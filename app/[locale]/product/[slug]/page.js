@@ -139,7 +139,7 @@ export default function ProductPage({ params }) {
 
   // 构建 URL 前缀
   const urlPrefix = locale === 'en' ? '' : `/${locale}`;
-  const canonicalUrl = `${ROOT_URL}${urlPrefix}/product/${productId}`;
+  const canonicalUrl = `${ROOT_URL}${urlPrefix}/product/${productId}/`;
 
   // JSON-LD 结构化数据（服务端生成）
   const breadcrumbJsonLd = {
@@ -149,12 +149,12 @@ export default function ProductPage({ params }) {
       "@type": "ListItem",
       "position": 1,
       "name": translations.nav?.home || "Home",
-      "item": ROOT_URL
+      "item": `${ROOT_URL}/`
     }, {
       "@type": "ListItem",
       "position": 2,
       "name": translations.nav?.products || "Products",
-      "item": `${ROOT_URL}${urlPrefix}/products`
+      "item": `${ROOT_URL}${urlPrefix}/products/`
     }, {
       "@type": "ListItem",
       "position": 3,
@@ -172,15 +172,6 @@ export default function ProductPage({ params }) {
     "brand": {
       "@type": "Brand",
       "name": "Labubu Wholesale"
-    },
-    "offers": {
-      "@type": "Offer",
-      "availability": "https://schema.org/InStock",
-      "priceCurrency": "USD",
-      "seller": {
-        "@type": "Organization",
-        "name": "Labubu Wholesale"
-      }
     },
     "url": canonicalUrl
   };

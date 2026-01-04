@@ -132,11 +132,6 @@ export default function ProductPage({ params }) {
       "@type": "Brand",
       "name": basic.info.brand
     },
-    "offers": {
-      "@type": "Offer",
-      "availability": "https://schema.org/InStock",
-      "priceCurrency": "USD",
-    },
     "url": `${ROOT_URL}/product/${productId}/`
   };
 

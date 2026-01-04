@@ -6,30 +6,21 @@ import Header from "@/components/features/header";
 import { ChevronRight } from "lucide-react";
 import { products } from "@/data/products";
 import { getAllProductsByLanguage } from "@/data/auto-translate";
-import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
-import { useEffect, useState, Suspense } from 'react';
 import { useLanguage } from '@/lib/language-context';
-import { useSearchParams } from 'next/navigation';
 
 // Get Header Info from original data (for fallback)
 const headerInfo = (slug) => products.products.find(product => slugify(product.title, { lower: true, strict: true }) === slug);
 
-function ProductsContent({ params }) {
+function ProductsContent({ params, page = 1 }) {
   const { translations, locale } = useLanguage();
-  const [mounted, setMounted] = useState(false);
-  const searchParams = useSearchParams();
-  const page = Math.max(1, parseInt(searchParams?.get('page'), 10) || 1);
-  
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const currentPage = Math.max(1, Number(page) || 1);
 
   // Get Banner Header Info - always use original data for slug matching
   const originalHeader = headerInfo(params.slug);
-  if (!originalHeader) notFound();
+  if (!originalHeader) return null;
   
   // Features翻译映射
   const featuresTranslations = {
@@ -79,10 +70,6 @@ function ProductsContent({ params }) {
     features: originalHeader.features.map(feature => translateFeature(feature, locale))
   };
 
-  if (!mounted) {
-    return <div>Loading...</div>;
-  }
-
   // Structured Data
   const jsonLd = {
     "@context": "https://schema.org",
@@ -91,17 +78,17 @@ function ProductsContent({ params }) {
       "@type": "ListItem",
       "position": 1,
       "name": translations.nav?.home || "Home",
-      "item": `https://www.labubuwholesale.com`
+      "item": `https://www.labubuwholesale.com/`
     }, {
       "@type": "ListItem",
       "position": 2,
       "name": translations.nav?.products || "Products Collection",
-      "item": `https://www.labubuwholesale.com/products`
+      "item": `https://www.labubuwholesale.com/products/`
     }, {
       "@type": "ListItem",
       "position": 3,
       "name": header.title,
-      "item": `https://www.labubuwholesale.com/products/${params.slug}`
+      "item": `https://www.labubuwholesale.com/products/${params.slug}/`
     }]
   };
 
@@ -118,14 +105,20 @@ function ProductsContent({ params }) {
   // Pagination
   const itemsPerPage = 52;
   const maxPageNumbers = 5;
-  const totalPages = Math.ceil(productArray.length / itemsPerPage);
-  const startIndex = (page - 1) * itemsPerPage;
+  const totalPages = Math.max(1, Math.ceil(productArray.length / itemsPerPage));
+  const isPageOutOfRange = currentPage > totalPages;
+  if (isPageOutOfRange) return null;
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
   const productsPage = productArray.slice(startIndex, startIndex + itemsPerPage);
-  const prevPage = Math.max(1, page - 1);
-  const nextPage = page + 1;
-  const isPageOutOfRange = page > totalPages;
+  const prevPage = Math.max(1, currentPage - 1);
+  const nextPage = currentPage + 1;
+  const categoryBasePath = `/products/${params.slug}/`;
+  const getPageHref = (pageNumber) => (
+    pageNumber === 1 ? categoryBasePath : `${categoryBasePath}page/${pageNumber}/`
+  );
   const startPage = Math.max(1, Math.min(
-    page - Math.floor(maxPageNumbers / 2),
+    currentPage - Math.floor(maxPageNumbers / 2),
     totalPages - maxPageNumbers + 1
   ));
   const pageNumbers = Array.from(
@@ -169,15 +162,15 @@ function ProductsContent({ params }) {
           {!isPageOutOfRange ? (
             <Pagination className="mt-8">
               <PaginationContent className="w-full">
-                <PaginationItem><PaginationPrevious href={page !== 1 ? `?page=${prevPage}` : undefined} aria-disabled={page === 1} /></PaginationItem>
+                <PaginationItem><PaginationPrevious href={currentPage !== 1 ? getPageHref(prevPage) : undefined} aria-disabled={currentPage === 1} /></PaginationItem>
                 {pageNumbers.map(pageNumber => (
-                  <PaginationItem key={pageNumber}><PaginationLink href={`?page=${pageNumber}`} isActive={page === pageNumber}>{pageNumber}</PaginationLink></PaginationItem>
+                  <PaginationItem key={pageNumber}><PaginationLink href={getPageHref(pageNumber)} isActive={currentPage === pageNumber}>{pageNumber}</PaginationLink></PaginationItem>
                 ))}
-                <PaginationItem><PaginationNext href={page !== totalPages ? `?page=${nextPage}` : undefined} aria-disabled={page === totalPages} /></PaginationItem>
+                <PaginationItem><PaginationNext href={currentPage !== totalPages ? getPageHref(nextPage) : undefined} aria-disabled={currentPage === totalPages} /></PaginationItem>
               </PaginationContent>
             </Pagination>
           ) : (
-            notFound()
+            null
           )}
         </div>
       </section>
@@ -185,11 +178,6 @@ function ProductsContent({ params }) {
   );
 }
 
-export default function ProductsClient({ params }) {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <ProductsContent params={params} />
-    </Suspense>
-  );
+export default function ProductsClient({ params, page = 1 }) {
+  return <ProductsContent params={params} page={page} />;
 }
-

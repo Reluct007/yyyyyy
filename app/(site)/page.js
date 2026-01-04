@@ -6,17 +6,20 @@ import Testimonials from "@/components/features/testimonials";
 import FAQ from "@/components/features/faq";
 import { home } from "@/data/home";
 import { basic } from "@/data/basic";
+import { withTrailingSlash } from "@/lib/seo-url";
+
+const SITE_URL = withTrailingSlash(basic.seo.url);
 
 export const metadata = {
   title: basic.seo.title,
   description: basic.seo.description,
   alternates: {
-    canonical: basic.seo.url,
+    canonical: SITE_URL,
   },
   openGraph: {
     title: basic.seo.title,
     description: basic.seo.description,
-    url: basic.seo.url,
+    url: SITE_URL,
     type: "website",
   },
 };

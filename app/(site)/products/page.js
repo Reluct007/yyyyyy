@@ -9,7 +9,7 @@ export const metadata = {
   title: "Products Collection - Labubu Wholesale",
   description: "Browse our complete collection of premium Labubu collectibles. High-quality vinyl figures, plush toys, and designer collectibles for distributors and retailers.",
   alternates: {
-    canonical: "https://www.labubuwholesale.com/products",
+    canonical: "https://www.labubuwholesale.com/products/",
   },
   robots: {
     index: true,
@@ -18,7 +18,7 @@ export const metadata = {
   openGraph: {
     title: "Products Collection - Labubu Wholesale",
     description: "Browse our complete collection of premium Labubu collectibles. High-quality vinyl figures, plush toys, and designer collectibles for distributors and retailers.",
-    url: "https://www.labubuwholesale.com/products",
+    url: "https://www.labubuwholesale.com/products/",
     type: "website",
   },
 };
@@ -31,12 +31,12 @@ const jsonLd = {
     "@type": "ListItem",
     "position": 1,
     "name": "Home",
-    "item": "https://www.labubuwholesale.com"
+    "item": "https://www.labubuwholesale.com/"
   }, {
     "@type": "ListItem",
     "position": 2,
     "name": "Products Collection",
-    "item": "https://www.labubuwholesale.com/products"
+    "item": "https://www.labubuwholesale.com/products/"
   }]
 };
 

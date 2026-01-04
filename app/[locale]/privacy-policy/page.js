@@ -3,7 +3,7 @@ import { getContent } from "@/data/content";
 
 export async function generateMetadata({ params }) {
   const { locale } = params;
-  const canonicalUrl = `https://www.labubuwholesale.com${locale === 'en' ? '/privacy-policy' : `/${locale}/privacy-policy`}`;
+  const canonicalUrl = `https://www.labubuwholesale.com${locale === 'en' ? '/privacy-policy/' : `/${locale}/privacy-policy/`}`;
   const { title, description } = getSeoMeta('privacy', locale);
   
   return {
@@ -12,12 +12,12 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': 'https://www.labubuwholesale.com/privacy-policy',
-        'es': 'https://www.labubuwholesale.com/es/privacy-policy',
-        'fr': 'https://www.labubuwholesale.com/fr/privacy-policy',
-        'de': 'https://www.labubuwholesale.com/de/privacy-policy',
-        'ja': 'https://www.labubuwholesale.com/ja/privacy-policy',
-        'ko': 'https://www.labubuwholesale.com/ko/privacy-policy'
+        'en': 'https://www.labubuwholesale.com/privacy-policy/',
+        'es': 'https://www.labubuwholesale.com/es/privacy-policy/',
+        'fr': 'https://www.labubuwholesale.com/fr/privacy-policy/',
+        'de': 'https://www.labubuwholesale.com/de/privacy-policy/',
+        'ja': 'https://www.labubuwholesale.com/ja/privacy-policy/',
+        'ko': 'https://www.labubuwholesale.com/ko/privacy-policy/'
       },
     },
     robots: {

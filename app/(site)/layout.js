@@ -1,12 +1,8 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/features/navbar";
-import CTA from "@/components/features/cta";
-import Footer from "@/components/features/footer";
-import ScrollToTop from "@/components/features/scroll-to-top";
-import { Toaster } from "@/components/ui/sonner";
-import { LanguageProvider } from "@/lib/language-context";
+import "../globals.css";
+import RootChrome from "@/components/layout/root-chrome";
 import { basic } from "@/data/basic";
+import { withTrailingSlash } from "@/lib/seo-url";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -14,9 +10,11 @@ const inter = Inter({
   preload: true,
 });
 
+const SITE_URL = withTrailingSlash(basic.seo.url);
+
 // 静态 metadata - 从 basic.js 配置文件读取
 export const metadata = {
-  metadataBase: new URL(basic.seo.url),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: basic.seo.title,
     template: `%s | ${basic.info.brand}`,
@@ -38,21 +36,21 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: basic.seo.url,
+    canonical: SITE_URL,
     languages: {
-      'en': basic.seo.url,
-      'es': `${basic.seo.url}/es`,
-      'fr': `${basic.seo.url}/fr`,
-      'de': `${basic.seo.url}/de`,
-      'ja': `${basic.seo.url}/ja`,
-      'ko': `${basic.seo.url}/ko`,
-      'x-default': basic.seo.url,
+      'en': SITE_URL,
+      'es': `${SITE_URL}es/`,
+      'fr': `${SITE_URL}fr/`,
+      'de': `${SITE_URL}de/`,
+      'ja': `${SITE_URL}ja/`,
+      'ko': `${SITE_URL}ko/`,
+      'x-default': SITE_URL,
     },
   },
   openGraph: {
     title: basic.seo.title,
     description: basic.seo.description,
-    url: basic.seo.url,
+    url: SITE_URL,
     siteName: basic.info.brand,
     images: [
       {
@@ -79,16 +77,16 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": basic.info.brand,
-    "url": basic.seo.url,
+    "url": SITE_URL,
     "logo": `${basic.seo.url}/logo1.webp`,
     "description": basic.seo.description,
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
       "email": basic.info.email,
-      "url": `${basic.seo.url}/contact`
+      "url": `${SITE_URL}contact/`
     },
-    "sameAs": [basic.seo.url],
+    "sameAs": [SITE_URL],
   };
 
   // Website Structured Data
@@ -96,12 +94,7 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": basic.info.brand,
-    "url": basic.seo.url,
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": `${basic.seo.url}/products?q={search_term_string}`,
-      "query-input": "required name=search_term_string"
-    }
+    "url": SITE_URL,
   };
 
   return (
@@ -123,14 +116,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={inter.className}>
-        <LanguageProvider>
-          <Navbar />
-          <main>{children}</main>
-          <CTA />
-          <Footer />
-          <ScrollToTop />
-          <Toaster richColors position="top-right" />
-        </LanguageProvider>
+        <RootChrome>{children}</RootChrome>
       </body>
     </html>
   );

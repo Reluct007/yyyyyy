@@ -3,7 +3,7 @@ import { getContent } from "@/data/content";
 
 export async function generateMetadata({ params }) {
   const { locale } = params;
-  const canonicalUrl = `https://www.labubuwholesale.com${locale === 'en' ? '/faq' : `/${locale}/faq`}`;
+  const canonicalUrl = `https://www.labubuwholesale.com${locale === 'en' ? '/faq/' : `/${locale}/faq/`}`;
   const { title, description } = getSeoMeta('faq', locale);
   
   return {
@@ -12,12 +12,12 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': 'https://www.labubuwholesale.com/faq',
-        'es': 'https://www.labubuwholesale.com/es/faq',
-        'fr': 'https://www.labubuwholesale.com/fr/faq',
-        'de': 'https://www.labubuwholesale.com/de/faq',
-        'ja': 'https://www.labubuwholesale.com/ja/faq',
-        'ko': 'https://www.labubuwholesale.com/ko/faq'
+        'en': 'https://www.labubuwholesale.com/faq/',
+        'es': 'https://www.labubuwholesale.com/es/faq/',
+        'fr': 'https://www.labubuwholesale.com/fr/faq/',
+        'de': 'https://www.labubuwholesale.com/de/faq/',
+        'ja': 'https://www.labubuwholesale.com/ja/faq/',
+        'ko': 'https://www.labubuwholesale.com/ko/faq/'
       },
     },
     robots: {
