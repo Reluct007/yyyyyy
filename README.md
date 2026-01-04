@@ -33,7 +33,7 @@ poker-set/
 ├── app/                    # Next.js 页面
 │   ├── [locale]/          # 多语言路由 (en/es/fr/de/ja/ko)
 │   ├── product/[slug]/    # 产品详情页
-│   └── products/[slug]/   # 产品分类页
+│   └── collection/[slug]/ # 产品分类页
 │
 ├── components/
 │   ├── ui/                # 通用 UI 组件 (Button, Badge 等)
@@ -76,12 +76,9 @@ pnpm install
 ### 3. 本地开发
 
 ```bash
-# 启动前端开发服务器
+# 启动前端开发服务器（Turbopack）
 pnpm dev
 # 访问 http://localhost:3000
-
-# 可选：使用 Turbopack 加速开发（冷启动/热更新更快）
-pnpm dev:turbo
 
 # 启动 API 开发服务器 (新终端)
 pnpm -C workers dev
@@ -125,6 +122,16 @@ export const basic = {
   // ...
 };
 ```
+
+### i18n SEO（canonical / hreflang）
+
+当前策略：
+- 默认语言 `en` 使用根路径（例如：`/collection/`、`/product/<id>/`）
+- 非默认语言使用 `/{locale}` 前缀（例如：`/fr/collection/`、`/fr/product/<id>/`）
+
+实现约定：
+- 语言列表与默认语言在 `data/i18n.js` 维护（供页面 metadata 与 `scripts/generate-sitemap.mjs` 共用）
+- 页面 `metadata/generateMetadata` 不再手写 `alternates.languages`，统一通过 `lib/hreflang.js` 的 `buildAlternates()` 生成
 
 ### 主题颜色（全站）
 
@@ -193,6 +200,7 @@ export const products = {
 
 ## 🔗 相关链接
 
+- [工程约定](./docs/CONVENTIONS.md) - 开发/目录/命名/CI 约定索引入口
 - [部署文档](./DEPLOY.md) - 详细部署步骤
 - [Cloudflare Pages](https://pages.cloudflare.com/)
 - [Cloudflare Workers](https://workers.cloudflare.com/)

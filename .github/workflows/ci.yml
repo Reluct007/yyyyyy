@@ -30,7 +30,7 @@ jobs:
       - name: Lint
         run: pnpm lint
 
-      - name: Build
+      - name: Build (Turbopack)
         run: pnpm build
 
       - name: Verify workers toolchain

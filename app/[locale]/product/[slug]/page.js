@@ -92,7 +92,7 @@ export default function ProductPage({ params }) {
   const originalProduct = findProduct(slug);
   
   if (!originalProduct) {
-    const target = locale === 'en' ? '/products' : `/${locale}/products`;
+    const target = locale === 'en' ? '/collection' : `/${locale}/collection`;
     return (
       <section className="py-16 px-4 text-center">
         <h1 className="text-2xl font-semibold">
@@ -155,7 +155,7 @@ export default function ProductPage({ params }) {
       "@type": "ListItem",
       "position": 2,
       "name": translations.nav?.products || "Products",
-      "item": `${ROOT_URL}${urlPrefix}/products/`
+      "item": `${ROOT_URL}${urlPrefix}/collection/`
     }, {
       "@type": "ListItem",
       "position": 3,
@@ -280,7 +280,7 @@ export default function ProductPage({ params }) {
                   </Link>
                   <Badge variant="outline" className="absolute left-5 top-5 bg-primary-foreground">
                     <Link
-                      href={`${urlPrefix}/products/${slugify(item.category, { lower: true, strict: true })}`}
+                      href={`${urlPrefix}/collection/${slugify(item.category, { lower: true, strict: true })}`}
                       aria-label={`Browse ${item.category} products`}
                     >
                       {item.category}

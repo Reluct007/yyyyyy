@@ -1,27 +1,28 @@
 import { getSeoMeta } from "@/lib/metadata-translations";
 import { getContent } from "@/data/content";
 import { basic } from "@/data/basic";
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/data/i18n";
+import { buildAlternates } from "@/lib/hreflang";
 
 const ROOT_URL = basic.seo.url.replace(/\/$/, "");
 
 export async function generateMetadata({ params }) {
   const { locale } = params;
-  const canonicalUrl = `${ROOT_URL}${locale === 'en' ? '/privacy-policy/' : `/${locale}/privacy-policy/`}`;
+  const alternates = buildAlternates({
+    siteUrl: ROOT_URL,
+    logicalPath: "/privacy-policy/",
+    locale,
+    locales: SUPPORTED_LOCALES,
+    defaultLocale: DEFAULT_LOCALE,
+  });
   const { title, description } = getSeoMeta('privacy', locale);
   
   return {
     title,
     description,
     alternates: {
-      canonical: canonicalUrl,
-      languages: {
-        'en': `${ROOT_URL}/privacy-policy/`,
-        'es': `${ROOT_URL}/es/privacy-policy/`,
-        'fr': `${ROOT_URL}/fr/privacy-policy/`,
-        'de': `${ROOT_URL}/de/privacy-policy/`,
-        'ja': `${ROOT_URL}/ja/privacy-policy/`,
-        'ko': `${ROOT_URL}/ko/privacy-policy/`
-      },
+      canonical: alternates.canonical,
+      languages: alternates.languages,
     },
     robots: {
       index: true,
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title,
       description,
-      url: canonicalUrl,
+      url: alternates.canonical,
       type: "website",
     },
   };

@@ -5,17 +5,27 @@ import { basic } from "@/data/basic";
 import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/data/i18n";
+import { buildAlternates } from "@/lib/hreflang";
 
 const ROOT_URL = basic.seo.url.replace(/\/$/, "");
 const PAGE_TITLE = `Products Collection | ${basic.info.brand}`;
 const PAGE_DESCRIPTION = products.header.description;
-const CANONICAL_URL = `${ROOT_URL}/products/`;
+const alternates = buildAlternates({
+  siteUrl: ROOT_URL,
+  logicalPath: "/collection/",
+  locale: DEFAULT_LOCALE,
+  locales: SUPPORTED_LOCALES,
+  defaultLocale: DEFAULT_LOCALE,
+});
+const CANONICAL_URL = alternates.canonical;
 
 export const metadata = {
   title: PAGE_TITLE,
   description: PAGE_DESCRIPTION,
   alternates: {
-    canonical: CANONICAL_URL,
+    canonical: alternates.canonical,
+    languages: alternates.languages,
   },
   robots: {
     index: true,
@@ -66,7 +76,7 @@ export default function ProductsPage() {
             {products.products.map((item, index) => (
               <div key={index} className="rounded-lg border">
                 <Link
-                  href={`/products/${slugify(item.title, { lower: true, strict: true })}`}
+                  href={`/collection/${slugify(item.title, { lower: true, strict: true })}`}
                 >
                   <Image
                     src={item.image}
@@ -78,7 +88,7 @@ export default function ProductsPage() {
                 </Link>
                 <div className="p-4 space-y-2">
                   <Link
-                    href={`/products/${slugify(item.title, { lower: true, strict: true })}`}
+                    href={`/collection/${slugify(item.title, { lower: true, strict: true })}`}
                   >
                     <h3 className="text-xl font-semibold">{item.title}</h3>
                   </Link>
@@ -88,7 +98,7 @@ export default function ProductsPage() {
                       : item.description}
                   </p>
                   <Link
-                    href={`/products/${slugify(item.title, { lower: true, strict: true })}`}
+                    href={`/collection/${slugify(item.title, { lower: true, strict: true })}`}
                     className="flex items-center gap-2 text-sm text-muted-foreground"
                   >
                     Read More <ChevronRight className="w-4" />

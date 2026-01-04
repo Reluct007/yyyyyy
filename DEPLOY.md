@@ -48,7 +48,7 @@ pnpm install
 ### 3. 本地运行
 
 ```bash
-# 终端 1: 启动前端
+# 终端 1: 启动前端（Turbopack）
 pnpm dev
 
 # 终端 2: 启动 API (可选)
