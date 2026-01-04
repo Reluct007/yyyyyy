@@ -5,8 +5,8 @@
   "packageManager": "pnpm@10.27.0",
   "description": "Poker Kit Website",
   "scripts": {
-    "dev": "next dev",
-    "dev:turbo": "next dev --turbo",
+    "dev": "next dev --turbo",
+    "dev:turbo": "pnpm dev",
     "prebuild": "node --no-warnings scripts/generate-sitemap.mjs",
     "build": "next build --turbopack",
     "start": "next start",

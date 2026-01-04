@@ -17,8 +17,8 @@
 ## Build, Test, and Development Commands
 
 Root (frontend):
-- `pnpm dev`: Start Next.js dev server.
-- `pnpm dev:turbo`: Dev server with Turbopack.
+- `pnpm dev`: Dev server with Turbopack.
+- `pnpm dev:turbo`: Alias of `pnpm dev`.
 - `pnpm lint`: ESLint via Next.js (`next/core-web-vitals`).
 - `pnpm build`: Static export build (`next.config.mjs` uses `output: "export"`); regenerates sitemap via `prebuild`.
 - `pnpm start`: Run production server (mostly for local verification; deploy uses `out/`).
@@ -42,7 +42,7 @@ Workers (API):
 
 - Commit history is mixed (short Chinese summaries and `Update <file>`). Keep messages short, descriptive, and scoped.
 - PRs should include: problem/solution summary, verification commands run (at minimum `pnpm lint` + `pnpm build`), and screenshots for UI changes.
-  - If touching `data/` or `locales/`, mention affected pages/routes (e.g. `app/[locale]/products/[slug]/`).
+  - If touching `data/` or `locales/`, mention affected pages/routes (e.g. `app/[locale]/collection/[slug]/`).
 
 ## Security & Configuration
 
