@@ -144,7 +144,7 @@ function ProductsContent({ params, page = 1 }) {
                 <div className="relative">
                   <Link href={`/product/${item.id || slugify(item.title, { lower: true, strict: true })}`}><Image src={item.image} alt={item.title} className="w-full rounded-t-lg" width={400} height={300} /></Link>
                   <Badge variant="outline" className="absolute left-5 top-5 bg-primary-foreground">
-                    <Link href={`/products/${slugify(item.category, { lower: true, strict: true })}`} target="_blank">{item.category}</Link>
+                    <Link href={`/products/${slugify(item.category, { lower: true, strict: true })}`}>{item.category}</Link>
                   </Badge>
                 </div>
                 <div className="p-4 space-y-2">
