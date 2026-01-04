@@ -1,23 +1,24 @@
 import Header from "@/components/features/header";
 import { ChevronRight } from "lucide-react";
 import { getProductsByLanguage } from "@/data/auto-translate";
-import { getSupportedLocales, getTranslations } from "@/lib/i18n";
+import { getNonDefaultLocales, getTranslations } from "@/lib/i18n";
 import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
 import { getSeoMeta } from "@/lib/metadata-translations";
+import { basic } from "@/data/basic";
+import { withTrailingSlash } from "@/lib/seo-url";
 
-const ROOT_URL = "https://www.labubuwholesale.com";
+const SITE_URL = withTrailingSlash(basic.seo.url);
 
 // 构建时生成所有语言版本
 export async function generateStaticParams() {
-  return getSupportedLocales().map(locale => ({ locale }));
+  return getNonDefaultLocales().map(locale => ({ locale }));
 }
 
 export async function generateMetadata({ params }) {
   const { locale } = params;
-  const urlPrefix = locale === 'en' ? '' : `/${locale}`;
-  const canonicalUrl = `${ROOT_URL}${urlPrefix}/products/`;
+  const canonicalUrl = `${SITE_URL}${locale}/products/`;
   const { title, description } = getSeoMeta('products', locale);
   
   return {
@@ -26,12 +27,12 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': `${ROOT_URL}/products/`,
-        'es': `${ROOT_URL}/es/products/`,
-        'fr': `${ROOT_URL}/fr/products/`,
-        'de': `${ROOT_URL}/de/products/`,
-        'ja': `${ROOT_URL}/ja/products/`,
-        'ko': `${ROOT_URL}/ko/products/`
+        'en': `${SITE_URL}products/`,
+        'es': `${SITE_URL}es/products/`,
+        'fr': `${SITE_URL}fr/products/`,
+        'de': `${SITE_URL}de/products/`,
+        'ja': `${SITE_URL}ja/products/`,
+        'ko': `${SITE_URL}ko/products/`
       },
     },
     robots: {
@@ -51,7 +52,7 @@ export async function generateMetadata({ params }) {
 export default function ProductsPage({ params }) {
   const { locale } = params;
   const translations = getTranslations(locale);
-  const urlPrefix = locale === 'en' ? '' : `/${locale}`;
+  const urlPrefix = `/${locale}`;
 
   // 获取当前语言的产品数据
   const productsData = getProductsByLanguage(locale);
@@ -64,12 +65,12 @@ export default function ProductsPage({ params }) {
       "@type": "ListItem",
       "position": 1,
       "name": translations.nav?.home || "Home",
-      "item": `${ROOT_URL}/`
+      "item": SITE_URL
     }, {
       "@type": "ListItem",
       "position": 2,
       "name": translations.nav?.products || "Products Collection",
-      "item": `${ROOT_URL}${urlPrefix}/products/`
+      "item": `${SITE_URL}${locale}/products/`
     }]
   };
 

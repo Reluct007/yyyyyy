@@ -84,7 +84,7 @@ pnpm -C workers dev
 
 | 变量名 | 值 | 说明 |
 |--------|-----|------|
-| `NEXT_PUBLIC_API_URL` | `https://api.yooyooy.com` | API 地址 |
+| `NEXT_PUBLIC_API_URL` | `https://api.example.com` | API 地址 |
 | `NODE_VERSION` | `20` | Node.js 版本 |
 
 ### 步骤 4: 部署
@@ -95,7 +95,7 @@ pnpm -C workers dev
 
 1. 进入项目 → **Custom domains**
 2. 点击 **Set up a custom domain**
-3. 输入域名 (如 `yooyooy.com`)
+3. 输入域名 (如 `www.example.com`)
 4. 按提示配置 DNS
 
 ## ⚡ 部署 API (Cloudflare Workers)
@@ -136,7 +136,7 @@ pnpm -C workers exec wrangler deploy --keep-vars
 1. Cloudflare Dashboard → Workers & Pages
 2. 选择你的 Worker
 3. **Settings** → **Triggers** → **Custom Domains**
-4. 添加域名 `api.yooyooy.com`
+4. 添加域名 `api.example.com`
 
 ## 📧 配置 Resend 邮件服务
 
@@ -150,7 +150,7 @@ pnpm -C workers exec wrangler deploy --keep-vars
 
 1. 进入 [Domains](https://resend.com/domains)
 2. 点击 **Add Domain**
-3. 输入你的域名 (如 `yooyooy.com`)
+3. 输入你的域名 (如 `example.com`)
 4. 按提示添加 DNS 记录:
    - MX 记录
    - TXT 记录 (SPF)
@@ -160,8 +160,8 @@ pnpm -C workers exec wrangler deploy --keep-vars
 ### 步骤 3: 配置发件邮箱
 
 验证域名后，可使用该域名下任意邮箱作为发件人:
-- `noreply@yooyooy.com`
-- `contact@yooyooy.com`
+- `noreply@example.com`
+- `contact@example.com`
 
 ## 📊 环境变量汇总
 
@@ -169,7 +169,7 @@ pnpm -C workers exec wrangler deploy --keep-vars
 
 | 变量名 | 示例值 | 说明 |
 |--------|--------|------|
-| `NEXT_PUBLIC_API_URL` | `https://api.yooyooy.com` | Workers API 地址 |
+| `NEXT_PUBLIC_API_URL` | `https://api.example.com` | Workers API 地址 |
 | `NODE_VERSION` | `20` | Node.js 版本 |
 
 ### Cloudflare Workers Secrets

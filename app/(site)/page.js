@@ -15,6 +15,15 @@ export const metadata = {
   description: basic.seo.description,
   alternates: {
     canonical: SITE_URL,
+    languages: {
+      en: SITE_URL,
+      es: `${SITE_URL}es/`,
+      fr: `${SITE_URL}fr/`,
+      de: `${SITE_URL}de/`,
+      ja: `${SITE_URL}ja/`,
+      ko: `${SITE_URL}ko/`,
+      "x-default": SITE_URL,
+    },
   },
   openGraph: {
     title: basic.seo.title,

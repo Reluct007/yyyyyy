@@ -128,7 +128,7 @@ export default function Navbar({ data = basic.navbar }) {
               <SheetContent className="overflow-y-auto">
                 <SheetHeader>
                   <SheetTitle>
-                    <Link href="/" className="flex items-center gap-2">
+                    <Link href={locale === 'en' ? "/" : `/${locale}`} className="flex items-center gap-2">
                       <Image src={logo} className="w-8" alt={`${brandName} logo`} width={100} height={100} />
                       <span className="text-xl font-bold">{brandName}</span>
                     </Link>

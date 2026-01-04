@@ -1,5 +1,5 @@
 import { product } from "@/data/product";
-import { getSupportedLocales, getTranslations } from "@/lib/i18n";
+import { getNonDefaultLocales, getTranslations } from "@/lib/i18n";
 import { getProductByLanguage, getAllProductsByLanguage } from "@/data/auto-translate";
 import slugify from "slugify";
 import { generateProductMetadata } from '@/lib/product-metadata';
@@ -8,8 +8,9 @@ import Link from 'next/link';
 import { ChevronRight, ArrowDownRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import ContactForm from '@/components/features/contact-form';
+import { basic } from "@/data/basic";
 
-const ROOT_URL = "https://www.labubuwholesale.com";
+const ROOT_URL = basic.seo.url.replace(/\/$/, '');
 
 // 查找原始产品
 const findProduct = (slug) => {
@@ -38,7 +39,7 @@ const getValidProducts = () => product.filter((item) => {
 // 构建时生成所有语言版本的产品页面
 export async function generateStaticParams() {
   try {
-    const supportedLocales = getSupportedLocales();
+    const supportedLocales = getNonDefaultLocales();
     const validProducts = getValidProducts();
     const params = [];
     
@@ -84,7 +85,7 @@ export async function generateMetadata({ params }) {
 
 // 服务端组件 - 纯静态生成
 export default function ProductPage({ params }) {
-  const { locale = 'en', slug } = params || {};
+  const { locale, slug } = params || {};
   const translations = getTranslations(locale);
   
   // 获取原始产品数据
@@ -138,7 +139,7 @@ export default function ProductPage({ params }) {
     });
 
   // 构建 URL 前缀
-  const urlPrefix = locale === 'en' ? '' : `/${locale}`;
+  const urlPrefix = `/${locale}`;
   const canonicalUrl = `${ROOT_URL}${urlPrefix}/product/${productId}/`;
 
   // JSON-LD 结构化数据（服务端生成）

@@ -2,12 +2,11 @@ import { Inter } from "next/font/google";
 import "../globals.css";
 import RootChrome from "@/components/layout/root-chrome";
 import { basic } from "@/data/basic";
-import { getSupportedLocales } from "@/lib/i18n";
+import { getNonDefaultLocales } from "@/lib/i18n";
 import { getSeoMeta } from "@/lib/metadata-translations";
 import { withTrailingSlash } from "@/lib/seo-url";
 import { notFound } from "next/navigation";
 
-const ROOT_URL = "https://www.labubuwholesale.com";
 const SITE_URL = withTrailingSlash(basic.seo.url);
 
 const inter = Inter({ 
@@ -17,7 +16,7 @@ const inter = Inter({
 });
 
 export async function generateStaticParams() {
-  return getSupportedLocales().map((locale) => ({
+  return getNonDefaultLocales().map((locale) => ({
     locale: locale,
   }));
 }
@@ -35,9 +34,7 @@ export async function generateMetadata({ params }) {
     'ko': 'ko_KR',
   };
 
-  const canonicalUrl = locale === 'en' 
-    ? `${ROOT_URL}/`
-    : `${ROOT_URL}/${locale}/`;
+  const canonicalUrl = `${SITE_URL}${locale}/`;
   
   return {
     metadataBase: new URL(SITE_URL),
@@ -47,23 +44,11 @@ export async function generateMetadata({ params }) {
       index: true,
       follow: true,
     },
-    alternates: {
-      canonical: canonicalUrl,
-      languages: {
-        'en': `${ROOT_URL}/`,
-        'es': `${ROOT_URL}/es/`,
-        'fr': `${ROOT_URL}/fr/`,
-        'de': `${ROOT_URL}/de/`,
-        'ja': `${ROOT_URL}/ja/`,
-        'ko': `${ROOT_URL}/ko/`,
-        'x-default': `${ROOT_URL}/`,
-      },
-    },
     openGraph: {
       title,
       description,
       url: canonicalUrl,
-      siteName: "Labubu Wholesale",
+      siteName: basic.info.brand,
       locale: localeMap[locale] || 'en_US',
       type: 'website',
       images: [
@@ -71,7 +56,7 @@ export async function generateMetadata({ params }) {
           url: '/opengraph-image.png',
           width: 1200,
           height: 630,
-          alt: 'Labubu Wholesale - Premium Designer Collectibles',
+          alt: `${basic.info.brand} - Premium Designer Collectibles`,
         },
       ],
     },
@@ -86,7 +71,7 @@ export async function generateMetadata({ params }) {
 
 export default function LocaleLayout({ children, params }) {
   const { locale } = params;
-  const supportedLocales = getSupportedLocales();
+  const supportedLocales = getNonDefaultLocales();
   
   if (!supportedLocales.includes(locale)) {
     notFound();

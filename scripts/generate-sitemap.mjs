@@ -81,7 +81,15 @@ function generateSitemap() {
   });
 
   // Static pages
-  const staticPages = ['about', 'contact', 'privacy-policy', 'terms-conditions', 'faq'];
+  const staticPages = [
+    'about',
+    'contact',
+    'privacy-policy',
+    'terms-of-service',
+    'faq',
+    'shipping-policy',
+    'return-policy',
+  ];
   staticPages.forEach(page => {
     locales.forEach(locale => {
       const baseUrl = locale === 'en' ? ROOT_URL : `${ROOT_URL}/${locale}`;
