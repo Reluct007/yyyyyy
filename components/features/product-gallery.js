@@ -12,17 +12,22 @@ export default function ProductGallery({ mainImage, images = [], title }) {
   const touchEndX = useRef(0);
   const scrollContainerRef = useRef(null);
   
-  if (allImages.length === 0) return null;
-  
-  const selectedImage = allImages[selectedIndex];
-  
   // 检查是否需要显示滚动提示
   useEffect(() => {
+    if (allImages.length === 0) {
+      setShowScrollHint(false);
+      return;
+    }
+
     const container = scrollContainerRef.current;
     if (container) {
       setShowScrollHint(container.scrollHeight > container.clientHeight);
     }
-  }, [allImages]);
+  }, [allImages.length]);
+
+  if (allImages.length === 0) return null;
+
+  const selectedImage = allImages[selectedIndex] ?? allImages[0];
 
   // 滚动时隐藏提示
   const handleScroll = () => {
