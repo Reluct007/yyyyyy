@@ -1,18 +1,18 @@
 export const basic = {
   // SEO 配置 - 修改这里来更新网站的 TDK
   seo: {
-    title: "Poker Kit Wholesale & Custom Poker Sets | PokerKit.com",
-    description: "B2B supplier of premium poker kits — bulk wholesale, OEM/ODM customization, low MOQs and fast lead times. Ideal for retailers, casinos and promotional gifts. Request samples & pricing today.",
+    title: "Labubu Wholesale - Premium Designer Collectibles & Custom Toys",
+    description: "Discover exclusive designer collectibles that bring charm, creativity, and style to your space. Perfect for distributors and retailers worldwide.",
     keywords: [],
-    url: "https://pokerset.com",
+    url: "https://www.labubuwholesale.com",
   },
   info: {
-    brand: "Poker Kit",
-    link: "https://pokerset.com",
-    email: "larry@pokerset.com"
+    brand: "Labubu Wholesale",
+    link: "https://www.labubuwholesale.com",
+    email: "info@labubuwholesale.com"
   },
   navbar: {
-    brand: "Poker Kit",
+    brand: "Labubu Wholesale",
     logo: "/logo1.webp",
     buttonText: "Free Quote",
     dialogTitle: "Request a Free Quote",
@@ -25,7 +25,7 @@ export const basic = {
     ],
     mobileMenu: [
       { label: "Privacy", href: "/privacy-policy" },
-      { label: "Terms", href: "/terms-and-conditions" }
+      { label: "Terms", href: "/terms-of-service" }
     ]
   },
   cta: {

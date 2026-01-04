@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 
-// Redirect /terms-and-conditions to /terms-conditions
+// Redirect legacy /terms-and-conditions to current Terms route
 export default function TermsAndConditionsPage() {
-  redirect('/terms-conditions');
+  redirect('/terms-of-service');
 }

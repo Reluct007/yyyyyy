@@ -16,12 +16,12 @@ Next.js 纯静态电商网站，支持多语言、产品展示、联系表单。
 ```
 Cloudflare
 ├── Pages (前端静态网站)
-│   - 域名: yooyooy.com
+│   - 站点根域名: `data/basic.js` 的 `basic.seo.url`（例如 `https://www.labubuwholesale.com`）
 │   - Next.js 静态导出到 /out 目录
 │   - 全球 CDN 加速
 │
 └── Workers (API 服务)
-    - 域名: api.yooyooy.com
+    - API 地址: 环境变量 `NEXT_PUBLIC_API_URL`（例如 `https://api.example.com`）
     - 联系表单邮件发送
     - 订阅功能
 ```

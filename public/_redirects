@@ -1,7 +1,13 @@
 # Non-www to www redirect (handled by Cloudflare DNS)
 
 # Terms redirect
-/terms-and-conditions /terms-conditions/ 301
+/terms-and-conditions /terms-of-service/ 301
+/terms-conditions /terms-of-service/ 301
+/es/terms-conditions /es/terms-of-service/ 301
+/fr/terms-conditions /fr/terms-of-service/ 301
+/de/terms-conditions /de/terms-of-service/ 301
+/ja/terms-conditions /ja/terms-of-service/ 301
+/ko/terms-conditions /ko/terms-of-service/ 301
 
 # Email protection redirect
 /cdn-cgi/l/email-protection /contact/ 301
