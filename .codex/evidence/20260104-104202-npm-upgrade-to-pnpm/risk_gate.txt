@@ -1,0 +1,20 @@
+# 风险闸门（risk_gate）
+- 风险等级：低
+- 需要确认：否
+- 仓库配置：未发现
+- 变更文件数：3
+- 待执行命令数：1
+
+## 触发原因
+- 依赖/锁文件变更（可能影响构建与运行时）
+
+## 变更文件（抽样）
+- .codex/context.md
+- .codex/evidence/20260104-104202-npm-upgrade-to-pnpm/context7.md
+- .codex/plan/npm-upgrade-to-pnpm.md
+
+## 待执行命令
+- `corepack pnpm install`
+
+## 最小验证集合（建议）
+- （可跳过）
