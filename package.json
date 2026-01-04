@@ -2,6 +2,7 @@
   "name": "labubu-project",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "pnpm@10.27.0",
   "description": "Labubu Wholesale Website",
   "scripts": {
     "dev": "next dev",

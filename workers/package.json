@@ -2,6 +2,7 @@
   "name": "labubu-api-workers",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "pnpm@10.27.0",
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",

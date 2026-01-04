@@ -16,17 +16,20 @@
 
 ## 快速部署
 
-### 1. 安装 Wrangler
+### 1. 安装依赖
 
 ```bash
-npm install -g wrangler
-wrangler login
+# 在仓库根目录安装依赖（会同时安装 workers）
+pnpm install
+
+# 登录 Cloudflare（使用本地 wrangler）
+pnpm -C workers exec wrangler login
 ```
 
 ### 2. 创建 KV
 
 ```bash
-wrangler kv:namespace create "CONFIG_KV"
+pnpm -C workers exec wrangler kv:namespace create "CONFIG_KV"
 ```
 
 更新 `wrangler.toml` 中的 ID。
@@ -34,26 +37,24 @@ wrangler kv:namespace create "CONFIG_KV"
 ### 3. 配置 Secrets
 
 ```bash
-wrangler secret put RESEND_API_KEY
-wrangler secret put CONTACT_EMAIL
-wrangler secret put FROM_EMAIL
-wrangler secret put ADMIN_USERNAME
-wrangler secret put ADMIN_PASSWORD
-wrangler secret put JWT_SECRET
+pnpm -C workers exec wrangler secret put RESEND_API_KEY
+pnpm -C workers exec wrangler secret put CONTACT_EMAIL
+pnpm -C workers exec wrangler secret put FROM_EMAIL
+pnpm -C workers exec wrangler secret put ADMIN_USERNAME
+pnpm -C workers exec wrangler secret put ADMIN_PASSWORD
+pnpm -C workers exec wrangler secret put JWT_SECRET
 ```
 
 ### 4. 部署
 
 ```bash
-npm install
-npm run deploy
+pnpm -C workers deploy
 ```
 
 ## 本地开发
 
 ```bash
-npm install
-npm run dev
+pnpm -C workers dev
 ```
 
 访问 http://localhost:8787

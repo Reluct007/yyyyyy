@@ -17,16 +17,17 @@
 | 软件 | 版本 | 安装方式 |
 |------|------|----------|
 | Node.js | 20+ | https://nodejs.org 或 `brew install node` |
+| pnpm | 10+ | https://pnpm.io/installation |
 | Git | 最新版 | https://git-scm.com 或 `brew install git` |
-| Wrangler | 3.0+ | `npm install -g wrangler` |
+| Wrangler | 3.0+ | `pnpm install` 后通过 `pnpm -C workers exec wrangler` 使用 |
 
 ### 验证安装
 
 ```bash
 node -v      # 应显示 v20.x.x 或更高
-npm -v       # 应显示 10.x.x 或更高
+pnpm -v      # 应显示 10.x.x 或更高
 git --version
-wrangler -v  # 应显示 3.x.x 或更高
+pnpm -C workers exec wrangler -v  # 应显示 3.x.x 或更高（需先安装依赖）
 ```
 
 ## 🔧 本地环境搭建
@@ -41,23 +42,17 @@ cd labubu
 ### 2. 安装依赖
 
 ```bash
-# 前端依赖
-npm install
-
-# API 依赖
-cd workers
-npm install
-cd ..
+pnpm install
 ```
 
 ### 3. 本地运行
 
 ```bash
 # 终端 1: 启动前端
-npm run dev
+pnpm dev
 
 # 终端 2: 启动 API (可选)
-cd workers && npm run dev
+pnpm -C workers dev
 ```
 
 ### 4. 验证
@@ -79,7 +74,7 @@ cd workers && npm run dev
 | 配置项 | 值 |
 |--------|-----|
 | 生产分支 | `main` |
-| 构建命令 | `npm run build` |
+| 构建命令 | `pnpm run build` |
 | 构建输出目录 | `out` |
 | 根目录 | `labubu` (如果是子目录) |
 
@@ -108,34 +103,32 @@ cd workers && npm run dev
 ### 步骤 1: 登录 Wrangler
 
 ```bash
-wrangler login
+pnpm -C workers exec wrangler login
 # 浏览器会打开授权页面，点击允许
 ```
 
 ### 步骤 2: 配置 Secrets
 
 ```bash
-cd workers
-
 # 设置 Resend API 密钥
-wrangler secret put RESEND_API_KEY
+pnpm -C workers exec wrangler secret put RESEND_API_KEY
 # 输入你的 Resend API Key
 
 # 设置接收邮件的邮箱
-wrangler secret put CONTACT_EMAIL
+pnpm -C workers exec wrangler secret put CONTACT_EMAIL
 # 输入接收表单的邮箱地址
 
 # 设置发件邮箱
-wrangler secret put FROM_EMAIL
+pnpm -C workers exec wrangler secret put FROM_EMAIL
 # 输入已在 Resend 验证的发件邮箱
 ```
 
 ### 步骤 3: 部署
 
 ```bash
-npm run deploy
+pnpm -C workers deploy
 # 或
-wrangler deploy --keep-vars
+pnpm -C workers exec wrangler deploy --keep-vars
 ```
 
 ### 步骤 4: 绑定自定义域名
@@ -201,8 +194,7 @@ git push origin main
 ### API 更新
 
 ```bash
-cd workers
-npm run deploy
+pnpm -C workers deploy
 ```
 
 ### 手动触发重新构建
@@ -235,32 +227,30 @@ A: Cloudflare Dashboard → Pages → 项目 → Deployments → 点击具体部
 ### Q: 如何查看 Workers 日志？
 
 ```bash
-cd workers
-npm run tail
+pnpm -C workers tail
 # 或
-wrangler tail
+pnpm -C workers exec wrangler tail
 ```
 
 ### Q: 新电脑如何快速部署？
 
 ```bash
 # 1. 安装 Node.js 20+
-# 2. 安装 Wrangler
-npm install -g wrangler
+# 2. 安装 pnpm（https://pnpm.io/installation）
+npm i -g pnpm
 
 # 3. 克隆代码
 git clone <repo-url>
 cd labubu
 
 # 4. 安装依赖
-npm install
-cd workers && npm install && cd ..
+pnpm install
 
 # 5. 登录 Cloudflare
-wrangler login
+pnpm -C workers exec wrangler login
 
 # 6. 部署 Workers
-cd workers && npm run deploy
+pnpm -C workers deploy
 
 # 7. 前端通过 GitHub 推送自动部署
 git push origin main
