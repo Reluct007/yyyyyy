@@ -4,7 +4,6 @@ import TwoColumn from "@/components/features/two-column";
 import FourColumn from "@/components/features/four-column";
 import Testimonials from "@/components/features/testimonials";
 import FAQ from "@/components/features/faq";
-import CTA from "@/components/features/cta";
 import { home } from "@/data/home";
 import { getSeoMeta } from "@/lib/metadata-translations";
 
@@ -42,7 +41,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function Home({ data = home, params }) {
+export default function Home({ data = home }) {
   return (
     <>
       <Hero data={data.hero} />

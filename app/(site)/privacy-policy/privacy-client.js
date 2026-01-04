@@ -6,7 +6,7 @@ import { useLanguage } from '@/lib/language-context';
 import { useEffect, useState } from 'react';
 
 export default function PrivacyClient() {
-  const { translations: globalTranslations, locale } = useLanguage();
+  const { locale } = useLanguage();
   const [mounted, setMounted] = useState(false);
   
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function PrivacyClient() {
   };
 
   // 翻译函数
-  const translateText = (text, locale) => {
+  const translateText = (text) => {
     if (!text || typeof text !== 'string') return text;
     // 这里可以添加更多的翻译映射
     return text;
@@ -42,8 +42,8 @@ export default function PrivacyClient() {
     title: privacyTranslations["Privacy Policy"][locale] || privacy.title,
     sections: privacy.sections.map(section => ({
       ...section,
-      title: section.title ? translateText(section.title, locale) : section.title,
-      info: section.info.map(info => translateText(info, locale))
+      title: section.title ? translateText(section.title) : section.title,
+      info: section.info.map(info => translateText(info))
     }))
   };
 

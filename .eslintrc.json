@@ -1,3 +1,29 @@
 {
-  "extends": ["next/core-web-vitals"]
+  "root": true,
+  "extends": ["next/core-web-vitals"],
+  "ignorePatterns": [".next/", "out/", "public/", "coverage/"],
+  "rules": {
+    "eqeqeq": ["error", "always", { "null": "ignore" }],
+    "no-debugger": "error",
+    "no-duplicate-imports": "error",
+    "no-unused-vars": [
+      "warn",
+      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_", "ignoreRestSiblings": true }
+    ],
+    "no-console": ["warn", { "allow": ["warn", "error"] }]
+  },
+  "overrides": [
+    {
+      "files": ["scripts/**/*.{js,cjs,mjs}", "workers/**/*.{js,cjs,mjs}"],
+      "rules": {
+        "no-console": "off"
+      }
+    },
+    {
+      "files": ["workers/**/*.{js,cjs,mjs}"],
+      "env": {
+        "worker": true
+      }
+    }
+  ]
 }
