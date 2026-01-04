@@ -2,11 +2,13 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import slugify from 'slugify';
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from '../data/i18n.js';
+import { toLocalizedUrl } from '../lib/hreflang.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const locales = ['en', 'es', 'fr', 'de', 'ja', 'ko'];
+const locales = SUPPORTED_LOCALES;
 
 // Import data
 const { basic } = await import('../data/basic.js');
@@ -27,9 +29,8 @@ function generateSitemap() {
 
   // Homepage - all languages
   locales.forEach(locale => {
-    const baseUrl = locale === 'en' ? ROOT_URL : `${ROOT_URL}/${locale}`;
     urls.push(`  <url>
-    <loc>${baseUrl}/</loc>
+    <loc>${toLocalizedUrl({ siteUrl: ROOT_URL, logicalPath: '/', locale, defaultLocale: DEFAULT_LOCALE })}</loc>
     <lastmod>${currentDate}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${locale === 'en' ? '1.0' : '0.9'}</priority>
@@ -38,9 +39,8 @@ function generateSitemap() {
 
   // Products page
   locales.forEach(locale => {
-    const baseUrl = locale === 'en' ? ROOT_URL : `${ROOT_URL}/${locale}`;
     urls.push(`  <url>
-    <loc>${baseUrl}/products/</loc>
+    <loc>${toLocalizedUrl({ siteUrl: ROOT_URL, logicalPath: '/collection/', locale, defaultLocale: DEFAULT_LOCALE })}</loc>
     <lastmod>${currentDate}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -52,9 +52,8 @@ function generateSitemap() {
   productCategories.forEach((p) => {
     const slug = toSlug(p.title);
     locales.forEach(locale => {
-      const baseUrl = locale === 'en' ? ROOT_URL : `${ROOT_URL}/${locale}`;
       urls.push(`  <url>
-    <loc>${baseUrl}/products/${slug}/</loc>
+    <loc>${toLocalizedUrl({ siteUrl: ROOT_URL, logicalPath: `/collection/${slug}/`, locale, defaultLocale: DEFAULT_LOCALE })}</loc>
     <lastmod>${currentDate}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -70,9 +69,8 @@ function generateSitemap() {
     if (!slug || slug.length < 3) return;
     
     locales.forEach(locale => {
-      const baseUrl = locale === 'en' ? ROOT_URL : `${ROOT_URL}/${locale}`;
       urls.push(`  <url>
-    <loc>${baseUrl}/product/${slug}/</loc>
+    <loc>${toLocalizedUrl({ siteUrl: ROOT_URL, logicalPath: `/product/${slug}/`, locale, defaultLocale: DEFAULT_LOCALE })}</loc>
     <lastmod>${currentDate}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -92,9 +90,8 @@ function generateSitemap() {
   ];
   staticPages.forEach(page => {
     locales.forEach(locale => {
-      const baseUrl = locale === 'en' ? ROOT_URL : `${ROOT_URL}/${locale}`;
       urls.push(`  <url>
-    <loc>${baseUrl}/${page}/</loc>
+    <loc>${toLocalizedUrl({ siteUrl: ROOT_URL, logicalPath: `/${page}/`, locale, defaultLocale: DEFAULT_LOCALE })}</loc>
     <lastmod>${currentDate}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
