@@ -94,6 +94,7 @@ pnpm -C workers dev
 pnpm build
 # 输出到 out/ 目录
 # 构建前会自动重新生成 public/sitemap.xml
+# 说明：当前 build 使用 Turbopack（next build --turbopack）
 ```
 
 ## CI
@@ -123,6 +124,24 @@ export const basic = {
   },
   // ...
 };
+```
+
+### 主题颜色（全站）
+
+本项目使用「CSS 变量 + Tailwind 映射」的方式管理主题色：
+
+- 颜色源头在 `app/globals.css`：`:root` 为浅色主题，`.dark` 为深色主题
+- `tailwind.config.js` 将这些变量映射为 Tailwind 的颜色 token（例如 `bg-primary` / `text-primary`）
+
+要修改品牌主色/按钮高亮等，调整 `app/globals.css` 中的 `--primary`（以及同色系的 `--ring`）。注意这里的值是 **HSL 三元组**（不带 `hsl()`），例如：
+
+```css
+:root {
+  --primary: 24.6 95% 53.1%;
+}
+.dark {
+  --primary: 20.5 90.2% 48.2%;
+}
 ```
 
 ### 产品数据
