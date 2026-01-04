@@ -1,26 +1,25 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import slugify from 'slugify';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const ROOT_URL = "https://www.labubuwholesale.com";
 const locales = ['en', 'es', 'fr', 'de', 'ja', 'ko'];
 
 // Import data
+const { basic } = await import('../data/basic.js');
 const { products } = await import('../data/products.js');
 const { product } = await import('../data/product.js');
 
-function slugify(text) {
-  return text
-    .toString()
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, '-')
-    .replace(/[^\w\-]+/g, '')
-    .replace(/\-\-+/g, '-');
+const rootUrlFromConfig = basic?.seo?.url || basic?.info?.link;
+if (!rootUrlFromConfig) {
+  throw new Error('Missing site root URL: set `basic.seo.url` (or `basic.info.link`) in data/basic.js');
 }
+
+const ROOT_URL = rootUrlFromConfig.replace(/\/$/, '');
+const toSlug = (text) => slugify(text ?? '', { lower: true, strict: true });
 
 function generateSitemap() {
   const urls = [];
@@ -51,7 +50,7 @@ function generateSitemap() {
   // Product categories
   const productCategories = products?.products || [];
   productCategories.forEach((p) => {
-    const slug = slugify(p.title);
+    const slug = toSlug(p.title);
     locales.forEach(locale => {
       const baseUrl = locale === 'en' ? ROOT_URL : `${ROOT_URL}/${locale}`;
       urls.push(`  <url>
@@ -67,7 +66,7 @@ function generateSitemap() {
   const productItems = product || [];
   productItems.forEach((p) => {
     if (!p.title || p.title.length < 3) return;
-    const slug = slugify(p.title);
+    const slug = p.id || toSlug(p.title);
     if (!slug || slug.length < 3) return;
     
     locales.forEach(locale => {

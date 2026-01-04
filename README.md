@@ -80,6 +80,9 @@ pnpm install
 pnpm dev
 # 访问 http://localhost:3000
 
+# 可选：使用 Turbopack 加速开发（冷启动/热更新更快）
+pnpm dev:turbo
+
 # 启动 API 开发服务器 (新终端)
 pnpm -C workers dev
 # 访问 http://localhost:8787
@@ -90,6 +93,7 @@ pnpm -C workers dev
 ```bash
 pnpm build
 # 输出到 out/ 目录
+# 构建前会自动重新生成 public/sitemap.xml
 ```
 
 ## CI

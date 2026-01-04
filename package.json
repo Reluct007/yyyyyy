@@ -6,6 +6,8 @@
   "description": "Labubu Wholesale Website",
   "scripts": {
     "dev": "next dev",
+    "dev:turbo": "next dev --turbo",
+    "prebuild": "node --no-warnings scripts/generate-sitemap.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
