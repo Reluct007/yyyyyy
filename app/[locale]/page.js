@@ -5,13 +5,16 @@ import FourColumn from "@/components/features/four-column";
 import Testimonials from "@/components/features/testimonials";
 import FAQ from "@/components/features/faq";
 import { home } from "@/data/home";
+import { basic } from "@/data/basic";
 import { getSeoMeta } from "@/lib/metadata-translations";
+
+const ROOT_URL = basic.seo.url.replace(/\/$/, "");
 
 export async function generateMetadata({ params }) {
   const { locale } = params;
   const canonicalUrl = locale === 'en' 
-    ? 'https://www.labubuwholesale.com/' 
-    : `https://www.labubuwholesale.com/${locale}/`;
+    ? `${ROOT_URL}/` 
+    : `${ROOT_URL}/${locale}/`;
   const { title, description } = getSeoMeta('home', locale);
   
   return {
@@ -20,12 +23,12 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': 'https://www.labubuwholesale.com/',
-        'es': 'https://www.labubuwholesale.com/es/',
-        'fr': 'https://www.labubuwholesale.com/fr/',
-        'de': 'https://www.labubuwholesale.com/de/',
-        'ja': 'https://www.labubuwholesale.com/ja/',
-        'ko': 'https://www.labubuwholesale.com/ko/',
+        'en': `${ROOT_URL}/`,
+        'es': `${ROOT_URL}/es/`,
+        'fr': `${ROOT_URL}/fr/`,
+        'de': `${ROOT_URL}/de/`,
+        'ja': `${ROOT_URL}/ja/`,
+        'ko': `${ROOT_URL}/ko/`,
       },
     },
     robots: {

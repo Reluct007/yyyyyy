@@ -1,19 +1,25 @@
 import PrivacyClient from './privacy-client';
+import { basic } from "@/data/basic";
+
+const ROOT_URL = basic.seo.url.replace(/\/$/, "");
+const PAGE_TITLE = `Privacy Policy | ${basic.info.brand}`;
+const PAGE_DESCRIPTION = `Privacy policy for ${basic.info.brand}. Learn how we collect, use, and protect your personal information.`;
+const CANONICAL_URL = `${ROOT_URL}/privacy-policy/`;
 
 export const metadata = {
-  title: "Privacy Policy - Labubu Wholesale",
-  description: "Privacy Policy for Labubu Wholesale. Learn how we collect, use, and protect your personal information.",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   alternates: {
-    canonical: "https://www.labubuwholesale.com/privacy-policy/",
+    canonical: CANONICAL_URL,
   },
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "Privacy Policy - Labubu Wholesale",
-    description: "Privacy Policy for Labubu Wholesale. Learn how we collect, use, and protect your personal information.",
-    url: "https://www.labubuwholesale.com/privacy-policy/",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: CANONICAL_URL,
     type: "website",
   },
 };

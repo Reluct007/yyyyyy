@@ -13,6 +13,17 @@ export const products = {
 
   products: [
     {
+      title: "Poker Equipment",
+      description: "Complete poker equipment collections for B2B buyers, including poker chip sets, card decks, accessories, and premium bundles. Ideal for wholesale, retail, casinos, clubs, OEM customization, and promotional projects.",
+      image: "/home/Customization.webp",
+      features: [
+        "Full Range Supply: Poker chip sets, cards, accessories, and bundles",
+        "Wholesale & OEM Ready: Support logo/packaging/private label customization",
+        "Reliable Quality Control: Consistent specs and material standards for bulk orders",
+        "Business Use Cases: Casinos, clubs, retailers, events, and corporate gifting"
+      ]
+    },
+    {
       title: "Poker Chips",
       description: "High-quality poker chips engineered for smooth handling, accurate weight, and professional table performance. Available in multiple materials and styles for wholesale and custom orders.",
       image: "/home/image.webp",

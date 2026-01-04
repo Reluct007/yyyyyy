@@ -1,9 +1,12 @@
 import { getSeoMeta } from "@/lib/metadata-translations";
 import { getContent } from "@/data/content";
+import { basic } from "@/data/basic";
+
+const ROOT_URL = basic.seo.url.replace(/\/$/, "");
 
 export async function generateMetadata({ params }) {
   const { locale } = params;
-  const canonicalUrl = `https://www.labubuwholesale.com${locale === 'en' ? '/terms-of-service/' : `/${locale}/terms-of-service/`}`;
+  const canonicalUrl = `${ROOT_URL}${locale === 'en' ? '/terms-of-service/' : `/${locale}/terms-of-service/`}`;
   const { title, description } = getSeoMeta('terms', locale);
   
   return {
@@ -12,12 +15,12 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': 'https://www.labubuwholesale.com/terms-of-service/',
-        'es': 'https://www.labubuwholesale.com/es/terms-of-service/',
-        'fr': 'https://www.labubuwholesale.com/fr/terms-of-service/',
-        'de': 'https://www.labubuwholesale.com/de/terms-of-service/',
-        'ja': 'https://www.labubuwholesale.com/ja/terms-of-service/',
-        'ko': 'https://www.labubuwholesale.com/ko/terms-of-service/'
+        'en': `${ROOT_URL}/terms-of-service/`,
+        'es': `${ROOT_URL}/es/terms-of-service/`,
+        'fr': `${ROOT_URL}/fr/terms-of-service/`,
+        'de': `${ROOT_URL}/de/terms-of-service/`,
+        'ja': `${ROOT_URL}/ja/terms-of-service/`,
+        'ko': `${ROOT_URL}/ko/terms-of-service/`
       },
     },
     robots: {

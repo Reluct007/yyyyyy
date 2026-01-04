@@ -1,20 +1,26 @@
 import { contact } from "@/data/contact";
+import { basic } from "@/data/basic";
 import ContactClient from './contact-client';
 
+const ROOT_URL = basic.seo.url.replace(/\/$/, "");
+const PAGE_TITLE = `Contact Us | ${basic.info.brand}`;
+const PAGE_DESCRIPTION = contact.header.description;
+const CANONICAL_URL = `${ROOT_URL}/contact/`;
+
 export const metadata = {
-  title: "Contact Us - Labubu Wholesale",
-  description: "Get in touch with Labubu Wholesale. Contact us for inquiries about our premium designer collectibles, wholesale orders, and custom products.",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   alternates: {
-    canonical: "https://www.labubuwholesale.com/contact/",
+    canonical: CANONICAL_URL,
   },
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "Contact Us - Labubu Wholesale",
-    description: "Get in touch with Labubu Wholesale. Contact us for inquiries about our premium designer collectibles, wholesale orders, and custom products.",
-    url: "https://www.labubuwholesale.com/contact/",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: CANONICAL_URL,
     type: "website",
   },
 };

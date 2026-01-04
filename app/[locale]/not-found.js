@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { basic } from "@/data/basic";
 
 export const metadata = {
-  title: "404 - Page Not Found | Labubu Wholesale",
-  description: "The page you are looking for could not be found. Browse our collection of premium designer collectibles.",
+  title: `404 - Page Not Found | ${basic.info.brand}`,
+  description: `The page you are looking for could not be found. Browse ${basic.info.brand} products.`,
   robots: {
     index: false,
     follow: false,
@@ -31,4 +32,3 @@ export default function NotFound({ params }) {
     </section>
   );
 };
-

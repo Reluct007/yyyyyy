@@ -1,4 +1,5 @@
 import { product } from "@/data/product";
+import { basic } from "@/data/basic";
 import { getNonDefaultLocales, getTranslations } from "@/lib/i18n";
 import { getProductByLanguage, getAllProductsByLanguage } from "@/data/auto-translate";
 import slugify from "slugify";
@@ -8,9 +9,8 @@ import Link from 'next/link';
 import { ChevronRight, ArrowDownRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import ContactForm from '@/components/features/contact-form';
-import { basic } from "@/data/basic";
 
-const ROOT_URL = basic.seo.url.replace(/\/$/, '');
+const ROOT_URL = basic.seo.url.replace(/\/$/, "");
 
 // 查找原始产品
 const findProduct = (slug) => {
@@ -65,7 +65,7 @@ export async function generateMetadata({ params }) {
   
   if (!slug) {
     return {
-      title: "Product Not Found - Labubu Wholesale",
+      title: `Product Not Found | ${basic.info.brand}`,
       description: "The requested product could not be found",
       robots: { index: false, follow: false },
     };
@@ -74,7 +74,7 @@ export async function generateMetadata({ params }) {
   const originalProduct = findProduct(slug);
   if (!originalProduct) {
     return {
-      title: "Product Not Found - Labubu Wholesale",
+      title: `Product Not Found | ${basic.info.brand}`,
       description: "The requested product could not be found",
       robots: { index: false, follow: false },
     };
@@ -85,7 +85,7 @@ export async function generateMetadata({ params }) {
 
 // 服务端组件 - 纯静态生成
 export default function ProductPage({ params }) {
-  const { locale, slug } = params || {};
+  const { locale = 'en', slug } = params || {};
   const translations = getTranslations(locale);
   
   // 获取原始产品数据
@@ -139,7 +139,7 @@ export default function ProductPage({ params }) {
     });
 
   // 构建 URL 前缀
-  const urlPrefix = `/${locale}`;
+  const urlPrefix = locale === 'en' ? '' : `/${locale}`;
   const canonicalUrl = `${ROOT_URL}${urlPrefix}/product/${productId}/`;
 
   // JSON-LD 结构化数据（服务端生成）
@@ -172,7 +172,7 @@ export default function ProductPage({ params }) {
     "image": productItem.image ? `${ROOT_URL}${productItem.image}` : undefined,
     "brand": {
       "@type": "Brand",
-      "name": "Labubu Wholesale"
+      "name": basic.info.brand
     },
     "url": canonicalUrl
   };
@@ -207,7 +207,7 @@ export default function ProductPage({ params }) {
             {productItem.image && (
               <Image
                 src={productItem.image}
-                alt={`${productItem.title} - Premium designer collectible from Labubu Wholesale`}
+                alt={`${productItem.title} - ${basic.info.brand}`}
                 className="w-full border border-border rounded-lg h-full object-cover"
                 width={800}
                 height={600}
