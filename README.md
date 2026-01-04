@@ -92,6 +92,13 @@ pnpm build
 # 输出到 out/ 目录
 ```
 
+## CI
+
+本仓库使用 GitHub Actions，在 push / PR 时自动执行：
+
+- `pnpm lint`
+- `pnpm build`
+
 ## ⚙️ 配置说明
 
 ### SEO 和网站配置
