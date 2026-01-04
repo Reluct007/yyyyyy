@@ -207,15 +207,15 @@ function ProductsContent({ params, locale: routeLocale, page = 1 }) {
             {productsPage.map((item, index) => (
               <div key={index} className="rounded-lg border h-full">
                 <div className="relative">
-                  <Link href={locale === 'en' ? `/product/${item.id || slugify(item.title, { lower: true, strict: true })}` : `/${locale}/product/${item.id || slugify(item.title, { lower: true, strict: true })}`} target="_blank"><Image src={item.image} alt={item.title} className="w-full rounded-t-lg" width={400} height={300} /></Link>
+                  <Link href={locale === 'en' ? `/product/${item.id || slugify(item.title, { lower: true, strict: true })}` : `/${locale}/product/${item.id || slugify(item.title, { lower: true, strict: true })}`}><Image src={item.image} alt={item.title} className="w-full rounded-t-lg" width={400} height={300} /></Link>
                   <Badge variant="outline" className="absolute left-5 top-5 bg-primary-foreground">
                     <Link href={locale === 'en' ? `/products/${slugify(item.category, { lower: true, strict: true })}` : `/${locale}/products/${slugify(item.category, { lower: true, strict: true })}`} target="_blank">{item.category}</Link>
                   </Badge>
                 </div>
                 <div className="p-4 space-y-2">
-                  <Link href={locale === 'en' ? `/product/${item.id || slugify(item.title, { lower: true, strict: true })}` : `/${locale}/product/${item.id || slugify(item.title, { lower: true, strict: true })}`} target="_blank"><h3 className="text-lg font-semibold">{item.title}</h3></Link>
+                  <Link href={locale === 'en' ? `/product/${item.id || slugify(item.title, { lower: true, strict: true })}` : `/${locale}/product/${item.id || slugify(item.title, { lower: true, strict: true })}`}><h3 className="text-lg font-semibold">{item.title}</h3></Link>
                   <p className="text-base text-muted-foreground">{item.description.length > 120 ? `${item.description.substring(0, 120)}...` : item.description}</p>
-                  <Link href={locale === 'en' ? `/product/${item.id || slugify(item.title, { lower: true, strict: true })}` : `/${locale}/product/${item.id || slugify(item.title, { lower: true, strict: true })}`} className="flex items-center gap-2 text-sm text-muted-foreground" target="_blank">
+                  <Link href={locale === 'en' ? `/product/${item.id || slugify(item.title, { lower: true, strict: true })}` : `/${locale}/product/${item.id || slugify(item.title, { lower: true, strict: true })}`} className="flex items-center gap-2 text-sm text-muted-foreground">
                     {t('learnMore')} <ChevronRight className="w-4" />
                   </Link>
                 </div>
