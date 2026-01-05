@@ -3,6 +3,7 @@ import "../globals.css";
 import RootChrome from "@/components/layout/root-chrome";
 import { basic } from "@/data/basic";
 import { withTrailingSlash } from "@/lib/seo-url";
+import { openGraphImage, twitterMetadata } from "@/lib/shared-metadata";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -36,26 +37,18 @@ export const metadata = {
     },
   },
   openGraph: {
+    ...openGraphImage,
     title: basic.seo.title,
     description: basic.seo.description,
     url: SITE_URL,
     siteName: basic.info.brand,
-    images: [
-      {
-        url: "/opengraph-image.png",
-        width: 1200,
-        height: 630,
-        alt: `${basic.info.brand} - Premium Designer Collectibles`,
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
+    ...twitterMetadata,
     title: basic.seo.title,
     description: basic.seo.description,
-    images: ["/opengraph-image.png"],
   },
 };
 
