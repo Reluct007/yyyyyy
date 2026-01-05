@@ -2,6 +2,9 @@
 
 本文描述本仓库当前 SEO 实现的“事实标准”与维护流程，目标是降低多人协作下的 SEO 走样与遗漏成本。若本文与代码实现不一致，以代码实现为准。
 
+补充文档：
+- 工程约束与长期策略路线图：`docs/Next.js-App-Router-static-SEO.md`（静态导出/Cloudflare 注意事项、SEO PR Checklist、长期复利路线图）
+
 ## 1. 单一事实源（SoT）
 
 SEO 相关配置与逻辑集中在以下位置（按“改动频率/影响面”排序）：
@@ -15,17 +18,18 @@ SEO 相关配置与逻辑集中在以下位置（按“改动频率/影响面”
 - URL 末尾斜杠策略：`next.config.mjs`（`trailingSlash: true`）+ `lib/seo-url.js`（`withTrailingSlash()`）
 - 社媒共享片段：`lib/shared-metadata.js`（`openGraphImage`、`twitterMetadata`）
 - 通用页面 TDK 翻译：`lib/metadata-translations.js`（`getSeoMeta(pageKey, locale)`）
-- sitemap 生成：`scripts/generate-sitemap.mjs`（输出到 `public/sitemap.xml`）
-- robots：`public/robots.txt`（静态文件）
+- sitemap 生成：`app/sitemap.js`（Next.js Metadata Routes，输出到构建产物）
+- robots：`app/robots.js`（Next.js Metadata Routes，输出到构建产物）
 - 历史链接重定向：`public/_redirects`（Cloudflare Pages 规则）
 
 ## 2. URL 与路由约定
 
 - 构建形态：静态导出（`output: "export"`），并启用 `trailingSlash: true`（见 `next.config.mjs`）
 - i18n 路由：
-  - 默认语言 `en`：无前缀（例如 `/collection/`）
-  - 非默认语言：`/{locale}` 前缀（例如 `/fr/collection/`）
+  - 所有语言统一 `/{locale}` 前缀（包含默认语言 `en`，例如 `/en/collection/`、`/fr/collection/`）
+  - 根路径 `/` 平台侧 301 → `/en/`（静态导出下不可依赖 middleware）
   - 语言列表与默认语言由 `data/i18n.js` 统一约束
+  - 旧链接迁移：统一在 `public/_redirects` 维护；注意 `/product/*` 路径同时承载静态图片资源，重定向规则必须先排除资源请求
 - canonical/hreflang 的 URL 规范：
   - 页面 URL **必须以 `/` 结尾**（与 `trailingSlash: true` 对齐）
   - 优先使用 `lib/hreflang.js` 的 `buildAlternates()` / `toLocalizedUrl()` 生成，避免在页面内手写字符串拼接
@@ -41,7 +45,7 @@ SEO 相关配置与逻辑集中在以下位置（按“改动频率/影响面”
   - `robots`/`googleBot` 默认策略集中配置
   - `openGraph`/`twitter` 使用 `lib/shared-metadata.js` 的共享片段并在页面内 `...spread` 合并（避免覆盖导致 nested 字段丢失）
 - 多语言 layout metadata：`app/[locale]/layout.js` 的 `generateMetadata()`
-  - `getNonDefaultLocales()` 约束可生成的 `locale` 参数
+  - `getSupportedLocales()` 约束可生成的 `locale` 参数（包含 `en`）
   - 通过 `getSeoMeta('home', locale)` 生成首页 TDK
 - 页面层级：
   - 默认语言静态页：多为 `export const metadata = { ... }`（例如 `app/(site)/about/page.js`）
@@ -103,21 +107,23 @@ SEO 相关配置与逻辑集中在以下位置（按“改动频率/影响面”
 
 ### Robots
 
-`public/robots.txt` 为静态文件（不会由构建脚本自动同步）：
+robots 由 `app/robots.js` 在构建时生成（静态导出产物包含 `robots.txt`）：
 
-- `Sitemap: <root>/sitemap.xml` 需要与 `data/basic.js` 的 `basic.seo.url` 保持一致
-- `Disallow` 规则目前包含若干产品路径模式与 `/cdn-cgi/*`，修改需明确评估影响面
+- `Sitemap: <root>/sitemap.xml` 自动基于 `data/basic.js` 的 `basic.seo.url` 生成
+- 如需增加 `Disallow` 或更细粒度规则，直接在 `app/robots.js` 调整
+- 旧静态文件保留为参考：`public/robots.legacy.txt`
 
 ### Sitemap
 
-`public/sitemap.xml` 由 `scripts/generate-sitemap.mjs` 生成（`pnpm build` 前通过 `prebuild` 自动执行）：
+`sitemap.xml` 由 `app/sitemap.js` 在构建时生成（静态导出产物包含 `sitemap.xml`）：
 
 - 输入：`data/basic.js`、`data/products.js`、`data/product.js`、`data/i18n.js`
-- 输出：`public/sitemap.xml`
+- 维护入口：`app/sitemap.js`
 - 维护要点：
-  - 新增静态页：将逻辑路径加入脚本内 `staticPages` 数组
-  - 新增动态路由：确保脚本生成的 `logicalPath` 与真实路由一致（且以 `/` 结尾）
+  - 新增静态页：将逻辑路径加入 `app/sitemap.js` 的 `STATIC_PAGES`
+  - 新增动态路由：确保生成的 `logicalPath` 与真实路由一致（且以 `/` 结尾）
   - 新增/删除语言：仅修改 `data/i18n.js`，sitemap 会随之扩展/收敛
+  - 旧静态文件保留为参考：`public/sitemap.legacy.xml`
 
 ## 8. Cloudflare（Pages）平台侧优化（SEO/性能）
 
@@ -175,7 +181,7 @@ SEO 相关配置与逻辑集中在以下位置（按“改动频率/影响面”
 - 方案 A（推荐，改动最小）：开启 Polish（WebP/AVIF）与 Mirage
   - 路径：Speed → Optimization → Images
 - 方案 B（进阶）：使用 Cloudflare Images 或 `https://<domain>/cdn-cgi/image/...` 做按需转换
-  - 注意：当前 `public/robots.txt` 里包含 `Disallow: /cdn-cgi/*`；若将 `/cdn-cgi/image/` 用作页面图片 `src`，需评估是否放行相关路径，避免影响搜索引擎抓取图片/渲染
+  - 注意：若在 `app/robots.js` 中配置了 `Disallow: /cdn-cgi/*`，并将 `/cdn-cgi/image/` 用作页面图片 `src`，需评估是否放行相关路径，避免影响搜索引擎抓取图片/渲染
 
 6) Auto Minify（HTML/CSS/JS）
 
@@ -232,8 +238,7 @@ SEO 相关配置与逻辑集中在以下位置（按“改动频率/影响面”
 必须同步修改：
 
 - `data/basic.js`：`basic.seo.url`（必要时同步 `basic.info.link`）
-- `public/robots.txt`：`Sitemap:` 行（避免指向旧域名）
-- 运行 `pnpm build`：刷新 `public/sitemap.xml` 并产出静态站点
+- 运行 `pnpm build`：刷新构建产物中的 `sitemap.xml`/`robots.txt` 并产出静态站点
 
 建议抽查：
 
@@ -247,7 +252,7 @@ SEO 相关配置与逻辑集中在以下位置（按“改动频率/影响面”
 - metadata：
   - canonical/hreflang：使用 `buildAlternates()` 生成 `alternates`
   - TDK 翻译：在 `lib/metadata-translations.js` 增加对应 `pageKey`，并在多语言页中使用 `getSeoMeta(pageKey, locale)`
-- sitemap：若需要收录，更新 `scripts/generate-sitemap.mjs` 的 `staticPages`
+- sitemap：若需要收录，更新 `app/sitemap.js` 的 `STATIC_PAGES`
 - structured data：按页面类型补齐（通常至少需要 `BreadcrumbList`）
 
 ### 新增/调整产品或分类
@@ -260,15 +265,15 @@ SEO 相关配置与逻辑集中在以下位置（按“改动频率/影响面”
   - 若引入“稳定 id”，需要同时对齐：
     - 路由 `generateStaticParams()` 的 slug 生成
     - 产品查找逻辑（例如 `findProduct()`）
-    - `scripts/generate-sitemap.mjs` 的 slug 生成策略
+    - `app/sitemap.js` 的 slug 生成策略
   - 原则：避免出现 sitemap 指向未构建的 URL（会造成 404 与抓取噪音）
 
 ## 10. 验证（本地/CI 对齐）
 
 - `pnpm lint`
-- `pnpm build`（会自动重建 `public/sitemap.xml`）
+- `pnpm build`（会自动生成 `sitemap.xml`/`robots.txt` 到静态导出产物）
 - 抽查页面输出：
   - `<link rel="canonical">` 是否存在且末尾 `/` 风格一致
   - hreflang 是否符合 `data/i18n.js` 的语言列表
   - `robots` 策略是否符合页面类型（尤其是分页与 `/page/1/`）
-  - `public/robots.txt` 的 `Sitemap:` 是否指向当前域名
+  - `robots.txt` 的 `Sitemap:` 是否指向当前域名

@@ -5,10 +5,12 @@
 ## 文档入口
 
 - 项目概览与本地开发：`README.md`
-- 部署与环境变量：`DEPLOY.md`
+- 部署与环境变量：`docs/DEPLOY.md`
 - Workers（API）：`workers/README.md`
-- i18n（多语言）规范与问题清单：`docs/I18N.md`
+- TODO / 问题清单（权威清单）：`docs/todo-list.md`
+- i18n（多语言）规范：`docs/I18N.md`
 - SEO 规范与维护：`docs/SEO.md`
+- 静态站 SEO 工程规范与路线图：`docs/Next.js-App-Router-static-SEO.md`
 
 ## 必跑命令（本地/CI 对齐）
 
@@ -20,15 +22,15 @@
 ## 目录结构与职责边界
 
 - `app/`：Next.js App Router 路由与布局
-  - `app/(site)/`：默认站点路由（默认语言/无前缀）
-  - `app/[locale]/`：多语言路由（根据 `data/i18n.js` 生成/约束）
+  - `app/[locale]/`：主路由（全语言 `/{locale}` 前缀，包含 `en`；根据 `data/i18n.js` 生成/约束）
+  - `app/(site)/`：兼容路由（历史英文无前缀；平台侧通过 `public/_redirects` 301 → `/en/...`）
 - `components/`：可复用组件
   - `components/ui/`：低层 UI 原语（Radix + Tailwind），优先保持 API 稳定、可组合
   - `components/features/`：页面/区块级组件（文件名 kebab-case）
 - `data/`：内容与配置（可视为轻量 CMS），改动需同步检查受影响页面
 - `locales/`：多语言字典（新增/改动文案需同步更新各语言）
 - `workers/`：Cloudflare Workers（独立 package 与部署流程）
-- `scripts/`：构建辅助脚本（例如 sitemap 生成）
+- `scripts/`：构建辅助脚本
 
 ## 命名与代码风格
 
@@ -40,13 +42,14 @@
 ## i18n 约定
 
 - 语言配置：`data/i18n.js`（`DEFAULT_LOCALE`、`SUPPORTED_LOCALES`）
-- 路由组织：`app/[locale]/...` 作为多语言入口；默认路由在 `app/(site)/...`
+- 路由组织：`app/[locale]/...` 作为单一路由入口（包含默认语言 `en`）；`/` 平台侧 301 → `/en/`
 - SEO/元信息：优先使用现有的 `lib/metadata-translations` 与 `lib/hreflang` 生成逻辑，避免在页面内散落重复的 SEO 拼装代码
 
 ## 构建与发布约定
 
 - Next.js 静态导出：`next.config.mjs` 使用 `output: "export"`；`images.unoptimized: true`；`trailingSlash: true`
-- Build 前置：`pnpm build` 会先执行 `scripts/generate-sitemap.mjs`（由 `prebuild` hook 触发）
+- sitemap：`app/sitemap.js`（Next.js Metadata Routes，输出到构建产物）
+- robots：`app/robots.js`（Next.js Metadata Routes，输出到构建产物）
 - 产物目录：`.next/` 与 `out/` 为构建输出，不应提交（已在 `.gitignore` 中忽略）
 
 ## 变更原则（KISS/DRY/YAGNI/SOLID）
