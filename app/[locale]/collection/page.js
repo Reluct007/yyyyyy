@@ -55,6 +55,7 @@ export default function ProductsPage({ params }) {
   const { locale } = params;
   const translations = getTranslations(locale);
   const urlPrefix = `/${locale}`;
+  const rootUrl = SITE_URL.replace(/\/$/, "");
 
   // 获取当前语言的产品数据
   const productsData = getProductsByLanguage(locale);
@@ -76,12 +77,31 @@ export default function ProductsPage({ params }) {
     }]
   };
 
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": productsData.products.map((item, index) => {
+      const itemSlug = slugify(item.title, { lower: true, strict: true });
+      const absolutePrefix = locale === 'en' ? '' : `/${locale}`;
+      return {
+        "@type": "ListItem",
+        "position": index + 1,
+        "name": item.title,
+        "url": `${rootUrl}${absolutePrefix}/collection/${itemSlug}/`,
+      };
+    }),
+  };
+
   return (
     <>
       {/* JSON-LD 结构化数据 - 服务端输出 */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
       
       {/* Header */}

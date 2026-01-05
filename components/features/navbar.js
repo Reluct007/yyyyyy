@@ -32,13 +32,13 @@ export default function Navbar({ data = basic.navbar }) {
       <div className="container mx-auto">
         {/* Desktop Menu */}
         <nav className="hidden lg:flex justify-between items-center" role="navigation" aria-label="Main navigation">
-          <Link href={locale === 'en' ? "/" : `/${locale}`} className="flex items-center gap-4">
+          <Link href={locale === 'en' ? "/" : `/${locale}/`} className="flex items-center gap-4">
             <Image src={logo} className="w-8" alt={`${brandName} logo`} width={100} height={100} />
             <span className="text-xl font-bold">{brandName}</span>
           </Link>
 
           <div className="flex items-center gap-2">
-            <Link href={locale === 'en' ? "/" : `/${locale}`} className={cn(navigationMenuTriggerStyle(), buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
+            <Link href={locale === 'en' ? "/" : `/${locale}/`} className={cn(navigationMenuTriggerStyle(), buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
               {translations.nav?.home || "Home"}
             </Link>
             
@@ -61,7 +61,7 @@ export default function Navbar({ data = basic.navbar }) {
                               All Products
                             </div>
                             <p className="text-sm leading-tight text-muted-foreground">
-                              Browse our complete collection of designer toys and collectibles
+                              Browse our complete collection of poker sets, chips, tables, and accessories.
                             </p>
                           </Link>
                         </NavigationMenuLink>
@@ -87,10 +87,10 @@ export default function Navbar({ data = basic.navbar }) {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Link href={locale === 'en' ? "/about" : `/${locale}/about`} className={cn(navigationMenuTriggerStyle(), buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
+            <Link href={locale === 'en' ? "/about/" : `/${locale}/about/`} className={cn(navigationMenuTriggerStyle(), buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
               {translations.nav?.about || "About"}
             </Link>
-            <Link href={locale === 'en' ? "/contact" : `/${locale}/contact`} className={cn(navigationMenuTriggerStyle(), buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
+            <Link href={locale === 'en' ? "/contact/" : `/${locale}/contact/`} className={cn(navigationMenuTriggerStyle(), buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
               {translations.nav?.contact || "Contact"}
             </Link>
           </div>
@@ -114,7 +114,7 @@ export default function Navbar({ data = basic.navbar }) {
         {/* Mobile Menu */}
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
-            <Link href={locale === 'en' ? "/" : `/${locale}`} className="flex items-center gap-4">
+            <Link href={locale === 'en' ? "/" : `/${locale}/`} className="flex items-center gap-4">
               <Image src={logo} className="w-8" alt={`${brandName} logo`} width={100} height={100} />
               <span className="text-xl font-bold">{brandName}</span>
             </Link>
@@ -128,7 +128,7 @@ export default function Navbar({ data = basic.navbar }) {
               <SheetContent className="overflow-y-auto">
                 <SheetHeader>
                   <SheetTitle>
-                    <Link href={locale === 'en' ? "/" : `/${locale}`} className="flex items-center gap-2">
+                    <Link href={locale === 'en' ? "/" : `/${locale}/`} className="flex items-center gap-2">
                       <Image src={logo} className="w-8" alt={`${brandName} logo`} width={100} height={100} />
                       <span className="text-xl font-bold">{brandName}</span>
                     </Link>
@@ -136,7 +136,7 @@ export default function Navbar({ data = basic.navbar }) {
                 </SheetHeader>
 
                 <div className="my-8 flex flex-col gap-4">
-                  <Link href={locale === 'en' ? "/" : `/${locale}`} className="text-base font-medium">
+                  <Link href={locale === 'en' ? "/" : `/${locale}/`} className="text-base font-medium">
                     {translations.nav?.home || "Home"}
                   </Link>
                   
@@ -158,10 +158,10 @@ export default function Navbar({ data = basic.navbar }) {
                     </div>
                   </div>
                   
-                  <Link href={locale === 'en' ? "/about" : `/${locale}/about`} className="text-base font-medium">
+                  <Link href={locale === 'en' ? "/about/" : `/${locale}/about/`} className="text-base font-medium">
                     {translations.nav?.about || "About"}
                   </Link>
-                  <Link href={locale === 'en' ? "/contact" : `/${locale}/contact`} className="text-base font-medium">
+                  <Link href={locale === 'en' ? "/contact/" : `/${locale}/contact/`} className="text-base font-medium">
                     {translations.nav?.contact || "Contact"}
                   </Link>
                 </div>

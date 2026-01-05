@@ -34,7 +34,7 @@ export default function Error({ error, reset }) {
             <Button size="lg" onClick={() => reset()}>
               Try Again
             </Button>
-            <Link href={locale === 'en' ? '/collection' : `/${locale}/collection`}>
+            <Link href={locale === 'en' ? '/collection/' : `/${locale}/collection/`}>
               <Button size="lg" variant="outline">
                 Browse All Products
               </Button>

@@ -146,7 +146,7 @@ export default function ContactClient({ data = contact }) {
       "@type": "ListItem",
       "position": 2,
       "name": globalTranslations.nav?.contact || translatedData.header.title,
-      "item": `${basic.seo.url}${locale === 'en' ? '/contact' : `/${locale}/contact`}`
+      "item": `${basic.seo.url}${locale === 'en' ? '/contact/' : `/${locale}/contact/`}`
     }]
   };
 

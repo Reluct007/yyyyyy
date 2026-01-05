@@ -63,6 +63,17 @@ const jsonLd = {
   }]
 };
 
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": products.products.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": item.title,
+    "url": `${ROOT_URL}/collection/${slugify(item.title, { lower: true, strict: true })}/`,
+  })),
+};
+
 // 服务端组件 - 纯静态生成
 export default function ProductsPage() {
   return (
@@ -71,6 +82,10 @@ export default function ProductsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
       
       {/* Header */}
