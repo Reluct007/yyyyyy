@@ -8,11 +8,12 @@
     "dev": "next dev --turbo",
     "dev:turbo": "pnpm dev",
     "prebuild": "node --no-warnings scripts/generate-sitemap.mjs",
-    "build": "next build --turbopack",
+    "build": "next build --turbo",
     "start": "next start",
     "lint": "eslint --ext .js,.jsx,.mjs,.cjs \"app\" \"components\" \"lib\" \"pages\" \"data\" \"scripts\" \"next.config.mjs\" \"tailwind.config.js\" \"postcss.config.mjs\""
   },
   "dependencies": {
+    "@fontsource/inter": "^5.1.1",
     "@radix-ui/react-accordion": "^1.2.1",
     "@radix-ui/react-avatar": "^1.1.1",
     "@radix-ui/react-dialog": "^1.1.2",

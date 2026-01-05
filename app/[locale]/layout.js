@@ -1,4 +1,3 @@
-import { Inter } from "next/font/google";
 import "../globals.css";
 import RootChrome from "@/components/layout/root-chrome";
 import { basic } from "@/data/basic";
@@ -9,12 +8,6 @@ import { openGraphImage, twitterMetadata } from "@/lib/shared-metadata";
 import { notFound } from "next/navigation";
 
 const SITE_URL = withTrailingSlash(basic.seo.url);
-
-const inter = Inter({ 
-  subsets: ["latin"],
-  display: 'swap',
-  preload: true,
-});
 
 export async function generateStaticParams() {
   return getNonDefaultLocales().map((locale) => ({
@@ -108,16 +101,13 @@ export default function LocaleLayout({ children, params }) {
         />
         <link rel="preload" href="/logo1.webp" as="image" />
         <link rel="preload" href="/home/Cover-image.webp" as="image" />
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={inter.className}>
+      <body className="antialiased">
         <RootChrome>{children}</RootChrome>
       </body>
     </html>

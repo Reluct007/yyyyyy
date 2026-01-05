@@ -8,7 +8,6 @@ import Link from 'next/link';
 import { ChevronRight, ArrowDownRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import ContactForm from '@/components/features/contact-form';
-import ProductGallery from '@/components/features/product-gallery';
 
 const ROOT_URL = basic.seo.url.replace(/\/$/, "");
 
@@ -22,20 +21,19 @@ const getValidProducts = () => product.filter((item) => {
 
 // 静态生成所有语言版本的产品页面
 export async function generateStaticParams() {
-  try {
-    const supportedLocales = getNonDefaultLocales();
-    const validProducts = getValidProducts();
-    const params = [];
-    
-    for (const locale of supportedLocales) {
-      for (const item of validProducts) {
-        const slug = slugify(item.title, { lower: true, strict: true });
-        if (slug && slug.length > 2) {
-          params.push({ locale, slug });
-        }
+  const supportedLocales = getNonDefaultLocales();
+  const validProducts = getValidProducts();
+  const params = [];
+
+  for (const locale of supportedLocales) {
+    for (const item of validProducts) {
+      const slug = slugify(item.title, { lower: true, strict: true });
+      if (slug && slug.length > 2) {
+        params.push({ locale, slug });
       }
     }
   }
+
   return params;
 }
 
@@ -86,7 +84,6 @@ export default async function ProductPage({ params }) {
   const originalProduct = findProduct(slug);
   
   if (!originalProduct) {
-    const target = locale === 'en' ? '/collection' : `/${locale}/collection`;
     return (
       <section className="py-16 px-4 text-center">
         <h1 className="text-2xl font-semibold">{translations.product?.notFound || "Product Not Found"}</h1>
