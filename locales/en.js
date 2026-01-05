@@ -11,20 +11,24 @@ export const en = {
   // Home page
   home: {
     hero: {
-      badge: "Premium Designer Collectibles",
-      title: "Welcome to Labubu Wholesale",
-      description: "Discover exclusive designer collectibles that bring charm, creativity, and style to your space. Perfect for distributors and retailers worldwide."
+      badge: "Wholesale Poker Kits",
+      title: "Poker Kit Wholesale & Custom Poker Sets",
+      description: "Premium poker kits for B2B — bulk wholesale, OEM/ODM customization, low MOQs, and fast lead times."
+    },
+    categories: {
+      title: "Product Categories",
+      description: "Explore core product lines for wholesale and custom orders — poker sets, chips, tables, and essential accessories."
     },
     cta: {
-      title: "Ready to Start Your Business?",
-      description: "Join thousands of successful retailers who trust Labubu Wholesale for their collectible needs."
+      title: "Request Samples & Pricing",
+      description: "Get a quote for bulk orders, OEM/ODM customization, and reliable delivery."
     }
   },
   
   // Product page
   product: {
     title: "Product Details",
-    description: "Premium designer collectible",
+    description: "Premium poker products",
     features: "Key Features",
     recommended: "Recommended Products",
     learnMore: "Learn More",
@@ -34,8 +38,14 @@ export const en = {
   
   // About page
   about: {
-    title: "About Labubu Wholesale",
-    description: "Your trusted partner in designer collectibles"
+    title: "About Poker Kit",
+    description: "Your trusted B2B partner for poker sets, chips, tables, and accessories"
+  },
+
+  // FAQ
+  faq: {
+    title: "Frequently Asked Questions",
+    description: "Quick answers about wholesale ordering, customization, lead time, shipping, and support."
   },
   
   // Contact page

@@ -10,6 +10,7 @@ import { basic } from "@/data/basic";
 import { withTrailingSlash } from "@/lib/seo-url";
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/data/i18n";
 import { buildAlternates } from "@/lib/hreflang";
+import { openGraphImage, twitterMetadata } from "@/lib/shared-metadata";
 
 const SITE_URL = withTrailingSlash(basic.seo.url);
 
@@ -42,10 +43,16 @@ export async function generateMetadata({ params }) {
       follow: true,
     },
     openGraph: {
+      ...openGraphImage,
       title,
       description,
       url: canonicalUrl,
       type: "website",
+    },
+    twitter: {
+      ...twitterMetadata,
+      title,
+      description,
     },
   };
 }

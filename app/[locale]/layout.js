@@ -5,6 +5,7 @@ import { basic } from "@/data/basic";
 import { getNonDefaultLocales } from "@/lib/i18n";
 import { getSeoMeta } from "@/lib/metadata-translations";
 import { withTrailingSlash } from "@/lib/seo-url";
+import { openGraphImage, twitterMetadata } from "@/lib/shared-metadata";
 import { notFound } from "next/navigation";
 
 const SITE_URL = withTrailingSlash(basic.seo.url);
@@ -45,26 +46,18 @@ export async function generateMetadata({ params }) {
       follow: true,
     },
     openGraph: {
+      ...openGraphImage,
       title,
       description,
       url: canonicalUrl,
       siteName: basic.info.brand,
       locale: localeMap[locale] || 'en_US',
       type: 'website',
-      images: [
-        {
-          url: '/opengraph-image.png',
-          width: 1200,
-          height: 630,
-          alt: `${basic.info.brand} - ${title}`,
-        },
-      ],
     },
     twitter: {
-      card: 'summary_large_image',
+      ...twitterMetadata,
       title,
       description,
-      images: ['/opengraph-image.png'],
     },
   };
 }

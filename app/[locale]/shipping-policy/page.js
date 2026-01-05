@@ -3,6 +3,7 @@ import { getContent } from "@/data/content";
 import { basic } from "@/data/basic";
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/data/i18n";
 import { buildAlternates } from "@/lib/hreflang";
+import { openGraphImage, twitterMetadata } from "@/lib/shared-metadata";
 
 const ROOT_URL = basic.seo.url.replace(/\/$/, "");
 
@@ -29,10 +30,16 @@ export async function generateMetadata({ params }) {
       follow: true,
     },
     openGraph: {
+      ...openGraphImage,
       title,
       description,
       url: alternates.canonical,
       type: "website",
+    },
+    twitter: {
+      ...twitterMetadata,
+      title,
+      description,
     },
   };
 }

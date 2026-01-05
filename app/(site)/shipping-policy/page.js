@@ -3,6 +3,7 @@ import { getContent } from "@/data/content";
 import { basic } from "@/data/basic";
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/data/i18n";
 import { buildAlternates } from "@/lib/hreflang";
+import { openGraphImage, twitterMetadata } from "@/lib/shared-metadata";
 
 const alternates = buildAlternates({
   siteUrl: basic.seo.url,
@@ -25,10 +26,16 @@ export const metadata = {
     follow: true,
   },
   openGraph: {
+    ...openGraphImage,
     title,
     description,
     url: alternates.canonical,
     type: "website",
+  },
+  twitter: {
+    ...twitterMetadata,
+    title,
+    description,
   },
 };
 

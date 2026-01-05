@@ -8,6 +8,7 @@ import { home } from "@/data/home";
 import { basic } from "@/data/basic";
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/data/i18n";
 import { buildAlternates } from "@/lib/hreflang";
+import { openGraphImage, twitterMetadata } from "@/lib/shared-metadata";
 
 const alternates = buildAlternates({
   siteUrl: basic.seo.url,
@@ -25,10 +26,16 @@ export const metadata = {
     languages: alternates.languages,
   },
   openGraph: {
+    ...openGraphImage,
     title: basic.seo.title,
     description: basic.seo.description,
     url: alternates.canonical,
     type: "website",
+  },
+  twitter: {
+    ...twitterMetadata,
+    title: basic.seo.title,
+    description: basic.seo.description,
   },
 };
 

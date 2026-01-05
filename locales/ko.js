@@ -11,20 +11,24 @@ export const ko = {
   // Home page
   home: {
     hero: {
-      badge: "프리미엄 디자이너 컬렉션",
-      title: "라부부 도매에 오신 것을 환영합니다",
-      description: "매력, 창의성, 스타일을 공간에 가져다주는 독점적인 디자이너 컬렉션을 발견하세요. 전 세계 도매업체와 소매업체에게 완벽합니다."
+      badge: "포커 키트 도매",
+      title: "Poker Kit 도매 및 맞춤 포커 세트",
+      description: "B2B용 프리미엄 포커 키트: 대량 도매, OEM/ODM 커스터마이징, 낮은 MOQ, 빠른 리드타임을 지원합니다."
+    },
+    categories: {
+      title: "제품 카테고리",
+      description: "포커 세트, 칩, 테이블, 액세서리 등 도매 및 맞춤 주문을 위한 핵심 라인업을 확인하세요."
     },
     cta: {
-      title: "비즈니스를 시작할 준비가 되셨나요?",
-      description: "컬렉션 요구사항에 라부부 도매를 신뢰하는 수천 명의 성공한 소매업체에 참여하세요."
+      title: "샘플 및 견적 요청",
+      description: "대량 주문, OEM/ODM 프로젝트, 안정적인 배송을 위한 견적을 받아보세요."
     }
   },
   
   // Product page
   product: {
     title: "제품 상세정보",
-    description: "프리미엄 디자이너 컬렉션",
+    description: "프리미엄 포커 제품",
     features: "주요 특징",
     recommended: "추천 제품",
     learnMore: "자세히 보기",
@@ -34,8 +38,14 @@ export const ko = {
   
   // About page
   about: {
-    title: "라부부 도매 소개",
-    description: "디자이너 컬렉션의 신뢰할 수 있는 파트너"
+    title: "Poker Kit 소개",
+    description: "포커 세트, 칩, 테이블, 액세서리를 제공하는 B2B 파트너"
+  },
+
+  // FAQ
+  faq: {
+    title: "자주 묻는 질문",
+    description: "도매 주문, 커스터마이징, 리드타임, 배송 및 지원에 대한 빠른 답변을 확인하세요."
   },
   
   // Contact page

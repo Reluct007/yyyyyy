@@ -14,7 +14,10 @@
   },
   "overrides": [
     {
-      "files": ["scripts/**/*.{js,cjs,mjs}", "workers/**/*.{js,cjs,mjs}"],
+      "files": ["scripts/**/*.{js,cjs,mjs}"],
+      "env": {
+        "node": true
+      },
       "rules": {
         "no-console": "off"
       }
@@ -23,6 +26,9 @@
       "files": ["workers/**/*.{js,cjs,mjs}"],
       "env": {
         "worker": true
+      },
+      "rules": {
+        "no-console": "off"
       }
     }
   ]

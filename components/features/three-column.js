@@ -13,10 +13,10 @@ export default function ThreeColumn({ data }) {
         {/* Subtitle */}
         <div className="mx-auto flex flex-col max-w-screen-md items-center space-y-2">
           <h2 className="text-center text-2xl font-semibold lg:text-4xl">
-            {translations.product?.features || data.title}
+            {translations.home?.categories?.title || data.title}
           </h2>
           <p className="text-center text-muted-foreground text-lg">
-            {translations.product?.description || data.description}
+            {translations.home?.categories?.description || data.description}
           </p>
         </div>
         {/* Display Area */}

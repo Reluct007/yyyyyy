@@ -11,20 +11,24 @@ export const es = {
   // Home page
   home: {
     hero: {
-      badge: "Coleccionables de Diseñador Premium",
-      title: "Bienvenido a Labubu Wholesale",
-      description: "Descubre coleccionables de diseñador exclusivos que aportan encanto, creatividad y estilo a tu espacio. Perfecto para distribuidores y minoristas de todo el mundo."
+      badge: "Kits de Póker al Por Mayor",
+      title: "Poker Kit - Mayorista y Sets Personalizados",
+      description: "Proveedor B2B de kits de póker premium: venta al por mayor, personalización OEM/ODM, MOQs bajos y plazos de entrega rápidos."
+    },
+    categories: {
+      title: "Categorías de Productos",
+      description: "Explora nuestras líneas principales: sets de póker, fichas, mesas y accesorios para pedidos al por mayor y personalizados."
     },
     cta: {
-      title: "¿Listo para Comenzar tu Negocio?",
-      description: "Únete a miles de minoristas exitosos que confían en Labubu Wholesale para sus necesidades de coleccionables."
+      title: "Solicita Muestras y Precios",
+      description: "Obtén una cotización para pedidos al por mayor, proyectos OEM/ODM y entrega confiable."
     }
   },
   
   // Product page
   product: {
     title: "Detalles del Producto",
-    description: "Coleccionable de diseñador premium",
+    description: "Productos de póker premium",
     features: "Características Principales",
     recommended: "Productos Recomendados",
     learnMore: "Saber Más",
@@ -34,8 +38,14 @@ export const es = {
   
   // About page
   about: {
-    title: "Acerca de Labubu Wholesale",
-    description: "Tu socio de confianza en coleccionables de diseñador"
+    title: "Acerca de Poker Kit",
+    description: "Tu socio B2B de confianza para sets de póker, fichas, mesas y accesorios"
+  },
+
+  // FAQ
+  faq: {
+    title: "Preguntas Frecuentes",
+    description: "Respuestas rápidas sobre pedidos al por mayor, personalización, plazos de entrega, envío y soporte."
   },
   
   // Contact page

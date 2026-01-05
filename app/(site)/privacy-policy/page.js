@@ -2,6 +2,7 @@ import PrivacyClient from './privacy-client';
 import { basic } from "@/data/basic";
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/data/i18n";
 import { buildAlternates } from "@/lib/hreflang";
+import { openGraphImage, twitterMetadata } from "@/lib/shared-metadata";
 
 const ROOT_URL = basic.seo.url.replace(/\/$/, "");
 const PAGE_TITLE = `Privacy Policy | ${basic.info.brand}`;
@@ -27,10 +28,16 @@ export const metadata = {
     follow: true,
   },
   openGraph: {
+    ...openGraphImage,
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
     url: CANONICAL_URL,
     type: "website",
+  },
+  twitter: {
+    ...twitterMetadata,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
   },
 };
 

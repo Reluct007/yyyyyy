@@ -11,20 +11,24 @@ export const de = {
   // Home page
   home: {
     hero: {
-      badge: "Premium Designer Sammlerstücke",
-      title: "Willkommen bei Labubu Wholesale",
-      description: "Entdecken Sie exklusive Designer-Sammlerstücke, die Charme, Kreativität und Stil in Ihren Raum bringen. Perfekt für Händler und Einzelhändler weltweit."
+      badge: "Poker-Kits im Großhandel",
+      title: "Poker Kit – Großhandel & Individuelle Sets",
+      description: "B2B-Lieferant für Premium-Poker-Kits: Großhandel, OEM/ODM-Anpassung, niedrige MOQs und schnelle Lieferzeiten."
+    },
+    categories: {
+      title: "Produktkategorien",
+      description: "Entdecken Sie unsere Kernlinien: Poker-Sets, Chips, Tische und Zubehör für Großhandel und Sonderanfertigungen."
     },
     cta: {
-      title: "Bereit, Ihr Geschäft zu Starten?",
-      description: "Schließen Sie sich Tausenden erfolgreicher Einzelhändler an, die Labubu Wholesale für ihre Sammlerstück-Bedürfnisse vertrauen."
+      title: "Muster & Preise anfragen",
+      description: "Erhalten Sie ein Angebot für Großbestellungen, OEM/ODM-Projekte und zuverlässige Lieferung."
     }
   },
   
   // Product page
   product: {
     title: "Produktdetails",
-    description: "Premium Designer Sammlerstück",
+    description: "Premium-Pokerprodukte",
     features: "Hauptmerkmale",
     recommended: "Empfohlene Produkte",
     learnMore: "Mehr Erfahren",
@@ -34,8 +38,14 @@ export const de = {
   
   // About page
   about: {
-    title: "Über Labubu Wholesale",
-    description: "Ihr vertrauensvoller Partner für Designer-Sammlerstücke"
+    title: "Über Poker Kit",
+    description: "Ihr zuverlässiger B2B-Partner für Poker-Sets, Chips, Tische und Zubehör"
+  },
+
+  // FAQ
+  faq: {
+    title: "Häufige Fragen",
+    description: "Kurze Antworten zu Großhandel, Anpassung, Lieferzeit, Versand und Support."
   },
   
   // Contact page
