@@ -7,7 +7,7 @@ Next.js 纯静态电商网站，支持多语言、产品展示、联系表单。
 | 工具 | 版本 | 说明 |
 |------|------|------|
 | Node.js | 20+ | JavaScript 运行环境 |
-| npm | 10+ | 包管理器 |
+| pnpm | 9+ | 包管理器 |
 | Git | 最新版 | 版本控制 |
 | Wrangler | 3.0+ | Cloudflare CLI 工具 |
 
@@ -71,28 +71,28 @@ cd labubu
 
 ```bash
 # 前端依赖
-npm install
+pnpm install
 
 # API 依赖
-cd workers && npm install && cd ..
+cd workers && pnpm install && cd ..
 ```
 
 ### 3. 本地开发
 
 ```bash
 # 启动前端开发服务器
-npm run dev
+pnpm dev
 # 访问 http://localhost:3000
 
 # 启动 API 开发服务器 (新终端)
-cd workers && npm run dev
+cd workers && pnpm dev
 # 访问 http://localhost:8787
 ```
 
 ### 4. 构建测试
 
 ```bash
-npm run build
+pnpm build
 # 输出到 out/ 目录
 ```
 

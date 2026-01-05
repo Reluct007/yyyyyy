@@ -17,14 +17,15 @@
 | 软件 | 版本 | 安装方式 |
 |------|------|----------|
 | Node.js | 20+ | https://nodejs.org 或 `brew install node` |
+| pnpm | 9+ | `npm install -g pnpm` 或 `brew install pnpm` |
 | Git | 最新版 | https://git-scm.com 或 `brew install git` |
-| Wrangler | 3.0+ | `npm install -g wrangler` |
+| Wrangler | 3.0+ | `pnpm add -g wrangler` |
 
 ### 验证安装
 
 ```bash
 node -v      # 应显示 v20.x.x 或更高
-npm -v       # 应显示 10.x.x 或更高
+pnpm -v      # 应显示 9.x.x 或更高
 git --version
 wrangler -v  # 应显示 3.x.x 或更高
 ```
@@ -42,11 +43,11 @@ cd labubu
 
 ```bash
 # 前端依赖
-npm install
+pnpm install
 
 # API 依赖
 cd workers
-npm install
+pnpm install
 cd ..
 ```
 
@@ -54,10 +55,10 @@ cd ..
 
 ```bash
 # 终端 1: 启动前端
-npm run dev
+pnpm dev
 
 # 终端 2: 启动 API (可选)
-cd workers && npm run dev
+cd workers && pnpm dev
 ```
 
 ### 4. 验证
@@ -79,7 +80,7 @@ cd workers && npm run dev
 | 配置项 | 值 |
 |--------|-----|
 | 生产分支 | `main` |
-| 构建命令 | `npm run build` |
+| 构建命令 | `pnpm build` |
 | 构建输出目录 | `out` |
 | 根目录 | `labubu` (如果是子目录) |
 
@@ -133,7 +134,7 @@ wrangler secret put FROM_EMAIL
 ### 步骤 3: 部署
 
 ```bash
-npm run deploy
+pnpm deploy
 # 或
 wrangler deploy --keep-vars
 ```
@@ -202,7 +203,7 @@ git push origin main
 
 ```bash
 cd workers
-npm run deploy
+pnpm deploy
 ```
 
 ### 手动触发重新构建
@@ -236,7 +237,7 @@ A: Cloudflare Dashboard → Pages → 项目 → Deployments → 点击具体部
 
 ```bash
 cd workers
-npm run tail
+pnpm tail
 # 或
 wrangler tail
 ```
@@ -245,24 +246,28 @@ wrangler tail
 
 ```bash
 # 1. 安装 Node.js 20+
-# 2. 安装 Wrangler
-npm install -g wrangler
 
-# 3. 克隆代码
+# 2. 安装 pnpm
+npm install -g pnpm
+
+# 3. 安装 Wrangler
+pnpm add -g wrangler
+
+# 4. 克隆代码
 git clone <repo-url>
 cd labubu
 
-# 4. 安装依赖
-npm install
-cd workers && npm install && cd ..
+# 5. 安装依赖
+pnpm install
+cd workers && pnpm install && cd ..
 
-# 5. 登录 Cloudflare
+# 6. 登录 Cloudflare
 wrangler login
 
-# 6. 部署 Workers
-cd workers && npm run deploy
+# 7. 部署 Workers
+cd workers && pnpm deploy
 
-# 7. 前端通过 GitHub 推送自动部署
+# 8. 前端通过 GitHub 推送自动部署
 git push origin main
 ```
 
