@@ -9,7 +9,7 @@ Next.js 纯静态电商网站，支持多语言、产品展示、联系表单。
 | Node.js | 20+ | JavaScript 运行环境 |
 | pnpm | 10+ | 包管理器 |
 | Git | 最新版 | 版本控制 |
-| Wrangler | 3.0+ | Cloudflare CLI 工具 |
+| Wrangler | 3.0+ | （可选）用于 Workers 调试/部署；优先使用本仓库 `workers/` 的本地依赖：`pnpm -C workers exec wrangler` |
 
 ## 🏗️ 项目架构
 
@@ -64,7 +64,7 @@ poker-set/
 
 ```bash
 git clone <your-repo-url>
-cd poker-set
+cd <repo-dir>
 ```
 
 ### 2. 安装依赖
@@ -102,6 +102,17 @@ pnpm build
 - `pnpm build`
 
 ## ⚙️ 配置说明
+
+### 环境变量
+
+前端通过环境变量 `NEXT_PUBLIC_API_URL` 指向 Workers API：
+
+```bash
+# 本地开发示例（Next.js dev 读取 .env.local）
+echo "NEXT_PUBLIC_API_URL=http://localhost:8787" > .env.local
+```
+
+生产环境（Cloudflare Pages）请在项目 Settings → Environment variables 配置 `NEXT_PUBLIC_API_URL`。
 
 ### SEO 和网站配置
 

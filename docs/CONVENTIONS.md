@@ -13,6 +13,7 @@
 - Lint：`pnpm lint`
 - Build（静态导出）：`pnpm build`
 - Workers 本地调试：`pnpm -C workers dev`
+- Wrangler（Workers 配套 CLI）：优先使用 `pnpm -C workers exec wrangler` 避免全局版本漂移
 
 ## 目录结构与职责边界
 
@@ -52,4 +53,3 @@
 - DRY：发现重复的页面区块/数据结构时，优先抽到 `components/features/` 或 `data/` 层统一
 - YAGNI：不预埋未被需求驱动的配置与分支；只实现当前明确需要的能力
 - SOLID：保持组件单一职责；将可变逻辑收敛到 `data/` 或小而清晰的工具函数中
-
