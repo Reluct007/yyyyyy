@@ -134,6 +134,8 @@ export default function ContactClient({ data = contact }) {
   };
 
   // Structured Data
+  const rootUrl = basic.seo.url.replace(/\/$/, "");
+  const urlPrefix = `/${locale}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -141,12 +143,12 @@ export default function ContactClient({ data = contact }) {
       "@type": "ListItem",
       "position": 1,
       "name": globalTranslations.nav?.home || "Home",
-      "item": basic.seo.url
+      "item": `${rootUrl}${urlPrefix}/`
     }, {
       "@type": "ListItem",
       "position": 2,
       "name": globalTranslations.nav?.contact || translatedData.header.title,
-      "item": `${basic.seo.url}${locale === 'en' ? '/contact/' : `/${locale}/contact/`}`
+      "item": `${rootUrl}${urlPrefix}/contact/`
     }]
   };
 

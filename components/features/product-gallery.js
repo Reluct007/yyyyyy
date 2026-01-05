@@ -69,7 +69,8 @@ export default function ProductGallery({ mainImage, images = [], title }) {
             className="w-full h-full object-contain cursor-pointer"
             width={800}
             height={800}
-            priority
+            loading="eager"
+            fetchPriority="high"
             onClick={nextImage}
           />
         </div>
@@ -136,34 +137,47 @@ export default function ProductGallery({ mainImage, images = [], title }) {
             className="w-full h-full object-contain"
             width={800}
             height={800}
-            priority
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
-        
+
         {allImages.length > 1 && (
           <>
-            <button 
+            <button
               onClick={prevImage}
+              type="button"
+              aria-label="Previous image"
               className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center shadow-md"
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-6 h-6" aria-hidden="true" />
             </button>
-            <button 
+            <button
               onClick={nextImage}
+              type="button"
+              aria-label="Next image"
               className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center shadow-md"
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-6 h-6" aria-hidden="true" />
             </button>
-            
+
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
               {allImages.slice(0, 7).map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setSelectedIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    selectedIndex === index ? 'bg-primary w-4' : 'bg-gray-300'
-                  }`}
-                />
+                  type="button"
+                  aria-label={`View image ${index + 1} of ${allImages.length}`}
+                  aria-current={selectedIndex === index}
+                  className="h-6 w-6 rounded-full flex items-center justify-center"
+                >
+                  <span
+                    aria-hidden="true"
+                    className={`h-2 rounded-full transition-all ${
+                      selectedIndex === index ? 'bg-primary w-4' : 'bg-gray-300 w-2'
+                    }`}
+                  />
+                </button>
               ))}
             </div>
           </>
