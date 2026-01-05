@@ -9,7 +9,7 @@
 - `data/`: Content/config sources (SEO, navigation, products). Treat as the “CMS”.
 - `locales/`: Translation dictionaries used by locale routes.
 - `public/`: Static assets.
-- `scripts/`: Build utilities (e.g. `scripts/generate-sitemap.mjs` runs before `pnpm build`).
+- `scripts/`: Build utilities.
 - `workers/`: Cloudflare Workers API (`workers/src/`), deployed separately.
 - `pages/`: Legacy fallbacks (`pages/404.js`, `pages/_error.js`) only.
 - Build outputs: `.next/` and `out/` (do not commit).
@@ -20,7 +20,7 @@ Root (frontend):
 - `pnpm dev`: Dev server with Turbopack.
 - `pnpm dev:turbo`: Alias of `pnpm dev`.
 - `pnpm lint`: ESLint via Next.js (`next/core-web-vitals`).
-- `pnpm build`: Static export build (`next.config.mjs` uses `output: "export"`); regenerates sitemap via `prebuild`.
+- `pnpm build`: Static export build (`next.config.mjs` uses `output: "export"`); generates `sitemap.xml`/`robots.txt` via Metadata Routes (`app/sitemap.js`, `app/robots.js`).
 - `pnpm start`: Run production server (mostly for local verification; deploy uses `out/`).
 
 Workers (API):
