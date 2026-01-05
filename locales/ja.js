@@ -11,20 +11,24 @@ export const ja = {
   // Home page
   home: {
     hero: {
-      badge: "プレミアムデザイナーコレクション",
-      title: "ラブブ卸売へようこそ",
-      description: "チャーム、創造性、スタイルをあなたの空間にもたらす独占的なデザイナーコレクションを発見してください。世界中の卸売業者や小売業者に最適です。"
+      badge: "ポーカーキット卸売",
+      title: "Poker Kit 卸売・カスタムポーカーセット",
+      description: "B2B向けプレミアムポーカーキット。卸売、大口注文、OEM/ODMカスタム、低MOQ、短納期に対応します。"
+    },
+    categories: {
+      title: "商品カテゴリ",
+      description: "ポーカーセット、チップ、テーブル、アクセサリーなど、卸売・カスタム対応の主要ラインナップをご覧ください。"
     },
     cta: {
-      title: "ビジネスを始める準備はできましたか？",
-      description: "コレクションのニーズにラブブ卸売を信頼する何千もの成功した小売業者に参加してください。"
+      title: "サンプル・見積もり依頼",
+      description: "大口注文やOEM/ODMのご相談、納期・価格のお見積もりはこちらから。"
     }
   },
   
   // Product page
   product: {
     title: "商品詳細",
-    description: "プレミアムデザイナーコレクション",
+    description: "プレミアムポーカー製品",
     features: "主な特徴",
     recommended: "おすすめ商品",
     learnMore: "詳細を見る",
@@ -34,8 +38,14 @@ export const ja = {
   
   // About page
   about: {
-    title: "ラブブ卸売について",
-    description: "デザイナーコレクションの信頼できるパートナー"
+    title: "Poker Kit について",
+    description: "ポーカーセット、チップ、テーブル、アクセサリーのB2Bサプライヤー"
+  },
+
+  // FAQ
+  faq: {
+    title: "よくある質問",
+    description: "卸売のご注文、カスタマイズ、納期、配送、サポートに関する回答をまとめています。"
   },
   
   // Contact page

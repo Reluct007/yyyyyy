@@ -30,10 +30,10 @@ export default function FAQ({ data }) {
           {/* Subtitle */}
           <div className="mx-auto flex flex-col max-w-screen-md items-center space-y-2">
             <h2 className="text-center text-2xl font-semibold lg:text-4xl">
-              {translations.footer?.support || data.title}
+              {translations.faq?.title || data.title}
             </h2>
             <p className="text-center text-muted-foreground text-lg">
-              {translations.contact?.description || data.description}
+              {translations.faq?.description || data.description}
             </p>
           </div>
           {/* Display Area */}
