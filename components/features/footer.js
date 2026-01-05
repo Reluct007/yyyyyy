@@ -6,11 +6,11 @@ import { useLanguage } from '@/lib/language-context';
 
 export default function Footer({ data = basic.info }) {
   const { translations, locale } = useLanguage();
+  const urlPrefix = `/${locale}`;
   
   const brandName = data.brand;
-  
-  const termsUrl = locale === 'en' ? '/terms-of-service/' : `/${locale}/terms-of-service/`;
-  const privacyUrl = locale === 'en' ? '/privacy-policy/' : `/${locale}/privacy-policy/`;
+  const termsUrl = `${urlPrefix}/terms-of-service/`;
+  const privacyUrl = `${urlPrefix}/privacy-policy/`;
   
   return (
     <section className="py-12 px-4 bg-muted/30">

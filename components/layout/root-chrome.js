@@ -6,9 +6,9 @@ import { Toaster } from "@/components/ui/sonner";
 import { LanguageProvider } from "@/lib/language-context";
 
 // 统一站点外壳：避免在多个 Root Layout 中重复 Navbar/Footer/Provider 结构
-export default function RootChrome({ children }) {
+export default function RootChrome({ children, locale }) {
   return (
-    <LanguageProvider>
+    <LanguageProvider initialLocale={locale}>
       <Navbar />
       <main>{children}</main>
       <CTA />
@@ -18,4 +18,3 @@ export default function RootChrome({ children }) {
     </LanguageProvider>
   );
 }
-

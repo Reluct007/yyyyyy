@@ -1,7 +1,7 @@
 import "../globals.css";
 import RootChrome from "@/components/layout/root-chrome";
 import { basic } from "@/data/basic";
-import { getNonDefaultLocales } from "@/lib/i18n";
+import { getSupportedLocales } from "@/lib/i18n";
 import { getSeoMeta } from "@/lib/metadata-translations";
 import { withTrailingSlash } from "@/lib/seo-url";
 import { openGraphImage, twitterMetadata } from "@/lib/shared-metadata";
@@ -10,7 +10,7 @@ import { notFound } from "next/navigation";
 const SITE_URL = withTrailingSlash(basic.seo.url);
 
 export async function generateStaticParams() {
-  return getNonDefaultLocales().map((locale) => ({
+  return getSupportedLocales().map((locale) => ({
     locale,
   }));
 }
@@ -57,7 +57,7 @@ export async function generateMetadata({ params }) {
 
 export default function LocaleLayout({ children, params }) {
   const { locale } = params;
-  const supportedLocales = getNonDefaultLocales();
+  const supportedLocales = getSupportedLocales();
   
   if (!supportedLocales.includes(locale)) {
     notFound();
@@ -108,7 +108,7 @@ export default function LocaleLayout({ children, params }) {
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className="antialiased">
-        <RootChrome>{children}</RootChrome>
+        <RootChrome locale={locale}>{children}</RootChrome>
       </body>
     </html>
   );

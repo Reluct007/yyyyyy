@@ -91,7 +91,7 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className="antialiased">
-        <RootChrome>{children}</RootChrome>
+        <RootChrome locale="en">{children}</RootChrome>
       </body>
     </html>
   );
