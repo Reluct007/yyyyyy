@@ -212,6 +212,7 @@ export const products = {
 ## 🔗 相关链接
 
 - [工程约定](./docs/CONVENTIONS.md) - 开发/目录/命名/CI 约定索引入口
+- [SEO 规范与维护](./docs/SEO.md) - canonical/hreflang/sitemap/robots 维护指南
 - [部署文档](./DEPLOY.md) - 详细部署步骤
 - [Cloudflare Pages](https://pages.cloudflare.com/)
 - [Cloudflare Workers](https://workers.cloudflare.com/)
