@@ -83,7 +83,7 @@ export default function ProductsPage() {
             {products.products.map((item, index) => (
               <div key={index} className="rounded-lg border">
                 <Link
-                  href={`/collection/${slugify(item.title, { lower: true, strict: true })}`}
+                  href={`/collection/${slugify(item.title, { lower: true, strict: true })}/`}
                 >
                   <Image
                     src={item.image}
@@ -95,7 +95,7 @@ export default function ProductsPage() {
                 </Link>
                 <div className="p-4 space-y-2">
                   <Link
-                    href={`/collection/${slugify(item.title, { lower: true, strict: true })}`}
+                    href={`/collection/${slugify(item.title, { lower: true, strict: true })}/`}
                   >
                     <h3 className="text-xl font-semibold">{item.title}</h3>
                   </Link>
@@ -105,7 +105,7 @@ export default function ProductsPage() {
                       : item.description}
                   </p>
                   <Link
-                    href={`/collection/${slugify(item.title, { lower: true, strict: true })}`}
+                    href={`/collection/${slugify(item.title, { lower: true, strict: true })}/`}
                     className="flex items-center gap-2 text-sm text-muted-foreground"
                   >
                     Read More <ChevronRight className="w-4" />

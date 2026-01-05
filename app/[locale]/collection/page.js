@@ -10,7 +10,6 @@ import { basic } from "@/data/basic";
 import { withTrailingSlash } from "@/lib/seo-url";
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/data/i18n";
 import { buildAlternates } from "@/lib/hreflang";
-import { openGraphImage, twitterMetadata } from "@/lib/shared-metadata";
 
 const SITE_URL = withTrailingSlash(basic.seo.url);
 
@@ -43,16 +42,10 @@ export async function generateMetadata({ params }) {
       follow: true,
     },
     openGraph: {
-      ...openGraphImage,
       title,
       description,
       url: canonicalUrl,
       type: "website",
-    },
-    twitter: {
-      ...twitterMetadata,
-      title,
-      description,
     },
   };
 }
@@ -100,7 +93,7 @@ export default function ProductsPage({ params }) {
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {productsData.products.map((item, index) => {
               const itemSlug = slugify(item.title, { lower: true, strict: true });
-              const itemUrl = `${urlPrefix}/collection/${itemSlug}`;
+              const itemUrl = `${urlPrefix}/collection/${itemSlug}/`;
               
               return (
                 <div key={index} className="rounded-lg border">

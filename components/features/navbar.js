@@ -54,7 +54,7 @@ export default function Navbar({ data = basic.navbar }) {
                       <li className="col-span-2">
                         <NavigationMenuLink asChild>
                           <Link
-                            href={locale === 'en' ? "/collection" : `/${locale}/collection`}
+                            href={locale === 'en' ? "/collection/" : `/${locale}/collection/`}
                             className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                           >
                             <div className="mb-2 text-lg font-medium">
@@ -70,7 +70,7 @@ export default function Navbar({ data = basic.navbar }) {
                         <li key={category.slug}>
                           <NavigationMenuLink asChild>
                             <Link
-                              href={locale === 'en' ? `/collection/${category.slug}` : `/${locale}/collection/${category.slug}`}
+                              href={locale === 'en' ? `/collection/${category.slug}/` : `/${locale}/collection/${category.slug}/`}
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                             >
                               <div className="text-sm font-medium leading-none">{category.title}</div>
@@ -142,14 +142,14 @@ export default function Navbar({ data = basic.navbar }) {
                   
                   {/* Products with subcategories */}
                   <div className="space-y-2">
-                    <Link href={locale === 'en' ? "/collection" : `/${locale}/collection`} className="text-base font-medium">
+                    <Link href={locale === 'en' ? "/collection/" : `/${locale}/collection/`} className="text-base font-medium">
                       {translations.nav?.products || "Products"}
                     </Link>
                     <div className="pl-4 space-y-2 border-l-2 border-muted">
                       {categories.map((category) => (
                         <Link 
                           key={category.slug}
-                          href={locale === 'en' ? `/collection/${category.slug}` : `/${locale}/collection/${category.slug}`} 
+                          href={locale === 'en' ? `/collection/${category.slug}/` : `/${locale}/collection/${category.slug}/`} 
                           className="block text-sm text-muted-foreground hover:text-foreground"
                         >
                           {category.title}

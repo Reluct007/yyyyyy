@@ -46,7 +46,7 @@ export default async function ProductPage({ params }) {
       <section className="py-16 px-4 text-center">
         <h1 className="text-2xl font-semibold">Product Not Found</h1>
         <p className="text-muted-foreground mt-2">The requested product could not be found.</p>
-        <Link href="/collection" className="text-primary mt-4 inline-block">
+        <Link href="/collection/" className="text-primary mt-4 inline-block">
           Browse All Products
         </Link>
       </section>
@@ -76,7 +76,7 @@ export default async function ProductPage({ params }) {
     }, {
       "@type": "ListItem",
       "position": 2,
-      "name": "Products",
+      "name": "Collection",
       "item": `${ROOT_URL}/collection/`
     }, {
       "@type": "ListItem",
