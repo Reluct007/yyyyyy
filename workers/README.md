@@ -10,9 +10,8 @@
 | `/api/contact` | POST | 联系表单 | 无 |
 | `/api/subscribe` | POST | 邮件订阅 | 无 |
 | `/api/admin/login` | POST | 管理员登录 | 无 |
-| `/api/admin/config` | GET | 获取配置 | JWT |
-| `/api/admin/config` | POST | 更新配置 | JWT |
-| `/api/admin/themes` | GET | 主题列表 | 无 |
+| `/api/admin/config` | GET | 获取配置 | 无（可选 JWT；带管理员 token 会返回完整配置） |
+| `/api/admin/config` | POST | 更新配置 | JWT（管理员） |
 
 ## 快速部署
 
@@ -32,7 +31,7 @@ pnpm -C workers exec wrangler login
 pnpm -C workers exec wrangler kv:namespace create "CONFIG_KV"
 ```
 
-更新 `wrangler.toml` 中的 ID。
+更新 `workers/wrangler.toml` 中的 `kv_namespaces.id`。
 
 ### 3. 配置 Secrets
 
@@ -43,6 +42,7 @@ pnpm -C workers exec wrangler secret put FROM_EMAIL
 pnpm -C workers exec wrangler secret put ADMIN_USERNAME
 pnpm -C workers exec wrangler secret put ADMIN_PASSWORD
 pnpm -C workers exec wrangler secret put JWT_SECRET
+pnpm -C workers exec wrangler secret put DEPLOY_HOOK_URL # 可选：用于保存配置后触发 Pages 重新构建
 ```
 
 ### 4. 部署
@@ -71,7 +71,6 @@ workers/
 │   │   └── admin/
 │   │       ├── login.js      # 登录
 │   │       ├── config.js     # 配置管理
-│   │       └── themes.js     # 主题列表
 │   └── utils/
 │       ├── response.js       # 响应工具
 │       ├── jwt.js            # JWT 工具
@@ -87,9 +86,10 @@ workers/
 | `RESEND_API_KEY` | Resend API 密钥 |
 | `CONTACT_EMAIL` | 默认接收邮箱 |
 | `FROM_EMAIL` | 默认发件邮箱 |
-| `ADMIN_USERNAME` | 管理员用户名 |
-| `ADMIN_PASSWORD` | 管理员密码 |
-| `JWT_SECRET` | JWT 签名密钥 |
+| `ADMIN_USERNAME` | 管理员用户名（默认 `admin`） |
+| `ADMIN_PASSWORD` | 管理员密码（启用管理员登录必填） |
+| `JWT_SECRET` | JWT 签名密钥（生产环境必填） |
+| `DEPLOY_HOOK_URL` | （可选）Cloudflare Pages Deploy Hook URL（用于配置更新后触发重新构建） |
 
 ## 配置存储 (KV)
 
@@ -99,13 +99,14 @@ workers/
 {
   "contactEmail": "custom@email.com",
   "fromEmail": "noreply@domain.com",
-  "fromName": "Site Name",
-  "activeTheme": "labubu",
-  "siteName": "Site Name",
-  "siteDescription": "Description",
+  "fromName": "Poker Kit",
+  "siteName": "Poker Kit",
+  "seoTitle": "Poker Kit Wholesale & Custom Poker Sets | PokerKit.com",
+  "seoDescription": "B2B supplier of premium poker kits ...",
+  "seoKeywords": "poker set, poker chips",
   "updatedAt": "2025-01-01T00:00:00.000Z",
   "updatedBy": "admin"
 }
 ```
 
-如果 KV 中没有配置，会使用 Secrets 中的默认值。
+推荐始终配置 `CONFIG_KV`：未绑定 KV 会导致 `/api/admin/config` 无法读写；联系/订阅接口会回退到环境变量默认值。
