@@ -9,8 +9,8 @@ export default function Footer({ data = basic.info }) {
   
   const brandName = data.brand;
   
-  const termsUrl = locale === 'en' ? '/terms-of-service' : `/${locale}/terms-of-service`;
-  const privacyUrl = locale === 'en' ? '/privacy-policy' : `/${locale}/privacy-policy`;
+  const termsUrl = locale === 'en' ? '/terms-of-service/' : `/${locale}/terms-of-service/`;
+  const privacyUrl = locale === 'en' ? '/privacy-policy/' : `/${locale}/privacy-policy/`;
   
   return (
     <section className="py-12 px-4 bg-muted/30">

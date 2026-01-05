@@ -118,7 +118,7 @@ function ProductsContent({ params, locale: routeLocale, page = 1 }) {
       "@type": "ListItem",
       "position": 2,
       "name": translations.nav?.products || "Products Collection",
-      "item": `${ROOT_URL}/collection/`
+      "item": `${ROOT_URL}${locale === 'en' ? '/collection/' : `/${locale}/collection/`}`
     }, {
       "@type": "ListItem",
       "position": 3,
@@ -192,10 +192,26 @@ function ProductsContent({ params, locale: routeLocale, page = 1 }) {
     (_, i) => startPage + i
   );
 
+  const urlPrefix = locale === 'en' ? '' : `/${locale}`;
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": productsPage.map((item, index) => {
+      const productSlug = item.id || slugify(item.title, { lower: true, strict: true });
+      return {
+        "@type": "ListItem",
+        "position": startIndex + index + 1,
+        "name": item.title,
+        "url": `${ROOT_URL}${urlPrefix}/product/${productSlug}/`,
+      };
+    }),
+  };
+
   return (
     <>
       {/* Structured Data */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
 
       {/* Banner Header */}
       <Header data={header} />
@@ -208,15 +224,15 @@ function ProductsContent({ params, locale: routeLocale, page = 1 }) {
             {productsPage.map((item, index) => (
               <div key={index} className="rounded-lg border h-full">
                 <div className="relative">
-                  <Link href={locale === 'en' ? `/product/${item.id || slugify(item.title, { lower: true, strict: true })}` : `/${locale}/product/${item.id || slugify(item.title, { lower: true, strict: true })}`}><Image src={item.image} alt={item.title} className="w-full rounded-t-lg" width={400} height={300} /></Link>
+                  <Link href={locale === 'en' ? `/product/${item.id || slugify(item.title, { lower: true, strict: true })}/` : `/${locale}/product/${item.id || slugify(item.title, { lower: true, strict: true })}/`}><Image src={item.image} alt={item.title} className="w-full rounded-t-lg" width={400} height={300} /></Link>
                   <Badge variant="outline" className="absolute left-5 top-5 bg-primary-foreground">
-                    <Link href={locale === 'en' ? `/collection/${slugify(item.category, { lower: true, strict: true })}` : `/${locale}/collection/${slugify(item.category, { lower: true, strict: true })}`}>{item.category}</Link>
+                    <Link href={locale === 'en' ? `/collection/${slugify(item.category, { lower: true, strict: true })}/` : `/${locale}/collection/${slugify(item.category, { lower: true, strict: true })}/`}>{item.category}</Link>
                   </Badge>
                 </div>
                 <div className="p-4 space-y-2">
-                  <Link href={locale === 'en' ? `/product/${item.id || slugify(item.title, { lower: true, strict: true })}` : `/${locale}/product/${item.id || slugify(item.title, { lower: true, strict: true })}`}><h3 className="text-lg font-semibold">{item.title}</h3></Link>
+                  <Link href={locale === 'en' ? `/product/${item.id || slugify(item.title, { lower: true, strict: true })}/` : `/${locale}/product/${item.id || slugify(item.title, { lower: true, strict: true })}/`}><h3 className="text-lg font-semibold">{item.title}</h3></Link>
                   <p className="text-base text-muted-foreground">{item.description.length > 120 ? `${item.description.substring(0, 120)}...` : item.description}</p>
-                  <Link href={locale === 'en' ? `/product/${item.id || slugify(item.title, { lower: true, strict: true })}` : `/${locale}/product/${item.id || slugify(item.title, { lower: true, strict: true })}`} className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Link href={locale === 'en' ? `/product/${item.id || slugify(item.title, { lower: true, strict: true })}/` : `/${locale}/product/${item.id || slugify(item.title, { lower: true, strict: true })}/`} className="flex items-center gap-2 text-sm text-muted-foreground">
                     {t('learnMore')} <ChevronRight className="w-4" />
                   </Link>
                 </div>

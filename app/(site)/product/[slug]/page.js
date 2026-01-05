@@ -160,7 +160,7 @@ export default async function ProductPage({ params }) {
               Recommended Products
             </h2>
             <p className="max-w-4xl text-muted-foreground text-base">
-              Discover more premium designer collectibles from our collection.
+              Discover more poker sets and accessories from our collection.
             </p>
           </div>
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">

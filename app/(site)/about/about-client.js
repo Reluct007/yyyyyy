@@ -40,13 +40,13 @@ export default function AboutClient({ data = about }) {
       ja: "私たちのストーリー",
       ko: "우리의 이야기"
     },
-    "At Labubu Wholesale, we design collectible art toys that blend playful creativity with exceptional craftsmanship. Our mission is to bring joy, originality, and long-term value to collectors worldwide.": {
-      en: "At Labubu Wholesale, we design collectible art toys that blend playful creativity with exceptional craftsmanship. Our mission is to bring joy, originality, and long-term value to collectors worldwide.",
-      es: "En Labubu Wholesale, diseñamos juguetes de arte coleccionables que combinan creatividad lúdica con artesanía excepcional. Nuestra misión es brindar alegría, originalidad y valor a largo plazo a coleccionistas de todo el mundo.",
-      fr: "Chez Labubu Wholesale, nous concevons des jouets d'art de collection qui allient créativité ludique et savoir-faire exceptionnel. Notre mission est d'apporter joie, originalité et valeur à long terme aux collectionneurs du monde entier.",
-      de: "Bei Labubu Wholesale entwerfen wir Sammlerkunstspielzeuge, die verspielte Kreativität mit außergewöhnlichem Handwerk verbinden. Unsere Mission ist es, Freude, Originalität und langfristigen Wert für Sammler weltweit zu schaffen.",
-      ja: "ラブブ卸売では、遊び心のある創造性と卓越した職人技を融合したコレクタブルアートトイをデザインしています。私たちの使命は、世界中のコレクターに喜び、独創性、長期的な価値をもたらすことです。",
-      ko: "라부부 도매에서는 장난스러운 창의성과 뛰어난 장인정신을 결합한 수집용 아트 토이를 디자인합니다. 우리의 미션은 전 세계 수집가들에게 기쁨, 독창성, 장기적인 가치를 제공하는 것입니다."
+    "At Poker Kit, we manufacture and supply premium poker kits and accessories for B2B buyers. Our mission is to help distributors, retailers, and promotional partners launch reliable product lines with OEM/ODM customization, consistent quality control, and dependable delivery.": {
+      en: "At Poker Kit, we manufacture and supply premium poker kits and accessories for B2B buyers. Our mission is to help distributors, retailers, and promotional partners launch reliable product lines with OEM/ODM customization, consistent quality control, and dependable delivery.",
+      es: "En Poker Kit, fabricamos y suministramos kits de póker y accesorios premium para compradores B2B. Nuestra misión es ayudar a distribuidores, minoristas y socios promocionales a lanzar líneas de productos fiables con personalización OEM/ODM, control de calidad consistente y entregas confiables.",
+      fr: "Chez Poker Kit, nous fabriquons et fournissons des kits de poker et des accessoires haut de gamme pour les acheteurs B2B. Notre mission est d'aider les distributeurs, détaillants et partenaires promotionnels à lancer des gammes fiables grâce à la personnalisation OEM/ODM, un contrôle qualité constant et une livraison fiable.",
+      de: "Bei Poker Kit fertigen und liefern wir hochwertige Poker-Kits und Zubehör für B2B-Käufer. Unsere Mission ist es, Distributoren, Händlern und Promotion-Partnern zu helfen, zuverlässige Produktlinien mit OEM/ODM-Anpassung, konsistenter Qualitätskontrolle und verlässlicher Lieferung aufzubauen.",
+      ja: "Poker Kit では、B2B 向けに高品質なポーカーキットとアクセサリーを製造・供給しています。私たちの使命は、ディストリビューター、リテーラー、プロモーションパートナーが OEM/ODM カスタマイズ、安定した品質管理、確実な納品で信頼できる商品ラインを立ち上げられるよう支援することです。",
+      ko: "Poker Kit은 B2B 바이어를 위한 프리미엄 포커 키트 및 액세서리를 제조·공급합니다. 우리의 미션은 유통업체, 리테일러, 프로모션 파트너가 OEM/ODM 맞춤화, 일관된 품질 관리, 신뢰할 수 있는 납기를 통해 안정적인 제품 라인을 출시할 수 있도록 돕는 것입니다."
     },
     "Efficient Production: Our factory is equipped with advanced machinery and smart technology, combining automated cutting and high-tech intelligent systems. With rapid response capabilities and scalable production, we ensure highly efficient and precise processes, guaranteeing timely and reliable delivery.": {
       en: "Efficient Production: Our factory is equipped with advanced machinery and smart technology, combining automated cutting and high-tech intelligent systems. With rapid response capabilities and scalable production, we ensure highly efficient and precise processes, guaranteeing timely and reliable delivery.",
@@ -126,7 +126,7 @@ export default function AboutClient({ data = about }) {
       "@type": "ListItem",
       "position": 2,
       "name": globalTranslations.nav?.about || translatedData.header.title,
-      "item": `${basic.seo.url}/about`
+      "item": `${basic.seo.url}/about/`
     }]
   };
 

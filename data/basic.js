@@ -24,8 +24,8 @@ export const basic = {
       { label: "Contact", href: "/contact/" }
     ],
     mobileMenu: [
-      { label: "Privacy", href: "/privacy-policy" },
-      { label: "Terms", href: "/terms-of-service" }
+      { label: "Privacy", href: "/privacy-policy/" },
+      { label: "Terms", href: "/terms-of-service/" }
     ]
   },
   cta: {

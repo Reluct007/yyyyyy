@@ -207,7 +207,7 @@ export default async function ProductPage({ params }) {
 
           <div className="flex flex-col gap-2">
             <h2 className="text-xl font-semibold lg:text-2xl">{translations.product?.recommended || "Recommended Products"}</h2>
-            <p className="max-w-4xl text-muted-foreground text-base">Discover more premium designer collectibles.</p>
+            <p className="max-w-4xl text-muted-foreground text-base">Discover more poker products and accessories.</p>
           </div>
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {relatedProducts.map((item, index) => (
@@ -218,7 +218,7 @@ export default async function ProductPage({ params }) {
                   </Link>
                   <Badge variant="outline" className="absolute left-5 top-5 bg-primary-foreground">
                     <Link
-                      href={`${urlPrefix}/collection/${slugify(item.category, { lower: true, strict: true })}`}
+                      href={`${urlPrefix}/collection/${slugify(item.category, { lower: true, strict: true })}/`}
                       aria-label={`Browse ${item.category} products`}
                     >
                       {item.category}

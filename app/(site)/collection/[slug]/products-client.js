@@ -127,10 +127,26 @@ function ProductsContent({ params, page = 1 }) {
     (_, i) => startPage + i
   );
 
+  const rootUrl = basic.seo.url.replace(/\/$/, "");
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": productsPage.map((item, index) => {
+      const productSlug = item.id || slugify(item.title, { lower: true, strict: true });
+      return {
+        "@type": "ListItem",
+        "position": startIndex + index + 1,
+        "name": item.title,
+        "url": `${rootUrl}/product/${productSlug}/`,
+      };
+    }),
+  };
+
   return (
     <>
       {/* Structured Data */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
 
       {/* Banner Header */}
       <Header data={header} />

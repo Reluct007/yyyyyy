@@ -3,62 +3,62 @@ import { Code, Infinity, Lock, MessageCircle, Text, Upload } from 'lucide-react'
 export const about = {
   header: {
     title: "About Us",
-    description: "At Labubu Wholesale, we design collectible art toys that blend playful creativity with exceptional craftsmanship. Our mission is to bring joy, originality, and long-term value to collectors worldwide.",
+    description: "At Poker Kit, we manufacture and supply premium poker kits and accessories for B2B buyers. Our mission is to help distributors, retailers, and promotional partners launch reliable product lines with OEM/ODM customization, consistent quality control, and dependable delivery.",
     image: "/about/1.webp",
     features: [
-      "Efficient Production: Our factory is equipped with advanced machinery and smart technology, combining automated cutting and high-tech intelligent systems. With rapid response capabilities and scalable production, we ensure highly efficient and precise processes, guaranteeing timely and reliable delivery.",
-      "Premium Quality: Each piece is crafted with precision and made to the highest standards, ensuring lasting durability and detail.",
-      "Collector-Focused: We create with collectors in mind, delivering products that enrich collections and elevate the ownership experience.",
-      "Innovative Design: Through limited editions and exclusive collaborations, we introduce fresh ideas that set new trends in the art toy industry.",
-      "Sustainable Commitment: We embrace eco-conscious materials and responsible production to reduce environmental impact while maintaining quality."
+      "Efficient Production: Scalable manufacturing capacity and standardized workflows to support wholesale programs and repeat orders.",
+      "Quality Assurance: Tight material selection and QC checkpoints to ensure consistent specs across bulk shipments.",
+      "OEM/ODM Ready: Custom logo printing, packaging options, and private-label support for different sales channels.",
+      "Business-First Packaging: Export-friendly packing and labeling aligned with retailer and distributor requirements.",
+      "Reliable Delivery: Clear lead times and logistics coordination to help you hit launch and replenishment timelines."
     ]
   },
   intro: {
     title: "Our Story",
     image: "/about/3.webp",
     descriptions: [
-      "Founded in 2023, we have adhered to a customer-first philosophy, carefully crafting every product and earning the trust of a growing global client base.",
-      "Our dedicated R&D team drives continuous innovation in both technology and design, ensuring stable quality and setting new benchmarks for the industry.",
-      "From material selection to final inspection, we enforce strict quality control standards at every stage of production.",
-      "Our pursuit of excellence has been recognized with multiple industry awards and certifications, underscoring our commitment to quality and innovation."
+      "We focus on practical, sellable poker products built for wholesale and long-term supply relationships.",
+      "Our team iterates on materials, finishes, and packaging to meet retailer expectations and event-grade durability.",
+      "From incoming material checks to final inspection, we keep quality control measurable and repeatable.",
+      "We work with partners worldwide and continuously refine our processes to improve consistency and lead time."
     ],
     features: [
-      "Customer-centric approach with 24/7 support.",
-      "Industry-leading product quality and innovation.",
-      "Sustainable and eco-friendly practices.",
-      "Comprehensive after-sales service."
+      "B2B-first communication and fast turnaround.",
+      "Stable specs and repeatable quality for reorder confidence.",
+      "OEM/ODM support for branding and packaging.",
+      "After-sales support for replacements and issues."
     ]
   },
   features: [
     {
       icon: <Lock className="h-5" />,
-      title: "100% Secure",
-      description: "Our platform employs industry-leading security measures and encryption protocols to ensure your data remains completely protected and private at all times."
+      title: "Quality-Controlled",
+      description: "Standardized QC checks help keep product specs consistent across bulk production runs."
     },
     {
       icon: <MessageCircle className="h-5" />,
-      title: "24/7 Support",
-      description: "Our dedicated support team is available around the clock to assist you with any questions or issues, ensuring you always have the help you need when you need it."
+      title: "Responsive Support",
+      description: "Clear communication for sampling, pricing, production updates, and logistics coordination."
     },
     {
       icon: <Infinity className="h-5" />,
-      title: "Unlimited Access",
-      description: "Enjoy unrestricted access to all our features and resources without any limitations, allowing you to fully utilize our platform's capabilities at your own pace."
+      title: "Stable Supply",
+      description: "Built for long-term wholesale partnerships with repeatable specs and dependable replenishment."
     },
     {
       icon: <Text className="h-5" />,
-      title: "Easy to Use",
-      description: "We've designed our interface to be intuitive and user-friendly, making it simple for anyone to navigate and utilize our platform's powerful features effectively."
+      title: "Clear Specs",
+      description: "Straightforward product specs and packaging options to reduce back-and-forth and speed up decisions."
     },
     {
       icon: <Code className="h-5" />,
-      title: "Driven by Efficiency",
-      description: "With streamlined processes and advanced logistics, we ensure fast turnaround and on-time delivery every time."
+      title: "OEM/ODM Capable",
+      description: "Logo printing, packaging customization, and private-label options for your brand and channel."
     },
     {
       icon: <Upload className="h-5" />,
-      title: 'Always Up to Date',
-      description: "We continuously update our platform with the latest features and security patches, ensuring you always have access to the most current and reliable technology."
+      title: "Fast Sampling",
+      description: "Sampling and iteration support to validate materials, finishes, and packaging before mass production."
     }
   ],
   gallery: [
@@ -83,20 +83,20 @@ export const about = {
     {
       name: "Michael Lee",
       image: "/about/r3.webp",
-      title: "Founder of PlayCollect Studio",
-      description: "Partnering with this factory has been an excellent decision. Their attention to detail and consistent quality have made our product line stand out in the market."
+      title: "Wholesale Buyer",
+      description: "Consistent specs and reliable packing made it easy for us to scale wholesale orders without quality surprises."
     },
     {
       name: "Laura Chen",
       image: "/about/r2.webp",
-      title: "Purchasing Director at Global Merch Group",
-      description: "From material selection to final packaging, every step reflects professionalism. Working with them gives us confidence and peace of mind."
+      title: "Purchasing Director",
+      description: "Sampling and communication were efficient. We aligned on packaging quickly and hit our delivery window."
     },
     {
       name: "Emily Carter",
       image: "/about/r1.webp",
-      title: "Operations Manager at ToyVerse Ltd",
-      description: "The team’s ability to deliver large orders on time, without compromising quality, we’ve been able to scale faster and build stronger trust with our customers."
+      title: "Operations Manager",
+      description: "Lead times and QC were predictable. That helped us plan launches and replenishment with confidence."
     }
   ]
 };

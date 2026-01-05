@@ -47,9 +47,43 @@ export async function generateMetadata({ params }) {
 export default function FAQPage({ params }) {
   const { locale } = params;
   const content = getContent('faq', locale);
+  const faqItems = Array.from(
+    content.content.matchAll(/<h3>(.*?)<\/h3>\s*<p>(.*?)<\/p>/gis)
+  ).map((match) => ({
+    question: match[1],
+    answer: match[2],
+  }));
+
+  const stripTags = (html) =>
+    String(html || '')
+      .replace(/<[^>]*>/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+  const faqJsonLd =
+    faqItems.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": faqItems.map((item) => ({
+            "@type": "Question",
+            "name": stripTags(item.question),
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": stripTags(item.answer),
+            },
+          })),
+        }
+      : null;
 
   return (
     <div className="container mx-auto px-4 py-12">
+      {faqJsonLd ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      ) : null}
       <h1 className="text-4xl font-bold mb-8">{content.title || 'Frequently Asked Questions'}</h1>
       <div className="prose max-w-4xl" dangerouslySetInnerHTML={{ __html: content.content }} />
     </div>
