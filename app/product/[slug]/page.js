@@ -108,12 +108,12 @@ export default function ProductPage({ params }) {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": ROOT_URL
+      "item": `${ROOT_URL}/`
     }, {
       "@type": "ListItem",
       "position": 2,
-      "name": "Products",
-      "item": `${ROOT_URL}/products/`
+      "name": "Collection",
+      "item": `${ROOT_URL}/collection/`
     }, {
       "@type": "ListItem",
       "position": 3,
@@ -131,11 +131,6 @@ export default function ProductPage({ params }) {
     "brand": {
       "@type": "Brand",
       "name": basic.info.brand
-    },
-    "offers": {
-      "@type": "Offer",
-      "availability": "https://schema.org/InStock",
-      "priceCurrency": "USD",
     },
     "url": `${ROOT_URL}/product/${productId}/`
   };
@@ -218,7 +213,7 @@ export default function ProductPage({ params }) {
                     />
                   </Link>
                   <Badge variant="outline" className="absolute left-5 top-5 bg-primary-foreground">
-                    <Link href={`/products/${slugify(item.category, { lower: true, strict: true })}/`}>
+                    <Link href={`/collection/${slugify(item.category, { lower: true, strict: true })}/`}>
                       {item.category}
                     </Link>
                   </Badge>

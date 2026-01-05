@@ -25,8 +25,8 @@ export async function generateMetadata({ params }) {
   };
 
   const canonicalUrl = locale === 'en' 
-    ? ROOT_URL 
-    : `${ROOT_URL}/${locale}`;
+    ? `${ROOT_URL}/` 
+    : `${ROOT_URL}/${locale}/`;
   
   return {
     title,
@@ -38,13 +38,13 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': ROOT_URL,
-        'es': `${ROOT_URL}/es`,
-        'fr': `${ROOT_URL}/fr`,
-        'de': `${ROOT_URL}/de`,
-        'ja': `${ROOT_URL}/ja`,
-        'ko': `${ROOT_URL}/ko`,
-        'x-default': ROOT_URL,
+        'en': `${ROOT_URL}/`,
+        'es': `${ROOT_URL}/es/`,
+        'fr': `${ROOT_URL}/fr/`,
+        'de': `${ROOT_URL}/de/`,
+        'ja': `${ROOT_URL}/ja/`,
+        'ko': `${ROOT_URL}/ko/`,
+        'x-default': `${ROOT_URL}/`,
       },
     },
     openGraph: {
@@ -80,8 +80,14 @@ export default function LocaleLayout({ children, params }) {
     notFound();
   }
 
+  // 动态设置 html lang 属性
   return (
-    <LanguageProvider>
+    <LanguageProvider initialLocale={locale}>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `document.documentElement.lang = "${locale}";`
+        }}
+      />
       {children}
     </LanguageProvider>
   );

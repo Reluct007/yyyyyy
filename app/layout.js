@@ -38,21 +38,21 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: basic.seo.url,
+    canonical: `${basic.seo.url}/`,
     languages: {
-      'en': basic.seo.url,
-      'es': `${basic.seo.url}/es`,
-      'fr': `${basic.seo.url}/fr`,
-      'de': `${basic.seo.url}/de`,
-      'ja': `${basic.seo.url}/ja`,
-      'ko': `${basic.seo.url}/ko`,
-      'x-default': basic.seo.url,
+      'en': `${basic.seo.url}/`,
+      'es': `${basic.seo.url}/es/`,
+      'fr': `${basic.seo.url}/fr/`,
+      'de': `${basic.seo.url}/de/`,
+      'ja': `${basic.seo.url}/ja/`,
+      'ko': `${basic.seo.url}/ko/`,
+      'x-default': `${basic.seo.url}/`,
     },
   },
   openGraph: {
     title: basic.seo.title,
     description: basic.seo.description,
-    url: basic.seo.url,
+    url: `${basic.seo.url}/`,
     siteName: basic.info.brand,
     images: [
       {
@@ -86,7 +86,7 @@ export default function RootLayout({ children }) {
       "@type": "ContactPoint",
       "contactType": "customer service",
       "email": basic.info.email,
-      "url": `${basic.seo.url}/contact`
+      "url": `${basic.seo.url}/contact/`
     },
     "sameAs": [basic.seo.url],
   };
@@ -96,12 +96,7 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": basic.info.brand,
-    "url": basic.seo.url,
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": `${basic.seo.url}/products?q={search_term_string}`,
-      "query-input": "required name=search_term_string"
-    }
+    "url": `${basic.seo.url}/`
   };
 
   return (
