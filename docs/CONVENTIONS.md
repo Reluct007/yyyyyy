@@ -7,6 +7,7 @@
 - 项目概览与本地开发：`README.md`
 - 部署与环境变量：`DEPLOY.md`
 - Workers（API）：`workers/README.md`
+- SEO 规范与维护：`docs/SEO.md`
 
 ## 必跑命令（本地/CI 对齐）
 
