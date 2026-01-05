@@ -1,13 +1,17 @@
 // Static content for policy pages - no file system access needed
+import { basic } from "@/data/basic";
+
+const BRAND_NAME = basic.info.brand;
+const CONTACT_EMAIL = basic.info.email;
+
 export const privacyContent = {
   en: {
     title: "Privacy Policy",
     content: `
-      <h1>Privacy Policy</h1>
       <p>Last updated: December 16, 2025</p>
       
       <h2>1. Introduction</h2>
-      <p>Welcome to Labubu Wholesale. We are committed to protecting your personal information and your right to privacy.</p>
+      <p>Welcome to ${BRAND_NAME}. We are committed to protecting your personal information and your right to privacy.</p>
       
       <h2>2. Information We Collect</h2>
       <p>We collect personal information that you voluntarily provide to us when you register on the website, express an interest in obtaining information about us or our products and services, or otherwise when you contact us.</p>
@@ -28,11 +32,10 @@ export const privacyContent = {
   es: {
     title: "Política de Privacidad",
     content: `
-      <h1>Política de Privacidad</h1>
       <p>Última actualización: 16 de diciembre de 2025</p>
       
       <h2>1. Introducción</h2>
-      <p>Bienvenido a Labubu Wholesale. Nos comprometemos a proteger su información personal y su derecho a la privacidad.</p>
+      <p>Bienvenido a ${BRAND_NAME}. Nos comprometemos a proteger su información personal y su derecho a la privacidad.</p>
       
       <h2>2. Información que Recopilamos</h2>
       <p>Recopilamos información personal que usted nos proporciona voluntariamente cuando se registra en el sitio web, expresa interés en obtener información sobre nosotros o nuestros productos y servicios, o de otra manera cuando se pone en contacto con nosotros.</p>
@@ -53,11 +56,10 @@ export const privacyContent = {
   fr: {
     title: "Politique de Confidentialité",
     content: `
-      <h1>Politique de Confidentialité</h1>
       <p>Dernière mise à jour: 16 décembre 2025</p>
       
       <h2>1. Introduction</h2>
-      <p>Bienvenue chez Labubu Wholesale. Nous nous engageons à protéger vos informations personnelles et votre droit à la vie privée.</p>
+      <p>Bienvenue chez ${BRAND_NAME}. Nous nous engageons à protéger vos informations personnelles et votre droit à la vie privée.</p>
       
       <h2>2. Informations que Nous Collectons</h2>
       <p>Nous collectons les informations personnelles que vous nous fournissez volontairement lorsque vous vous inscrivez sur le site web, exprimez un intérêt pour obtenir des informations sur nous ou nos produits et services, ou autrement lorsque vous nous contactez.</p>
@@ -78,11 +80,10 @@ export const privacyContent = {
   de: {
     title: "Datenschutzrichtlinie",
     content: `
-      <h1>Datenschutzrichtlinie</h1>
       <p>Letzte Aktualisierung: 16. Dezember 2025</p>
       
       <h2>1. Einführung</h2>
-      <p>Willkommen bei Labubu Wholesale. Wir verpflichten uns, Ihre persönlichen Daten und Ihr Recht auf Privatsphäre zu schützen.</p>
+      <p>Willkommen bei ${BRAND_NAME}. Wir verpflichten uns, Ihre persönlichen Daten und Ihr Recht auf Privatsphäre zu schützen.</p>
       
       <h2>2. Informationen, die Wir Sammeln</h2>
       <p>Wir sammeln persönliche Informationen, die Sie uns freiwillig zur Verfügung stellen, wenn Sie sich auf der Website registrieren, Interesse daran bekunden, Informationen über uns oder unsere Produkte und Dienstleistungen zu erhalten, oder anderweitig Kontakt mit uns aufnehmen.</p>
@@ -103,11 +104,10 @@ export const privacyContent = {
   ja: {
     title: "プライバシーポリシー",
     content: `
-      <h1>プライバシーポリシー</h1>
       <p>最終更新日: 2025年12月16日</p>
       
       <h2>1. はじめに</h2>
-      <p>Labubu Wholesaleへようこそ。私たちはお客様の個人情報とプライバシーの権利を保護することをお約束します。</p>
+      <p>${BRAND_NAME}へようこそ。私たちはお客様の個人情報とプライバシーの権利を保護することをお約束します。</p>
       
       <h2>2. 収集する情報</h2>
       <p>ウェブサイトに登録する際、当社または当社の製品やサービスに関する情報を入手することに関心を示す際、またはその他の方法で当社に連絡する際に、お客様が自発的に提供する個人情報を収集します。</p>
@@ -128,11 +128,10 @@ export const privacyContent = {
   ko: {
     title: "개인정보 처리방침",
     content: `
-      <h1>개인정보 처리방침</h1>
       <p>최종 업데이트: 2025년 12월 16일</p>
       
       <h2>1. 소개</h2>
-      <p>Labubu Wholesale에 오신 것을 환영합니다. 우리는 귀하의 개인 정보와 개인 정보 보호 권리를 보호하기 위해 최선을 다하고 있습니다.</p>
+      <p>${BRAND_NAME}에 오신 것을 환영합니다. 우리는 귀하의 개인 정보와 개인 정보 보호 권리를 보호하기 위해 최선을 다하고 있습니다.</p>
       
       <h2>2. 수집하는 정보</h2>
       <p>웹사이트에 등록하거나, 당사 또는 당사의 제품 및 서비스에 대한 정보를 얻는 데 관심을 표명하거나, 기타 방법으로 당사에 연락할 때 자발적으로 제공하는 개인 정보를 수집합니다.</p>
@@ -156,115 +155,109 @@ export const termsContent = {
   en: {
     title: "Terms of Service",
     content: `
-      <h1>Terms of Service</h1>
       <p>Last updated: December 16, 2025</p>
       
       <h2>1. Agreement to Terms</h2>
       <p>By accessing our website, you agree to be bound by these Terms of Service and all applicable laws and regulations.</p>
       
       <h2>2. Use License</h2>
-      <p>Permission is granted to temporarily download one copy of the materials on Labubu Wholesale's website for personal, non-commercial transitory viewing only.</p>
+      <p>Permission is granted to temporarily download one copy of the materials on ${BRAND_NAME}'s website for personal, non-commercial transitory viewing only.</p>
       
       <h2>3. Disclaimer</h2>
-      <p>The materials on Labubu Wholesale's website are provided on an 'as is' basis. Labubu Wholesale makes no warranties, expressed or implied.</p>
+      <p>The materials on ${BRAND_NAME}'s website are provided on an 'as is' basis. ${BRAND_NAME} makes no warranties, expressed or implied.</p>
       
       <h2>4. Limitations</h2>
-      <p>In no event shall Labubu Wholesale or its suppliers be liable for any damages arising out of the use or inability to use the materials on our website.</p>
+      <p>In no event shall ${BRAND_NAME} or its suppliers be liable for any damages arising out of the use or inability to use the materials on our website.</p>
     `
   },
   es: {
     title: "Términos de Servicio",
     content: `
-      <h1>Términos de Servicio</h1>
       <p>Última actualización: 16 de diciembre de 2025</p>
       
       <h2>1. Acuerdo con los Términos</h2>
       <p>Al acceder a nuestro sitio web, usted acepta estar sujeto a estos Términos de Servicio y todas las leyes y regulaciones aplicables.</p>
       
       <h2>2. Licencia de Uso</h2>
-      <p>Se otorga permiso para descargar temporalmente una copia de los materiales en el sitio web de Labubu Wholesale solo para visualización personal y no comercial.</p>
+      <p>Se otorga permiso para descargar temporalmente una copia de los materiales en el sitio web de ${BRAND_NAME} solo para visualización personal y no comercial.</p>
       
       <h2>3. Descargo de Responsabilidad</h2>
-      <p>Los materiales en el sitio web de Labubu Wholesale se proporcionan 'tal cual'. Labubu Wholesale no ofrece garantías, expresas o implícitas.</p>
+      <p>Los materiales en el sitio web de ${BRAND_NAME} se proporcionan 'tal cual'. ${BRAND_NAME} no ofrece garantías, expresas o implícitas.</p>
       
       <h2>4. Limitaciones</h2>
-      <p>En ningún caso Labubu Wholesale o sus proveedores serán responsables de ningún daño que surja del uso o la imposibilidad de usar los materiales en nuestro sitio web.</p>
+      <p>En ningún caso ${BRAND_NAME} o sus proveedores serán responsables de ningún daño que surja del uso o la imposibilidad de usar los materiales en nuestro sitio web.</p>
     `
   },
   fr: {
     title: "Conditions d'Utilisation",
     content: `
-      <h1>Conditions d'Utilisation</h1>
       <p>Dernière mise à jour: 16 décembre 2025</p>
       
       <h2>1. Acceptation des Conditions</h2>
       <p>En accédant à notre site web, vous acceptez d'être lié par ces Conditions d'Utilisation et toutes les lois et réglementations applicables.</p>
       
       <h2>2. Licence d'Utilisation</h2>
-      <p>L'autorisation est accordée de télécharger temporairement une copie des matériaux sur le site web de Labubu Wholesale pour une visualisation personnelle et non commerciale uniquement.</p>
+      <p>L'autorisation est accordée de télécharger temporairement une copie des matériaux sur le site web de ${BRAND_NAME} pour une visualisation personnelle et non commerciale uniquement.</p>
       
       <h2>3. Clause de Non-Responsabilité</h2>
-      <p>Les matériaux sur le site web de Labubu Wholesale sont fournis 'tels quels'. Labubu Wholesale ne fait aucune garantie, expresse ou implicite.</p>
+      <p>Les matériaux sur le site web de ${BRAND_NAME} sont fournis 'tels quels'. ${BRAND_NAME} ne fait aucune garantie, expresse ou implicite.</p>
       
       <h2>4. Limitations</h2>
-      <p>En aucun cas Labubu Wholesale ou ses fournisseurs ne seront responsables de tout dommage découlant de l'utilisation ou de l'impossibilité d'utiliser les matériaux sur notre site web.</p>
+      <p>En aucun cas ${BRAND_NAME} ou ses fournisseurs ne seront responsables de tout dommage découlant de l'utilisation ou de l'impossibilité d'utiliser les matériaux sur notre site web.</p>
     `
   },
   de: {
     title: "Nutzungsbedingungen",
     content: `
-      <h1>Nutzungsbedingungen</h1>
       <p>Letzte Aktualisierung: 16. Dezember 2025</p>
       
       <h2>1. Zustimmung zu den Bedingungen</h2>
       <p>Durch den Zugriff auf unsere Website erklären Sie sich mit diesen Nutzungsbedingungen und allen geltenden Gesetzen und Vorschriften einverstanden.</p>
       
       <h2>2. Nutzungslizenz</h2>
-      <p>Die Erlaubnis wird erteilt, vorübergehend eine Kopie der Materialien auf der Website von Labubu Wholesale nur für die persönliche, nicht-kommerzielle Ansicht herunterzuladen.</p>
+      <p>Die Erlaubnis wird erteilt, vorübergehend eine Kopie der Materialien auf der Website von ${BRAND_NAME} nur für die persönliche, nicht-kommerzielle Ansicht herunterzuladen.</p>
       
       <h2>3. Haftungsausschluss</h2>
-      <p>Die Materialien auf der Website von Labubu Wholesale werden 'wie besehen' bereitgestellt. Labubu Wholesale gibt keine Garantien, weder ausdrücklich noch stillschweigend.</p>
+      <p>Die Materialien auf der Website von ${BRAND_NAME} werden 'wie besehen' bereitgestellt. ${BRAND_NAME} gibt keine Garantien, weder ausdrücklich noch stillschweigend.</p>
       
       <h2>4. Einschränkungen</h2>
-      <p>In keinem Fall haften Labubu Wholesale oder seine Lieferanten für Schäden, die sich aus der Nutzung oder der Unmöglichkeit der Nutzung der Materialien auf unserer Website ergeben.</p>
+      <p>In keinem Fall haften ${BRAND_NAME} oder seine Lieferanten für Schäden, die sich aus der Nutzung oder der Unmöglichkeit der Nutzung der Materialien auf unserer Website ergeben.</p>
     `
   },
   ja: {
     title: "利用規約",
     content: `
-      <h1>利用規約</h1>
       <p>最終更新日: 2025年12月16日</p>
       
       <h2>1. 規約への同意</h2>
       <p>当社のウェブサイトにアクセスすることにより、お客様はこれらの利用規約およびすべての適用法規に拘束されることに同意したものとみなされます。</p>
       
       <h2>2. 使用ライセンス</h2>
-      <p>Labubu Wholesaleのウェブサイト上の資料の一時的なダウンロードは、個人的かつ非商業的な一時的な閲覧のみを目的として許可されています。</p>
+      <p>${BRAND_NAME}のウェブサイト上の資料の一時的なダウンロードは、個人的かつ非商業的な一時的な閲覧のみを目的として許可されています。</p>
       
       <h2>3. 免責事項</h2>
-      <p>Labubu Wholesaleのウェブサイト上の資料は「現状のまま」提供されます。Labubu Wholesaleは明示的または黙示的な保証を行いません。</p>
+      <p>${BRAND_NAME}のウェブサイト上の資料は「現状のまま」提供されます。${BRAND_NAME}は明示的または黙示的な保証を行いません。</p>
       
       <h2>4. 制限事項</h2>
-      <p>いかなる場合も、Labubu Wholesaleまたはそのサプライヤーは、当社のウェブサイト上の資料の使用または使用不能から生じるいかなる損害についても責任を負いません。</p>
+      <p>いかなる場合も、${BRAND_NAME}またはそのサプライヤーは、当社のウェブサイト上の資料の使用または使用不能から生じるいかなる損害についても責任を負いません。</p>
     `
   },
   ko: {
     title: "이용약관",
     content: `
-      <h1>이용약관</h1>
       <p>최종 업데이트: 2025년 12월 16일</p>
       
       <h2>1. 약관 동의</h2>
       <p>당사 웹사이트에 접속함으로써 귀하는 본 이용약관 및 모든 관련 법률 및 규정에 구속되는 것에 동의합니다.</p>
       
       <h2>2. 사용 라이선스</h2>
-      <p>Labubu Wholesale 웹사이트의 자료를 개인적이고 비상업적인 일시적 열람 목적으로만 임시로 다운로드할 수 있는 권한이 부여됩니다.</p>
+      <p>${BRAND_NAME} 웹사이트의 자료를 개인적이고 비상업적인 일시적 열람 목적으로만 임시로 다운로드할 수 있는 권한이 부여됩니다.</p>
       
       <h2>3. 면책 조항</h2>
-      <p>Labubu Wholesale 웹사이트의 자료는 '있는 그대로' 제공됩니다. Labubu Wholesale은 명시적이거나 묵시적인 보증을 하지 않습니다.</p>
+      <p>${BRAND_NAME} 웹사이트의 자료는 '있는 그대로' 제공됩니다. ${BRAND_NAME}은 명시적이거나 묵시적인 보증을 하지 않습니다.</p>
       
       <h2>4. 제한 사항</h2>
-      <p>어떠한 경우에도 Labubu Wholesale 또는 그 공급업체는 당사 웹사이트의 자료 사용 또는 사용 불능으로 인해 발생하는 손해에 대해 책임을 지지 않습니다.</p>
+      <p>어떠한 경우에도 ${BRAND_NAME} 또는 그 공급업체는 당사 웹사이트의 자료 사용 또는 사용 불능으로 인해 발생하는 손해에 대해 책임을 지지 않습니다.</p>
     `
   }
 };
@@ -273,15 +266,13 @@ export const faqContent = {
   en: {
     title: "Frequently Asked Questions",
     content: `
-      <h1>Frequently Asked Questions</h1>
-      
       <h2>General Questions</h2>
       
-      <h3>What is Labubu Wholesale?</h3>
-      <p>Labubu Wholesale is a premium supplier of designer collectibles and custom toys for distributors and retailers worldwide.</p>
+      <h3>What is ${BRAND_NAME}?</h3>
+      <p>${BRAND_NAME} is a B2B supplier of premium poker kits and accessories for wholesale buyers. We support bulk orders, OEM/ODM customization, and private label packaging.</p>
       
       <h3>How can I place an order?</h3>
-      <p>Please contact us through our contact form or email us directly at larry@pokerset.com with your requirements.</p>
+      <p>Please contact us through our contact form or email us directly at ${CONTACT_EMAIL} with your requirements.</p>
       
       <h3>What is the minimum order quantity?</h3>
       <p>Minimum order quantities vary by product. Please contact us for specific details.</p>
@@ -298,15 +289,13 @@ export const faqContent = {
   es: {
     title: "Preguntas Frecuentes",
     content: `
-      <h1>Preguntas Frecuentes</h1>
-      
       <h2>Preguntas Generales</h2>
       
-      <h3>¿Qué es Labubu Wholesale?</h3>
-      <p>Labubu Wholesale es un proveedor premium de coleccionables de diseñador y juguetes personalizados para distribuidores y minoristas en todo el mundo.</p>
+      <h3>¿Qué es ${BRAND_NAME}?</h3>
+      <p>${BRAND_NAME} es un proveedor B2B de kits de póker y accesorios para compradores mayoristas. Ofrecemos pedidos al por mayor, personalización OEM/ODM y empaque de marca privada.</p>
       
       <h3>¿Cómo puedo realizar un pedido?</h3>
-      <p>Por favor contáctenos a través de nuestro formulario de contacto o envíenos un correo electrónico directamente a larry@pokerset.com con sus requisitos.</p>
+      <p>Por favor contáctenos a través de nuestro formulario de contacto o envíenos un correo electrónico directamente a ${CONTACT_EMAIL} con sus requisitos.</p>
       
       <h3>¿Cuál es la cantidad mínima de pedido?</h3>
       <p>Las cantidades mínimas de pedido varían según el producto. Por favor contáctenos para obtener detalles específicos.</p>
@@ -323,15 +312,13 @@ export const faqContent = {
   fr: {
     title: "Questions Fréquemment Posées",
     content: `
-      <h1>Questions Fréquemment Posées</h1>
-      
       <h2>Questions Générales</h2>
       
-      <h3>Qu'est-ce que Labubu Wholesale?</h3>
-      <p>Labubu Wholesale est un fournisseur premium de figurines de designer et de jouets personnalisés pour les distributeurs et détaillants du monde entier.</p>
+      <h3>Qu'est-ce que ${BRAND_NAME}?</h3>
+      <p>${BRAND_NAME} est un fournisseur B2B de kits de poker et d'accessoires pour les acheteurs en gros. Nous prenons en charge les commandes en volume, la personnalisation OEM/ODM et les emballages en marque blanche.</p>
       
       <h3>Comment puis-je passer une commande?</h3>
-      <p>Veuillez nous contacter via notre formulaire de contact ou nous envoyer un e-mail directement à larry@pokerset.com avec vos besoins.</p>
+      <p>Veuillez nous contacter via notre formulaire de contact ou nous envoyer un e-mail directement à ${CONTACT_EMAIL} avec vos besoins.</p>
       
       <h3>Quelle est la quantité minimale de commande?</h3>
       <p>Les quantités minimales de commande varient selon le produit. Veuillez nous contacter pour des détails spécifiques.</p>
@@ -348,15 +335,13 @@ export const faqContent = {
   de: {
     title: "Häufig Gestellte Fragen",
     content: `
-      <h1>Häufig Gestellte Fragen</h1>
-      
       <h2>Allgemeine Fragen</h2>
       
-      <h3>Was ist Labubu Wholesale?</h3>
-      <p>Labubu Wholesale ist ein Premium-Anbieter von Designer-Sammlerstücken und maßgefertigten Spielzeugen für Händler und Einzelhändler weltweit.</p>
+      <h3>Was ist ${BRAND_NAME}?</h3>
+      <p>${BRAND_NAME} ist ein B2B-Lieferant für hochwertige Poker-Kits und Zubehör für Großhandelskunden. Wir unterstützen Großbestellungen, OEM/ODM-Anpassungen und Private-Label-Verpackungen.</p>
       
       <h3>Wie kann ich eine Bestellung aufgeben?</h3>
-      <p>Bitte kontaktieren Sie uns über unser Kontaktformular oder senden Sie uns direkt eine E-Mail an larry@pokerset.com mit Ihren Anforderungen.</p>
+      <p>Bitte kontaktieren Sie uns über unser Kontaktformular oder senden Sie uns direkt eine E-Mail an ${CONTACT_EMAIL} mit Ihren Anforderungen.</p>
       
       <h3>Was ist die Mindestbestellmenge?</h3>
       <p>Die Mindestbestellmengen variieren je nach Produkt. Bitte kontaktieren Sie uns für spezifische Details.</p>
@@ -373,15 +358,13 @@ export const faqContent = {
   ja: {
     title: "よくあるご質問",
     content: `
-      <h1>よくあるご質問</h1>
-      
       <h2>一般的な質問</h2>
       
-      <h3>Labubu Wholesaleとは何ですか？</h3>
-      <p>Labubu Wholesaleは、世界中のディストリビューターと小売店向けのデザイナーコレクタブルとカスタムトイのプレミアムサプライヤーです。</p>
+      <h3>${BRAND_NAME}とは何ですか？</h3>
+      <p>${BRAND_NAME}は、卸売バイヤー向けのポーカーキットおよび関連アクセサリーのB2Bサプライヤーです。大量発注、OEM/ODMカスタマイズ、プライベートラベル包装に対応しています。</p>
       
       <h3>注文するにはどうすればよいですか？</h3>
-      <p>お問い合わせフォームからご連絡いただくか、larry@pokerset.comまで直接メールでご要望をお送りください。</p>
+      <p>お問い合わせフォームからご連絡いただくか、${CONTACT_EMAIL}まで直接メールでご要望をお送りください。</p>
       
       <h3>最小注文数量はいくつですか？</h3>
       <p>最小注文数量は製品によって異なります。詳細についてはお問い合わせください。</p>
@@ -398,15 +381,13 @@ export const faqContent = {
   ko: {
     title: "자주 묻는 질문",
     content: `
-      <h1>자주 묻는 질문</h1>
-      
       <h2>일반 질문</h2>
       
-      <h3>Labubu Wholesale은 무엇인가요?</h3>
-      <p>Labubu Wholesale은 전 세계 유통업자와 소매업자를 위한 디자이너 컬렉터블 및 맞춤 토이의 프리미엄 공급업체입니다.</p>
+      <h3>${BRAND_NAME}은 무엇인가요?</h3>
+      <p>${BRAND_NAME}은 도매 구매자를 위한 프리미엄 포커 키트 및 액세서리 B2B 공급업체입니다. 대량 주문, OEM/ODM 맞춤 제작, 프라이빗 라벨 포장에 대응합니다.</p>
       
       <h3>주문은 어떻게 하나요?</h3>
-      <p>문의 양식을 통해 연락하시거나 larry@pokerset.com으로 직접 이메일을 보내주시면 됩니다.</p>
+      <p>문의 양식을 통해 연락하시거나 ${CONTACT_EMAIL}으로 직접 이메일을 보내주시면 됩니다.</p>
       
       <h3>최소 주문 수량은 얼마인가요?</h3>
       <p>최소 주문 수량은 제품에 따라 다릅니다. 자세한 내용은 문의해 주세요.</p>
@@ -426,7 +407,6 @@ export const shippingContent = {
   en: {
     title: "Shipping Policy",
     content: `
-      <h1>Shipping Policy</h1>
       <p>Last updated: December 16, 2025</p>
       
       <h2>Shipping Methods</h2>
@@ -445,7 +425,6 @@ export const shippingContent = {
   es: {
     title: "Política de Envío",
     content: `
-      <h1>Política de Envío</h1>
       <p>Última actualización: 16 de diciembre de 2025</p>
       
       <h2>Métodos de Envío</h2>
@@ -464,7 +443,6 @@ export const shippingContent = {
   fr: {
     title: "Politique d'Expédition",
     content: `
-      <h1>Politique d'Expédition</h1>
       <p>Dernière mise à jour: 16 décembre 2025</p>
       
       <h2>Méthodes d'Expédition</h2>
@@ -483,7 +461,6 @@ export const shippingContent = {
   de: {
     title: "Versandrichtlinie",
     content: `
-      <h1>Versandrichtlinie</h1>
       <p>Letzte Aktualisierung: 16. Dezember 2025</p>
       
       <h2>Versandmethoden</h2>
@@ -502,7 +479,6 @@ export const shippingContent = {
   ja: {
     title: "配送ポリシー",
     content: `
-      <h1>配送ポリシー</h1>
       <p>最終更新日: 2025年12月16日</p>
       
       <h2>配送方法</h2>
@@ -521,7 +497,6 @@ export const shippingContent = {
   ko: {
     title: "배송 정책",
     content: `
-      <h1>배송 정책</h1>
       <p>최종 업데이트: 2025년 12월 16일</p>
       
       <h2>배송 방법</h2>
@@ -543,14 +518,13 @@ export const returnContent = {
   en: {
     title: "Return Policy",
     content: `
-      <h1>Return Policy</h1>
       <p>Last updated: December 16, 2025</p>
       
       <h2>Return Eligibility</h2>
       <p>Items must be unused, in original packaging, and returned within 30 days of receipt.</p>
       
       <h2>Return Process</h2>
-      <p>Contact us at larry@pokerset.com to initiate a return. We will provide return instructions and address.</p>
+      <p>Contact us at ${CONTACT_EMAIL} to initiate a return. We will provide return instructions and address.</p>
       
       <h2>Refunds</h2>
       <p>Refunds will be processed within 7-10 business days after we receive the returned items.</p>
@@ -562,14 +536,13 @@ export const returnContent = {
   es: {
     title: "Política de Devolución",
     content: `
-      <h1>Política de Devolución</h1>
       <p>Última actualización: 16 de diciembre de 2025</p>
       
       <h2>Elegibilidad para Devolución</h2>
       <p>Los artículos deben estar sin usar, en su embalaje original y devolverse dentro de los 30 días posteriores a la recepción.</p>
       
       <h2>Proceso de Devolución</h2>
-      <p>Contáctenos en larry@pokerset.com para iniciar una devolución. Le proporcionaremos instrucciones y dirección de devolución.</p>
+      <p>Contáctenos en ${CONTACT_EMAIL} para iniciar una devolución. Le proporcionaremos instrucciones y dirección de devolución.</p>
       
       <h2>Reembolsos</h2>
       <p>Los reembolsos se procesarán dentro de 7-10 días hábiles después de que recibamos los artículos devueltos.</p>
@@ -581,14 +554,13 @@ export const returnContent = {
   fr: {
     title: "Politique de Retour",
     content: `
-      <h1>Politique de Retour</h1>
       <p>Dernière mise à jour: 16 décembre 2025</p>
       
       <h2>Éligibilité au Retour</h2>
       <p>Les articles doivent être inutilisés, dans leur emballage d'origine et retournés dans les 30 jours suivant la réception.</p>
       
       <h2>Processus de Retour</h2>
-      <p>Contactez-nous à larry@pokerset.com pour initier un retour. Nous fournirons des instructions et une adresse de retour.</p>
+      <p>Contactez-nous à ${CONTACT_EMAIL} pour initier un retour. Nous fournirons des instructions et une adresse de retour.</p>
       
       <h2>Remboursements</h2>
       <p>Les remboursements seront traités dans les 7-10 jours ouvrables après réception des articles retournés.</p>
@@ -600,14 +572,13 @@ export const returnContent = {
   de: {
     title: "Rückgabebedingungen",
     content: `
-      <h1>Rückgabebedingungen</h1>
       <p>Letzte Aktualisierung: 16. Dezember 2025</p>
       
       <h2>Rückgabeberechtigung</h2>
       <p>Artikel müssen unbenutzt, in Originalverpackung sein und innerhalb von 30 Tagen nach Erhalt zurückgegeben werden.</p>
       
       <h2>Rückgabeprozess</h2>
-      <p>Kontaktieren Sie uns unter larry@pokerset.com, um eine Rücksendung einzuleiten. Wir stellen Rücksendeanweisungen und Adresse bereit.</p>
+      <p>Kontaktieren Sie uns unter ${CONTACT_EMAIL}, um eine Rücksendung einzuleiten. Wir stellen Rücksendeanweisungen und Adresse bereit.</p>
       
       <h2>Rückerstattungen</h2>
       <p>Rückerstattungen werden innerhalb von 7-10 Werktagen nach Erhalt der zurückgesendeten Artikel bearbeitet.</p>
@@ -619,14 +590,13 @@ export const returnContent = {
   ja: {
     title: "返品ポリシー",
     content: `
-      <h1>返品ポリシー</h1>
       <p>最終更新日: 2025年12月16日</p>
       
       <h2>返品資格</h2>
       <p>商品は未使用で、元のパッケージに入っており、受領後30日以内に返品する必要があります。</p>
       
       <h2>返品プロセス</h2>
-      <p>返品を開始するには、larry@pokerset.comまでご連絡ください。返品の手順と住所をお知らせします。</p>
+      <p>返品を開始するには、${CONTACT_EMAIL}までご連絡ください。返品の手順と住所をお知らせします。</p>
       
       <h2>返金</h2>
       <p>返品された商品を受け取ってから7〜10営業日以内に返金が処理されます。</p>
@@ -638,14 +608,13 @@ export const returnContent = {
   ko: {
     title: "반품 정책",
     content: `
-      <h1>반품 정책</h1>
       <p>최종 업데이트: 2025년 12월 16일</p>
       
       <h2>반품 자격</h2>
       <p>상품은 미사용 상태여야 하며, 원래 포장 상태로 수령 후 30일 이내에 반품해야 합니다.</p>
       
       <h2>반품 프로세스</h2>
-      <p>반품을 시작하려면 larry@pokerset.com으로 문의하세요. 반품 지침과 주소를 제공해 드립니다.</p>
+      <p>반품을 시작하려면 ${CONTACT_EMAIL}으로 문의하세요. 반품 지침과 주소를 제공해 드립니다.</p>
       
       <h2>환불</h2>
       <p>반품된 상품을 받은 후 7-10 영업일 이내에 환불이 처리됩니다.</p>

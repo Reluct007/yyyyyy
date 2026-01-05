@@ -1,136 +1,106 @@
 export const home = {
   hero: {
-    "badge": "Welcome to Our Store",
+    "badge": "Wholesale Poker Kits",
     "image": "/home/Cover-image.webp",
-    "title": "Customized Labubu Wholesale",
-    "description": "Welcome to the World of Labubu – Where Art Meets Trend! Discover exclusive designer collectibles that bring charm, creativity, and style to your space."
+    "title": "Poker Kit Wholesale & Custom Poker Sets",
+    "description": "Premium poker kits for B2B — bulk wholesale, OEM/ODM customization, low MOQs, and fast lead times. Built for retailers, casinos, clubs, and promotional projects."
   },
   categories: {
     title: "Product Categories",
-    description: "Discover our diverse product categories and find the perfect match for you – from the latest fashion trends to the best Labubu deals, there's something for everyone!",
+    description: "Explore core product lines for wholesale and custom orders — poker sets, chips, tables, and essential accessories.",
     items: [
       {
-        badge: "Labubu",
-        image: "/home/1.webp",
-        title: "Labubu Collection",
-        slug: "/collection/labubu",
-        description: "LABUBU creates stylish, high-quality designer toys that blend art and trend culture. With careful craftsmanship and unique character design, each product is made to delight, collect, and inspire.",
+        badge: "Poker Equipment",
+        image: "/home/Customization.webp",
+        title: "Poker Equipment",
+        slug: "/collection/poker-equipment",
+        description: "Complete poker equipment collections for B2B buyers, including poker chip sets, card decks, accessories, and premium bundles.",
       },
       {
-        badge: "Dolls",
-        image: "/home/c.webp",
-        title: "Dolls Collection",
-        slug: "/collection/dolls",
-        description: "Dolls brings imagination to life with stylish, collectible figures that blend playful charm, artistic design, and timeless appeal—crafted to be loved, displayed, and desired."
-      },
-      {
-        badge: "Animals Toy",
+        badge: "Poker Chips",
         image: "/home/image.webp",
-        title: "Animals Toy Collection",
-        slug: "/collection/animals-toy",
-        description: "Animals Toy sparks wonder with adorable, collectible figures inspired by the wild—where playful design meets heartfelt charm, made to be treasured, shared, and displayed."
+        title: "Poker Chips",
+        slug: "/collection/poker-chips",
+        description: "High-quality poker chips engineered for smooth handling and casino-style gameplay. Available for wholesale and custom orders.",
+      },
+      {
+        badge: "Poker Table",
+        image: "/product/poker-table.webp",
+        title: "Poker Table",
+        slug: "/collection/poker-table",
+        description: "Professional poker tables for casinos, clubs, and premium home use — durable frames, quality felt, and ergonomic layouts.",
       }
     ]
   },
   "products": {
-    "title": "Our Products",
-    "description": "LABUBU creates stylish, high-quality designer toys that blend art and trend culture. With careful craftsmanship and unique character design, each product is made to delight, collect, and inspire.",
+    "title": "Featured Products",
+    "description": "Best-selling poker sets and accessories for distributors, retailers, and bulk purchasers.",
     "items": [
       {
-        "image": "/product/cute-clothes-fit-for-labubu-doll-1.png",
-        "title": "Cute Clothes Fit for LABUBU Doll",
-        "slug": "/product/cute-clothes-fit-for-labubu-doll",
-        "description": "Boost your business with our high-quality labubu doll clothes set, designed specifically for distributors, retailers, and bulk purchasers seeking to enhance their product offerings."
+        "image": "/product/81-9JQAmx5L.webp",
+        "title": "300-Piece Poker Set with Aluminum Case",
+        "slug": "/product/spin-master-300-piece-poker-set-with-aluminum-case-professional-chips",
+        "description": "A complete set with chips, cards, and accessories — ideal for wholesale and promotional gifting."
       },
       {
-        "image": "/product/wings-of-fortune-vinyl-plush-hanging-card-1.png",
-        "title": "Wings of Fortune Vinyl Plush Hanging Card",
-        "slug": "/product/wings-of-fortune-vinyl-plush-hanging-card",
-        "description": "Labubu manufacturing factory offers unique, high-quality vinyl plush toys designed for distributors and retailers looking to enhance their product lines."
+        "image": "/product/71R5LxH0g3L.webp",
+        "title": "500-Count Texas Hold'em Clay Chip Set",
+        "slug": "/product/500-count-texas-holdem-clay-poker-chip-set-with-aluminum-case",
+        "description": "Premium clay poker chips in an aluminum case — built for events, clubs, and retail bundles."
       },
       {
-        "image": "/product/tasty-macarons-vinyl-face-blind-box-1.png",
-        "title": "Tasty Macarons Vinyl Face Blind Box",
-        "slug": "/product/tasty-macarons-vinyl-face-blind-box",
-        "description": "Engage your customers with our premium vinyl face collectibles, perfect for retailers and distributors seeking unique, high-demand products that stimulate sales."
-      },
-      {
-        "image": "/product/the-monsters---have-a-seat-vinyl-plush-blind-box-1.png",
-        "title": "The Monsters - Have a Seat Vinyl Plush Blind Box",
-        "slug": "/product/the-monsters-have-a-seat-vinyl-plush-blind-box",
-        "description": "Elevate your retail offerings with our exclusive range of labubu plush collectibles, designed for business clients seeking unique, high-quality products that captivate and engage audiences."
-      },
-      {
-        "image": "/home/blind-box-figures,-the-monsters-coca-cola-series-vinyl-face-blind-box-1.webp",
-        "title": "Blind Box Figures, The Monsters COCA-COLA Series-Vinyl Face Blind Box",
-        "slug": "/product/blind-box-figures-the-monsters-coca-cola-series-vinyl-face-blind-box",
-        "description": "Enhance your retail offerings with our custom labubu figures, designed for businesses seeking unique collectible products to attract and engage customers."
-      },
-      {
-        "image": "/home/car-seat-for-dolls,-to-display-doll-toy-ornaments-decorations-accessories-1.webp",
-        "title": "Car Seat for Dolls, To Display Doll Toy Ornaments Decorations Accessories",
-        "slug": "/product/car-seat-for-dolls-to-display-doll-toy-ornaments-decorations-accessories",
-        "description": "Unlock the potential in your inventory with our premium doll safety seats, designed specifically for distributors and retailers in the plush toys market."
-      },
-      {
-        "image": "/product/clothes-for-doll-17cm,-for-doll-dress-up-animal-style-outfits-(no-doll)-1.png",
-        "title": "Clothes for Doll 17cm, for Doll Dress up Animal Style Outfits (NO Doll)",
-        "slug": "/product/clothes-for-doll-17cm-for-doll-dress-up-animal-style-outfits-no-doll",
-        "description": "Enhance your product offerings with our unique labubu doll clothing line, designed to captivate both retailers and consumers."
-      },
-      {
-        "image": "/product/for-labubu-outfits,clothes-set-for-17cm-lububu-doll-1.png",
-        "title": "For Labubu Outfits,Clothes Set for 17cm Lububu Doll",
-        "slug": "/product/for-labubu-outfitsclothes-set-for-17cm-lububu-doll",
-        "description": "Elevate your business offerings with our expertly crafted 17cm doll clothes collection, designed for distributors, retailers, and bulk purchasers seeking high-quality products that delight consumers."
+        "image": "/product/poker-table.webp",
+        "title": "Professional Poker Table",
+        "slug": "/collection/poker-table",
+        "description": "Casino-style table options with durable construction — available for bulk purchasing and customization."
       }
     ]
   },
   "options": {
     "title": "Customizable Options",
-    "description": "Our products are designed to brighten your daily life, adding creativity and joy to your home, workspace, and personal moments.",
+    "description": "Customization-ready for wholesale programs, private label, and promotional projects.",
     "items": [
       {
         "image": "/home/Labels.webp",
-        "badge": "Blind Boxes",
-        "title": "Custom Blind Box Labels",
-        "description": "Add a personal touch to your blind box collection with custom name tags, dates, or short messages – perfect for gifting or commemorating special moments."
+        "badge": "Branding",
+        "title": "Custom Logo Printing",
+        "description": "Add your brand logo to cases, buttons, chip sets, and packaging for retail and promotional programs."
       },
       {
         "image": "/home/Customization.webp",
-        "badge": "Plush Toys",
-        "title": "Plush Accessory Customization",
-        "description": "Choose from a variety of outfits, hats, or props to dress up your plush Labubu. Make your toy truly one-of-a-kind."
+        "badge": "Chips",
+        "title": "Chip & Denomination Customization",
+        "description": "Customize chip materials, weights, colors, edge spots, and denominations to match your market and brand."
       },
       {
         "image": "/home/Packaging.webp",
-        "badge": "Accessories",
-        "title": "Custom Gift Box Packaging",
-        "description": "Create a personalized unboxing experience with customizable gift boxes, featuring your favorite themes, colors, or event tags."
+        "badge": "Packaging",
+        "title": "Packaging & Private Label",
+        "description": "Custom sleeves, gift boxes, inserts, and private label packaging options for different sales channels."
       }
     ]
   },
   "process": {
     "title": "Our Customizable Process",
-    "description": "Our products are designed to brighten your daily life, adding creativity and joy to your home, workspace, and personal moments.",
+    "description": "A clear, repeatable workflow to deliver consistent quality at scale.",
     "items": [
       {
         "image": "/home/1.webp",
         "badge": "Step 1",
-        "title": "Choose Your Product",
-        "description": "Pick from our eligible customizable items – blind boxes, plush toys, or accessories."
+        "title": "Confirm Requirements",
+        "description": "Share product list, quantities, destination, and target price/spec requirements."
       },
       {
         "image": "/home/2.webp",
         "badge": "Step 2",
-        "title": "Personalize the Details",
-        "description": "Add names, dates, messages, or select special accessories and packaging themes."
+        "title": "Customize & Sample",
+        "description": "Provide logo/packaging files and customization details. We can arrange samples for approval before bulk production."
       },
       {
         "image": "/home/3.webp",
         "badge": "Step 3",
-        "title": "Confirm & Craft",
-        "description": "Once confirmed, our team begins crafting your custom Labubu with care and precision."
+        "title": "Produce & Deliver",
+        "description": "Mass production with QC checks, then shipment with the best logistics option for your timeline and budget."
       }
     ]
   },
@@ -212,65 +182,65 @@ export const home = {
   //   ]
   // },
   "about": {
-    "title": "About Us",
-    "description": "Our products are designed to brighten your daily life, adding creativity and joy to your home, workspace, and personal moments.",
+    "title": "About Poker Kit",
+    "description": "B2B supplier of premium poker kits, chips, and tables — supporting wholesale, OEM/ODM customization, and reliable global delivery.",
     "subtitle": "Our Story",
     "image": "/about/3.webp",
     "descriptions": [
-      "Founded in 2023, we have adhered to a customer-first philosophy, carefully crafting every product and earning the trust of a growing global client base.",
-      "Our dedicated R&D team drives continuous innovation in both technology and design, ensuring stable quality and setting new benchmarks for the industry.",
-      "From material selection to final inspection, we enforce strict quality control standards at every stage of production."
+      "Founded in 2023, we focus on a customer-first approach and long-term partnerships with distributors, retailers, and promotional buyers.",
+      "We support OEM/ODM customization, including logo printing, packaging options, and product bundle configuration for different channels.",
+      "From material selection to final inspection, we enforce quality control standards at every stage to ensure consistency across bulk orders."
     ],
     "features": [
-      "Customer-centric approach with 24/7 support.",
-      "Industry-leading product quality and innovation.",
-      "Sustainable and eco-friendly practices.",
-      "Comprehensive after-sales service."
+      "Clear communication and fast quoting for B2B orders.",
+      "Stable specifications and consistent quality for bulk supply.",
+      "Customization-ready workflow for OEM/ODM projects.",
+      "After-sales support for quality and logistics issues."
     ]
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "description": "Our products are designed to brighten your daily life, adding creativity and joy to your home, workspace, and personal moments.",
+    "description": "Quick answers about wholesale ordering, customization, lead time, shipping, and support.",
     "items": [
       {
-        "title": "Return Policy",
+        "title": "Ordering & MOQ",
         "faqs": [
           {
-            "question": "What is your return policy?",
-            "answer": "You can return the product within 14 days of delivery for a full refund. The product must be in the same condition as when it was received, unused, and in its original packaging.",
+            "question": "What is your MOQ?",
+            "answer": "MOQ varies by product and customization requirements. Contact us with the items you need and we’ll provide MOQ and pricing options.",
           },
           {
-            "question": "How long does shipping take?",
-            "answer": "We process orders within 1-3 business days. Standard shipping typically takes 3-7 days depending on your location. Express shipping options are available at checkout.",
+            "question": "Do you offer samples before bulk orders?",
+            "answer": "Yes. Samples are available for most items so you can confirm materials, workmanship, and packaging before placing a bulk order.",
           },
           {
-            "question": "Do you ship internationally?",
-            "answer": "Yes, we ship to most countries worldwide. International shipping times and costs vary by location. You can view specific shipping details during checkout.",
+            "question": "Can you do OEM/ODM customization?",
+            "answer": "Yes. We support logo printing, packaging customization, and private label options. Share your requirements and we’ll propose feasible solutions.",
           },
           {
-            "question": "How can I track my order?",
-            "answer": "Once your order ships, you'll receive a confirmation email with tracking information. You can also track your order by logging into your account on our website.",
+            "question": "What is the typical lead time?",
+            "answer": "Lead time depends on product type, quantity, and customization. We’ll confirm an estimated timeline when quoting your order.",
           }
         ]
       },
       {
-        "title": "Product Information",
+        "title": "Shipping & Logistics",
         "faqs": [
           {
-            "question": "What payment methods you accept?",
-            "answer": "We accept all major credit cards (Visa, Mastercard, American Express), PayPal, and Apple Pay. All payments are processed securely through our payment gateway.",
+            "question": "Do you ship internationally?",
+            "answer": "Yes. We ship worldwide with multiple logistics options based on destination, time requirement, and budget.",
           },
           {
-            "question": "What is your size exchange policy?",
-            "answer": "If you need a different size, we offer free size exchanges within 30 days of purchase. The item must be unworn with original tags attached. Contact our customer service to initiate an exchange.",
+            "question": "Can you help with packaging and labeling?",
+            "answer": "Yes. We can provide standard packaging, custom packaging, and labeling options depending on your channel requirements.",
           },
           {
-            "question": "What materials are used?",
-            "answer": "We use high-quality materials sourced from trusted suppliers. Each product page lists detailed material information and care instructions.",
+            "question": "Do you provide tracking information?",
+            "answer": "For supported shipping methods, tracking information can be provided after dispatch. Please contact us for details based on your route and carrier.",
           },
           {
-            "question": "Are your products eco-friendly?",
-            "answer": "Many of our products are made with sustainable materials and eco-friendly practices. Look for our 'Eco-Friendly' badge on qualifying items.",
+            "question": "What shipping terms do you support?",
+            "answer": "Common terms can be supported depending on the order and destination. Please share your preferred terms and we’ll advise the best option.",
           }
         ]
       },
@@ -278,20 +248,20 @@ export const home = {
         "title": "Customer Support",
         "faqs": [
           {
-            "question": "Do you offer custom sizing?",
-            "answer": "Currently, we offer standard sizes only. Please refer to our detailed size guide to find your best fit. For special requirements, contact customer service.",
+            "question": "How can I get a quote?",
+            "answer": "Send us the products you need, quantities, destination, and customization requirements. We’ll respond with pricing and lead time.",
           },
           {
             "question": "How can I contact customer service?",
-            "answer": "Our customer service team is available 24/7 via email, phone, or live chat. You can also reach us through our social media channels.",
+            "answer": "You can reach us via email or the contact form. We typically respond within 1 business day for inquiries and quotes.",
           },
           {
-            "question": "Do you offer price matching?",
-            "answer": "Yes, we offer price matching on identical items from authorized retailers. Contact customer service with proof of the lower price within 14 days of purchase.",
+            "question": "What if there is a quality issue?",
+            "answer": "Contact us with photos/videos and order details. We’ll investigate and provide a resolution plan based on the issue type and batch.",
           },
           {
             "question": "What is your warranty policy?",
-            "answer": "All products come with a standard 1-year warranty against manufacturing defects. Some products may have extended warranty options available at purchase.",
+            "answer": "Warranty terms depend on the product type and order agreement. We’ll clarify warranty/after-sales terms during the quotation stage.",
           }
         ]
       }
