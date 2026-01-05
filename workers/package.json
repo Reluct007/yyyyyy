@@ -1,5 +1,5 @@
 {
-  "name": "labubu-api-workers",
+  "name": "template-api-workers",
   "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@10.27.0",

@@ -8,10 +8,13 @@ export async function handleLogin(request, env) {
     // 从环境变量获取管理员凭据
     const adminUsername = env.ADMIN_USERNAME || 'admin';
     const adminPassword = env.ADMIN_PASSWORD;
-    const jwtSecret = env.JWT_SECRET || 'your-secret-key-change-in-production';
 
     if (!adminPassword) {
       return jsonResponse({ success: false, msg: 'Admin not configured' }, 500);
+    }
+
+    if (!env.JWT_SECRET) {
+      return jsonResponse({ success: false, msg: 'JWT_SECRET not configured' }, 500);
     }
 
     if (username !== adminUsername || password !== adminPassword) {
@@ -19,7 +22,7 @@ export async function handleLogin(request, env) {
     }
 
     // 生成 token
-    const token = await generateToken({ username, role: 'admin' }, jwtSecret);
+    const token = await generateToken({ username, role: 'admin' }, env.JWT_SECRET);
 
     return jsonResponse({
       success: true,

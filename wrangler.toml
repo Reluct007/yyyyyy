@@ -1,3 +1,4 @@
-name = "labubu-site"
+# 模板仓库：部署前请修改为你的 Cloudflare Pages 项目名（必须全局唯一）
+name = "CHANGE_ME_pages_name"
 compatibility_date = "2024-09-23"
 pages_build_output_dir = "out"
