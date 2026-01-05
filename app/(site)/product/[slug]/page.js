@@ -120,7 +120,7 @@ export default async function ProductPage({ params }) {
           </div>
 
           {/* 图片画廊 - 客户端组件 */}
-          <ProductGallery 
+          <ProductGallery
             mainImage={productItem.image}
             images={productItem.images || []}
             title={productItem.title}
@@ -132,6 +132,7 @@ export default async function ProductPage({ params }) {
           </p>
 
           {/* 特性和联系表单 */}
+          <h2 className="sr-only">Key Features</h2>
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <div className="col-span-2">
               <div className="grid gap-4 grid-cols-1 md:grid-cols-2 h-full">
@@ -174,10 +175,15 @@ export default async function ProductPage({ params }) {
                       className="w-full rounded-t-lg object-cover aspect-square"
                       width={400}
                       height={400}
+                      loading="lazy"
+                      fetchPriority="low"
                     />
                   </Link>
-                  <Badge variant="outline" className="absolute left-5 top-5 bg-primary-foreground">
-                    <Link href={`/collection/${slugify(item.category, { lower: true, strict: true })}/`}>
+                  <Badge asChild variant="outline" className="absolute left-5 top-5 bg-primary-foreground">
+                    <Link
+                      href={`/collection/${slugify(item.category, { lower: true, strict: true })}/`}
+                      aria-label={`Browse ${item.category} products`}
+                    >
                       {item.category}
                     </Link>
                   </Badge>
@@ -191,9 +197,11 @@ export default async function ProductPage({ params }) {
                   </p>
                   <Link
                     href={`/product/${item.id}/`}
+                    aria-label={`Learn more about ${item.title}`}
                     className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
                   >
-                    Learn More <ChevronRight className="w-4" />
+                    Learn More <span className="sr-only">: {item.title}</span>{" "}
+                    <ChevronRight className="w-4" aria-hidden="true" />
                   </Link>
                 </div>
               </div>

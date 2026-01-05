@@ -114,6 +114,8 @@ export default function AboutClient({ data = about }) {
   };
 
   // Structured Data
+  const rootUrl = basic.seo.url.replace(/\/$/, "");
+  const urlPrefix = `/${locale}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -121,12 +123,12 @@ export default function AboutClient({ data = about }) {
       "@type": "ListItem",
       "position": 1,
       "name": globalTranslations.nav?.home || "Home",
-      "item": basic.seo.url
+      "item": `${rootUrl}${urlPrefix}/`
     }, {
       "@type": "ListItem",
       "position": 2,
       "name": globalTranslations.nav?.about || translatedData.header.title,
-      "item": `${basic.seo.url}${locale === 'en' ? '/about/' : `/${locale}/about/`}`
+      "item": `${rootUrl}${urlPrefix}/about/`
     }]
   };
 

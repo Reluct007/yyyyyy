@@ -60,7 +60,7 @@ export default function SubscribeForm() {
         </Button>
       </div>
       <p className="mt-3 text-left text-sm text-muted-foreground">
-        {t.privacyText} <Link href={locale === 'en' ? '/privacy-policy/' : `/${locale}/privacy-policy/`} className="underline hover:text-primary transition-colors">{t.privacyLink}</Link>.
+        {t.privacyText} <Link href={`/${locale}/privacy-policy/`} className="underline hover:text-primary transition-colors">{t.privacyLink}</Link>.
       </p>
     </form>
   );

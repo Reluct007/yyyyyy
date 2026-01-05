@@ -16,6 +16,7 @@ import slugify from 'slugify';
 
 export default function Navbar({ data = basic.navbar }) {
   const { translations, locale } = useLanguage();
+  const urlPrefix = `/${locale}`;
   
   const brandName = data.brand;
   const logo = data.logo;
@@ -32,13 +33,13 @@ export default function Navbar({ data = basic.navbar }) {
       <div className="container mx-auto">
         {/* Desktop Menu */}
         <nav className="hidden lg:flex justify-between items-center" role="navigation" aria-label="Main navigation">
-          <Link href={locale === 'en' ? "/" : `/${locale}/`} className="flex items-center gap-4">
+          <Link href={`${urlPrefix}/`} className="flex items-center gap-4">
             <Image src={logo} className="w-8" alt={`${brandName} logo`} width={100} height={100} />
             <span className="text-xl font-bold">{brandName}</span>
           </Link>
 
           <div className="flex items-center gap-2">
-            <Link href={locale === 'en' ? "/" : `/${locale}/`} className={cn(navigationMenuTriggerStyle(), buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
+            <Link href={`${urlPrefix}/`} className={cn(navigationMenuTriggerStyle(), buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
               {translations.nav?.home || "Home"}
             </Link>
             
@@ -54,7 +55,7 @@ export default function Navbar({ data = basic.navbar }) {
                       <li className="col-span-2">
                         <NavigationMenuLink asChild>
                           <Link
-                            href={locale === 'en' ? "/collection/" : `/${locale}/collection/`}
+                            href={`${urlPrefix}/collection/`}
                             className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                           >
                             <div className="mb-2 text-lg font-medium">
@@ -70,7 +71,7 @@ export default function Navbar({ data = basic.navbar }) {
                         <li key={category.slug}>
                           <NavigationMenuLink asChild>
                             <Link
-                              href={locale === 'en' ? `/collection/${category.slug}/` : `/${locale}/collection/${category.slug}/`}
+                              href={`${urlPrefix}/collection/${category.slug}/`}
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                             >
                               <div className="text-sm font-medium leading-none">{category.title}</div>
@@ -81,16 +82,16 @@ export default function Navbar({ data = basic.navbar }) {
                           </NavigationMenuLink>
                         </li>
                       ))}
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
 
-            <Link href={locale === 'en' ? "/about/" : `/${locale}/about/`} className={cn(navigationMenuTriggerStyle(), buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
+            <Link href={`${urlPrefix}/about/`} className={cn(navigationMenuTriggerStyle(), buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
               {translations.nav?.about || "About"}
             </Link>
-            <Link href={locale === 'en' ? "/contact/" : `/${locale}/contact/`} className={cn(navigationMenuTriggerStyle(), buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
+            <Link href={`${urlPrefix}/contact/`} className={cn(navigationMenuTriggerStyle(), buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
               {translations.nav?.contact || "Contact"}
             </Link>
           </div>
@@ -114,21 +115,21 @@ export default function Navbar({ data = basic.navbar }) {
         {/* Mobile Menu */}
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
-            <Link href={locale === 'en' ? "/" : `/${locale}/`} className="flex items-center gap-4">
+            <Link href={`${urlPrefix}/`} className="flex items-center gap-4">
               <Image src={logo} className="w-8" alt={`${brandName} logo`} width={100} height={100} />
               <span className="text-xl font-bold">{brandName}</span>
             </Link>
 
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant={"outline"} size={"icon"}>
-                  <Menu className="size-4" />
+                <Button variant={"outline"} size={"icon"} aria-label="Open menu">
+                  <Menu className="size-4" aria-hidden="true" />
                 </Button>
               </SheetTrigger>
               <SheetContent className="overflow-y-auto">
                 <SheetHeader>
                   <SheetTitle>
-                    <Link href={locale === 'en' ? "/" : `/${locale}/`} className="flex items-center gap-2">
+                    <Link href={`${urlPrefix}/`} className="flex items-center gap-2">
                       <Image src={logo} className="w-8" alt={`${brandName} logo`} width={100} height={100} />
                       <span className="text-xl font-bold">{brandName}</span>
                     </Link>
@@ -136,20 +137,20 @@ export default function Navbar({ data = basic.navbar }) {
                 </SheetHeader>
 
                 <div className="my-8 flex flex-col gap-4">
-                  <Link href={locale === 'en' ? "/" : `/${locale}/`} className="text-base font-medium">
+                  <Link href={`${urlPrefix}/`} className="text-base font-medium">
                     {translations.nav?.home || "Home"}
                   </Link>
                   
                   {/* Products with subcategories */}
                   <div className="space-y-2">
-                    <Link href={locale === 'en' ? "/collection/" : `/${locale}/collection/`} className="text-base font-medium">
+                    <Link href={`${urlPrefix}/collection/`} className="text-base font-medium">
                       {translations.nav?.products || "Products"}
                     </Link>
                     <div className="pl-4 space-y-2 border-l-2 border-muted">
                       {categories.map((category) => (
                         <Link 
                           key={category.slug}
-                          href={locale === 'en' ? `/collection/${category.slug}/` : `/${locale}/collection/${category.slug}/`} 
+                          href={`${urlPrefix}/collection/${category.slug}/`} 
                           className="block text-sm text-muted-foreground hover:text-foreground"
                         >
                           {category.title}
@@ -158,10 +159,10 @@ export default function Navbar({ data = basic.navbar }) {
                     </div>
                   </div>
                   
-                  <Link href={locale === 'en' ? "/about/" : `/${locale}/about/`} className="text-base font-medium">
+                  <Link href={`${urlPrefix}/about/`} className="text-base font-medium">
                     {translations.nav?.about || "About"}
                   </Link>
-                  <Link href={locale === 'en' ? "/contact/" : `/${locale}/contact/`} className="text-base font-medium">
+                  <Link href={`${urlPrefix}/contact/`} className="text-base font-medium">
                     {translations.nav?.contact || "Contact"}
                   </Link>
                 </div>

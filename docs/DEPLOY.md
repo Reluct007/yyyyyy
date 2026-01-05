@@ -2,6 +2,17 @@
 
 本文档介绍如何在新电脑上快速部署此项目。
 
+## ✅ 模板仓库：部署前必改
+
+本仓库设计为“模板”：部署前必须手动改名/填配置（否则会部署失败或部署到错误的服务）。
+
+- Cloudflare Pages 项目名：`wrangler.toml:2` 的 `name = "CHANGE_ME_pages_name"`
+- Cloudflare Worker 服务名：`workers/wrangler.toml:2` 的 `name = "CHANGE_ME_worker_name"`
+- 站点品牌与域名（影响 canonical/sitemap/robots）：`data/basic.js:4` 的 `basic.seo.url`、`basic.info.brand` 等
+- Workers Secrets：至少配置 `RESEND_API_KEY`、`CONTACT_EMAIL`、`FROM_EMAIL`（如启用后台接口需额外配置 `ADMIN_PASSWORD`、`JWT_SECRET`）
+
+更完整的清单见：`docs/TEMPLATE.md`
+
 ## 📋 前提条件
 
 ### 必需账号

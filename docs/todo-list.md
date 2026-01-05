@@ -1,0 +1,48 @@
+# TODO / 问题清单（SoT）
+
+本文件是全仓库“问题清单”的单一事实源（SoT）。i18n/SEO/重定向/构建等跨文档问题均应在此登记与更新状态。
+
+状态约定：
+- `OPEN`：已确认存在，待处理
+- `IN_PROGRESS`：处理中
+- `VERIFY`：需要在部署/真实环境验证（本地无法完全证明）
+- `DONE`：已修复/已对齐
+- `DEFER`：已知但延后（需写明原因/条件）
+
+严重度约定：
+- `P0`：会导致明显功能损坏/大量 404/严重 SEO 信号冲突
+- `P1`：影响主要转化链路或造成显著的“混语/误导”
+- `P2`：SEO/结构化数据/一致性问题（不一定立即造成损害，但会累积成本）
+- `P3`：可用性/维护性/规范性问题
+
+## i18n 问题清单
+
+来源：原 `docs/I18N.md` 的“问题清单”章节（已迁移到此处作为权威清单）。
+
+| ID | 严重度 | 状态 | 问题 | 影响范围/现象 | 证据（代码位置） |
+|---|---|---|---|---|---|
+| I18N-001 | P0 | OPEN | 分类 slug 与翻译冲突导致 404 | `/[locale]/collection/` 列表页使用“翻译后的分类标题”生成 slug，路由静态参数与 sitemap 使用“英文标题”生成 slug，点击分类易跳到不存在路径 | `app/[locale]/collection/page.js`、`app/[locale]/collection/[slug]/page.js`、`app/sitemap.js` |
+| I18N-002 | P0 | DONE | 首屏/静态 HTML 语言不可信（静态导出风险） | `LanguageProvider` 由路由 layout 注入 `initialLocale`，静态导出时首屏 HTML 与路径语言一致，避免英文闪烁与爬虫误判 | `lib/language-context.js`、`components/layout/root-chrome.js`、`app/[locale]/layout.js` |
+| I18N-003 | P1 | OPEN | 表单文案未随语言切换 | 多处使用 `<ContactForm />` 未传 locale，导致非英文页面仍显示英文表单文案 | `components/features/navbar.js`、`app/[locale]/contact/contact-client.js`、`components/features/contact-form.js` |
+| I18N-004 | P1 | DONE | `getSeoMeta()` 翻译逻辑不可达 | 非默认语言优先使用 `seoTranslations`，默认语言保持以 `data/basic.js` 与 `seoOverrides` 为准 | `lib/metadata-translations.js` |
+| I18N-005 | P2 | OPEN | 多语言产品页 alternates/hreflang 不完整 | `/[locale]/product/[slug]` metadata 仅设置 canonical，不提供 `alternates.languages` | `app/[locale]/product/[slug]/page.js` |
+| I18N-006 | P2 | DONE | JSON-LD / breadcrumb URL 未完全本地化 | 结构化数据与 breadcrumb URL 统一使用 `/{locale}` 前缀（含 `en`），与方案 B 的 URL 策略一致 | `app/[locale]/collection/page.js`、`app/[locale]/collection/[slug]/products-client.js`、`app/[locale]/product/[slug]/page.js`、`app/[locale]/about/about-client.js`、`app/[locale]/contact/contact-client.js` |
+| I18N-007 | P2 | OPEN | 翻译来源分散且大量“整句匹配” | 同一文案可能在 `locales/*`、页面内映射、`data/auto-translate.js` 多处维护；原文微调会导致翻译失效且难以发现 | `data/auto-translate.js`、`app/[locale]/contact/contact-client.js`、`app/[locale]/about/about-client.js` 等 |
+| I18N-008 | P3 | OPEN | Workers API 返回 msg 不本地化 | `msg` 为英文固定字符串；前端 toast 直接展示，非英文用户看到英文提示 | `workers/src/handlers/contact.js`、`workers/src/handlers/subscribe.js`、`components/features/contact-form.js`、`components/features/subscribe-form.js` |
+| I18N-009 | P3 | OPEN | UI 文案覆盖不完整（硬编码英文） | 存在硬编码英文小标题/按钮文案，导致页面“混语” | 例如 `components/features/header.js`（`Features:`）等 |
+
+## 本轮问题清单（i18n 方案 B 落地 + sitemap 核查）
+
+| ID | 严重度 | 状态 | 问题 | 影响范围/风险 | 证据（代码/产物） | 建议/下一步 |
+|---|---|---|---|---|---|---|
+| SITEMAP-001 | P2 | OPEN | `sitemap.xml` 存在重复 `<loc>` | 重复 URL 会降低 sitemap 信号质量；可能导致抓取预算浪费/统计失真 | `app/sitemap.js`、`data/product.js`（存在重复标题）、构建产物 `out/sitemap.xml` | 去重数据源：确保 `data/product.js` 的 product title/slug 唯一；或在 `app/sitemap.js` 对 slug 去重并记录冲突 |
+| SITEMAP-002 | P3 | OPEN | `lastmod` 全站统一为构建时间 | 对爬虫而言可能“不可信”，搜索引擎可能忽略；长期会干扰排查“哪些页面真的更新了” | `app/sitemap.js`（`lastModified = new Date()`） | 若能提供内容更新时间则按 URL 维度写入；否则建议移除 `lastModified` 字段或只对少数关键页维护 |
+| REDIRECTS-001 | P1 | VERIFY | `/product/*` 路径同时承载静态图片与页面，重定向规则需在真实 Pages 行为验证 | 若平台规则匹配不符合预期，可能把 `public/product/*.webp` 资源 301 到 `/en/product/...`，导致图片 404 | `public/_redirects` | 部署后抽查：直接访问 `https://<domain>/product/<任意文件>.webp` 与 `https://<domain>/product/<slug>/`；必要时改为更安全的规则（例如仅迁移页面目录，不覆盖带扩展名的资源请求） |
+| DEBT-001 | P3 | OPEN | sitemap 生成方式存在“新旧并存”的维护噪音 | 目前 `app/sitemap.js` 生效；`scripts/generate-sitemap.mjs` 属于遗留实现（不再由 `pnpm build` 触发） | `app/sitemap.js`、`scripts/generate-sitemap.mjs`、`package.json` | 明确取舍：要么删除遗留脚本，要么恢复 `prebuild` 并删除 `app/sitemap.js`（二选一，保持单一事实源） |
+| DEBT-002 | P0 | OPEN | `app/(site)` 仍生成无前缀静态页（与“仅保留 `/{locale}`”策略冲突） | 产物中出现 `/about`、`/collection`、`/contact`… 等无前缀页面；若平台 301 规则不完整，会产生重复页面/可被索引的旧路径 | `app/(site)/`、构建输出路由表（`pnpm build`）、`public/_redirects` | 已决策：只保留 `app/[locale]`。下一步：删除 `app/(site)`（高风险，需明确确认后执行）+ 补全平台侧 301（见 `REDIRECTS-002`） |
+| REDIRECTS-002 | P0 | OPEN | 旧路径 301 规则不完整，导致无前缀旧 URL 仍可直达 | SEO 信号分裂（重复内容）；旧链接/外链可能落到未重定向页面或 404（取决于是否删除 `app/(site)`） | `public/_redirects`（目前仅覆盖 `/` 与 `/product/*`）、构建输出路由表（包含 `/about` 等） | 补全规则：至少覆盖 `/about`、`/collection/*`、`/contact`、`/faq`、`/privacy-policy`、`/terms-of-service`、`/shipping-policy`、`/return-policy` 等 → `/en/...`（并保留资源路径例外） |
+| DOCS-001 | P1 | OPEN | 文档宣称“平台侧 301 覆盖旧路径”，但规则未覆盖多数旧路径 | 维护者按文档做错误假设；引入回归时难定位（事实/约定不一致） | `docs/I18N.md`（“兼容路由 + 301”描述）、`public/_redirects` | 在完成 `DEBT-002/REDIRECTS-002` 后同步更新 `docs/I18N.md` 与 `docs/SEO.md`（只保留真实生效策略） |
+| SEO-STRUCT-001 | P1 | OPEN | JSON-LD 中的 URL 未统一 `/{locale}` 前缀 | 结构化数据 URL 与页面 canonical/实际路径不一致，降低富结果一致性 | `app/[locale]/layout.js`（`contactPoint.url`）、`app/(site)/layout.js` | 抽象 URL 构建：使用同一工具函数生成站点内 URL（含 locale），避免手写字符串（DRY） |
+| WORKERS-001 | P1 | OPEN | `GET /api/admin/config`：带 `Authorization` 但未配置 `JWT_SECRET` 时直接 500 | 公开读接口被非必要打挂（例如前端残留 token / 环境变量未配置） | `workers/src/handlers/admin/config.js` | 降级策略：无法验证 token 时视为非管理员并返回公开配置（或改为 401/200 + `isAdmin:false`，避免 500） |
+| WORKERS-002 | P3 | OPEN | Workers 入口文件缩进异常（疑似误格式化） | 增加 review 噪音与冲突概率 | `workers/src/index.js` | 统一缩进风格并跑 `pnpm -C workers dev` 冒烟验证（或最小语法校验） |
+| REPO-001 | P3 | OPEN | `.codex/context.md` 属于工具生成内容，当前被改动会引入无价值 diff | 影响 review 信噪比；容易在 PR 里夹杂噪音 | `.codex/context.md` | 明确策略：要么加入 `.gitignore`（推荐），要么禁止生成/修改并从变更中剔除 |

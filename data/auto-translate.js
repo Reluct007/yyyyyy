@@ -10,63 +10,45 @@ const translations = {
   // 产品分类翻译
   categoryTranslations: {
     en: {
-      "Labubu": "Labubu",
-      "Dolls": "Dolls",
-      "Animals Toy": "Animals Toy"
+      "Poker Equipment": "Poker Equipment",
+      "Poker Chips": "Poker Chips",
+      "Poker Table": "Poker Table"
     },
     es: {
-      "Labubu": "Labubu",
-      "Dolls": "Muñecas",
-      "Animals Toy": "Juguetes de Animales"
+      "Poker Equipment": "Equipo de póker",
+      "Poker Chips": "Fichas de póker",
+      "Poker Table": "Mesa de póker"
     },
     fr: {
-      "Labubu": "Labubu", 
-      "Dolls": "Poupées",
-      "Animals Toy": "Jouets d'Animaux"
+      "Poker Equipment": "Équipement de poker",
+      "Poker Chips": "Jetons de poker",
+      "Poker Table": "Table de poker"
     },
     de: {
-      "Labubu": "Labubu",
-      "Dolls": "Puppen",
-      "Animals Toy": "Tier-Spielzeug"
+      "Poker Equipment": "Poker-Ausrüstung",
+      "Poker Chips": "Pokerchips",
+      "Poker Table": "Pokertisch"
     },
     ja: {
-      "Labubu": "ラブブ",
-      "Dolls": "ドール",
-      "Animals Toy": "アニマルトイ"
+      "Poker Equipment": "ポーカー用品",
+      "Poker Chips": "ポーカーチップ",
+      "Poker Table": "ポーカーテーブル"
     },
     ko: {
-      "Labubu": "라부부",
-      "Dolls": "인형",
-      "Animals Toy": "동물 장난감"
+      "Poker Equipment": "포커 장비",
+      "Poker Chips": "포커 칩",
+      "Poker Table": "포커 테이블"
     }
   },
   
   // 产品标题翻译
   productTitleTranslations: {
-    en: {
-      "Cute Clothes Fit for LABUBU Doll": "Cute Clothes Fit for LABUBU Doll",
-      "The Monsters Big into Energy Series-Vinyl Plush Pendant Blind Box, 6PCs Blind Box Figures": "The Monsters Big into Energy Series-Vinyl Plush Pendant Blind Box, 6PCs Blind Box Figures"
-    },
-    es: {
-      "Cute Clothes Fit for LABUBU Doll": "Ropa Bonita para Muñeca LABUBU",
-      "The Monsters Big into Energy Series-Vinyl Plush Pendant Blind Box, 6PCs Blind Box Figures": "Los Monstruos Gran Serie de Energía-Caja Sorpresa de Colgante de Peluche de Vinilo, 6PCs Figuras de Caja Sorpresa"
-    },
-    fr: {
-      "Cute Clothes Fit for LABUBU Doll": "Vêtements Mignons pour Poupée LABUBU",
-      "The Monsters Big into Energy Series-Vinyl Plush Pendant Blind Box, 6PCs Blind Box Figures": "Les Monstres Grande Série d'Énergie-Boîte Surprise Pendentif Peluche Vinyle, 6PCs Figurines Boîte Surprise"
-    },
-    de: {
-      "Cute Clothes Fit for LABUBU Doll": "Süße Kleidung für LABUBU Puppe",
-      "The Monsters Big into Energy Series-Vinyl Plush Pendant Blind Box, 6PCs Blind Box Figures": "Die Monster Große Energie-Serie-Vinyl Plüsch Anhänger Blind Box, 6PCs Blind Box Figuren"
-    },
-    ja: {
-      "Cute Clothes Fit for LABUBU Doll": "ラブブ人形用かわいい服",
-      "The Monsters Big into Energy Series-Vinyl Plush Pendant Blind Box, 6PCs Blind Box Figures": "モンスターズ ビッグ・イントゥ・エナジーシリーズ-ビニールプラッシュペンダントブラインドボックス、6PCsブラインドボックスフィギュア"
-    },
-    ko: {
-      "Cute Clothes Fit for LABUBU Doll": "라부부 인형용 귀여운 옷",
-      "The Monsters Big into Energy Series-Vinyl Plush Pendant Blind Box, 6PCs Blind Box Figures": "몬스터즈 빅 인투 에너지 시리즈-비닐 플러시 펜던트 블라인드 박스, 6PCs 블라인드 박스 피규어"
-    }
+    en: {},
+    es: {},
+    fr: {},
+    de: {},
+    ja: {},
+    ko: {}
   },
 
   // 通用文本翻译
@@ -74,10 +56,8 @@ const translations = {
     en: {
       "Products Collection": "Products Collection",
       "Discover our latest product collection, where we share insights, tips, and updates on the latest trends in the industry.": "Discover our latest product collection, where we share insights, tips, and updates on the latest trends in the industry.",
-      "LABUBU creates stylish, high-quality designer toys that blend art and trend culture. With careful craftsmanship and unique character design, each product is made to delight, collect, and inspire.": "LABUBU creates stylish, high-quality designer toys that blend art and trend culture. With careful craftsmanship and unique character design, each product is made to delight, collect, and inspire.",
       "Dolls brings imagination to life with stylish, collectible figures that blend playful charm, artistic design, and timeless appeal—crafted to be loved, displayed, and desired.": "Dolls brings imagination to life with stylish, collectible figures that blend playful charm, artistic design, and timeless appeal—crafted to be loved, displayed, and desired.",
       "Animals Toy sparks wonder with adorable, collectible figures inspired by the wild—where playful design meets heartfelt charm, made to be treasured, shared, and displayed": "Animals Toy sparks wonder with adorable, collectible figures inspired by the wild—where playful design meets heartfelt charm, made to be treasured, shared, and displayed",
-      "Exceptional Quality:We ensure every Labubu collectible meets the highest standards of craftsmanship and durability": "Exceptional Quality:We ensure every Labubu collectible meets the highest standards of craftsmanship and durability",
       "Charm & Creativity: Our designs combine playfulness and artistic flair, making each product both delightful and display-worthy": "Charm & Creativity: Our designs combine playfulness and artistic flair, making each product both delightful and display-worthy",
       "Versatile Appeal: From home décor to thoughtful gifts, our collection fits into every lifestyle and occasion": "Versatile Appeal: From home décor to thoughtful gifts, our collection fits into every lifestyle and occasion",
       "Sustainable Practices: Our commitment to sustainability is reflected in eco-conscious materials and mindful production methods": "Sustainable Practices: Our commitment to sustainability is reflected in eco-conscious materials and mindful production methods",
@@ -100,16 +80,13 @@ const translations = {
       "Durable & High-Quality Material": "Durable & High-Quality Material",
       "Perfect Gift Appeal": "Perfect Gift Appeal",
       "Multi-Functional Use Opportunities": "Multi-Functional Use Opportunities",
-      "Crafted to fit both 4-inch cotton dolls and 6.69-inch labubu dolls, our clothing sets ensure that each doll has a fashionable and exquisite look, appealing to a broad market and increasing sales opportunities for your business.": "Crafted to fit both 4-inch cotton dolls and 6.69-inch labubu dolls, our clothing sets ensure that each doll has a fashionable and exquisite look, appealing to a broad market and increasing sales opportunities for your business.",
       "Constructed from premium cotton fabric, these doll clothes are not only durable and wear-resistant but also maintain their vibrant colors and exquisite designs over time, allowing your customers to invest in items that will last and retain their appeal.": "Constructed from premium cotton fabric, these doll clothes are not only durable and wear-resistant but also maintain their vibrant colors and exquisite designs over time, allowing your customers to invest in items that will last and retain their appeal."
     },
     es: {
       "Products Collection": "Colección de Productos",
       "Discover our latest product collection, where we share insights, tips, and updates on the latest trends in the industry.": "Descubre nuestra última colección de productos, donde compartimos ideas, consejos y actualizaciones sobre las últimas tendencias de la industria.",
-      "LABUBU creates stylish, high-quality designer toys that blend art and trend culture. With careful craftsmanship and unique character design, each product is made to delight, collect, and inspire.": "LABUBU crea juguetes de diseñador elegantes y de alta calidad que combinan arte y cultura de tendencias. Con artesanía cuidadosa y diseño de personajes único, cada producto está hecho para deleitar, coleccionar e inspirar.",
       "Dolls brings imagination to life with stylish, collectible figures that blend playful charm, artistic design, and timeless appeal—crafted to be loved, displayed, and desired.": "Dolls da vida a la imaginación con figuras coleccionables elegantes que combinan encanto juguetón, diseño artístico y atractivo atemporal—elaboradas para ser amadas, exhibidas y deseadas.",
       "Animals Toy sparks wonder with adorable, collectible figures inspired by the wild—where playful design meets heartfelt charm, made to be treasured, shared, and displayed": "Animals Toy despierta asombro con figuras coleccionables adorables inspiradas en la naturaleza salvaje—donde el diseño juguetón se encuentra con el encanto sincero, hecho para ser atesorado, compartido y exhibido",
-      "Exceptional Quality:We ensure every Labubu collectible meets the highest standards of craftsmanship and durability": "Calidad Excepcional: Aseguramos que cada coleccionable Labubu cumpla con los más altos estándares de artesanía y durabilidad",
       "Charm & Creativity: Our designs combine playfulness and artistic flair, making each product both delightful and display-worthy": "Encanto y Creatividad: Nuestros diseños combinan juguetón y estilo artístico, haciendo que cada producto sea tanto encantador como digno de exhibición",
       "Versatile Appeal: From home décor to thoughtful gifts, our collection fits into every lifestyle and occasion": "Atractivo Versátil: Desde decoración del hogar hasta regalos considerados, nuestra colección se adapta a cada estilo de vida y ocasión",
       "Sustainable Practices: Our commitment to sustainability is reflected in eco-conscious materials and mindful production methods": "Prácticas Sostenibles: Nuestro compromiso con la sostenibilidad se refleja en materiales ecológicos y métodos de producción conscientes",
@@ -132,16 +109,13 @@ const translations = {
       "Durable & High-Quality Material": "Material Duradero y de Alta Calidad",
       "Perfect Gift Appeal": "Atractivo Perfecto para Regalos",
       "Multi-Functional Use Opportunities": "Oportunidades de Uso Multifuncional",
-      "Crafted to fit both 4-inch cotton dolls and 6.69-inch labubu dolls, our clothing sets ensure that each doll has a fashionable and exquisite look, appealing to a broad market and increasing sales opportunities for your business.": "Diseñado para ajustarse tanto a muñecas de algodón de 4 pulgadas como a muñecas labubu de 6.69 pulgadas, nuestros conjuntos de ropa aseguran que cada muñeca tenga un aspecto elegante y exquisito, atrayendo a un mercado amplio y aumentando las oportunidades de ventas para su negocio.",
       "Constructed from premium cotton fabric, these doll clothes are not only durable and wear-resistant but also maintain their vibrant colors and exquisite designs over time, allowing your customers to invest in items that will last and retain their appeal.": "Construido con tela de algodón premium, esta ropa para muñecas no solo es duradera y resistente al desgaste, sino que también mantiene sus colores vibrantes y diseños exquisitos con el tiempo, permitiendo que sus clientes inviertan en artículos que durarán y mantendrán su atractivo."
     },
     fr: {
       "Products Collection": "Collection de Produits",
       "Discover our latest product collection, where we share insights, tips, and updates on the latest trends in the industry.": "Découvrez notre dernière collection de produits, où nous partageons des idées, des conseils et des mises à jour sur les dernières tendances de l'industrie.",
-      "LABUBU creates stylish, high-quality designer toys that blend art and trend culture. With careful craftsmanship and unique character design, each product is made to delight, collect, and inspire.": "LABUBU crée des jouets de designer élégants et de haute qualité qui mélangent l'art et la culture tendance. Avec un artisanat soigneux et un design de personnage unique, chaque produit est fait pour ravir, collectionner et inspirer.",
       "Dolls brings imagination to life with stylish, collectible figures that blend playful charm, artistic design, and timeless appeal—crafted to be loved, displayed, and desired.": "Dolls donne vie à l'imagination avec des figurines collectionnables élégantes qui mélangent charme ludique, design artistique et attrait intemporel—fabriquées pour être aimées, exposées et désirées.",
       "Animals Toy sparks wonder with adorable, collectible figures inspired by the wild—where playful design meets heartfelt charm, made to be treasured, shared, and displayed": "Animals Toy suscite l'émerveillement avec des figurines collectionnables adorables inspirées de la nature sauvage—où le design ludique rencontre le charme sincère, fait pour être chéri, partagé et exposé",
-      "Exceptional Quality:We ensure every Labubu collectible meets the highest standards of craftsmanship and durability": "Qualité Exceptionnelle: Nous nous assurons que chaque collectionnable Labubu respecte les plus hauts standards d'artisanat et de durabilité",
       "Charm & Creativity: Our designs combine playfulness and artistic flair, making each product both delightful and display-worthy": "Charme et Créativité: Nos designs combinent ludisme et flair artistique, rendant chaque produit à la fois délicieux et digne d'être exposé",
       "Versatile Appeal: From home décor to thoughtful gifts, our collection fits into every lifestyle and occasion": "Attrait Polyvalent: De la décoration maison aux cadeaux attentionnés, notre collection s'adapte à chaque style de vie et occasion",
       "Sustainable Practices: Our commitment to sustainability is reflected in eco-conscious materials and mindful production methods": "Pratiques Durables: Notre engagement envers la durabilité se reflète dans des matériaux éco-conscients et des méthodes de production réfléchies",
@@ -164,16 +138,13 @@ const translations = {
       "Durable & High-Quality Material": "Matériau Durable et de Haute Qualité",
       "Perfect Gift Appeal": "Attrait Parfait pour Cadeaux",
       "Multi-Functional Use Opportunities": "Opportunités d'Usage Multifonctionnel",
-      "Crafted to fit both 4-inch cotton dolls and 6.69-inch labubu dolls, our clothing sets ensure that each doll has a fashionable and exquisite look, appealing to a broad market and increasing sales opportunities for your business.": "Fabriqués pour s'adapter aux poupées en coton de 4 pouces et aux poupées labubu de 6,69 pouces, nos ensembles de vêtements garantissent que chaque poupée ait un look élégant et exquis, attrayant pour un large marché et augmentant les opportunités de vente pour votre entreprise.",
       "Constructed from premium cotton fabric, these doll clothes are not only durable and wear-resistant but also maintain their vibrant colors and exquisite designs over time, allowing your customers to invest in items that will last and retain their appeal.": "Construits en tissu de coton premium, ces vêtements de poupée sont non seulement durables et résistants à l'usure mais maintiennent aussi leurs couleurs vives et leurs designs exquis au fil du temps, permettant à vos clients d'investir dans des articles qui dureront et conserveront leur attrait."
     },
     de: {
       "Products Collection": "Produktkollektion",
       "Discover our latest product collection, where we share insights, tips, and updates on the latest trends in the industry.": "Entdecken Sie unsere neueste Produktkollektion, wo wir Einblicke, Tipps und Updates zu den neuesten Trends der Branche teilen.",
-      "LABUBU creates stylish, high-quality designer toys that blend art and trend culture. With careful craftsmanship and unique character design, each product is made to delight, collect, and inspire.": "LABUBU schafft stilvolle, hochwertige Designer-Spielzeuge, die Kunst und Trendkultur verbinden. Mit sorgfältiger Handwerkskunst und einzigartigem Charakterdesign ist jedes Produkt dazu gemacht, zu erfreuen, zu sammeln und zu inspirieren.",
       "Dolls brings imagination to life with stylish, collectible figures that blend playful charm, artistic design, and timeless appeal—crafted to be loved, displayed, and desired.": "Dolls erweckt die Fantasie zum Leben mit stilvollen, sammelbaren Figuren, die verspielten Charme, künstlerisches Design und zeitlose Anziehungskraft verbinden—handwerklich gefertigt, um geliebt, ausgestellt und begehrt zu werden.",
       "Animals Toy sparks wonder with adorable, collectible figures inspired by the wild—where playful design meets heartfelt charm, made to be treasured, shared, and displayed": "Animals Toy weckt Staunen mit entzückenden, sammelbaren Figuren, inspiriert von der Wildnis—wo verspieltes Design auf herzlichen Charme trifft, gemacht, um geschätzt, geteilt und ausgestellt zu werden",
-      "Exceptional Quality:We ensure every Labubu collectible meets the highest standards of craftsmanship and durability": "Außergewöhnliche Qualität: Wir stellen sicher, dass jedes Labubu-Sammlerstück den höchsten Standards von Handwerkskunst und Haltbarkeit entspricht",
       "Charm & Creativity: Our designs combine playfulness and artistic flair, making each product both delightful and display-worthy": "Charme & Kreativität: Unsere Designs verbinden Verspieltheit und künstlerischen Flair, wodurch jedes Produkt sowohl entzückend als auch ausstellungswürdig wird",
       "Versatile Appeal: From home décor to thoughtful gifts, our collection fits into every lifestyle and occasion": "Vielseitige Anziehungskraft: Von Heimdekoration bis hin zu durchdachten Geschenken passt unsere Kollektion zu jedem Lebensstil und jeder Gelegenheit",
       "Sustainable Practices: Our commitment to sustainability is reflected in eco-conscious materials and mindful production methods": "Nachhaltige Praktiken: Unser Engagement für Nachhaltigkeit spiegelt sich in umweltbewussten Materialien und achtsamen Produktionsmethoden wider",
@@ -196,16 +167,13 @@ const translations = {
       "Durable & High-Quality Material": "Langlebiges und Hochwertiges Material",
       "Perfect Gift Appeal": "Perfekte Geschenk-Anziehungskraft",
       "Multi-Functional Use Opportunities": "Multifunktionale Nutzungsmöglichkeiten",
-      "Crafted to fit both 4-inch cotton dolls and 6.69-inch labubu dolls, our clothing sets ensure that each doll has a fashionable and exquisite look, appealing to a broad market and increasing sales opportunities for your business.": "Hergestellt, um sowohl 4-Zoll-Baumwollpuppen als auch 6,69-Zoll-Labubu-Puppen zu passen, stellen unsere Kleidungssets sicher, dass jede Puppe ein modisches und exquisites Aussehen hat, das einen breiten Markt anspricht und Verkaufsmöglichkeiten für Ihr Unternehmen erhöht.",
       "Constructed from premium cotton fabric, these doll clothes are not only durable and wear-resistant but also maintain their vibrant colors and exquisite designs over time, allowing your customers to invest in items that will last and retain their appeal.": "Aus hochwertigem Baumwollstoff hergestellt, sind diese Puppenkleider nicht nur langlebig und verschleißfest, sondern behalten auch ihre lebendigen Farben und exquisiten Designs im Laufe der Zeit bei, sodass Ihre Kunden in Artikel investieren können, die Bestand haben und ihre Anziehungskraft behalten."
     },
     ja: {
       "Products Collection": "製品コレクション",
       "Discover our latest product collection, where we share insights, tips, and updates on the latest trends in the industry.": "業界の最新トレンドに関する洞察、ヒント、アップデートを共有する最新の製品コレクションをご覧ください。",
-      "LABUBU creates stylish, high-quality designer toys that blend art and trend culture. With careful craftsmanship and unique character design, each product is made to delight, collect, and inspire.": "ラブブは、アートとトレンド文化を融合したスタイリッシュで高品質なデザイナートイを作成します。丁寧な職人技とユニークなキャラクターデザインにより、各製品は喜び、収集、インスピレーションを与えるために作られています。",
       "Dolls brings imagination to life with stylish, collectible figures that blend playful charm, artistic design, and timeless appeal—crafted to be loved, displayed, and desired.": "ドールは、遊び心のある魅力、芸術的なデザイン、時代を超えた魅力を融合したスタイリッシュなコレクタブルフィギュアで想像力を現実にします—愛され、展示され、求められるように作られています。",
       "Animals Toy sparks wonder with adorable, collectible figures inspired by the wild—where playful design meets heartfelt charm, made to be treasured, shared, and displayed": "アニマルトイは、野生にインスパイアされた愛らしいコレクタブルフィギュアで驚きを呼び起こします—遊び心のあるデザインが心からの魅力と出会う場所で、大切にされ、共有され、展示されるために作られています",
-      "Exceptional Quality:We ensure every Labubu collectible meets the highest standards of craftsmanship and durability": "卓越した品質：すべてのラブブコレクタブルが職人技と耐久性の最高基準を満たすことを保証します",
       "Charm & Creativity: Our designs combine playfulness and artistic flair, making each product both delightful and display-worthy": "魅力と創造性：私たちのデザインは遊び心と芸術的な才能を組み合わせ、各製品を楽しく、展示に値するものにします",
       "Versatile Appeal: From home décor to thoughtful gifts, our collection fits into every lifestyle and occasion": "多様な魅力：ホームデコレーションから心のこもったギフトまで、私たちのコレクションはあらゆるライフスタイルと機会にフィットします",
       "Sustainable Practices: Our commitment to sustainability is reflected in eco-conscious materials and mindful production methods": "持続可能な実践：持続可能性への私たちの取り組みは、エコ意識のある材料と心を込めた生産方法に反映されています",
@@ -228,16 +196,13 @@ const translations = {
       "Durable & High-Quality Material": "耐久性のある高品質素材",
       "Perfect Gift Appeal": "完璧なギフトの魅力",
       "Multi-Functional Use Opportunities": "多機能使用機会",
-      "Crafted to fit both 4-inch cotton dolls and 6.69-inch labubu dolls, our clothing sets ensure that each doll has a fashionable and exquisite look, appealing to a broad market and increasing sales opportunities for your business.": "4インチの綿人形と6.69インチのラブブ人形の両方にフィットするように作られた私たちの衣装セットは、各人形がファッショナブルで上品な外観を持つことを保証し、幅広い市場にアピールし、あなたのビジネスの販売機会を増やします。",
       "Constructed from premium cotton fabric, these doll clothes are not only durable and wear-resistant but also maintain their vibrant colors and exquisite designs over time, allowing your customers to invest in items that will last and retain their appeal.": "プレミアムコットン生地で作られたこれらの人形の服は、耐久性があり摩耗に強いだけでなく、時間が経っても鮮やかな色と精巧なデザインを維持し、お客様が長持ちし魅力を保つアイテムに投資できるようにします。"
     },
     ko: {
       "Products Collection": "제품 컬렉션",
       "Discover our latest product collection, where we share insights, tips, and updates on the latest trends in the industry.": "업계의 최신 트렌드에 대한 통찰력, 팁, 업데이트를 공유하는 최신 제품 컬렉션을 발견하세요.",
-      "LABUBU creates stylish, high-quality designer toys that blend art and trend culture. With careful craftsmanship and unique character design, each product is made to delight, collect, and inspire.": "라부부는 예술과 트렌드 문화를 결합한 스타일리시하고 고품질의 디자이너 토이를 만듭니다. 신중한 장인정신과 독특한 캐릭터 디자인으로 각 제품은 기쁨, 수집, 영감을 주기 위해 만들어집니다.",
       "Dolls brings imagination to life with stylish, collectible figures that blend playful charm, artistic design, and timeless appeal—crafted to be loved, displayed, and desired.": "도울즈는 장난스러운 매력, 예술적 디자인, 시대를 초월한 매력을 결합한 스타일리시한 수집용 피규어로 상상력을 현실로 만듭니다—사랑받고, 전시되고, 원해지도록 제작되었습니다.",
       "Animals Toy sparks wonder with adorable, collectible figures inspired by the wild—where playful design meets heartfelt charm, made to be treasured, shared, and displayed": "애니멀스 토이는 야생에서 영감을 받은 사랑스러운 수집용 피규어로 경이로움을 불러일으킵니다—장난스러운 디자인이 진심 어린 매력과 만나는 곳에서, 소중히 여기고, 공유하고, 전시되도록 만들어졌습니다",
-      "Exceptional Quality:We ensure every Labubu collectible meets the highest standards of craftsmanship and durability": "탁월한 품질: 모든 라부부 수집품이 장인정신과 내구성의 최고 기준을 충족하도록 보장합니다",
       "Charm & Creativity: Our designs combine playfulness and artistic flair, making each product both delightful and display-worthy": "매력과 창의성: 우리의 디자인은 장난스러움과 예술적 재능을 결합하여 각 제품을 즐겁고 전시할 가치가 있게 만듭니다",
       "Versatile Appeal: From home décor to thoughtful gifts, our collection fits into every lifestyle and occasion": "다양한 매력: 홈 데코에서 사려 깊은 선물까지, 우리의 컬렉션은 모든 라이프스타일과 상황에 맞습니다",
       "Sustainable Practices: Our commitment to sustainability is reflected in eco-conscious materials and mindful production methods": "지속 가능한 실천: 지속 가능성에 대한 우리의 약속은 친환경 소재와 신중한 생산 방법에 반영됩니다",
@@ -260,7 +225,6 @@ const translations = {
       "Durable & High-Quality Material": "내구성 있는 고품질 소재",
       "Perfect Gift Appeal": "완벽한 선물 매력",
       "Multi-Functional Use Opportunities": "다기능 사용 기회",
-      "Crafted to fit both 4-inch cotton dolls and 6.69-inch labubu dolls, our clothing sets ensure that each doll has a fashionable and exquisite look, appealing to a broad market and increasing sales opportunities for your business.": "4인치 면 인형과 6.69인치 라부부 인형 모두에 맞도록 제작된 우리의 의류 세트는 각 인형이 패셔너블하고 정교한 외관을 갖도록 보장하여 광범위한 시장에 어필하고 귀하의 비즈니스 판매 기회를 증가시킵니다.",
       "Constructed from premium cotton fabric, these doll clothes are not only durable and wear-resistant but also maintain their vibrant colors and exquisite designs over time, allowing your customers to invest in items that will last and retain their appeal.": "프리미엄 면직물로 제작된 이 인형 의류는 내구성이 있고 마모에 강할 뿐만 아니라 시간이 지나도 생생한 색상과 정교한 디자인을 유지하여 고객이 오래 지속되고 매력을 유지하는 아이템에 투자할 수 있게 합니다."
     }
   }

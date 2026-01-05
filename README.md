@@ -31,8 +31,8 @@ Cloudflare
 ```
 poker-set/
 ├── app/                    # Next.js 页面
-│   ├── (site)/            # 默认路由（默认语言/无前缀）
-│   └── [locale]/          # 非默认语言路由前缀（/es,/fr,/de,/ja,/ko）
+│   ├── (site)/            # 兼容路由（历史英文无前缀；平台侧 301 → /en/...）
+│   └── [locale]/          # 主路由（全语言前缀：/en,/es,/fr,/de,/ja,/ko）
 │
 ├── components/
 │   ├── ui/                # 通用 UI 组件 (Button, Badge 等)
@@ -89,7 +89,7 @@ pnpm -C workers dev
 ```bash
 pnpm build
 # 输出到 out/ 目录
-# 构建前会自动重新生成 public/sitemap.xml
+# 构建会在产物中生成 sitemap.xml / robots.txt（Next.js Metadata Routes：`app/sitemap.js`、`app/robots.js`）
 # 说明：当前 build 使用 Turbopack（next build --turbo）
 ```
 
@@ -136,11 +136,11 @@ export const basic = {
 ### i18n SEO（canonical / hreflang）
 
 当前策略：
-- 默认语言 `en` 使用根路径（例如：`/collection/`、`/product/<id>/`）
-- 非默认语言使用 `/{locale}` 前缀（例如：`/fr/collection/`、`/fr/product/<id>/`）
+- 所有语言统一使用 `/{locale}` 前缀（包含默认语言 `en`，例如：`/en/collection/`、`/fr/product/<id>/`）
+- 根路径 `/` 平台侧 301 → `/en/`（静态导出下不可依赖 middleware）
 
 实现约定：
-- 语言列表与默认语言在 `data/i18n.js` 维护（供页面 metadata 与 `scripts/generate-sitemap.mjs` 共用）
+- 语言列表与默认语言在 `data/i18n.js` 维护（供页面 metadata 与 `app/sitemap.js` 共用）
 - 页面 `metadata/generateMetadata` 优先通过 `lib/hreflang.js` 的 `buildAlternates()` 生成（个别路由仍存在手写/缺失，详见 `docs/I18N.md`）
 - 多语言实现细节与问题追踪：`docs/I18N.md`（权威说明 + 已知问题清单）
 
@@ -213,7 +213,7 @@ export const products = {
 
 - [工程约定](./docs/CONVENTIONS.md) - 开发/目录/命名/CI 约定索引入口
 - [SEO 规范与维护](./docs/SEO.md) - canonical/hreflang/sitemap/robots 维护指南
-- [部署文档](./DEPLOY.md) - 详细部署步骤
+- [部署文档](./docs/DEPLOY.md) - 详细部署步骤
 - [Cloudflare Pages](https://pages.cloudflare.com/)
 - [Cloudflare Workers](https://workers.cloudflare.com/)
 - [Resend](https://resend.com/)

@@ -1,7 +1,7 @@
 import Header from "@/components/features/header";
 import { ChevronRight } from "lucide-react";
 import { getProductsByLanguage } from "@/data/auto-translate";
-import { getNonDefaultLocales, getTranslations } from "@/lib/i18n";
+import { getSupportedLocales, getTranslations } from "@/lib/i18n";
 import Image from "next/image";
 import Link from "next/link";
 import slugify from "slugify";
@@ -15,7 +15,7 @@ const SITE_URL = withTrailingSlash(basic.seo.url);
 
 // 构建时生成所有语言版本
 export async function generateStaticParams() {
-  return getNonDefaultLocales().map(locale => ({ locale }));
+  return getSupportedLocales().map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({ params }) {
@@ -68,7 +68,7 @@ export default function ProductsPage({ params }) {
       "@type": "ListItem",
       "position": 1,
       "name": translations.nav?.home || "Home",
-      "item": SITE_URL
+      "item": `${SITE_URL}${locale}/`
     }, {
       "@type": "ListItem",
       "position": 2,
@@ -82,7 +82,7 @@ export default function ProductsPage({ params }) {
     "@type": "ItemList",
     "itemListElement": productsData.products.map((item, index) => {
       const itemSlug = slugify(item.title, { lower: true, strict: true });
-      const absolutePrefix = locale === 'en' ? '' : `/${locale}`;
+      const absolutePrefix = `/${locale}`;
       return {
         "@type": "ListItem",
         "position": index + 1,

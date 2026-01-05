@@ -1,4 +1,4 @@
-# Labubu API - Cloudflare Workers
+# Template API - Cloudflare Workers
 
 邮件发送和后台管理 API，部署到 Cloudflare Workers，使用 KV 存储配置。
 
@@ -14,6 +14,11 @@
 | `/api/admin/config` | POST | 更新配置 | JWT（管理员） |
 
 ## 快速部署
+
+### 0. 部署前必改（模板约束）
+
+- `workers/wrangler.toml`：修改 `name = "CHANGE_ME_worker_name"` 为你的 Worker 名称（必须全局唯一）
+- （可选）如需启用 `/api/admin/config`：创建 KV 后在 `workers/wrangler.toml` 中启用 `[[kv_namespaces]]` 并填写 `id`
 
 ### 1. 安装依赖
 
@@ -31,7 +36,7 @@ pnpm -C workers exec wrangler login
 pnpm -C workers exec wrangler kv:namespace create "CONFIG_KV"
 ```
 
-更新 `workers/wrangler.toml` 中的 `kv_namespaces.id`。
+在 `workers/wrangler.toml` 中取消注释 `[[kv_namespaces]]` 并填写 `id`。
 
 ### 3. 配置 Secrets
 

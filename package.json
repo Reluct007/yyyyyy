@@ -7,7 +7,6 @@
   "scripts": {
     "dev": "next dev --turbo",
     "dev:turbo": "pnpm dev",
-    "prebuild": "node --no-warnings scripts/generate-sitemap.mjs",
     "build": "next build --turbo",
     "start": "next start",
     "lint": "eslint --ext .js,.jsx,.mjs,.cjs \"app\" \"components\" \"lib\" \"pages\" \"data\" \"scripts\" \"next.config.mjs\" \"tailwind.config.js\" \"postcss.config.mjs\""

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { products } from "@/data/products";
-import { getNonDefaultLocales } from "@/lib/i18n";
+import { getSupportedLocales } from "@/lib/i18n";
 import slugify from "slugify";
 import { generateProductsMetadata } from '@/lib/products-metadata';
 import ProductsClient from './products-client';
@@ -10,7 +10,7 @@ const headerInfo = (slug) => products.products.find(product => slugify(product.t
 
 // Generate static params for all product categories and locales
 export async function generateStaticParams() {
-  const supportedLocales = getNonDefaultLocales();
+  const supportedLocales = getSupportedLocales();
   const params = [];
   
   supportedLocales.forEach(locale => {

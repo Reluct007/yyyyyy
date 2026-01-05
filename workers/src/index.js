@@ -1,5 +1,5 @@
 /**
- * Labubu API - Cloudflare Workers
+ * Template API - Cloudflare Workers
  * 处理邮件发送和后台管理
  */
 
@@ -46,13 +46,13 @@ export default {
       if (path === '/' || path === '') {
         return jsonResponse({
           success: true,
-          msg: 'Labubu API is running',
+          msg: 'API is running',
           endpoints: [
             'POST /api/contact',
             'POST /api/subscribe',
             'POST /api/admin/login',
-            'GET/POST /api/admin/config'
-          ]
+            'GET/POST /api/admin/config',
+          ],
         });
       }
 
@@ -75,7 +75,6 @@ export default {
 
       // 404
       return jsonResponse({ success: false, msg: 'Not found' }, 404);
-
     } catch (error) {
       console.error('Error:', error);
       return jsonResponse({ success: false, msg: 'Internal server error' }, 500);

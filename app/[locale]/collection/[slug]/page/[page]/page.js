@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { products } from "@/data/products";
 import { product } from "@/data/product";
-import { getNonDefaultLocales } from "@/lib/i18n";
+import { getSupportedLocales } from "@/lib/i18n";
 import slugify from "slugify";
 import { generateProductsMetadata } from "@/lib/products-metadata";
 import ProductsClient from "../../products-client";
@@ -18,7 +18,7 @@ const getTotalPagesForCategory = (categoryTitle) => {
 };
 
 export async function generateStaticParams() {
-  const supportedLocales = getNonDefaultLocales();
+  const supportedLocales = getSupportedLocales();
   const params = [];
 
   for (const locale of supportedLocales) {

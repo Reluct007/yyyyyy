@@ -195,7 +195,7 @@ export default function ContactForm({ locale = 'en' }) {
     }
   };
 
-  const privacyUrl = locale === 'en' ? '/privacy-policy/' : `/${locale}/privacy-policy/`;
+  const privacyUrl = `/${locale}/privacy-policy/`;
 
   return (
     <form onSubmit={onSubmitHandler}>

@@ -1,6 +1,6 @@
 import { product } from "@/data/product";
 import { basic } from "@/data/basic";
-import { getNonDefaultLocales, getTranslations } from "@/lib/i18n";
+import { getSupportedLocales, getTranslations } from "@/lib/i18n";
 import { getProductByLanguage, getAllProductsByLanguage } from "@/data/auto-translate";
 import slugify from "slugify";
 import Image from "next/image";
@@ -21,7 +21,7 @@ const getValidProducts = () => product.filter((item) => {
 
 // 静态生成所有语言版本的产品页面
 export async function generateStaticParams() {
-  const supportedLocales = getNonDefaultLocales();
+  const supportedLocales = getSupportedLocales();
   const validProducts = getValidProducts();
   const params = [];
 
@@ -39,6 +39,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { locale, slug } = params || {};
+  const resolvedLocale = locale || 'en';
   
   if (!slug) {
     return {
@@ -58,8 +59,9 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const translatedProduct = getProductByLanguage(locale || 'en', slug) || originalProduct;
-  const urlPrefix = locale === 'en' ? '' : `/${locale}`;
+  const translatedProduct =
+    getProductByLanguage(resolvedLocale, slug) || originalProduct;
+  const urlPrefix = `/${resolvedLocale}`;
   const description = translatedProduct.description?.length > 160 
     ? translatedProduct.description.substring(0, 157) + '...' 
     : translatedProduct.description;
@@ -88,7 +90,7 @@ export default async function ProductPage({ params }) {
       <section className="py-16 px-4 text-center">
         <h1 className="text-2xl font-semibold">{translations.product?.notFound || "Product Not Found"}</h1>
         <p className="text-muted-foreground mt-2">The requested product could not be found.</p>
-        <Link href={locale === 'en' ? '/collection/' : `/${locale}/collection/`} className="text-primary mt-4 inline-block">
+        <Link href={`/${locale}/collection/`} className="text-primary mt-4 inline-block">
           {translations.nav?.products || "Browse All Products"}
         </Link>
       </section>
@@ -116,7 +118,7 @@ export default async function ProductPage({ params }) {
       return { ...p, id: pSlug, title: translated?.title || p.title, description: translated?.description || p.description };
     });
 
-  const urlPrefix = locale === 'en' ? '' : `/${locale}`;
+  const urlPrefix = `/${locale}`;
   const canonicalUrl = `${ROOT_URL}${urlPrefix}/product/${productId}/`;
 
   const breadcrumbJsonLd = {
@@ -126,7 +128,7 @@ export default async function ProductPage({ params }) {
       "@type": "ListItem",
       "position": 1,
       "name": translations.nav?.home || "Home",
-      "item": `${ROOT_URL}/`
+      "item": `${ROOT_URL}${urlPrefix}/`
     }, {
       "@type": "ListItem",
       "position": 2,
@@ -171,7 +173,8 @@ export default async function ProductPage({ params }) {
                 className="w-full border border-border rounded-lg h-full object-cover"
                 width={800}
                 height={600}
-                priority
+                loading="eager"
+                fetchPriority="high"
               />
             )}
             {productItem.images && productItem.images.length > 0 && (
@@ -184,12 +187,15 @@ export default async function ProductPage({ params }) {
                     className="w-full border border-border rounded-lg object-cover"
                     width={400}
                     height={300}
+                    loading="lazy"
+                    fetchPriority="low"
                   />
                 ))}
               </div>
             )}
           </div>
 
+          <h2 className="sr-only">{translations.product?.features || "Key Features"}</h2>
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <div className="col-span-2">
               <div className="grid gap-4 grid-cols-1 md:grid-cols-2 h-full">
@@ -202,7 +208,9 @@ export default async function ProductPage({ params }) {
                 ))}
               </div>
             </div>
-            <div><ContactForm locale={locale} /></div>
+            <div>
+              <ContactForm locale={locale} />
+            </div>
           </div>
 
           <div className="flex flex-col gap-2">
@@ -214,9 +222,17 @@ export default async function ProductPage({ params }) {
               <div key={index} className="rounded-lg border h-full">
                 <div className="relative">
                   <Link href={`${urlPrefix}/product/${item.id}/`}>
-                    <Image src={item.image} alt={item.title} className="w-full rounded-t-lg object-cover aspect-square" width={400} height={400} />
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full rounded-t-lg object-cover aspect-square"
+                      width={400}
+                      height={400}
+                      loading="lazy"
+                      fetchPriority="low"
+                    />
                   </Link>
-                  <Badge variant="outline" className="absolute left-5 top-5 bg-primary-foreground">
+                  <Badge asChild variant="outline" className="absolute left-5 top-5 bg-primary-foreground">
                     <Link
                       href={`${urlPrefix}/collection/${slugify(item.category, { lower: true, strict: true })}/`}
                       aria-label={`Browse ${item.category} products`}
@@ -226,10 +242,17 @@ export default async function ProductPage({ params }) {
                   </Badge>
                 </div>
                 <div className="p-4 space-y-2">
-                  <Link href={`${urlPrefix}/product/${item.id}/`}><h3 className="text-lg font-semibold line-clamp-2">{item.title}</h3></Link>
+                  <Link href={`${urlPrefix}/product/${item.id}/`}>
+                    <h3 className="text-lg font-semibold line-clamp-2">{item.title}</h3>
+                  </Link>
                   <p className="text-base text-muted-foreground line-clamp-3">{item.description}</p>
-                  <Link href={`${urlPrefix}/product/${item.id}/`} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary">
-                    {translations.product?.learnMore || "Learn More"} <ChevronRight className="w-4" />
+                  <Link
+                    href={`${urlPrefix}/product/${item.id}/`}
+                    aria-label={`${translations.product?.learnMore || "Learn More"}: ${item.title}`}
+                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
+                  >
+                    {translations.product?.learnMore || "Learn More"} <span className="sr-only">: {item.title}</span>{" "}
+                    <ChevronRight className="w-4" aria-hidden="true" />
                   </Link>
                 </div>
               </div>

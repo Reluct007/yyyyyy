@@ -3,6 +3,10 @@ import { verifyToken } from '../../utils/jwt.js';
 
 const CONFIG_KEY = 'site_config';
 
+function hasKv(env) {
+  return Boolean(env?.CONFIG_KV && typeof env.CONFIG_KV.get === 'function' && typeof env.CONFIG_KV.put === 'function');
+}
+
 // 默认配置
 const defaultConfig = {
   contactEmail: '',
@@ -30,7 +34,7 @@ async function triggerDeploy(deployHookUrl) {
 }
 
 export async function handleConfig(request, env) {
-  const jwtSecret = env.JWT_SECRET || 'your-secret-key-change-in-production';
+  const kvAvailable = hasKv(env);
 
   // GET 请求
   if (request.method === 'GET') {
@@ -40,18 +44,25 @@ export async function handleConfig(request, env) {
       let isAdmin = false;
       
       if (authHeader) {
+        if (!env.JWT_SECRET) {
+          return jsonResponse({ success: false, msg: 'JWT_SECRET not configured' }, 500);
+        }
         const token = authHeader.replace('Bearer ', '');
-        const payload = await verifyToken(token, jwtSecret);
+        const payload = await verifyToken(token, env.JWT_SECRET);
         isAdmin = payload && payload.role === 'admin';
       }
 
-      let config = await env.CONFIG_KV.get(CONFIG_KEY, 'json');
+      let config = null;
+      if (kvAvailable) {
+        config = await env.CONFIG_KV.get(CONFIG_KEY, 'json');
+      }
       if (!config) config = defaultConfig;
 
       // 非管理员只返回公开配置
       if (!isAdmin) {
         return jsonResponse({
           success: true,
+          kvAvailable,
           config: {
             siteName: config.siteName,
             seoTitle: config.seoTitle,
@@ -64,6 +75,7 @@ export async function handleConfig(request, env) {
       // 管理员返回完整配置
       return jsonResponse({
         success: true,
+        kvAvailable,
         config: {
           ...config,
           _effectiveContactEmail: config.contactEmail || env.CONTACT_EMAIL || 'Not set',
@@ -79,13 +91,21 @@ export async function handleConfig(request, env) {
   // POST 请求 - 需要管理员权限
   if (request.method === 'POST') {
     try {
+      if (!kvAvailable) {
+        return jsonResponse({ success: false, msg: 'CONFIG_KV not configured' }, 503);
+      }
+
+      if (!env.JWT_SECRET) {
+        return jsonResponse({ success: false, msg: 'JWT_SECRET not configured' }, 500);
+      }
+
       const authHeader = request.headers.get('Authorization');
       if (!authHeader) {
         return jsonResponse({ success: false, msg: 'No token provided' }, 401);
       }
 
       const token = authHeader.replace('Bearer ', '');
-      const payload = await verifyToken(token, jwtSecret);
+      const payload = await verifyToken(token, env.JWT_SECRET);
 
       if (!payload || payload.role !== 'admin') {
         return jsonResponse({ success: false, msg: 'Invalid or expired token' }, 401);
