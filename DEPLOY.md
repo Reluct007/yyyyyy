@@ -36,7 +36,7 @@ pnpm -C workers exec wrangler -v  # 应显示 3.x.x 或更高（需先安装依�
 
 ```bash
 git clone <your-repo-url>
-cd labubu
+cd <repo-dir>
 ```
 
 ### 2. 安装依赖
@@ -54,6 +54,8 @@ pnpm dev
 # 终端 2: 启动 API (可选)
 pnpm -C workers dev
 ```
+
+本地联调前端与 Workers 时，建议设置 `NEXT_PUBLIC_API_URL=http://localhost:8787`（例如写入 `.env.local`），否则会使用前端代码中的默认 API 地址。
 
 ### 4. 验证
 
@@ -76,7 +78,7 @@ pnpm -C workers dev
 | 生产分支 | `main` |
 | 构建命令 | `pnpm run build` |
 | 构建输出目录 | `out` |
-| 根目录 | `labubu` (如果是子目录) |
+| 根目录 | 留空（仓库根目录；如为子目录部署再填写） |
 
 ### 步骤 3: 配置环境变量
 
@@ -121,6 +123,14 @@ pnpm -C workers exec wrangler secret put CONTACT_EMAIL
 # 设置发件邮箱
 pnpm -C workers exec wrangler secret put FROM_EMAIL
 # 输入已在 Resend 验证的发件邮箱
+
+# （可选）启用后台管理/配置接口（/api/admin/*）
+pnpm -C workers exec wrangler secret put ADMIN_USERNAME
+pnpm -C workers exec wrangler secret put ADMIN_PASSWORD
+pnpm -C workers exec wrangler secret put JWT_SECRET
+
+# （可选）保存配置后触发 Cloudflare Pages 重新构建
+pnpm -C workers exec wrangler secret put DEPLOY_HOOK_URL
 ```
 
 ### 步骤 3: 部署
@@ -179,6 +189,10 @@ pnpm -C workers exec wrangler deploy --keep-vars
 | `RESEND_API_KEY` | Resend API 密钥 |
 | `CONTACT_EMAIL` | 接收表单的邮箱 |
 | `FROM_EMAIL` | 发件邮箱 (需验证域名) |
+| `ADMIN_USERNAME` | （可选）管理员用户名（默认 `admin`） |
+| `ADMIN_PASSWORD` | （可选）管理员密码（启用管理员登录必填） |
+| `JWT_SECRET` | （可选）JWT 签名密钥（生产环境强烈建议配置） |
+| `DEPLOY_HOOK_URL` | （可选）Pages Deploy Hook URL（配置更新后自动触发重新构建） |
 
 ## 🔄 更新部署
 
@@ -241,7 +255,7 @@ npm i -g pnpm
 
 # 3. 克隆代码
 git clone <repo-url>
-cd labubu
+cd <repo-dir>
 
 # 4. 安装依赖
 pnpm install

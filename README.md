@@ -91,7 +91,7 @@ pnpm -C workers dev
 pnpm build
 # 输出到 out/ 目录
 # 构建前会自动重新生成 public/sitemap.xml
-# 说明：当前 build 使用 Turbopack（next build --turbopack）
+# 说明：当前 build 使用 Turbopack（next build --turbo）
 ```
 
 ## CI
