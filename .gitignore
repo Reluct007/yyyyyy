@@ -12,6 +12,7 @@ dist/
 .cloudflare/
 .open-next/
 public/themes/
+.codex/
 
 # 环境变量
 .env

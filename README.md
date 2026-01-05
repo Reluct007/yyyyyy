@@ -31,9 +31,8 @@ Cloudflare
 ```
 poker-set/
 ├── app/                    # Next.js 页面
-│   ├── [locale]/          # 多语言路由 (en/es/fr/de/ja/ko)
-│   ├── product/[slug]/    # 产品详情页
-│   └── collection/[slug]/ # 产品分类页
+│   ├── (site)/            # 默认路由（默认语言/无前缀）
+│   └── [locale]/          # 非默认语言路由前缀（/es,/fr,/de,/ja,/ko）
 │
 ├── components/
 │   ├── ui/                # 通用 UI 组件 (Button, Badge 等)
@@ -142,7 +141,8 @@ export const basic = {
 
 实现约定：
 - 语言列表与默认语言在 `data/i18n.js` 维护（供页面 metadata 与 `scripts/generate-sitemap.mjs` 共用）
-- 页面 `metadata/generateMetadata` 不再手写 `alternates.languages`，统一通过 `lib/hreflang.js` 的 `buildAlternates()` 生成
+- 页面 `metadata/generateMetadata` 优先通过 `lib/hreflang.js` 的 `buildAlternates()` 生成（个别路由仍存在手写/缺失，详见 `docs/I18N.md`）
+- 多语言实现细节与问题追踪：`docs/I18N.md`（权威说明 + 已知问题清单）
 
 ### 主题颜色（全站）
 
