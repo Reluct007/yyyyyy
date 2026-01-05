@@ -119,7 +119,113 @@ SEO 相关配置与逻辑集中在以下位置（按“改动频率/影响面”
   - 新增动态路由：确保脚本生成的 `logicalPath` 与真实路由一致（且以 `/` 结尾）
   - 新增/删除语言：仅修改 `data/i18n.js`，sitemap 会随之扩展/收敛
 
-## 8. 常见变更场景清单
+## 8. Cloudflare（Pages）平台侧优化（SEO/性能）
+
+本仓库部署目标为 Cloudflare Pages 的纯静态站点。平台侧优化的核心原则是：不要破坏缓存、尽可能前移到 build/edge、避免引入 runtime 服务端能力。
+
+说明：
+
+- 下述配置项的可用性受 Cloudflare 计划（Free/Pro/Business）与域名接入方式影响；以 Cloudflare Dashboard 实际可见项为准。
+- 若仅使用 `*.pages.dev` 域名，部分 Zone 级能力（例如 Cache Rules/部分优化开关）可能无法配置；建议绑定自定义域名并接入 Cloudflare。
+
+### 必开项（不打开 = 白白浪费性能）
+
+1) 纯静态输出 + 缓存友好
+
+- 构建输出必须是纯静态文件：`next.config.mjs` 使用 `output: "export"`（本仓库已对齐）
+- 避免破坏缓存：
+  - 不要在 HTML 内人为拼接随机 query（例如 `?v=timestamp`）
+  - 避免使用 `cache: "no-store"`/`no-store` 的 fetch（会阻断静态缓存与复用）；如必须用动态数据，优先在 build 阶段生成
+
+2) Brotli 压缩（默认开启，确认即可）
+
+- Cloudflare 默认对 HTML/JS/CSS 使用 Brotli（优于 gzip）
+- 不建议在构建阶段自行做 gzip/brotli 预压缩（容易造成重复压缩或缓存策略复杂化）
+
+3) HTTP/3（QUIC）
+
+- 路径：Cloudflare Dashboard → Network → HTTP/3 (QUIC)
+- 价值：移动端/跨国链路更快；对国际流量与爬虫友好
+
+### 强烈建议（性价比高）
+
+4) Cache Rules（明确缓存 HTML）
+
+纯静态站点可以大胆使用 Cache Rules，目标是：
+
+- 静态资源（JS/CSS/字体/图片）长缓存（1y）
+- HTML 在 Edge 侧可缓存（提升爬虫与全球访问一致性），同时保证可控的更新策略
+
+推荐思路（示例，按需取舍）：
+
+- 规则 A：对静态资源路径/后缀设置长缓存（例如 `/_next/static/*`、`*.js`、`*.css`、`*.woff2`、`*.png`、`*.webp`）
+  - Cache: Cache everything
+  - Edge TTL: 1 year
+  - Browser TTL: 1 year（或按业务更保守）
+- 规则 B：对页面请求（HTML）缓存（例如匹配 `yourdomain.com/*` 且排除静态资源）
+  - Cache: Cache everything
+  - Edge TTL: 1 day ~ 7 days（若设置到 1 year，务必确认部署后有可靠的 purge/invalidation 流程）
+  - Browser TTL: 1 day（或更短）
+- Cache Key：建议忽略 UTM 等营销参数，避免缓存碎片（可结合 Workers 做 URL 规范化，见下文“进阶项”）
+
+5) 图片优化（Polish / Mirage / Images）
+
+本仓库 `next.config.mjs` 配置 `images.unoptimized: true`，即不依赖 Next.js runtime 图片优化，平台侧优化性价比更高：
+
+- 方案 A（推荐，改动最小）：开启 Polish（WebP/AVIF）与 Mirage
+  - 路径：Speed → Optimization → Images
+- 方案 B（进阶）：使用 Cloudflare Images 或 `https://<domain>/cdn-cgi/image/...` 做按需转换
+  - 注意：当前 `public/robots.txt` 里包含 `Disallow: /cdn-cgi/*`；若将 `/cdn-cgi/image/` 用作页面图片 `src`，需评估是否放行相关路径，避免影响搜索引擎抓取图片/渲染
+
+6) Auto Minify（HTML/CSS/JS）
+
+- 路径：Speed → Optimization
+- 对 Next.js 静态导出通常安全且有效（减少体积、降低传输与解析成本）
+
+7) Early Hints
+
+- 路径：Speed → Optimization → Early Hints
+- 价值：更早触发关键资源拉取（CSS/字体/Hero 图等），对 LCP 友好（本仓库 layout 中已存在 `preload`，Early Hints 可进一步放大收益）
+
+### 进阶项（B 端/SEO/高质量站点）
+
+8) Cloudflare Workers（做边缘增强，不做 SSR）
+
+适用场景：
+
+- 国家/语言自动跳转（避免在前端做重定向导致首屏与爬虫混乱）
+- UTM 清洗/规范化（减少缓存碎片、统一 canonical）
+- A/B Test（不重新构建）
+- 轻量防爬虫与限流（不影响主站静态缓存）
+
+原则：HTML 不动态生成，仅在 Edge 做路由/重写/headers/规则增强；避免引入“需要运行时”的渲染逻辑。
+
+9) Cloudflare Web Analytics（低侵入统计）
+
+- 路径：Analytics → Web Analytics
+- 特点：无 cookie、低 JS 成本，较少影响性能与 SEO（相对传统统计脚本更友好）
+
+10) Bot 管理与限流
+
+- 若有表单/报价入口，可考虑启用 Bot Fight Mode 与轻量 Rate Limiting（按业务风险评估）
+- 明确避免误伤搜索引擎爬虫（Google/Bing 等），对挑战策略与规则白名单需谨慎配置
+
+### Next.js + Pages 专属注意
+
+- HTML 一定要“可缓存”：避免自定义 headers 强制 `no-cache/no-store`；避免为 HTML 引入 hash 文件名（会破坏稳定 URL 与收录）
+- 图片策略建议：静态图片（`public/` 或构建产物）+ Cloudflare Polish + 合理 TTL；避免引入 runtime 图片处理链路
+
+### 推荐开启清单（照抄）
+
+- HTTP/3 (QUIC)
+- Brotli
+- Auto Minify（HTML/CSS/JS）
+- Early Hints
+- Polish（WebP/AVIF），可选 Mirage
+- Cache Rules：静态资源长缓存 + HTML 可控缓存（并处理 UTM/查询参数的缓存碎片）
+- Web Analytics
+
+## 9. 常见变更场景清单
 
 ### 改域名（root URL）
 
@@ -157,7 +263,7 @@ SEO 相关配置与逻辑集中在以下位置（按“改动频率/影响面”
     - `scripts/generate-sitemap.mjs` 的 slug 生成策略
   - 原则：避免出现 sitemap 指向未构建的 URL（会造成 404 与抓取噪音）
 
-## 9. 验证（本地/CI 对齐）
+## 10. 验证（本地/CI 对齐）
 
 - `pnpm lint`
 - `pnpm build`（会自动重建 `public/sitemap.xml`）
