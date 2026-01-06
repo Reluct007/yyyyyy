@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+dist/
+build/
+coverage/
+.vercel/
+.cloudflare/
+.open-next/
+.codex/
+public/themes/
+
+# Lockfiles
+pnpm-lock.yaml
