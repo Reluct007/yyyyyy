@@ -17,19 +17,19 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { locale } = params;
-  const { title, description } = getSeoMeta('home', locale);
-  
+  const { title, description } = getSeoMeta("home", locale);
+
   const localeMap = {
-    'en': 'en_US',
-    'es': 'es_ES',
-    'fr': 'fr_FR',
-    'de': 'de_DE',
-    'ja': 'ja_JP',
-    'ko': 'ko_KR',
+    en: "en_US",
+    es: "es_ES",
+    fr: "fr_FR",
+    de: "de_DE",
+    ja: "ja_JP",
+    ko: "ko_KR",
   };
 
   const canonicalUrl = `${SITE_URL}${locale}/`;
-  
+
   return {
     metadataBase: new URL(SITE_URL),
     title,
@@ -44,8 +44,8 @@ export async function generateMetadata({ params }) {
       description,
       url: canonicalUrl,
       siteName: basic.info.brand,
-      locale: localeMap[locale] || 'en_US',
-      type: 'website',
+      locale: localeMap[locale] || "en_US",
+      type: "website",
     },
     twitter: {
       ...twitterMetadata,
@@ -58,7 +58,7 @@ export async function generateMetadata({ params }) {
 export default function LocaleLayout({ children, params }) {
   const { locale } = params;
   const supportedLocales = getSupportedLocales();
-  
+
   if (!supportedLocales.includes(locale)) {
     notFound();
   }
@@ -67,25 +67,25 @@ export default function LocaleLayout({ children, params }) {
   const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": basic.info.brand,
-    "url": SITE_URL,
-    "logo": `${SITE_URL}logo1.webp`,
-    "description": basic.seo.description,
-    "contactPoint": {
+    name: basic.info.brand,
+    url: SITE_URL,
+    logo: `${SITE_URL}logo1.webp`,
+    description: basic.seo.description,
+    contactPoint: {
       "@type": "ContactPoint",
-      "contactType": "customer service",
-      "email": basic.info.email,
-      "url": `${SITE_URL}contact/`
+      contactType: "customer service",
+      email: basic.info.email,
+      url: `${SITE_URL}contact/`,
     },
-    "sameAs": [SITE_URL],
+    sameAs: [SITE_URL],
   };
 
   // Website Structured Data
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": basic.info.brand,
-    "url": SITE_URL,
+    name: basic.info.brand,
+    url: SITE_URL,
   };
 
   return (

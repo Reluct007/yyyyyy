@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Navigation2 } from "lucide-react"
-import { useState, useEffect } from 'react';
+import { Button } from "@/components/ui/button";
+import { Navigation2 } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,12 +16,12 @@ export default function ScrollToTop() {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -34,4 +34,4 @@ export default function ScrollToTop() {
       )}
     </div>
   );
-};
+}

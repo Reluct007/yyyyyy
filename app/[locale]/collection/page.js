@@ -28,8 +28,8 @@ export async function generateMetadata({ params }) {
     defaultLocale: DEFAULT_LOCALE,
   });
   const canonicalUrl = alternates.canonical;
-  const { title, description } = getSeoMeta('products', locale);
-  
+  const { title, description } = getSeoMeta("products", locale);
+
   return {
     title,
     description,
@@ -64,30 +64,33 @@ export default function ProductsPage({ params }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [{
-      "@type": "ListItem",
-      "position": 1,
-      "name": translations.nav?.home || "Home",
-      "item": `${SITE_URL}${locale}/`
-    }, {
-      "@type": "ListItem",
-      "position": 2,
-      "name": translations.nav?.products || "Products Collection",
-      "item": `${SITE_URL}${locale}/collection/`
-    }]
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: translations.nav?.home || "Home",
+        item: `${SITE_URL}${locale}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: translations.nav?.products || "Products Collection",
+        item: `${SITE_URL}${locale}/collection/`,
+      },
+    ],
   };
 
   const itemListJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "itemListElement": productsData.products.map((item, index) => {
+    itemListElement: productsData.products.map((item, index) => {
       const itemSlug = slugify(item.title, { lower: true, strict: true });
       const absolutePrefix = `/${locale}`;
       return {
         "@type": "ListItem",
-        "position": index + 1,
-        "name": item.title,
-        "url": `${rootUrl}${absolutePrefix}/collection/${itemSlug}/`,
+        position: index + 1,
+        name: item.title,
+        url: `${rootUrl}${absolutePrefix}/collection/${itemSlug}/`,
       };
     }),
   };
@@ -103,18 +106,18 @@ export default function ProductsPage({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
-      
+
       {/* Header */}
       <Header data={productsData.header} />
-      
+
       {/* Products Collection */}
-      <section className="py-8 px-2">
+      <section className="px-2 py-8">
         <div className="container mx-auto">
-          <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {productsData.products.map((item, index) => {
               const itemSlug = slugify(item.title, { lower: true, strict: true });
               const itemUrl = `${urlPrefix}/collection/${itemSlug}/`;
-              
+
               return (
                 <div key={index} className="rounded-lg border">
                   <Link href={itemUrl}>
@@ -126,7 +129,7 @@ export default function ProductsPage({ params }) {
                       height={500}
                     />
                   </Link>
-                  <div className="p-4 space-y-2">
+                  <div className="space-y-2 p-4">
                     <Link href={itemUrl}>
                       <h3 className="text-xl font-semibold">{item.title}</h3>
                     </Link>
@@ -139,7 +142,8 @@ export default function ProductsPage({ params }) {
                       href={itemUrl}
                       className="flex items-center gap-2 text-sm text-muted-foreground"
                     >
-                      {translations.product?.learnMore || "Read More"} <ChevronRight className="w-4" />
+                      {translations.product?.learnMore || "Read More"}{" "}
+                      <ChevronRight className="w-4" />
                     </Link>
                   </div>
                 </div>

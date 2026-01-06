@@ -44,11 +44,8 @@ export default function ReturnPolicyPage() {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8">{content.title || "Return Policy"}</h1>
-      <div
-        className="prose max-w-4xl"
-        dangerouslySetInnerHTML={{ __html: content.content }}
-      />
+      <h1 className="mb-8 text-4xl font-bold">{content.title || "Return Policy"}</h1>
+      <div className="prose max-w-4xl" dangerouslySetInnerHTML={{ __html: content.content }} />
     </div>
   );
 }

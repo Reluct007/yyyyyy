@@ -7,9 +7,8 @@ import ProductsClient from "../../products-client";
 
 const ITEMS_PER_PAGE = 52;
 
-const getCategoryBySlug = (slug) => (
-  products.products.find((item) => slugify(item.title, { lower: true, strict: true }) === slug)
-);
+const getCategoryBySlug = (slug) =>
+  products.products.find((item) => slugify(item.title, { lower: true, strict: true }) === slug);
 
 const getTotalPagesForCategory = (categoryTitle) => {
   const totalItems = product.filter((item) => item.category === categoryTitle).length;

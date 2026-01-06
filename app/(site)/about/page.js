@@ -1,6 +1,6 @@
 import { about } from "@/data/about";
 import { basic } from "@/data/basic";
-import AboutClient from './about-client';
+import AboutClient from "./about-client";
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/data/i18n";
 import { buildAlternates } from "@/lib/hreflang";
 import { openGraphImage, twitterMetadata } from "@/lib/shared-metadata";

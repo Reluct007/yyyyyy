@@ -1,24 +1,24 @@
-import { jsonResponse } from '../utils/response.js';
-import { sendEmail } from '../utils/resend.js';
+import { jsonResponse } from "../utils/response.js";
+import { sendEmail } from "../utils/resend.js";
 
-const CONFIG_KEY = 'site_config';
+const CONFIG_KEY = "site_config";
 
 // 获取邮件配置
 async function getEmailConfig(env) {
   let config = {};
-  
+
   try {
-    const stored = await env.CONFIG_KV.get(CONFIG_KEY, 'json');
+    const stored = await env.CONFIG_KV.get(CONFIG_KEY, "json");
     if (stored) config = stored;
   } catch (e) {
-    console.log('KV not available, using env vars');
+    console.log("KV not available, using env vars");
   }
 
   return {
-    contactEmail: config.contactEmail || env.CONTACT_EMAIL || 'larry@pokerset.com',
-    fromEmail: config.fromEmail || env.FROM_EMAIL || 'noreply@pokerset.com',
-    fromName: config.fromName || 'Poker Kit',
-    siteName: config.siteName || 'Poker Kit',
+    contactEmail: config.contactEmail || env.CONTACT_EMAIL || "larry@pokerset.com",
+    fromEmail: config.fromEmail || env.FROM_EMAIL || "noreply@pokerset.com",
+    fromName: config.fromName || "Poker Kit",
+    siteName: config.siteName || "Poker Kit",
   };
 }
 
@@ -26,14 +26,14 @@ export async function handleSubscribe(request, env) {
   try {
     const { email } = await request.json();
 
-    if (!email || !email.includes('@')) {
-      return jsonResponse({ success: false, msg: 'Please enter a valid email' }, 400);
+    if (!email || !email.includes("@")) {
+      return jsonResponse({ success: false, msg: "Please enter a valid email" }, 400);
     }
 
     // 检查必要的环境变量
     if (!env.RESEND_API_KEY) {
-      console.error('RESEND_API_KEY not configured');
-      return jsonResponse({ success: false, msg: 'Email service not configured' }, 500);
+      console.error("RESEND_API_KEY not configured");
+      return jsonResponse({ success: false, msg: "Email service not configured" }, 500);
     }
 
     // 获取动态配置
@@ -44,11 +44,11 @@ export async function handleSubscribe(request, env) {
       await sendEmail(env.RESEND_API_KEY, {
         from: `${emailConfig.fromName} <${emailConfig.fromEmail}>`,
         to: emailConfig.contactEmail,
-        subject: 'New Newsletter Subscription',
+        subject: "New Newsletter Subscription",
         html: `<h2>New Subscription</h2><p><strong>${email}</strong></p>`,
       });
     } catch (adminEmailError) {
-      console.error('Failed to send admin notification:', adminEmailError.message);
+      console.error("Failed to send admin notification:", adminEmailError.message);
       // 继续执行，不阻止订阅
     }
 
@@ -65,13 +65,13 @@ export async function handleSubscribe(request, env) {
         `,
       });
     } catch (welcomeEmailError) {
-      console.error('Failed to send welcome email:', welcomeEmailError.message);
+      console.error("Failed to send welcome email:", welcomeEmailError.message);
       // 欢迎邮件失败不影响订阅成功
     }
 
-    return jsonResponse({ success: true, msg: 'Subscribed successfully!' });
+    return jsonResponse({ success: true, msg: "Subscribed successfully!" });
   } catch (error) {
-    console.error('Subscribe error:', error);
-    return jsonResponse({ success: false, msg: 'Failed to subscribe' }, 500);
+    console.error("Subscribe error:", error);
+    return jsonResponse({ success: false, msg: "Failed to subscribe" }, 500);
   }
 }

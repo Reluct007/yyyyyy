@@ -1,6 +1,6 @@
 import { contact } from "@/data/contact";
 import { basic } from "@/data/basic";
-import ContactClient from './contact-client';
+import ContactClient from "./contact-client";
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/data/i18n";
 import { buildAlternates } from "@/lib/hreflang";
 import { openGraphImage, twitterMetadata } from "@/lib/shared-metadata";

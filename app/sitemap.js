@@ -21,12 +21,10 @@ const STATIC_PAGES = [
 const toSlug = (text) => slugify(text ?? "", { lower: true, strict: true });
 
 export default function sitemap() {
-  const siteUrl = (basic?.seo?.url || basic?.info?.link || "")
-    .trim()
-    .replace(/\/+$/, "");
+  const siteUrl = (basic?.seo?.url || basic?.info?.link || "").trim().replace(/\/+$/, "");
   if (!siteUrl) {
     throw new Error(
-      "Missing site root URL: set `basic.seo.url` (or `basic.info.link`) in data/basic.js"
+      "Missing site root URL: set `basic.seo.url` (or `basic.info.link`) in data/basic.js",
     );
   }
 

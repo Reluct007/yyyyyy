@@ -9,7 +9,9 @@
     "dev:turbo": "pnpm dev",
     "build": "next build --turbo",
     "start": "next start",
-    "lint": "eslint --ext .js,.jsx,.mjs,.cjs \"app\" \"components\" \"lib\" \"pages\" \"data\" \"scripts\" \"next.config.mjs\" \"tailwind.config.js\" \"postcss.config.mjs\""
+    "lint": "eslint --ext .js,.jsx,.mjs,.cjs \"app\" \"components\" \"lib\" \"pages\" \"data\" \"scripts\" \"next.config.mjs\" \"tailwind.config.js\" \"postcss.config.mjs\"",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@fontsource/inter": "^5.1.1",
@@ -35,7 +37,10 @@
   "devDependencies": {
     "eslint": "^8.57.1",
     "eslint-config-next": "15.5.9",
+    "eslint-config-prettier": "^10.1.8",
     "postcss": "^8",
+    "prettier": "^3.7.4",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^3.4.1"
   }
 }

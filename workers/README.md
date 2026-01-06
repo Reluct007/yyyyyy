@@ -4,14 +4,14 @@
 
 ## API 端点
 
-| 端点 | 方法 | 说明 | 认证 |
-|-----|------|------|-----|
-| `/` | GET | API 状态 | 无 |
-| `/api/contact` | POST | 联系表单 | 无 |
-| `/api/subscribe` | POST | 邮件订阅 | 无 |
-| `/api/admin/login` | POST | 管理员登录 | 无 |
-| `/api/admin/config` | GET | 获取配置 | 无（可选 JWT；带管理员 token 会返回完整配置） |
-| `/api/admin/config` | POST | 更新配置 | JWT（管理员） |
+| 端点                | 方法 | 说明       | 认证                                          |
+| ------------------- | ---- | ---------- | --------------------------------------------- |
+| `/`                 | GET  | API 状态   | 无                                            |
+| `/api/contact`      | POST | 联系表单   | 无                                            |
+| `/api/subscribe`    | POST | 邮件订阅   | 无                                            |
+| `/api/admin/login`  | POST | 管理员登录 | 无                                            |
+| `/api/admin/config` | GET  | 获取配置   | 无（可选 JWT；带管理员 token 会返回完整配置） |
+| `/api/admin/config` | POST | 更新配置   | JWT（管理员）                                 |
 
 ## 快速部署
 
@@ -86,14 +86,14 @@ workers/
 
 ## 环境变量 (Secrets)
 
-| 变量名 | 说明 |
-|-------|------|
-| `RESEND_API_KEY` | Resend API 密钥 |
-| `CONTACT_EMAIL` | 默认接收邮箱 |
-| `FROM_EMAIL` | 默认发件邮箱 |
-| `ADMIN_USERNAME` | 管理员用户名（默认 `admin`） |
-| `ADMIN_PASSWORD` | 管理员密码（启用管理员登录必填） |
-| `JWT_SECRET` | JWT 签名密钥（生产环境必填） |
+| 变量名            | 说明                                                                   |
+| ----------------- | ---------------------------------------------------------------------- |
+| `RESEND_API_KEY`  | Resend API 密钥                                                        |
+| `CONTACT_EMAIL`   | 默认接收邮箱                                                           |
+| `FROM_EMAIL`      | 默认发件邮箱                                                           |
+| `ADMIN_USERNAME`  | 管理员用户名（默认 `admin`）                                           |
+| `ADMIN_PASSWORD`  | 管理员密码（启用管理员登录必填）                                       |
+| `JWT_SECRET`      | JWT 签名密钥（生产环境必填）                                           |
 | `DEPLOY_HOOK_URL` | （可选）Cloudflare Pages Deploy Hook URL（用于配置更新后触发重新构建） |
 
 ## 配置存储 (KV)

@@ -3,6 +3,7 @@
 本文描述本仓库当前 SEO 实现的“事实标准”与维护流程，目标是降低多人协作下的 SEO 走样与遗漏成本。若本文与代码实现不一致，以代码实现为准。
 
 补充文档：
+
 - 工程约束与长期策略路线图：`docs/Next.js-App-Router-static-SEO.md`（静态导出/Cloudflare 注意事项、SEO PR Checklist、长期复利路线图）
 
 ## 1. 单一事实源（SoT）
@@ -136,26 +137,26 @@ robots 由 `app/robots.js` 在构建时生成（静态导出产物包含 `robots
 
 ### 必开项（不打开 = 白白浪费性能）
 
-1) 纯静态输出 + 缓存友好
+1. 纯静态输出 + 缓存友好
 
 - 构建输出必须是纯静态文件：`next.config.mjs` 使用 `output: "export"`（本仓库已对齐）
 - 避免破坏缓存：
   - 不要在 HTML 内人为拼接随机 query（例如 `?v=timestamp`）
   - 避免使用 `cache: "no-store"`/`no-store` 的 fetch（会阻断静态缓存与复用）；如必须用动态数据，优先在 build 阶段生成
 
-2) Brotli 压缩（默认开启，确认即可）
+2. Brotli 压缩（默认开启，确认即可）
 
 - Cloudflare 默认对 HTML/JS/CSS 使用 Brotli（优于 gzip）
 - 不建议在构建阶段自行做 gzip/brotli 预压缩（容易造成重复压缩或缓存策略复杂化）
 
-3) HTTP/3（QUIC）
+3. HTTP/3（QUIC）
 
 - 路径：Cloudflare Dashboard → Network → HTTP/3 (QUIC)
 - 价值：移动端/跨国链路更快；对国际流量与爬虫友好
 
 ### 强烈建议（性价比高）
 
-4) Cache Rules（明确缓存 HTML）
+4. Cache Rules（明确缓存 HTML）
 
 纯静态站点可以大胆使用 Cache Rules，目标是：
 
@@ -174,7 +175,7 @@ robots 由 `app/robots.js` 在构建时生成（静态导出产物包含 `robots
   - Browser TTL: 1 day（或更短）
 - Cache Key：建议忽略 UTM 等营销参数，避免缓存碎片（可结合 Workers 做 URL 规范化，见下文“进阶项”）
 
-5) 图片优化（Polish / Mirage / Images）
+5. 图片优化（Polish / Mirage / Images）
 
 本仓库 `next.config.mjs` 配置 `images.unoptimized: true`，即不依赖 Next.js runtime 图片优化，平台侧优化性价比更高：
 
@@ -183,19 +184,19 @@ robots 由 `app/robots.js` 在构建时生成（静态导出产物包含 `robots
 - 方案 B（进阶）：使用 Cloudflare Images 或 `https://<domain>/cdn-cgi/image/...` 做按需转换
   - 注意：若在 `app/robots.js` 中配置了 `Disallow: /cdn-cgi/*`，并将 `/cdn-cgi/image/` 用作页面图片 `src`，需评估是否放行相关路径，避免影响搜索引擎抓取图片/渲染
 
-6) Auto Minify（HTML/CSS/JS）
+6. Auto Minify（HTML/CSS/JS）
 
 - 路径：Speed → Optimization
 - 对 Next.js 静态导出通常安全且有效（减少体积、降低传输与解析成本）
 
-7) Early Hints
+7. Early Hints
 
 - 路径：Speed → Optimization → Early Hints
 - 价值：更早触发关键资源拉取（CSS/字体/Hero 图等），对 LCP 友好（本仓库 layout 中已存在 `preload`，Early Hints 可进一步放大收益）
 
 ### 进阶项（B 端/SEO/高质量站点）
 
-8) Cloudflare Workers（做边缘增强，不做 SSR）
+8. Cloudflare Workers（做边缘增强，不做 SSR）
 
 适用场景：
 
@@ -206,12 +207,12 @@ robots 由 `app/robots.js` 在构建时生成（静态导出产物包含 `robots
 
 原则：HTML 不动态生成，仅在 Edge 做路由/重写/headers/规则增强；避免引入“需要运行时”的渲染逻辑。
 
-9) Cloudflare Web Analytics（低侵入统计）
+9. Cloudflare Web Analytics（低侵入统计）
 
 - 路径：Analytics → Web Analytics
 - 特点：无 cookie、低 JS 成本，较少影响性能与 SEO（相对传统统计脚本更友好）
 
-10) Bot 管理与限流
+10. Bot 管理与限流
 
 - 若有表单/报价入口，可考虑启用 Bot Fight Mode 与轻量 Rate Limiting（按业务风险评估）
 - 明确避免误伤搜索引擎爬虫（Google/Bing 等），对挑战策略与规则白名单需谨慎配置

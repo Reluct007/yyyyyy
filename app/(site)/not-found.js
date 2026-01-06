@@ -13,14 +13,14 @@ export const metadata = {
 
 export default function NotFound() {
   return (
-    <section className="py-36 px-2">
+    <section className="px-2 py-36">
       <div className="container mx-auto">
         <div className="text-center">
           <div className="text-3xl font-bold md:text-5xl lg:text-7xl">
             <p className="flex flex-wrap items-center justify-center">Page Not Found</p>
           </div>
           <Link href="/">
-            <Button size={'lg'} className="mt-10">
+            <Button size={"lg"} className="mt-10">
               Back to Home
             </Button>
           </Link>
@@ -28,4 +28,4 @@ export default function NotFound() {
       </div>
     </section>
   );
-};
+}

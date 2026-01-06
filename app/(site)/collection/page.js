@@ -50,27 +50,30 @@ export const metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  "itemListElement": [{
-    "@type": "ListItem",
-    "position": 1,
-    "name": "Home",
-    "item": `${ROOT_URL}/`
-  }, {
-    "@type": "ListItem",
-    "position": 2,
-    "name": "Products Collection",
-    "item": CANONICAL_URL
-  }]
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: `${ROOT_URL}/`,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Products Collection",
+      item: CANONICAL_URL,
+    },
+  ],
 };
 
 const itemListJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "itemListElement": products.products.map((item, index) => ({
+  itemListElement: products.products.map((item, index) => ({
     "@type": "ListItem",
-    "position": index + 1,
-    "name": item.title,
-    "url": `${ROOT_URL}/collection/${slugify(item.title, { lower: true, strict: true })}/`,
+    position: index + 1,
+    name: item.title,
+    url: `${ROOT_URL}/collection/${slugify(item.title, { lower: true, strict: true })}/`,
   })),
 };
 
@@ -87,19 +90,17 @@ export default function ProductsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
-      
+
       {/* Header */}
       <Header data={products.header} />
-      
+
       {/* Products Collection */}
-      <section className="py-8 px-2">
+      <section className="px-2 py-8">
         <div className="container mx-auto">
-          <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {products.products.map((item, index) => (
               <div key={index} className="rounded-lg border">
-                <Link
-                  href={`/collection/${slugify(item.title, { lower: true, strict: true })}/`}
-                >
+                <Link href={`/collection/${slugify(item.title, { lower: true, strict: true })}/`}>
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -108,10 +109,8 @@ export default function ProductsPage() {
                     height={500}
                   />
                 </Link>
-                <div className="p-4 space-y-2">
-                  <Link
-                    href={`/collection/${slugify(item.title, { lower: true, strict: true })}/`}
-                  >
+                <div className="space-y-2 p-4">
+                  <Link href={`/collection/${slugify(item.title, { lower: true, strict: true })}/`}>
                     <h3 className="text-xl font-semibold">{item.title}</h3>
                   </Link>
                   <p className="text-base text-muted-foreground">

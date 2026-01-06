@@ -1,29 +1,33 @@
-import { jsonResponse } from '../../utils/response.js';
-import { verifyToken } from '../../utils/jwt.js';
+import { jsonResponse } from "../../utils/response.js";
+import { verifyToken } from "../../utils/jwt.js";
 
-const CONFIG_KEY = 'site_config';
+const CONFIG_KEY = "site_config";
 
 function hasKv(env) {
-  return Boolean(env?.CONFIG_KV && typeof env.CONFIG_KV.get === 'function' && typeof env.CONFIG_KV.put === 'function');
+  return Boolean(
+    env?.CONFIG_KV &&
+    typeof env.CONFIG_KV.get === "function" &&
+    typeof env.CONFIG_KV.put === "function",
+  );
 }
 
 // 默认配置
 const defaultConfig = {
-  contactEmail: '',
-  fromEmail: '',
-  fromName: 'Poker Kit',
-  siteName: 'Poker Kit',
-  seoTitle: '',
-  seoDescription: '',
-  seoKeywords: '',
+  contactEmail: "",
+  fromEmail: "",
+  fromName: "Poker Kit",
+  siteName: "Poker Kit",
+  seoTitle: "",
+  seoDescription: "",
+  seoKeywords: "",
 };
 
 // 触发 Cloudflare Pages 重新构建
 async function triggerDeploy(deployHookUrl) {
-  if (!deployHookUrl) return { triggered: false, reason: 'No deploy hook configured' };
-  
+  if (!deployHookUrl) return { triggered: false, reason: "No deploy hook configured" };
+
   try {
-    const res = await fetch(deployHookUrl, { method: 'POST' });
+    const res = await fetch(deployHookUrl, { method: "POST" });
     if (res.ok) {
       return { triggered: true };
     }
@@ -37,24 +41,24 @@ export async function handleConfig(request, env) {
   const kvAvailable = hasKv(env);
 
   // GET 请求
-  if (request.method === 'GET') {
+  if (request.method === "GET") {
     try {
       // 检查是否有 token
-      const authHeader = request.headers.get('Authorization');
+      const authHeader = request.headers.get("Authorization");
       let isAdmin = false;
-      
+
       if (authHeader) {
         if (!env.JWT_SECRET) {
-          return jsonResponse({ success: false, msg: 'JWT_SECRET not configured' }, 500);
+          return jsonResponse({ success: false, msg: "JWT_SECRET not configured" }, 500);
         }
-        const token = authHeader.replace('Bearer ', '');
+        const token = authHeader.replace("Bearer ", "");
         const payload = await verifyToken(token, env.JWT_SECRET);
-        isAdmin = payload && payload.role === 'admin';
+        isAdmin = payload && payload.role === "admin";
       }
 
       let config = null;
       if (kvAvailable) {
-        config = await env.CONFIG_KV.get(CONFIG_KEY, 'json');
+        config = await env.CONFIG_KV.get(CONFIG_KEY, "json");
       }
       if (!config) config = defaultConfig;
 
@@ -68,7 +72,7 @@ export async function handleConfig(request, env) {
             seoTitle: config.seoTitle,
             seoDescription: config.seoDescription,
             seoKeywords: config.seoKeywords,
-          }
+          },
         });
       }
 
@@ -78,44 +82,44 @@ export async function handleConfig(request, env) {
         kvAvailable,
         config: {
           ...config,
-          _effectiveContactEmail: config.contactEmail || env.CONTACT_EMAIL || 'Not set',
-          _effectiveFromEmail: config.fromEmail || env.FROM_EMAIL || 'Not set',
-        }
+          _effectiveContactEmail: config.contactEmail || env.CONTACT_EMAIL || "Not set",
+          _effectiveFromEmail: config.fromEmail || env.FROM_EMAIL || "Not set",
+        },
       });
     } catch (error) {
-      console.error('Get config error:', error);
-      return jsonResponse({ success: false, msg: 'Failed to get config' }, 500);
+      console.error("Get config error:", error);
+      return jsonResponse({ success: false, msg: "Failed to get config" }, 500);
     }
   }
 
   // POST 请求 - 需要管理员权限
-  if (request.method === 'POST') {
+  if (request.method === "POST") {
     try {
       if (!kvAvailable) {
-        return jsonResponse({ success: false, msg: 'CONFIG_KV not configured' }, 503);
+        return jsonResponse({ success: false, msg: "CONFIG_KV not configured" }, 503);
       }
 
       if (!env.JWT_SECRET) {
-        return jsonResponse({ success: false, msg: 'JWT_SECRET not configured' }, 500);
+        return jsonResponse({ success: false, msg: "JWT_SECRET not configured" }, 500);
       }
 
-      const authHeader = request.headers.get('Authorization');
+      const authHeader = request.headers.get("Authorization");
       if (!authHeader) {
-        return jsonResponse({ success: false, msg: 'No token provided' }, 401);
+        return jsonResponse({ success: false, msg: "No token provided" }, 401);
       }
 
-      const token = authHeader.replace('Bearer ', '');
+      const token = authHeader.replace("Bearer ", "");
       const payload = await verifyToken(token, env.JWT_SECRET);
 
-      if (!payload || payload.role !== 'admin') {
-        return jsonResponse({ success: false, msg: 'Invalid or expired token' }, 401);
+      if (!payload || payload.role !== "admin") {
+        return jsonResponse({ success: false, msg: "Invalid or expired token" }, 401);
       }
 
       const updates = await request.json();
       const { triggerDeploy: shouldDeploy, ...configUpdates } = updates;
 
       // 获取当前配置
-      let config = await env.CONFIG_KV.get(CONFIG_KEY, 'json');
+      let config = await env.CONFIG_KV.get(CONFIG_KEY, "json");
       if (!config) config = defaultConfig;
 
       // 合并更新
@@ -137,17 +141,17 @@ export async function handleConfig(request, env) {
 
       return jsonResponse({
         success: true,
-        msg: deployResult?.triggered 
-          ? 'Config saved. Site rebuild started.' 
-          : 'Config updated successfully',
+        msg: deployResult?.triggered
+          ? "Config saved. Site rebuild started."
+          : "Config updated successfully",
         config: newConfig,
         deploy: deployResult,
       });
     } catch (error) {
-      console.error('Update config error:', error);
-      return jsonResponse({ success: false, msg: 'Failed to update config' }, 500);
+      console.error("Update config error:", error);
+      return jsonResponse({ success: false, msg: "Failed to update config" }, 500);
     }
   }
 
-  return jsonResponse({ success: false, msg: 'Method not allowed' }, 405);
+  return jsonResponse({ success: false, msg: "Method not allowed" }, 405);
 }

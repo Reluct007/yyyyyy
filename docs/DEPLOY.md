@@ -17,20 +17,20 @@
 
 ### 必需账号
 
-| 账号 | 用途 | 注册地址 |
-|------|------|----------|
-| GitHub | 代码托管 | https://github.com |
+| 账号       | 用途     | 注册地址               |
+| ---------- | -------- | ---------------------- |
+| GitHub     | 代码托管 | https://github.com     |
 | Cloudflare | 网站托管 | https://cloudflare.com |
-| Resend | 邮件服务 | https://resend.com |
+| Resend     | 邮件服务 | https://resend.com     |
 
 ### 必需软件
 
-| 软件 | 版本 | 安装方式 |
-|------|------|----------|
-| Node.js | 20+ | https://nodejs.org 或 `brew install node` |
-| pnpm | 10+ | https://pnpm.io/installation |
-| Git | 最新版 | https://git-scm.com 或 `brew install git` |
-| Wrangler | 3.0+ | `pnpm install` 后通过 `pnpm -C workers exec wrangler` 使用 |
+| 软件     | 版本   | 安装方式                                                   |
+| -------- | ------ | ---------------------------------------------------------- |
+| Node.js  | 20+    | https://nodejs.org 或 `brew install node`                  |
+| pnpm     | 10+    | https://pnpm.io/installation                               |
+| Git      | 最新版 | https://git-scm.com 或 `brew install git`                  |
+| Wrangler | 3.0+   | `pnpm install` 后通过 `pnpm -C workers exec wrangler` 使用 |
 
 ### 验证安装
 
@@ -84,21 +84,21 @@ pnpm -C workers dev
 
 ### 步骤 2: 配置构建设置
 
-| 配置项 | 值 |
-|--------|-----|
-| 生产分支 | `main` |
-| 构建命令 | `pnpm run build` |
-| 构建输出目录 | `out` |
-| 根目录 | 留空（仓库根目录；如为子目录部署再填写） |
+| 配置项       | 值                                       |
+| ------------ | ---------------------------------------- |
+| 生产分支     | `main`                                   |
+| 构建命令     | `pnpm run build`                         |
+| 构建输出目录 | `out`                                    |
+| 根目录       | 留空（仓库根目录；如为子目录部署再填写） |
 
 ### 步骤 3: 配置环境变量
 
 在 **Settings** → **Environment variables** 添加:
 
-| 变量名 | 值 | 说明 |
-|--------|-----|------|
-| `NEXT_PUBLIC_API_URL` | `https://api.example.com` | API 地址 |
-| `NODE_VERSION` | `20` | Node.js 版本 |
+| 变量名                | 值                        | 说明         |
+| --------------------- | ------------------------- | ------------ |
+| `NEXT_PUBLIC_API_URL` | `https://api.example.com` | API 地址     |
+| `NODE_VERSION`        | `20`                      | Node.js 版本 |
 
 ### 步骤 4: 部署
 
@@ -181,6 +181,7 @@ pnpm -C workers exec wrangler deploy --keep-vars
 ### 步骤 3: 配置发件邮箱
 
 验证域名后，可使用该域名下任意邮箱作为发件人:
+
 - `noreply@example.com`
 - `contact@example.com`
 
@@ -188,21 +189,21 @@ pnpm -C workers exec wrangler deploy --keep-vars
 
 ### Cloudflare Pages 环境变量
 
-| 变量名 | 示例值 | 说明 |
-|--------|--------|------|
+| 变量名                | 示例值                    | 说明             |
+| --------------------- | ------------------------- | ---------------- |
 | `NEXT_PUBLIC_API_URL` | `https://api.example.com` | Workers API 地址 |
-| `NODE_VERSION` | `20` | Node.js 版本 |
+| `NODE_VERSION`        | `20`                      | Node.js 版本     |
 
 ### Cloudflare Workers Secrets
 
-| 变量名 | 说明 |
-|--------|------|
-| `RESEND_API_KEY` | Resend API 密钥 |
-| `CONTACT_EMAIL` | 接收表单的邮箱 |
-| `FROM_EMAIL` | 发件邮箱 (需验证域名) |
-| `ADMIN_USERNAME` | （可选）管理员用户名（默认 `admin`） |
-| `ADMIN_PASSWORD` | （可选）管理员密码（启用管理员登录必填） |
-| `JWT_SECRET` | （可选）JWT 签名密钥（生产环境强烈建议配置） |
+| 变量名            | 说明                                                        |
+| ----------------- | ----------------------------------------------------------- |
+| `RESEND_API_KEY`  | Resend API 密钥                                             |
+| `CONTACT_EMAIL`   | 接收表单的邮箱                                              |
+| `FROM_EMAIL`      | 发件邮箱 (需验证域名)                                       |
+| `ADMIN_USERNAME`  | （可选）管理员用户名（默认 `admin`）                        |
+| `ADMIN_PASSWORD`  | （可选）管理员密码（启用管理员登录必填）                    |
+| `JWT_SECRET`      | （可选）JWT 签名密钥（生产环境强烈建议配置）                |
 | `DEPLOY_HOOK_URL` | （可选）Pages Deploy Hook URL（配置更新后自动触发重新构建） |
 
 ## 🔄 更新部署
@@ -235,6 +236,7 @@ A: 确保在 Cloudflare Pages 环境变量中设置 `NODE_VERSION=20`
 ### Q: 表单提交失败？
 
 检查以下配置:
+
 1. `NEXT_PUBLIC_API_URL` 是否正确
 2. Workers 是否部署成功
 3. Workers Secrets 是否配置

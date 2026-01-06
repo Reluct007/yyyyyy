@@ -4,12 +4,12 @@ Next.js 纯静态电商网站，支持多语言、产品展示、联系表单。
 
 ## 🖥️ 环境要求
 
-| 工具 | 版本 | 说明 |
-|------|------|------|
-| Node.js | 20+ | JavaScript 运行环境 |
-| pnpm | 10+ | 包管理器 |
-| Git | 最新版 | 版本控制 |
-| Wrangler | 3.0+ | （可选）用于 Workers 调试/部署；优先使用本仓库 `workers/` 的本地依赖：`pnpm -C workers exec wrangler` |
+| 工具     | 版本   | 说明                                                                                                  |
+| -------- | ------ | ----------------------------------------------------------------------------------------------------- |
+| Node.js  | 20+    | JavaScript 运行环境                                                                                   |
+| pnpm     | 10+    | 包管理器                                                                                              |
+| Git      | 最新版 | 版本控制                                                                                              |
+| Wrangler | 3.0+   | （可选）用于 Workers 调试/部署；优先使用本仓库 `workers/` 的本地依赖：`pnpm -C workers exec wrangler` |
 
 ## 🏗️ 项目架构
 
@@ -93,10 +93,20 @@ pnpm build
 # 说明：当前 build 使用 Turbopack（next build --turbo）
 ```
 
+### 5. 代码格式化
+
+```bash
+pnpm format
+pnpm format:check
+```
+
+说明：使用 Prettier + `prettier-plugin-tailwindcss` 统一代码风格并排序 Tailwind class。
+
 ## CI
 
 本仓库使用 GitHub Actions，在 push / PR 时自动执行：
 
+- `pnpm format:check`
 - `pnpm lint`
 - `pnpm build`
 
@@ -123,11 +133,11 @@ export const basic = {
     title: "网站标题",
     description: "网站描述",
     keywords: ["关键词1", "关键词2"],
-    url: "https://www.yourdomain.com",  // 用于 canonical URL
+    url: "https://www.yourdomain.com", // 用于 canonical URL
   },
   info: {
     brand: "品牌名称",
-    email: "contact@yourdomain.com"
+    email: "contact@yourdomain.com",
   },
   // ...
 };
@@ -136,10 +146,12 @@ export const basic = {
 ### i18n SEO（canonical / hreflang）
 
 当前策略：
+
 - 所有语言统一使用 `/{locale}` 前缀（包含默认语言 `en`，例如：`/en/collection/`、`/fr/product/<id>/`）
 - 根路径 `/` 平台侧 301 → `/en/`（静态导出下不可依赖 middleware）
 
 实现约定：
+
 - 语言列表与默认语言在 `data/i18n.js` 维护（供页面 metadata 与 `app/sitemap.js` 共用）
 - 页面 `metadata/generateMetadata` 优先通过 `lib/hreflang.js` 的 `buildAlternates()` 生成（个别路由仍存在手写/缺失，详见 `docs/I18N.md`）
 - 多语言实现细节与问题追踪：`docs/I18N.md`（权威说明 + 已知问题清单）
@@ -173,10 +185,8 @@ export const product = [
     description: "产品描述",
     image: "/product/image.webp",
     images: ["/product/img1.webp", "/product/img2.webp"],
-    category: "Poker Equipment",  // 分类名称
-    features: [
-      { title: "特性1", description: "描述" },
-    ]
+    category: "Poker Equipment", // 分类名称
+    features: [{ title: "特性1", description: "描述" }],
   },
 ];
 ```
@@ -191,12 +201,22 @@ export const products = {
     title: "Poker Sets Collection",
     description: "页面描述",
     image: "/home/Customization.webp",
-    features: ["特性 1", "特性 2"]
+    features: ["特性 1", "特性 2"],
   },
   products: [
-    { title: "Poker Equipment", description: "分类描述", image: "/home/Customization.webp", features: ["特性 1"] },
-    { title: "Poker Chips", description: "分类描述", image: "/home/image.webp", features: ["特性 1"] },
-  ]
+    {
+      title: "Poker Equipment",
+      description: "分类描述",
+      image: "/home/Customization.webp",
+      features: ["特性 1"],
+    },
+    {
+      title: "Poker Chips",
+      description: "分类描述",
+      image: "/home/image.webp",
+      features: ["特性 1"],
+    },
+  ],
 };
 ```
 

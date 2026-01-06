@@ -1,4 +1,4 @@
-import AboutClient from './about-client';
+import AboutClient from "./about-client";
 import { basic } from "@/data/basic";
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/data/i18n";
 import { buildAlternates } from "@/lib/hreflang";
