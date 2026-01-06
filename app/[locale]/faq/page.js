@@ -16,8 +16,8 @@ export async function generateMetadata({ params }) {
     locales: SUPPORTED_LOCALES,
     defaultLocale: DEFAULT_LOCALE,
   });
-  const { title, description } = getSeoMeta('faq', locale);
-  
+  const { title, description } = getSeoMeta("faq", locale);
+
   return {
     title,
     description,
@@ -46,18 +46,18 @@ export async function generateMetadata({ params }) {
 
 export default function FAQPage({ params }) {
   const { locale } = params;
-  const content = getContent('faq', locale);
-  const faqItems = Array.from(
-    content.content.matchAll(/<h3>(.*?)<\/h3>\s*<p>(.*?)<\/p>/gis)
-  ).map((match) => ({
-    question: match[1],
-    answer: match[2],
-  }));
+  const content = getContent("faq", locale);
+  const faqItems = Array.from(content.content.matchAll(/<h3>(.*?)<\/h3>\s*<p>(.*?)<\/p>/gis)).map(
+    (match) => ({
+      question: match[1],
+      answer: match[2],
+    }),
+  );
 
   const stripTags = (html) =>
-    String(html || '')
-      .replace(/<[^>]*>/g, ' ')
-      .replace(/\s+/g, ' ')
+    String(html || "")
+      .replace(/<[^>]*>/g, " ")
+      .replace(/\s+/g, " ")
       .trim();
 
   const faqJsonLd =
@@ -65,12 +65,12 @@ export default function FAQPage({ params }) {
       ? {
           "@context": "https://schema.org",
           "@type": "FAQPage",
-          "mainEntity": faqItems.map((item) => ({
+          mainEntity: faqItems.map((item) => ({
             "@type": "Question",
-            "name": stripTags(item.question),
-            "acceptedAnswer": {
+            name: stripTags(item.question),
+            acceptedAnswer: {
               "@type": "Answer",
-              "text": stripTags(item.answer),
+              text: stripTags(item.answer),
             },
           })),
         }
@@ -84,7 +84,7 @@ export default function FAQPage({ params }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       ) : null}
-      <h1 className="text-4xl font-bold mb-8">{content.title || 'Frequently Asked Questions'}</h1>
+      <h1 className="mb-8 text-4xl font-bold">{content.title || "Frequently Asked Questions"}</h1>
       <div className="prose max-w-4xl" dangerouslySetInnerHTML={{ __html: content.content }} />
     </div>
   );

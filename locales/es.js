@@ -5,26 +5,29 @@ export const es = {
     about: "Acerca de",
     products: "Productos",
     contact: "Contacto",
-    getQuote: "Obtener Cotización"
+    getQuote: "Obtener Cotización",
   },
-  
+
   // Home page
   home: {
     hero: {
       badge: "Kits de Póker al Por Mayor",
       title: "Poker Kit - Mayorista y Sets Personalizados",
-      description: "Proveedor B2B de kits de póker premium: venta al por mayor, personalización OEM/ODM, MOQs bajos y plazos de entrega rápidos."
+      description:
+        "Proveedor B2B de kits de póker premium: venta al por mayor, personalización OEM/ODM, MOQs bajos y plazos de entrega rápidos.",
     },
     categories: {
       title: "Categorías de Productos",
-      description: "Explora nuestras líneas principales: sets de póker, fichas, mesas y accesorios para pedidos al por mayor y personalizados."
+      description:
+        "Explora nuestras líneas principales: sets de póker, fichas, mesas y accesorios para pedidos al por mayor y personalizados.",
     },
     cta: {
       title: "Solicita Muestras y Precios",
-      description: "Obtén una cotización para pedidos al por mayor, proyectos OEM/ODM y entrega confiable."
-    }
+      description:
+        "Obtén una cotización para pedidos al por mayor, proyectos OEM/ODM y entrega confiable.",
+    },
   },
-  
+
   // Product page
   product: {
     title: "Detalles del Producto",
@@ -33,21 +36,22 @@ export const es = {
     recommended: "Productos Recomendados",
     learnMore: "Saber Más",
     getQuote: "Obtener Cotización",
-    category: "Categoría"
+    category: "Categoría",
   },
-  
+
   // About page
   about: {
     title: "Acerca de Poker Kit",
-    description: "Tu socio B2B de confianza para sets de póker, fichas, mesas y accesorios"
+    description: "Tu socio B2B de confianza para sets de póker, fichas, mesas y accesorios",
   },
 
   // FAQ
   faq: {
     title: "Preguntas Frecuentes",
-    description: "Respuestas rápidas sobre pedidos al por mayor, personalización, plazos de entrega, envío y soporte."
+    description:
+      "Respuestas rápidas sobre pedidos al por mayor, personalización, plazos de entrega, envío y soporte.",
   },
-  
+
   // Contact page
   contact: {
     title: "Contáctanos",
@@ -56,18 +60,18 @@ export const es = {
       name: "Nombre",
       email: "Correo Electrónico",
       message: "Mensaje",
-      submit: "Enviar Mensaje"
-    }
+      submit: "Enviar Mensaje",
+    },
   },
-  
+
   // Subscribe form
   subscribe: {
     placeholder: "Ingresa tu correo electrónico",
     button: "Suscribirse",
     privacyText: "Ver nuestra",
-    privacyLink: "política de privacidad"
+    privacyLink: "política de privacidad",
   },
-  
+
   // Footer
   footer: {
     company: "Empresa",
@@ -75,13 +79,13 @@ export const es = {
     legal: "Legal",
     copyright: "Todos los derechos reservados.",
     terms: "Términos y Condiciones",
-    privacy: "Política de Privacidad"
+    privacy: "Política de Privacidad",
   },
-  
+
   // Language switcher
   language: {
     current: "Español",
     switch: "Cambiar Idioma",
-    select: "Seleccionar Idioma"
-  }
+    select: "Seleccionar Idioma",
+  },
 };

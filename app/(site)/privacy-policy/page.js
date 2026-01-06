@@ -1,4 +1,4 @@
-import PrivacyClient from './privacy-client';
+import PrivacyClient from "./privacy-client";
 import { basic } from "@/data/basic";
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/data/i18n";
 import { buildAlternates } from "@/lib/hreflang";

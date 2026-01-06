@@ -17,6 +17,7 @@
 ## Build, Test, and Development Commands
 
 Root (frontend):
+
 - `pnpm dev`: Dev server with Turbopack.
 - `pnpm dev:turbo`: Alias of `pnpm dev`.
 - `pnpm lint`: ESLint via Next.js (`next/core-web-vitals`).
@@ -24,6 +25,7 @@ Root (frontend):
 - `pnpm start`: Run production server (mostly for local verification; deploy uses `out/`).
 
 Workers (API):
+
 - `pnpm -C workers dev`: Local Worker on `http://localhost:8787`.
 - `pnpm -C workers deploy`: Deploy with existing vars/secrets.
 - `pnpm -C workers tail`: Stream logs.

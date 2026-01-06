@@ -1,127 +1,5609 @@
 export const product = [
-  {title: "Spin Master 300-Piece Poker Set with Aluminum Case & Professional Chips", category: "Poker Equipment", description: "Ensure engaging gaming experiences with our Spin Master 300-Piece Poker Set. Designed for ages 8 and up, this set includes high-quality poker chips, playing cards, and a durable aluminum storage case, making it ideal for family game nights, corporate events, or casual gatherings. Enhance your entertainment offerings with this complete poker game solution.", image: "/product/81-9JQAmx5L.webp", images: ["/product/51l1kj7n+FL.webp", "/product/51BwsjnkydL.webp", "/product/415EADLDXZL.webp", "/product/41Us2FjJb5L.webp", "/product/510BsW2qHWL.webp", "/product/41M7V2cBBhL.webp"], image_names: ["81-9JQAmx5L.webp", "51l1kj7n+FL.webp", "51BwsjnkydL.webp", "415EADLDXZL.webp", "41Us2FjJb5L.webp", "510BsW2qHWL.webp", "41M7V2cBBhL.webp"], features: [{title: "Complete Gaming Set", description: "This set includes 300 professional-grade poker chips, one deck of playing cards, two betting buttons, a dealer button, and five poker dice, providing everything needed for a full gaming experience."}, {title: "Durable Storage Solution", description: "The robust aluminum case keeps all components safe and organized, making it easy to transport for outdoor events, game nights, or casino-like gatherings."}, {title: "Engaging for All Ages", description: "Suitable for 2 or more players aged 8 and above, this poker set fosters social interaction and competitive spirit among family, friends, or colleagues."}, {title: "Versatile Entertainment", description: "Perfect for various occasions, this poker set is ideal for family game nights, camping trips, or corporate team-building events, ensuring memorable experiences for everyone involved."}]},
-  {title: "500-Count Texas Hold'em Clay Poker Chip Set with Aluminum Case", category: "Poker Equipment", description: "Elevate your gaming experience with our premium 500-count Texas Hold'em Clay Poker Chip Set, designed for business gatherings and events. This complete set combines durability and style, featuring vibrant colors and easy transport in a robust aluminum case, making it perfect for professional tournaments or casual gatherings.", image: "/product/71R5LxH0g3L.webp", images: ["/product/41NwYI2z3qL.webp", "/product/41G9eheeceL.webp", "/product/51wLOFyDClL.webp", "/product/51KIfKM5P1L.webp", "/product/51Bdt9GI+oL.webp", "/product/51ukqPQeq8L.webp"], image_names: ["71R5LxH0g3L.webp", "41NwYI2z3qL.webp", "41G9eheeceL.webp", "51wLOFyDClL.webp", "51KIfKM5P1L.webp", "51Bdt9GI+oL.webp", "51ukqPQeq8L.webp"], features: [{title: "Complete Poker Set", description: "This all-inclusive set comes with 300 high-quality poker chips, two decks of cards, and a full set of dealer buttons, ensuring you have everything needed for a professional game night."}, {title: "Durable Clay Chips", description: "Featuring 11.5 grams per chip and a standardized size of 1.57 inches in diameter, our chips are designed with a casino-grade feel, ensuring durability and a premium user experience."}, {title: "Color Variety", description: "Includes five distinct color options—150 red, 50 green, 100 blue, 50 black, and 150 white chips—allowing for seamless chip distribution during gameplay and enhancing the visual appeal."}, {title: "Portable Aluminum Case", description: "Each set is packaged in a sturdy aluminum case with foam inserts, making it easy to transport your poker set to events, ensuring your chips and accessories are well-protected and organized."}]},
-  {title: "500-Piece Professional Poker Chip Set with Aluminum Storage Case", category: "Poker Equipment", description: "Our 500-piece poker chip set includes a variety of colors and essential accessories, designed specifically for B2B buyers seeking quality gaming solutions. Crafted from premium materials, this set not only enhances the gaming experience for clients but also offers reliable durability and convenient storage for any business setting.", image: "/product/81yViBvN+1L.webp", images: ["/product/51og3jPtQKL.webp", "/product/518e1L76bvL.webp", "/product/51XxCFbm2DL.webp", "/product/41zzTlLZHrL.webp", "/product/51N2frsPIGL.webp", "/product/41MrFEZTGSL.webp"], image_names: ["81yViBvN+1L.webp", "51og3jPtQKL.webp", "518e1L76bvL.webp", "51XxCFbm2DL.webp", "41zzTlLZHrL.webp", "51N2frsPIGL.webp", "41MrFEZTGSL.webp"], features: [{title: "Comprehensive Gaming Kit", description: "This complete set features 500 casino-style poker chips in red, blue, black, and white, along with dice, playing cards, and dealer buttons, making it ideal for professional use."}, {title: "High-Quality Materials", description: "Each poker chip is made from high-quality materials with intricate designs, ensuring a professional feel and extended lifespan for rigorous use."}, {title: "Durable Aluminum Storage Case", description: "The included aluminum case provides secure and organized storage, designed with a velvet interior to protect chips from dust and damage during transport."}, {title: "Versatile Gaming Experience", description: "Perfect for poker, blackjack, tournaments, and card clubs, this chip set caters to all ages, enhancing entertainment options for corporate events and gatherings."}]},
-  {title: "300-Piece Poker Chip Set with Aluminum Case for Texas Hold'em & Blackjack", category: "Poker Equipment", description: "Elevate your gaming experience with our premium 300-piece poker chip set, featuring a durable aluminum case and high-quality chips, perfect for business events, tournaments, and professional gatherings.", image: "/product/711t3pUeGtL.webp", images: ["/product/51AUEv4-8fL.webp", "/product/518e1L76bvL.webp", "/product/51ERP1NHQmL.webp", "/product/51jUIc8IC6L.webp", "/product/41jAXp+EOYL.webp", "/product/41c6OXQkCEL.webp"], image_names: ["711t3pUeGtL.webp", "51AUEv4-8fL.webp", "518e1L76bvL.webp", "51ERP1NHQmL.webp", "51jUIc8IC6L.webp", "41jAXp+EOYL.webp", "41c6OXQkCEL.webp"], features: [{title: "Comprehensive Set", description: "Includes 300 casino-quality chips in various colors plus accessories like dice, playing cards, and dealer buttons, ensuring you have everything needed for a complete gaming experience."}, {title: "Premium Quality Chips", description: "Crafted from high-grade materials, our chips emulate a true casino feel with intricate designs and a superior tactile experience, meeting the demands of professional settings."}, {title: "Portable Aluminum Case", description: "The sturdy aluminum carrying case offers convenient storage and safe transport for your chips, featuring a plush velour lining that protects and maintains the chips' pristine condition."}, {title: "Versatile Gaming Option", description: "Ideal for Texas Hold'em, Blackjack, and other classic card games, this poker set is perfect for various occasions and makes an excellent gift for both men and women."}]},
-  {title: "Professional 300 Chip Poker Set with Quality Accessories", category: "Poker Equipment", description: "Elevate your poker nights with this professional 300 chip poker set, featuring 11.5g chips, two decks of cards, and essential dealer buttons. Perfect for businesses looking to enhance team-building events or client entertainment, this complete set ensures an enjoyable and sophisticated gaming experience.", image: "/product/91L2I4NLjWL.webp", images: ["/product/517e66VgOzL.webp", "/product/51u+dkYAlJL.webp", "/product/51RrYrGC6HL.webp", "/product/51Jq+iyHXVL.webp", "/product/51yxgM8cpbL.webp", "/product/51W8C+JaFuL.webp"], image_names: ["91L2I4NLjWL.webp", "517e66VgOzL.webp", "51u+dkYAlJL.webp", "51RrYrGC6HL.webp", "51Jq+iyHXVL.webp", "51yxgM8cpbL.webp", "51W8C+JaFuL.webp"], features: [{title: "Complete Poker Set", description: "Includes 300 high-quality 11.5g casino-grade chips, two decks of playing cards, and essential dealer buttons for a complete poker experience."}, {title: "Premium Aluminum Case", description: "The set comes in an elegant matte black aluminum case with a secure latch and reinforced corners, ensuring safe and stylish storage."}, {title: "Durable Chip Design", description: "Featuring composite chips with a metal core in five classic colors, this set offers an authentic feel and aesthetic for serious poker players."}, {title: "Ideal Business Gift", description: "Packaged in colorful gift wrapping, this poker set makes a perfect corporate gift for holidays, birthdays, or client appreciation events."}]},
-  {title: "Professional Texas Hold 'Em Poker Set with 200 Chips & Aluminum Case", category: "Poker Equipment", description: "Elevate your game nights with our Professional Texas Hold 'Em Poker Set, designed for B2B buyers seeking quality entertainment solutions. This comprehensive set includes 200 dual-tone poker chips and a sturdy aluminum case, ensuring durability and organization for any event or gathering.", image: "/product/91d7z1rwqOL.webp", images: ["/product/51Xp2pZ95qL.webp", "/product/41SpMOy90dL.webp", "/product/41V+RDx-w5L.webp", "/product/41t6TVZHgFL.webp", "/product/518kAZYq-dL.webp", "/product/51o615yR0eL.webp", "/product/51+KR2+7QpL.webp"], image_names: ["91d7z1rwqOL.webp", "51Xp2pZ95qL.webp", "41SpMOy90dL.webp", "41V+RDx-w5L.webp", "41t6TVZHgFL.webp", "518kAZYq-dL.webp", "51o615yR0eL.webp", "51+KR2+7QpL.webp"], features: [{title: "Complete Game Essentials", description: "This poker set includes everything you need for an engaging poker night, featuring 200 dual-tone chips and a premium deck of playing cards for easy setup and play."}, {title: "Durable Aluminum Case", description: "The robust aluminum case is not only secure with double locks but also features reinforced corners and a convenient rotating handle for easy transportation and storage."}, {title: "Clear Game Instructions", description: "Our detailed instructions for Texas Hold 'Em simplify the learning process, ensuring players of all skill levels can enjoy the game and understand the betting strategies involved."}, {title: "Versatile Entertainment", description: "Ideal for family gatherings, corporate events, or casual meetups, this poker set provides a fun and memorable experience, perfect for any occasion or celebration."}]},
-  {title: "300 Chip Casino Poker Set with Aluminum Case – Professional Quality", category: "Poker Equipment", description: "Enhance your gaming tournaments with our 300 chip casino-grade poker set, featuring durable 11.5g chips in multiple colors and custom denominations, ideal for Texas Hold'em, Blackjack, and more. Perfect for card clubs, corporate events, or home gatherings, this professional set promises long-lasting entertainment and a captivating casino experience.", image: "/product/81HPvuZIjJL.webp", images: ["/product/51GbOuv64pL.webp", "/product/51fPfeGukRL.webp", "/product/41wQqR8vYJL.webp", "/product/51wu1WlemeL.webp", "/product/518y4vRsoLL.webp", "/product/41d6FID2LsL.webp"], image_names: ["81HPvuZIjJL.webp", "51GbOuv64pL.webp", "51fPfeGukRL.webp", "41wQqR8vYJL.webp", "51wu1WlemeL.webp", "518y4vRsoLL.webp", "41d6FID2LsL.webp"], features: [{title: "Durable Casino-Grade Chips", description: "Each chip weighs 11.5g and features a premium iron core, ensuring a professional feel and longevity during game play."}, {title: "Complete Game Kit", description: "Includes two decks of cards, dealer buttons, and five dice, providing everything necessary for a full poker experience right out of the box."}, {title: "Customizable Denominations", description: "Chips come in five colors, allowing for flexible currency values to suit various games and player preferences."}, {title: "Portable Aluminum Case", description: "The sturdy aluminum case allows for easy transportation and protection, making it convenient for travel to tournaments or gatherings."}]},
-  {title: "Boyzhood 300-Count Poker Chip Set with Aluminum Case for Professionals", category: "Poker Equipment", description: "Elevate your gaming experience with the Boyzhood 300-count poker chip set, featuring high-quality 11.5g chips and an aluminum travel case, perfect for casinos, tournaments, and poker nights. This versatile set is designed for businesses and poker clubs, ensuring durability and professional-grade performance.", image: "/product/81OUZgad1sL.webp", images: ["/product/515sIaOqNCL.webp", "/product/51zDbbJ0ApL.webp", "/product/51Umlcx1RHL.webp", "/product/51m5EQ0BCTL.webp", "/product/51abcY08tVL.webp", "/product/411ZPw0VCOL.webp"], image_names: ["81OUZgad1sL.webp", "515sIaOqNCL.webp", "51zDbbJ0ApL.webp", "51Umlcx1RHL.webp", "51m5EQ0BCTL.webp", "51abcY08tVL.webp", "411ZPw0VCOL.webp"], features: [{title: "Diverse Chip Colors", description: "Enjoy a vibrant assortment of red, green, black, and blue poker chips, enhancing game aesthetics and player engagement for both casual and competitive play."}, {title: "Professional Weight Chips", description: "Each chip weighs 11.5 grams with a durable iron core, providing a genuine casino feel that enhances the overall gaming experience, appealing to serious players and clubs alike."}, {title: "Upgraded Aluminum Storage", description: "The lightweight yet sturdy aluminum case features reinforced handles and locks, ensuring secure transport and storage of your gaming set while exuding professionalism and style."}, {title: "All-Age Friendly Set", description: "Perfect for poker enthusiasts of all ages, this comprehensive set suits various games, from Texas Hold'em to Blackjack, promoting inclusivity and enjoyment at any gathering or event."}]},
-  {title: "Premium 300-Count Texas Hold'em Poker Chip Set with Aluminum Case", category: "Poker Equipment", description: "Elevate your gaming experience with our comprehensive 300-count Texas Hold'em poker chip set, complete with high-quality chips, two decks of cards, a professional dealer button, and a portable aluminum case, making it perfect for corporate events or team-building exercises.", image: "/product/81Gm5vvduCL.webp", images: ["/product/518uVsXmfML.webp", "/product/51gam1IVXPL.webp", "/product/41nkqfyJBsL.webp", "/product/41G9eheeceL.webp", "/product/41P9hSnA5IL.webp", "/product/31NKYvHRviL.webp"], image_names: ["81Gm5vvduCL.webp", "518uVsXmfML.webp", "51gam1IVXPL.webp", "41nkqfyJBsL.webp", "41G9eheeceL.webp", "41P9hSnA5IL.webp", "31NKYvHRviL.webp"], features: [{title: "Complete Poker Set", description: "This complete poker set includes 300 high-quality, Vegas-style chips, two decks of cards, and a professional dealer button, ensuring all essentials are covered for your gaming needs."}, {title: "Durable Claytec Chips", description: "Our 11.5-gram Claytec poker chips feature a full-size design with a 1.57-inch diameter and a variety of colors, providing a professional feel and durability for repeated use."}, {title: "Portable Aluminum Case", description: "Packaged in a sturdy aluminum case with foam inlay, this poker set is designed for ease of transport, allowing you to host games anywhere with confidence."}, {title: "Versatile for All Players", description: "Whether for work events or casual gatherings, this 300-count poker chip set accommodates multiple players and enhances the gaming atmosphere for everyone involved."}]},
-  {title: "Gamie Texas Hold'em Poker Set - Complete with Mat, Cards, Chips & Case", category: "Poker Equipment", description: "Elevate your business's game night offerings with the Gamie Texas Hold'em Poker Set, featuring everything necessary for thrilling poker sessions, including high-quality cards, chips, and a stylish storage case. This versatile set is perfect for corporate entertainment or team-building activities.", image: "/product/815bfoCaIML.webp", images: ["/product/51+RuM40YaL.webp", "/product/51FdeqyRU7L.webp", "/product/51EjnyAr9lL.webp", "/product/51pGkt-vm0L.webp", "/product/51AyausOPJL.webp", "/product/51arZ7TU8FL.webp", "/product/51hfW-X8nhL.webp"], image_names: ["815bfoCaIML.webp", "51+RuM40YaL.webp", "51FdeqyRU7L.webp", "51EjnyAr9lL.webp", "51pGkt-vm0L.webp", "51AyausOPJL.webp", "51arZ7TU8FL.webp", "51hfW-X8nhL.webp"], features: [{title: "Complete Poker Set", description: "Includes 2 decks of high-quality cards, a durable poker mat, and gaming chips, providing everything needed for hours of entertainment."}, {title: "Perfect for Game Nights", description: "Accommodates up to 10 players, making it ideal for both family gatherings and corporate events, ensuring enjoyment for all ages."}, {title: "Convenient Storage", description: "Each set comes in a stylish metal case for organized storage and easy portability, perfect for events at any location."}, {title: "Ideal Gift Option", description: "A unique gift for poker enthusiasts and a valuable tool for teaching kids poker strategies, making it suitable for both adults and children aged 3 and up."}]},
-  {title: "Professional 300-Piece Poker Set with Case, Chips & Dice", category: "Poker Equipment", description: "Elevate your game offerings with the Sunny Days Entertainment 300-piece poker set, featuring colorful chips, dealer buttons, and dice, all securely packed in a durable case. Perfect for businesses seeking to enhance entertainment options for events, parties, or game nights.", image: "/product/815QcVFFPuL.webp", images: ["/product/51hPjE1mlxL.webp", "/product/51QCegJo-6L.webp", "/product/51IoiCi9XHL.webp", "/product/51pBeqMr6rL.webp", "/product/41-JDnBx7EL.webp", "/product/51udy8Ey5tL.webp", "/product/41WbzKtBoOL.webp"], image_names: ["815QcVFFPuL.webp", "51hPjE1mlxL.webp", "51QCegJo-6L.webp", "51IoiCi9XHL.webp", "51pBeqMr6rL.webp", "41-JDnBx7EL.webp", "51udy8Ey5tL.webp", "41WbzKtBoOL.webp"], features: [{title: "Complete Poker Set", description: "This comprehensive poker set includes 300 high-quality chips in five vibrant colors, expertly designed for maximum gameplay excitement and versatility."}, {title: "Game Enhancing Components", description: "In addition to chips, the set features five poker dice and special dealer and blind buttons for a seamless and organized gaming experience."}, {title: "Convenient Storage Solution", description: "The premium carrying case with a sturdy handle and secure latch ensures easy transport and safe storage of all poker supplies."}, {title: "Durable and Long-Lasting", description: "Built from high-quality materials, this poker set is designed for repeated use, providing years of reliable entertainment for your business events."}]},
-  {title: "Goplus 600-Piece Poker Chip Set with Automatic Shuffler & Accessories", category: "Poker Equipment", description: "Elevate your gaming experience with the Goplus 600-Piece Poker Chip Set, featuring high-quality clay chips, automatic shuffler, and essential accessories, perfect for professional gatherings and events. This comprehensive set ensures seamless gameplay for up to 10 players, redefining entertainment in corporate and casual settings.", image: "/product/71tdv+wKAFL.webp", images: ["/product/41neGIEAB8L.webp", "/product/51e8qWA28CL.webp", "/product/51NI9r-LnYL.webp", "/product/510szIT3S9L.webp", "/product/51C+q3qKjML.webp", "/product/51lGz0xm++L.webp", "/product/41HjU2rPPiL.webp"], image_names: ["71tdv+wKAFL.webp", "41neGIEAB8L.webp", "51e8qWA28CL.webp", "51NI9r-LnYL.webp", "510szIT3S9L.webp", "51C+q3qKjML.webp", "51lGz0xm++L.webp", "41HjU2rPPiL.webp"], features: [{title: "Inclusive Poker Set", description: "This complete poker kit includes 600 clay chips, 6 plastic card decks, 5 dice, 3 dealer buttons, and a high-capacity card shoe, enabling effortless organization and play."}, {title: "Realistic Clay Chips", description: "Crafted with a 3-tier structure, each 14g chip provides an authentic casino feel and comes in 6 vibrant colors for easy identification and game variety."}, {title: "Efficient Automatic Shuffler", description: "The automatic shuffler quickly shuffles cards in just 2.5 seconds, enhancing gameplay efficiency and allowing players to focus on strategy and enjoyment."}, {title: "Portable & Secure Storage", description: "Designed for convenience, the durable aluminum carrying case with a soft lining and secure latch protects your poker accessories, making it easy to transport for gaming events anywhere."}]},
-  {title: "High-Quality 500PCS Poker Chip Set in Aluminum Case for B2B Sales", category: "Poker Equipment", description: "Elevate your gaming experience with our 500PCS poker chip set, designed for businesses looking to enhance their casino offerings. This durable set includes high-quality chips with secure aluminum travel case, perfect for Texas Hold'em and Blackjack, ideal for catering events and clubs.", image: "/product/81LjHfpBj+L.webp", images: ["/product/51Q2hweGwQL.webp", "/product/51eYkeqPS6L.webp", "/product/51ppJDYlhtL.webp", "/product/51KqswB0j7L.webp", "/product/41GWL328YEL.webp", "/product/51n4rB8BicL.webp"], image_names: ["81LjHfpBj+L.webp", "51Q2hweGwQL.webp", "51eYkeqPS6L.webp", "51ppJDYlhtL.webp", "51KqswB0j7L.webp", "41GWL328YEL.webp", "51n4rB8BicL.webp"], features: [{title: "Durable Construction", description: "Our poker chips feature a dual injection mold design with a solid iron core, ensuring a premium feel and longevity in any gaming environment."}, {title: "High-End Quality Chips", description: "Weighing 11.5 grams, these casino-quality chips provide the authentic experience of real gambling, making them perfect for serious players."}, {title: "Portable Aluminum Case", description: "The robust aluminum case measures 15.4 x 11 x 2.5 inches, designed for easy transport while protecting your chips from dust and damage."}, {title: "Versatile Gaming Set", description: "Accommodating 8-10 players, this classic poker set is ideal for tournaments, card clubs, and events, offering an engaging experience for all participants."}]},
-  {title: "Premium Clay Poker Chips Set - 500 pcs - 13.5g with Custom Denominations", category: "Poker Equipment", description: "Introducing Versa Games' exclusive poker chip set, meticulously crafted for businesses and casinos aiming to elevate their gaming experiences. Each set includes 500 high-quality, unique clay poker chips in various colors, ensuring durability and unmatched performance for your poker nights or gaming events.", image: "/product/91YvbVUZr7L.webp", images: ["/product/51Qs8rZuP8L.webp", "/product/51CbXbFk1UL.webp", "/product/51EcJ+4Ya+L.webp", "/product/61aMxyhMweL.webp", "/product/51UqZbJVFVL.webp", "/product/51uVFiC6lNL.webp", "/product/51DhATV3CSL.webp"], image_names: ["91YvbVUZr7L.webp", "51Qs8rZuP8L.webp", "51CbXbFk1UL.webp", "51EcJ+4Ya+L.webp", "61aMxyhMweL.webp", "51UqZbJVFVL.webp", "51uVFiC6lNL.webp", "51DhATV3CSL.webp"], features: [{title: "High-Quality Material", description: "Our poker chips are made from premium clay, ensuring superior quality over competitors and providing a professional feel for every game."}, {title: "Exclusive Custom Designs", description: "Each chip features a distinct design made with custom CNC molds, guaranteeing designs that are exclusive to our brand and cannot be replicated."}, {title: "Durable Storage Solution", description: "The new thermoplastic ABS case is robust and designed without cheap interior trays, featuring a solid core for maximum protection of your chips."}, {title: "Comprehensive Set Contents", description: "Each set includes two decks of plastic-coated playing cards, five dice, a dealer button, and 500 chips, accommodating 5-8 players for a complete gaming experience."}]},
-  {title: "Casino-Grade Clay Poker Chip Set - 300 Chips with Aluminum Case", category: "Poker Equipment", description: "Elevate your gaming experience with our premium casino-grade poker chip set, featuring 300 durable 14g clay chips, two decks of cards, and essential accessories. Perfect for business events, family game nights, and travel, this all-in-one package ensures seamless gameplay and professional appeal.", image: "/product/71nN26IilGL.webp", images: ["/product/51zvrkOVdfL.webp", "/product/51VdpUTyttL.webp", "/product/51lgoPqxOWL.webp", "/product/413S2SoTicL.webp", "/product/5163Zw1cGHL.webp", "/product/41TRqeYdQjL.webp"], image_names: ["71nN26IilGL.webp", "51zvrkOVdfL.webp", "51VdpUTyttL.webp", "51lgoPqxOWL.webp", "413S2SoTicL.webp", "5163Zw1cGHL.webp", "41TRqeYdQjL.webp"], features: [{title: "Casino-Grade Quality", description: "Crafted from solid clay with iron core, our chips deliver an authentic casino feel, ensuring a premium experience for all players."}, {title: "Comprehensive Chip Range", description: "Includes 300 chips in various denominations, accommodating 7-8 players and perfect for popular games like Texas Hold'em and Blackjack."}, {title: "Complete Accessory Kit", description: "Packaged with two standard poker decks, five dice, and dealer buttons for a fully equipped gaming setup right out of the box."}, {title: "Durable Portable Case", description: "Features a sleek aluminum case with secure latches and organized compartments, making it easy to transport for gatherings or travel."}]},
-  {title: "300-Piece Poker Chip Set with Aluminum Case - Perfect for B2B Events", category: "Poker Equipment", description: "Elevate your gaming experience with this comprehensive 300-piece poker chip set, complete with numbered chips, two decks of cards, five dice, and a compact aluminum case, making it ideal for B2B events, team-building activities, or corporate poker nights.", image: "/product/81RW3CiDcOL.webp", images: ["/product/51q7zRf+TNL.webp", "/product/51qcrTEtgDL.webp", "/product/41WYS27KQCL.webp", "/product/41nz7+msxyL.webp", "/product/410kSUGtvHL.webp", "/product/41AYwiElSxL.webp"], image_names: ["81RW3CiDcOL.webp", "51q7zRf+TNL.webp", "51qcrTEtgDL.webp", "41WYS27KQCL.webp", "41nz7+msxyL.webp", "410kSUGtvHL.webp", "41AYwiElSxL.webp"], features: [{title: "Complete Gaming Package", description: "This all-inclusive poker chip set features 300 durable chips, two decks of playing cards, five dice, and essential buttons, catering to businesses seeking versatile gaming solutions."}, {title: "High-Quality Materials", description: "Crafted from dual-injection iron composite, each chip delivers a professional feel and clear denomination, ensuring that your games are conducted with precision and style."}, {title: "Portable Aluminum Case", description: "The sturdy aluminum case, lined with plush velvet, keeps your poker set organized and protected, making it easy to transport and ideal for corporate events or off-site gatherings."}, {title: "Group Play Ready", description: "Designed for 7 to 8 players, this poker set provides an engaging and interactive experience, perfect for fostering teamwork and collaboration in corporate settings."}]},
-  {title: "Premium Aluminum Poker Chip Set - 300 Chips, 2 Decks, Luxury Case", category: "Poker Equipment", description: "Elevate game nights with our premium aluminum poker chip set, featuring 300 high-quality chips, two decks of cards, five dice, and a stylish carrying case. This comprehensive set is perfect for businesses looking to provide an entertaining experience, ensuring durability and convenience in storage for any corporate event or gathering.", image: "/product/81SU0U551DL.webp", images: ["/product/51uQTnESRbL.webp", "/product/51txcaAdBpL.webp", "/product/51KSBXPbx2L.webp", "/product/51w2o4S2fLL.webp", "/product/51gcgI4hzNL.webp", "/product/51KxxLxvlbL.webp", "/product/5156kMrubJL.webp"], image_names: ["81SU0U551DL.webp", "51uQTnESRbL.webp", "51txcaAdBpL.webp", "51KSBXPbx2L.webp", "51w2o4S2fLL.webp", "51gcgI4hzNL.webp", "51KxxLxvlbL.webp", "5156kMrubJL.webp"], features: [{title: "High-Quality Poker Chips", description: "Crafted from composite resin, our poker chips mimic the authentic feel of real casino chips, offering an exceptional gaming experience."}, {title: "Durable Aluminum Case", description: "The heavy-duty aluminum case ensures secure storage and portable transportation, making it easy to bring the excitement of poker anywhere."}, {title: "Complete Game Set", description: "This set includes 300 chips, two decks of cards, and five dice, providing everything needed for a thrilling poker night suitable for all skill levels."}, {title: "Ideal Gift for Events", description: "Packaged in an eye-catching box, this poker set makes a memorable gift for birthdays, holidays, or corporate events, ideal for team-building activities."}]},
-  {title: "Premium 200 Piece Poker Chip Set with Weighted Casino-Grade Chips", category: "Poker Equipment", description: "This comprehensive 200-piece poker chip set features high-quality, 11.5-gram casino-grade chips with unique denominations, making it perfect for serious gaming and entertainment in corporate events, parties, and team-building activities. Enhance the gaming experience for clients and employees alike.", image: "/product/71YBB1zTFLL.webp", images: ["/product/41s810Cc+NL.webp", "/product/419AGU06OlL.webp", "/product/41LQUiQ22OL.webp", "/product/41Qv+2oh4bL.webp", "/product/41JKtIvq7YL.webp", "/product/41ZHyvcXGbL.webp"], image_names: ["71YBB1zTFLL.webp", "41s810Cc+NL.webp", "419AGU06OlL.webp", "41LQUiQ22OL.webp", "41Qv+2oh4bL.webp", "41JKtIvq7YL.webp", "41ZHyvcXGbL.webp"], features: [{title: "Casino-Grade Chips", description: "Each chip weighs 11.5 grams and includes a durable metal core, providing an authentic casino experience that elevates your gaming events."}, {title: "Complete Set for Gamers", description: "Along with 200 chips, this set includes two decks of playing cards, five dice, and a dealer button, making it ideal for various poker games and accommodating up to six players."}, {title: "Portable Aluminum Case", description: "The robust aluminum case is designed for easy transport, with reinforced corners and cushioned interiors to ensure your chips are secure during travel to events or gatherings."}, {title: "Beginner-Friendly Guide", description: "A printed Texas Hold'em rule guide is included to facilitate quick learning for new players, ensuring everyone can join in the fun and enjoy the thrill of the game."}]},
-  {title: "Premium Iron & Glory Poker Set with Custom Chips & Luxury Case", category: "Poker Equipment", description: "Elevate your gaming experience with the Iron & Glory Poker Set, featuring a meticulously crafted wooden box, 100 customizable chips, and exquisite engraved metal dealer buttons. This complete set ensures durability and sophistication, making it an ideal choice for serious players seeking a professional-grade solution for their poker nights.", image: "/product/81yr96L1vqL.webp", images: ["/product/31OMt+P7ZpL.webp", "/product/41EF7uGzH9L.webp", "/product/51m6XcekbXL.webp", "/product/61Oz3J+NlCL.webp", "/product/51jF7JewpyL.webp", "/product/511pPPfM32L.webp", "/product/41UHMiGRmGL.webp"], image_names: ["81yr96L1vqL.webp", "31OMt+P7ZpL.webp", "41EF7uGzH9L.webp", "51m6XcekbXL.webp", "61Oz3J+NlCL.webp", "51jF7JewpyL.webp", "511pPPfM32L.webp", "41UHMiGRmGL.webp"], features: [{title: "High-Quality Wooden Case", description: "The premium wooden box not only adds elegance but also protects your poker set with durability, making it perfect for business events and gatherings."}, {title: "Complete Poker Game Set", description: "Includes everything needed to play, such as high-quality playing cards, 100 custom chips, and engraved dealer buttons, ensuring you’re always ready for a game."}, {title: "Unique Thematic Design", description: "The Dead Man's Hand theme provides an intriguing aesthetic that captivates players and enhances engagement, perfect for business gatherings or casual events."}, {title: "Durable for Long-Lasting Use", description: "Crafted from top-tier materials, this poker set is built to withstand frequent use, making it a reliable investment for countless game nights."}]},
-  {title: "Professional 500-Piece Texas Holdem Poker Chip Set in Aluminum Case", category: "Poker Equipment", description: "Elevate your gaming experience with our premium 500-piece Texas Holdem poker chip set, specifically designed for business events and tournaments. This professional set combines high-quality materials and superior craftsmanship, ensuring durability and a realistic casino feel for all your poker nights and gatherings.", image: "/product/81OAhWe1-mL.webp", images: ["/product/51AQ0pGjJyL.webp", "/product/41MHGtTWdgL.webp", "/product/51VNnTubNYL.webp", "/product/51quGNFF6qL.webp", "/product/51oV9ut6unL.webp", "/product/51Q5V-WtFTL.webp", "/product/61Du0MXz4AL.webp"], image_names: ["81OAhWe1-mL.webp", "51AQ0pGjJyL.webp", "41MHGtTWdgL.webp", "51VNnTubNYL.webp", "51quGNFF6qL.webp", "51oV9ut6unL.webp", "51Q5V-WtFTL.webp", "61Du0MXz4AL.webp"], features: [{title: "Complete 500-Piece Set", description: "Includes everything you need for game night, featuring 500 high-quality poker chips, playing cards, dealer button, betting buttons, dice, and detailed instructions to ensure an engaging experience."}, {title: "Heavy-Duty Clay Chips", description: "Crafted from premium 11.5g clay composite, these poker chips offer exceptional durability and a tactile feel, perfectly mimicking the authenticity of casino gaming for an immersive experience."}, {title: "Durable Aluminum Case", description: "Keep your poker set organized and secure with our sturdy aluminum case, designed for portability and protection, ensuring all components remain in perfect condition, wherever your game takes you."}, {title: "Versatile for Various Games", description: "Ideal for a range of card games, this versatile set caters to poker enthusiasts and blackjack players alike, providing a comprehensive solution for entertaining friends or hosting business events."}]},
-  {title: "100-Count Casino Style Poker Chip Set with Tray for B2B Gaming", category: "Poker Equipment", description: "Boost your gaming environment with our 100-count casino-style poker chip set, featuring high-quality plastic chips ideal for poker and card games. This complete solution enhances game nights, ensuring an engaging experience. The durable stacking tray offers easy storage and accessibility, making it a perfect addition for various gaming businesses and events.", image: "/product/81rObPwvG8L.webp", images: ["/product/51mekaLHaWL.webp", "/product/41-YJ1j+lvL.webp", "/product/41VRgRx-OVL.webp", "/product/41-yq0GYtyL.webp"], image_names: ["81rObPwvG8L.webp", "51mekaLHaWL.webp", "41-YJ1j+lvL.webp", "41VRgRx-OVL.webp", "41-yq0GYtyL.webp"], features: [{title: "Complete 100-Piece Set", description: "Includes a full set of 100 multi-colored poker chips, perfect for casual gaming or low-stakes practice in various business settings."}, {title: "Authentic Casino Feel", description: "Experience the true look and feel of casino-grade plastic chips, designed to enhance your clients' poker, blackjack, and other card game experiences."}, {title: "Convenient Storage Tray", description: "Features a durable stacking tray to keep your chips organized and easily accessible, ensuring a tidy setup for quick game preparation and streamlined operations."}, {title: "Versatile Gaming Options", description: "Ideal for a range of card games including Texas Hold'em, blackjack, roulette, or Rummy, making it a valuable addition to any gaming collection or business offering."}]},
-  {title: "Premium 13.5g Clay Poker Chips Set - 500 Pieces, Customizable Design", category: "Poker Equipment", description: "Elevate your gaming experience with our premium 13.5g poker chip set, designed for ultimate quality and durability. Ideal for business events and recreational games, this customizable poker set includes everything you need for 5-8 players, ensuring captivating gameplay and impressive aesthetics that will enhance any poker night.", image: "/product/81GP4JISLoL.webp", images: ["/product/511TAvHa+eL.webp", "/product/51jIhPR-lGL.webp", "/product/51tyFCBzaZL.webp"], image_names: ["81GP4JISLoL.webp", "511TAvHa+eL.webp", "51jIhPR-lGL.webp", "51tyFCBzaZL.webp"], features: [{title: "High-Quality Custom Design", description: "Crafted with unique designs using CNC machined molds, our poker chips are superior in quality, offering unmatched durability and style for serious gaming."}, {title: "Comprehensive Chip Breakdown", description: "Includes 150 white, 150 red, 100 green, 50 blue, and 50 black chips, perfect for accommodating various betting scenarios and ensuring every player's needs are met."}, {title: "Robust Chip Case", description: "Our enhanced poker chip case, made from tough ABS thermoplastic, features a custom molded solid core and three hinges to guarantee maximum resilience and accessibility."}, {title: "Multi-Denomination Chips", description: "The chips display denominations on both sides without dollar signs, allowing for flexible use in games that require either dollar or cent betting, adding versatility to your poker nights."}]},
-  {title: "Deluxe 200-Piece Poker Set with Wooden Storage Box", category: "Poker Equipment", description: "Elevate your game night with the Spin Master Deluxe 200-Piece Poker Set, featuring professional-grade poker chips and cards, all elegantly housed in a premium wooden box. Perfect for businesses seeking to enrich team-building activities or family entertainment, this set caters to players aged 10 and up, accommodating 2-10 participants for memorable gaming experiences.", image: "/product/81v743E-r2L.webp", images: ["/product/51mBF3bQhhL.webp", "/product/512n-Wdg9VL.webp", "/product/51kIrhj3AnL.webp", "/product/41d62nMTegL.webp", "/product/41eRbS62deL.webp", "/product/515rolnjemL.webp", "/product/41DySwGNegL.webp"], image_names: ["81v743E-r2L.webp", "51mBF3bQhhL.webp", "512n-Wdg9VL.webp", "51kIrhj3AnL.webp", "41d62nMTegL.webp", "41eRbS62deL.webp", "515rolnjemL.webp", "41DySwGNegL.webp"], features: [{title: "Professional-Grade Chips", description: "This set includes 200 high-quality, dual-tone poker chips, crafted for a premium feel, ensuring durability for repeated use during game nights."}, {title: "Elegant Wooden Storage", description: "The sophisticated wooden storage box not only keeps the chips and cards organized but also adds a touch of class to your poker set, featuring dual locks for secure storage."}, {title: "Comprehensive Game Components", description: "Included in the set are 2 decks of classic playing cards, 5 dice, and instructions, giving you everything you need for a fun and engaging game night."}, {title: "Ideal for Group Play", description: "Designed for 2-10 players, this poker set is perfect for fostering collaboration and friendly competition, suitable for both family gatherings and corporate events."}]},
-  {title: "Premium 500-Piece Poker Chip Set for B2B Casino Businesses", category: "Poker Equipment", description: "Elevate your poker gaming experience with our premium 500-piece poker chip set, designed specifically for B2B casino operations. Perfect for Texas Hold'em, Blackjack, and Pokeno, this durable set includes 11.5g clay chips packed in a stylish briefcase, ensuring both quality and practicality for your gaming needs.", image: "/product/81cPSlwp4UL.webp", images: ["/product/51wslr2WMOL.webp", "/product/5120hG6jcKL.webp", "/product/41ryVR3KVSL.webp", "/product/51QwAomIShL.webp", "/product/51RXC+zTgIL.webp", "/product/51KMvLLRirL.webp"], image_names: ["81cPSlwp4UL.webp", "51wslr2WMOL.webp", "5120hG6jcKL.webp", "41ryVR3KVSL.webp", "51QwAomIShL.webp", "51RXC+zTgIL.webp", "51KMvLLRirL.webp"], features: [{title: "High-Quality Material", description: "Crafted from durable 11.5g clay, these poker chips offer a professional feel and longevity, making them ideal for frequent use in casinos."}, {title: "Stylish Briefcase Included", description: "Our poker chip set comes with a sleek briefcase for secure storage and easy transportation, enhancing the organization of your gaming supplies."}, {title: "Versatile Game Use", description: "Suitable for various popular games such as Texas Hold'em, Blackjack, and Pokeno, this chip set caters to diverse gaming preferences in your establishment."}, {title: "Custom Branding Options", description: "Enhance your casino's identity with the option for custom logos on chips, allowing you to create a professional and personalized gaming experience for your clients."}]},
-  {title: "300 Count Casino Poker Chip Set with Dice and Cards - Portable Aluminum Case", category: "Poker Equipment", description: "This complete 300 count casino poker chip set is designed for professional gaming experiences, featuring high-quality 11.5g chips, five dice, and two decks of cards, all in a compact aluminum case for easy transport. Perfect for events or gatherings, catering to 2-10 players aged 8 and up.", image: "/product/71dh31JDXqL.webp", images: ["/product/413QGZEbR4L.webp", "/product/51MxXMnpYsL.webp", "/product/41wRRUChUIL.webp", "/product/41FsaRC+ttL.webp", "/product/41heAZkmYtL.webp", "/product/41XawkqHS8L.webp"], image_names: ["71dh31JDXqL.webp", "413QGZEbR4L.webp", "51MxXMnpYsL.webp", "41wRRUChUIL.webp", "41FsaRC+ttL.webp", "41heAZkmYtL.webp", "41XawkqHS8L.webp"], features: [{title: "High-Quality Poker Chips", description: "Each chip weighs 11.5g, crafted from premium materials with a metal core, providing a professional feel for an enhanced gaming experience."}, {title: "Comprehensive Game Set", description: "Includes a complete set of 300 chips in various denominations, two decks of playing cards, a dealer button, and five dice, catering to diverse gaming needs."}, {title: "Durable Aluminum Case", description: "Designed for portability, the reinforced aluminum case features a sturdy construction with dual locks to securely store and protect your gaming essentials."}, {title: "Ideal for Group Play", description: "This set effectively supports 7-8 players with 300 chips and can accommodate up to 10 players with the complete set of 500 chips, making it ideal for larger gatherings."}]},
-  {title: "High-End 14g Poker Chip Set with Aluminum Case & 2 Decks of Cards", category: "Poker Equipment", description: "Elevate your gaming experience with this premium 14g poker chip set, featuring 500 chips, an aluminum carrying case, and two decks of cards. Designed for serious poker enthusiasts and businesses, this set is perfect for tournaments, game nights, and as an exceptional gift, ensuring durability and style across every poker game.", image: "/product/81kozcTtgpL.webp", images: ["/product/51gstilLm2L.webp", "/product/51rmh-VQwJL.webp", "/product/416OyASlVjL.webp", "/product/511n2KQ76dL.webp", "/product/41EFs-K1h+L.webp", "/product/41aOCssGVlL.webp"], image_names: ["81kozcTtgpL.webp", "51gstilLm2L.webp", "51rmh-VQwJL.webp", "416OyASlVjL.webp", "511n2KQ76dL.webp", "41EFs-K1h+L.webp", "41aOCssGVlL.webp"], features: [{title: "Casino-Grade Chips", description: "Each 14g chip is made from high-quality clay composite material, providing improved tactile feel and long-lasting durability for an enhanced gaming experience."}, {title: "Sturdy Aluminum Case", description: "Crafted with a robust aluminum shell, this case includes a durable handle and locking mechanism, ensuring security and portability for your premium poker chip set."}, {title: "Comprehensive Chip Variety", description: "The set includes 500 chips in multiple denominations, along with two decks of cards, a dealer button, and dice, catering to diverse games and enhancing gameplay enjoyment."}, {title: "Ideal for Game Nights", description: "Support up to 10 players, making this set perfect for family gatherings, poker tournaments, and card clubs, delivering high-quality entertainment for any occasion."}]},
-  {title: "DA VINCI Monte Carlo Poker Set 500 Chips, 14g, Upgraded ABS Case", category: "Poker Equipment", description: "Elevate your gaming experience with the DA VINCI Monte Carlo Poker Set, featuring 500 high-quality 14g chips and an upgraded black ABS case. Ideal for B2B buyers looking for durable and attractive poker supplies, this set includes two decks of premium plastic playing cards and essential dealer accessories, ensuring a polished and professional feel for any event.", image: "/product/71l1HN37q3L.webp", images: ["/product/41M6rchCNTL.webp", "/product/51bEG35lHXL.webp", "/product/41t4beaArRL.webp", "/product/51ndu5bL-CL.webp", "/product/41jk1RcIl-L.webp"], image_names: ["71l1HN37q3L.webp", "41M6rchCNTL.webp", "51bEG35lHXL.webp", "41t4beaArRL.webp", "51ndu5bL-CL.webp", "41jk1RcIl-L.webp"], features: [{title: "Premium Chip Quality", description: "The 14g clay composite chips are designed for durability and ease of stacking, enhancing the players' experience during high-stakes games."}, {title: "Attractive Design", description: "Each chip showcases an eye-catching gold laser ring, ensuring a professional look that stands out in any gaming environment."}, {title: "Durable ABS Case", description: "The upgraded black ABS case is scratch-resistant and dent-proof, providing reliable protection and easy transport for your poker set."}, {title: "Complete Accessories", description: "This set includes two high-quality plastic decks and two cut cards, along with dealer and blind buttons, equipping you for seamless gameplay."}]},
-  {title: "Professional 300-Piece Poker Set with Aluminum Case & Chips", category: "Poker Equipment", description: "Elevate your poker nights with the Pressman Premium Classics 300-Piece Poker Set. Designed for B2B buyers, this comprehensive kit includes an aluminum carry case, dual-sided chips, and detailed instructions, ensuring effortless setup for 2-10 players aged 8 and above. Enhance engagement and camaraderie at your next corporate event or social gathering.", image: "/product/812NbICRA-L.webp", images: ["/product/51EroEPREEL.webp", "/product/519QtNCNS+L.webp", "/product/41sFEHi64CL.webp", "/product/51RkAglQ1gL.webp"], image_names: ["812NbICRA-L.webp", "51EroEPREEL.webp", "519QtNCNS+L.webp", "41sFEHi64CL.webp", "51RkAglQ1gL.webp"], features: [{title: "Premium Quality Chips", description: "Crafted from high-quality materials, the 11.5g dual-toned poker chips provide a professional feel and durability for endless poker games."}, {title: "Comprehensive Game Setup", description: "This set includes a complete range of essentials such as a deck of cards, dealer button, betting buttons, and five poker dice for an all-inclusive gaming experience."}, {title: "Portable Aluminum Case", description: "The sturdy aluminum carry case ensures the entire set is easily transportable, making it convenient for on-the-go gaming with colleagues or clients."}, {title: "Easy-to-Follow Instructions", description: "Detailed instructions included in the set guide players of all levels, promoting inclusivity and smooth gameplay during your poker nights."}]},
-  {title: "DA VINCI Monte Carlo Poker Set - 500 14g Chips, 2 Decks, Aluminum Case", category: "Poker Equipment", description: "Elevate your gaming experience with the DA VINCI Monte Carlo Poker Club Set, designed for professional use. Featuring 500 high-quality 14-gram chips, two waterproof decks, and an upgraded aluminum case, this set ensures durability and style, making it perfect for casinos, events, and corporate entertainment.", image: "/product/61w066FYPzL.webp", images: ["/product/41u2ir7+fZL.webp", "/product/51k2XwhhJRL.webp", "/product/41QUwqic49L.webp", "/product/31mbAUMH7wL.webp", "/product/310uTT-Bl7L.webp", "/product/41jk1RcIl-L.webp"], image_names: ["61w066FYPzL.webp", "41u2ir7+fZL.webp", "51k2XwhhJRL.webp", "41QUwqic49L.webp", "31mbAUMH7wL.webp", "310uTT-Bl7L.webp", "41jk1RcIl-L.webp"], features: [{title: "Premium Quality Chips", description: "Each chip is made from a high-quality clay composite weighing 14 grams, designed for optimal stacking and stability during gameplay."}, {title: "Elegant Design", description: "Features an attractive chip design with stunning gold laser rings, enhancing the aesthetic for luxurious gaming sessions."}, {title: "Enhanced Durability", description: "The upgraded aluminum case provides superior protection and organization, ensuring that all components remain secure and intact during transport."}, {title: "Complete Gaming Package", description: "Includes two decks of waterproof plastic playing cards, two cut cards, a dealer button, and a blind button, delivering everything needed for a full poker experience."}]},
-  {title: "DA VINCI Unicorn Premium Clay Poker Chip Set - 500 Professionally Weighted Chips", category: "Poker Equipment", description: "Elevate your gaming experience with the DA VINCI Unicorn Premium Clay Poker Chip Set, featuring 500 authentic 9-gram clay chips, a durable ABS case, two high-quality plastic decks, and dealer buttons. Ideal for casinos and gaming lounges seeking authentic quality and performance.", image: "/product/713fInfub9L.webp", images: ["/product/51vQnaB0bLL.webp", "/product/41Ub2EueVHL.webp", "/product/51zfjbsYL0L.webp", "/product/31rWRrVplwL.webp", "/product/31vRuvlEnTL.webp", "/product/41MZaWH+QRL.webp", "/product/41Eu0FW-HxL.webp"], image_names: ["713fInfub9L.webp", "51vQnaB0bLL.webp", "41Ub2EueVHL.webp", "51zfjbsYL0L.webp", "31rWRrVplwL.webp", "31vRuvlEnTL.webp", "41MZaWH+QRL.webp", "41Eu0FW-HxL.webp"], features: [{title: "Authentic Casino Quality", description: "Each of the 500 clay poker chips has a professional casino weight of 9 grams, ensuring a genuine feel and superior handling for all poker enthusiasts."}, {title: "Durable Storage Solution", description: "This set includes a robust black ABS carrying case designed to protect your chips and accessories from damage while maintaining aesthetics during transportation."}, {title: "Complete Gaming Accessories", description: "The package comes with two premium plastic playing cards, two cut cards, and dealer/blind buttons, providing everything needed for an authentic poker night."}, {title: "Easy Stack Design", description: "Our high-quality chips are crafted to stack perfectly without slipping, ensuring a tidy and professional gaming environment, even during intense play."}]},
-  {title: "Brybelly Premium 14g Casino Poker Set - 1000 Chips, Aluminum Case", category: "Poker Equipment", description: "Elevate your gaming experience with the Brybelly Premium 14g Poker Set, featuring 1000 high-quality clay composite chips and a sturdy aluminum case, perfect for businesses hosting events, tournaments, or family game nights.", image: "/product/81M4CxPeiHL.webp", images: ["/product/51ntI+qXrDL.webp", "/product/51AIhzwEJFL.webp", "/product/51damrEoncL.webp", "/product/41NYST5jwAL.webp", "/product/515JXYz4bzL.webp", "/product/41ygo0zp3GL.webp"], image_names: ["81M4CxPeiHL.webp", "51ntI+qXrDL.webp", "51AIhzwEJFL.webp", "51damrEoncL.webp", "41NYST5jwAL.webp", "515JXYz4bzL.webp", "41ygo0zp3GL.webp"], features: [{title: "High-Quality Chips", description: "Each 14g clay composite chip offers a realistic casino feel, ideal for engaging and professional gaming environments."}, {title: "Unique Texture Design", description: "Chips feature distinct textures for easy stacking and enhanced visibility, ensuring seamless gameplay for all levels of poker enthusiasts."}, {title: "Secure Aluminum Case", description: "The durable aluminum case includes foam padding to keep all components safe during transport and storage, providing longevity for repeated use."}, {title: "Complete Game Set", description: "Includes two decks of cards and a dealer button, making it an all-in-one solution for various card games, enhancing versatility and fun."}]},
-  {title: "Casino-Grade 13.5g Poker Chip Set with 7 Colors & Accessories", category: "Poker Equipment", description: "Elevate your gaming experience with our premium 13.5g poker chip set, uniquely designed for businesses seeking top-tier quality. This comprehensive kit includes two decks of cards, five dice, and a dealer button, ideal for hosting poker nights for groups of 5-8 players. Crafted for durability and aesthetics, it's an essential addition for any venue looking to enhance its gaming offerings.", image: "/product/81k0l1Wm2yL.webp", images: ["/product/51eSZRnTtKL.webp"], image_names: ["81k0l1Wm2yL.webp", "51eSZRnTtKL.webp"], features: [{title: "Superior Chip Quality", description: "Our poker chips are crafted from high-quality materials with a unique design, making them more durable and visually appealing than competitors."}, {title: "Enhanced Storage Case", description: "The poker chip set comes with a robust ABS plastic case featuring an advanced design and extra hinges for easy access, ensuring your chips are securely stored."}, {title: "Versatile Gameplay Options", description: "Each chip features a denomination that allows for flexible play, accommodating various game formats, whether for dollars or cents, to suit your business needs."}, {title: "Comprehensive Gaming Accessories", description: "Included in the set are two decks of plastic-coated cards, five dice, and a dealer button, providing everything necessary for a complete poker experience right out of the box."}]},
-  {title: "Texas Holdem Poker Chip Set: 200 Chips, 2 Decks, Mat & Storage", category: "Poker Equipment", description: "Elevate your corporate events or client gatherings with our comprehensive Texas Holdem Poker Chip Set, featuring 200 high-quality chips, exclusive card designs, and organized storage solutions, tailored to enhance engagement and foster networking in a fun, competitive environment.", image: "/product/81hgDCTcDPL.webp", images: ["/product/518Q+Hwxs2L.webp", "/product/51zFKu76nWL.webp", "/product/51uWaLiEOUL.webp", "/product/51xm+zRiCYL.webp", "/product/518o6pRT3GL.webp", "/product/51FjOk4i0ML.webp"], image_names: ["81hgDCTcDPL.webp", "518Q+Hwxs2L.webp", "51zFKu76nWL.webp", "51uWaLiEOUL.webp", "51xm+zRiCYL.webp", "518o6pRT3GL.webp", "51FjOk4i0ML.webp"], features: [{title: "Complete Gameplay Kit", description: "Includes 200 professional-grade poker chips and 2 custom card decks, ensuring an authentic gaming experience that caters to both novice and experienced players."}, {title: "Enhanced Social Engagement", description: "Perfect for team-building or client entertainment, this poker set creates an interactive atmosphere that encourages teamwork and friendly competition."}, {title: "Organizational Efficiency", description: "Designed with a dedicated chip holder and segmented storage, providing seamless access during gameplay and simplifying cleanup for efficient event management."}, {title: "Distinctive Card Design", description: "Boasts unique playing card aesthetics that enhance visual clarity and add sophistication, making every poker night a memorable and professional affair."}]},
-  {title: "Red Classic 100-Piece Poker Chip Set for 2-10 Players", category: "Poker Equipment", description: "Elevate your gaming offerings with our 100-piece Red Classic Poker Chip Set, ideal for enhancing poker nights, parties, or corporate events. Durable and well-organized, this set includes a storage tray for easy gameplay, making it perfect for beginners and seasoned players alike. A fantastic addition to any game collection or as a memorable gift for partners on special occasions.", image: "/product/81J4-Aq8dgL.webp", images: ["/product/51vrlo+lFOL.webp", "/product/41I9pQsU+cL.webp", "/product/51YJgB4sirL.webp", "/product/5148leDchkL.webp", "/product/41woQAXyQvL.webp", "/product/41iZ3e0WbkL.webp"], image_names: ["81J4-Aq8dgL.webp", "51vrlo+lFOL.webp", "41I9pQsU+cL.webp", "51YJgB4sirL.webp", "5148leDchkL.webp", "41woQAXyQvL.webp", "41iZ3e0WbkL.webp"], features: [{title: "Organized Storage Tray", description: "Comes with a convenient plastic storage tray, allowing for easy organization by color or denomination, enhancing gameplay efficiency."}, {title: "Durable Materials", description: "Constructed from high-quality plastic, these poker chips are designed for long-lasting use, ensuring they withstand frequent handling during intense gaming sessions."}, {title: "Expands Existing Sets", description: "Easily augment your current poker set with this chip collection, ready to accommodate more players during gatherings and special occasions."}, {title: "Fun for All Ages", description: "Suitable for players aged 8 and above, this poker chip set is perfect for family game night, promoting camaraderie and entertainment among various age groups."}]},
-  {title: "500 Casino-Quality Poker Chips Set with Aluminum Case & Accessories", category: "Poker Equipment", description: "The LUOBAO 500-piece Poker Chips Set is crafted for professional gaming environments, featuring premium chips in five vibrant colors, an aluminum case, and essential accessories. Ideal for Texas Hold'em, Blackjack, and tournaments, this set delivers quality and versatility for businesses seeking an enhanced gambling experience.", image: "/product/81ggaP-qAPL.webp", images: ["/product/51ob+mTwT3L.webp", "/product/51dB-mOpnTL.webp", "/product/41lm4WqiD7L.webp", "/product/41awCznhbnL.webp", "/product/414sDVRJuzL.webp", "/product/51L1C2J2QWL.webp", "/product/519FkkFvzKL.webp"], image_names: ["81ggaP-qAPL.webp", "51ob+mTwT3L.webp", "51dB-mOpnTL.webp", "41lm4WqiD7L.webp", "41awCznhbnL.webp", "414sDVRJuzL.webp", "51L1C2J2QWL.webp", "519FkkFvzKL.webp"], features: [{title: "Durable Casino-Quality Chips", description: "Each chip is made with high-quality materials, ensuring longevity and excellent performance during intense gaming sessions."}, {title: "Versatile Color Customization", description: "Featuring 100 chips each in pink, blue, green, red, and white, this set allows for tailored gaming experiences across various card games."}, {title: "Complete Gaming Package", description: "Includes two decks of cards, dealer and blind buttons, and five dice, providing everything needed for a comprehensive and engaging poker night."}, {title: "Portable Aluminum Case", description: "The stylish aluminum case facilitates easy storage and transportation, making it perfect for both professional tournaments and casual gatherings."}]},
-  {title: "Professional Poker Set with 500 Chips and Cards", category: "Poker Equipment", description: "Elevate your game nights with the Christopher Bullet Poker Set, featuring 500 high-quality, 12g plastic chips designed for durability and professional play. Complete with two decks of 100% plastic playing cards, this set ensures an authentic casino experience for your business events or gatherings, making it the perfect gift for poker enthusiasts.", image: "/product/810O8okR6RL.webp", images: ["/product/51RGHCJk8JL.webp", "/product/51IY9cVJOpL.webp", "/product/51KcQarMhnL.webp", "/product/51NGIRztvQL.webp", "/product/51Sy11r02pL.webp"], image_names: ["810O8okR6RL.webp", "51RGHCJk8JL.webp", "51IY9cVJOpL.webp", "51KcQarMhnL.webp", "51NGIRztvQL.webp", "51Sy11r02pL.webp"], features: [{title: "Premium Quality Chips", description: "Our poker chips feature a solid metal core, providing a perfect balance of weight for an authentic poker experience tailored for serious players."}, {title: "Complete Game Setup", description: "The set includes 500 chips in multiple denominations, structured for seamless gameplay for 6-10 players, ideal for professional tournaments or corporate events."}, {title: "Durable Aluminum Case", description: "The poker set comes in a reinforced aluminum case, ensuring secure storage and easy transport for home game nights or business gatherings."}, {title: "Includes Professional Card Decks", description: "Includes two decks of high-quality Bullet playing cards that are designed for smooth shuffling and long-lasting play, complete with a dealer button and game guide."}]},
-  {title: "500 Casino Quality Poker Chips Set - 11.5g with Aluminum Case", category: "Poker Equipment", description: "Elevate your gaming offerings with this premium 500-piece casino-quality poker chip set, featuring a versatile color combination for diverse gaming experiences and an enhanced aluminum case for ultimate portability and durability. Ideal for casinos, gaming events, or corporate entertainment.", image: "/product/81z4lKlhJfL.webp", images: ["/product/515k7cpcglL.webp"], image_names: ["81z4lKlhJfL.webp", "515k7cpcglL.webp"], features: [{title: "High-Quality Chips", description: "Crafted from durable materials, each chip weighs 11.5 grams, ensuring a professional feel and long-lasting performance for any gaming establishment."}, {title: "Comprehensive Set", description: "Includes 500 chips in various colors, 2 decks of cards, 5 red dice, and a dealer button, providing everything needed for a complete poker experience."}, {title: "Enhanced Case Design", description: "New aluminum carrying case features a thicker chip tray, increasing strength and protection for your gaming accessories while on the move."}, {title: "Customizable Options", description: "Available in multiple color combinations and denominations, this poker chip set allows for customization to suit different gaming themes or corporate branding."}]},
-  {title: "DA VINCI 750 Casino Del Sol Poker Chips Set with Accessories", category: "Poker Equipment", description: "Elevate your gaming experience with the DA VINCI Casino Del Sol Poker Chips Set, featuring 750 professional-grade 11.5g chips. This comprehensive kit is perfect for casinos, gaming events, or corporate functions, equipped with an aluminum case, playing cards, dealer buttons, and cut cards for seamless play and exceptional durability.", image: "/product/815XyhapXEL.webp", images: ["/product/41PMEZVdkoL.webp", "/product/51LD9JoJ47L.webp", "/product/51lPV0tbuSL.webp", "/product/51aOe6UKfdL.webp", "/product/51iAk+CCZTL.webp", "/product/51CSATZRbeL.webp"], image_names: ["815XyhapXEL.webp", "41PMEZVdkoL.webp", "51LD9JoJ47L.webp", "51lPV0tbuSL.webp", "51aOe6UKfdL.webp", "51iAk+CCZTL.webp", "51CSATZRbeL.webp"], features: [{title: "High-Quality Poker Chips", description: "Crafted from durable materials, each 11.5g Casino Del Sol poker chip ensures a professional feel and longevity, ideal for frequent use in high-stakes gaming environments."}, {title: "Comprehensive Accessory Set", description: "This set includes a premium aluminum case, two decks of playing cards, three dealer buttons, and two cut cards, providing everything needed for a complete gaming experience."}, {title: "Customizable Chip Denominations", description: "The chips feature printed dollar denominations, allowing for easy identification and customizable gameplay, enhancing the gaming experience for all participants."}, {title: "Variety of Chip Colors", description: "Featuring 750 chips in assorted colors—150 blue, 200 red, 150 green, 100 black, 50 gray, 50 orange, and 50 yellow—this set caters to various gaming styles and preferences for any casino or event."}]},
-  {title: "300 Clay Poker Chips Set for Texas Hold'em & Blackjack - 13.5g", category: "Poker Equipment", description: "The LUOBAO 300-piece poker chip set is ideal for B2B businesses in the gaming industry, offering premium quality clay chips that enhance tournament play and casual game nights. With an elegant European design and durable materials, this set ensures consistent performance and professionalism for any gaming environment.", image: "/product/81Rvi674kDL.webp", images: ["/product/51501p4-5-L.webp", "/product/51BQoBMUV4L.webp", "/product/31H8VQpzPJL.webp", "/product/51kPruCaXOL.webp", "/product/5139Y1c27SL.webp", "/product/412umLqTQuL.webp"], image_names: ["81Rvi674kDL.webp", "51501p4-5-L.webp", "51BQoBMUV4L.webp", "31H8VQpzPJL.webp", "51kPruCaXOL.webp", "5139Y1c27SL.webp", "412umLqTQuL.webp"], features: [{title: "Premium Clay Material", description: "Crafted from high-grade clay, these chips offer exceptional durability and a professional feel, making them perfect for both casual and competitive poker settings."}, {title: "Elegant European Design", description: "Inspired by the iconic Monte Carlo style, the sophisticated design of these chips elevates the overall gaming experience, appealing to discerning players."}, {title: "Consistent Dimensions", description: "Each chip features precise dimensions of 40mm diameter and 3.3mm thickness, ensuring uniform weight and feel for a seamless gaming experience."}, {title: "Enhanced Gameplay Features", description: "The non-slip surface of these cards guarantees easy shuffling, while their waterproof finish ensures longevity, making them an invaluable addition to any gaming arsenal."}]},
-  {title: "500-Piece Poker Set with Custom Chips & Durable Case", category: "Poker Equipment", description: "Elevate your game nights with our premium 500-piece poker set, designed specifically for B2B buyers looking for quality and durability. This comprehensive set includes a variety of chip denominations, custom playing cards, and professional dealer signs, ensuring an exceptional gaming experience for corporate events or social gatherings.", image: "/product/8169lf3K9mL.webp", images: ["/product/518YGj50OaL.webp", "/product/51bRRzxwcZL.webp", "/product/51BTV9JV8bL.webp", "/product/41WC6laRZjL.webp", "/product/51RVZJcXNvL.webp", "/product/41LH1CBZxfL.webp", "/product/51CvsboK8KL.webp"], image_names: ["8169lf3K9mL.webp", "518YGj50OaL.webp", "51bRRzxwcZL.webp", "51BTV9JV8bL.webp", "41WC6laRZjL.webp", "51RVZJcXNvL.webp", "41LH1CBZxfL.webp", "51CvsboK8KL.webp"], features: [{title: "Custom-Designed Chips", description: "Our poker chips feature denominations ranging from $1 to $1000, providing versatility for all levels of play, whether casual or competitive."}, {title: "Professional Dealer Signs", description: "Includes robust zinc alloy position markers, enhancing gameplay clarity and professionalism for all participants at your poker tables."}, {title: "Casino Quality Chips", description: "Each chip is 14 grams with a 40mm diameter, delivering an authentic feel and sound during gameplay to enhance player engagement."}, {title: "Portable Storage Case", description: "The durable carrying case, lined with cushioning EVA foam, ensures safe transport and organization of your poker set, making it ideal for gatherings at any location."}]},
-  {title: "500-Piece Professional Poker Chip Set with Aluminum Case", category: "Poker Equipment", description: "Elevate your gaming experience with our 500-piece poker chip set, featuring 11.5g professional-grade chips, a durable aluminum case, and complete accessories, perfect for hosting engaging poker nights or casino-themed events for clients and employees.", image: "/product/71f+5-JrGkL.webp", images: ["/product/41zmA1rs1dL.webp", "/product/512ZabJpXXL.webp", "/product/51Hskno9WnL.webp", "/product/412W1Bmr4CL.webp", "/product/51+VhktmYrL.webp", "/product/41SrMWKrIEL.webp"], image_names: ["71f+5-JrGkL.webp", "41zmA1rs1dL.webp", "512ZabJpXXL.webp", "51Hskno9WnL.webp", "412W1Bmr4CL.webp", "51+VhktmYrL.webp", "41SrMWKrIEL.webp"], features: [{title: "Professional-Grade Chips", description: "Our poker chips are designed with a solid iron core and weigh 11.5 grams each, providing an authentic casino feel for a premium gaming experience."}, {title: "Comprehensive Accessory Set", description: "This set comes complete with 500 chips, 2 decks of cards, 5 dice, and dealer buttons, making it perfect for Texas Hold'em, Blackjack, and other popular games."}, {title: "Durable Storage Solution", description: "The robust aluminum case features foam padding to ensure chips are securely kept, while the lightweight design allows for easy transport to any gaming location."}, {title: "Water-Resistant and Long-Lasting", description: "Crafted from high-quality composite materials, our chips are designed to resist wear and tear, making them easy to clean and perfect for repeated use."}]},
-  {title: "High-Quality 14g Poker Chip Set with Accessories for B2B Use", category: "Poker Equipment", description: "Enhance your gaming experience with our premium 14g poker chip set, featuring 500 clay chips, an elegant aluminum carrying case, and essential poker accessories, making it an ideal choice for businesses and establishments seeking high-quality gaming solutions.", image: "/product/81lXNpENF3L.webp", images: ["/product/5172BCbtusL.webp", "/product/41jk3Dx9QIL.webp", "/product/41pPnn6H8aL.webp", "/product/51z3RyrKFpL.webp", "/product/418toAza1oL.webp"], image_names: ["81lXNpENF3L.webp", "5172BCbtusL.webp", "41jk3Dx9QIL.webp", "41pPnn6H8aL.webp", "51z3RyrKFpL.webp", "418toAza1oL.webp"], features: [{title: "Premium Clay Chips", description: "Our carefully selected 14g clay chips provide exceptional durability and a professional feel, ensuring an elevated gaming experience for your clientele."}, {title: "Elegant Carrying Case", description: "The robust aluminum carrying case features reinforced design and soft interior cushioning, offering optimal protection for your poker chips during transport and storage."}, {title: "Comprehensive Accessory Kit", description: "Includes essential poker accessories such as plastic playing cards and acrylic dice, facilitating a complete gaming setup for maximum customer satisfaction."}, {title: "Customizable Chip Colors", description: "The set features a variety of chip colors — white, red, green, black, purple, and yellow — allowing you to customize your game to suit any occasion or branding needs."}]},
-  {title: "ARTGAME 14g Poker Chip Set with Dealer Button & Aluminum Case", category: "Poker Equipment", description: "Elevate your poker game with the ARTGAME 14g Poker Chip Set, designed for serious players. This 500-chip casino-style set is ideal for B2B suppliers looking to provide quality gaming materials, ensuring a professional poker experience with durable clay chips and a protective aluminum case.", image: "/product/81jH1w7-oiL.webp", images: ["/product/51FGn-rjmLL.webp", "/product/512rN1IBsAL.webp", "/product/51QS5rmXUCL.webp", "/product/51PtJF7YRLL.webp", "/product/51HrmiqZaeL.webp", "/product/51RMBq6AfJL.webp"], image_names: ["81jH1w7-oiL.webp", "51FGn-rjmLL.webp", "512rN1IBsAL.webp", "51QS5rmXUCL.webp", "51PtJF7YRLL.webp", "51HrmiqZaeL.webp", "51RMBq6AfJL.webp"], features: [{title: "Superior Chip Material", description: "Crafted from high-quality 14g dual-injected clay with an iron core, these chips deliver a professional feel and durability for intense games."}, {title: "Comprehensive Chip Variety", description: "This set includes 500 chips in six distinct denominations and colors, catering to 9-10 players, ideal for diverse gaming setups."}, {title: "Sturdy Carrying Case", description: "The EVA-lined aluminum case offers shock resistance and organized storage, ensuring your chips and accessories are safely housed."}, {title: "Perfect Gift for Gamers", description: "Ideal for B2B sales, this comprehensive poker dealer set makes a fantastic gift for poker enthusiasts, enhancing any game night experience."}]},
-  {title: "Professional Poker Chip Set with Aluminum Case - 200 Chips & Accessories", category: "Poker Equipment", description: "Elevate your gaming experience with our professional poker chip set, featuring 200 durable plastic chips in four colors and including essential accessories like two playing cards and a dealer button, perfect for corporate events and high-stakes poker nights.", image: "/product/71DXHilBK2L.webp", images: ["/product/51mdpboMdCL.webp", "/product/61prvbjE9XL.webp", "/product/617Bi-8ZE7L.webp", "/product/51PrCaeRTcL.webp", "/product/51lLr7PbSSL.webp", "/product/41s2Bzop+nL.webp", "/product/51-XELacDjL.webp"], image_names: ["71DXHilBK2L.webp", "51mdpboMdCL.webp", "61prvbjE9XL.webp", "617Bi-8ZE7L.webp", "51PrCaeRTcL.webp", "51lLr7PbSSL.webp", "41s2Bzop+nL.webp", "51-XELacDjL.webp"], features: [{title: "High-Quality Poker Chips", description: "This set includes 200 plastic poker chips, ensuring durability and reliability for endless gaming sessions."}, {title: "Convenient Storage Solution", description: "Packaged in a robust aluminum case, this poker chip set provides safe and organized storage for your gaming accessories."}, {title: "Clear Denomination Design", description: "Each chip is printed with clear denominations to minimize confusion during play and enhance the gaming experience."}, {title: "Versatile for Any Occasion", description: "Ideal for poker nights, family gatherings, or corporate events, this set caters to both casual players and serious poker enthusiasts."}]},
-  {title: "Foldable Poker Table - Texas Hold'em Set with 300 Chips & Case", category: "Poker Equipment", description: "This versatile foldable poker table set features a spacious 48x48 inch design, perfect for up to 8 players. Ideal for business events or corporate retreats, it is compact enough to transport easily, delivering a professional gaming experience with durable components and ample storage.", image: "/product/61TROmcRtUL.webp", images: ["/product/41riskaExYL.webp", "/product/41D57eaPbJL.webp", "/product/31wi5Ll3fYL.webp", "/product/41U7n+2WLDL.webp", "/product/41zwAvR3aIL.webp", "/product/41jHF4hxoEL.webp"], image_names: ["61TROmcRtUL.webp", "41riskaExYL.webp", "41D57eaPbJL.webp", "31wi5Ll3fYL.webp", "41U7n+2WLDL.webp", "41zwAvR3aIL.webp", "41jHF4hxoEL.webp"], features: [{title: "Compact & Portable", description: "Easily folds to 24x24 inches for convenient transport, making it perfect for on-the-go gaming at events, parties, or corporate gatherings."}, {title: "Large Player Capacity", description: "The octagonal design accommodates up to 8 players, ensuring everyone can join the game without feeling cramped."}, {title: "Casino-Quality Chips", description: "Includes 300 casino-style chips made for durability, providing a strong, authentic feel that enhances the gaming experience."}, {title: "Complete Set Included", description: "Comes with 2 decks of cards, a dealer button, and blind button, all conveniently stored in a spacious carrying case for easy access."}]},
-  {title: "Battery-Operated 2 Deck Electric Card Shuffler for UNO & Poker", category: "Poker Equipment", description: "The FEIERYA Automatic Card Shuffler is a battery-operated solution designed for fast and efficient shuffling of 1-2 decks of cards, ideal for businesses hosting card games. Its user-friendly design makes it suitable for all ages, enhancing game play while saving valuable time in hectic environments.", image: "/product/71JEr1KURDL.webp", images: ["/product/41vg7sUsUyL.webp", "/product/41+U7OLN94L.webp", "/product/513NH4RP7YL.webp", "/product/51Ts2AfP4XL.webp", "/product/41hXrWu1R4L.webp", "/product/41kOmop4azL.webp"], image_names: ["71JEr1KURDL.webp", "41vg7sUsUyL.webp", "41+U7OLN94L.webp", "513NH4RP7YL.webp", "51Ts2AfP4XL.webp", "41hXrWu1R4L.webp", "41kOmop4azL.webp"], features: [{title: "Efficient Card Shuffling", description: "Quickly shuffles 1-2 decks of cards in seconds, allowing for swift transitions during card games."}, {title: "Versatile Compatibility", description: "Compatible with various card games, including Poker, UNO, and Bridge, accommodating cards with a maximum size of 3.50 x 2.48 inches."}, {title: "Portable Design", description: "Compact dimensions (8.07 inches) and lightweight build make it easy to transport, perfect for events or travel."}, {title: "User-Friendly Operation", description: "Easily powered by 4 AA batteries, the simple button mechanism allows anyone to shuffle cards effortlessly."}]},
-  {title: "Maverick Texas Hold 'Em Poker Set with Aluminum Case - 300 Chips & 2 Decks", category: "Poker Equipment", description: "The Maverick Texas Hold 'Em Poker Set is designed for serious gaming enthusiasts and businesses alike, featuring 300 high-quality 11g casino chips, two durable decks of playing cards, and essential gaming components all securely housed in a sturdy aluminum case, making it an ideal choice for corporate events and team-building activities.", image: "/product/91W9Fds-+FL.webp", images: ["/product/51T0B4-ssqL.webp", "/product/41fHP3yhrRL.webp", "/product/41yCwqXsyeL.webp", "/product/41-oINYlSzL.webp", "/product/414KehzWT2L.webp", "/product/41uZN+YG2KL.webp", "/product/41dAZckW4bL.webp"], image_names: ["91W9Fds-+FL.webp", "51T0B4-ssqL.webp", "41fHP3yhrRL.webp", "41yCwqXsyeL.webp", "41-oINYlSzL.webp", "414KehzWT2L.webp", "41uZN+YG2KL.webp", "41dAZckW4bL.webp"], features: [{title: "Casino-Grade Quality", description: "This poker set includes 300 premium 11g chips, ensuring a professional and authentic gaming experience for your events."}, {title: "Durable Aluminum Case", description: "Housed in a robust aluminum case, this set is designed for easy transport and secure storage, making it perfect for on-the-go gaming."}, {title: "Complete Gaming Components", description: "Equipped with 5 red dice and 3 dealer buttons (small blind/big blind), this set has everything needed for a complete poker night."}, {title: "Ideal for Corporate Gifts", description: "This poker set is an excellent choice for corporate gifts or events, providing high-quality components that foster enjoyment and camaraderie."}]},
-  {title: "Goplus Professional Poker Chip Set with Aluminum Case - 300 Chips & 2 Decks", category: "Poker Equipment", description: "Elevate your poker nights with the Goplus Professional Poker Chip Set, featuring 300 high-quality chips, 2 decks of cards, and an aluminum case for secure and portable convenience, making it an ideal choice for casinos, tournaments, and entertainment events.", image: "/product/81g4ZB2OkiL.webp", images: ["/product/51J85vxkzJL.webp", "/product/51SYvEasgeL.webp", "/product/51PSt9GPCPL.webp", "/product/51VSnR0OQhL.webp", "/product/51ZjKTdYsML.webp", "/product/51M9AXh73TL.webp", "/product/41rOzCkB-qL.webp"], image_names: ["81g4ZB2OkiL.webp", "51J85vxkzJL.webp", "51SYvEasgeL.webp", "51PSt9GPCPL.webp", "51VSnR0OQhL.webp", "51ZjKTdYsML.webp", "51M9AXh73TL.webp", "41rOzCkB-qL.webp"], features: [{title: "Complete Poker Set", description: "This comprehensive kit includes 300 chips, 2 decks of cards, a dealer button, and a felt mat, ensuring everything needed for an ultimate poker experience."}, {title: "Durable Quality Chips", description: "Crafted with multi-layer materials, the chips come in 5 colors (white, red, green, blue, gray) for various denominations, providing longevity and a premium feel."}, {title: "Portable Aluminum Case", description: "Designed for mobility, the aluminum case features a secure lock and comfortable handle, making it easy to store and transport your poker essentials."}, {title: "Versatile Entertainment Use", description: "Perfect for both casual gatherings and competitive tournaments, this versatile set is ideal for game nights, family gatherings, and outdoor events."}]},
-  {title: "Battery-Operated Automatic Card Shuffler for 2-6 Decks", category: "Poker Equipment", description: "The FEIERYA Automatic Card Shuffler is an essential tool for any card game business, expertly designed to shuffle 1-2 decks effortlessly in seconds, ensuring quick and efficient gameplay. Ideal for senior citizens, families, and travelers, this portable solution promotes seamless card entertainment while saving valuable time.", image: "/product/71JEr1KURDL.webp", images: ["/product/41vg7sUsUyL.webp", "/product/41+U7OLN94L.webp", "/product/513NH4RP7YL.webp", "/product/51Ts2AfP4XL.webp", "/product/41hXrWu1R4L.webp", "/product/41kOmop4azL.webp"], image_names: ["71JEr1KURDL.webp", "41vg7sUsUyL.webp", "41+U7OLN94L.webp", "513NH4RP7YL.webp", "51Ts2AfP4XL.webp", "41hXrWu1R4L.webp", "41kOmop4azL.webp"], features: [{title: "High Capacity", description: "Accommodates 2 decks simultaneously, making it perfect for various card games including Poker, Uno, and more."}, {title: "User-Friendly Design", description: "Simple operation with battery power; just insert AA batteries, add cards, and press a button to shuffle."}, {title: "Compact & Portable", description: "Lightweight at 8.07 inches, it's easy to transport, making it a great choice for home games or travel."}, {title: "Reliable Performance", description: "Comes with a 6-month exchange service for adjustments, ensuring consistent performance and longevity."}]},
-  {title: "200-Count Poker Chip Set with Aluminum Case - Professional Gaming Quality", category: "Poker Equipment", description: "Elevate your gaming experience with our lightweight and durable 200-count poker chip set, designed for professional use and perfect for corporate events or casual gatherings. This comprehensive set includes an aluminum storage case, two decks of cards, a table cover, and three dealer buttons for enhancing your game night atmosphere.", image: "/product/71DXHilBK2L.webp", images: ["/product/51mdpboMdCL.webp", "/product/61prvbjE9XL.webp", "/product/617Bi-8ZE7L.webp", "/product/51PrCaeRTcL.webp", "/product/51lLr7PbSSL.webp", "/product/41s2Bzop+nL.webp", "/product/51-XELacDjL.webp"], image_names: ["71DXHilBK2L.webp", "51mdpboMdCL.webp", "61prvbjE9XL.webp", "617Bi-8ZE7L.webp", "51PrCaeRTcL.webp", "51lLr7PbSSL.webp", "41s2Bzop+nL.webp", "51-XELacDjL.webp"], features: [{title: "Complete Gaming Kit", description: "This poker chip set includes 200 high-quality plastic chips, two decks of cards, and essential accessories to ensure a professional gaming experience."}, {title: "Durable Storage Case", description: "Housed in a sturdy aluminum case, this set provides secure storage and easy transport for your poker chips and accessories."}, {title: "Distinct Color Coding", description: "Each chip features a printed denomination and comes in four vibrant colors, minimizing confusion during gameplay for a smooth experience."}, {title: "Versatile Use Cases", description: "Ideal for poker nights, team-building events, or as a gift, this set caters to diverse gaming activities, ensuring fun for players of all ages."}]},
-  {title: "Maverick Texas Hold 'Em Poker Set with Aluminum Case - 300 Chips & 2 Decks", category: "Poker Equipment", description: "Elevate your game nights with the Maverick Texas Hold 'Em Poker Set, featuring 300 high-quality 11g poker chips, two durable decks, and essential accessories, all conveniently packaged in a robust aluminum case for easy transport and storage – ideal for bars, casinos, or corporate events.", image: "/product/91W9Fds-+FL.webp", images: ["/product/51T0B4-ssqL.webp", "/product/41fHP3yhrRL.webp", "/product/41yCwqXsyeL.webp", "/product/41-oINYlSzL.webp", "/product/414KehzWT2L.webp", "/product/41uZN+YG2KL.webp", "/product/41dAZckW4bL.webp"], image_names: ["91W9Fds-+FL.webp", "51T0B4-ssqL.webp", "41fHP3yhrRL.webp", "41yCwqXsyeL.webp", "41-oINYlSzL.webp", "414KehzWT2L.webp", "41uZN+YG2KL.webp", "41dAZckW4bL.webp"], features: [{title: "Casino-Grade Quality", description: "This poker set includes 300 casino-quality 11g chips designed for durability and a professional experience, making it perfect for both casual and competitive play."}, {title: "Comprehensive Game Accessories", description: "Comes complete with two decks of Maverick playing cards, five red dice, and three buttons (Dealer/Small Blind/Big Blind) for a complete poker gaming experience."}, {title: "Portable Aluminum Case", description: "The set is conveniently housed in a sturdy aluminum case, ensuring seamless transport and organized storage for your game night essentials."}, {title: "Perfect for Gifting", description: "Ideal for poker enthusiasts, this high-quality set makes a thoughtful gift, suitable for holidays, game nights, or special occasions, enhancing any gaming experience."}]},
-  {title: "Goplus 300 Poker Chip Set with Aluminum Case, Cards, and Felt Mat", category: "Poker Equipment", description: "Elevate your game nights and events with the Goplus 300 Poker Chip Set, designed for durability and convenience. This comprehensive set includes 300 high-quality chips, two decks of waterproof cards, and a felt mat, all securely housed in a robust aluminum case, making it the perfect choice for casinos, tournaments, and home entertainment.", image: "/product/81g4ZB2OkiL.webp", images: ["/product/51J85vxkzJL.webp", "/product/51SYvEasgeL.webp", "/product/51PSt9GPCPL.webp", "/product/51VSnR0OQhL.webp", "/product/51ZjKTdYsML.webp", "/product/51M9AXh73TL.webp", "/product/41rOzCkB-qL.webp"], image_names: ["81g4ZB2OkiL.webp", "51J85vxkzJL.webp", "51SYvEasgeL.webp", "51PSt9GPCPL.webp", "51VSnR0OQhL.webp", "51ZjKTdYsML.webp", "51M9AXh73TL.webp", "41rOzCkB-qL.webp"], features: [{title: "Complete Poker Set", description: "This all-in-one poker set includes 300 chips in five colors, two decks of cards, and a felt mat, ensuring you have everything needed for professional or casual play."}, {title: "Durable High-Quality Chips", description: "Crafted with a layered design, these chips feature a composite outer layer and a metal core, providing superior durability and ensuring long-lasting gameplay."}, {title: "Secure Aluminum Case", description: "The meticulously designed aluminum case includes two keys and a sturdy locking mechanism, facilitating secure storage and easy transport for all your gaming events."}, {title: "Versatile for Any Occasion", description: "Ideal for various settings, from casino nights to family gatherings and outdoor events, this poker chip set enhances entertainment and adds value to any occasion."}]},
-  {title: "Professional Poker Chip Set with Aluminum Case, 200 Chips & 2 Decks", category: "Poker Equipment", description: "Elevate your gaming experience with our comprehensive Poker Chip Set, featuring 200 high-quality chips, two decks of standard playing cards, and a durable aluminum storage case. Perfect for casino-style games, this set is designed to enhance any corporate event, team-building activity, or client entertainment gathering, ensuring a memorable experience for all involved.", image: "/product/611+959uPnL.webp", images: ["/product/51VYYSzHk+L.webp", "/product/61M66GwxOVL.webp", "/product/51PrCaeRTcL.webp", "/product/51lLr7PbSSL.webp", "/product/51-XELacDjL.webp", "/product/41s2Bzop+nL.webp"], image_names: ["611+959uPnL.webp", "51VYYSzHk+L.webp", "61M66GwxOVL.webp", "51PrCaeRTcL.webp", "51lLr7PbSSL.webp", "51-XELacDjL.webp", "41s2Bzop+nL.webp"], features: [{title: "Premium Quality Chips", description: "Our set includes 200 chips made of durable plastic, each with a 4 cm diameter and designed to withstand frequent use, making them perfect for professional-grade gaming."}, {title: "Comprehensive Game Set", description: "The package contains two decks of standard playing cards helping to facilitate various games, including Texas Hold'em, Blackjack, and Roulette, suitable for all your event needs."}, {title: "Convenient Storage Solution", description: "The set comes in a sturdy aluminum case that not only protects your chips but also makes transportation to events easy and hassle-free, maintaining organization and professionalism."}, {title: "Ideal for Events", description: "This Poker Chip Set is an excellent choice for corporate functions, family game nights, or casino-themed parties, enhancing the atmosphere while ensuring high-quality entertainment for participants."}]},
-  {title: "Copag 1546 100% Plastic Poker Cards - Jumbo Index, Durable Design", category: "Poker Equipment", description: "Discover the superior quality of Copag 1546 poker cards, crafted entirely from 100% PVC plastic for unparalleled durability and performance. Ideal for businesses and gaming establishments, these cards resist wear and tear, providing a long-lasting solution that outlasts traditional paper cards by 50 times, making them a valuable investment for your gaming needs.", image: "/product/816RCzgob8L.webp", images: ["/product/41XftWEJ2pL.webp", "/product/51zo01Cdg9L.webp", "/product/51fOymwhhuL.webp", "/product/41H1FX4b6ES.webp", "/product/41hBF8aiCaL.webp", "/product/51hiKNq2hLL.webp"], image_names: ["816RCzgob8L.webp", "41XftWEJ2pL.webp", "51zo01Cdg9L.webp", "51fOymwhhuL.webp", "41H1FX4b6ES.webp", "41hBF8aiCaL.webp", "51hiKNq2hLL.webp"], features: [{title: "Durable Material", description: "Made from 100% plastic PVC, these cards offer exceptional durability and a smooth handling experience, ensuring reliability for intense gaming sessions."}, {title: "Jumbo Index Design", description: "Featuring a jumbo index, each symbol and letter is approximately 1/2 inch tall, enhancing readability and making gameplay more accessible for all players."}, {title: "Easy to Clean", description: "Unlike traditional paper cards, Copag cards are easily washable, allowing for quick and convenient maintenance, maintaining their pristine condition over time."}, {title: "Compact Storage Case", description: "Packaged in a sleek, hard plastic case with Copag branding, this set is designed for efficient storage and transport, making it ideal for gaming events or poker nights."}]},
-  {title: "GYMAX 600-Piece Poker Chip Set with Accessories for Corporate Events", category: "Poker Equipment", description: "Elevate your corporate events or social gatherings with the GYMAX 600-Piece Poker Chip Set, featuring high-quality chips, essential accessories, and a portable case. Perfect for team-building activities and client entertainment, this all-in-one set provides an immersive casino experience while ensuring durability and ease of transport.", image: "/product/81aQGc2ftPL.webp", images: ["/product/41RwIq8EpXL.webp", "/product/51iwRQAyDCL.webp", "/product/515c584CkdL.webp", "/product/51AKM1p0WgL.webp", "/product/51lHhyqJlcL.webp", "/product/514znVKwwwL.webp", "/product/51xjb5wzaYL.webp"], image_names: ["81aQGc2ftPL.webp", "41RwIq8EpXL.webp", "51iwRQAyDCL.webp", "515c584CkdL.webp", "51AKM1p0WgL.webp", "51lHhyqJlcL.webp", "514znVKwwwL.webp", "51xjb5wzaYL.webp"], features: [{title: "Superior Chip Quality", description: "The poker chips are built with a three-layer structure, including a film, composite, and iron layer, ensuring exceptional durability and long-lasting use."}, {title: "Complete Game Setup", description: "This comprehensive set includes 600 chips in six colors, 6 decks of cards, 5 dice, 3 dealer buttons, a poker mat, and a card shoe, offering everything needed for an authentic gaming experience."}, {title: "Convenient Storage Solution", description: "Packaged in a high-quality, portable case with a secure latch, this set is easy to transport and store, making it ideal for business events and social gatherings."}, {title: "User-Friendly Accessories", description: "The set includes a convenient automatic shuffler and protective features, ensuring smooth gameplay and enhanced protection for all components during transport."}]},
-  {title: "Deluxe 300 Poker Chip Set - Casino Quality with Customizable Design", category: "Poker Equipment", description: "Elevate your poker nights with our Deluxe 300 Poker Chip Set, designed for premium experiences. Each chip weighs 14 grams and mimics authentic casino quality, making this set perfect for professional environments, events, or businesses. With a sturdy carrying case and stylish cards, you can offer clients a luxurious gambling experience that stands out.", image: "/product/81slF2MteNL.webp", images: ["/product/51ihGSZX8RL.webp", "/product/51UPwPtw5mL.webp", "/product/517SNlVWliL.webp", "/product/51QewuH5u3L.webp", "/product/41Z2y8edY2L.webp", "/product/51lRyPeIzDL.webp"], image_names: ["81slF2MteNL.webp", "51ihGSZX8RL.webp", "51UPwPtw5mL.webp", "517SNlVWliL.webp", "51QewuH5u3L.webp", "41Z2y8edY2L.webp", "51lRyPeIzDL.webp"], features: [{title: "Casino-Quality Chips", description: "Our 300 Monte Carlo poker chips are crafted from 14g clay, providing an authentic casino-like feel that enhances gameplay for your clients."}, {title: "Durable Case Included", description: "The set comes with a robust, shock-resistant case to protect your chips and cards, ensuring they remain in pristine condition for repeated use."}, {title: "Complete Poker Experience", description: "Includes 300 chips in various denominations, along with two durable plastic playing cards and a dealer button, offering everything needed for a rich poker experience."}, {title: "Elegant Design", description: "Each chip features a stunning inlaid gold ring for a sophisticated look, adding to the premium feel of poker games and enhancing your brand’s image."}]},
-  {title: "Brass Monkey Poker Set - 100 Chips & Design Cards for Competitive Play", category: "Poker Equipment", description: "Elevate your gaming events with the Brass Monkey 'Raise The Stakes' poker set, perfect for 2 or more players. This comprehensive starter kit includes 100 quality chips and an elegant deck of cards, ideal for both casual gatherings and professional competitions. Ensure your team enjoys memorable moments while enhancing strategic skills.", image: "/product/71ZzMfwrDOL.webp", images: ["/product/51s9GKFsNnL.webp", "/product/41E4+92rzlL.webp", "/product/41lpstlb1GL.webp", "/product/41UEVFx39eL.webp", "/product/51zwA7PfjdL.webp", "/product/41RFTH0n10L.webp", "/product/413rx6SUjZL.webp"], image_names: ["71ZzMfwrDOL.webp", "51s9GKFsNnL.webp", "41E4+92rzlL.webp", "41lpstlb1GL.webp", "41UEVFx39eL.webp", "51zwA7PfjdL.webp", "41RFTH0n10L.webp", "413rx6SUjZL.webp"], features: [{title: "Complete Starter Kit", description: "Includes 100 chips in various colors and a dealer marker, providing everything needed for both beginners and experienced players."}, {title: "Comprehensive Instruction Manual", description: "Features an easy-to-follow guide, ensuring users can quickly learn the rules and strategies of various poker games without frustration."}, {title: "Versatile Game Play", description: "Not limited to poker, this set allows for a range of card games including Blackjack, Omaha, and creative variations, making it suitable for diverse events."}, {title: "Perfect Gift Choices", description: "Ideal for birthdays, graduations, and holidays, this poker set adds excitement to any celebration, catering to both personal and professional gifting needs."}]},
-  {title: "Kölbs Titan LSO Poker Set - Ultimate Casino Experience for B2B", category: "Poker Equipment", description: "Elevate your gaming offerings with the Kölbs Titan LSO Poker Set, designed for luxurious corporate events or as high-end gifts for clients. This premium set includes durable poker chips, two decks of cards, and a sleek tactile box for secure storage and ease of access, making it an ideal addition to any business gathering or promotional event.", image: "/product/91hHCf1WhKL.webp", images: ["/product/51UIRveRgRL.webp", "/product/512McTjt0iL.webp", "/product/515YX+JDBLL.webp", "/product/41ksGLgOVxL.webp", "/product/41x6hGRXWjL.webp", "/product/51mU5quNqwL.webp"], image_names: ["91hHCf1WhKL.webp", "51UIRveRgRL.webp", "512McTjt0iL.webp", "515YX+JDBLL.webp", "41ksGLgOVxL.webp", "41x6hGRXWjL.webp", "51mU5quNqwL.webp"], features: [{title: "Premium Tactile Box", description: "The unique tactile box features a hinged top and a practical carrying handle, ensuring durability and ease of transport, perfect for on-the-go meetings or events."}, {title: "High-Quality Poker Chips", description: "Includes 320 high-grade 11.5g poker chips in five vibrant colors, providing an authentic casino experience that enhances client entertainment or team-building activities."}, {title: "Complete Card Set", description: "Comes with two full decks of cards, allowing for versatile game options, suitable for various poker games including Texas Hold'em and Blackjack."}, {title: "Ideal B2B Gift", description: "This poker set is the perfect corporate gift for executives and clients, making it an excellent choice for promotions, business milestones, or special occasions."}]},
-  {title: "Goplus Poker Chip Set - 500 Premium Clay Chips with Case, Cards & Dice", category: "Poker Equipment", description: "Enhance your gaming experience with the Goplus Professional Poker Chip Set, featuring 500 meticulously crafted 14g clay chips, durable playing cards, and accessories, all housed in a protective aluminum case. Perfect for B2B casino suppliers or entertainment companies looking to deliver premium gaming solutions for parties or tournaments.", image: "/product/81gOFXeHhrL.webp", images: ["/product/511Ef8axwyL.webp", "/product/51MLnrcSX9L.webp", "/product/51eSkFpvT0L.webp", "/product/511nNY5vwwL.webp", "/product/51ItUVdnr7L.webp", "/product/51eIv1-txaL.webp", "/product/51IFBvghvZL.webp"], image_names: ["81gOFXeHhrL.webp", "511Ef8axwyL.webp", "51MLnrcSX9L.webp", "51eSkFpvT0L.webp", "511nNY5vwwL.webp", "51ItUVdnr7L.webp", "51eIv1-txaL.webp", "51IFBvghvZL.webp"], features: [{title: "High-Quality Poker Chips", description: "Our 14g clay poker chips are designed with a dual-core for balanced weight and optimal feel, providing an authentic casino experience with six vibrant colors available."}, {title: "Durable Playing Cards", description: "Includes two decks of professional-grade poker cards made from 100% waterproof plastic, ensuring longevity and superior gameplay in various environments."}, {title: "Secure & Portable Case", description: "The aluminum case features an impact-resistant PU lining with secure locks and spacious compartments for chips, dice, and cards, protecting your gaming accessories during transport."}, {title: "Versatile Gaming Options", description: "Perfect for hosting Texas Hold'em, Blackjack, or other casino games, this poker chip set meets industry standards, making it ideal for tournaments and social gatherings."}]},
-  {title: "Kiddie Play 100-Piece Poker Chip Set | 11.5g Casino-Quality Chips & Dice", category: "Poker Equipment", description: "Elevate your gaming experience with the Kiddie Play 100-Piece Poker Chip Set, featuring high-quality, 11.5g chips designed for poker, blackjack, and more. This comprehensive ensemble is perfect for tournaments, clubs, and family game nights, making it an ideal choice for both novice and seasoned players looking to deliver authentic casino excitement.", image: "/product/81bwrTX-eeL.webp", images: ["/product/51xy1Wg7pPL.webp", "/product/51J0yf+7uQL.webp", "/product/4186cZQGFVL.webp", "/product/51DC6Doa9iL.webp", "/product/51OEfNstszL.webp", "/product/41gvBpzvvZL.webp"], image_names: ["81bwrTX-eeL.webp", "51xy1Wg7pPL.webp", "51J0yf+7uQL.webp", "4186cZQGFVL.webp", "51DC6Doa9iL.webp", "51OEfNstszL.webp", "41gvBpzvvZL.webp"], features: [{title: "Complete Game Set", description: "Includes 100 casino-quality chips in various colors, 5 dice, 2 decks of cards, and dealer buttons, ensuring a robust gaming experience for any occasion."}, {title: "High-Quality Craftsmanship", description: "Each chip weighs 11.5 grams and features intricate designs that not only enhance grip but also provide a realistic casino feel, perfect for serious game play."}, {title: "Versatile Gaming Options", description: "Suitable for a wide range of card games, from Texas Hold'em to blackjack, this set caters to various preferences, making it suitable for all gaming environments."}, {title: "Ideal for Gifting", description: "A perfect gift choice for both beginners and veteran players, this poker set is great for birthdays, holidays, or as a unique addition to game night traditions."}]},
-  {title: "Printworks Women's Classic Poker Set - Elegant, Durable, Customizable", category: "Poker Equipment", description: "The Printworks Women's Classic Poker Set is an exquisite combination of style and functionality, perfect for businesses seeking to elevate their gaming product offerings. Designed for durability and aesthetic appeal, it provides a sophisticated poker experience that can attract clients and enhance social events.", image: "/product/71btGnwi5nL.webp", images: ["/product/31SOeSuAWlL.webp", "/product/21gM3nereML.webp", "/product/51Fb6m1mcOL.webp"], image_names: ["71btGnwi5nL.webp", "31SOeSuAWlL.webp", "21gM3nereML.webp", "51Fb6m1mcOL.webp"], features: [{title: "Elegant Design", description: "This poker set features a chic and stylish design, making it an attractive addition to any event or gathering, which can enhance customer satisfaction and engagement."}, {title: "High-Quality Materials", description: "Crafted with premium materials, the poker set ensures long-lasting use, offering both durability and reliability that businesses can count on for repeat customer satisfaction."}, {title: "Customizable Options", description: "Businesses can personalize the poker set to reflect their brand identity or special events, increasing brand visibility and customer loyalty through unique, tailored experiences."}, {title: "Comprehensive Set", description: "Each set includes essential components such as high-quality chips and cards, making it an all-in-one solution that simplifies inventory management for retailers and event organizers."}]},
-  {title: "Ambassador Deluxe Poker Chip Set for Business Events & Leagues", category: "Poker Equipment", description: "The Ambassador Deluxe Poker Chip Set is an essential addition for businesses looking to elevate their corporate events or engage clients in friendly competition. This premium set includes high-quality chips, ensuring durability and a professional touch for leagues, hospitality venues, or promotional events that enhance client relationships.", image: "/product/81n9IWje-kL.webp", images: ["/product/51GBr4so56L.webp", "/product/51itTkf9cbL.webp", "/product/41yUY7VH44L.webp"], image_names: ["81n9IWje-kL.webp", "51GBr4so56L.webp", "51itTkf9cbL.webp", "41yUY7VH44L.webp"], features: [{title: "High-Quality Materials", description: "Crafted from durable composite materials, our poker chips guarantee lasting performance, making them ideal for frequent use in corporate settings."}, {title: "Custom Branding Options", description: "Enhance your brand visibility with customizable poker chips that can include your logo, perfect for promotional events and client engagement."}, {title: "Comprehensive Set Inclusion", description: "This deluxe poker chip set includes all essential gameplay items, providing a complete package for businesses to host poker nights or tournaments effortlessly."}, {title: "Refined Aesthetic Design", description: "The sleek and modern design of the poker chips adds a sophisticated touch, making them perfect for upscale events or VIP gatherings."}]},
-  {title: "Premium 300-Piece Poker Chip Set with Aluminium Case & Accessories", category: "Poker Equipment", description: "Elevate your gaming experience with our professional-grade 300-piece clay composite poker chip set, designed for serious players and B2B partnerships. This comprehensive kit includes high-quality accessories for a complete casino experience, making it ideal for casinos, game nights, and promotional events.", image: "/product/71A3Gws30QL.webp", images: ["/product/513wmNQg1LL.webp", "/product/41Qnuf-2clL.webp", "/product/41GbftjmOGL.webp", "/product/41jFmOzwT0L.webp", "/product/41y0m+NCVdL.webp", "/product/418XU7m9KwL.webp"], image_names: ["71A3Gws30QL.webp", "513wmNQg1LL.webp", "41Qnuf-2clL.webp", "41GbftjmOGL.webp", "41jFmOzwT0L.webp", "41y0m+NCVdL.webp", "418XU7m9KwL.webp"], features: [{title: "Authentic Casino Experience", description: "Enjoy authentic casino-quality gameplay with 300 premium clay composite chips, each weighing 14 grams, providing a superior feel and sound compared to plastic alternatives."}, {title: "All-Inclusive Kit", description: "This complete poker set includes 2 decks of high-quality playing cards, 5 dice, dealer, big blind, and small blind buttons, ensuring you have everything needed for a professional poker night."}, {title: "Portable & Durable Case", description: "Housed in a sturdy aluminum case with reinforced corners, foam lining, and a secure lock, this set is perfect for travel and outdoor gatherings while securely protecting your chips and accessories."}, {title: "Supports Up to 8 Players", description: "Designed for up to 8 players, the color-coded chips offer denominations from $1 to $1000, simplifying tournament organization and enhancing the gameplay for families or friends."}]},
-  {title: "Brybelly 4-in-1 Casino Game Set with Chips, Dice & Cards", category: "Poker Equipment", description: "Elevate your business events with the Brybelly 4-in-1 Casino Game Set, a comprehensive solution for hosting engaging casino nights. Featuring blackjack, poker, craps, and roulette, this set includes high-quality components for an authentic gaming experience, ensuring memorable interactions and entertainment for clients and employees alike.", image: "/product/91EO+0CCw1L.webp", images: ["/product/51qR2TubB2L.webp", "/product/6127EhhrRlL.webp", "/product/614239rPJDL.webp", "/product/61-E-G2DSKL.webp", "/product/61B17LacQsL.webp", "/product/513RQfsjuxL.webp", "/product/51JBQaDCrLL.webp"], image_names: ["91EO+0CCw1L.webp", "51qR2TubB2L.webp", "6127EhhrRlL.webp", "614239rPJDL.webp", "61-E-G2DSKL.webp", "61B17LacQsL.webp", "513RQfsjuxL.webp", "51JBQaDCrLL.webp"], features: [{title: "Complete Casino Experience", description: "This all-inclusive set combines four classic casino games in one, allowing for diverse entertainment options that cater to both novice and experienced players."}, {title: "Premium Quality Components", description: "Each set includes 100 quality chips, two decks of cards, dice, and a 10-inch roulette wheel, ensuring that your clients receive a top-notch gaming experience."}, {title: "Portable & Easy Setup", description: "The foldable 18\" x 36\" felt mats are designed for convenient storage and effortless setup, making it perfect for spontaneous events or planned corporate gatherings."}, {title: "Ideal for Business Events", description: "Bring excitement to office parties, team-building retreats, and corporate celebrations with this versatile game set, promoting camaraderie and engagement among participants."}]},
-  {title: "ORIENGEAR Casino Chip Set – 300 Durable 14g Clay Composite Chips", category: "Poker Equipment", description: "Enhance your gaming experience with the ORIENGEAR Casino Chip Set, featuring 300 high-quality 14g clay composite chips and essential accessories. This professional-grade set is ideal for B2B purchases, offering excellent durability and a genuine casino feel, perfect for creating memorable game nights for clients or team-building events.", image: "/product/8105AUqoQdL.webp", images: ["/product/512xRVWO09L.webp", "/product/512Z08AIziL.webp", "/product/51WG1J1Fz+L.webp", "/product/51H5O3h7CfL.webp", "/product/51dE6ah3cmL.webp", "/product/41W-tsAjKKL.webp"], image_names: ["8105AUqoQdL.webp", "512xRVWO09L.webp", "512Z08AIziL.webp", "51WG1J1Fz+L.webp", "51H5O3h7CfL.webp", "51dE6ah3cmL.webp", "41W-tsAjKKL.webp"], features: [{title: "Comprehensive Casino Equipment", description: "The set includes an ABS case, two decks of waterproof plastic playing cards, five dice, and additional accessories, providing everything needed for a full casino experience."}, {title: "High-Quality Clay Chips", description: "Made from 14g clay composite material, these chips ensure durability and a tactile feel, enhancing the overall gaming experience for players."}, {title: "Face Value Display", description: "Each chip features clear denominations and attractive designs, allowing for easy identification and stackability during gameplay."}, {title: "Portable Storage Solution", description: "The sturdy ABS case is designed for portability, making it easy to transport the chip set to events or securely store it when not in use."}]},
-  {title: "Professional 100-Piece Poker Chip Set with Dice for Card Games", category: "Poker Equipment", description: "Enhance your gaming experience with our premium 100-piece Professional Poker Chip Set. Featuring five vibrant denominations and a compact storage case, this set is perfect for businesses looking to host card games at events or parties, ensuring quality and durability for repeated use.", image: "/product/71m87ih+idL.webp", images: ["/product/41zTnk-d3cL.webp", "/product/41jzqgMLQxL.webp", "/product/41HHKdSkiZL.webp", "/product/51cJrQEWuEL.webp", "/product/51a4GOKgcNL.webp", "/product/51nD-cFimnL.webp"], image_names: ["71m87ih+idL.webp", "41zTnk-d3cL.webp", "41jzqgMLQxL.webp", "41HHKdSkiZL.webp", "51cJrQEWuEL.webp", "51a4GOKgcNL.webp", "51nD-cFimnL.webp"], features: [{title: "Complete Set of Chips", description: "Includes 100 chips in five colors: black, red, blue, green, and white, ensuring a comprehensive range for all your gaming needs."}, {title: "High-Quality Material", description: "Crafted from durable PVC, these chips are designed to withstand frequent handling without fading, cracking, or deforming."}, {title: "Compact and Portable", description: "Each chip measures approximately 3.9 cm in diameter, making this set easy to transport and store for ultimate convenience."}, {title: "Versatile Gaming Use", description: "Ideal for Texas Hold'em, Blackjack, and various card games, this set is perfect for corporate events, game nights, and parties."}]},
-  {title: "Maverick Standard Index Playing Cards - 12 Decks, Durable, Versatile", category: "Poker Equipment", description: "Elevate your game nights with Maverick’s 12-pack of standard index playing cards, ideal for businesses hosting events or tournaments. Designed for durability and ease of handling, these cards offer endless entertainment for players of all skill levels, making them a reliable choice for retailers and event organizers alike.", image: "/product/610n7wJELRL.webp", images: ["/product/41ayXn-l3qL.webp", "/product/417V9e+sPkL.webp", "/product/41SlA2DjE-L.webp", "/product/51IablnHxZL.webp", "/product/514z5iIAPKL.webp", "/product/51bnaV0AZdL.webp"], image_names: ["610n7wJELRL.webp", "41ayXn-l3qL.webp", "417V9e+sPkL.webp", "41SlA2DjE-L.webp", "51IablnHxZL.webp", "514z5iIAPKL.webp", "51bnaV0AZdL.webp"], features: [{title: "Classic Design", description: "Each deck features a timeless design and standard index faces that appeal to all players, enhancing the atmosphere of any game night."}, {title: "12 Complete Decks", description: "This bulk packaging includes 12 full decks, making it easy to facilitate large tournaments or have spare cards on hand for multiple sessions."}, {title: "Durable Materials", description: "Maverick cards are coated with a smooth plastic finish, ensuring they withstand frequent shuffling while maintaining their aesthetic appeal."}, {title: "Versatile Gameplay", description: "Suitable for a wide range of card games, including Poker, Rummy, and Canasta, these cards cater to various player preferences, making them a versatile option for your inventory."}]},
-  {title: "Professional 14g Clay Poker Chip Set with Dealer Button & Case", category: "Poker Equipment", description: "Elevate your gaming experience with our 300-piece professional-grade clay poker chip set, perfect for 6-8 players. The set features high-quality, 14g chips and includes two decks of playing cards and a dealer button, all housed in a durable, stylish carrying case designed for portability and protection.", image: "/product/81pw+JcpEWL.webp", images: ["/product/51IrLE5R0ML.webp", "/product/41NRzaqN4UL.webp", "/product/5108LtqRaEL.webp", "/product/5125HLtGmyL.webp", "/product/41-rLok3jNL.webp", "/product/41-wX4yuu5L.webp", "/product/41O9eZzf3XL.webp"], image_names: ["81pw+JcpEWL.webp", "51IrLE5R0ML.webp", "41NRzaqN4UL.webp", "5108LtqRaEL.webp", "5125HLtGmyL.webp", "41-rLok3jNL.webp", "41-wX4yuu5L.webp", "41O9eZzf3XL.webp"], features: [{title: "High-Quality Chips", description: "Each 14g chip is crafted using dual-injection molding technology, ensuring durability and a premium feel, ideal for regular use in professional settings."}, {title: "Sturdy Carrying Case", description: "The robust polycarbonate carrying case features an aluminum alloy frame for enhanced support, providing maximum protection and organization for your chips."}, {title: "Optimal Player Support", description: "This 300-piece set is tailored for 6-8 players, ensuring that every game night can accommodate your guests comfortably and professionally."}, {title: "Versatile Game Compatibility", description: "Perfect for Texas Hold'em, Blackjack, and tournaments, this poker chip set enhances any gaming environment, delivering an authentic casino experience."}]},
-  {title: "IXIGER Plastic Poker Chips Set with Velvet Bag – 100 Durable Chips", category: "Poker Equipment", description: "The IXIGER plastic poker chips set is an essential addition for any business hosting game nights or events, featuring 100 high-quality, eco-friendly chips in five vibrant colors. Packaged with a black velvet bag for easy storage, these chips enhance gameplay while ensuring durability and style, making them perfect for professional environments and social gatherings alike.", image: "/product/714Z4IfF0NL.webp", images: ["/product/41oKLsva0HL.webp", "/product/412xOQH53bL.webp", "/product/41WdkaTpKbL.webp", "/product/41lLYOG+s1L.webp", "/product/61I0sLTPXbL.webp"], image_names: ["714Z4IfF0NL.webp", "41oKLsva0HL.webp", "412xOQH53bL.webp", "41WdkaTpKbL.webp", "41lLYOG+s1L.webp", "61I0sLTPXbL.webp"], features: [{title: "Durable Material", description: "Made from eco-friendly ABS plastic, these chips resist wear and tear, ensuring long-lasting use for frequent gaming events."}, {title: "Vibrant Color Variety", description: "The set includes five distinct colors—white, red, green, blue, and black—allowing for easy game organization and better player engagement."}, {title: "Convenient Storage", description: "The included black velvet bag provides a stylish and practical solution for storing and transporting chips securely."}, {title: "Professional Quality", description: "With a diameter of 4 cm and a thickness of 3 mm, these chips meet high standards for both quality and feel, enhancing the gaming experience."}]},
-  {title: "Professional Poker Chip Set - 11.5g Chips, Case, Cards & 500 Tokens", category: "Poker Equipment", description: "Elevate your gaming brand with our Professional Poker Chip Set, featuring 500 high-quality, 11.5g casino-grade poker chips in four vibrant colors, two decks of standard cards, and a sleek aluminum carrying case. Ideal for businesses looking to enhance gaming experiences or host themed events.", image: "/product/81yy521362L.webp", images: ["/product/51BxUjVKrIL.webp", "/product/516Dt1HnTiL.webp", "/product/51PhL3Nn0fL.webp", "/product/51F-G74g4IL.webp", "/product/51s0rPu+qAL.webp", "/product/51hHLrt2-TL.webp"], image_names: ["81yy521362L.webp", "51BxUjVKrIL.webp", "516Dt1HnTiL.webp", "51PhL3Nn0fL.webp", "51F-G74g4IL.webp", "51s0rPu+qAL.webp", "51hHLrt2-TL.webp"], features: [{title: "High-Quality Chips", description: "Crafted from durable 11.5g composite resin, our poker chips provide a genuine casino feel, ensuring an authentic gaming experience for your customers."}, {title: "Complete Gaming Package", description: "The set includes 500 colorful casino chips, two decks of playing cards, and essential dealer buttons, making it ready for immediate use in tournaments or casual games."}, {title: "Stylish Storage Case", description: "Housed in an aluminum case lined with plush velvet, this set allows for secure storage while offering a sophisticated presentation for your business or events."}, {title: "Versatile Usage", description: "Perfect for poker nights, corporate events, or promotional giveaways, this poker chip set adds value to any gaming establishment or enhances customer engagement."}]},
-  {title: "Fat Cat Bling 13.5g Clay Poker Chip Set with Aluminum Case - 500 Chips", category: "Poker Equipment", description: "Elevate your gaming experience with the Fat Cat Bling 13.5g Texas Hold 'em poker chip set, featuring 500 high-quality, colorful clay chips and essential accessories for professional gameplay, all housed in a durable aluminum case for protection and portability.", image: "/product/71Luk2KibvL.webp", images: ["/product/51jX8L34riL.webp", "/product/31KWEe46x6L.webp", "/product/41Dv7vaJGIL.webp", "/product/41Pw3fk-64L.webp", "/product/41Rx17Jt9WL.webp", "/product/41CH-ggTyGL.webp"], image_names: ["71Luk2KibvL.webp", "51jX8L34riL.webp", "31KWEe46x6L.webp", "41Dv7vaJGIL.webp", "41Pw3fk-64L.webp", "41Rx17Jt9WL.webp", "41CH-ggTyGL.webp"], features: [{title: "Premium Clay Poker Chips", description: "Each chip weighs 13.5 grams and is crafted from high-quality Claytec material, ensuring a satisfying feel and professional play for serious gaming environments."}, {title: "Comprehensive Gaming Accessories", description: "Includes two decks of standard playing cards, a complete set of big blind and small blind buttons, and a dealer button, providing everything needed for hosting formal games effortlessly."}, {title: "Durable Aluminum Case", description: "The sturdy aluminum casing, equipped with foam cushioning, safeguards your chips from shocks and elements, making it ideal for both home and on-the-go gaming sessions."}, {title: "Versatile Game Enhancer", description: "This set also includes a full set of poker dice, adding an exciting twist to your gameplay, making it a popular choice for fast-paced game nights."}]},
-  {title: "Poker Hand Ranking Cards Set with Texas Hold'em Quick Reference", category: "Poker Equipment", description: "This compact 5-piece poker hand ranking card set is essential for B2B poker suppliers. Featuring easy-to-read rankings and comprehensive Texas Hold'em rules, the double-sided design ensures quick, accurate references, perfect for enhancing gameplay and customer experience in any poker business setting.", image: "/product/916OdOImMKL.webp", images: ["/product/51FHo-u2QnL.webp", "/product/51ke1pvNf2L.webp", "/product/51tMStfTrCL.webp", "/product/51FG-7jjsBL.webp", "/product/51QXUM-6UxL.webp"], image_names: ["916OdOImMKL.webp", "51FHo-u2QnL.webp", "51ke1pvNf2L.webp", "51tMStfTrCL.webp", "51FG-7jjsBL.webp", "51QXUM-6UxL.webp"], features: [{title: "Quick Reference Design", description: "The poker hand rankings are designed for rapid reference, allowing players to make informed decisions in high-stakes environments."}, {title: "Double-Sided Utility", description: "Each card features essential Texas Hold'em rules on the back, combining convenience and functionality for both new and experienced players."}, {title: "Standard Card Size", description: "Designed to fit seamlessly within standard poker decks, these cards are easy to integrate into your existing inventory without any compatibility issues."}, {title: "High-Quality Durability", description: "Constructed with premium UV-coated materials, these cards maintain their vibrant design and endure regular usage in a fast-paced poker setting."}]},
-  {title: "500 Monaco Casino Clay Poker Chips Set - Durable Case, 2 Decks, 5 Dice", category: "Poker Equipment", description: "Discover the premium quality of the Versa Games 500 Monaco Casino clay poker chips set, designed for durability and performance. Perfect for professional and casual gaming events, this set includes everything needed for up to 8 players, enhancing your gaming experience with finely crafted chips, sturdy case, and essential accessories.", image: "/product/81NbuYJtRKL.webp", images: ["/product/51htAkYbtKL.webp", "/product/416q7Ht3IQL.webp"], image_names: ["81NbuYJtRKL.webp", "51htAkYbtKL.webp", "416q7Ht3IQL.webp"], features: [{title: "Exclusive Chip Design", description: "Our poker chips feature unique designs created using custom CNC machining, ensuring unmatched quality and originality in every piece."}, {title: "Durable Storage Case", description: "Crafted from tough thermoplastic ABS, the enhanced case design includes a solid core and three hinges, providing superior durability for long-lasting use."}, {title: "Comprehensive Game Set", description: "This set includes 500 chips in a balanced color distribution, two decks of plastic-coated playing cards, five dice, and a dealer button, ideal for smooth gameplay."}, {title: "Perfect for Groups", description: "Accommodating 5-8 players, this poker chip set is designed for both competitive and casual settings, making it a valuable addition to any gaming collection."}]},
-  {title: "500-Piece Professional 11.5g Poker Chip Set with Case", category: "Poker Equipment", description: "This 500-piece professional poker chip set consists of high-quality 11.5g casino-grade chips, ideal for enhancing your gaming tournaments or corporate events. The set includes an aluminum case, playing cards, dice, and a dealer button, providing exceptional value and convenience for businesses in the gaming industry.", image: "/product/810gKe9AgrL.webp", images: ["/product/51DarVpIiVL.webp"], image_names: ["810gKe9AgrL.webp", "51DarVpIiVL.webp"], features: [{title: "Casino-Grade Quality", description: "Each poker chip weighs 11.5 grams, ensuring a professional feel with durable construction that meets casino standards."}, {title: "Complete Gaming Set", description: "The set includes 500 poker chips, two decks of cards, five dice, and a dealer button, delivering everything needed for an engaging poker night."}, {title: "Enhanced Carrying Case", description: "Features a reinforced aluminum case with a 30% thicker chip tray, enhancing durability and protecting your poker equipment during transport."}, {title: "Diverse Color Options", description: "The color combinations of the chips feature denominations of 1, 5, 25, 50, 100, 500, and 1000, providing a versatile gaming experience for players of all levels."}]},
-  {title: "Yellowstone 200-Piece Poker Set with Custom Carry Case", category: "Poker Equipment", description: "Elevate your gaming experience with the Yellowstone 200-Piece Poker Set, featuring high-quality chips and a personalized carry case. Perfect for businesses and event planners seeking a unique entertainment solution, this set is designed for any poker night, making it a great investment for team-building activities or client events.", image: "/product/91rBcIo5UWL.webp", images: ["/product/51DIemkguaL.webp", "/product/51VvhNPqjIL.webp", "/product/510cee+F+wL.webp", "/product/51ewqVjOc7L.webp", "/product/41Xm2x39IWL.webp", "/product/51YmyjDo+sL.webp", "/product/51DwPlBlnlL.webp"], image_names: ["91rBcIo5UWL.webp", "51DIemkguaL.webp", "51VvhNPqjIL.webp", "510cee+F+wL.webp", "51ewqVjOc7L.webp", "41Xm2x39IWL.webp", "51YmyjDo+sL.webp", "51DwPlBlnlL.webp"], features: [{title: "Comprehensive Poker Kit", description: "Includes 200 professional-grade poker chips, 3 player markers, a deck of Yellowstone-themed playing cards, and a convenient carry case, ensuring everything you need for an exceptional gaming experience."}, {title: "High-Quality Components", description: "Crafted from premium materials, this set provides durability and a professional feel, making it suitable for frequent use in both casual and corporate settings."}, {title: "Customizable Features", description: "The poker set can be customized with your company's logo or branding, offering a personalized touch that enhances your corporate events and promotions."}, {title: "Designed for Multiple Players", description: "Ideal for 2 or more players, this poker set facilitates engaging team-building exercises and social gatherings, reinforcing camaraderie and enhancing communication among participants."}]},
-  {title: "500 Premium Poker Chips Set - Outlaw with Playing Cards and Accessories", category: "Poker Equipment", description: "Elevate your gaming experience with our exclusive 500-piece poker chip set, ideal for 5-8 players. Designed by Versa Games, this high-quality set includes a variety of color-coded chips, two decks of plastic-coated playing cards, and durable accessories, ensuring exceptional value for your business or events.", image: "/product/81pfZixiDrL.webp", images: ["/product/51YA5RCQEJL.webp", "/product/41ivq14LnEL.webp", "/product/51zhINzc2BL.webp", "/product/51A7xSPE6ML.webp", "/product/514MeYEsfhL.webp", "/product/51YB-S04VxL.webp", "/product/51Vgw5pEq5L.webp"], image_names: ["81pfZixiDrL.webp", "51YA5RCQEJL.webp", "41ivq14LnEL.webp", "51zhINzc2BL.webp", "51A7xSPE6ML.webp", "514MeYEsfhL.webp", "51YB-S04VxL.webp", "51Vgw5pEq5L.webp"], features: [{title: "High-Quality Chips", description: "Our poker chips are crafted with superior quality materials, offering a premium feel and durability compared to other brands on the market."}, {title: "Comprehensive Set", description: "This set includes 150 white, 150 red, 100 green, 50 blue, and 50 black chips, perfectly catering to group sizes of 5-8 players."}, {title: "Customizable Options", description: "While this standard set isn't customizable, additional chips can be purchased if you require more for enhanced gameplay flexibility."}, {title: "Durable Storage Case", description: "Featuring a robust ABS plastic case with a 30% thicker internal chip tray and multiple hinges, our design prevents breakage, ensuring secure storage."}]},
-  {title: "SLOWPLAY Godel Ceramic Poker Chip Set - 500 Durable Chips with Case", category: "Poker Equipment", description: "Elevate your poker game with the SLOWPLAY Godel Ceramic Poker Chip Set, featuring 500 top-quality chips designed for durability and performance, complete with a premium carry-case. Ideal for enhancing business poker tournaments and corporate events.", image: "/product/715Y-F7mvBL.webp", images: ["/product/41ejuKu3OML.webp", "/product/41rev12yO3L.webp", "/product/41zXPbEO74L.webp", "/product/41Ft8IhOdYL.webp", "/product/41AKLJ8x9cL.webp", "/product/41yixmfG5rL.webp"], image_names: ["715Y-F7mvBL.webp", "41ejuKu3OML.webp", "41rev12yO3L.webp", "41zXPbEO74L.webp", "41Ft8IhOdYL.webp", "41AKLJ8x9cL.webp", "41yixmfG5rL.webp"], features: [{title: "Superior Craftsmanship", description: "Each 39mm ceramic chip weighs 10 grams, crafted to deliver an exceptional tactile experience while ensuring long-lasting performance for frequent use."}, {title: "Enhanced Stability", description: "The innovative design provides optimal friction for easy stacking and shuffling, preventing slips during intense game sessions."}, {title: "Premium Carry Case", description: "Featuring a highly durable polycarbonate exterior tested for 5000 vibrations, the case effectively protects chips with its aerospace-grade aluminum frame."}, {title: "Large Capacity", description: "With 500 chips, this set comfortably accommodates up to 10 players, making it a perfect choice for corporate entertainment and large gatherings."}]},
-  {title: "Brybelly 14g 1000-Count Poker Chip Set - Clay Composite, Aluminum Case", category: "Poker Equipment", description: "Elevate your gaming experience with the Brybelly 14g Poker Chip Set, featuring 1000 high-quality clay composite chips. Perfect for businesses seeking to enhance their poker nights or casino-themed events, this complete set includes everything needed for an authentic gaming experience, ensuring your clients enjoy both durability and convenience.", image: "/product/81g+b3QNkJL.webp", images: ["/product/51MvJrVj+bL.webp", "/product/51BZ5R+m9SL.webp", "/product/41SFjSvZwOL.webp", "/product/418mmhM3sFL.webp", "/product/51pk52qPdeL.webp", "/product/51vUDvD8N-L.webp", "/product/51bt88txsrL.webp"], image_names: ["81g+b3QNkJL.webp", "51MvJrVj+bL.webp", "51BZ5R+m9SL.webp", "41SFjSvZwOL.webp", "418mmhM3sFL.webp", "51pk52qPdeL.webp", "51vUDvD8N-L.webp", "51bt88txsrL.webp"], features: [{title: "High-Quality Chips", description: "Each chip weighs 14 grams, providing a substantial and authentic casino feel for an immersive gaming experience."}, {title: "Unique Texture Inlays", description: "Distinctive texture inlays on each chip ensure easy stacking and optimal visibility, enhancing gameplay and user engagement."}, {title: "Durable Aluminum Case", description: "The robust aluminum carrying case, complete with foam padding, ensures safe transport and storage of all components."}, {title: "Complete Game Essentials", description: "The set includes 2 decks of playing cards and a dealer button, catering to various games like poker and blackjack for versatile entertainment."}]},
-  {title: "500-Piece Poker Chip Set with Aluminum Case - Premium Quality for Professionals", category: "Poker Equipment", description: "Elevate your gaming experience with our premium 500-piece poker chip set, featuring high-quality 11.5g chips and a stylish aluminum case. Ideal for professional establishments and dedicated gaming enthusiasts, this comprehensive set enhances any poker night with its durability, sophistication, and extensive play options.", image: "/product/81sGSjp7lYL.webp", images: ["/product/518crM0NfQL.webp", "/product/41HG3V5Kv3L.webp", "/product/51OLFyePscL.webp", "/product/51vn7Hv45KL.webp", "/product/51NJnxluEVL.webp", "/product/41zAytrsHwL.webp"], image_names: ["81sGSjp7lYL.webp", "518crM0NfQL.webp", "41HG3V5Kv3L.webp", "51OLFyePscL.webp", "51vn7Hv45KL.webp", "51NJnxluEVL.webp", "41zAytrsHwL.webp"], features: [{title: "High-Quality Poker Chips", description: "Each chip weighs 11.5 grams and measures 39mm in diameter, ensuring a professional feel and durability suitable for high-stakes games."}, {title: "Stylish Aluminum Case", description: "The included aluminum case combines elegance with durability, featuring a black velvet lining to protect the chips from dust and damage during transport."}, {title: "Complete Game Accessories", description: "This set comes with 500 casino-sized chips in multiple colors, 5 dice, 2 decks of cards, a dealer button, and both small and big blind buttons, making it suitable for numerous games."}, {title: "Perfect for Group Play", description: "Designed for 8 to 10 players, this classic poker chip set is ideal for Texas Hold'em, Blackjack, and tournaments, enhancing the gaming experience at gatherings."}]},
-  {title: "Premium 500-Count Clay Poker Chip Set for Texas Hold'em with Hard Case", category: "Poker Equipment", description: "Elevate your poker game with our premium 500-count clay poker chip set, designed for professionals and enthusiasts alike. Each set comes with high-quality chips, durable cards, and a sturdy case, ensuring an exceptional gaming experience suitable for any poker tournament or corporate event.", image: "/product/81hNz82WXzL.webp", images: ["/product/51-j+n3JTqL.webp", "/product/51QVLaB+k6L.webp", "/product/51FbOroCH2L.webp", "/product/51tUCkdTGjL.webp", "/product/51lTl0ZbxeL.webp", "/product/51ioBS2ughL.webp"], image_names: ["81hNz82WXzL.webp", "51-j+n3JTqL.webp", "51QVLaB+k6L.webp", "51FbOroCH2L.webp", "51tUCkdTGjL.webp", "51lTl0ZbxeL.webp", "51ioBS2ughL.webp"], features: [{title: "Comprehensive Poker Set", description: "Includes 500 high-quality clay chips with six denominations, perfect for 9-10 players, ensuring seamless organization for professional poker games."}, {title: "High-Quality Materials", description: "Made from composite clay with an iron core, each 14-gram chip is designed for optimal grip and delivers an authentic casino experience."}, {title: "All-in-One Experience", description: "Accompanied by two decks of premium PVC playing cards and a dealer button, providing everything needed for a complete poker night."}, {title: "Durable Carry Case", description: "Features a robust polycarbonate exterior that protects chips and cards, along with a velvet interior for secure storage and easy portability."}]},
-  {title: "Bicycle Rider Back Playing Cards - Standard Index, Dual Set, Durable", category: "Poker Equipment", description: "Maximize your gaming experience with our Bicycle Rider Back Playing Cards, featuring a standard index and two decks in red and black. Ideal for casinos, family game nights, and professional gatherings, these cards combine quality craftsmanship with versatile play options, ensuring reliability and enjoyment for every occasion.", image: "/product/8105FqWM3JL.webp", images: ["/product/519DiPufdmL.webp", "/product/51qdmI8ioXL.webp", "/product/51mwaWMs4AL.webp", "/product/51b085ZUO0L.webp", "/product/51uzS7RSsgL.webp"], image_names: ["8105FqWM3JL.webp", "519DiPufdmL.webp", "51qdmI8ioXL.webp", "51mwaWMs4AL.webp", "51b085ZUO0L.webp", "51uzS7RSsgL.webp"], features: [{title: "Classic Rider Back Design", description: "Elevate your gaming sessions with the iconic Rider Back design that enhances card recognition and playability, crafted for both casual and competitive environments."}, {title: "Versatile Card Applications", description: "Perfect for a range of card games from poker and blackjack to rummy and pinochle, making it an essential choice for diverse gaming events."}, {title: "Dual Deck Set", description: "Includes two decks—one red and one black—offering flexibility and double the fun for group play and poker nights, ensuring you're always prepared."}, {title: "Trusted Bicycle Quality", description: "Manufactured with Bicycle's renowned air-cushion finish, our cards provide durability and smooth handling, guaranteeing reliable performance during every shuffle."}]},
-  {title: "Durable Poker Chip Set with Storage Box - 100 Count", category: "Poker Equipment", description: "Elevate your gaming experience with this premium set of 100 durable plastic poker chips, available in five vibrant colors and denominations, perfect for enhancing your poker nights, gaming clubs, or family gatherings. Each chip is designed for longevity and ease of use, ensuring that your investment in entertainment pays off.", image: "/product/51--Sh84s4L.webp", images: ["/product/41Ndks7LL2L.webp", "/product/41+oLT+OzYL.webp", "/product/41zZ+F86i1L.webp", "/product/41G4jgvD5EL.webp", "/product/516+YqispbL.webp", "/product/51X3mZqodDL.webp"], image_names: ["51--Sh84s4L.webp", "41Ndks7LL2L.webp", "41+oLT+OzYL.webp", "41zZ+F86i1L.webp", "41G4jgvD5EL.webp", "516+YqispbL.webp", "51X3mZqodDL.webp"], features: [{title: "Premium Quality Material", description: "Crafted from high-grade PP plastic, these poker chips are resistant to wear, easy to clean, and withstand intense gaming sessions."}, {title: "Versatile Gameplay", description: "Suitable for various games such as Texas Hold'em and Blackjack, this chip set enhances any gaming environment, making it ideal for clubs and casual play."}, {title: "Portable and Convenient", description: "With a compact design and included storage box, these poker chips are easy to transport, ensuring enjoyable games at home, events, or tournaments."}, {title: "Color-Coded Denominations", description: "Featuring five distinct colors representing different values, the set includes 100 chips for clear and effective gameplay management."}]},
-  {title: "PUREPLAY 300-Count 11.5g Poker Chip Set with Durable Carry Case", category: "Poker Equipment", description: "Elevate your gaming experience with the PUREPLAY 300-Count Poker Chip Set, designed for B2B buyers seeking high-quality casino supplies. This complete set includes weighted chips crafted from premium ABS with metal cores, ensuring unmatched durability and a professional feel, perfect for poker nights or gaming tournaments.", image: "/product/716UChVzdlL.webp", images: ["/product/51ZZJRDCXkL.webp", "/product/51yxPabLs5L.webp", "/product/51yweIp8MiL.webp", "/product/31ftZ++ZlSL.webp", "/product/41Vf4KHJHQL.webp", "/product/412kkpudk5L.webp"], image_names: ["716UChVzdlL.webp", "51ZZJRDCXkL.webp", "51yxPabLs5L.webp", "51yweIp8MiL.webp", "31ftZ++ZlSL.webp", "41Vf4KHJHQL.webp", "412kkpudk5L.webp"], features: [{title: "Comprehensive Chip Set", description: "The set includes 300 carefully selected chips: 100 white, 50 green, 50 blue, and 50 black, complemented by essential gaming accessories like dice, cards, and dealer buttons."}, {title: "High-Quality Construction", description: "Made from superior ABS material, these 11.5g poker chips feature a unique metal core for an authentic casino feel, ensuring longevity and robustness for frequent use."}, {title: "Portable Carrying Solution", description: "Packaged in a high-strength Oxford fabric bag with a custom frame, this set is designed for secure transport and easy access, outperforming traditional aluminum cases."}, {title: "Versatile for All Ages", description: "Perfect for a variety of games including Texas Hold'em and blackjack, this poker set makes a thoughtful gift for birthdays, holidays, and special occasions, enjoyable for both kids and adults."}]},
-  {title: "Brybelly 14G Poker Chips Set - Ultimate Casino Experience, 500 Counts", category: "Poker Equipment", description: "Elevate your gaming business with Brybelly's 14G poker chip set, featuring 500 high-quality composite chips that ensure a real casino feel. Complete with an aluminum carrying case for secure transport, this set is perfect for poker nights, tournaments, and gambling events, offering exceptional durability and convenience.", image: "/product/81wKLPJArCL.webp", images: ["/product/41PaSSkp1CL.webp", "/product/41Y3qM3I0vL.webp", "/product/5147x2lN9PL.webp", "/product/41aCBv+PqKL.webp", "/product/51PQ6WQ4wuL.webp", "/product/417aDCszD+L.webp"], image_names: ["81wKLPJArCL.webp", "41PaSSkp1CL.webp", "41Y3qM3I0vL.webp", "5147x2lN9PL.webp", "41aCBv+PqKL.webp", "51PQ6WQ4wuL.webp", "417aDCszD+L.webp"], features: [{title: "High-Quality Chips", description: "Our 14G clay composite chips provide a premium feel, enhancing the authenticity of your gaming experiences."}, {title: "Unique Textured Design", description: "Each chip features a distinct texture for easy stacking and high visibility, ensuring a smooth gameplay experience."}, {title: "Durable Aluminum Case", description: "The robust aluminum carrying case, lined with foam padding, guarantees the safe transport and storage of your complete poker set."}, {title: "Versatile Chip Values", description: "Includes a wide range of chip denominations from $1 to $1000, making it suitable for various poker games and betting scenarios."}]},
-  {title: "300-Piece Professional Poker Chip Set with Aluminum Case and Accessories", category: "Poker Equipment", description: "This comprehensive 300-piece poker chip set, weighing 11.5 grams per chip, is perfect for organizing professional Texas Hold'em games. Complete with five dice, two decks of cards, and an aluminum carrying case, it's designed for durability and ease of use, making it an ideal solution for businesses, clubs, and family gatherings.", image: "/product/71X0bvnqdCL.webp", images: ["/product/41XcMlYOVZL.webp", "/product/41YkHOmIq0L.webp", "/product/41zfhZ-6jsL.webp", "/product/41ofHK1LbLL.webp", "/product/41HG4kd70uL.webp"], image_names: ["71X0bvnqdCL.webp", "41XcMlYOVZL.webp", "41YkHOmIq0L.webp", "41zfhZ-6jsL.webp", "41ofHK1LbLL.webp", "41HG4kd70uL.webp"], features: [{title: "Complete Poker Set", description: "Includes 300 high-quality chips in multiple denominations, five dice, and two decks of playing cards, ensuring all essential game components are at your fingertips."}, {title: "Premium Quality Chips", description: "Each chip features a metal core encased in durable plastic for a professional feel, providing excellent longevity and a smooth surface for exceptional gameplay."}, {title: "Portable Aluminum Case", description: "Lightweight and sturdy, the aluminum case features a built-in chip holder to keep all components organized and protected during transport."}, {title: "Versatile Gaming Experience", description: "Ideal for various card games including Texas Hold'em and Blackjack, this set enhances party interactions, making it a great gift for holidays and gatherings."}]},
-  {title: "SLOWPLAY Nash Ceramic Poker Chip Set - 500 pcs, 43mm, Premium Case", category: "Poker Equipment", description: "Elevate your poker game with the SLOWPLAY Nash Ceramic Poker Chip Set, featuring 500 high-quality, 12g chips designed for Texas Hold'em. The premium carrying case ensures durability and style, making it an essential purchase for businesses looking to offer top-notch gaming experiences.", image: "/product/81Sv6Zigv1L.webp", images: ["/product/418LjzC8mhL.webp", "/product/41ZKSyVqtPL.webp", "/product/51fUobKOwqL.webp", "/product/51U2ldcdfwL.webp", "/product/51Jp10XBMIL.webp", "/product/41b-lrkf7PL.webp"], image_names: ["81Sv6Zigv1L.webp", "418LjzC8mhL.webp", "41ZKSyVqtPL.webp", "51fUobKOwqL.webp", "51U2ldcdfwL.webp", "51Jp10XBMIL.webp", "41b-lrkf7PL.webp"], features: [{title: "Premium Quality Chips", description: "Crafted with precision, these 12g ceramic poker chips offer an exceptional feel and aesthetic that enhances the overall gaming experience for serious players."}, {title: "Durable Carrying Case", description: "The high-end case is made from robust polycarbonate and features a custom aluminum frame, ensuring your chips are protected while being easily portable."}, {title: "Artistic Design Inspiration", description: "Designed with 20th-century Art Deco influences, the chips feature streamlined lines and geometric patterns, merging classic elegance with modern minimalism."}, {title: "Customizable Chip Sets", description: "The 500-piece set includes a variety of colors to meet different gameplay needs, accommodating both casual gatherings and competitive poker nights."}]},
-  {title: "100-Piece Poker Chip Set with Denominations and Storage Case", category: "Poker Equipment", description: "This 100-piece poker chip set is ideal for businesses and poker enthusiasts, featuring durable plastic chips in five colors with designated values. Perfect for enhancing gameplay in poker clubs, tournaments, or family game nights, this portable set ensures easy storage and transportation.", image: "/product/512Fkts+0SL.webp", images: ["/product/412Rx30NwKL.webp", "/product/41N0kgg4w2L.webp", "/product/41rE7x0v3oL.webp", "/product/51AkTuHNSeL.webp", "/product/51EE0Ov3AqL.webp", "/product/51lZi-i7TUL.webp"], image_names: ["512Fkts+0SL.webp", "412Rx30NwKL.webp", "41N0kgg4w2L.webp", "41rE7x0v3oL.webp", "51AkTuHNSeL.webp", "51EE0Ov3AqL.webp", "51lZi-i7TUL.webp"], features: [{title: "High-Quality Material", description: "Made from premium PP plastic, these chips are designed to withstand drops and daily usage, ensuring longevity and reliability in high-stakes games."}, {title: "Variety of Denominations", description: "Includes chips in five colors with values of 5, 10, 20, 50, and 100, allowing for flexible betting options and strategic gameplay."}, {title: "Compact and Portable", description: "Each chip measures approximately 3.9 cm in diameter, making it easy to store and carry to events, games, or meetings."}, {title: "Versatile Use Cases", description: "Ideal for poker nights, family gatherings, or professional tournaments, this set enhances the gaming experience and promotes fun interactions."}]},
-  {title: "600-Piece Casino Poker Chip Set with Denominations for B2B Use", category: "Poker Equipment", description: "Elevate your gaming establishment with our premium 600-piece casino poker chip set, featuring 11.5g heavy chips and 2 decks of cards, perfect for enhancing customer experience during Texas Hold'em and Blackjack games.", image: "/product/81R+iNHJdZL.webp", images: ["/product/51MgOw8AwAL.webp", "/product/41pA5CGWAjL.webp", "/product/411wInNeniL.webp", "/product/41d-j7cvjXL.webp", "/product/51Dow-G4MNL.webp", "/product/41lFlNSee5L.webp"], image_names: ["81R+iNHJdZL.webp", "51MgOw8AwAL.webp", "41pA5CGWAjL.webp", "411wInNeniL.webp", "41d-j7cvjXL.webp", "51Dow-G4MNL.webp", "41lFlNSee5L.webp"], features: [{title: "Complete Poker Set", description: "This comprehensive set includes 600 high-quality poker chips in various denominations, ensuring you have everything needed for 11-15 players."}, {title: "Premium Materials", description: "Crafted from the finest materials, our poker chips offer a professional casino feel with intricate designs and a smooth finish that serious poker enthusiasts appreciate."}, {title: "Durable Transportation Case", description: "Housed in a sturdy aluminum carrying case with 6 plastic trays, this set remains organized and protected, making it ideal for travel and frequent use."}, {title: "Engaging Learning Tool", description: "Our poker set blends education and fun, making it an excellent choice for businesses looking to provide an interactive experience while practicing math and strategy."}]},
-  {title: "Spin Master Wooden Domino Rack Set - 4 Holder Trays for Classic Games", category: "Poker Equipment", description: "Organize your domino tiles efficiently with the Spin Master Wooden Domino Rack Set, designed for versatile gameplay with Mexican Train Dominoes and more. Constructed from durable solid wood, this 4-piece set ensures longevity, making it a perfect addition for game nights, educational settings, or family gatherings, suitable for ages 8 and up.", image: "/product/81iGmiOvkaL.webp", images: ["/product/417yeugNekL.webp", "/product/413kmCXP9kL.webp", "/product/419xtT1ot7L.webp", "/product/31jJGJAMUYL.webp", "/product/41hpamDjcvL.webp", "/product/41y5jiZnkCL.webp"], image_names: ["81iGmiOvkaL.webp", "417yeugNekL.webp", "413kmCXP9kL.webp", "419xtT1ot7L.webp", "31jJGJAMUYL.webp", "41hpamDjcvL.webp", "41y5jiZnkCL.webp"], features: [{title: "Efficient Organization", description: "Each rack accommodates up to 15 dominoes, keeping your game tiles secure and easy to access, enhancing the overall gaming experience."}, {title: "Premium Quality Construction", description: "Crafted from high-quality solid wood, these domino racks are built to withstand years of use, providing excellent value for both children and adults."}, {title: "Ideal for All Skill Levels", description: "Perfect for beginners and seasoned players alike, allowing for easy viewing and management of tiles, which fosters focus on gameplay."}, {title: "Versatile Game Addition", description: "An excellent choice for family game nights or educational activities, complemented with a range of classic board games like checkers, chess, and more."}]},
-  {title: "Extguds Casino Poker Set - Blackjack & Texas Hold'em with Accessories", category: "Poker Equipment", description: "The Extguds Casino Poker Set is a premium solution for businesses seeking to enhance entertainment experiences, featuring 200 chips, 6 decks of cards, and essential accessories including a card shoe, discard tray, and automatic shuffler, perfect for engaging gatherings and events.", image: "/product/81MvYr+D5oL.webp", images: ["/product/51H+uKSLapL.webp", "/product/41Nql44mpaL.webp", "/product/51FTkxQTK6L.webp", "/product/51HzGwOqg4L.webp", "/product/51qMnWEBbhL.webp", "/product/51rTgt6pgUL.webp"], image_names: ["81MvYr+D5oL.webp", "51H+uKSLapL.webp", "41Nql44mpaL.webp", "51FTkxQTK6L.webp", "51HzGwOqg4L.webp", "51qMnWEBbhL.webp", "51rTgt6pgUL.webp"], features: [{title: "Dual-Sided Felt", description: "This casino-quality dual-sided felt measures 23.6x47.2 inches, providing a smooth playing surface for both Blackjack and Texas Hold'em, enhancing the gaming experience."}, {title: "Durable Components", description: "Constructed from high-quality materials, this poker set is designed for frequent use, ensuring reliability and longevity in fast-paced gaming environments."}, {title: "Automatic Shuffler", description: "The included automatic shuffler accommodates up to 6 decks, significantly reducing downtime during games and maximizing enjoyment for all players."}, {title: "Ideal for Events", description: "This poker set is an excellent choice for corporate parties, team-building activities, and social events, fostering camaraderie and engagement among participants."}]},
-  {title: "Spin Master Texas Hold'em Poker Set with 200 Chips & Dealer Button", category: "Poker Equipment", description: "Elevate your game nights with the Spin Master Texas Hold'em Poker Set, featuring 200 high-quality poker chips, a dealer button, and a standard deck of cards, perfect for both novice and experienced players. Ideal for B2B sales, this captivating set ensures your customers enjoy memorable poker nights, enhancing their entertainment offerings.", image: "/product/81pxsExNlIL.webp", images: ["/product/418qBZgl0ML.webp", "/product/51JeHcx4pdL.webp", "/product/51Onfqs6HvL.webp", "/product/41+ac+upTKL.webp", "/product/51KQsuc4IgL.webp", "/product/41PMZi3ipuL.webp"], image_names: ["81pxsExNlIL.webp", "418qBZgl0ML.webp", "51JeHcx4pdL.webp", "51Onfqs6HvL.webp", "41+ac+upTKL.webp", "51KQsuc4IgL.webp", "41PMZi3ipuL.webp"], features: [{title: "Complete Game Set", description: "Includes 200 premium poker chips in traditional colors, a dealer button, and a standard deck of playing cards, ensuring everything needed for poker nights is conveniently packed."}, {title: "Clear Game Instructions", description: "Our detailed rules for Texas Hold 'Em provide clear guidance, making it easy for beginners to learn and for seasoned players to reinforce gameplay strategies."}, {title: "Durable Components", description: "Crafted from high-quality materials, each component is designed for durability and long-term use, making it a great addition to gaming establishments and family gatherings."}, {title: "Versatile Entertainment", description: "Perfect for family game nights, parties, and events, this poker set creates enjoyable experiences, catering to all age groups and various occasions."}]},
-  {title: "THUNDERBAY 300-Piece Clay Composite Poker Set - Aluminum Case Included", category: "Poker Equipment", description: "Elevate your gaming experience with the THUNDERBAY 300-Piece Clay Composite Poker Set. Perfect for B2B buyers seeking high-quality poker equipment for tournaments and casino nights, this complete set includes premium 13.5g chips, two decks of cards, a metal dealer button, and five dice, all housed in a rugged aluminum case for secure storage and transport.", image: "/product/51bB-KhvJuL.webp", images: ["/product/41-NCP2OeRL.webp", "/product/41ymU1gV7jL.webp", "/product/51qJOmpHYML.webp", "/product/51o+yURmV+L.webp", "/product/51ExvzymIiL.webp", "/product/41dd3eaoCyL.webp", "/product/31UEtW1GnsL.webp"], image_names: ["51bB-KhvJuL.webp", "41-NCP2OeRL.webp", "41ymU1gV7jL.webp", "51qJOmpHYML.webp", "51o+yURmV+L.webp", "51ExvzymIiL.webp", "41dd3eaoCyL.webp", "31UEtW1GnsL.webp"], features: [{title: "Complete Poker Set", description: "This comprehensive set features 300 premium poker chips, two decks of playing cards, five dice, and a durable metal dealer button, designed for an authentic casino experience."}, {title: "Premium Quality Chips", description: "Each chip weighs 13.5 grams and is crafted from high-quality clay composite, providing a professional feel and enhancing the gaming experience for players."}, {title: "Durable Aluminum Case", description: "Housed in a robust aluminum carrying case with improved latches and hinges, this set ensures durability and security for safe transport and storage."}, {title: "Versatile Game Use", description: "Ideal for Texas Hold'em tournaments, family game nights, or other casino games, this poker set adds value to any gaming event with its extensive components."}]},
-  {title: "Bicycle Standard Rider Playing Cards - 12 Pack, Classic Design for Games", category: "Poker Equipment", description: "Discover the reliability of Bicycle Standard Rider Playing Cards, perfect for B2B purchasing to enhance game nights, poker tournaments, or teaching card games in educational settings. With a timeless design and 12 decks per pack, these durable cards are your ideal choice for quality and fun.", image: "/product/61ILEV1DPPL.webp", images: ["/product/41qwy9YiNgL.webp", "/product/41srMJ-1x5L.webp", "/product/41AjyItf02L.webp", "/product/41BWkGT8TxL.webp", "/product/41ghssmBtwL.webp", "/product/51-g9bKVLpL.webp"], image_names: ["61ILEV1DPPL.webp", "41qwy9YiNgL.webp", "41srMJ-1x5L.webp", "41AjyItf02L.webp", "41BWkGT8TxL.webp", "41ghssmBtwL.webp", "51-g9bKVLpL.webp"], features: [{title: "Trusted Brand Quality", description: "Bicycle Playing Cards have been a trusted choice for generations, ensuring reliability and durability for all types of card games in various settings."}, {title: "Classic Card Design", description: "Designed with the iconic Bicycle face, these cards make learning new games easy and engaging for players of all ages."}, {title: "Versatile Game Use", description: "Ideal for a variety of games, including Blackjack, Rummy, and Poker, these cards provide endless entertainment for both formal and casual gatherings."}, {title: "Convenient Bulk Packaging", description: "Each pack contains 12 decks, making it convenient for tournaments, classroom activities, or sharing with friends and family during game nights."}]},
-  {title: "DA VINCI Masterworks Poker Chip Set - 500 Chips, Cards, Dealer Buttons", category: "Poker Equipment", description: "Elevate your gaming experience with the DA VINCI Masterworks Poker Chip Set, featuring 500 high-quality 11.5g chips, two decks of cards, three dealer buttons, and two cut cards. Perfect for businesses seeking durable and visually stunning poker supplies for tournaments or corporate events, this set offers exceptional value and sophistication.", image: "/product/81l3xQ7V-+S.webp", images: ["/product/51lDSbGDdsS.webp", "/product/511P40E1z+S.webp", "/product/41kJwgSY+XL.webp", "/product/41ddF-sfxpL.webp", "/product/41q24RkHBWL.webp", "/product/41WPciAN0bL.webp", "/product/417bvF6jTRL.webp"], image_names: ["81l3xQ7V-+S.webp", "51lDSbGDdsS.webp", "511P40E1z+S.webp", "41kJwgSY+XL.webp", "41ddF-sfxpL.webp", "41q24RkHBWL.webp", "41WPciAN0bL.webp", "417bvF6jTRL.webp"], features: [{title: "High-Quality Chips", description: "Each chip weighs 11.5 grams, ensuring a professional feel that enhances the gaming experience while offering durability for frequent use."}, {title: "Complete Gaming Set", description: "The set includes everything necessary for a complete poker night, featuring 500 chips in various denominations, two decks of cards, and additional accessories."}, {title: "Elegant Design", description: "Showcasing iconic Da Vinci masterpieces, the chips and accessories provide a unique and sophisticated visual appeal that stands out in any corporate or social setting."}, {title: "Versatile Use", description: "Ideal for businesses hosting poker nights or tournaments, the DA VINCI Masterworks set adds value to team-building events and enhances customer engagement."}]},
-  {title: "Professional Bowtie Wooden Poker Set with 300 Durable Chips & Cards", category: "Poker Equipment", description: "Elevate your game nights and corporate events with our Bowtie Wooden Poker Set, featuring 300 premium weighted ABS poker chips, two unique decks of playing cards, and a beautifully crafted walnut wood storage case, all designed for durability and convenience.", image: "/product/91pjNTwJgOL.webp", images: ["/product/51AP80a+F1L.webp", "/product/51vRBXSOgDL.webp", "/product/51UE7SWDUEL.webp", "/product/61M9yAnCV0L.webp", "/product/517xWUHDrtL.webp", "/product/61xXW1w5M0L.webp"], image_names: ["91pjNTwJgOL.webp", "51AP80a+F1L.webp", "51vRBXSOgDL.webp", "51UE7SWDUEL.webp", "61M9yAnCV0L.webp", "517xWUHDrtL.webp", "61xXW1w5M0L.webp"], features: [{title: "High-Quality Storage Case", description: "Constructed from walnut wood with a bow-cut leather cover, our luxurious case ensures your poker set remains organized and protected."}, {title: "Premium Weighted Poker Chips", description: "Enjoy the superior feel of our ABS poker chips, designed to withstand frequent use while delivering a professional gaming experience far beyond standard plastic alternatives."}, {title: "Versatile Gaming Applications", description: "This poker set is ideal for Texas Hold'em, Blackjack, or other casino games, making it perfect for family occasions, corporate gatherings, and social events."}, {title: "Exceptional Gift Option", description: "Present the Bowtie Poker Set as a thoughtful gift for poker enthusiasts, showcasing your appreciation with a premium product designed for both novice and skilled players."}]},
-  {title: "Corrado 300-Piece Clay Poker Chip Set with Aluminum Case & Cards", category: "Poker Equipment", description: "Elevate your gaming experience with the Corrado 300-piece poker chip set, designed for professional quality and customization. This complete set includes high-quality clay chips, durable plastic cards, and essential accessories, making it ideal for serious gaming sessions in any business environment.", image: "/product/81-zdgoykdL.webp", images: ["/product/51diX2+4t0L.webp", "/product/41o46A94eXL.webp", "/product/41GjiAk+kLL.webp", "/product/51tlyVbsu7L.webp", "/product/51iV64ggx-L.webp", "/product/51yglzbewGL.webp", "/product/51Sy11r02pL.webp"], image_names: ["81-zdgoykdL.webp", "51diX2+4t0L.webp", "41o46A94eXL.webp", "41GjiAk+kLL.webp", "51tlyVbsu7L.webp", "51iV64ggx-L.webp", "51yglzbewGL.webp", "51Sy11r02pL.webp"], features: [{title: "Premium Clay Chips", description: "Each chip weighs 14 grams and is crafted from high-quality clay without a metal core, ensuring a professional casino feel and authentic sound for a superior gaming experience."}, {title: "Versatile Chip Selection", description: "The set includes 300 customizable chips in various colors, allowing players to adjust denominations easily, making it perfect for Texas Hold'em, Blackjack, and Roulette games."}, {title: "Complete Gaming Set", description: "Includes two decks of 100% plastic playing cards, five dice, and a dealer button, providing everything needed for seamless gameplay and professional settings."}, {title: "Durable Storage Case", description: "Packaged in a sturdy aluminum case with a soft interior lining, ensuring all components are secure and organized while offering a portable solution for game nights."}]},
-  {title: "Premium Bowtie Wooden Poker Set - 300 Weighted Chips & Cards", category: "Poker Equipment", description: "The Bowtie Wooden Poker Set is an exceptional investment for B2B buyers looking to enhance their gaming offerings, featuring 300 premium weighted poker chips, two unique decks of playing cards, and a stylish walnut wood case, perfect for casino nights and professional events.", image: "/product/91pjNTwJgOL.webp", images: ["/product/51AP80a+F1L.webp", "/product/51vRBXSOgDL.webp", "/product/51UE7SWDUEL.webp", "/product/61M9yAnCV0L.webp", "/product/517xWUHDrtL.webp", "/product/61xXW1w5M0L.webp"], image_names: ["91pjNTwJgOL.webp", "51AP80a+F1L.webp", "51vRBXSOgDL.webp", "51UE7SWDUEL.webp", "61M9yAnCV0L.webp", "517xWUHDrtL.webp", "61xXW1w5M0L.webp"], features: [{title: "Quality Craftsmanship", description: "Constructed from high-quality walnut wood, the Bowtie Poker Set ensures durability and a premium feel, ideal for enhancing your gaming experience."}, {title: "Weighted Poker Chips", description: "Our 300 ABS poker chips are meticulously designed for a superior weight and feel, providing a professional gaming experience for all types of events."}, {title: "Versatile Gaming Experience", description: "This set is versatile enough for various games, including Texas Hold'em, Blackjack, and Roulette, making it perfect for any social gathering or casino-related event."}, {title: "Ideal Gift for Businesses", description: "A perfect corporate gift for poker enthusiasts, this set not only represents appreciation but also elevates game nights, making it an ideal choice for client engagement events."}]},
-  {title: "Brybelly 1000-Piece Poker Chip Set with Acrylic Case", category: "Poker Equipment", description: "Elevate your gaming environment with Brybelly’s premium 1000-piece poker chip set, featuring high-quality clay chips with multiple denominations, an elegant acrylic display case, and removable trays, making it an indispensable asset for any B2B entertainment venue or casino.", image: "/product/81GppAaqaNL.webp", images: ["/product/51Ri56etdWL.webp", "/product/51DLYOh4NKL.webp", "/product/51bTRcwRIZL.webp", "/product/5157LQ1k4rL.webp", "/product/51z7yWT5CmL.webp", "/product/416c4bHumkL.webp", "/product/51kuFYK+NcL.webp"], image_names: ["81GppAaqaNL.webp", "51Ri56etdWL.webp", "51DLYOh4NKL.webp", "51bTRcwRIZL.webp", "5157LQ1k4rL.webp", "51z7yWT5CmL.webp", "416c4bHumkL.webp", "51kuFYK+NcL.webp"], features: [{title: "Comprehensive Chip Variety", description: "This set includes 1000 chips in various denominations: 300 x $1, 200 x $5, 200 x $25, 200 x $100, 50 x $500, and 50 x $1000, catering to diverse gaming preferences and enhancing your betting options."}, {title: "Premium Quality Construction", description: "Crafted from high-grade clay, each chip weighs 14 grams, offering a professional feel and an authentic gaming experience, perfect for both casual and competitive play."}, {title: "Stylish Acrylic Display Case", description: "The durable acrylic case, measuring 27.5 cm x 30.5 cm x 35.5 cm, includes 10 removable trays that organize and protect your chips, ensuring easy access and an appealing presentation."}, {title: "Versatile Gaming Application", description: "Whether for hosting casual game nights or arranging large poker tournaments, this chip set meets the demands of gamers at all skill levels, making it an ideal choice for any gaming establishment."}]},
-  {title: "Corrado 300-Piece Poker Set | Customizable Clay Chips | Aluminum Case", category: "Poker Equipment", description: "The Corrado 300-piece Poker Set delivers a professional casino experience with premium 14g clay chips, fully customizable for any game night. Ideal for poker enthusiasts, this versatile and durable set includes everything needed for an engaging and high-quality gaming experience.", image: "/product/81-zdgoykdL.webp", images: ["/product/51diX2+4t0L.webp", "/product/41o46A94eXL.webp", "/product/41GjiAk+kLL.webp", "/product/51tlyVbsu7L.webp", "/product/51iV64ggx-L.webp", "/product/51yglzbewGL.webp", "/product/51Sy11r02pL.webp"], image_names: ["81-zdgoykdL.webp", "51diX2+4t0L.webp", "41o46A94eXL.webp", "41GjiAk+kLL.webp", "51tlyVbsu7L.webp", "51iV64ggx-L.webp", "51yglzbewGL.webp", "51Sy11r02pL.webp"], features: [{title: "Professional Quality Chips", description: "Each 14g clay chip provides a smooth surface and balanced weight for an authentic gaming experience without a metal core."}, {title: "Customizable Chip Colors", description: "This set includes 300 chips in five colors, allowing players to customize denominations for Texas Hold'em, Blackjack, and more."}, {title: "Comprehensive Game Comfort", description: "Includes two decks of 100% plastic playing cards, five dice, and a dealer button for a complete and seamless gaming experience."}, {title: "Durable Aluminum Case", description: "The reinforced aluminum case with a soft interior keeps all game components secure, making it convenient for travel and long-lasting use."}]},
-  {title: "DA VINCI 200 Dice Stripe 11.5g Poker Chip Set with Dealer Button", category: "Poker Equipment", description: "The DA VINCI 200 Dice Stripe 11.5g Poker Chip Set is an essential choice for casinos and gaming venues, providing high-quality, durable chips that enhance the gaming experience. This comprehensive set includes two decks of cards and a robust aluminum carrying case, making it a great investment for your business's entertainment needs.", image: "/product/71PQQg9KE6L.webp", images: ["/product/51BAGxosNxL.webp", "/product/31DTQ4G2AAL.webp", "/product/310HDSJG3SL.webp", "/product/31CADABV0BL.webp", "/product/21K4HYOA6kL.webp", "/product/31W3B6E1TXL.webp"], image_names: ["71PQQg9KE6L.webp", "51BAGxosNxL.webp", "31DTQ4G2AAL.webp", "310HDSJG3SL.webp", "31CADABV0BL.webp", "21K4HYOA6kL.webp", "31W3B6E1TXL.webp"], features: [{title: "High-Quality Chips", description: "Each chip is crafted from premium materials, ensuring long-lasting durability and a professional look that elevates the gaming atmosphere."}, {title: "Complete Set", description: "This set includes 200 poker chips, two decks of cards, and essential accessories, providing everything you need for a successful gaming night."}, {title: "Aluminum Case", description: "The heavy-duty aluminum carrying case offers optimal protection and portability, making it easy to transport and store your gaming accessories."}, {title: "Custom Dealer Button", description: "Included is a custom dealer button, enhancing game play and organization, pivotal for any professional poker setup."}]},
-  {title: "Casino-Grade Poker Chips Set – 100 Durable Clay Chips with Case", category: "Poker Equipment", description: "Elevate your gaming experience with our casino-grade poker chip set, featuring 100 high-quality chips weighing 14 grams each. Ideal for businesses looking to enhance entertainment offerings, this set includes a lightweight, durable carrying case and an easy-to-understand rule guide, making it perfect for both seasoned players and beginners alike.", image: "/product/61ept9Br2ZL.webp", images: ["/product/41jthhfZVJL.webp", "/product/51Nial3R3JL.webp", "/product/51ny-tvk1SL.webp", "/product/512WEBjNkRL.webp", "/product/51AVi6FE0RL.webp", "/product/51wWBo4jM2L.webp", "/product/51bzXhwFJAL.webp"], image_names: ["61ept9Br2ZL.webp", "41jthhfZVJL.webp", "51Nial3R3JL.webp", "51ny-tvk1SL.webp", "512WEBjNkRL.webp", "51AVi6FE0RL.webp", "51wWBo4jM2L.webp", "51bzXhwFJAL.webp"], features: [{title: "Casino-Grade Quality", description: "Crafted from high-quality clay composite materials, these chips replicate the authentic casino feel for a professional gaming experience."}, {title: "Optimal Weight", description: "Each chip weighs 14 grams, closely mimicking the standard casino weight to ensure a genuine and engaging gaming atmosphere."}, {title: "Durable Case Included", description: "Packaged in a lightweight, crack-resistant polypropylene case designed for portability, this set is perfect for easy storage and transport."}, {title: "Beginner-Friendly Guide", description: "Includes a comprehensive rule guide aimed at newcomers, ensuring an effortless introduction to the game for all skill levels."}]},
-  {title: "Professional Poker Chip Set - 300 Chips, 11.5g, Aluminum Case, Cards Included", category: "Poker Equipment", description: "Elevate your gaming experience with our professional-grade Poker Chip Set, featuring 300 high-quality 11.5g casino-style chips, two decks of standard playing cards, and a sturdy aluminum case. Ideal for poker nights or corporate events, this set provides an authentic Vegas experience that will impress clients and colleagues alike.", image: "/product/81H6DMvgV6L.webp", images: ["/product/51iza+TtvGL.webp", "/product/41u8-3BSyML.webp", "/product/51gPApH6XHL.webp", "/product/51bV98u9ffL.webp", "/product/51eG8MtWzFL.webp", "/product/511jpAdM-NL.webp"], image_names: ["81H6DMvgV6L.webp", "51iza+TtvGL.webp", "41u8-3BSyML.webp", "51gPApH6XHL.webp", "51bV98u9ffL.webp", "51eG8MtWzFL.webp", "511jpAdM-NL.webp"], features: [{title: "High-Quality Chips", description: "Crafted from 11.5g composite resin, each chip simulates the authentic feel of real casino chips, ensuring a premium gaming experience."}, {title: "Complete Set", description: "Includes 300 casino chips in three colors, two decks of cards, and a dealer button, making it perfect for Texas Hold'em and Blackjack games."}, {title: "Secure Storage Solution", description: "The aluminum carrying case with a plush velvet interior protects your chips from dust, ensuring they remain in pristine condition for every game."}, {title: "Versatile Gaming Use", description: "Transform any space into a thrilling casino atmosphere, ideal for corporate parties, client entertainment, or personal poker nights."}]},
-  {title: "Ladies Rose Casino Dice Poker Set (500 Pieces) - Perfect Gift", category: "Poker Equipment", description: "Elevate your gaming experience with our Ladies Rose Casino Dice Poker Set, designed for family fun and special occasions. This meticulously packaged set includes vibrant, colorful chips ensuring an engaging poker experience for all skill levels. Ideal as a corporate gift or a high-quality addition for entertainment events, ensuring complete satisfaction with every purchase.", image: "/product/41QITtP+uiL.webp", images: ["/product/31lZmJoaUCL.webp"], image_names: ["41QITtP+uiL.webp", "31lZmJoaUCL.webp"], features: [{title: "Premium Quality Chips", description: "Our poker set features premium-quality chips with a smooth finish, designed for durability and extended use in both casual and competitive gaming settings."}, {title: "Stylish Rose Design", description: "The elegant rose design adds a touch of sophistication to your gaming table, making it a visually appealing choice for upscale events and gatherings."}, {title: "Comprehensive Set", description: "This 500-piece set includes everything needed for a full gaming experience, ensuring you have all essentials for entertaining friends and family or hosting corporate events."}, {title: "Gift-Ready Packaging", description: "Carefully packaged to ensure a beautiful presentation, this set is ready for gifting, making it a perfect option for corporate promotions or special occasions."}]},
-  {title: "Monte Carlo 14gm 500 Chip Clay Poker Set with Aluminum Case & 3 Dealer Buttons", category: "Poker Equipment", description: "Elevate your casino-themed events with the Monte Carlo Home Style 14gm 500 Poker Chip Set, expertly crafted from quality clay and packaged in a durable aluminum case. This complete set includes three dealer buttons and two decks of cards, making it perfect for hosting engaging poker nights or casino games for your business gatherings.", image: "/product/81YQNgEeBfL.webp", images: ["/product/51X+k1F-NzL.webp", "/product/61QUr8lUZ-L.webp", "/product/51Zg6ejA6gL.webp", "/product/51mPaKSr0FL.webp", "/product/51QaeRIpPvL.webp", "/product/51DEOKUIUgL.webp", "/product/5158UJOZ2UL.webp"], image_names: ["81YQNgEeBfL.webp", "51X+k1F-NzL.webp", "61QUr8lUZ-L.webp", "51Zg6ejA6gL.webp", "51mPaKSr0FL.webp", "51QaeRIpPvL.webp", "51DEOKUIUgL.webp", "5158UJOZ2UL.webp"], features: [{title: "High-Quality Clay Chips", description: "These 14g casino-style clay composite chips offer exceptional durability, ensuring a premium feel and performance during all your gaming activities."}, {title: "Complete Gaming Set", description: "The set comes with 500 chips, two decks of cards, and three dealer buttons, making it a comprehensive solution for all your gaming needs."}, {title: "Durable Aluminum Case", description: "Packaged in a sturdy aluminum case, this poker chip set is designed for easy transport and secure storage, perfect for corporate events or social gatherings."}, {title: "Custom Color Options", description: "Personalize your chip set by selecting colors to match your brand or event theme, providing a tailored experience for your customers or guests."}]},
-  {title: "1000 Chip Eclipse Laser Clay Poker Set with Aluminum Case & 3 Dealer Buttons", category: "Poker Equipment", description: "Enhance your casino supplies with this premium 1000 chip Eclipse laser clay poker set, featuring 14g chips, an aluminum carrying case, and 3 dealer buttons. Perfect for professional use in poker tournaments or casino nights, this set ensures quality and durability for your business rental or resale.", image: "/product/81OxjW-Di-L.webp", images: ["/product/516ho3lDBYL.webp", "/product/61smL++52sL.webp", "/product/51aOicnIoDL.webp", "/product/41n4EyxhV6L.webp", "/product/61R3qrz04eL.webp", "/product/51CuxCynfFL.webp"], image_names: ["81OxjW-Di-L.webp", "516ho3lDBYL.webp", "61smL++52sL.webp", "51aOicnIoDL.webp", "41n4EyxhV6L.webp", "61R3qrz04eL.webp", "51CuxCynfFL.webp"], features: [{title: "Premium Quality Chips", description: "Our 14g laser clay chips are designed for durability and a professional feel, ideal for high-stakes games."}, {title: "Complete Poker Set", description: "Includes 1000 chips, 2 decks of cards, and 3 dealer buttons, providing everything needed for organizing successful poker games."}, {title: "Durable Aluminum Case", description: "The lightweight yet sturdy aluminum case ensures safe storage and easy transport for all poker enthusiasts."}, {title: "Customizable Chip Options", description: "Order your chips in preferred denominations; we allow you to select each roll of 25 chips for personalized gameplay."}]},
-  {title: "John Wayne 100-Piece Poker Chip Set - Durable Casino Quality", category: "Poker Equipment", description: "Elevate your gaming experience with the John Wayne 100-Piece Poker Chip Set, designed for professional use and perfect for card clubs, tournaments, and corporate events. Featuring officially licensed designs and durable materials, this set ensures quality and a touch of nostalgia for fans and players alike.", image: "/product/81aIw3QS7KL.webp", images: ["/product/514E92loecL.webp", "/product/51WTNcdq3GL.webp", "/product/611PveJ6fRL.webp", "/product/61y1KHK19qL.webp"], image_names: ["81aIw3QS7KL.webp", "514E92loecL.webp", "51WTNcdq3GL.webp", "611PveJ6fRL.webp", "61y1KHK19qL.webp"], features: [{title: "High-Quality Chips", description: "Crafted from durable materials, each poker chip is designed to withstand frequent use, ensuring longevity and a professional feel at every game."}, {title: "Officially Licensed Designs", description: "Showcase your passion with chips featuring officially licensed John Wayne designs, ideal for fans who appreciate authenticity in their gaming supplies."}, {title: "Versatile Use Cases", description: "This poker chip set is perfect for various games, including Texas Hold'em and Blackjack, making it a versatile addition to any card club or gaming event."}, {title: "Convenient Storage Tray", description: "Packed in a sleek, black tray for easy storage and transport, this poker chip set allows businesses to maintain organization and professionalism during gaming events."}]},
-  {title: "DA VINCI Unicorn Clay Poker Chip Set - 300 Premium 9g Chips", category: "Poker Equipment", description: "Elevate your casino game experience with the DA VINCI Unicorn Clay Poker Chip Set, featuring 300 authentic 9g clay casino chips, high-quality plastic cards, and a durable EVA carrying case. Perfect for businesses and retailers aiming to provide top-notch gaming products to their clientele.", image: "/product/71wN+psOmqL.webp", images: ["/product/51is7TGAodL.webp", "/product/419nDucyekL.webp"], image_names: ["71wN+psOmqL.webp", "51is7TGAodL.webp", "419nDucyekL.webp"], features: [{title: "Authentic Casino-Grade Chips", description: "Each chip weighs 9g, replicating the exact weight and feel of genuine casino chips, ensuring a premium playing experience."}, {title: "High-Quality Materials", description: "Constructed from superior clay, these chips stack easily without slipping, enhancing gameplay reliability and aesthetics."}, {title: "Durable EVA Case", description: "This lightweight yet robust EVA carrying case is designed for easy transport and protection, resembling high-end luggage quality."}, {title: "Complete Gaming Package", description: "Included are two decks of high-grade plastic playing cards, dealer button, and cut cards, providing a fully equipped poker experience."}]},
-  {title: "Extguds Casino Game Set: Blackjack, Poker, Chips & Accessories", category: "Poker Equipment", description: "The Extguds Entertainment Casino Game Set provides a comprehensive solution for businesses seeking quality entertainment options. Featuring 200 chips, 6 decks of cards, and a double-sided felt layout, this set ensures an engaging casino experience at parties, events, or establishments, perfect for enhancing guest satisfaction and retention.", image: "/product/81-oB27LbUL.webp", images: ["/product/51TLgVWkQOL.webp", "/product/51wi-QofCLL.webp", "/product/51TJvYblgbL.webp", "/product/51L+htehg4L.webp", "/product/51dj7A-GQnL.webp", "/product/51g7CZ60lnL.webp"], image_names: ["81-oB27LbUL.webp", "51TLgVWkQOL.webp", "51wi-QofCLL.webp", "51TJvYblgbL.webp", "51L+htehg4L.webp", "51dj7A-GQnL.webp", "51g7CZ60lnL.webp"], features: [{title: "Versatile Gameplay", description: "Enjoy both Blackjack and Texas Hold'em poker with this versatile set, accommodating various gaming preferences and ensuring a lively atmosphere for your business gatherings."}, {title: "Premium Double-Sided Felt", description: "The double-sided felt layout measures 23.6 x 47.2 inches, offering a smooth and durable playing surface that is easy to store and enhances the overall gaming experience."}, {title: "Robust Quality Materials", description: "Constructed with high-quality materials, this poker set is designed to endure frequent use, providing a reliable and authentic casino experience for your customers."}, {title: "Comprehensive Accessories Included", description: "The set includes 200 chips, 6 cards, and 10 cut cards, enabling multiple gaming options to cater to diverse preferences and maximize entertainment value."}]},
-  {title: "ARTGAME 14g Clay Poker Chip Set - 500 pcs with Storage Box", category: "Poker Equipment", description: "Elevate your poker nights with the ARTGAME premium 14g clay poker chip set, featuring 500 vibrant chips in a stylish, protective storage box, making it an exceptional gift for gaming enthusiasts and ideal for any business or promotional event.", image: "/product/71OPYG7xLlL.webp", images: ["/product/51gPLbqBiWL.webp", "/product/51JcviqAhGL.webp", "/product/51PFDVvZDuL.webp", "/product/51kNwjhCaSL.webp", "/product/51GlEvLysdL.webp", "/product/51nMhB+RkSL.webp"], image_names: ["71OPYG7xLlL.webp", "51gPLbqBiWL.webp", "51JcviqAhGL.webp", "51PFDVvZDuL.webp", "51kNwjhCaSL.webp", "51GlEvLysdL.webp", "51nMhB+RkSL.webp"], features: [{title: "High-Quality Craftsmanship", description: "Each chip, weighing 14g with a double-injection iron core, ensures stability and a satisfying tactile experience during play."}, {title: "Enhanced Game Experience", description: "The slightly matte finish allows for smooth stacking and shuffling, delivering a satisfying sound that enhances the poker experience."}, {title: "Durable Storage Box", description: "The rugged storage case features dedicated compartments for chips and cards, ensuring easy transport and protection against wear and tear."}, {title: "Vibrant Chip Variety", description: "The set includes an optimal mix of 500 chips in various colors, catering to diverse gameplay styles and preferences, perfect for tournaments or casual play."}]},
-  {title: "Funtime Gifts Travel Poker Set - Compact Tin Box for 2-4 Players, Multi-Color", category: "Poker Equipment", description: "The Funtime Gifts Travel Poker Set is an ideal solution for businesses seeking a portable and engaging gaming experience. Perfect for team outings and corporate events, this compact tin box includes 52 high-quality playing cards and 108 poker chips, accommodating 2-4 players. Its durable design ensures long-lasting use, while the eye-catching colors make it a great gift option for clients and employees alike.", image: "/product/71DkwwZRYtL.webp", images: ["/product/51-XguPDeCL.webp", "/product/512qFyw+wSL.webp"], image_names: ["71DkwwZRYtL.webp", "51-XguPDeCL.webp", "512qFyw+wSL.webp"], features: [{title: "Complete Poker Set", description: "This set includes all necessary components, featuring 52 playing cards and 108 poker chips, ensuring an engaging experience for players."}, {title: "Portable Design", description: "The compact tin box measures approximately 9.3 x 9.3 x 5 cm, making it easy to carry in bags or luggage for travel or events."}, {title: "Versatile Play Options", description: "Designed for 2-4 players, this game is perfect for small gatherings, making it an excellent choice for team building and networking activities."}, {title: "Attractive Gift Packaging", description: "The colorful design of the tin box enhances its appeal, making it a perfect corporate gift for clients, partners, or employees."}]},
-  {title: "Brybelly 14g Poker Chip Set - 500 Premium Clay Composite Chips in Aluminum Case", category: "Poker Equipment", description: "Upgrade your gaming events with the Brybelly 14g Poker Chip Set, designed for professional-quality gameplay. This comprehensive 500-chip set, featuring unique textured designs for easy stacking and visual clarity, is perfect for poker nights, tournaments, and casino-themed events. Safeguarded in a durable aluminum case, this set ensures convenience and security for all your gaming needs.", image: "/product/81O0Xtp2sLL.webp", images: ["/product/51LWq7nY-1L.webp", "/product/51zIykxvFyL.webp", "/product/51oeaHx39IL.webp", "/product/51YRWvXTAhL.webp", "/product/51ZF4W5WekL.webp", "/product/51cYWbdJ2xL.webp", "/product/51JHBnwX+ML.webp"], image_names: ["81O0Xtp2sLL.webp", "51LWq7nY-1L.webp", "51zIykxvFyL.webp", "51oeaHx39IL.webp", "51YRWvXTAhL.webp", "51ZF4W5WekL.webp", "51cYWbdJ2xL.webp", "51JHBnwX+ML.webp"], features: [{title: "Premium Clay Composite Chips", description: "Each chip weighs 14 grams, offering an authentic casino feel that enhances the overall gaming experience for players."}, {title: "Unique Textured Design", description: "The chips feature distinctive textures for easy identification during play, ensuring smooth and efficient stacking and handling."}, {title: "Versatile Chip Values", description: "Includes a range of chip values from $1 to $1000, catering to various poker games and accommodating different betting strategies."}, {title: "Durable Aluminum Case", description: "Housed in a robust aluminum case with a foam interior and secure locking mechanism, providing safe storage and transport for all components."}]},
-  {title: "Waterproof Plastic Playing Cards Set - 2 Decks in Durable Case", category: "Poker Equipment", description: "This premium set of waterproof plastic playing cards is perfect for businesses looking for long-lasting and easy-to-clean card solutions. Each set includes 2 standard-sized decks, manufactured in Taiwan, ensuring quality and durability for various applications, whether for events, entertainment, or business promotions.", image: "/product/61-z4jgtLgL.webp", images: ["/product/41j1-xNBG3L.webp"], image_names: ["61-z4jgtLgL.webp", "41j1-xNBG3L.webp"], features: [{title: "100% Waterproof Material", description: "Crafted from high-quality plastic, these cards are resistant to spills and easy to clean, ensuring longevity and consistent performance, even in challenging environments."}, {title: "Standard Poker Size", description: "Measuring 2.5 x 3.5 inches, these cards provide an industry-standard size that is comfortable for handling and game play, ideal for various card games."}, {title: "Includes Jokers", description: "Each deck comes with 2 jokers, enhancing game versatility and allowing for various playing styles, perfect for both casual and serious gamers."}, {title: "Durable Storage Option", description: "The cards are packaged in a sturdy plastic case that protects against damage, making them easy to store and transport for events and gatherings."}]},
-  {title: "Premium 13.5g Clay Poker Chip Set with Aluminum Case for Casino Games", category: "Poker Equipment", description: "Elevate your gaming experience with our premium 13.5g clay poker chip set that includes essential accessories for Texas Hold'em and Blackjack. This complete B2B solution offers durability, authenticity, and convenience, perfect for dealers and game enthusiasts seeking reliability in every play.", image: "/product/71G-dj9OpML.webp", images: ["/product/51xr67vWUfL.webp", "/product/41x39BCiyRL.webp", "/product/51eiEAhQdNL.webp", "/product/51N9SEWF1VL.webp", "/product/51+FYiQ+D-L.webp", "/product/51LugrQdj-L.webp"], image_names: ["71G-dj9OpML.webp", "51xr67vWUfL.webp", "41x39BCiyRL.webp", "51eiEAhQdNL.webp", "51N9SEWF1VL.webp", "51+FYiQ+D-L.webp", "51LugrQdj-L.webp"], features: [{title: "Casino-Grade Chips", description: "Crafted from high-quality clay, these casino-grade poker chips ensure a professional feel and performance, enhancing your gaming event's overall experience."}, {title: "Complete Accessory Set", description: "Includes two decks of plastic playing cards, acrylic dice, a dealer button, and more, providing everything needed for a comprehensive poker gaming experience."}, {title: "Portable Protection Case", description: "The included aluminum case features soft padding to protect chips from damage, making it easy to transport and store your poker equipment securely."}, {title: "Ideal for Gifting", description: "This premium poker set is a perfect corporate gift for clients or a thoughtful present for friends and family, catering to all poker enthusiasts with lasting enjoyment."}]},
-  {title: "Monte Carlo Poker Chip Set: 1000 High-Quality Tournament Chips", category: "Poker Equipment", description: "Elevate your gaming events with the Monte Carlo Poker Chip Set, featuring 1000 high-quality casino-style chips and a durable acrylic carrying case. Perfect for businesses hosting poker nights, this professional-grade set ensures an authentic gaming experience with multiple denominations to cater to high-stakes players.", image: "/product/61EOK5QzU4L.webp", images: ["/product/41W9LZ4pYKL.webp", "/product/41gXVLi6PyL.webp", "/product/41jRhYrP1cL.webp", "/product/41zwjbrdKxL.webp", "/product/41gbrG50-YL.webp", "/product/51w-eGUMS9L.webp", "/product/51uWq3NMDML.webp"], image_names: ["61EOK5QzU4L.webp", "41W9LZ4pYKL.webp", "41gXVLi6PyL.webp", "41jRhYrP1cL.webp", "41zwjbrdKxL.webp", "41gbrG50-YL.webp", "51w-eGUMS9L.webp", "51uWq3NMDML.webp"], features: [{title: "Complete Tournament Set", description: "Includes 1000 chips with various denominations for a versatile gaming experience, perfect for serious poker tournaments."}, {title: "Professional-Grade Quality", description: "Each chip weighs 14 grams, delivering the authentic feel of a casino, enhancing the overall player experience."}, {title: "Convenient Storage Solution", description: "The durable acrylic carrying case ensures safe storage and easy transport, making it ideal for business meetings and events."}, {title: "Multifunctional Usage", description: "Suitable for a variety of casino games including poker, blackjack, and roulette, enhancing entertainment at corporate gatherings."}]},
-  {title: "Brybelly 14g Poker Set - 500 Chips with Cards & Aluminum Case", category: "Poker Equipment", description: "Elevate your casino nights with the Brybelly 14g poker set, featuring 500 high-quality clay composite chips, two decks of cards, and a dealer button, all housed in a durable aluminum case. Ideal for professional and amateur gaming experiences, this set enhances engagement and facilitates memorable gatherings for your clients or employees.", image: "/product/71gwJwu-V-L.webp", images: ["/product/51P7Bivpy+L.webp", "/product/51CYgichJvL.webp", "/product/517j45xKSKL.webp", "/product/41vaQNS7cqL.webp", "/product/51Tl4AJN2LL.webp", "/product/41seO+xcEjL.webp", "/product/51nU8w3FmYL.webp"], image_names: ["71gwJwu-V-L.webp", "51P7Bivpy+L.webp", "51CYgichJvL.webp", "517j45xKSKL.webp", "41vaQNS7cqL.webp", "51Tl4AJN2LL.webp", "41seO+xcEjL.webp", "51nU8w3FmYL.webp"], features: [{title: "High-Quality Poker Chips", description: "Each 14g poker chip offers a realistic feel and appearance, attracting both professionals and enthusiasts, ensuring an authentic gaming experience."}, {title: "Distinctive Design", description: "With its laser-etched graphics and shiny inlays, these chips reflect the luxurious essence of Monte Carlo casinos, appealing to customers seeking quality."}, {title: "Enhanced Visibility", description: "Featuring bright colors and clear index values, these chips are easy to differentiate during gameplay, catering to those with visual impairments."}, {title: "Durable Aluminum Case", description: "The premium aluminum case is equipped with a clasp and handle, making it convenient for transport and storage, perfect for poker nights and events."}]},
-  {title: "Brybelly 1000-Piece Professional Poker Chip Set - 14g Clay Composite Chips", category: "Poker Equipment", description: "Elevate your gaming experience with the Brybelly 1000-Piece Poker Chip Set, designed for professional tournaments and cash games. Each 14g chip provides a true casino feel, ensuring both durability and high-stakes play, while the acrylic display case allows for easy storage and elegant presentation, making it ideal for business suppliers in the gaming industry.", image: "/product/91f04Tx9QtL.webp", images: ["/product/51Mc0u0uPlL.webp", "/product/51pMC7B7U6L.webp", "/product/51EjhKW2qaL.webp", "/product/41qeWB8WqlL.webp", "/product/51N-Xridb-L.webp", "/product/41kQCrNsPAL.webp"], image_names: ["91f04Tx9QtL.webp", "51Mc0u0uPlL.webp", "51pMC7B7U6L.webp", "51EjhKW2qaL.webp", "41qeWB8WqlL.webp", "51N-Xridb-L.webp", "41kQCrNsPAL.webp"], features: [{title: "High-Quality Clay Composite", description: "Each poker chip is made from premium clay composite materials, ensuring a genuine casino experience that enhances gameplay and durability."}, {title: "Unique Texture Inlays", description: "The distinctive and simple texture inlays on each denomination allow for easy stacking and quick identification during intense gaming sessions."}, {title: "Robust Acrylic Display Case", description: "The transparent acrylic case offers a sturdy and stylish way to store chips, keeping them secure and organized while displaying them attractively."}, {title: "Customizable Chip Options", description: "This set includes non-denominational chips, providing ultimate flexibility for cash games and tournaments, allowing businesses to cater to various gaming preferences."}]},
-  {title: "Premium Poker Chip Set with Aluminum Case - 500 Chips & Accessories", category: "Poker Equipment", description: "Enhance your gaming experience with our Premium Poker Chip Set, featuring 500 high-quality chips and a durable aluminum case, perfect for hosting professional game nights or casino-themed events. This comprehensive set meets the demands of serious poker and blackjack players, ensuring a reliable, elegant solution for all your gaming needs.", image: "/product/81p+SBph3QL.webp", images: ["/product/51IDNnY77fL.webp", "/product/513cp1u+fCL.webp", "/product/51WScmhyMEL.webp", "/product/51Qeg+maBwL.webp", "/product/41KV3zNicML.webp", "/product/41vI9mfPuyL.webp", "/product/51ldlcqfH-L.webp"], image_names: ["81p+SBph3QL.webp", "51IDNnY77fL.webp", "513cp1u+fCL.webp", "51WScmhyMEL.webp", "51Qeg+maBwL.webp", "41KV3zNicML.webp", "41vI9mfPuyL.webp", "51ldlcqfH-L.webp"], features: [{title: "Complete Accessory Package", description: "This poker chip set includes 500 chips, 5 dice, 2 decks of cards, and essential buttons for a professional gambling experience, ideal for poker and blackjack."}, {title: "High-Quality Chips", description: "Crafted from premium materials with a textured finish, our chips provide an authentic casino feel, maximizing both comfort and durability for intense gaming sessions."}, {title: "Durable Aluminum Case", description: "Designed for secure storage and portability, this lightweight aluminum case features plush cushioning and a locking mechanism, safeguarding your poker set during transport."}, {title: "Thoughtful Gift Option", description: "This professional poker set makes an excellent gift for gaming enthusiasts, delivering a reliable and enjoyable experience for family and friends, perfect for any occasion."}]},
-  {title: "Secret Hitler: Fast-Paced Strategy Game for 5-10 Players", category: "Poker Equipment", description: "Secret Hitler is an engaging deception and betrayal game that enhances team dynamics and encourages strategic thinking. Featuring high-quality wooden components and a solid game board with foil inlays, this product offers an immersive experience for businesses seeking to strengthen team cohesion through social interaction and critical thinking exercises.", image: "/product/51FQfTXB+HL.webp", images: ["/product/417i7scDsrL.webp", "/product/41mSToWyGvL.webp", "/product/41mZ7a20OML.webp"], image_names: ["51FQfTXB+HL.webp", "417i7scDsrL.webp", "41mSToWyGvL.webp", "41mZ7a20OML.webp"], features: [{title: "High-Quality Components", description: "Crafted with premium wooden materials, Secret Hitler ensures durability and longevity, making it an excellent investment for regular corporate events."}, {title: "Engaging Gameplay", description: "Designed for 5 to 10 players, this fast-paced game promotes interaction and collaboration, fostering essential teamwork skills in a competitive yet fun environment."}, {title: "Elegant Design", description: "Featuring a solid game board with foil inlays, Secret Hitler not only delivers an enjoyable gameplay experience but also serves as an attractive addition to any corporate game collection."}, {title: "Strategic Thinking Enhancement", description: "This game encourages critical thinking and strategic decision-making, making it suitable for team-building activities where enhancing problem-solving skills is a priority."}]},
-  {title: "Professional Poker Chip Set - 300 Quality Chips with Storage & Accessories", category: "Poker Equipment", description: "Enhance your gaming experience with our premium poker chip set, featuring 300 high-quality plastic chips in five colors, complemented by a gaming mat and a dealer button. Ideal for poker rooms, casinos, and corporate events, this set guarantees clarity and organization during gameplay, making it a must-have for any business-oriented game night.", image: "/product/71gSMwEfvwL.webp", images: ["/product/512Ff+aapbL.webp", "/product/4190r5UPtsL.webp", "/product/41NpYXr+9VL.webp", "/product/51nnb-xdk6L.webp", "/product/51awwU4FWeL.webp", "/product/51clqZb2BUL.webp", "/product/51ulBIk8FAL.webp"], image_names: ["71gSMwEfvwL.webp", "512Ff+aapbL.webp", "4190r5UPtsL.webp", "41NpYXr+9VL.webp", "51nnb-xdk6L.webp", "51awwU4FWeL.webp", "51clqZb2BUL.webp", "51ulBIk8FAL.webp"], features: [{title: "Complete Chip Variety", description: "This set comes with 300 chips in five distinct colors, accommodating various denominations, ensuring seamless gameplay for multiple poker formats."}, {title: "Durable Printing Technology", description: "Employing advanced UV color printing, our chips offer enhanced clarity, water resistance, and increased durability for long-lasting use in any gaming environment."}, {title: "Convenient Storage Solution", description: "Included storage boxes keep your chips organized and traveling-friendly, making it easy to bring the excitement of poker anywhere, from corporate retreats to casual gatherings."}, {title: "Bonus Accessories Included", description: "Enjoy added value with a complimentary gaming mat and dealer button, designed to elevate your gaming conditions and enhance player engagement."}]},
-  {title: "Brybelly 500 Count Poker Chip Set with Aluminum Case - 14g Clay Composites", category: "Poker Equipment", description: "Elevate your gaming events with the Brybelly 500 Count Poker Chip Set, featuring 14g clay composite chips for a premium casino experience. This comprehensive set includes playing cards and a dealer button, ideal for professional-grade poker nights or corporate events, ensuring your guests enjoy a thrilling and authentic gaming atmosphere.", image: "/product/81Zaz4eVH-L.webp", images: ["/product/51PjtXHehKL.webp", "/product/51pRJjK3AqL.webp", "/product/51JmutG38QL.webp", "/product/41bogQ9eU4L.webp", "/product/51rNoWQ0E+L.webp", "/product/41qJ5uVblHL.webp"], image_names: ["81Zaz4eVH-L.webp", "51PjtXHehKL.webp", "51pRJjK3AqL.webp", "51JmutG38QL.webp", "41bogQ9eU4L.webp", "51rNoWQ0E+L.webp", "41qJ5uVblHL.webp"], features: [{title: "Premium Quality Chips", description: "Crafted from high-grade materials, these 14g poker chips deliver an authentic casino feel, enhancing any gaming experience."}, {title: "Complete Gaming Accessories", description: "The set includes two decks of playing cards and a dealer button, allowing for seamless transitions between various game formats."}, {title: "Easy Stack Design", description: "Featuring a textured inlay for enhanced grip and readability, these chips stack effortlessly for efficient gameplay."}, {title: "Compact Storage Case", description: "All components are securely housed in a lightweight aluminum case with foam padding and a locking system for safe transport and storage."}]},
-  {title: "Copag 1546 Neoteric PVC Playing Cards - Durable Dual Deck Set", category: "Poker Equipment", description: "Elevate your gaming experience with the Copag 1546 Neoteric Design Playing Cards, crafted from 100% durable PVC for longevity and easy maintenance. This dual deck set, featuring vibrant colors and large index design, is perfect for businesses seeking reliable and stylish card solutions for events or game nights.", image: "/product/71mzWSZfIiL.webp", images: ["/product/41XmAYPTb2L.webp", "/product/516ZK-Q98CL.webp", "/product/51sphUIelqL.webp", "/product/51OZvLBu1uL.webp", "/product/51hiKNq2hLL.webp", "/product/41hBF8aiCaL.webp"], image_names: ["71mzWSZfIiL.webp", "41XmAYPTb2L.webp", "516ZK-Q98CL.webp", "51sphUIelqL.webp", "51OZvLBu1uL.webp", "51hiKNq2hLL.webp", "41hBF8aiCaL.webp"], features: [{title: "Durable PVC Material", description: "Constructed from 100% premium PVC plastic, these playing cards are built to withstand frequent use while ensuring easy cleaning and maintenance for long-lasting performance."}, {title: "Standard Size Dimensions", description: "Each card is designed in standard dimensions of 3 7/16 inches x 2 1/2 inches, providing a familiar and comfortable handling experience for users of all ages."}, {title: "Complete Dual Deck Set", description: "This package includes two full decks of 52 cards, with two jokers and a guarantee card, ensuring you have everything needed for a comprehensive card game experience."}, {title: "Modern Aesthetic Design", description: "Featuring a stylish, contemporary design with a smooth finish, these playing cards not only perform well but also add visual appeal to any gaming session."}]},
-  {title: "Brybelly Poker Keno Game Set with Cards and Chips – Ideal for Family Game Nights", category: "Poker Equipment", description: "The Brybelly Poker Keno Game Set provides an all-in-one gaming experience for businesses looking to enhance their entertainment offerings. Perfect for adult family gatherings or corporate events, this complete set includes 12 game boards, 200 bingo chips, and a deck of playing cards, ensuring memorable experiences for all participants.", image: "/product/81N8YQb98EL.webp", images: ["/product/61c+8wbIBaL.webp", "/product/51oWCoinwNL.webp", "/product/61u8rHjUVgL.webp", "/product/61ugs726E4L.webp", "/product/51BLgSHTX0L.webp", "/product/51GS6rxNb-L.webp"], image_names: ["81N8YQb98EL.webp", "61c+8wbIBaL.webp", "51oWCoinwNL.webp", "61u8rHjUVgL.webp", "61ugs726E4L.webp", "51BLgSHTX0L.webp", "51GS6rxNb-L.webp"], features: [{title: "Comprehensive Gaming Experience", description: "This complete Poker Keno set allows for a seamless gaming experience with everything needed available right out of the box, making it ideal for company events and social gatherings."}, {title: "Family-Friendly Fun", description: "Encourage bonding with family and colleagues through interactive gameplay, making this set an essential addition to any corporate or family game night."}, {title: "Easy Setup and Instructions", description: "Designed for quick setup with straightforward instructions, this game can be played without complicated preparations, saving valuable time for businesses and households alike."}, {title: "Versatile Game Options", description: "Featuring two rule variations, this set appeals to diverse player preferences, allowing customization to enhance excitement and engage different skill levels."}]},
-  {title: "Copag 100% Plastic Playing Cards - Standard Size, Jumbo Index, Red/Blue", category: "Poker Equipment", description: "Discover the superior quality of Copag playing cards, crafted from 100% PVC plastic for unmatched durability and a paper-like feel. Perfect for B2B needs, these cards resist bending and damage, and can be easily cleaned, ensuring a longer lifespan than traditional paper cards—ideal for businesses hosting game nights or events.", image: "/product/71C6BaBt55L.webp", images: ["/product/41uqARkN4WL.webp", "/product/51tzm0J05uL.webp", "/product/51sphUIelqL.webp", "/product/51OZvLBu1uL.webp", "/product/51hiKNq2hLL.webp", "/product/41hBF8aiCaL.webp"], image_names: ["71C6BaBt55L.webp", "41uqARkN4WL.webp", "51tzm0J05uL.webp", "51sphUIelqL.webp", "51OZvLBu1uL.webp", "51hiKNq2hLL.webp", "41hBF8aiCaL.webp"], features: [{title: "Premium PVC Material", description: "Manufactured with 100% PVC plastic, these cards offer enhanced durability and a smooth surface for seamless shuffling and handling."}, {title: "Standard Size & Jumbo Index", description: "Designed in standard poker size (3 7/16 x 2 1/2 inches) with jumbo index lettering, ensuring optimal readability and accessibility for all players."}, {title: "Easy to Clean", description: "Unlike paper cards, Copag playing cards are washable, allowing for easy maintenance and increased hygiene for frequent use."}, {title: "Durable Storage Solution", description: "Packaged in a sturdy hard plastic box with a sleek design, these cards are easy to transport and store, perfect for organizations looking to host events."}]},
-  {title: "Twos Company Poker Set Gift Box with Chips, Buttons, and Cards", category: "Poker Equipment", description: "Elevate your gaming nights with the Twos Company Poker Set, a comprehensive package designed for professional gatherings. This exquisite gift box includes high-quality poker chips, dealer buttons, and playing cards, making it an ideal choice for B2B events, promotional gifts, or corporate entertainment.", image: "/product/61YJFtZ+2vL.webp", images: ["/product/51lgIvJQOCL.webp"], image_names: ["61YJFtZ+2vL.webp", "51lgIvJQOCL.webp"], features: [{title: "Premium Poker Chips", description: "Includes 100 durable chips in four colors, offering long-lasting use and an authentic gaming experience for your corporate events."}, {title: "Complete Button Set", description: "Features big blind and small blind buttons to enhance gaming dynamics and professionalism during poker matches."}, {title: "Compact Storage Box", description: "The elegant gift box measures 6 inches wide by 8.5 inches deep, providing a stylish and organized way to store your poker accessories."}, {title: "Standard Card Dimensions", description: "Comes with two decks of playing cards, each measuring 2.5 inches wide by 3.5 inches deep, ensuring familiarity and convenience for all players."}]},
-  {title: "Brybelly Professional Poker Chip Set - 1000 Clay Composite Chips & Case", category: "Poker Equipment", description: "Elevate your gaming experience with the Brybelly Professional Poker Chip Set, featuring 1000 high-quality 13.5g clay composite chips and an aluminum carrying case. Ideal for serious casinos or businesses hosting poker nights, this set offers durability, security, and a touch of authenticity, ensuring your events are unforgettable.", image: "/product/71kcVXVMk4L.webp", images: ["/product/51Q7PzDSUPL.webp", "/product/61wW3LzeAqL.webp", "/product/41UH8pWoLeL.webp", "/product/51bBuUT+4RL.webp", "/product/51YmY-Beh9L.webp", "/product/51FjsfIkOML.webp", "/product/61FkrXNzNmL.webp"], image_names: ["71kcVXVMk4L.webp", "51Q7PzDSUPL.webp", "61wW3LzeAqL.webp", "41UH8pWoLeL.webp", "51bBuUT+4RL.webp", "51YmY-Beh9L.webp", "51FjsfIkOML.webp", "61FkrXNzNmL.webp"], features: [{title: "High-Quality Chips", description: "Featuring 13.5g clay composite construction, these chips provide a professional feel and durability, perfect for both home games and casino environments."}, {title: "Unique Textured Design", description: "Each chip denomination is adorned with a distinct, easy-to-read texture, enhancing both aesthetics and stackability for seamless gameplay."}, {title: "Comprehensive Value Range", description: "This set includes a full range of chip values from $1 to $1000, catering to diverse gaming requirements and ensuring flexibility for any poker game."}, {title: "Secure Aluminum Case", description: "Packed in a robust aluminum case with foam padding and a secure lock, this set guarantees safe transport and storage, keeping all components organized and protected."}]}
+  {
+    title: "Spin Master 300-Piece Poker Set with Aluminum Case & Professional Chips",
+    category: "Poker Equipment",
+    description:
+      "Ensure engaging gaming experiences with our Spin Master 300-Piece Poker Set. Designed for ages 8 and up, this set includes high-quality poker chips, playing cards, and a durable aluminum storage case, making it ideal for family game nights, corporate events, or casual gatherings. Enhance your entertainment offerings with this complete poker game solution.",
+    image: "/product/81-9JQAmx5L.webp",
+    images: [
+      "/product/51l1kj7n+FL.webp",
+      "/product/51BwsjnkydL.webp",
+      "/product/415EADLDXZL.webp",
+      "/product/41Us2FjJb5L.webp",
+      "/product/510BsW2qHWL.webp",
+      "/product/41M7V2cBBhL.webp",
+    ],
+    image_names: [
+      "81-9JQAmx5L.webp",
+      "51l1kj7n+FL.webp",
+      "51BwsjnkydL.webp",
+      "415EADLDXZL.webp",
+      "41Us2FjJb5L.webp",
+      "510BsW2qHWL.webp",
+      "41M7V2cBBhL.webp",
+    ],
+    features: [
+      {
+        title: "Complete Gaming Set",
+        description:
+          "This set includes 300 professional-grade poker chips, one deck of playing cards, two betting buttons, a dealer button, and five poker dice, providing everything needed for a full gaming experience.",
+      },
+      {
+        title: "Durable Storage Solution",
+        description:
+          "The robust aluminum case keeps all components safe and organized, making it easy to transport for outdoor events, game nights, or casino-like gatherings.",
+      },
+      {
+        title: "Engaging for All Ages",
+        description:
+          "Suitable for 2 or more players aged 8 and above, this poker set fosters social interaction and competitive spirit among family, friends, or colleagues.",
+      },
+      {
+        title: "Versatile Entertainment",
+        description:
+          "Perfect for various occasions, this poker set is ideal for family game nights, camping trips, or corporate team-building events, ensuring memorable experiences for everyone involved.",
+      },
+    ],
+  },
+  {
+    title: "500-Count Texas Hold'em Clay Poker Chip Set with Aluminum Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with our premium 500-count Texas Hold'em Clay Poker Chip Set, designed for business gatherings and events. This complete set combines durability and style, featuring vibrant colors and easy transport in a robust aluminum case, making it perfect for professional tournaments or casual gatherings.",
+    image: "/product/71R5LxH0g3L.webp",
+    images: [
+      "/product/41NwYI2z3qL.webp",
+      "/product/41G9eheeceL.webp",
+      "/product/51wLOFyDClL.webp",
+      "/product/51KIfKM5P1L.webp",
+      "/product/51Bdt9GI+oL.webp",
+      "/product/51ukqPQeq8L.webp",
+    ],
+    image_names: [
+      "71R5LxH0g3L.webp",
+      "41NwYI2z3qL.webp",
+      "41G9eheeceL.webp",
+      "51wLOFyDClL.webp",
+      "51KIfKM5P1L.webp",
+      "51Bdt9GI+oL.webp",
+      "51ukqPQeq8L.webp",
+    ],
+    features: [
+      {
+        title: "Complete Poker Set",
+        description:
+          "This all-inclusive set comes with 300 high-quality poker chips, two decks of cards, and a full set of dealer buttons, ensuring you have everything needed for a professional game night.",
+      },
+      {
+        title: "Durable Clay Chips",
+        description:
+          "Featuring 11.5 grams per chip and a standardized size of 1.57 inches in diameter, our chips are designed with a casino-grade feel, ensuring durability and a premium user experience.",
+      },
+      {
+        title: "Color Variety",
+        description:
+          "Includes five distinct color options—150 red, 50 green, 100 blue, 50 black, and 150 white chips—allowing for seamless chip distribution during gameplay and enhancing the visual appeal.",
+      },
+      {
+        title: "Portable Aluminum Case",
+        description:
+          "Each set is packaged in a sturdy aluminum case with foam inserts, making it easy to transport your poker set to events, ensuring your chips and accessories are well-protected and organized.",
+      },
+    ],
+  },
+  {
+    title: "500-Piece Professional Poker Chip Set with Aluminum Storage Case",
+    category: "Poker Equipment",
+    description:
+      "Our 500-piece poker chip set includes a variety of colors and essential accessories, designed specifically for B2B buyers seeking quality gaming solutions. Crafted from premium materials, this set not only enhances the gaming experience for clients but also offers reliable durability and convenient storage for any business setting.",
+    image: "/product/81yViBvN+1L.webp",
+    images: [
+      "/product/51og3jPtQKL.webp",
+      "/product/518e1L76bvL.webp",
+      "/product/51XxCFbm2DL.webp",
+      "/product/41zzTlLZHrL.webp",
+      "/product/51N2frsPIGL.webp",
+      "/product/41MrFEZTGSL.webp",
+    ],
+    image_names: [
+      "81yViBvN+1L.webp",
+      "51og3jPtQKL.webp",
+      "518e1L76bvL.webp",
+      "51XxCFbm2DL.webp",
+      "41zzTlLZHrL.webp",
+      "51N2frsPIGL.webp",
+      "41MrFEZTGSL.webp",
+    ],
+    features: [
+      {
+        title: "Comprehensive Gaming Kit",
+        description:
+          "This complete set features 500 casino-style poker chips in red, blue, black, and white, along with dice, playing cards, and dealer buttons, making it ideal for professional use.",
+      },
+      {
+        title: "High-Quality Materials",
+        description:
+          "Each poker chip is made from high-quality materials with intricate designs, ensuring a professional feel and extended lifespan for rigorous use.",
+      },
+      {
+        title: "Durable Aluminum Storage Case",
+        description:
+          "The included aluminum case provides secure and organized storage, designed with a velvet interior to protect chips from dust and damage during transport.",
+      },
+      {
+        title: "Versatile Gaming Experience",
+        description:
+          "Perfect for poker, blackjack, tournaments, and card clubs, this chip set caters to all ages, enhancing entertainment options for corporate events and gatherings.",
+      },
+    ],
+  },
+  {
+    title: "300-Piece Poker Chip Set with Aluminum Case for Texas Hold'em & Blackjack",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with our premium 300-piece poker chip set, featuring a durable aluminum case and high-quality chips, perfect for business events, tournaments, and professional gatherings.",
+    image: "/product/711t3pUeGtL.webp",
+    images: [
+      "/product/51AUEv4-8fL.webp",
+      "/product/518e1L76bvL.webp",
+      "/product/51ERP1NHQmL.webp",
+      "/product/51jUIc8IC6L.webp",
+      "/product/41jAXp+EOYL.webp",
+      "/product/41c6OXQkCEL.webp",
+    ],
+    image_names: [
+      "711t3pUeGtL.webp",
+      "51AUEv4-8fL.webp",
+      "518e1L76bvL.webp",
+      "51ERP1NHQmL.webp",
+      "51jUIc8IC6L.webp",
+      "41jAXp+EOYL.webp",
+      "41c6OXQkCEL.webp",
+    ],
+    features: [
+      {
+        title: "Comprehensive Set",
+        description:
+          "Includes 300 casino-quality chips in various colors plus accessories like dice, playing cards, and dealer buttons, ensuring you have everything needed for a complete gaming experience.",
+      },
+      {
+        title: "Premium Quality Chips",
+        description:
+          "Crafted from high-grade materials, our chips emulate a true casino feel with intricate designs and a superior tactile experience, meeting the demands of professional settings.",
+      },
+      {
+        title: "Portable Aluminum Case",
+        description:
+          "The sturdy aluminum carrying case offers convenient storage and safe transport for your chips, featuring a plush velour lining that protects and maintains the chips' pristine condition.",
+      },
+      {
+        title: "Versatile Gaming Option",
+        description:
+          "Ideal for Texas Hold'em, Blackjack, and other classic card games, this poker set is perfect for various occasions and makes an excellent gift for both men and women.",
+      },
+    ],
+  },
+  {
+    title: "Professional 300 Chip Poker Set with Quality Accessories",
+    category: "Poker Equipment",
+    description:
+      "Elevate your poker nights with this professional 300 chip poker set, featuring 11.5g chips, two decks of cards, and essential dealer buttons. Perfect for businesses looking to enhance team-building events or client entertainment, this complete set ensures an enjoyable and sophisticated gaming experience.",
+    image: "/product/91L2I4NLjWL.webp",
+    images: [
+      "/product/517e66VgOzL.webp",
+      "/product/51u+dkYAlJL.webp",
+      "/product/51RrYrGC6HL.webp",
+      "/product/51Jq+iyHXVL.webp",
+      "/product/51yxgM8cpbL.webp",
+      "/product/51W8C+JaFuL.webp",
+    ],
+    image_names: [
+      "91L2I4NLjWL.webp",
+      "517e66VgOzL.webp",
+      "51u+dkYAlJL.webp",
+      "51RrYrGC6HL.webp",
+      "51Jq+iyHXVL.webp",
+      "51yxgM8cpbL.webp",
+      "51W8C+JaFuL.webp",
+    ],
+    features: [
+      {
+        title: "Complete Poker Set",
+        description:
+          "Includes 300 high-quality 11.5g casino-grade chips, two decks of playing cards, and essential dealer buttons for a complete poker experience.",
+      },
+      {
+        title: "Premium Aluminum Case",
+        description:
+          "The set comes in an elegant matte black aluminum case with a secure latch and reinforced corners, ensuring safe and stylish storage.",
+      },
+      {
+        title: "Durable Chip Design",
+        description:
+          "Featuring composite chips with a metal core in five classic colors, this set offers an authentic feel and aesthetic for serious poker players.",
+      },
+      {
+        title: "Ideal Business Gift",
+        description:
+          "Packaged in colorful gift wrapping, this poker set makes a perfect corporate gift for holidays, birthdays, or client appreciation events.",
+      },
+    ],
+  },
+  {
+    title: "Professional Texas Hold 'Em Poker Set with 200 Chips & Aluminum Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your game nights with our Professional Texas Hold 'Em Poker Set, designed for B2B buyers seeking quality entertainment solutions. This comprehensive set includes 200 dual-tone poker chips and a sturdy aluminum case, ensuring durability and organization for any event or gathering.",
+    image: "/product/91d7z1rwqOL.webp",
+    images: [
+      "/product/51Xp2pZ95qL.webp",
+      "/product/41SpMOy90dL.webp",
+      "/product/41V+RDx-w5L.webp",
+      "/product/41t6TVZHgFL.webp",
+      "/product/518kAZYq-dL.webp",
+      "/product/51o615yR0eL.webp",
+      "/product/51+KR2+7QpL.webp",
+    ],
+    image_names: [
+      "91d7z1rwqOL.webp",
+      "51Xp2pZ95qL.webp",
+      "41SpMOy90dL.webp",
+      "41V+RDx-w5L.webp",
+      "41t6TVZHgFL.webp",
+      "518kAZYq-dL.webp",
+      "51o615yR0eL.webp",
+      "51+KR2+7QpL.webp",
+    ],
+    features: [
+      {
+        title: "Complete Game Essentials",
+        description:
+          "This poker set includes everything you need for an engaging poker night, featuring 200 dual-tone chips and a premium deck of playing cards for easy setup and play.",
+      },
+      {
+        title: "Durable Aluminum Case",
+        description:
+          "The robust aluminum case is not only secure with double locks but also features reinforced corners and a convenient rotating handle for easy transportation and storage.",
+      },
+      {
+        title: "Clear Game Instructions",
+        description:
+          "Our detailed instructions for Texas Hold 'Em simplify the learning process, ensuring players of all skill levels can enjoy the game and understand the betting strategies involved.",
+      },
+      {
+        title: "Versatile Entertainment",
+        description:
+          "Ideal for family gatherings, corporate events, or casual meetups, this poker set provides a fun and memorable experience, perfect for any occasion or celebration.",
+      },
+    ],
+  },
+  {
+    title: "300 Chip Casino Poker Set with Aluminum Case – Professional Quality",
+    category: "Poker Equipment",
+    description:
+      "Enhance your gaming tournaments with our 300 chip casino-grade poker set, featuring durable 11.5g chips in multiple colors and custom denominations, ideal for Texas Hold'em, Blackjack, and more. Perfect for card clubs, corporate events, or home gatherings, this professional set promises long-lasting entertainment and a captivating casino experience.",
+    image: "/product/81HPvuZIjJL.webp",
+    images: [
+      "/product/51GbOuv64pL.webp",
+      "/product/51fPfeGukRL.webp",
+      "/product/41wQqR8vYJL.webp",
+      "/product/51wu1WlemeL.webp",
+      "/product/518y4vRsoLL.webp",
+      "/product/41d6FID2LsL.webp",
+    ],
+    image_names: [
+      "81HPvuZIjJL.webp",
+      "51GbOuv64pL.webp",
+      "51fPfeGukRL.webp",
+      "41wQqR8vYJL.webp",
+      "51wu1WlemeL.webp",
+      "518y4vRsoLL.webp",
+      "41d6FID2LsL.webp",
+    ],
+    features: [
+      {
+        title: "Durable Casino-Grade Chips",
+        description:
+          "Each chip weighs 11.5g and features a premium iron core, ensuring a professional feel and longevity during game play.",
+      },
+      {
+        title: "Complete Game Kit",
+        description:
+          "Includes two decks of cards, dealer buttons, and five dice, providing everything necessary for a full poker experience right out of the box.",
+      },
+      {
+        title: "Customizable Denominations",
+        description:
+          "Chips come in five colors, allowing for flexible currency values to suit various games and player preferences.",
+      },
+      {
+        title: "Portable Aluminum Case",
+        description:
+          "The sturdy aluminum case allows for easy transportation and protection, making it convenient for travel to tournaments or gatherings.",
+      },
+    ],
+  },
+  {
+    title: "Boyzhood 300-Count Poker Chip Set with Aluminum Case for Professionals",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with the Boyzhood 300-count poker chip set, featuring high-quality 11.5g chips and an aluminum travel case, perfect for casinos, tournaments, and poker nights. This versatile set is designed for businesses and poker clubs, ensuring durability and professional-grade performance.",
+    image: "/product/81OUZgad1sL.webp",
+    images: [
+      "/product/515sIaOqNCL.webp",
+      "/product/51zDbbJ0ApL.webp",
+      "/product/51Umlcx1RHL.webp",
+      "/product/51m5EQ0BCTL.webp",
+      "/product/51abcY08tVL.webp",
+      "/product/411ZPw0VCOL.webp",
+    ],
+    image_names: [
+      "81OUZgad1sL.webp",
+      "515sIaOqNCL.webp",
+      "51zDbbJ0ApL.webp",
+      "51Umlcx1RHL.webp",
+      "51m5EQ0BCTL.webp",
+      "51abcY08tVL.webp",
+      "411ZPw0VCOL.webp",
+    ],
+    features: [
+      {
+        title: "Diverse Chip Colors",
+        description:
+          "Enjoy a vibrant assortment of red, green, black, and blue poker chips, enhancing game aesthetics and player engagement for both casual and competitive play.",
+      },
+      {
+        title: "Professional Weight Chips",
+        description:
+          "Each chip weighs 11.5 grams with a durable iron core, providing a genuine casino feel that enhances the overall gaming experience, appealing to serious players and clubs alike.",
+      },
+      {
+        title: "Upgraded Aluminum Storage",
+        description:
+          "The lightweight yet sturdy aluminum case features reinforced handles and locks, ensuring secure transport and storage of your gaming set while exuding professionalism and style.",
+      },
+      {
+        title: "All-Age Friendly Set",
+        description:
+          "Perfect for poker enthusiasts of all ages, this comprehensive set suits various games, from Texas Hold'em to Blackjack, promoting inclusivity and enjoyment at any gathering or event.",
+      },
+    ],
+  },
+  {
+    title: "Premium 300-Count Texas Hold'em Poker Chip Set with Aluminum Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with our comprehensive 300-count Texas Hold'em poker chip set, complete with high-quality chips, two decks of cards, a professional dealer button, and a portable aluminum case, making it perfect for corporate events or team-building exercises.",
+    image: "/product/81Gm5vvduCL.webp",
+    images: [
+      "/product/518uVsXmfML.webp",
+      "/product/51gam1IVXPL.webp",
+      "/product/41nkqfyJBsL.webp",
+      "/product/41G9eheeceL.webp",
+      "/product/41P9hSnA5IL.webp",
+      "/product/31NKYvHRviL.webp",
+    ],
+    image_names: [
+      "81Gm5vvduCL.webp",
+      "518uVsXmfML.webp",
+      "51gam1IVXPL.webp",
+      "41nkqfyJBsL.webp",
+      "41G9eheeceL.webp",
+      "41P9hSnA5IL.webp",
+      "31NKYvHRviL.webp",
+    ],
+    features: [
+      {
+        title: "Complete Poker Set",
+        description:
+          "This complete poker set includes 300 high-quality, Vegas-style chips, two decks of cards, and a professional dealer button, ensuring all essentials are covered for your gaming needs.",
+      },
+      {
+        title: "Durable Claytec Chips",
+        description:
+          "Our 11.5-gram Claytec poker chips feature a full-size design with a 1.57-inch diameter and a variety of colors, providing a professional feel and durability for repeated use.",
+      },
+      {
+        title: "Portable Aluminum Case",
+        description:
+          "Packaged in a sturdy aluminum case with foam inlay, this poker set is designed for ease of transport, allowing you to host games anywhere with confidence.",
+      },
+      {
+        title: "Versatile for All Players",
+        description:
+          "Whether for work events or casual gatherings, this 300-count poker chip set accommodates multiple players and enhances the gaming atmosphere for everyone involved.",
+      },
+    ],
+  },
+  {
+    title: "Gamie Texas Hold'em Poker Set - Complete with Mat, Cards, Chips & Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your business's game night offerings with the Gamie Texas Hold'em Poker Set, featuring everything necessary for thrilling poker sessions, including high-quality cards, chips, and a stylish storage case. This versatile set is perfect for corporate entertainment or team-building activities.",
+    image: "/product/815bfoCaIML.webp",
+    images: [
+      "/product/51+RuM40YaL.webp",
+      "/product/51FdeqyRU7L.webp",
+      "/product/51EjnyAr9lL.webp",
+      "/product/51pGkt-vm0L.webp",
+      "/product/51AyausOPJL.webp",
+      "/product/51arZ7TU8FL.webp",
+      "/product/51hfW-X8nhL.webp",
+    ],
+    image_names: [
+      "815bfoCaIML.webp",
+      "51+RuM40YaL.webp",
+      "51FdeqyRU7L.webp",
+      "51EjnyAr9lL.webp",
+      "51pGkt-vm0L.webp",
+      "51AyausOPJL.webp",
+      "51arZ7TU8FL.webp",
+      "51hfW-X8nhL.webp",
+    ],
+    features: [
+      {
+        title: "Complete Poker Set",
+        description:
+          "Includes 2 decks of high-quality cards, a durable poker mat, and gaming chips, providing everything needed for hours of entertainment.",
+      },
+      {
+        title: "Perfect for Game Nights",
+        description:
+          "Accommodates up to 10 players, making it ideal for both family gatherings and corporate events, ensuring enjoyment for all ages.",
+      },
+      {
+        title: "Convenient Storage",
+        description:
+          "Each set comes in a stylish metal case for organized storage and easy portability, perfect for events at any location.",
+      },
+      {
+        title: "Ideal Gift Option",
+        description:
+          "A unique gift for poker enthusiasts and a valuable tool for teaching kids poker strategies, making it suitable for both adults and children aged 3 and up.",
+      },
+    ],
+  },
+  {
+    title: "Professional 300-Piece Poker Set with Case, Chips & Dice",
+    category: "Poker Equipment",
+    description:
+      "Elevate your game offerings with the Sunny Days Entertainment 300-piece poker set, featuring colorful chips, dealer buttons, and dice, all securely packed in a durable case. Perfect for businesses seeking to enhance entertainment options for events, parties, or game nights.",
+    image: "/product/815QcVFFPuL.webp",
+    images: [
+      "/product/51hPjE1mlxL.webp",
+      "/product/51QCegJo-6L.webp",
+      "/product/51IoiCi9XHL.webp",
+      "/product/51pBeqMr6rL.webp",
+      "/product/41-JDnBx7EL.webp",
+      "/product/51udy8Ey5tL.webp",
+      "/product/41WbzKtBoOL.webp",
+    ],
+    image_names: [
+      "815QcVFFPuL.webp",
+      "51hPjE1mlxL.webp",
+      "51QCegJo-6L.webp",
+      "51IoiCi9XHL.webp",
+      "51pBeqMr6rL.webp",
+      "41-JDnBx7EL.webp",
+      "51udy8Ey5tL.webp",
+      "41WbzKtBoOL.webp",
+    ],
+    features: [
+      {
+        title: "Complete Poker Set",
+        description:
+          "This comprehensive poker set includes 300 high-quality chips in five vibrant colors, expertly designed for maximum gameplay excitement and versatility.",
+      },
+      {
+        title: "Game Enhancing Components",
+        description:
+          "In addition to chips, the set features five poker dice and special dealer and blind buttons for a seamless and organized gaming experience.",
+      },
+      {
+        title: "Convenient Storage Solution",
+        description:
+          "The premium carrying case with a sturdy handle and secure latch ensures easy transport and safe storage of all poker supplies.",
+      },
+      {
+        title: "Durable and Long-Lasting",
+        description:
+          "Built from high-quality materials, this poker set is designed for repeated use, providing years of reliable entertainment for your business events.",
+      },
+    ],
+  },
+  {
+    title: "Goplus 600-Piece Poker Chip Set with Automatic Shuffler & Accessories",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with the Goplus 600-Piece Poker Chip Set, featuring high-quality clay chips, automatic shuffler, and essential accessories, perfect for professional gatherings and events. This comprehensive set ensures seamless gameplay for up to 10 players, redefining entertainment in corporate and casual settings.",
+    image: "/product/71tdv+wKAFL.webp",
+    images: [
+      "/product/41neGIEAB8L.webp",
+      "/product/51e8qWA28CL.webp",
+      "/product/51NI9r-LnYL.webp",
+      "/product/510szIT3S9L.webp",
+      "/product/51C+q3qKjML.webp",
+      "/product/51lGz0xm++L.webp",
+      "/product/41HjU2rPPiL.webp",
+    ],
+    image_names: [
+      "71tdv+wKAFL.webp",
+      "41neGIEAB8L.webp",
+      "51e8qWA28CL.webp",
+      "51NI9r-LnYL.webp",
+      "510szIT3S9L.webp",
+      "51C+q3qKjML.webp",
+      "51lGz0xm++L.webp",
+      "41HjU2rPPiL.webp",
+    ],
+    features: [
+      {
+        title: "Inclusive Poker Set",
+        description:
+          "This complete poker kit includes 600 clay chips, 6 plastic card decks, 5 dice, 3 dealer buttons, and a high-capacity card shoe, enabling effortless organization and play.",
+      },
+      {
+        title: "Realistic Clay Chips",
+        description:
+          "Crafted with a 3-tier structure, each 14g chip provides an authentic casino feel and comes in 6 vibrant colors for easy identification and game variety.",
+      },
+      {
+        title: "Efficient Automatic Shuffler",
+        description:
+          "The automatic shuffler quickly shuffles cards in just 2.5 seconds, enhancing gameplay efficiency and allowing players to focus on strategy and enjoyment.",
+      },
+      {
+        title: "Portable & Secure Storage",
+        description:
+          "Designed for convenience, the durable aluminum carrying case with a soft lining and secure latch protects your poker accessories, making it easy to transport for gaming events anywhere.",
+      },
+    ],
+  },
+  {
+    title: "High-Quality 500PCS Poker Chip Set in Aluminum Case for B2B Sales",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with our 500PCS poker chip set, designed for businesses looking to enhance their casino offerings. This durable set includes high-quality chips with secure aluminum travel case, perfect for Texas Hold'em and Blackjack, ideal for catering events and clubs.",
+    image: "/product/81LjHfpBj+L.webp",
+    images: [
+      "/product/51Q2hweGwQL.webp",
+      "/product/51eYkeqPS6L.webp",
+      "/product/51ppJDYlhtL.webp",
+      "/product/51KqswB0j7L.webp",
+      "/product/41GWL328YEL.webp",
+      "/product/51n4rB8BicL.webp",
+    ],
+    image_names: [
+      "81LjHfpBj+L.webp",
+      "51Q2hweGwQL.webp",
+      "51eYkeqPS6L.webp",
+      "51ppJDYlhtL.webp",
+      "51KqswB0j7L.webp",
+      "41GWL328YEL.webp",
+      "51n4rB8BicL.webp",
+    ],
+    features: [
+      {
+        title: "Durable Construction",
+        description:
+          "Our poker chips feature a dual injection mold design with a solid iron core, ensuring a premium feel and longevity in any gaming environment.",
+      },
+      {
+        title: "High-End Quality Chips",
+        description:
+          "Weighing 11.5 grams, these casino-quality chips provide the authentic experience of real gambling, making them perfect for serious players.",
+      },
+      {
+        title: "Portable Aluminum Case",
+        description:
+          "The robust aluminum case measures 15.4 x 11 x 2.5 inches, designed for easy transport while protecting your chips from dust and damage.",
+      },
+      {
+        title: "Versatile Gaming Set",
+        description:
+          "Accommodating 8-10 players, this classic poker set is ideal for tournaments, card clubs, and events, offering an engaging experience for all participants.",
+      },
+    ],
+  },
+  {
+    title: "Premium Clay Poker Chips Set - 500 pcs - 13.5g with Custom Denominations",
+    category: "Poker Equipment",
+    description:
+      "Introducing Versa Games' exclusive poker chip set, meticulously crafted for businesses and casinos aiming to elevate their gaming experiences. Each set includes 500 high-quality, unique clay poker chips in various colors, ensuring durability and unmatched performance for your poker nights or gaming events.",
+    image: "/product/91YvbVUZr7L.webp",
+    images: [
+      "/product/51Qs8rZuP8L.webp",
+      "/product/51CbXbFk1UL.webp",
+      "/product/51EcJ+4Ya+L.webp",
+      "/product/61aMxyhMweL.webp",
+      "/product/51UqZbJVFVL.webp",
+      "/product/51uVFiC6lNL.webp",
+      "/product/51DhATV3CSL.webp",
+    ],
+    image_names: [
+      "91YvbVUZr7L.webp",
+      "51Qs8rZuP8L.webp",
+      "51CbXbFk1UL.webp",
+      "51EcJ+4Ya+L.webp",
+      "61aMxyhMweL.webp",
+      "51UqZbJVFVL.webp",
+      "51uVFiC6lNL.webp",
+      "51DhATV3CSL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Material",
+        description:
+          "Our poker chips are made from premium clay, ensuring superior quality over competitors and providing a professional feel for every game.",
+      },
+      {
+        title: "Exclusive Custom Designs",
+        description:
+          "Each chip features a distinct design made with custom CNC molds, guaranteeing designs that are exclusive to our brand and cannot be replicated.",
+      },
+      {
+        title: "Durable Storage Solution",
+        description:
+          "The new thermoplastic ABS case is robust and designed without cheap interior trays, featuring a solid core for maximum protection of your chips.",
+      },
+      {
+        title: "Comprehensive Set Contents",
+        description:
+          "Each set includes two decks of plastic-coated playing cards, five dice, a dealer button, and 500 chips, accommodating 5-8 players for a complete gaming experience.",
+      },
+    ],
+  },
+  {
+    title: "Casino-Grade Clay Poker Chip Set - 300 Chips with Aluminum Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with our premium casino-grade poker chip set, featuring 300 durable 14g clay chips, two decks of cards, and essential accessories. Perfect for business events, family game nights, and travel, this all-in-one package ensures seamless gameplay and professional appeal.",
+    image: "/product/71nN26IilGL.webp",
+    images: [
+      "/product/51zvrkOVdfL.webp",
+      "/product/51VdpUTyttL.webp",
+      "/product/51lgoPqxOWL.webp",
+      "/product/413S2SoTicL.webp",
+      "/product/5163Zw1cGHL.webp",
+      "/product/41TRqeYdQjL.webp",
+    ],
+    image_names: [
+      "71nN26IilGL.webp",
+      "51zvrkOVdfL.webp",
+      "51VdpUTyttL.webp",
+      "51lgoPqxOWL.webp",
+      "413S2SoTicL.webp",
+      "5163Zw1cGHL.webp",
+      "41TRqeYdQjL.webp",
+    ],
+    features: [
+      {
+        title: "Casino-Grade Quality",
+        description:
+          "Crafted from solid clay with iron core, our chips deliver an authentic casino feel, ensuring a premium experience for all players.",
+      },
+      {
+        title: "Comprehensive Chip Range",
+        description:
+          "Includes 300 chips in various denominations, accommodating 7-8 players and perfect for popular games like Texas Hold'em and Blackjack.",
+      },
+      {
+        title: "Complete Accessory Kit",
+        description:
+          "Packaged with two standard poker decks, five dice, and dealer buttons for a fully equipped gaming setup right out of the box.",
+      },
+      {
+        title: "Durable Portable Case",
+        description:
+          "Features a sleek aluminum case with secure latches and organized compartments, making it easy to transport for gatherings or travel.",
+      },
+    ],
+  },
+  {
+    title: "300-Piece Poker Chip Set with Aluminum Case - Perfect for B2B Events",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with this comprehensive 300-piece poker chip set, complete with numbered chips, two decks of cards, five dice, and a compact aluminum case, making it ideal for B2B events, team-building activities, or corporate poker nights.",
+    image: "/product/81RW3CiDcOL.webp",
+    images: [
+      "/product/51q7zRf+TNL.webp",
+      "/product/51qcrTEtgDL.webp",
+      "/product/41WYS27KQCL.webp",
+      "/product/41nz7+msxyL.webp",
+      "/product/410kSUGtvHL.webp",
+      "/product/41AYwiElSxL.webp",
+    ],
+    image_names: [
+      "81RW3CiDcOL.webp",
+      "51q7zRf+TNL.webp",
+      "51qcrTEtgDL.webp",
+      "41WYS27KQCL.webp",
+      "41nz7+msxyL.webp",
+      "410kSUGtvHL.webp",
+      "41AYwiElSxL.webp",
+    ],
+    features: [
+      {
+        title: "Complete Gaming Package",
+        description:
+          "This all-inclusive poker chip set features 300 durable chips, two decks of playing cards, five dice, and essential buttons, catering to businesses seeking versatile gaming solutions.",
+      },
+      {
+        title: "High-Quality Materials",
+        description:
+          "Crafted from dual-injection iron composite, each chip delivers a professional feel and clear denomination, ensuring that your games are conducted with precision and style.",
+      },
+      {
+        title: "Portable Aluminum Case",
+        description:
+          "The sturdy aluminum case, lined with plush velvet, keeps your poker set organized and protected, making it easy to transport and ideal for corporate events or off-site gatherings.",
+      },
+      {
+        title: "Group Play Ready",
+        description:
+          "Designed for 7 to 8 players, this poker set provides an engaging and interactive experience, perfect for fostering teamwork and collaboration in corporate settings.",
+      },
+    ],
+  },
+  {
+    title: "Premium Aluminum Poker Chip Set - 300 Chips, 2 Decks, Luxury Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate game nights with our premium aluminum poker chip set, featuring 300 high-quality chips, two decks of cards, five dice, and a stylish carrying case. This comprehensive set is perfect for businesses looking to provide an entertaining experience, ensuring durability and convenience in storage for any corporate event or gathering.",
+    image: "/product/81SU0U551DL.webp",
+    images: [
+      "/product/51uQTnESRbL.webp",
+      "/product/51txcaAdBpL.webp",
+      "/product/51KSBXPbx2L.webp",
+      "/product/51w2o4S2fLL.webp",
+      "/product/51gcgI4hzNL.webp",
+      "/product/51KxxLxvlbL.webp",
+      "/product/5156kMrubJL.webp",
+    ],
+    image_names: [
+      "81SU0U551DL.webp",
+      "51uQTnESRbL.webp",
+      "51txcaAdBpL.webp",
+      "51KSBXPbx2L.webp",
+      "51w2o4S2fLL.webp",
+      "51gcgI4hzNL.webp",
+      "51KxxLxvlbL.webp",
+      "5156kMrubJL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Poker Chips",
+        description:
+          "Crafted from composite resin, our poker chips mimic the authentic feel of real casino chips, offering an exceptional gaming experience.",
+      },
+      {
+        title: "Durable Aluminum Case",
+        description:
+          "The heavy-duty aluminum case ensures secure storage and portable transportation, making it easy to bring the excitement of poker anywhere.",
+      },
+      {
+        title: "Complete Game Set",
+        description:
+          "This set includes 300 chips, two decks of cards, and five dice, providing everything needed for a thrilling poker night suitable for all skill levels.",
+      },
+      {
+        title: "Ideal Gift for Events",
+        description:
+          "Packaged in an eye-catching box, this poker set makes a memorable gift for birthdays, holidays, or corporate events, ideal for team-building activities.",
+      },
+    ],
+  },
+  {
+    title: "Premium 200 Piece Poker Chip Set with Weighted Casino-Grade Chips",
+    category: "Poker Equipment",
+    description:
+      "This comprehensive 200-piece poker chip set features high-quality, 11.5-gram casino-grade chips with unique denominations, making it perfect for serious gaming and entertainment in corporate events, parties, and team-building activities. Enhance the gaming experience for clients and employees alike.",
+    image: "/product/71YBB1zTFLL.webp",
+    images: [
+      "/product/41s810Cc+NL.webp",
+      "/product/419AGU06OlL.webp",
+      "/product/41LQUiQ22OL.webp",
+      "/product/41Qv+2oh4bL.webp",
+      "/product/41JKtIvq7YL.webp",
+      "/product/41ZHyvcXGbL.webp",
+    ],
+    image_names: [
+      "71YBB1zTFLL.webp",
+      "41s810Cc+NL.webp",
+      "419AGU06OlL.webp",
+      "41LQUiQ22OL.webp",
+      "41Qv+2oh4bL.webp",
+      "41JKtIvq7YL.webp",
+      "41ZHyvcXGbL.webp",
+    ],
+    features: [
+      {
+        title: "Casino-Grade Chips",
+        description:
+          "Each chip weighs 11.5 grams and includes a durable metal core, providing an authentic casino experience that elevates your gaming events.",
+      },
+      {
+        title: "Complete Set for Gamers",
+        description:
+          "Along with 200 chips, this set includes two decks of playing cards, five dice, and a dealer button, making it ideal for various poker games and accommodating up to six players.",
+      },
+      {
+        title: "Portable Aluminum Case",
+        description:
+          "The robust aluminum case is designed for easy transport, with reinforced corners and cushioned interiors to ensure your chips are secure during travel to events or gatherings.",
+      },
+      {
+        title: "Beginner-Friendly Guide",
+        description:
+          "A printed Texas Hold'em rule guide is included to facilitate quick learning for new players, ensuring everyone can join in the fun and enjoy the thrill of the game.",
+      },
+    ],
+  },
+  {
+    title: "Premium Iron & Glory Poker Set with Custom Chips & Luxury Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with the Iron & Glory Poker Set, featuring a meticulously crafted wooden box, 100 customizable chips, and exquisite engraved metal dealer buttons. This complete set ensures durability and sophistication, making it an ideal choice for serious players seeking a professional-grade solution for their poker nights.",
+    image: "/product/81yr96L1vqL.webp",
+    images: [
+      "/product/31OMt+P7ZpL.webp",
+      "/product/41EF7uGzH9L.webp",
+      "/product/51m6XcekbXL.webp",
+      "/product/61Oz3J+NlCL.webp",
+      "/product/51jF7JewpyL.webp",
+      "/product/511pPPfM32L.webp",
+      "/product/41UHMiGRmGL.webp",
+    ],
+    image_names: [
+      "81yr96L1vqL.webp",
+      "31OMt+P7ZpL.webp",
+      "41EF7uGzH9L.webp",
+      "51m6XcekbXL.webp",
+      "61Oz3J+NlCL.webp",
+      "51jF7JewpyL.webp",
+      "511pPPfM32L.webp",
+      "41UHMiGRmGL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Wooden Case",
+        description:
+          "The premium wooden box not only adds elegance but also protects your poker set with durability, making it perfect for business events and gatherings.",
+      },
+      {
+        title: "Complete Poker Game Set",
+        description:
+          "Includes everything needed to play, such as high-quality playing cards, 100 custom chips, and engraved dealer buttons, ensuring you’re always ready for a game.",
+      },
+      {
+        title: "Unique Thematic Design",
+        description:
+          "The Dead Man's Hand theme provides an intriguing aesthetic that captivates players and enhances engagement, perfect for business gatherings or casual events.",
+      },
+      {
+        title: "Durable for Long-Lasting Use",
+        description:
+          "Crafted from top-tier materials, this poker set is built to withstand frequent use, making it a reliable investment for countless game nights.",
+      },
+    ],
+  },
+  {
+    title: "Professional 500-Piece Texas Holdem Poker Chip Set in Aluminum Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with our premium 500-piece Texas Holdem poker chip set, specifically designed for business events and tournaments. This professional set combines high-quality materials and superior craftsmanship, ensuring durability and a realistic casino feel for all your poker nights and gatherings.",
+    image: "/product/81OAhWe1-mL.webp",
+    images: [
+      "/product/51AQ0pGjJyL.webp",
+      "/product/41MHGtTWdgL.webp",
+      "/product/51VNnTubNYL.webp",
+      "/product/51quGNFF6qL.webp",
+      "/product/51oV9ut6unL.webp",
+      "/product/51Q5V-WtFTL.webp",
+      "/product/61Du0MXz4AL.webp",
+    ],
+    image_names: [
+      "81OAhWe1-mL.webp",
+      "51AQ0pGjJyL.webp",
+      "41MHGtTWdgL.webp",
+      "51VNnTubNYL.webp",
+      "51quGNFF6qL.webp",
+      "51oV9ut6unL.webp",
+      "51Q5V-WtFTL.webp",
+      "61Du0MXz4AL.webp",
+    ],
+    features: [
+      {
+        title: "Complete 500-Piece Set",
+        description:
+          "Includes everything you need for game night, featuring 500 high-quality poker chips, playing cards, dealer button, betting buttons, dice, and detailed instructions to ensure an engaging experience.",
+      },
+      {
+        title: "Heavy-Duty Clay Chips",
+        description:
+          "Crafted from premium 11.5g clay composite, these poker chips offer exceptional durability and a tactile feel, perfectly mimicking the authenticity of casino gaming for an immersive experience.",
+      },
+      {
+        title: "Durable Aluminum Case",
+        description:
+          "Keep your poker set organized and secure with our sturdy aluminum case, designed for portability and protection, ensuring all components remain in perfect condition, wherever your game takes you.",
+      },
+      {
+        title: "Versatile for Various Games",
+        description:
+          "Ideal for a range of card games, this versatile set caters to poker enthusiasts and blackjack players alike, providing a comprehensive solution for entertaining friends or hosting business events.",
+      },
+    ],
+  },
+  {
+    title: "100-Count Casino Style Poker Chip Set with Tray for B2B Gaming",
+    category: "Poker Equipment",
+    description:
+      "Boost your gaming environment with our 100-count casino-style poker chip set, featuring high-quality plastic chips ideal for poker and card games. This complete solution enhances game nights, ensuring an engaging experience. The durable stacking tray offers easy storage and accessibility, making it a perfect addition for various gaming businesses and events.",
+    image: "/product/81rObPwvG8L.webp",
+    images: [
+      "/product/51mekaLHaWL.webp",
+      "/product/41-YJ1j+lvL.webp",
+      "/product/41VRgRx-OVL.webp",
+      "/product/41-yq0GYtyL.webp",
+    ],
+    image_names: [
+      "81rObPwvG8L.webp",
+      "51mekaLHaWL.webp",
+      "41-YJ1j+lvL.webp",
+      "41VRgRx-OVL.webp",
+      "41-yq0GYtyL.webp",
+    ],
+    features: [
+      {
+        title: "Complete 100-Piece Set",
+        description:
+          "Includes a full set of 100 multi-colored poker chips, perfect for casual gaming or low-stakes practice in various business settings.",
+      },
+      {
+        title: "Authentic Casino Feel",
+        description:
+          "Experience the true look and feel of casino-grade plastic chips, designed to enhance your clients' poker, blackjack, and other card game experiences.",
+      },
+      {
+        title: "Convenient Storage Tray",
+        description:
+          "Features a durable stacking tray to keep your chips organized and easily accessible, ensuring a tidy setup for quick game preparation and streamlined operations.",
+      },
+      {
+        title: "Versatile Gaming Options",
+        description:
+          "Ideal for a range of card games including Texas Hold'em, blackjack, roulette, or Rummy, making it a valuable addition to any gaming collection or business offering.",
+      },
+    ],
+  },
+  {
+    title: "Premium 13.5g Clay Poker Chips Set - 500 Pieces, Customizable Design",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with our premium 13.5g poker chip set, designed for ultimate quality and durability. Ideal for business events and recreational games, this customizable poker set includes everything you need for 5-8 players, ensuring captivating gameplay and impressive aesthetics that will enhance any poker night.",
+    image: "/product/81GP4JISLoL.webp",
+    images: ["/product/511TAvHa+eL.webp", "/product/51jIhPR-lGL.webp", "/product/51tyFCBzaZL.webp"],
+    image_names: ["81GP4JISLoL.webp", "511TAvHa+eL.webp", "51jIhPR-lGL.webp", "51tyFCBzaZL.webp"],
+    features: [
+      {
+        title: "High-Quality Custom Design",
+        description:
+          "Crafted with unique designs using CNC machined molds, our poker chips are superior in quality, offering unmatched durability and style for serious gaming.",
+      },
+      {
+        title: "Comprehensive Chip Breakdown",
+        description:
+          "Includes 150 white, 150 red, 100 green, 50 blue, and 50 black chips, perfect for accommodating various betting scenarios and ensuring every player's needs are met.",
+      },
+      {
+        title: "Robust Chip Case",
+        description:
+          "Our enhanced poker chip case, made from tough ABS thermoplastic, features a custom molded solid core and three hinges to guarantee maximum resilience and accessibility.",
+      },
+      {
+        title: "Multi-Denomination Chips",
+        description:
+          "The chips display denominations on both sides without dollar signs, allowing for flexible use in games that require either dollar or cent betting, adding versatility to your poker nights.",
+      },
+    ],
+  },
+  {
+    title: "Deluxe 200-Piece Poker Set with Wooden Storage Box",
+    category: "Poker Equipment",
+    description:
+      "Elevate your game night with the Spin Master Deluxe 200-Piece Poker Set, featuring professional-grade poker chips and cards, all elegantly housed in a premium wooden box. Perfect for businesses seeking to enrich team-building activities or family entertainment, this set caters to players aged 10 and up, accommodating 2-10 participants for memorable gaming experiences.",
+    image: "/product/81v743E-r2L.webp",
+    images: [
+      "/product/51mBF3bQhhL.webp",
+      "/product/512n-Wdg9VL.webp",
+      "/product/51kIrhj3AnL.webp",
+      "/product/41d62nMTegL.webp",
+      "/product/41eRbS62deL.webp",
+      "/product/515rolnjemL.webp",
+      "/product/41DySwGNegL.webp",
+    ],
+    image_names: [
+      "81v743E-r2L.webp",
+      "51mBF3bQhhL.webp",
+      "512n-Wdg9VL.webp",
+      "51kIrhj3AnL.webp",
+      "41d62nMTegL.webp",
+      "41eRbS62deL.webp",
+      "515rolnjemL.webp",
+      "41DySwGNegL.webp",
+    ],
+    features: [
+      {
+        title: "Professional-Grade Chips",
+        description:
+          "This set includes 200 high-quality, dual-tone poker chips, crafted for a premium feel, ensuring durability for repeated use during game nights.",
+      },
+      {
+        title: "Elegant Wooden Storage",
+        description:
+          "The sophisticated wooden storage box not only keeps the chips and cards organized but also adds a touch of class to your poker set, featuring dual locks for secure storage.",
+      },
+      {
+        title: "Comprehensive Game Components",
+        description:
+          "Included in the set are 2 decks of classic playing cards, 5 dice, and instructions, giving you everything you need for a fun and engaging game night.",
+      },
+      {
+        title: "Ideal for Group Play",
+        description:
+          "Designed for 2-10 players, this poker set is perfect for fostering collaboration and friendly competition, suitable for both family gatherings and corporate events.",
+      },
+    ],
+  },
+  {
+    title: "Premium 500-Piece Poker Chip Set for B2B Casino Businesses",
+    category: "Poker Equipment",
+    description:
+      "Elevate your poker gaming experience with our premium 500-piece poker chip set, designed specifically for B2B casino operations. Perfect for Texas Hold'em, Blackjack, and Pokeno, this durable set includes 11.5g clay chips packed in a stylish briefcase, ensuring both quality and practicality for your gaming needs.",
+    image: "/product/81cPSlwp4UL.webp",
+    images: [
+      "/product/51wslr2WMOL.webp",
+      "/product/5120hG6jcKL.webp",
+      "/product/41ryVR3KVSL.webp",
+      "/product/51QwAomIShL.webp",
+      "/product/51RXC+zTgIL.webp",
+      "/product/51KMvLLRirL.webp",
+    ],
+    image_names: [
+      "81cPSlwp4UL.webp",
+      "51wslr2WMOL.webp",
+      "5120hG6jcKL.webp",
+      "41ryVR3KVSL.webp",
+      "51QwAomIShL.webp",
+      "51RXC+zTgIL.webp",
+      "51KMvLLRirL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Material",
+        description:
+          "Crafted from durable 11.5g clay, these poker chips offer a professional feel and longevity, making them ideal for frequent use in casinos.",
+      },
+      {
+        title: "Stylish Briefcase Included",
+        description:
+          "Our poker chip set comes with a sleek briefcase for secure storage and easy transportation, enhancing the organization of your gaming supplies.",
+      },
+      {
+        title: "Versatile Game Use",
+        description:
+          "Suitable for various popular games such as Texas Hold'em, Blackjack, and Pokeno, this chip set caters to diverse gaming preferences in your establishment.",
+      },
+      {
+        title: "Custom Branding Options",
+        description:
+          "Enhance your casino's identity with the option for custom logos on chips, allowing you to create a professional and personalized gaming experience for your clients.",
+      },
+    ],
+  },
+  {
+    title: "300 Count Casino Poker Chip Set with Dice and Cards - Portable Aluminum Case",
+    category: "Poker Equipment",
+    description:
+      "This complete 300 count casino poker chip set is designed for professional gaming experiences, featuring high-quality 11.5g chips, five dice, and two decks of cards, all in a compact aluminum case for easy transport. Perfect for events or gatherings, catering to 2-10 players aged 8 and up.",
+    image: "/product/71dh31JDXqL.webp",
+    images: [
+      "/product/413QGZEbR4L.webp",
+      "/product/51MxXMnpYsL.webp",
+      "/product/41wRRUChUIL.webp",
+      "/product/41FsaRC+ttL.webp",
+      "/product/41heAZkmYtL.webp",
+      "/product/41XawkqHS8L.webp",
+    ],
+    image_names: [
+      "71dh31JDXqL.webp",
+      "413QGZEbR4L.webp",
+      "51MxXMnpYsL.webp",
+      "41wRRUChUIL.webp",
+      "41FsaRC+ttL.webp",
+      "41heAZkmYtL.webp",
+      "41XawkqHS8L.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Poker Chips",
+        description:
+          "Each chip weighs 11.5g, crafted from premium materials with a metal core, providing a professional feel for an enhanced gaming experience.",
+      },
+      {
+        title: "Comprehensive Game Set",
+        description:
+          "Includes a complete set of 300 chips in various denominations, two decks of playing cards, a dealer button, and five dice, catering to diverse gaming needs.",
+      },
+      {
+        title: "Durable Aluminum Case",
+        description:
+          "Designed for portability, the reinforced aluminum case features a sturdy construction with dual locks to securely store and protect your gaming essentials.",
+      },
+      {
+        title: "Ideal for Group Play",
+        description:
+          "This set effectively supports 7-8 players with 300 chips and can accommodate up to 10 players with the complete set of 500 chips, making it ideal for larger gatherings.",
+      },
+    ],
+  },
+  {
+    title: "High-End 14g Poker Chip Set with Aluminum Case & 2 Decks of Cards",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with this premium 14g poker chip set, featuring 500 chips, an aluminum carrying case, and two decks of cards. Designed for serious poker enthusiasts and businesses, this set is perfect for tournaments, game nights, and as an exceptional gift, ensuring durability and style across every poker game.",
+    image: "/product/81kozcTtgpL.webp",
+    images: [
+      "/product/51gstilLm2L.webp",
+      "/product/51rmh-VQwJL.webp",
+      "/product/416OyASlVjL.webp",
+      "/product/511n2KQ76dL.webp",
+      "/product/41EFs-K1h+L.webp",
+      "/product/41aOCssGVlL.webp",
+    ],
+    image_names: [
+      "81kozcTtgpL.webp",
+      "51gstilLm2L.webp",
+      "51rmh-VQwJL.webp",
+      "416OyASlVjL.webp",
+      "511n2KQ76dL.webp",
+      "41EFs-K1h+L.webp",
+      "41aOCssGVlL.webp",
+    ],
+    features: [
+      {
+        title: "Casino-Grade Chips",
+        description:
+          "Each 14g chip is made from high-quality clay composite material, providing improved tactile feel and long-lasting durability for an enhanced gaming experience.",
+      },
+      {
+        title: "Sturdy Aluminum Case",
+        description:
+          "Crafted with a robust aluminum shell, this case includes a durable handle and locking mechanism, ensuring security and portability for your premium poker chip set.",
+      },
+      {
+        title: "Comprehensive Chip Variety",
+        description:
+          "The set includes 500 chips in multiple denominations, along with two decks of cards, a dealer button, and dice, catering to diverse games and enhancing gameplay enjoyment.",
+      },
+      {
+        title: "Ideal for Game Nights",
+        description:
+          "Support up to 10 players, making this set perfect for family gatherings, poker tournaments, and card clubs, delivering high-quality entertainment for any occasion.",
+      },
+    ],
+  },
+  {
+    title: "DA VINCI Monte Carlo Poker Set 500 Chips, 14g, Upgraded ABS Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with the DA VINCI Monte Carlo Poker Set, featuring 500 high-quality 14g chips and an upgraded black ABS case. Ideal for B2B buyers looking for durable and attractive poker supplies, this set includes two decks of premium plastic playing cards and essential dealer accessories, ensuring a polished and professional feel for any event.",
+    image: "/product/71l1HN37q3L.webp",
+    images: [
+      "/product/41M6rchCNTL.webp",
+      "/product/51bEG35lHXL.webp",
+      "/product/41t4beaArRL.webp",
+      "/product/51ndu5bL-CL.webp",
+      "/product/41jk1RcIl-L.webp",
+    ],
+    image_names: [
+      "71l1HN37q3L.webp",
+      "41M6rchCNTL.webp",
+      "51bEG35lHXL.webp",
+      "41t4beaArRL.webp",
+      "51ndu5bL-CL.webp",
+      "41jk1RcIl-L.webp",
+    ],
+    features: [
+      {
+        title: "Premium Chip Quality",
+        description:
+          "The 14g clay composite chips are designed for durability and ease of stacking, enhancing the players' experience during high-stakes games.",
+      },
+      {
+        title: "Attractive Design",
+        description:
+          "Each chip showcases an eye-catching gold laser ring, ensuring a professional look that stands out in any gaming environment.",
+      },
+      {
+        title: "Durable ABS Case",
+        description:
+          "The upgraded black ABS case is scratch-resistant and dent-proof, providing reliable protection and easy transport for your poker set.",
+      },
+      {
+        title: "Complete Accessories",
+        description:
+          "This set includes two high-quality plastic decks and two cut cards, along with dealer and blind buttons, equipping you for seamless gameplay.",
+      },
+    ],
+  },
+  {
+    title: "Professional 300-Piece Poker Set with Aluminum Case & Chips",
+    category: "Poker Equipment",
+    description:
+      "Elevate your poker nights with the Pressman Premium Classics 300-Piece Poker Set. Designed for B2B buyers, this comprehensive kit includes an aluminum carry case, dual-sided chips, and detailed instructions, ensuring effortless setup for 2-10 players aged 8 and above. Enhance engagement and camaraderie at your next corporate event or social gathering.",
+    image: "/product/812NbICRA-L.webp",
+    images: [
+      "/product/51EroEPREEL.webp",
+      "/product/519QtNCNS+L.webp",
+      "/product/41sFEHi64CL.webp",
+      "/product/51RkAglQ1gL.webp",
+    ],
+    image_names: [
+      "812NbICRA-L.webp",
+      "51EroEPREEL.webp",
+      "519QtNCNS+L.webp",
+      "41sFEHi64CL.webp",
+      "51RkAglQ1gL.webp",
+    ],
+    features: [
+      {
+        title: "Premium Quality Chips",
+        description:
+          "Crafted from high-quality materials, the 11.5g dual-toned poker chips provide a professional feel and durability for endless poker games.",
+      },
+      {
+        title: "Comprehensive Game Setup",
+        description:
+          "This set includes a complete range of essentials such as a deck of cards, dealer button, betting buttons, and five poker dice for an all-inclusive gaming experience.",
+      },
+      {
+        title: "Portable Aluminum Case",
+        description:
+          "The sturdy aluminum carry case ensures the entire set is easily transportable, making it convenient for on-the-go gaming with colleagues or clients.",
+      },
+      {
+        title: "Easy-to-Follow Instructions",
+        description:
+          "Detailed instructions included in the set guide players of all levels, promoting inclusivity and smooth gameplay during your poker nights.",
+      },
+    ],
+  },
+  {
+    title: "DA VINCI Monte Carlo Poker Set - 500 14g Chips, 2 Decks, Aluminum Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with the DA VINCI Monte Carlo Poker Club Set, designed for professional use. Featuring 500 high-quality 14-gram chips, two waterproof decks, and an upgraded aluminum case, this set ensures durability and style, making it perfect for casinos, events, and corporate entertainment.",
+    image: "/product/61w066FYPzL.webp",
+    images: [
+      "/product/41u2ir7+fZL.webp",
+      "/product/51k2XwhhJRL.webp",
+      "/product/41QUwqic49L.webp",
+      "/product/31mbAUMH7wL.webp",
+      "/product/310uTT-Bl7L.webp",
+      "/product/41jk1RcIl-L.webp",
+    ],
+    image_names: [
+      "61w066FYPzL.webp",
+      "41u2ir7+fZL.webp",
+      "51k2XwhhJRL.webp",
+      "41QUwqic49L.webp",
+      "31mbAUMH7wL.webp",
+      "310uTT-Bl7L.webp",
+      "41jk1RcIl-L.webp",
+    ],
+    features: [
+      {
+        title: "Premium Quality Chips",
+        description:
+          "Each chip is made from a high-quality clay composite weighing 14 grams, designed for optimal stacking and stability during gameplay.",
+      },
+      {
+        title: "Elegant Design",
+        description:
+          "Features an attractive chip design with stunning gold laser rings, enhancing the aesthetic for luxurious gaming sessions.",
+      },
+      {
+        title: "Enhanced Durability",
+        description:
+          "The upgraded aluminum case provides superior protection and organization, ensuring that all components remain secure and intact during transport.",
+      },
+      {
+        title: "Complete Gaming Package",
+        description:
+          "Includes two decks of waterproof plastic playing cards, two cut cards, a dealer button, and a blind button, delivering everything needed for a full poker experience.",
+      },
+    ],
+  },
+  {
+    title: "DA VINCI Unicorn Premium Clay Poker Chip Set - 500 Professionally Weighted Chips",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with the DA VINCI Unicorn Premium Clay Poker Chip Set, featuring 500 authentic 9-gram clay chips, a durable ABS case, two high-quality plastic decks, and dealer buttons. Ideal for casinos and gaming lounges seeking authentic quality and performance.",
+    image: "/product/713fInfub9L.webp",
+    images: [
+      "/product/51vQnaB0bLL.webp",
+      "/product/41Ub2EueVHL.webp",
+      "/product/51zfjbsYL0L.webp",
+      "/product/31rWRrVplwL.webp",
+      "/product/31vRuvlEnTL.webp",
+      "/product/41MZaWH+QRL.webp",
+      "/product/41Eu0FW-HxL.webp",
+    ],
+    image_names: [
+      "713fInfub9L.webp",
+      "51vQnaB0bLL.webp",
+      "41Ub2EueVHL.webp",
+      "51zfjbsYL0L.webp",
+      "31rWRrVplwL.webp",
+      "31vRuvlEnTL.webp",
+      "41MZaWH+QRL.webp",
+      "41Eu0FW-HxL.webp",
+    ],
+    features: [
+      {
+        title: "Authentic Casino Quality",
+        description:
+          "Each of the 500 clay poker chips has a professional casino weight of 9 grams, ensuring a genuine feel and superior handling for all poker enthusiasts.",
+      },
+      {
+        title: "Durable Storage Solution",
+        description:
+          "This set includes a robust black ABS carrying case designed to protect your chips and accessories from damage while maintaining aesthetics during transportation.",
+      },
+      {
+        title: "Complete Gaming Accessories",
+        description:
+          "The package comes with two premium plastic playing cards, two cut cards, and dealer/blind buttons, providing everything needed for an authentic poker night.",
+      },
+      {
+        title: "Easy Stack Design",
+        description:
+          "Our high-quality chips are crafted to stack perfectly without slipping, ensuring a tidy and professional gaming environment, even during intense play.",
+      },
+    ],
+  },
+  {
+    title: "Brybelly Premium 14g Casino Poker Set - 1000 Chips, Aluminum Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with the Brybelly Premium 14g Poker Set, featuring 1000 high-quality clay composite chips and a sturdy aluminum case, perfect for businesses hosting events, tournaments, or family game nights.",
+    image: "/product/81M4CxPeiHL.webp",
+    images: [
+      "/product/51ntI+qXrDL.webp",
+      "/product/51AIhzwEJFL.webp",
+      "/product/51damrEoncL.webp",
+      "/product/41NYST5jwAL.webp",
+      "/product/515JXYz4bzL.webp",
+      "/product/41ygo0zp3GL.webp",
+    ],
+    image_names: [
+      "81M4CxPeiHL.webp",
+      "51ntI+qXrDL.webp",
+      "51AIhzwEJFL.webp",
+      "51damrEoncL.webp",
+      "41NYST5jwAL.webp",
+      "515JXYz4bzL.webp",
+      "41ygo0zp3GL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Chips",
+        description:
+          "Each 14g clay composite chip offers a realistic casino feel, ideal for engaging and professional gaming environments.",
+      },
+      {
+        title: "Unique Texture Design",
+        description:
+          "Chips feature distinct textures for easy stacking and enhanced visibility, ensuring seamless gameplay for all levels of poker enthusiasts.",
+      },
+      {
+        title: "Secure Aluminum Case",
+        description:
+          "The durable aluminum case includes foam padding to keep all components safe during transport and storage, providing longevity for repeated use.",
+      },
+      {
+        title: "Complete Game Set",
+        description:
+          "Includes two decks of cards and a dealer button, making it an all-in-one solution for various card games, enhancing versatility and fun.",
+      },
+    ],
+  },
+  {
+    title: "Casino-Grade 13.5g Poker Chip Set with 7 Colors & Accessories",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with our premium 13.5g poker chip set, uniquely designed for businesses seeking top-tier quality. This comprehensive kit includes two decks of cards, five dice, and a dealer button, ideal for hosting poker nights for groups of 5-8 players. Crafted for durability and aesthetics, it's an essential addition for any venue looking to enhance its gaming offerings.",
+    image: "/product/81k0l1Wm2yL.webp",
+    images: ["/product/51eSZRnTtKL.webp"],
+    image_names: ["81k0l1Wm2yL.webp", "51eSZRnTtKL.webp"],
+    features: [
+      {
+        title: "Superior Chip Quality",
+        description:
+          "Our poker chips are crafted from high-quality materials with a unique design, making them more durable and visually appealing than competitors.",
+      },
+      {
+        title: "Enhanced Storage Case",
+        description:
+          "The poker chip set comes with a robust ABS plastic case featuring an advanced design and extra hinges for easy access, ensuring your chips are securely stored.",
+      },
+      {
+        title: "Versatile Gameplay Options",
+        description:
+          "Each chip features a denomination that allows for flexible play, accommodating various game formats, whether for dollars or cents, to suit your business needs.",
+      },
+      {
+        title: "Comprehensive Gaming Accessories",
+        description:
+          "Included in the set are two decks of plastic-coated cards, five dice, and a dealer button, providing everything necessary for a complete poker experience right out of the box.",
+      },
+    ],
+  },
+  {
+    title: "Texas Holdem Poker Chip Set: 200 Chips, 2 Decks, Mat & Storage",
+    category: "Poker Equipment",
+    description:
+      "Elevate your corporate events or client gatherings with our comprehensive Texas Holdem Poker Chip Set, featuring 200 high-quality chips, exclusive card designs, and organized storage solutions, tailored to enhance engagement and foster networking in a fun, competitive environment.",
+    image: "/product/81hgDCTcDPL.webp",
+    images: [
+      "/product/518Q+Hwxs2L.webp",
+      "/product/51zFKu76nWL.webp",
+      "/product/51uWaLiEOUL.webp",
+      "/product/51xm+zRiCYL.webp",
+      "/product/518o6pRT3GL.webp",
+      "/product/51FjOk4i0ML.webp",
+    ],
+    image_names: [
+      "81hgDCTcDPL.webp",
+      "518Q+Hwxs2L.webp",
+      "51zFKu76nWL.webp",
+      "51uWaLiEOUL.webp",
+      "51xm+zRiCYL.webp",
+      "518o6pRT3GL.webp",
+      "51FjOk4i0ML.webp",
+    ],
+    features: [
+      {
+        title: "Complete Gameplay Kit",
+        description:
+          "Includes 200 professional-grade poker chips and 2 custom card decks, ensuring an authentic gaming experience that caters to both novice and experienced players.",
+      },
+      {
+        title: "Enhanced Social Engagement",
+        description:
+          "Perfect for team-building or client entertainment, this poker set creates an interactive atmosphere that encourages teamwork and friendly competition.",
+      },
+      {
+        title: "Organizational Efficiency",
+        description:
+          "Designed with a dedicated chip holder and segmented storage, providing seamless access during gameplay and simplifying cleanup for efficient event management.",
+      },
+      {
+        title: "Distinctive Card Design",
+        description:
+          "Boasts unique playing card aesthetics that enhance visual clarity and add sophistication, making every poker night a memorable and professional affair.",
+      },
+    ],
+  },
+  {
+    title: "Red Classic 100-Piece Poker Chip Set for 2-10 Players",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming offerings with our 100-piece Red Classic Poker Chip Set, ideal for enhancing poker nights, parties, or corporate events. Durable and well-organized, this set includes a storage tray for easy gameplay, making it perfect for beginners and seasoned players alike. A fantastic addition to any game collection or as a memorable gift for partners on special occasions.",
+    image: "/product/81J4-Aq8dgL.webp",
+    images: [
+      "/product/51vrlo+lFOL.webp",
+      "/product/41I9pQsU+cL.webp",
+      "/product/51YJgB4sirL.webp",
+      "/product/5148leDchkL.webp",
+      "/product/41woQAXyQvL.webp",
+      "/product/41iZ3e0WbkL.webp",
+    ],
+    image_names: [
+      "81J4-Aq8dgL.webp",
+      "51vrlo+lFOL.webp",
+      "41I9pQsU+cL.webp",
+      "51YJgB4sirL.webp",
+      "5148leDchkL.webp",
+      "41woQAXyQvL.webp",
+      "41iZ3e0WbkL.webp",
+    ],
+    features: [
+      {
+        title: "Organized Storage Tray",
+        description:
+          "Comes with a convenient plastic storage tray, allowing for easy organization by color or denomination, enhancing gameplay efficiency.",
+      },
+      {
+        title: "Durable Materials",
+        description:
+          "Constructed from high-quality plastic, these poker chips are designed for long-lasting use, ensuring they withstand frequent handling during intense gaming sessions.",
+      },
+      {
+        title: "Expands Existing Sets",
+        description:
+          "Easily augment your current poker set with this chip collection, ready to accommodate more players during gatherings and special occasions.",
+      },
+      {
+        title: "Fun for All Ages",
+        description:
+          "Suitable for players aged 8 and above, this poker chip set is perfect for family game night, promoting camaraderie and entertainment among various age groups.",
+      },
+    ],
+  },
+  {
+    title: "500 Casino-Quality Poker Chips Set with Aluminum Case & Accessories",
+    category: "Poker Equipment",
+    description:
+      "The LUOBAO 500-piece Poker Chips Set is crafted for professional gaming environments, featuring premium chips in five vibrant colors, an aluminum case, and essential accessories. Ideal for Texas Hold'em, Blackjack, and tournaments, this set delivers quality and versatility for businesses seeking an enhanced gambling experience.",
+    image: "/product/81ggaP-qAPL.webp",
+    images: [
+      "/product/51ob+mTwT3L.webp",
+      "/product/51dB-mOpnTL.webp",
+      "/product/41lm4WqiD7L.webp",
+      "/product/41awCznhbnL.webp",
+      "/product/414sDVRJuzL.webp",
+      "/product/51L1C2J2QWL.webp",
+      "/product/519FkkFvzKL.webp",
+    ],
+    image_names: [
+      "81ggaP-qAPL.webp",
+      "51ob+mTwT3L.webp",
+      "51dB-mOpnTL.webp",
+      "41lm4WqiD7L.webp",
+      "41awCznhbnL.webp",
+      "414sDVRJuzL.webp",
+      "51L1C2J2QWL.webp",
+      "519FkkFvzKL.webp",
+    ],
+    features: [
+      {
+        title: "Durable Casino-Quality Chips",
+        description:
+          "Each chip is made with high-quality materials, ensuring longevity and excellent performance during intense gaming sessions.",
+      },
+      {
+        title: "Versatile Color Customization",
+        description:
+          "Featuring 100 chips each in pink, blue, green, red, and white, this set allows for tailored gaming experiences across various card games.",
+      },
+      {
+        title: "Complete Gaming Package",
+        description:
+          "Includes two decks of cards, dealer and blind buttons, and five dice, providing everything needed for a comprehensive and engaging poker night.",
+      },
+      {
+        title: "Portable Aluminum Case",
+        description:
+          "The stylish aluminum case facilitates easy storage and transportation, making it perfect for both professional tournaments and casual gatherings.",
+      },
+    ],
+  },
+  {
+    title: "Professional Poker Set with 500 Chips and Cards",
+    category: "Poker Equipment",
+    description:
+      "Elevate your game nights with the Christopher Bullet Poker Set, featuring 500 high-quality, 12g plastic chips designed for durability and professional play. Complete with two decks of 100% plastic playing cards, this set ensures an authentic casino experience for your business events or gatherings, making it the perfect gift for poker enthusiasts.",
+    image: "/product/810O8okR6RL.webp",
+    images: [
+      "/product/51RGHCJk8JL.webp",
+      "/product/51IY9cVJOpL.webp",
+      "/product/51KcQarMhnL.webp",
+      "/product/51NGIRztvQL.webp",
+      "/product/51Sy11r02pL.webp",
+    ],
+    image_names: [
+      "810O8okR6RL.webp",
+      "51RGHCJk8JL.webp",
+      "51IY9cVJOpL.webp",
+      "51KcQarMhnL.webp",
+      "51NGIRztvQL.webp",
+      "51Sy11r02pL.webp",
+    ],
+    features: [
+      {
+        title: "Premium Quality Chips",
+        description:
+          "Our poker chips feature a solid metal core, providing a perfect balance of weight for an authentic poker experience tailored for serious players.",
+      },
+      {
+        title: "Complete Game Setup",
+        description:
+          "The set includes 500 chips in multiple denominations, structured for seamless gameplay for 6-10 players, ideal for professional tournaments or corporate events.",
+      },
+      {
+        title: "Durable Aluminum Case",
+        description:
+          "The poker set comes in a reinforced aluminum case, ensuring secure storage and easy transport for home game nights or business gatherings.",
+      },
+      {
+        title: "Includes Professional Card Decks",
+        description:
+          "Includes two decks of high-quality Bullet playing cards that are designed for smooth shuffling and long-lasting play, complete with a dealer button and game guide.",
+      },
+    ],
+  },
+  {
+    title: "500 Casino Quality Poker Chips Set - 11.5g with Aluminum Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming offerings with this premium 500-piece casino-quality poker chip set, featuring a versatile color combination for diverse gaming experiences and an enhanced aluminum case for ultimate portability and durability. Ideal for casinos, gaming events, or corporate entertainment.",
+    image: "/product/81z4lKlhJfL.webp",
+    images: ["/product/515k7cpcglL.webp"],
+    image_names: ["81z4lKlhJfL.webp", "515k7cpcglL.webp"],
+    features: [
+      {
+        title: "High-Quality Chips",
+        description:
+          "Crafted from durable materials, each chip weighs 11.5 grams, ensuring a professional feel and long-lasting performance for any gaming establishment.",
+      },
+      {
+        title: "Comprehensive Set",
+        description:
+          "Includes 500 chips in various colors, 2 decks of cards, 5 red dice, and a dealer button, providing everything needed for a complete poker experience.",
+      },
+      {
+        title: "Enhanced Case Design",
+        description:
+          "New aluminum carrying case features a thicker chip tray, increasing strength and protection for your gaming accessories while on the move.",
+      },
+      {
+        title: "Customizable Options",
+        description:
+          "Available in multiple color combinations and denominations, this poker chip set allows for customization to suit different gaming themes or corporate branding.",
+      },
+    ],
+  },
+  {
+    title: "DA VINCI 750 Casino Del Sol Poker Chips Set with Accessories",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with the DA VINCI Casino Del Sol Poker Chips Set, featuring 750 professional-grade 11.5g chips. This comprehensive kit is perfect for casinos, gaming events, or corporate functions, equipped with an aluminum case, playing cards, dealer buttons, and cut cards for seamless play and exceptional durability.",
+    image: "/product/815XyhapXEL.webp",
+    images: [
+      "/product/41PMEZVdkoL.webp",
+      "/product/51LD9JoJ47L.webp",
+      "/product/51lPV0tbuSL.webp",
+      "/product/51aOe6UKfdL.webp",
+      "/product/51iAk+CCZTL.webp",
+      "/product/51CSATZRbeL.webp",
+    ],
+    image_names: [
+      "815XyhapXEL.webp",
+      "41PMEZVdkoL.webp",
+      "51LD9JoJ47L.webp",
+      "51lPV0tbuSL.webp",
+      "51aOe6UKfdL.webp",
+      "51iAk+CCZTL.webp",
+      "51CSATZRbeL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Poker Chips",
+        description:
+          "Crafted from durable materials, each 11.5g Casino Del Sol poker chip ensures a professional feel and longevity, ideal for frequent use in high-stakes gaming environments.",
+      },
+      {
+        title: "Comprehensive Accessory Set",
+        description:
+          "This set includes a premium aluminum case, two decks of playing cards, three dealer buttons, and two cut cards, providing everything needed for a complete gaming experience.",
+      },
+      {
+        title: "Customizable Chip Denominations",
+        description:
+          "The chips feature printed dollar denominations, allowing for easy identification and customizable gameplay, enhancing the gaming experience for all participants.",
+      },
+      {
+        title: "Variety of Chip Colors",
+        description:
+          "Featuring 750 chips in assorted colors—150 blue, 200 red, 150 green, 100 black, 50 gray, 50 orange, and 50 yellow—this set caters to various gaming styles and preferences for any casino or event.",
+      },
+    ],
+  },
+  {
+    title: "300 Clay Poker Chips Set for Texas Hold'em & Blackjack - 13.5g",
+    category: "Poker Equipment",
+    description:
+      "The LUOBAO 300-piece poker chip set is ideal for B2B businesses in the gaming industry, offering premium quality clay chips that enhance tournament play and casual game nights. With an elegant European design and durable materials, this set ensures consistent performance and professionalism for any gaming environment.",
+    image: "/product/81Rvi674kDL.webp",
+    images: [
+      "/product/51501p4-5-L.webp",
+      "/product/51BQoBMUV4L.webp",
+      "/product/31H8VQpzPJL.webp",
+      "/product/51kPruCaXOL.webp",
+      "/product/5139Y1c27SL.webp",
+      "/product/412umLqTQuL.webp",
+    ],
+    image_names: [
+      "81Rvi674kDL.webp",
+      "51501p4-5-L.webp",
+      "51BQoBMUV4L.webp",
+      "31H8VQpzPJL.webp",
+      "51kPruCaXOL.webp",
+      "5139Y1c27SL.webp",
+      "412umLqTQuL.webp",
+    ],
+    features: [
+      {
+        title: "Premium Clay Material",
+        description:
+          "Crafted from high-grade clay, these chips offer exceptional durability and a professional feel, making them perfect for both casual and competitive poker settings.",
+      },
+      {
+        title: "Elegant European Design",
+        description:
+          "Inspired by the iconic Monte Carlo style, the sophisticated design of these chips elevates the overall gaming experience, appealing to discerning players.",
+      },
+      {
+        title: "Consistent Dimensions",
+        description:
+          "Each chip features precise dimensions of 40mm diameter and 3.3mm thickness, ensuring uniform weight and feel for a seamless gaming experience.",
+      },
+      {
+        title: "Enhanced Gameplay Features",
+        description:
+          "The non-slip surface of these cards guarantees easy shuffling, while their waterproof finish ensures longevity, making them an invaluable addition to any gaming arsenal.",
+      },
+    ],
+  },
+  {
+    title: "500-Piece Poker Set with Custom Chips & Durable Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your game nights with our premium 500-piece poker set, designed specifically for B2B buyers looking for quality and durability. This comprehensive set includes a variety of chip denominations, custom playing cards, and professional dealer signs, ensuring an exceptional gaming experience for corporate events or social gatherings.",
+    image: "/product/8169lf3K9mL.webp",
+    images: [
+      "/product/518YGj50OaL.webp",
+      "/product/51bRRzxwcZL.webp",
+      "/product/51BTV9JV8bL.webp",
+      "/product/41WC6laRZjL.webp",
+      "/product/51RVZJcXNvL.webp",
+      "/product/41LH1CBZxfL.webp",
+      "/product/51CvsboK8KL.webp",
+    ],
+    image_names: [
+      "8169lf3K9mL.webp",
+      "518YGj50OaL.webp",
+      "51bRRzxwcZL.webp",
+      "51BTV9JV8bL.webp",
+      "41WC6laRZjL.webp",
+      "51RVZJcXNvL.webp",
+      "41LH1CBZxfL.webp",
+      "51CvsboK8KL.webp",
+    ],
+    features: [
+      {
+        title: "Custom-Designed Chips",
+        description:
+          "Our poker chips feature denominations ranging from $1 to $1000, providing versatility for all levels of play, whether casual or competitive.",
+      },
+      {
+        title: "Professional Dealer Signs",
+        description:
+          "Includes robust zinc alloy position markers, enhancing gameplay clarity and professionalism for all participants at your poker tables.",
+      },
+      {
+        title: "Casino Quality Chips",
+        description:
+          "Each chip is 14 grams with a 40mm diameter, delivering an authentic feel and sound during gameplay to enhance player engagement.",
+      },
+      {
+        title: "Portable Storage Case",
+        description:
+          "The durable carrying case, lined with cushioning EVA foam, ensures safe transport and organization of your poker set, making it ideal for gatherings at any location.",
+      },
+    ],
+  },
+  {
+    title: "500-Piece Professional Poker Chip Set with Aluminum Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with our 500-piece poker chip set, featuring 11.5g professional-grade chips, a durable aluminum case, and complete accessories, perfect for hosting engaging poker nights or casino-themed events for clients and employees.",
+    image: "/product/71f+5-JrGkL.webp",
+    images: [
+      "/product/41zmA1rs1dL.webp",
+      "/product/512ZabJpXXL.webp",
+      "/product/51Hskno9WnL.webp",
+      "/product/412W1Bmr4CL.webp",
+      "/product/51+VhktmYrL.webp",
+      "/product/41SrMWKrIEL.webp",
+    ],
+    image_names: [
+      "71f+5-JrGkL.webp",
+      "41zmA1rs1dL.webp",
+      "512ZabJpXXL.webp",
+      "51Hskno9WnL.webp",
+      "412W1Bmr4CL.webp",
+      "51+VhktmYrL.webp",
+      "41SrMWKrIEL.webp",
+    ],
+    features: [
+      {
+        title: "Professional-Grade Chips",
+        description:
+          "Our poker chips are designed with a solid iron core and weigh 11.5 grams each, providing an authentic casino feel for a premium gaming experience.",
+      },
+      {
+        title: "Comprehensive Accessory Set",
+        description:
+          "This set comes complete with 500 chips, 2 decks of cards, 5 dice, and dealer buttons, making it perfect for Texas Hold'em, Blackjack, and other popular games.",
+      },
+      {
+        title: "Durable Storage Solution",
+        description:
+          "The robust aluminum case features foam padding to ensure chips are securely kept, while the lightweight design allows for easy transport to any gaming location.",
+      },
+      {
+        title: "Water-Resistant and Long-Lasting",
+        description:
+          "Crafted from high-quality composite materials, our chips are designed to resist wear and tear, making them easy to clean and perfect for repeated use.",
+      },
+    ],
+  },
+  {
+    title: "High-Quality 14g Poker Chip Set with Accessories for B2B Use",
+    category: "Poker Equipment",
+    description:
+      "Enhance your gaming experience with our premium 14g poker chip set, featuring 500 clay chips, an elegant aluminum carrying case, and essential poker accessories, making it an ideal choice for businesses and establishments seeking high-quality gaming solutions.",
+    image: "/product/81lXNpENF3L.webp",
+    images: [
+      "/product/5172BCbtusL.webp",
+      "/product/41jk3Dx9QIL.webp",
+      "/product/41pPnn6H8aL.webp",
+      "/product/51z3RyrKFpL.webp",
+      "/product/418toAza1oL.webp",
+    ],
+    image_names: [
+      "81lXNpENF3L.webp",
+      "5172BCbtusL.webp",
+      "41jk3Dx9QIL.webp",
+      "41pPnn6H8aL.webp",
+      "51z3RyrKFpL.webp",
+      "418toAza1oL.webp",
+    ],
+    features: [
+      {
+        title: "Premium Clay Chips",
+        description:
+          "Our carefully selected 14g clay chips provide exceptional durability and a professional feel, ensuring an elevated gaming experience for your clientele.",
+      },
+      {
+        title: "Elegant Carrying Case",
+        description:
+          "The robust aluminum carrying case features reinforced design and soft interior cushioning, offering optimal protection for your poker chips during transport and storage.",
+      },
+      {
+        title: "Comprehensive Accessory Kit",
+        description:
+          "Includes essential poker accessories such as plastic playing cards and acrylic dice, facilitating a complete gaming setup for maximum customer satisfaction.",
+      },
+      {
+        title: "Customizable Chip Colors",
+        description:
+          "The set features a variety of chip colors — white, red, green, black, purple, and yellow — allowing you to customize your game to suit any occasion or branding needs.",
+      },
+    ],
+  },
+  {
+    title: "ARTGAME 14g Poker Chip Set with Dealer Button & Aluminum Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your poker game with the ARTGAME 14g Poker Chip Set, designed for serious players. This 500-chip casino-style set is ideal for B2B suppliers looking to provide quality gaming materials, ensuring a professional poker experience with durable clay chips and a protective aluminum case.",
+    image: "/product/81jH1w7-oiL.webp",
+    images: [
+      "/product/51FGn-rjmLL.webp",
+      "/product/512rN1IBsAL.webp",
+      "/product/51QS5rmXUCL.webp",
+      "/product/51PtJF7YRLL.webp",
+      "/product/51HrmiqZaeL.webp",
+      "/product/51RMBq6AfJL.webp",
+    ],
+    image_names: [
+      "81jH1w7-oiL.webp",
+      "51FGn-rjmLL.webp",
+      "512rN1IBsAL.webp",
+      "51QS5rmXUCL.webp",
+      "51PtJF7YRLL.webp",
+      "51HrmiqZaeL.webp",
+      "51RMBq6AfJL.webp",
+    ],
+    features: [
+      {
+        title: "Superior Chip Material",
+        description:
+          "Crafted from high-quality 14g dual-injected clay with an iron core, these chips deliver a professional feel and durability for intense games.",
+      },
+      {
+        title: "Comprehensive Chip Variety",
+        description:
+          "This set includes 500 chips in six distinct denominations and colors, catering to 9-10 players, ideal for diverse gaming setups.",
+      },
+      {
+        title: "Sturdy Carrying Case",
+        description:
+          "The EVA-lined aluminum case offers shock resistance and organized storage, ensuring your chips and accessories are safely housed.",
+      },
+      {
+        title: "Perfect Gift for Gamers",
+        description:
+          "Ideal for B2B sales, this comprehensive poker dealer set makes a fantastic gift for poker enthusiasts, enhancing any game night experience.",
+      },
+    ],
+  },
+  {
+    title: "Professional Poker Chip Set with Aluminum Case - 200 Chips & Accessories",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with our professional poker chip set, featuring 200 durable plastic chips in four colors and including essential accessories like two playing cards and a dealer button, perfect for corporate events and high-stakes poker nights.",
+    image: "/product/71DXHilBK2L.webp",
+    images: [
+      "/product/51mdpboMdCL.webp",
+      "/product/61prvbjE9XL.webp",
+      "/product/617Bi-8ZE7L.webp",
+      "/product/51PrCaeRTcL.webp",
+      "/product/51lLr7PbSSL.webp",
+      "/product/41s2Bzop+nL.webp",
+      "/product/51-XELacDjL.webp",
+    ],
+    image_names: [
+      "71DXHilBK2L.webp",
+      "51mdpboMdCL.webp",
+      "61prvbjE9XL.webp",
+      "617Bi-8ZE7L.webp",
+      "51PrCaeRTcL.webp",
+      "51lLr7PbSSL.webp",
+      "41s2Bzop+nL.webp",
+      "51-XELacDjL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Poker Chips",
+        description:
+          "This set includes 200 plastic poker chips, ensuring durability and reliability for endless gaming sessions.",
+      },
+      {
+        title: "Convenient Storage Solution",
+        description:
+          "Packaged in a robust aluminum case, this poker chip set provides safe and organized storage for your gaming accessories.",
+      },
+      {
+        title: "Clear Denomination Design",
+        description:
+          "Each chip is printed with clear denominations to minimize confusion during play and enhance the gaming experience.",
+      },
+      {
+        title: "Versatile for Any Occasion",
+        description:
+          "Ideal for poker nights, family gatherings, or corporate events, this set caters to both casual players and serious poker enthusiasts.",
+      },
+    ],
+  },
+  {
+    title: "Foldable Poker Table - Texas Hold'em Set with 300 Chips & Case",
+    category: "Poker Equipment",
+    description:
+      "This versatile foldable poker table set features a spacious 48x48 inch design, perfect for up to 8 players. Ideal for business events or corporate retreats, it is compact enough to transport easily, delivering a professional gaming experience with durable components and ample storage.",
+    image: "/product/61TROmcRtUL.webp",
+    images: [
+      "/product/41riskaExYL.webp",
+      "/product/41D57eaPbJL.webp",
+      "/product/31wi5Ll3fYL.webp",
+      "/product/41U7n+2WLDL.webp",
+      "/product/41zwAvR3aIL.webp",
+      "/product/41jHF4hxoEL.webp",
+    ],
+    image_names: [
+      "61TROmcRtUL.webp",
+      "41riskaExYL.webp",
+      "41D57eaPbJL.webp",
+      "31wi5Ll3fYL.webp",
+      "41U7n+2WLDL.webp",
+      "41zwAvR3aIL.webp",
+      "41jHF4hxoEL.webp",
+    ],
+    features: [
+      {
+        title: "Compact & Portable",
+        description:
+          "Easily folds to 24x24 inches for convenient transport, making it perfect for on-the-go gaming at events, parties, or corporate gatherings.",
+      },
+      {
+        title: "Large Player Capacity",
+        description:
+          "The octagonal design accommodates up to 8 players, ensuring everyone can join the game without feeling cramped.",
+      },
+      {
+        title: "Casino-Quality Chips",
+        description:
+          "Includes 300 casino-style chips made for durability, providing a strong, authentic feel that enhances the gaming experience.",
+      },
+      {
+        title: "Complete Set Included",
+        description:
+          "Comes with 2 decks of cards, a dealer button, and blind button, all conveniently stored in a spacious carrying case for easy access.",
+      },
+    ],
+  },
+  {
+    title: "Battery-Operated 2 Deck Electric Card Shuffler for UNO & Poker",
+    category: "Poker Equipment",
+    description:
+      "The FEIERYA Automatic Card Shuffler is a battery-operated solution designed for fast and efficient shuffling of 1-2 decks of cards, ideal for businesses hosting card games. Its user-friendly design makes it suitable for all ages, enhancing game play while saving valuable time in hectic environments.",
+    image: "/product/71JEr1KURDL.webp",
+    images: [
+      "/product/41vg7sUsUyL.webp",
+      "/product/41+U7OLN94L.webp",
+      "/product/513NH4RP7YL.webp",
+      "/product/51Ts2AfP4XL.webp",
+      "/product/41hXrWu1R4L.webp",
+      "/product/41kOmop4azL.webp",
+    ],
+    image_names: [
+      "71JEr1KURDL.webp",
+      "41vg7sUsUyL.webp",
+      "41+U7OLN94L.webp",
+      "513NH4RP7YL.webp",
+      "51Ts2AfP4XL.webp",
+      "41hXrWu1R4L.webp",
+      "41kOmop4azL.webp",
+    ],
+    features: [
+      {
+        title: "Efficient Card Shuffling",
+        description:
+          "Quickly shuffles 1-2 decks of cards in seconds, allowing for swift transitions during card games.",
+      },
+      {
+        title: "Versatile Compatibility",
+        description:
+          "Compatible with various card games, including Poker, UNO, and Bridge, accommodating cards with a maximum size of 3.50 x 2.48 inches.",
+      },
+      {
+        title: "Portable Design",
+        description:
+          "Compact dimensions (8.07 inches) and lightweight build make it easy to transport, perfect for events or travel.",
+      },
+      {
+        title: "User-Friendly Operation",
+        description:
+          "Easily powered by 4 AA batteries, the simple button mechanism allows anyone to shuffle cards effortlessly.",
+      },
+    ],
+  },
+  {
+    title: "Maverick Texas Hold 'Em Poker Set with Aluminum Case - 300 Chips & 2 Decks",
+    category: "Poker Equipment",
+    description:
+      "The Maverick Texas Hold 'Em Poker Set is designed for serious gaming enthusiasts and businesses alike, featuring 300 high-quality 11g casino chips, two durable decks of playing cards, and essential gaming components all securely housed in a sturdy aluminum case, making it an ideal choice for corporate events and team-building activities.",
+    image: "/product/91W9Fds-+FL.webp",
+    images: [
+      "/product/51T0B4-ssqL.webp",
+      "/product/41fHP3yhrRL.webp",
+      "/product/41yCwqXsyeL.webp",
+      "/product/41-oINYlSzL.webp",
+      "/product/414KehzWT2L.webp",
+      "/product/41uZN+YG2KL.webp",
+      "/product/41dAZckW4bL.webp",
+    ],
+    image_names: [
+      "91W9Fds-+FL.webp",
+      "51T0B4-ssqL.webp",
+      "41fHP3yhrRL.webp",
+      "41yCwqXsyeL.webp",
+      "41-oINYlSzL.webp",
+      "414KehzWT2L.webp",
+      "41uZN+YG2KL.webp",
+      "41dAZckW4bL.webp",
+    ],
+    features: [
+      {
+        title: "Casino-Grade Quality",
+        description:
+          "This poker set includes 300 premium 11g chips, ensuring a professional and authentic gaming experience for your events.",
+      },
+      {
+        title: "Durable Aluminum Case",
+        description:
+          "Housed in a robust aluminum case, this set is designed for easy transport and secure storage, making it perfect for on-the-go gaming.",
+      },
+      {
+        title: "Complete Gaming Components",
+        description:
+          "Equipped with 5 red dice and 3 dealer buttons (small blind/big blind), this set has everything needed for a complete poker night.",
+      },
+      {
+        title: "Ideal for Corporate Gifts",
+        description:
+          "This poker set is an excellent choice for corporate gifts or events, providing high-quality components that foster enjoyment and camaraderie.",
+      },
+    ],
+  },
+  {
+    title: "Goplus Professional Poker Chip Set with Aluminum Case - 300 Chips & 2 Decks",
+    category: "Poker Equipment",
+    description:
+      "Elevate your poker nights with the Goplus Professional Poker Chip Set, featuring 300 high-quality chips, 2 decks of cards, and an aluminum case for secure and portable convenience, making it an ideal choice for casinos, tournaments, and entertainment events.",
+    image: "/product/81g4ZB2OkiL.webp",
+    images: [
+      "/product/51J85vxkzJL.webp",
+      "/product/51SYvEasgeL.webp",
+      "/product/51PSt9GPCPL.webp",
+      "/product/51VSnR0OQhL.webp",
+      "/product/51ZjKTdYsML.webp",
+      "/product/51M9AXh73TL.webp",
+      "/product/41rOzCkB-qL.webp",
+    ],
+    image_names: [
+      "81g4ZB2OkiL.webp",
+      "51J85vxkzJL.webp",
+      "51SYvEasgeL.webp",
+      "51PSt9GPCPL.webp",
+      "51VSnR0OQhL.webp",
+      "51ZjKTdYsML.webp",
+      "51M9AXh73TL.webp",
+      "41rOzCkB-qL.webp",
+    ],
+    features: [
+      {
+        title: "Complete Poker Set",
+        description:
+          "This comprehensive kit includes 300 chips, 2 decks of cards, a dealer button, and a felt mat, ensuring everything needed for an ultimate poker experience.",
+      },
+      {
+        title: "Durable Quality Chips",
+        description:
+          "Crafted with multi-layer materials, the chips come in 5 colors (white, red, green, blue, gray) for various denominations, providing longevity and a premium feel.",
+      },
+      {
+        title: "Portable Aluminum Case",
+        description:
+          "Designed for mobility, the aluminum case features a secure lock and comfortable handle, making it easy to store and transport your poker essentials.",
+      },
+      {
+        title: "Versatile Entertainment Use",
+        description:
+          "Perfect for both casual gatherings and competitive tournaments, this versatile set is ideal for game nights, family gatherings, and outdoor events.",
+      },
+    ],
+  },
+  {
+    title: "Battery-Operated Automatic Card Shuffler for 2-6 Decks",
+    category: "Poker Equipment",
+    description:
+      "The FEIERYA Automatic Card Shuffler is an essential tool for any card game business, expertly designed to shuffle 1-2 decks effortlessly in seconds, ensuring quick and efficient gameplay. Ideal for senior citizens, families, and travelers, this portable solution promotes seamless card entertainment while saving valuable time.",
+    image: "/product/71JEr1KURDL.webp",
+    images: [
+      "/product/41vg7sUsUyL.webp",
+      "/product/41+U7OLN94L.webp",
+      "/product/513NH4RP7YL.webp",
+      "/product/51Ts2AfP4XL.webp",
+      "/product/41hXrWu1R4L.webp",
+      "/product/41kOmop4azL.webp",
+    ],
+    image_names: [
+      "71JEr1KURDL.webp",
+      "41vg7sUsUyL.webp",
+      "41+U7OLN94L.webp",
+      "513NH4RP7YL.webp",
+      "51Ts2AfP4XL.webp",
+      "41hXrWu1R4L.webp",
+      "41kOmop4azL.webp",
+    ],
+    features: [
+      {
+        title: "High Capacity",
+        description:
+          "Accommodates 2 decks simultaneously, making it perfect for various card games including Poker, Uno, and more.",
+      },
+      {
+        title: "User-Friendly Design",
+        description:
+          "Simple operation with battery power; just insert AA batteries, add cards, and press a button to shuffle.",
+      },
+      {
+        title: "Compact & Portable",
+        description:
+          "Lightweight at 8.07 inches, it's easy to transport, making it a great choice for home games or travel.",
+      },
+      {
+        title: "Reliable Performance",
+        description:
+          "Comes with a 6-month exchange service for adjustments, ensuring consistent performance and longevity.",
+      },
+    ],
+  },
+  {
+    title: "200-Count Poker Chip Set with Aluminum Case - Professional Gaming Quality",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with our lightweight and durable 200-count poker chip set, designed for professional use and perfect for corporate events or casual gatherings. This comprehensive set includes an aluminum storage case, two decks of cards, a table cover, and three dealer buttons for enhancing your game night atmosphere.",
+    image: "/product/71DXHilBK2L.webp",
+    images: [
+      "/product/51mdpboMdCL.webp",
+      "/product/61prvbjE9XL.webp",
+      "/product/617Bi-8ZE7L.webp",
+      "/product/51PrCaeRTcL.webp",
+      "/product/51lLr7PbSSL.webp",
+      "/product/41s2Bzop+nL.webp",
+      "/product/51-XELacDjL.webp",
+    ],
+    image_names: [
+      "71DXHilBK2L.webp",
+      "51mdpboMdCL.webp",
+      "61prvbjE9XL.webp",
+      "617Bi-8ZE7L.webp",
+      "51PrCaeRTcL.webp",
+      "51lLr7PbSSL.webp",
+      "41s2Bzop+nL.webp",
+      "51-XELacDjL.webp",
+    ],
+    features: [
+      {
+        title: "Complete Gaming Kit",
+        description:
+          "This poker chip set includes 200 high-quality plastic chips, two decks of cards, and essential accessories to ensure a professional gaming experience.",
+      },
+      {
+        title: "Durable Storage Case",
+        description:
+          "Housed in a sturdy aluminum case, this set provides secure storage and easy transport for your poker chips and accessories.",
+      },
+      {
+        title: "Distinct Color Coding",
+        description:
+          "Each chip features a printed denomination and comes in four vibrant colors, minimizing confusion during gameplay for a smooth experience.",
+      },
+      {
+        title: "Versatile Use Cases",
+        description:
+          "Ideal for poker nights, team-building events, or as a gift, this set caters to diverse gaming activities, ensuring fun for players of all ages.",
+      },
+    ],
+  },
+  {
+    title: "Maverick Texas Hold 'Em Poker Set with Aluminum Case - 300 Chips & 2 Decks",
+    category: "Poker Equipment",
+    description:
+      "Elevate your game nights with the Maverick Texas Hold 'Em Poker Set, featuring 300 high-quality 11g poker chips, two durable decks, and essential accessories, all conveniently packaged in a robust aluminum case for easy transport and storage – ideal for bars, casinos, or corporate events.",
+    image: "/product/91W9Fds-+FL.webp",
+    images: [
+      "/product/51T0B4-ssqL.webp",
+      "/product/41fHP3yhrRL.webp",
+      "/product/41yCwqXsyeL.webp",
+      "/product/41-oINYlSzL.webp",
+      "/product/414KehzWT2L.webp",
+      "/product/41uZN+YG2KL.webp",
+      "/product/41dAZckW4bL.webp",
+    ],
+    image_names: [
+      "91W9Fds-+FL.webp",
+      "51T0B4-ssqL.webp",
+      "41fHP3yhrRL.webp",
+      "41yCwqXsyeL.webp",
+      "41-oINYlSzL.webp",
+      "414KehzWT2L.webp",
+      "41uZN+YG2KL.webp",
+      "41dAZckW4bL.webp",
+    ],
+    features: [
+      {
+        title: "Casino-Grade Quality",
+        description:
+          "This poker set includes 300 casino-quality 11g chips designed for durability and a professional experience, making it perfect for both casual and competitive play.",
+      },
+      {
+        title: "Comprehensive Game Accessories",
+        description:
+          "Comes complete with two decks of Maverick playing cards, five red dice, and three buttons (Dealer/Small Blind/Big Blind) for a complete poker gaming experience.",
+      },
+      {
+        title: "Portable Aluminum Case",
+        description:
+          "The set is conveniently housed in a sturdy aluminum case, ensuring seamless transport and organized storage for your game night essentials.",
+      },
+      {
+        title: "Perfect for Gifting",
+        description:
+          "Ideal for poker enthusiasts, this high-quality set makes a thoughtful gift, suitable for holidays, game nights, or special occasions, enhancing any gaming experience.",
+      },
+    ],
+  },
+  {
+    title: "Goplus 300 Poker Chip Set with Aluminum Case, Cards, and Felt Mat",
+    category: "Poker Equipment",
+    description:
+      "Elevate your game nights and events with the Goplus 300 Poker Chip Set, designed for durability and convenience. This comprehensive set includes 300 high-quality chips, two decks of waterproof cards, and a felt mat, all securely housed in a robust aluminum case, making it the perfect choice for casinos, tournaments, and home entertainment.",
+    image: "/product/81g4ZB2OkiL.webp",
+    images: [
+      "/product/51J85vxkzJL.webp",
+      "/product/51SYvEasgeL.webp",
+      "/product/51PSt9GPCPL.webp",
+      "/product/51VSnR0OQhL.webp",
+      "/product/51ZjKTdYsML.webp",
+      "/product/51M9AXh73TL.webp",
+      "/product/41rOzCkB-qL.webp",
+    ],
+    image_names: [
+      "81g4ZB2OkiL.webp",
+      "51J85vxkzJL.webp",
+      "51SYvEasgeL.webp",
+      "51PSt9GPCPL.webp",
+      "51VSnR0OQhL.webp",
+      "51ZjKTdYsML.webp",
+      "51M9AXh73TL.webp",
+      "41rOzCkB-qL.webp",
+    ],
+    features: [
+      {
+        title: "Complete Poker Set",
+        description:
+          "This all-in-one poker set includes 300 chips in five colors, two decks of cards, and a felt mat, ensuring you have everything needed for professional or casual play.",
+      },
+      {
+        title: "Durable High-Quality Chips",
+        description:
+          "Crafted with a layered design, these chips feature a composite outer layer and a metal core, providing superior durability and ensuring long-lasting gameplay.",
+      },
+      {
+        title: "Secure Aluminum Case",
+        description:
+          "The meticulously designed aluminum case includes two keys and a sturdy locking mechanism, facilitating secure storage and easy transport for all your gaming events.",
+      },
+      {
+        title: "Versatile for Any Occasion",
+        description:
+          "Ideal for various settings, from casino nights to family gatherings and outdoor events, this poker chip set enhances entertainment and adds value to any occasion.",
+      },
+    ],
+  },
+  {
+    title: "Professional Poker Chip Set with Aluminum Case, 200 Chips & 2 Decks",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with our comprehensive Poker Chip Set, featuring 200 high-quality chips, two decks of standard playing cards, and a durable aluminum storage case. Perfect for casino-style games, this set is designed to enhance any corporate event, team-building activity, or client entertainment gathering, ensuring a memorable experience for all involved.",
+    image: "/product/611+959uPnL.webp",
+    images: [
+      "/product/51VYYSzHk+L.webp",
+      "/product/61M66GwxOVL.webp",
+      "/product/51PrCaeRTcL.webp",
+      "/product/51lLr7PbSSL.webp",
+      "/product/51-XELacDjL.webp",
+      "/product/41s2Bzop+nL.webp",
+    ],
+    image_names: [
+      "611+959uPnL.webp",
+      "51VYYSzHk+L.webp",
+      "61M66GwxOVL.webp",
+      "51PrCaeRTcL.webp",
+      "51lLr7PbSSL.webp",
+      "51-XELacDjL.webp",
+      "41s2Bzop+nL.webp",
+    ],
+    features: [
+      {
+        title: "Premium Quality Chips",
+        description:
+          "Our set includes 200 chips made of durable plastic, each with a 4 cm diameter and designed to withstand frequent use, making them perfect for professional-grade gaming.",
+      },
+      {
+        title: "Comprehensive Game Set",
+        description:
+          "The package contains two decks of standard playing cards helping to facilitate various games, including Texas Hold'em, Blackjack, and Roulette, suitable for all your event needs.",
+      },
+      {
+        title: "Convenient Storage Solution",
+        description:
+          "The set comes in a sturdy aluminum case that not only protects your chips but also makes transportation to events easy and hassle-free, maintaining organization and professionalism.",
+      },
+      {
+        title: "Ideal for Events",
+        description:
+          "This Poker Chip Set is an excellent choice for corporate functions, family game nights, or casino-themed parties, enhancing the atmosphere while ensuring high-quality entertainment for participants.",
+      },
+    ],
+  },
+  {
+    title: "Copag 1546 100% Plastic Poker Cards - Jumbo Index, Durable Design",
+    category: "Poker Equipment",
+    description:
+      "Discover the superior quality of Copag 1546 poker cards, crafted entirely from 100% PVC plastic for unparalleled durability and performance. Ideal for businesses and gaming establishments, these cards resist wear and tear, providing a long-lasting solution that outlasts traditional paper cards by 50 times, making them a valuable investment for your gaming needs.",
+    image: "/product/816RCzgob8L.webp",
+    images: [
+      "/product/41XftWEJ2pL.webp",
+      "/product/51zo01Cdg9L.webp",
+      "/product/51fOymwhhuL.webp",
+      "/product/41H1FX4b6ES.webp",
+      "/product/41hBF8aiCaL.webp",
+      "/product/51hiKNq2hLL.webp",
+    ],
+    image_names: [
+      "816RCzgob8L.webp",
+      "41XftWEJ2pL.webp",
+      "51zo01Cdg9L.webp",
+      "51fOymwhhuL.webp",
+      "41H1FX4b6ES.webp",
+      "41hBF8aiCaL.webp",
+      "51hiKNq2hLL.webp",
+    ],
+    features: [
+      {
+        title: "Durable Material",
+        description:
+          "Made from 100% plastic PVC, these cards offer exceptional durability and a smooth handling experience, ensuring reliability for intense gaming sessions.",
+      },
+      {
+        title: "Jumbo Index Design",
+        description:
+          "Featuring a jumbo index, each symbol and letter is approximately 1/2 inch tall, enhancing readability and making gameplay more accessible for all players.",
+      },
+      {
+        title: "Easy to Clean",
+        description:
+          "Unlike traditional paper cards, Copag cards are easily washable, allowing for quick and convenient maintenance, maintaining their pristine condition over time.",
+      },
+      {
+        title: "Compact Storage Case",
+        description:
+          "Packaged in a sleek, hard plastic case with Copag branding, this set is designed for efficient storage and transport, making it ideal for gaming events or poker nights.",
+      },
+    ],
+  },
+  {
+    title: "GYMAX 600-Piece Poker Chip Set with Accessories for Corporate Events",
+    category: "Poker Equipment",
+    description:
+      "Elevate your corporate events or social gatherings with the GYMAX 600-Piece Poker Chip Set, featuring high-quality chips, essential accessories, and a portable case. Perfect for team-building activities and client entertainment, this all-in-one set provides an immersive casino experience while ensuring durability and ease of transport.",
+    image: "/product/81aQGc2ftPL.webp",
+    images: [
+      "/product/41RwIq8EpXL.webp",
+      "/product/51iwRQAyDCL.webp",
+      "/product/515c584CkdL.webp",
+      "/product/51AKM1p0WgL.webp",
+      "/product/51lHhyqJlcL.webp",
+      "/product/514znVKwwwL.webp",
+      "/product/51xjb5wzaYL.webp",
+    ],
+    image_names: [
+      "81aQGc2ftPL.webp",
+      "41RwIq8EpXL.webp",
+      "51iwRQAyDCL.webp",
+      "515c584CkdL.webp",
+      "51AKM1p0WgL.webp",
+      "51lHhyqJlcL.webp",
+      "514znVKwwwL.webp",
+      "51xjb5wzaYL.webp",
+    ],
+    features: [
+      {
+        title: "Superior Chip Quality",
+        description:
+          "The poker chips are built with a three-layer structure, including a film, composite, and iron layer, ensuring exceptional durability and long-lasting use.",
+      },
+      {
+        title: "Complete Game Setup",
+        description:
+          "This comprehensive set includes 600 chips in six colors, 6 decks of cards, 5 dice, 3 dealer buttons, a poker mat, and a card shoe, offering everything needed for an authentic gaming experience.",
+      },
+      {
+        title: "Convenient Storage Solution",
+        description:
+          "Packaged in a high-quality, portable case with a secure latch, this set is easy to transport and store, making it ideal for business events and social gatherings.",
+      },
+      {
+        title: "User-Friendly Accessories",
+        description:
+          "The set includes a convenient automatic shuffler and protective features, ensuring smooth gameplay and enhanced protection for all components during transport.",
+      },
+    ],
+  },
+  {
+    title: "Deluxe 300 Poker Chip Set - Casino Quality with Customizable Design",
+    category: "Poker Equipment",
+    description:
+      "Elevate your poker nights with our Deluxe 300 Poker Chip Set, designed for premium experiences. Each chip weighs 14 grams and mimics authentic casino quality, making this set perfect for professional environments, events, or businesses. With a sturdy carrying case and stylish cards, you can offer clients a luxurious gambling experience that stands out.",
+    image: "/product/81slF2MteNL.webp",
+    images: [
+      "/product/51ihGSZX8RL.webp",
+      "/product/51UPwPtw5mL.webp",
+      "/product/517SNlVWliL.webp",
+      "/product/51QewuH5u3L.webp",
+      "/product/41Z2y8edY2L.webp",
+      "/product/51lRyPeIzDL.webp",
+    ],
+    image_names: [
+      "81slF2MteNL.webp",
+      "51ihGSZX8RL.webp",
+      "51UPwPtw5mL.webp",
+      "517SNlVWliL.webp",
+      "51QewuH5u3L.webp",
+      "41Z2y8edY2L.webp",
+      "51lRyPeIzDL.webp",
+    ],
+    features: [
+      {
+        title: "Casino-Quality Chips",
+        description:
+          "Our 300 Monte Carlo poker chips are crafted from 14g clay, providing an authentic casino-like feel that enhances gameplay for your clients.",
+      },
+      {
+        title: "Durable Case Included",
+        description:
+          "The set comes with a robust, shock-resistant case to protect your chips and cards, ensuring they remain in pristine condition for repeated use.",
+      },
+      {
+        title: "Complete Poker Experience",
+        description:
+          "Includes 300 chips in various denominations, along with two durable plastic playing cards and a dealer button, offering everything needed for a rich poker experience.",
+      },
+      {
+        title: "Elegant Design",
+        description:
+          "Each chip features a stunning inlaid gold ring for a sophisticated look, adding to the premium feel of poker games and enhancing your brand’s image.",
+      },
+    ],
+  },
+  {
+    title: "Brass Monkey Poker Set - 100 Chips & Design Cards for Competitive Play",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming events with the Brass Monkey 'Raise The Stakes' poker set, perfect for 2 or more players. This comprehensive starter kit includes 100 quality chips and an elegant deck of cards, ideal for both casual gatherings and professional competitions. Ensure your team enjoys memorable moments while enhancing strategic skills.",
+    image: "/product/71ZzMfwrDOL.webp",
+    images: [
+      "/product/51s9GKFsNnL.webp",
+      "/product/41E4+92rzlL.webp",
+      "/product/41lpstlb1GL.webp",
+      "/product/41UEVFx39eL.webp",
+      "/product/51zwA7PfjdL.webp",
+      "/product/41RFTH0n10L.webp",
+      "/product/413rx6SUjZL.webp",
+    ],
+    image_names: [
+      "71ZzMfwrDOL.webp",
+      "51s9GKFsNnL.webp",
+      "41E4+92rzlL.webp",
+      "41lpstlb1GL.webp",
+      "41UEVFx39eL.webp",
+      "51zwA7PfjdL.webp",
+      "41RFTH0n10L.webp",
+      "413rx6SUjZL.webp",
+    ],
+    features: [
+      {
+        title: "Complete Starter Kit",
+        description:
+          "Includes 100 chips in various colors and a dealer marker, providing everything needed for both beginners and experienced players.",
+      },
+      {
+        title: "Comprehensive Instruction Manual",
+        description:
+          "Features an easy-to-follow guide, ensuring users can quickly learn the rules and strategies of various poker games without frustration.",
+      },
+      {
+        title: "Versatile Game Play",
+        description:
+          "Not limited to poker, this set allows for a range of card games including Blackjack, Omaha, and creative variations, making it suitable for diverse events.",
+      },
+      {
+        title: "Perfect Gift Choices",
+        description:
+          "Ideal for birthdays, graduations, and holidays, this poker set adds excitement to any celebration, catering to both personal and professional gifting needs.",
+      },
+    ],
+  },
+  {
+    title: "Kölbs Titan LSO Poker Set - Ultimate Casino Experience for B2B",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming offerings with the Kölbs Titan LSO Poker Set, designed for luxurious corporate events or as high-end gifts for clients. This premium set includes durable poker chips, two decks of cards, and a sleek tactile box for secure storage and ease of access, making it an ideal addition to any business gathering or promotional event.",
+    image: "/product/91hHCf1WhKL.webp",
+    images: [
+      "/product/51UIRveRgRL.webp",
+      "/product/512McTjt0iL.webp",
+      "/product/515YX+JDBLL.webp",
+      "/product/41ksGLgOVxL.webp",
+      "/product/41x6hGRXWjL.webp",
+      "/product/51mU5quNqwL.webp",
+    ],
+    image_names: [
+      "91hHCf1WhKL.webp",
+      "51UIRveRgRL.webp",
+      "512McTjt0iL.webp",
+      "515YX+JDBLL.webp",
+      "41ksGLgOVxL.webp",
+      "41x6hGRXWjL.webp",
+      "51mU5quNqwL.webp",
+    ],
+    features: [
+      {
+        title: "Premium Tactile Box",
+        description:
+          "The unique tactile box features a hinged top and a practical carrying handle, ensuring durability and ease of transport, perfect for on-the-go meetings or events.",
+      },
+      {
+        title: "High-Quality Poker Chips",
+        description:
+          "Includes 320 high-grade 11.5g poker chips in five vibrant colors, providing an authentic casino experience that enhances client entertainment or team-building activities.",
+      },
+      {
+        title: "Complete Card Set",
+        description:
+          "Comes with two full decks of cards, allowing for versatile game options, suitable for various poker games including Texas Hold'em and Blackjack.",
+      },
+      {
+        title: "Ideal B2B Gift",
+        description:
+          "This poker set is the perfect corporate gift for executives and clients, making it an excellent choice for promotions, business milestones, or special occasions.",
+      },
+    ],
+  },
+  {
+    title: "Goplus Poker Chip Set - 500 Premium Clay Chips with Case, Cards & Dice",
+    category: "Poker Equipment",
+    description:
+      "Enhance your gaming experience with the Goplus Professional Poker Chip Set, featuring 500 meticulously crafted 14g clay chips, durable playing cards, and accessories, all housed in a protective aluminum case. Perfect for B2B casino suppliers or entertainment companies looking to deliver premium gaming solutions for parties or tournaments.",
+    image: "/product/81gOFXeHhrL.webp",
+    images: [
+      "/product/511Ef8axwyL.webp",
+      "/product/51MLnrcSX9L.webp",
+      "/product/51eSkFpvT0L.webp",
+      "/product/511nNY5vwwL.webp",
+      "/product/51ItUVdnr7L.webp",
+      "/product/51eIv1-txaL.webp",
+      "/product/51IFBvghvZL.webp",
+    ],
+    image_names: [
+      "81gOFXeHhrL.webp",
+      "511Ef8axwyL.webp",
+      "51MLnrcSX9L.webp",
+      "51eSkFpvT0L.webp",
+      "511nNY5vwwL.webp",
+      "51ItUVdnr7L.webp",
+      "51eIv1-txaL.webp",
+      "51IFBvghvZL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Poker Chips",
+        description:
+          "Our 14g clay poker chips are designed with a dual-core for balanced weight and optimal feel, providing an authentic casino experience with six vibrant colors available.",
+      },
+      {
+        title: "Durable Playing Cards",
+        description:
+          "Includes two decks of professional-grade poker cards made from 100% waterproof plastic, ensuring longevity and superior gameplay in various environments.",
+      },
+      {
+        title: "Secure & Portable Case",
+        description:
+          "The aluminum case features an impact-resistant PU lining with secure locks and spacious compartments for chips, dice, and cards, protecting your gaming accessories during transport.",
+      },
+      {
+        title: "Versatile Gaming Options",
+        description:
+          "Perfect for hosting Texas Hold'em, Blackjack, or other casino games, this poker chip set meets industry standards, making it ideal for tournaments and social gatherings.",
+      },
+    ],
+  },
+  {
+    title: "Kiddie Play 100-Piece Poker Chip Set | 11.5g Casino-Quality Chips & Dice",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with the Kiddie Play 100-Piece Poker Chip Set, featuring high-quality, 11.5g chips designed for poker, blackjack, and more. This comprehensive ensemble is perfect for tournaments, clubs, and family game nights, making it an ideal choice for both novice and seasoned players looking to deliver authentic casino excitement.",
+    image: "/product/81bwrTX-eeL.webp",
+    images: [
+      "/product/51xy1Wg7pPL.webp",
+      "/product/51J0yf+7uQL.webp",
+      "/product/4186cZQGFVL.webp",
+      "/product/51DC6Doa9iL.webp",
+      "/product/51OEfNstszL.webp",
+      "/product/41gvBpzvvZL.webp",
+    ],
+    image_names: [
+      "81bwrTX-eeL.webp",
+      "51xy1Wg7pPL.webp",
+      "51J0yf+7uQL.webp",
+      "4186cZQGFVL.webp",
+      "51DC6Doa9iL.webp",
+      "51OEfNstszL.webp",
+      "41gvBpzvvZL.webp",
+    ],
+    features: [
+      {
+        title: "Complete Game Set",
+        description:
+          "Includes 100 casino-quality chips in various colors, 5 dice, 2 decks of cards, and dealer buttons, ensuring a robust gaming experience for any occasion.",
+      },
+      {
+        title: "High-Quality Craftsmanship",
+        description:
+          "Each chip weighs 11.5 grams and features intricate designs that not only enhance grip but also provide a realistic casino feel, perfect for serious game play.",
+      },
+      {
+        title: "Versatile Gaming Options",
+        description:
+          "Suitable for a wide range of card games, from Texas Hold'em to blackjack, this set caters to various preferences, making it suitable for all gaming environments.",
+      },
+      {
+        title: "Ideal for Gifting",
+        description:
+          "A perfect gift choice for both beginners and veteran players, this poker set is great for birthdays, holidays, or as a unique addition to game night traditions.",
+      },
+    ],
+  },
+  {
+    title: "Printworks Women's Classic Poker Set - Elegant, Durable, Customizable",
+    category: "Poker Equipment",
+    description:
+      "The Printworks Women's Classic Poker Set is an exquisite combination of style and functionality, perfect for businesses seeking to elevate their gaming product offerings. Designed for durability and aesthetic appeal, it provides a sophisticated poker experience that can attract clients and enhance social events.",
+    image: "/product/71btGnwi5nL.webp",
+    images: ["/product/31SOeSuAWlL.webp", "/product/21gM3nereML.webp", "/product/51Fb6m1mcOL.webp"],
+    image_names: ["71btGnwi5nL.webp", "31SOeSuAWlL.webp", "21gM3nereML.webp", "51Fb6m1mcOL.webp"],
+    features: [
+      {
+        title: "Elegant Design",
+        description:
+          "This poker set features a chic and stylish design, making it an attractive addition to any event or gathering, which can enhance customer satisfaction and engagement.",
+      },
+      {
+        title: "High-Quality Materials",
+        description:
+          "Crafted with premium materials, the poker set ensures long-lasting use, offering both durability and reliability that businesses can count on for repeat customer satisfaction.",
+      },
+      {
+        title: "Customizable Options",
+        description:
+          "Businesses can personalize the poker set to reflect their brand identity or special events, increasing brand visibility and customer loyalty through unique, tailored experiences.",
+      },
+      {
+        title: "Comprehensive Set",
+        description:
+          "Each set includes essential components such as high-quality chips and cards, making it an all-in-one solution that simplifies inventory management for retailers and event organizers.",
+      },
+    ],
+  },
+  {
+    title: "Ambassador Deluxe Poker Chip Set for Business Events & Leagues",
+    category: "Poker Equipment",
+    description:
+      "The Ambassador Deluxe Poker Chip Set is an essential addition for businesses looking to elevate their corporate events or engage clients in friendly competition. This premium set includes high-quality chips, ensuring durability and a professional touch for leagues, hospitality venues, or promotional events that enhance client relationships.",
+    image: "/product/81n9IWje-kL.webp",
+    images: ["/product/51GBr4so56L.webp", "/product/51itTkf9cbL.webp", "/product/41yUY7VH44L.webp"],
+    image_names: ["81n9IWje-kL.webp", "51GBr4so56L.webp", "51itTkf9cbL.webp", "41yUY7VH44L.webp"],
+    features: [
+      {
+        title: "High-Quality Materials",
+        description:
+          "Crafted from durable composite materials, our poker chips guarantee lasting performance, making them ideal for frequent use in corporate settings.",
+      },
+      {
+        title: "Custom Branding Options",
+        description:
+          "Enhance your brand visibility with customizable poker chips that can include your logo, perfect for promotional events and client engagement.",
+      },
+      {
+        title: "Comprehensive Set Inclusion",
+        description:
+          "This deluxe poker chip set includes all essential gameplay items, providing a complete package for businesses to host poker nights or tournaments effortlessly.",
+      },
+      {
+        title: "Refined Aesthetic Design",
+        description:
+          "The sleek and modern design of the poker chips adds a sophisticated touch, making them perfect for upscale events or VIP gatherings.",
+      },
+    ],
+  },
+  {
+    title: "Premium 300-Piece Poker Chip Set with Aluminium Case & Accessories",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with our professional-grade 300-piece clay composite poker chip set, designed for serious players and B2B partnerships. This comprehensive kit includes high-quality accessories for a complete casino experience, making it ideal for casinos, game nights, and promotional events.",
+    image: "/product/71A3Gws30QL.webp",
+    images: [
+      "/product/513wmNQg1LL.webp",
+      "/product/41Qnuf-2clL.webp",
+      "/product/41GbftjmOGL.webp",
+      "/product/41jFmOzwT0L.webp",
+      "/product/41y0m+NCVdL.webp",
+      "/product/418XU7m9KwL.webp",
+    ],
+    image_names: [
+      "71A3Gws30QL.webp",
+      "513wmNQg1LL.webp",
+      "41Qnuf-2clL.webp",
+      "41GbftjmOGL.webp",
+      "41jFmOzwT0L.webp",
+      "41y0m+NCVdL.webp",
+      "418XU7m9KwL.webp",
+    ],
+    features: [
+      {
+        title: "Authentic Casino Experience",
+        description:
+          "Enjoy authentic casino-quality gameplay with 300 premium clay composite chips, each weighing 14 grams, providing a superior feel and sound compared to plastic alternatives.",
+      },
+      {
+        title: "All-Inclusive Kit",
+        description:
+          "This complete poker set includes 2 decks of high-quality playing cards, 5 dice, dealer, big blind, and small blind buttons, ensuring you have everything needed for a professional poker night.",
+      },
+      {
+        title: "Portable & Durable Case",
+        description:
+          "Housed in a sturdy aluminum case with reinforced corners, foam lining, and a secure lock, this set is perfect for travel and outdoor gatherings while securely protecting your chips and accessories.",
+      },
+      {
+        title: "Supports Up to 8 Players",
+        description:
+          "Designed for up to 8 players, the color-coded chips offer denominations from $1 to $1000, simplifying tournament organization and enhancing the gameplay for families or friends.",
+      },
+    ],
+  },
+  {
+    title: "Brybelly 4-in-1 Casino Game Set with Chips, Dice & Cards",
+    category: "Poker Equipment",
+    description:
+      "Elevate your business events with the Brybelly 4-in-1 Casino Game Set, a comprehensive solution for hosting engaging casino nights. Featuring blackjack, poker, craps, and roulette, this set includes high-quality components for an authentic gaming experience, ensuring memorable interactions and entertainment for clients and employees alike.",
+    image: "/product/91EO+0CCw1L.webp",
+    images: [
+      "/product/51qR2TubB2L.webp",
+      "/product/6127EhhrRlL.webp",
+      "/product/614239rPJDL.webp",
+      "/product/61-E-G2DSKL.webp",
+      "/product/61B17LacQsL.webp",
+      "/product/513RQfsjuxL.webp",
+      "/product/51JBQaDCrLL.webp",
+    ],
+    image_names: [
+      "91EO+0CCw1L.webp",
+      "51qR2TubB2L.webp",
+      "6127EhhrRlL.webp",
+      "614239rPJDL.webp",
+      "61-E-G2DSKL.webp",
+      "61B17LacQsL.webp",
+      "513RQfsjuxL.webp",
+      "51JBQaDCrLL.webp",
+    ],
+    features: [
+      {
+        title: "Complete Casino Experience",
+        description:
+          "This all-inclusive set combines four classic casino games in one, allowing for diverse entertainment options that cater to both novice and experienced players.",
+      },
+      {
+        title: "Premium Quality Components",
+        description:
+          "Each set includes 100 quality chips, two decks of cards, dice, and a 10-inch roulette wheel, ensuring that your clients receive a top-notch gaming experience.",
+      },
+      {
+        title: "Portable & Easy Setup",
+        description:
+          'The foldable 18" x 36" felt mats are designed for convenient storage and effortless setup, making it perfect for spontaneous events or planned corporate gatherings.',
+      },
+      {
+        title: "Ideal for Business Events",
+        description:
+          "Bring excitement to office parties, team-building retreats, and corporate celebrations with this versatile game set, promoting camaraderie and engagement among participants.",
+      },
+    ],
+  },
+  {
+    title: "ORIENGEAR Casino Chip Set – 300 Durable 14g Clay Composite Chips",
+    category: "Poker Equipment",
+    description:
+      "Enhance your gaming experience with the ORIENGEAR Casino Chip Set, featuring 300 high-quality 14g clay composite chips and essential accessories. This professional-grade set is ideal for B2B purchases, offering excellent durability and a genuine casino feel, perfect for creating memorable game nights for clients or team-building events.",
+    image: "/product/8105AUqoQdL.webp",
+    images: [
+      "/product/512xRVWO09L.webp",
+      "/product/512Z08AIziL.webp",
+      "/product/51WG1J1Fz+L.webp",
+      "/product/51H5O3h7CfL.webp",
+      "/product/51dE6ah3cmL.webp",
+      "/product/41W-tsAjKKL.webp",
+    ],
+    image_names: [
+      "8105AUqoQdL.webp",
+      "512xRVWO09L.webp",
+      "512Z08AIziL.webp",
+      "51WG1J1Fz+L.webp",
+      "51H5O3h7CfL.webp",
+      "51dE6ah3cmL.webp",
+      "41W-tsAjKKL.webp",
+    ],
+    features: [
+      {
+        title: "Comprehensive Casino Equipment",
+        description:
+          "The set includes an ABS case, two decks of waterproof plastic playing cards, five dice, and additional accessories, providing everything needed for a full casino experience.",
+      },
+      {
+        title: "High-Quality Clay Chips",
+        description:
+          "Made from 14g clay composite material, these chips ensure durability and a tactile feel, enhancing the overall gaming experience for players.",
+      },
+      {
+        title: "Face Value Display",
+        description:
+          "Each chip features clear denominations and attractive designs, allowing for easy identification and stackability during gameplay.",
+      },
+      {
+        title: "Portable Storage Solution",
+        description:
+          "The sturdy ABS case is designed for portability, making it easy to transport the chip set to events or securely store it when not in use.",
+      },
+    ],
+  },
+  {
+    title: "Professional 100-Piece Poker Chip Set with Dice for Card Games",
+    category: "Poker Equipment",
+    description:
+      "Enhance your gaming experience with our premium 100-piece Professional Poker Chip Set. Featuring five vibrant denominations and a compact storage case, this set is perfect for businesses looking to host card games at events or parties, ensuring quality and durability for repeated use.",
+    image: "/product/71m87ih+idL.webp",
+    images: [
+      "/product/41zTnk-d3cL.webp",
+      "/product/41jzqgMLQxL.webp",
+      "/product/41HHKdSkiZL.webp",
+      "/product/51cJrQEWuEL.webp",
+      "/product/51a4GOKgcNL.webp",
+      "/product/51nD-cFimnL.webp",
+    ],
+    image_names: [
+      "71m87ih+idL.webp",
+      "41zTnk-d3cL.webp",
+      "41jzqgMLQxL.webp",
+      "41HHKdSkiZL.webp",
+      "51cJrQEWuEL.webp",
+      "51a4GOKgcNL.webp",
+      "51nD-cFimnL.webp",
+    ],
+    features: [
+      {
+        title: "Complete Set of Chips",
+        description:
+          "Includes 100 chips in five colors: black, red, blue, green, and white, ensuring a comprehensive range for all your gaming needs.",
+      },
+      {
+        title: "High-Quality Material",
+        description:
+          "Crafted from durable PVC, these chips are designed to withstand frequent handling without fading, cracking, or deforming.",
+      },
+      {
+        title: "Compact and Portable",
+        description:
+          "Each chip measures approximately 3.9 cm in diameter, making this set easy to transport and store for ultimate convenience.",
+      },
+      {
+        title: "Versatile Gaming Use",
+        description:
+          "Ideal for Texas Hold'em, Blackjack, and various card games, this set is perfect for corporate events, game nights, and parties.",
+      },
+    ],
+  },
+  {
+    title: "Maverick Standard Index Playing Cards - 12 Decks, Durable, Versatile",
+    category: "Poker Equipment",
+    description:
+      "Elevate your game nights with Maverick’s 12-pack of standard index playing cards, ideal for businesses hosting events or tournaments. Designed for durability and ease of handling, these cards offer endless entertainment for players of all skill levels, making them a reliable choice for retailers and event organizers alike.",
+    image: "/product/610n7wJELRL.webp",
+    images: [
+      "/product/41ayXn-l3qL.webp",
+      "/product/417V9e+sPkL.webp",
+      "/product/41SlA2DjE-L.webp",
+      "/product/51IablnHxZL.webp",
+      "/product/514z5iIAPKL.webp",
+      "/product/51bnaV0AZdL.webp",
+    ],
+    image_names: [
+      "610n7wJELRL.webp",
+      "41ayXn-l3qL.webp",
+      "417V9e+sPkL.webp",
+      "41SlA2DjE-L.webp",
+      "51IablnHxZL.webp",
+      "514z5iIAPKL.webp",
+      "51bnaV0AZdL.webp",
+    ],
+    features: [
+      {
+        title: "Classic Design",
+        description:
+          "Each deck features a timeless design and standard index faces that appeal to all players, enhancing the atmosphere of any game night.",
+      },
+      {
+        title: "12 Complete Decks",
+        description:
+          "This bulk packaging includes 12 full decks, making it easy to facilitate large tournaments or have spare cards on hand for multiple sessions.",
+      },
+      {
+        title: "Durable Materials",
+        description:
+          "Maverick cards are coated with a smooth plastic finish, ensuring they withstand frequent shuffling while maintaining their aesthetic appeal.",
+      },
+      {
+        title: "Versatile Gameplay",
+        description:
+          "Suitable for a wide range of card games, including Poker, Rummy, and Canasta, these cards cater to various player preferences, making them a versatile option for your inventory.",
+      },
+    ],
+  },
+  {
+    title: "Professional 14g Clay Poker Chip Set with Dealer Button & Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with our 300-piece professional-grade clay poker chip set, perfect for 6-8 players. The set features high-quality, 14g chips and includes two decks of playing cards and a dealer button, all housed in a durable, stylish carrying case designed for portability and protection.",
+    image: "/product/81pw+JcpEWL.webp",
+    images: [
+      "/product/51IrLE5R0ML.webp",
+      "/product/41NRzaqN4UL.webp",
+      "/product/5108LtqRaEL.webp",
+      "/product/5125HLtGmyL.webp",
+      "/product/41-rLok3jNL.webp",
+      "/product/41-wX4yuu5L.webp",
+      "/product/41O9eZzf3XL.webp",
+    ],
+    image_names: [
+      "81pw+JcpEWL.webp",
+      "51IrLE5R0ML.webp",
+      "41NRzaqN4UL.webp",
+      "5108LtqRaEL.webp",
+      "5125HLtGmyL.webp",
+      "41-rLok3jNL.webp",
+      "41-wX4yuu5L.webp",
+      "41O9eZzf3XL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Chips",
+        description:
+          "Each 14g chip is crafted using dual-injection molding technology, ensuring durability and a premium feel, ideal for regular use in professional settings.",
+      },
+      {
+        title: "Sturdy Carrying Case",
+        description:
+          "The robust polycarbonate carrying case features an aluminum alloy frame for enhanced support, providing maximum protection and organization for your chips.",
+      },
+      {
+        title: "Optimal Player Support",
+        description:
+          "This 300-piece set is tailored for 6-8 players, ensuring that every game night can accommodate your guests comfortably and professionally.",
+      },
+      {
+        title: "Versatile Game Compatibility",
+        description:
+          "Perfect for Texas Hold'em, Blackjack, and tournaments, this poker chip set enhances any gaming environment, delivering an authentic casino experience.",
+      },
+    ],
+  },
+  {
+    title: "IXIGER Plastic Poker Chips Set with Velvet Bag – 100 Durable Chips",
+    category: "Poker Equipment",
+    description:
+      "The IXIGER plastic poker chips set is an essential addition for any business hosting game nights or events, featuring 100 high-quality, eco-friendly chips in five vibrant colors. Packaged with a black velvet bag for easy storage, these chips enhance gameplay while ensuring durability and style, making them perfect for professional environments and social gatherings alike.",
+    image: "/product/714Z4IfF0NL.webp",
+    images: [
+      "/product/41oKLsva0HL.webp",
+      "/product/412xOQH53bL.webp",
+      "/product/41WdkaTpKbL.webp",
+      "/product/41lLYOG+s1L.webp",
+      "/product/61I0sLTPXbL.webp",
+    ],
+    image_names: [
+      "714Z4IfF0NL.webp",
+      "41oKLsva0HL.webp",
+      "412xOQH53bL.webp",
+      "41WdkaTpKbL.webp",
+      "41lLYOG+s1L.webp",
+      "61I0sLTPXbL.webp",
+    ],
+    features: [
+      {
+        title: "Durable Material",
+        description:
+          "Made from eco-friendly ABS plastic, these chips resist wear and tear, ensuring long-lasting use for frequent gaming events.",
+      },
+      {
+        title: "Vibrant Color Variety",
+        description:
+          "The set includes five distinct colors—white, red, green, blue, and black—allowing for easy game organization and better player engagement.",
+      },
+      {
+        title: "Convenient Storage",
+        description:
+          "The included black velvet bag provides a stylish and practical solution for storing and transporting chips securely.",
+      },
+      {
+        title: "Professional Quality",
+        description:
+          "With a diameter of 4 cm and a thickness of 3 mm, these chips meet high standards for both quality and feel, enhancing the gaming experience.",
+      },
+    ],
+  },
+  {
+    title: "Professional Poker Chip Set - 11.5g Chips, Case, Cards & 500 Tokens",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming brand with our Professional Poker Chip Set, featuring 500 high-quality, 11.5g casino-grade poker chips in four vibrant colors, two decks of standard cards, and a sleek aluminum carrying case. Ideal for businesses looking to enhance gaming experiences or host themed events.",
+    image: "/product/81yy521362L.webp",
+    images: [
+      "/product/51BxUjVKrIL.webp",
+      "/product/516Dt1HnTiL.webp",
+      "/product/51PhL3Nn0fL.webp",
+      "/product/51F-G74g4IL.webp",
+      "/product/51s0rPu+qAL.webp",
+      "/product/51hHLrt2-TL.webp",
+    ],
+    image_names: [
+      "81yy521362L.webp",
+      "51BxUjVKrIL.webp",
+      "516Dt1HnTiL.webp",
+      "51PhL3Nn0fL.webp",
+      "51F-G74g4IL.webp",
+      "51s0rPu+qAL.webp",
+      "51hHLrt2-TL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Chips",
+        description:
+          "Crafted from durable 11.5g composite resin, our poker chips provide a genuine casino feel, ensuring an authentic gaming experience for your customers.",
+      },
+      {
+        title: "Complete Gaming Package",
+        description:
+          "The set includes 500 colorful casino chips, two decks of playing cards, and essential dealer buttons, making it ready for immediate use in tournaments or casual games.",
+      },
+      {
+        title: "Stylish Storage Case",
+        description:
+          "Housed in an aluminum case lined with plush velvet, this set allows for secure storage while offering a sophisticated presentation for your business or events.",
+      },
+      {
+        title: "Versatile Usage",
+        description:
+          "Perfect for poker nights, corporate events, or promotional giveaways, this poker chip set adds value to any gaming establishment or enhances customer engagement.",
+      },
+    ],
+  },
+  {
+    title: "Fat Cat Bling 13.5g Clay Poker Chip Set with Aluminum Case - 500 Chips",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with the Fat Cat Bling 13.5g Texas Hold 'em poker chip set, featuring 500 high-quality, colorful clay chips and essential accessories for professional gameplay, all housed in a durable aluminum case for protection and portability.",
+    image: "/product/71Luk2KibvL.webp",
+    images: [
+      "/product/51jX8L34riL.webp",
+      "/product/31KWEe46x6L.webp",
+      "/product/41Dv7vaJGIL.webp",
+      "/product/41Pw3fk-64L.webp",
+      "/product/41Rx17Jt9WL.webp",
+      "/product/41CH-ggTyGL.webp",
+    ],
+    image_names: [
+      "71Luk2KibvL.webp",
+      "51jX8L34riL.webp",
+      "31KWEe46x6L.webp",
+      "41Dv7vaJGIL.webp",
+      "41Pw3fk-64L.webp",
+      "41Rx17Jt9WL.webp",
+      "41CH-ggTyGL.webp",
+    ],
+    features: [
+      {
+        title: "Premium Clay Poker Chips",
+        description:
+          "Each chip weighs 13.5 grams and is crafted from high-quality Claytec material, ensuring a satisfying feel and professional play for serious gaming environments.",
+      },
+      {
+        title: "Comprehensive Gaming Accessories",
+        description:
+          "Includes two decks of standard playing cards, a complete set of big blind and small blind buttons, and a dealer button, providing everything needed for hosting formal games effortlessly.",
+      },
+      {
+        title: "Durable Aluminum Case",
+        description:
+          "The sturdy aluminum casing, equipped with foam cushioning, safeguards your chips from shocks and elements, making it ideal for both home and on-the-go gaming sessions.",
+      },
+      {
+        title: "Versatile Game Enhancer",
+        description:
+          "This set also includes a full set of poker dice, adding an exciting twist to your gameplay, making it a popular choice for fast-paced game nights.",
+      },
+    ],
+  },
+  {
+    title: "Poker Hand Ranking Cards Set with Texas Hold'em Quick Reference",
+    category: "Poker Equipment",
+    description:
+      "This compact 5-piece poker hand ranking card set is essential for B2B poker suppliers. Featuring easy-to-read rankings and comprehensive Texas Hold'em rules, the double-sided design ensures quick, accurate references, perfect for enhancing gameplay and customer experience in any poker business setting.",
+    image: "/product/916OdOImMKL.webp",
+    images: [
+      "/product/51FHo-u2QnL.webp",
+      "/product/51ke1pvNf2L.webp",
+      "/product/51tMStfTrCL.webp",
+      "/product/51FG-7jjsBL.webp",
+      "/product/51QXUM-6UxL.webp",
+    ],
+    image_names: [
+      "916OdOImMKL.webp",
+      "51FHo-u2QnL.webp",
+      "51ke1pvNf2L.webp",
+      "51tMStfTrCL.webp",
+      "51FG-7jjsBL.webp",
+      "51QXUM-6UxL.webp",
+    ],
+    features: [
+      {
+        title: "Quick Reference Design",
+        description:
+          "The poker hand rankings are designed for rapid reference, allowing players to make informed decisions in high-stakes environments.",
+      },
+      {
+        title: "Double-Sided Utility",
+        description:
+          "Each card features essential Texas Hold'em rules on the back, combining convenience and functionality for both new and experienced players.",
+      },
+      {
+        title: "Standard Card Size",
+        description:
+          "Designed to fit seamlessly within standard poker decks, these cards are easy to integrate into your existing inventory without any compatibility issues.",
+      },
+      {
+        title: "High-Quality Durability",
+        description:
+          "Constructed with premium UV-coated materials, these cards maintain their vibrant design and endure regular usage in a fast-paced poker setting.",
+      },
+    ],
+  },
+  {
+    title: "500 Monaco Casino Clay Poker Chips Set - Durable Case, 2 Decks, 5 Dice",
+    category: "Poker Equipment",
+    description:
+      "Discover the premium quality of the Versa Games 500 Monaco Casino clay poker chips set, designed for durability and performance. Perfect for professional and casual gaming events, this set includes everything needed for up to 8 players, enhancing your gaming experience with finely crafted chips, sturdy case, and essential accessories.",
+    image: "/product/81NbuYJtRKL.webp",
+    images: ["/product/51htAkYbtKL.webp", "/product/416q7Ht3IQL.webp"],
+    image_names: ["81NbuYJtRKL.webp", "51htAkYbtKL.webp", "416q7Ht3IQL.webp"],
+    features: [
+      {
+        title: "Exclusive Chip Design",
+        description:
+          "Our poker chips feature unique designs created using custom CNC machining, ensuring unmatched quality and originality in every piece.",
+      },
+      {
+        title: "Durable Storage Case",
+        description:
+          "Crafted from tough thermoplastic ABS, the enhanced case design includes a solid core and three hinges, providing superior durability for long-lasting use.",
+      },
+      {
+        title: "Comprehensive Game Set",
+        description:
+          "This set includes 500 chips in a balanced color distribution, two decks of plastic-coated playing cards, five dice, and a dealer button, ideal for smooth gameplay.",
+      },
+      {
+        title: "Perfect for Groups",
+        description:
+          "Accommodating 5-8 players, this poker chip set is designed for both competitive and casual settings, making it a valuable addition to any gaming collection.",
+      },
+    ],
+  },
+  {
+    title: "500-Piece Professional 11.5g Poker Chip Set with Case",
+    category: "Poker Equipment",
+    description:
+      "This 500-piece professional poker chip set consists of high-quality 11.5g casino-grade chips, ideal for enhancing your gaming tournaments or corporate events. The set includes an aluminum case, playing cards, dice, and a dealer button, providing exceptional value and convenience for businesses in the gaming industry.",
+    image: "/product/810gKe9AgrL.webp",
+    images: ["/product/51DarVpIiVL.webp"],
+    image_names: ["810gKe9AgrL.webp", "51DarVpIiVL.webp"],
+    features: [
+      {
+        title: "Casino-Grade Quality",
+        description:
+          "Each poker chip weighs 11.5 grams, ensuring a professional feel with durable construction that meets casino standards.",
+      },
+      {
+        title: "Complete Gaming Set",
+        description:
+          "The set includes 500 poker chips, two decks of cards, five dice, and a dealer button, delivering everything needed for an engaging poker night.",
+      },
+      {
+        title: "Enhanced Carrying Case",
+        description:
+          "Features a reinforced aluminum case with a 30% thicker chip tray, enhancing durability and protecting your poker equipment during transport.",
+      },
+      {
+        title: "Diverse Color Options",
+        description:
+          "The color combinations of the chips feature denominations of 1, 5, 25, 50, 100, 500, and 1000, providing a versatile gaming experience for players of all levels.",
+      },
+    ],
+  },
+  {
+    title: "Yellowstone 200-Piece Poker Set with Custom Carry Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with the Yellowstone 200-Piece Poker Set, featuring high-quality chips and a personalized carry case. Perfect for businesses and event planners seeking a unique entertainment solution, this set is designed for any poker night, making it a great investment for team-building activities or client events.",
+    image: "/product/91rBcIo5UWL.webp",
+    images: [
+      "/product/51DIemkguaL.webp",
+      "/product/51VvhNPqjIL.webp",
+      "/product/510cee+F+wL.webp",
+      "/product/51ewqVjOc7L.webp",
+      "/product/41Xm2x39IWL.webp",
+      "/product/51YmyjDo+sL.webp",
+      "/product/51DwPlBlnlL.webp",
+    ],
+    image_names: [
+      "91rBcIo5UWL.webp",
+      "51DIemkguaL.webp",
+      "51VvhNPqjIL.webp",
+      "510cee+F+wL.webp",
+      "51ewqVjOc7L.webp",
+      "41Xm2x39IWL.webp",
+      "51YmyjDo+sL.webp",
+      "51DwPlBlnlL.webp",
+    ],
+    features: [
+      {
+        title: "Comprehensive Poker Kit",
+        description:
+          "Includes 200 professional-grade poker chips, 3 player markers, a deck of Yellowstone-themed playing cards, and a convenient carry case, ensuring everything you need for an exceptional gaming experience.",
+      },
+      {
+        title: "High-Quality Components",
+        description:
+          "Crafted from premium materials, this set provides durability and a professional feel, making it suitable for frequent use in both casual and corporate settings.",
+      },
+      {
+        title: "Customizable Features",
+        description:
+          "The poker set can be customized with your company's logo or branding, offering a personalized touch that enhances your corporate events and promotions.",
+      },
+      {
+        title: "Designed for Multiple Players",
+        description:
+          "Ideal for 2 or more players, this poker set facilitates engaging team-building exercises and social gatherings, reinforcing camaraderie and enhancing communication among participants.",
+      },
+    ],
+  },
+  {
+    title: "500 Premium Poker Chips Set - Outlaw with Playing Cards and Accessories",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with our exclusive 500-piece poker chip set, ideal for 5-8 players. Designed by Versa Games, this high-quality set includes a variety of color-coded chips, two decks of plastic-coated playing cards, and durable accessories, ensuring exceptional value for your business or events.",
+    image: "/product/81pfZixiDrL.webp",
+    images: [
+      "/product/51YA5RCQEJL.webp",
+      "/product/41ivq14LnEL.webp",
+      "/product/51zhINzc2BL.webp",
+      "/product/51A7xSPE6ML.webp",
+      "/product/514MeYEsfhL.webp",
+      "/product/51YB-S04VxL.webp",
+      "/product/51Vgw5pEq5L.webp",
+    ],
+    image_names: [
+      "81pfZixiDrL.webp",
+      "51YA5RCQEJL.webp",
+      "41ivq14LnEL.webp",
+      "51zhINzc2BL.webp",
+      "51A7xSPE6ML.webp",
+      "514MeYEsfhL.webp",
+      "51YB-S04VxL.webp",
+      "51Vgw5pEq5L.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Chips",
+        description:
+          "Our poker chips are crafted with superior quality materials, offering a premium feel and durability compared to other brands on the market.",
+      },
+      {
+        title: "Comprehensive Set",
+        description:
+          "This set includes 150 white, 150 red, 100 green, 50 blue, and 50 black chips, perfectly catering to group sizes of 5-8 players.",
+      },
+      {
+        title: "Customizable Options",
+        description:
+          "While this standard set isn't customizable, additional chips can be purchased if you require more for enhanced gameplay flexibility.",
+      },
+      {
+        title: "Durable Storage Case",
+        description:
+          "Featuring a robust ABS plastic case with a 30% thicker internal chip tray and multiple hinges, our design prevents breakage, ensuring secure storage.",
+      },
+    ],
+  },
+  {
+    title: "SLOWPLAY Godel Ceramic Poker Chip Set - 500 Durable Chips with Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your poker game with the SLOWPLAY Godel Ceramic Poker Chip Set, featuring 500 top-quality chips designed for durability and performance, complete with a premium carry-case. Ideal for enhancing business poker tournaments and corporate events.",
+    image: "/product/715Y-F7mvBL.webp",
+    images: [
+      "/product/41ejuKu3OML.webp",
+      "/product/41rev12yO3L.webp",
+      "/product/41zXPbEO74L.webp",
+      "/product/41Ft8IhOdYL.webp",
+      "/product/41AKLJ8x9cL.webp",
+      "/product/41yixmfG5rL.webp",
+    ],
+    image_names: [
+      "715Y-F7mvBL.webp",
+      "41ejuKu3OML.webp",
+      "41rev12yO3L.webp",
+      "41zXPbEO74L.webp",
+      "41Ft8IhOdYL.webp",
+      "41AKLJ8x9cL.webp",
+      "41yixmfG5rL.webp",
+    ],
+    features: [
+      {
+        title: "Superior Craftsmanship",
+        description:
+          "Each 39mm ceramic chip weighs 10 grams, crafted to deliver an exceptional tactile experience while ensuring long-lasting performance for frequent use.",
+      },
+      {
+        title: "Enhanced Stability",
+        description:
+          "The innovative design provides optimal friction for easy stacking and shuffling, preventing slips during intense game sessions.",
+      },
+      {
+        title: "Premium Carry Case",
+        description:
+          "Featuring a highly durable polycarbonate exterior tested for 5000 vibrations, the case effectively protects chips with its aerospace-grade aluminum frame.",
+      },
+      {
+        title: "Large Capacity",
+        description:
+          "With 500 chips, this set comfortably accommodates up to 10 players, making it a perfect choice for corporate entertainment and large gatherings.",
+      },
+    ],
+  },
+  {
+    title: "Brybelly 14g 1000-Count Poker Chip Set - Clay Composite, Aluminum Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with the Brybelly 14g Poker Chip Set, featuring 1000 high-quality clay composite chips. Perfect for businesses seeking to enhance their poker nights or casino-themed events, this complete set includes everything needed for an authentic gaming experience, ensuring your clients enjoy both durability and convenience.",
+    image: "/product/81g+b3QNkJL.webp",
+    images: [
+      "/product/51MvJrVj+bL.webp",
+      "/product/51BZ5R+m9SL.webp",
+      "/product/41SFjSvZwOL.webp",
+      "/product/418mmhM3sFL.webp",
+      "/product/51pk52qPdeL.webp",
+      "/product/51vUDvD8N-L.webp",
+      "/product/51bt88txsrL.webp",
+    ],
+    image_names: [
+      "81g+b3QNkJL.webp",
+      "51MvJrVj+bL.webp",
+      "51BZ5R+m9SL.webp",
+      "41SFjSvZwOL.webp",
+      "418mmhM3sFL.webp",
+      "51pk52qPdeL.webp",
+      "51vUDvD8N-L.webp",
+      "51bt88txsrL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Chips",
+        description:
+          "Each chip weighs 14 grams, providing a substantial and authentic casino feel for an immersive gaming experience.",
+      },
+      {
+        title: "Unique Texture Inlays",
+        description:
+          "Distinctive texture inlays on each chip ensure easy stacking and optimal visibility, enhancing gameplay and user engagement.",
+      },
+      {
+        title: "Durable Aluminum Case",
+        description:
+          "The robust aluminum carrying case, complete with foam padding, ensures safe transport and storage of all components.",
+      },
+      {
+        title: "Complete Game Essentials",
+        description:
+          "The set includes 2 decks of playing cards and a dealer button, catering to various games like poker and blackjack for versatile entertainment.",
+      },
+    ],
+  },
+  {
+    title: "500-Piece Poker Chip Set with Aluminum Case - Premium Quality for Professionals",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with our premium 500-piece poker chip set, featuring high-quality 11.5g chips and a stylish aluminum case. Ideal for professional establishments and dedicated gaming enthusiasts, this comprehensive set enhances any poker night with its durability, sophistication, and extensive play options.",
+    image: "/product/81sGSjp7lYL.webp",
+    images: [
+      "/product/518crM0NfQL.webp",
+      "/product/41HG3V5Kv3L.webp",
+      "/product/51OLFyePscL.webp",
+      "/product/51vn7Hv45KL.webp",
+      "/product/51NJnxluEVL.webp",
+      "/product/41zAytrsHwL.webp",
+    ],
+    image_names: [
+      "81sGSjp7lYL.webp",
+      "518crM0NfQL.webp",
+      "41HG3V5Kv3L.webp",
+      "51OLFyePscL.webp",
+      "51vn7Hv45KL.webp",
+      "51NJnxluEVL.webp",
+      "41zAytrsHwL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Poker Chips",
+        description:
+          "Each chip weighs 11.5 grams and measures 39mm in diameter, ensuring a professional feel and durability suitable for high-stakes games.",
+      },
+      {
+        title: "Stylish Aluminum Case",
+        description:
+          "The included aluminum case combines elegance with durability, featuring a black velvet lining to protect the chips from dust and damage during transport.",
+      },
+      {
+        title: "Complete Game Accessories",
+        description:
+          "This set comes with 500 casino-sized chips in multiple colors, 5 dice, 2 decks of cards, a dealer button, and both small and big blind buttons, making it suitable for numerous games.",
+      },
+      {
+        title: "Perfect for Group Play",
+        description:
+          "Designed for 8 to 10 players, this classic poker chip set is ideal for Texas Hold'em, Blackjack, and tournaments, enhancing the gaming experience at gatherings.",
+      },
+    ],
+  },
+  {
+    title: "Premium 500-Count Clay Poker Chip Set for Texas Hold'em with Hard Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your poker game with our premium 500-count clay poker chip set, designed for professionals and enthusiasts alike. Each set comes with high-quality chips, durable cards, and a sturdy case, ensuring an exceptional gaming experience suitable for any poker tournament or corporate event.",
+    image: "/product/81hNz82WXzL.webp",
+    images: [
+      "/product/51-j+n3JTqL.webp",
+      "/product/51QVLaB+k6L.webp",
+      "/product/51FbOroCH2L.webp",
+      "/product/51tUCkdTGjL.webp",
+      "/product/51lTl0ZbxeL.webp",
+      "/product/51ioBS2ughL.webp",
+    ],
+    image_names: [
+      "81hNz82WXzL.webp",
+      "51-j+n3JTqL.webp",
+      "51QVLaB+k6L.webp",
+      "51FbOroCH2L.webp",
+      "51tUCkdTGjL.webp",
+      "51lTl0ZbxeL.webp",
+      "51ioBS2ughL.webp",
+    ],
+    features: [
+      {
+        title: "Comprehensive Poker Set",
+        description:
+          "Includes 500 high-quality clay chips with six denominations, perfect for 9-10 players, ensuring seamless organization for professional poker games.",
+      },
+      {
+        title: "High-Quality Materials",
+        description:
+          "Made from composite clay with an iron core, each 14-gram chip is designed for optimal grip and delivers an authentic casino experience.",
+      },
+      {
+        title: "All-in-One Experience",
+        description:
+          "Accompanied by two decks of premium PVC playing cards and a dealer button, providing everything needed for a complete poker night.",
+      },
+      {
+        title: "Durable Carry Case",
+        description:
+          "Features a robust polycarbonate exterior that protects chips and cards, along with a velvet interior for secure storage and easy portability.",
+      },
+    ],
+  },
+  {
+    title: "Bicycle Rider Back Playing Cards - Standard Index, Dual Set, Durable",
+    category: "Poker Equipment",
+    description:
+      "Maximize your gaming experience with our Bicycle Rider Back Playing Cards, featuring a standard index and two decks in red and black. Ideal for casinos, family game nights, and professional gatherings, these cards combine quality craftsmanship with versatile play options, ensuring reliability and enjoyment for every occasion.",
+    image: "/product/8105FqWM3JL.webp",
+    images: [
+      "/product/519DiPufdmL.webp",
+      "/product/51qdmI8ioXL.webp",
+      "/product/51mwaWMs4AL.webp",
+      "/product/51b085ZUO0L.webp",
+      "/product/51uzS7RSsgL.webp",
+    ],
+    image_names: [
+      "8105FqWM3JL.webp",
+      "519DiPufdmL.webp",
+      "51qdmI8ioXL.webp",
+      "51mwaWMs4AL.webp",
+      "51b085ZUO0L.webp",
+      "51uzS7RSsgL.webp",
+    ],
+    features: [
+      {
+        title: "Classic Rider Back Design",
+        description:
+          "Elevate your gaming sessions with the iconic Rider Back design that enhances card recognition and playability, crafted for both casual and competitive environments.",
+      },
+      {
+        title: "Versatile Card Applications",
+        description:
+          "Perfect for a range of card games from poker and blackjack to rummy and pinochle, making it an essential choice for diverse gaming events.",
+      },
+      {
+        title: "Dual Deck Set",
+        description:
+          "Includes two decks—one red and one black—offering flexibility and double the fun for group play and poker nights, ensuring you're always prepared.",
+      },
+      {
+        title: "Trusted Bicycle Quality",
+        description:
+          "Manufactured with Bicycle's renowned air-cushion finish, our cards provide durability and smooth handling, guaranteeing reliable performance during every shuffle.",
+      },
+    ],
+  },
+  {
+    title: "Durable Poker Chip Set with Storage Box - 100 Count",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with this premium set of 100 durable plastic poker chips, available in five vibrant colors and denominations, perfect for enhancing your poker nights, gaming clubs, or family gatherings. Each chip is designed for longevity and ease of use, ensuring that your investment in entertainment pays off.",
+    image: "/product/51--Sh84s4L.webp",
+    images: [
+      "/product/41Ndks7LL2L.webp",
+      "/product/41+oLT+OzYL.webp",
+      "/product/41zZ+F86i1L.webp",
+      "/product/41G4jgvD5EL.webp",
+      "/product/516+YqispbL.webp",
+      "/product/51X3mZqodDL.webp",
+    ],
+    image_names: [
+      "51--Sh84s4L.webp",
+      "41Ndks7LL2L.webp",
+      "41+oLT+OzYL.webp",
+      "41zZ+F86i1L.webp",
+      "41G4jgvD5EL.webp",
+      "516+YqispbL.webp",
+      "51X3mZqodDL.webp",
+    ],
+    features: [
+      {
+        title: "Premium Quality Material",
+        description:
+          "Crafted from high-grade PP plastic, these poker chips are resistant to wear, easy to clean, and withstand intense gaming sessions.",
+      },
+      {
+        title: "Versatile Gameplay",
+        description:
+          "Suitable for various games such as Texas Hold'em and Blackjack, this chip set enhances any gaming environment, making it ideal for clubs and casual play.",
+      },
+      {
+        title: "Portable and Convenient",
+        description:
+          "With a compact design and included storage box, these poker chips are easy to transport, ensuring enjoyable games at home, events, or tournaments.",
+      },
+      {
+        title: "Color-Coded Denominations",
+        description:
+          "Featuring five distinct colors representing different values, the set includes 100 chips for clear and effective gameplay management.",
+      },
+    ],
+  },
+  {
+    title: "PUREPLAY 300-Count 11.5g Poker Chip Set with Durable Carry Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with the PUREPLAY 300-Count Poker Chip Set, designed for B2B buyers seeking high-quality casino supplies. This complete set includes weighted chips crafted from premium ABS with metal cores, ensuring unmatched durability and a professional feel, perfect for poker nights or gaming tournaments.",
+    image: "/product/716UChVzdlL.webp",
+    images: [
+      "/product/51ZZJRDCXkL.webp",
+      "/product/51yxPabLs5L.webp",
+      "/product/51yweIp8MiL.webp",
+      "/product/31ftZ++ZlSL.webp",
+      "/product/41Vf4KHJHQL.webp",
+      "/product/412kkpudk5L.webp",
+    ],
+    image_names: [
+      "716UChVzdlL.webp",
+      "51ZZJRDCXkL.webp",
+      "51yxPabLs5L.webp",
+      "51yweIp8MiL.webp",
+      "31ftZ++ZlSL.webp",
+      "41Vf4KHJHQL.webp",
+      "412kkpudk5L.webp",
+    ],
+    features: [
+      {
+        title: "Comprehensive Chip Set",
+        description:
+          "The set includes 300 carefully selected chips: 100 white, 50 green, 50 blue, and 50 black, complemented by essential gaming accessories like dice, cards, and dealer buttons.",
+      },
+      {
+        title: "High-Quality Construction",
+        description:
+          "Made from superior ABS material, these 11.5g poker chips feature a unique metal core for an authentic casino feel, ensuring longevity and robustness for frequent use.",
+      },
+      {
+        title: "Portable Carrying Solution",
+        description:
+          "Packaged in a high-strength Oxford fabric bag with a custom frame, this set is designed for secure transport and easy access, outperforming traditional aluminum cases.",
+      },
+      {
+        title: "Versatile for All Ages",
+        description:
+          "Perfect for a variety of games including Texas Hold'em and blackjack, this poker set makes a thoughtful gift for birthdays, holidays, and special occasions, enjoyable for both kids and adults.",
+      },
+    ],
+  },
+  {
+    title: "Brybelly 14G Poker Chips Set - Ultimate Casino Experience, 500 Counts",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming business with Brybelly's 14G poker chip set, featuring 500 high-quality composite chips that ensure a real casino feel. Complete with an aluminum carrying case for secure transport, this set is perfect for poker nights, tournaments, and gambling events, offering exceptional durability and convenience.",
+    image: "/product/81wKLPJArCL.webp",
+    images: [
+      "/product/41PaSSkp1CL.webp",
+      "/product/41Y3qM3I0vL.webp",
+      "/product/5147x2lN9PL.webp",
+      "/product/41aCBv+PqKL.webp",
+      "/product/51PQ6WQ4wuL.webp",
+      "/product/417aDCszD+L.webp",
+    ],
+    image_names: [
+      "81wKLPJArCL.webp",
+      "41PaSSkp1CL.webp",
+      "41Y3qM3I0vL.webp",
+      "5147x2lN9PL.webp",
+      "41aCBv+PqKL.webp",
+      "51PQ6WQ4wuL.webp",
+      "417aDCszD+L.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Chips",
+        description:
+          "Our 14G clay composite chips provide a premium feel, enhancing the authenticity of your gaming experiences.",
+      },
+      {
+        title: "Unique Textured Design",
+        description:
+          "Each chip features a distinct texture for easy stacking and high visibility, ensuring a smooth gameplay experience.",
+      },
+      {
+        title: "Durable Aluminum Case",
+        description:
+          "The robust aluminum carrying case, lined with foam padding, guarantees the safe transport and storage of your complete poker set.",
+      },
+      {
+        title: "Versatile Chip Values",
+        description:
+          "Includes a wide range of chip denominations from $1 to $1000, making it suitable for various poker games and betting scenarios.",
+      },
+    ],
+  },
+  {
+    title: "300-Piece Professional Poker Chip Set with Aluminum Case and Accessories",
+    category: "Poker Equipment",
+    description:
+      "This comprehensive 300-piece poker chip set, weighing 11.5 grams per chip, is perfect for organizing professional Texas Hold'em games. Complete with five dice, two decks of cards, and an aluminum carrying case, it's designed for durability and ease of use, making it an ideal solution for businesses, clubs, and family gatherings.",
+    image: "/product/71X0bvnqdCL.webp",
+    images: [
+      "/product/41XcMlYOVZL.webp",
+      "/product/41YkHOmIq0L.webp",
+      "/product/41zfhZ-6jsL.webp",
+      "/product/41ofHK1LbLL.webp",
+      "/product/41HG4kd70uL.webp",
+    ],
+    image_names: [
+      "71X0bvnqdCL.webp",
+      "41XcMlYOVZL.webp",
+      "41YkHOmIq0L.webp",
+      "41zfhZ-6jsL.webp",
+      "41ofHK1LbLL.webp",
+      "41HG4kd70uL.webp",
+    ],
+    features: [
+      {
+        title: "Complete Poker Set",
+        description:
+          "Includes 300 high-quality chips in multiple denominations, five dice, and two decks of playing cards, ensuring all essential game components are at your fingertips.",
+      },
+      {
+        title: "Premium Quality Chips",
+        description:
+          "Each chip features a metal core encased in durable plastic for a professional feel, providing excellent longevity and a smooth surface for exceptional gameplay.",
+      },
+      {
+        title: "Portable Aluminum Case",
+        description:
+          "Lightweight and sturdy, the aluminum case features a built-in chip holder to keep all components organized and protected during transport.",
+      },
+      {
+        title: "Versatile Gaming Experience",
+        description:
+          "Ideal for various card games including Texas Hold'em and Blackjack, this set enhances party interactions, making it a great gift for holidays and gatherings.",
+      },
+    ],
+  },
+  {
+    title: "SLOWPLAY Nash Ceramic Poker Chip Set - 500 pcs, 43mm, Premium Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your poker game with the SLOWPLAY Nash Ceramic Poker Chip Set, featuring 500 high-quality, 12g chips designed for Texas Hold'em. The premium carrying case ensures durability and style, making it an essential purchase for businesses looking to offer top-notch gaming experiences.",
+    image: "/product/81Sv6Zigv1L.webp",
+    images: [
+      "/product/418LjzC8mhL.webp",
+      "/product/41ZKSyVqtPL.webp",
+      "/product/51fUobKOwqL.webp",
+      "/product/51U2ldcdfwL.webp",
+      "/product/51Jp10XBMIL.webp",
+      "/product/41b-lrkf7PL.webp",
+    ],
+    image_names: [
+      "81Sv6Zigv1L.webp",
+      "418LjzC8mhL.webp",
+      "41ZKSyVqtPL.webp",
+      "51fUobKOwqL.webp",
+      "51U2ldcdfwL.webp",
+      "51Jp10XBMIL.webp",
+      "41b-lrkf7PL.webp",
+    ],
+    features: [
+      {
+        title: "Premium Quality Chips",
+        description:
+          "Crafted with precision, these 12g ceramic poker chips offer an exceptional feel and aesthetic that enhances the overall gaming experience for serious players.",
+      },
+      {
+        title: "Durable Carrying Case",
+        description:
+          "The high-end case is made from robust polycarbonate and features a custom aluminum frame, ensuring your chips are protected while being easily portable.",
+      },
+      {
+        title: "Artistic Design Inspiration",
+        description:
+          "Designed with 20th-century Art Deco influences, the chips feature streamlined lines and geometric patterns, merging classic elegance with modern minimalism.",
+      },
+      {
+        title: "Customizable Chip Sets",
+        description:
+          "The 500-piece set includes a variety of colors to meet different gameplay needs, accommodating both casual gatherings and competitive poker nights.",
+      },
+    ],
+  },
+  {
+    title: "100-Piece Poker Chip Set with Denominations and Storage Case",
+    category: "Poker Equipment",
+    description:
+      "This 100-piece poker chip set is ideal for businesses and poker enthusiasts, featuring durable plastic chips in five colors with designated values. Perfect for enhancing gameplay in poker clubs, tournaments, or family game nights, this portable set ensures easy storage and transportation.",
+    image: "/product/512Fkts+0SL.webp",
+    images: [
+      "/product/412Rx30NwKL.webp",
+      "/product/41N0kgg4w2L.webp",
+      "/product/41rE7x0v3oL.webp",
+      "/product/51AkTuHNSeL.webp",
+      "/product/51EE0Ov3AqL.webp",
+      "/product/51lZi-i7TUL.webp",
+    ],
+    image_names: [
+      "512Fkts+0SL.webp",
+      "412Rx30NwKL.webp",
+      "41N0kgg4w2L.webp",
+      "41rE7x0v3oL.webp",
+      "51AkTuHNSeL.webp",
+      "51EE0Ov3AqL.webp",
+      "51lZi-i7TUL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Material",
+        description:
+          "Made from premium PP plastic, these chips are designed to withstand drops and daily usage, ensuring longevity and reliability in high-stakes games.",
+      },
+      {
+        title: "Variety of Denominations",
+        description:
+          "Includes chips in five colors with values of 5, 10, 20, 50, and 100, allowing for flexible betting options and strategic gameplay.",
+      },
+      {
+        title: "Compact and Portable",
+        description:
+          "Each chip measures approximately 3.9 cm in diameter, making it easy to store and carry to events, games, or meetings.",
+      },
+      {
+        title: "Versatile Use Cases",
+        description:
+          "Ideal for poker nights, family gatherings, or professional tournaments, this set enhances the gaming experience and promotes fun interactions.",
+      },
+    ],
+  },
+  {
+    title: "600-Piece Casino Poker Chip Set with Denominations for B2B Use",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming establishment with our premium 600-piece casino poker chip set, featuring 11.5g heavy chips and 2 decks of cards, perfect for enhancing customer experience during Texas Hold'em and Blackjack games.",
+    image: "/product/81R+iNHJdZL.webp",
+    images: [
+      "/product/51MgOw8AwAL.webp",
+      "/product/41pA5CGWAjL.webp",
+      "/product/411wInNeniL.webp",
+      "/product/41d-j7cvjXL.webp",
+      "/product/51Dow-G4MNL.webp",
+      "/product/41lFlNSee5L.webp",
+    ],
+    image_names: [
+      "81R+iNHJdZL.webp",
+      "51MgOw8AwAL.webp",
+      "41pA5CGWAjL.webp",
+      "411wInNeniL.webp",
+      "41d-j7cvjXL.webp",
+      "51Dow-G4MNL.webp",
+      "41lFlNSee5L.webp",
+    ],
+    features: [
+      {
+        title: "Complete Poker Set",
+        description:
+          "This comprehensive set includes 600 high-quality poker chips in various denominations, ensuring you have everything needed for 11-15 players.",
+      },
+      {
+        title: "Premium Materials",
+        description:
+          "Crafted from the finest materials, our poker chips offer a professional casino feel with intricate designs and a smooth finish that serious poker enthusiasts appreciate.",
+      },
+      {
+        title: "Durable Transportation Case",
+        description:
+          "Housed in a sturdy aluminum carrying case with 6 plastic trays, this set remains organized and protected, making it ideal for travel and frequent use.",
+      },
+      {
+        title: "Engaging Learning Tool",
+        description:
+          "Our poker set blends education and fun, making it an excellent choice for businesses looking to provide an interactive experience while practicing math and strategy.",
+      },
+    ],
+  },
+  {
+    title: "Spin Master Wooden Domino Rack Set - 4 Holder Trays for Classic Games",
+    category: "Poker Equipment",
+    description:
+      "Organize your domino tiles efficiently with the Spin Master Wooden Domino Rack Set, designed for versatile gameplay with Mexican Train Dominoes and more. Constructed from durable solid wood, this 4-piece set ensures longevity, making it a perfect addition for game nights, educational settings, or family gatherings, suitable for ages 8 and up.",
+    image: "/product/81iGmiOvkaL.webp",
+    images: [
+      "/product/417yeugNekL.webp",
+      "/product/413kmCXP9kL.webp",
+      "/product/419xtT1ot7L.webp",
+      "/product/31jJGJAMUYL.webp",
+      "/product/41hpamDjcvL.webp",
+      "/product/41y5jiZnkCL.webp",
+    ],
+    image_names: [
+      "81iGmiOvkaL.webp",
+      "417yeugNekL.webp",
+      "413kmCXP9kL.webp",
+      "419xtT1ot7L.webp",
+      "31jJGJAMUYL.webp",
+      "41hpamDjcvL.webp",
+      "41y5jiZnkCL.webp",
+    ],
+    features: [
+      {
+        title: "Efficient Organization",
+        description:
+          "Each rack accommodates up to 15 dominoes, keeping your game tiles secure and easy to access, enhancing the overall gaming experience.",
+      },
+      {
+        title: "Premium Quality Construction",
+        description:
+          "Crafted from high-quality solid wood, these domino racks are built to withstand years of use, providing excellent value for both children and adults.",
+      },
+      {
+        title: "Ideal for All Skill Levels",
+        description:
+          "Perfect for beginners and seasoned players alike, allowing for easy viewing and management of tiles, which fosters focus on gameplay.",
+      },
+      {
+        title: "Versatile Game Addition",
+        description:
+          "An excellent choice for family game nights or educational activities, complemented with a range of classic board games like checkers, chess, and more.",
+      },
+    ],
+  },
+  {
+    title: "Extguds Casino Poker Set - Blackjack & Texas Hold'em with Accessories",
+    category: "Poker Equipment",
+    description:
+      "The Extguds Casino Poker Set is a premium solution for businesses seeking to enhance entertainment experiences, featuring 200 chips, 6 decks of cards, and essential accessories including a card shoe, discard tray, and automatic shuffler, perfect for engaging gatherings and events.",
+    image: "/product/81MvYr+D5oL.webp",
+    images: [
+      "/product/51H+uKSLapL.webp",
+      "/product/41Nql44mpaL.webp",
+      "/product/51FTkxQTK6L.webp",
+      "/product/51HzGwOqg4L.webp",
+      "/product/51qMnWEBbhL.webp",
+      "/product/51rTgt6pgUL.webp",
+    ],
+    image_names: [
+      "81MvYr+D5oL.webp",
+      "51H+uKSLapL.webp",
+      "41Nql44mpaL.webp",
+      "51FTkxQTK6L.webp",
+      "51HzGwOqg4L.webp",
+      "51qMnWEBbhL.webp",
+      "51rTgt6pgUL.webp",
+    ],
+    features: [
+      {
+        title: "Dual-Sided Felt",
+        description:
+          "This casino-quality dual-sided felt measures 23.6x47.2 inches, providing a smooth playing surface for both Blackjack and Texas Hold'em, enhancing the gaming experience.",
+      },
+      {
+        title: "Durable Components",
+        description:
+          "Constructed from high-quality materials, this poker set is designed for frequent use, ensuring reliability and longevity in fast-paced gaming environments.",
+      },
+      {
+        title: "Automatic Shuffler",
+        description:
+          "The included automatic shuffler accommodates up to 6 decks, significantly reducing downtime during games and maximizing enjoyment for all players.",
+      },
+      {
+        title: "Ideal for Events",
+        description:
+          "This poker set is an excellent choice for corporate parties, team-building activities, and social events, fostering camaraderie and engagement among participants.",
+      },
+    ],
+  },
+  {
+    title: "Spin Master Texas Hold'em Poker Set with 200 Chips & Dealer Button",
+    category: "Poker Equipment",
+    description:
+      "Elevate your game nights with the Spin Master Texas Hold'em Poker Set, featuring 200 high-quality poker chips, a dealer button, and a standard deck of cards, perfect for both novice and experienced players. Ideal for B2B sales, this captivating set ensures your customers enjoy memorable poker nights, enhancing their entertainment offerings.",
+    image: "/product/81pxsExNlIL.webp",
+    images: [
+      "/product/418qBZgl0ML.webp",
+      "/product/51JeHcx4pdL.webp",
+      "/product/51Onfqs6HvL.webp",
+      "/product/41+ac+upTKL.webp",
+      "/product/51KQsuc4IgL.webp",
+      "/product/41PMZi3ipuL.webp",
+    ],
+    image_names: [
+      "81pxsExNlIL.webp",
+      "418qBZgl0ML.webp",
+      "51JeHcx4pdL.webp",
+      "51Onfqs6HvL.webp",
+      "41+ac+upTKL.webp",
+      "51KQsuc4IgL.webp",
+      "41PMZi3ipuL.webp",
+    ],
+    features: [
+      {
+        title: "Complete Game Set",
+        description:
+          "Includes 200 premium poker chips in traditional colors, a dealer button, and a standard deck of playing cards, ensuring everything needed for poker nights is conveniently packed.",
+      },
+      {
+        title: "Clear Game Instructions",
+        description:
+          "Our detailed rules for Texas Hold 'Em provide clear guidance, making it easy for beginners to learn and for seasoned players to reinforce gameplay strategies.",
+      },
+      {
+        title: "Durable Components",
+        description:
+          "Crafted from high-quality materials, each component is designed for durability and long-term use, making it a great addition to gaming establishments and family gatherings.",
+      },
+      {
+        title: "Versatile Entertainment",
+        description:
+          "Perfect for family game nights, parties, and events, this poker set creates enjoyable experiences, catering to all age groups and various occasions.",
+      },
+    ],
+  },
+  {
+    title: "THUNDERBAY 300-Piece Clay Composite Poker Set - Aluminum Case Included",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with the THUNDERBAY 300-Piece Clay Composite Poker Set. Perfect for B2B buyers seeking high-quality poker equipment for tournaments and casino nights, this complete set includes premium 13.5g chips, two decks of cards, a metal dealer button, and five dice, all housed in a rugged aluminum case for secure storage and transport.",
+    image: "/product/51bB-KhvJuL.webp",
+    images: [
+      "/product/41-NCP2OeRL.webp",
+      "/product/41ymU1gV7jL.webp",
+      "/product/51qJOmpHYML.webp",
+      "/product/51o+yURmV+L.webp",
+      "/product/51ExvzymIiL.webp",
+      "/product/41dd3eaoCyL.webp",
+      "/product/31UEtW1GnsL.webp",
+    ],
+    image_names: [
+      "51bB-KhvJuL.webp",
+      "41-NCP2OeRL.webp",
+      "41ymU1gV7jL.webp",
+      "51qJOmpHYML.webp",
+      "51o+yURmV+L.webp",
+      "51ExvzymIiL.webp",
+      "41dd3eaoCyL.webp",
+      "31UEtW1GnsL.webp",
+    ],
+    features: [
+      {
+        title: "Complete Poker Set",
+        description:
+          "This comprehensive set features 300 premium poker chips, two decks of playing cards, five dice, and a durable metal dealer button, designed for an authentic casino experience.",
+      },
+      {
+        title: "Premium Quality Chips",
+        description:
+          "Each chip weighs 13.5 grams and is crafted from high-quality clay composite, providing a professional feel and enhancing the gaming experience for players.",
+      },
+      {
+        title: "Durable Aluminum Case",
+        description:
+          "Housed in a robust aluminum carrying case with improved latches and hinges, this set ensures durability and security for safe transport and storage.",
+      },
+      {
+        title: "Versatile Game Use",
+        description:
+          "Ideal for Texas Hold'em tournaments, family game nights, or other casino games, this poker set adds value to any gaming event with its extensive components.",
+      },
+    ],
+  },
+  {
+    title: "Bicycle Standard Rider Playing Cards - 12 Pack, Classic Design for Games",
+    category: "Poker Equipment",
+    description:
+      "Discover the reliability of Bicycle Standard Rider Playing Cards, perfect for B2B purchasing to enhance game nights, poker tournaments, or teaching card games in educational settings. With a timeless design and 12 decks per pack, these durable cards are your ideal choice for quality and fun.",
+    image: "/product/61ILEV1DPPL.webp",
+    images: [
+      "/product/41qwy9YiNgL.webp",
+      "/product/41srMJ-1x5L.webp",
+      "/product/41AjyItf02L.webp",
+      "/product/41BWkGT8TxL.webp",
+      "/product/41ghssmBtwL.webp",
+      "/product/51-g9bKVLpL.webp",
+    ],
+    image_names: [
+      "61ILEV1DPPL.webp",
+      "41qwy9YiNgL.webp",
+      "41srMJ-1x5L.webp",
+      "41AjyItf02L.webp",
+      "41BWkGT8TxL.webp",
+      "41ghssmBtwL.webp",
+      "51-g9bKVLpL.webp",
+    ],
+    features: [
+      {
+        title: "Trusted Brand Quality",
+        description:
+          "Bicycle Playing Cards have been a trusted choice for generations, ensuring reliability and durability for all types of card games in various settings.",
+      },
+      {
+        title: "Classic Card Design",
+        description:
+          "Designed with the iconic Bicycle face, these cards make learning new games easy and engaging for players of all ages.",
+      },
+      {
+        title: "Versatile Game Use",
+        description:
+          "Ideal for a variety of games, including Blackjack, Rummy, and Poker, these cards provide endless entertainment for both formal and casual gatherings.",
+      },
+      {
+        title: "Convenient Bulk Packaging",
+        description:
+          "Each pack contains 12 decks, making it convenient for tournaments, classroom activities, or sharing with friends and family during game nights.",
+      },
+    ],
+  },
+  {
+    title: "DA VINCI Masterworks Poker Chip Set - 500 Chips, Cards, Dealer Buttons",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with the DA VINCI Masterworks Poker Chip Set, featuring 500 high-quality 11.5g chips, two decks of cards, three dealer buttons, and two cut cards. Perfect for businesses seeking durable and visually stunning poker supplies for tournaments or corporate events, this set offers exceptional value and sophistication.",
+    image: "/product/81l3xQ7V-+S.webp",
+    images: [
+      "/product/51lDSbGDdsS.webp",
+      "/product/511P40E1z+S.webp",
+      "/product/41kJwgSY+XL.webp",
+      "/product/41ddF-sfxpL.webp",
+      "/product/41q24RkHBWL.webp",
+      "/product/41WPciAN0bL.webp",
+      "/product/417bvF6jTRL.webp",
+    ],
+    image_names: [
+      "81l3xQ7V-+S.webp",
+      "51lDSbGDdsS.webp",
+      "511P40E1z+S.webp",
+      "41kJwgSY+XL.webp",
+      "41ddF-sfxpL.webp",
+      "41q24RkHBWL.webp",
+      "41WPciAN0bL.webp",
+      "417bvF6jTRL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Chips",
+        description:
+          "Each chip weighs 11.5 grams, ensuring a professional feel that enhances the gaming experience while offering durability for frequent use.",
+      },
+      {
+        title: "Complete Gaming Set",
+        description:
+          "The set includes everything necessary for a complete poker night, featuring 500 chips in various denominations, two decks of cards, and additional accessories.",
+      },
+      {
+        title: "Elegant Design",
+        description:
+          "Showcasing iconic Da Vinci masterpieces, the chips and accessories provide a unique and sophisticated visual appeal that stands out in any corporate or social setting.",
+      },
+      {
+        title: "Versatile Use",
+        description:
+          "Ideal for businesses hosting poker nights or tournaments, the DA VINCI Masterworks set adds value to team-building events and enhances customer engagement.",
+      },
+    ],
+  },
+  {
+    title: "Professional Bowtie Wooden Poker Set with 300 Durable Chips & Cards",
+    category: "Poker Equipment",
+    description:
+      "Elevate your game nights and corporate events with our Bowtie Wooden Poker Set, featuring 300 premium weighted ABS poker chips, two unique decks of playing cards, and a beautifully crafted walnut wood storage case, all designed for durability and convenience.",
+    image: "/product/91pjNTwJgOL.webp",
+    images: [
+      "/product/51AP80a+F1L.webp",
+      "/product/51vRBXSOgDL.webp",
+      "/product/51UE7SWDUEL.webp",
+      "/product/61M9yAnCV0L.webp",
+      "/product/517xWUHDrtL.webp",
+      "/product/61xXW1w5M0L.webp",
+    ],
+    image_names: [
+      "91pjNTwJgOL.webp",
+      "51AP80a+F1L.webp",
+      "51vRBXSOgDL.webp",
+      "51UE7SWDUEL.webp",
+      "61M9yAnCV0L.webp",
+      "517xWUHDrtL.webp",
+      "61xXW1w5M0L.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Storage Case",
+        description:
+          "Constructed from walnut wood with a bow-cut leather cover, our luxurious case ensures your poker set remains organized and protected.",
+      },
+      {
+        title: "Premium Weighted Poker Chips",
+        description:
+          "Enjoy the superior feel of our ABS poker chips, designed to withstand frequent use while delivering a professional gaming experience far beyond standard plastic alternatives.",
+      },
+      {
+        title: "Versatile Gaming Applications",
+        description:
+          "This poker set is ideal for Texas Hold'em, Blackjack, or other casino games, making it perfect for family occasions, corporate gatherings, and social events.",
+      },
+      {
+        title: "Exceptional Gift Option",
+        description:
+          "Present the Bowtie Poker Set as a thoughtful gift for poker enthusiasts, showcasing your appreciation with a premium product designed for both novice and skilled players.",
+      },
+    ],
+  },
+  {
+    title: "Corrado 300-Piece Clay Poker Chip Set with Aluminum Case & Cards",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with the Corrado 300-piece poker chip set, designed for professional quality and customization. This complete set includes high-quality clay chips, durable plastic cards, and essential accessories, making it ideal for serious gaming sessions in any business environment.",
+    image: "/product/81-zdgoykdL.webp",
+    images: [
+      "/product/51diX2+4t0L.webp",
+      "/product/41o46A94eXL.webp",
+      "/product/41GjiAk+kLL.webp",
+      "/product/51tlyVbsu7L.webp",
+      "/product/51iV64ggx-L.webp",
+      "/product/51yglzbewGL.webp",
+      "/product/51Sy11r02pL.webp",
+    ],
+    image_names: [
+      "81-zdgoykdL.webp",
+      "51diX2+4t0L.webp",
+      "41o46A94eXL.webp",
+      "41GjiAk+kLL.webp",
+      "51tlyVbsu7L.webp",
+      "51iV64ggx-L.webp",
+      "51yglzbewGL.webp",
+      "51Sy11r02pL.webp",
+    ],
+    features: [
+      {
+        title: "Premium Clay Chips",
+        description:
+          "Each chip weighs 14 grams and is crafted from high-quality clay without a metal core, ensuring a professional casino feel and authentic sound for a superior gaming experience.",
+      },
+      {
+        title: "Versatile Chip Selection",
+        description:
+          "The set includes 300 customizable chips in various colors, allowing players to adjust denominations easily, making it perfect for Texas Hold'em, Blackjack, and Roulette games.",
+      },
+      {
+        title: "Complete Gaming Set",
+        description:
+          "Includes two decks of 100% plastic playing cards, five dice, and a dealer button, providing everything needed for seamless gameplay and professional settings.",
+      },
+      {
+        title: "Durable Storage Case",
+        description:
+          "Packaged in a sturdy aluminum case with a soft interior lining, ensuring all components are secure and organized while offering a portable solution for game nights.",
+      },
+    ],
+  },
+  {
+    title: "Premium Bowtie Wooden Poker Set - 300 Weighted Chips & Cards",
+    category: "Poker Equipment",
+    description:
+      "The Bowtie Wooden Poker Set is an exceptional investment for B2B buyers looking to enhance their gaming offerings, featuring 300 premium weighted poker chips, two unique decks of playing cards, and a stylish walnut wood case, perfect for casino nights and professional events.",
+    image: "/product/91pjNTwJgOL.webp",
+    images: [
+      "/product/51AP80a+F1L.webp",
+      "/product/51vRBXSOgDL.webp",
+      "/product/51UE7SWDUEL.webp",
+      "/product/61M9yAnCV0L.webp",
+      "/product/517xWUHDrtL.webp",
+      "/product/61xXW1w5M0L.webp",
+    ],
+    image_names: [
+      "91pjNTwJgOL.webp",
+      "51AP80a+F1L.webp",
+      "51vRBXSOgDL.webp",
+      "51UE7SWDUEL.webp",
+      "61M9yAnCV0L.webp",
+      "517xWUHDrtL.webp",
+      "61xXW1w5M0L.webp",
+    ],
+    features: [
+      {
+        title: "Quality Craftsmanship",
+        description:
+          "Constructed from high-quality walnut wood, the Bowtie Poker Set ensures durability and a premium feel, ideal for enhancing your gaming experience.",
+      },
+      {
+        title: "Weighted Poker Chips",
+        description:
+          "Our 300 ABS poker chips are meticulously designed for a superior weight and feel, providing a professional gaming experience for all types of events.",
+      },
+      {
+        title: "Versatile Gaming Experience",
+        description:
+          "This set is versatile enough for various games, including Texas Hold'em, Blackjack, and Roulette, making it perfect for any social gathering or casino-related event.",
+      },
+      {
+        title: "Ideal Gift for Businesses",
+        description:
+          "A perfect corporate gift for poker enthusiasts, this set not only represents appreciation but also elevates game nights, making it an ideal choice for client engagement events.",
+      },
+    ],
+  },
+  {
+    title: "Brybelly 1000-Piece Poker Chip Set with Acrylic Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming environment with Brybelly’s premium 1000-piece poker chip set, featuring high-quality clay chips with multiple denominations, an elegant acrylic display case, and removable trays, making it an indispensable asset for any B2B entertainment venue or casino.",
+    image: "/product/81GppAaqaNL.webp",
+    images: [
+      "/product/51Ri56etdWL.webp",
+      "/product/51DLYOh4NKL.webp",
+      "/product/51bTRcwRIZL.webp",
+      "/product/5157LQ1k4rL.webp",
+      "/product/51z7yWT5CmL.webp",
+      "/product/416c4bHumkL.webp",
+      "/product/51kuFYK+NcL.webp",
+    ],
+    image_names: [
+      "81GppAaqaNL.webp",
+      "51Ri56etdWL.webp",
+      "51DLYOh4NKL.webp",
+      "51bTRcwRIZL.webp",
+      "5157LQ1k4rL.webp",
+      "51z7yWT5CmL.webp",
+      "416c4bHumkL.webp",
+      "51kuFYK+NcL.webp",
+    ],
+    features: [
+      {
+        title: "Comprehensive Chip Variety",
+        description:
+          "This set includes 1000 chips in various denominations: 300 x $1, 200 x $5, 200 x $25, 200 x $100, 50 x $500, and 50 x $1000, catering to diverse gaming preferences and enhancing your betting options.",
+      },
+      {
+        title: "Premium Quality Construction",
+        description:
+          "Crafted from high-grade clay, each chip weighs 14 grams, offering a professional feel and an authentic gaming experience, perfect for both casual and competitive play.",
+      },
+      {
+        title: "Stylish Acrylic Display Case",
+        description:
+          "The durable acrylic case, measuring 27.5 cm x 30.5 cm x 35.5 cm, includes 10 removable trays that organize and protect your chips, ensuring easy access and an appealing presentation.",
+      },
+      {
+        title: "Versatile Gaming Application",
+        description:
+          "Whether for hosting casual game nights or arranging large poker tournaments, this chip set meets the demands of gamers at all skill levels, making it an ideal choice for any gaming establishment.",
+      },
+    ],
+  },
+  {
+    title: "Corrado 300-Piece Poker Set | Customizable Clay Chips | Aluminum Case",
+    category: "Poker Equipment",
+    description:
+      "The Corrado 300-piece Poker Set delivers a professional casino experience with premium 14g clay chips, fully customizable for any game night. Ideal for poker enthusiasts, this versatile and durable set includes everything needed for an engaging and high-quality gaming experience.",
+    image: "/product/81-zdgoykdL.webp",
+    images: [
+      "/product/51diX2+4t0L.webp",
+      "/product/41o46A94eXL.webp",
+      "/product/41GjiAk+kLL.webp",
+      "/product/51tlyVbsu7L.webp",
+      "/product/51iV64ggx-L.webp",
+      "/product/51yglzbewGL.webp",
+      "/product/51Sy11r02pL.webp",
+    ],
+    image_names: [
+      "81-zdgoykdL.webp",
+      "51diX2+4t0L.webp",
+      "41o46A94eXL.webp",
+      "41GjiAk+kLL.webp",
+      "51tlyVbsu7L.webp",
+      "51iV64ggx-L.webp",
+      "51yglzbewGL.webp",
+      "51Sy11r02pL.webp",
+    ],
+    features: [
+      {
+        title: "Professional Quality Chips",
+        description:
+          "Each 14g clay chip provides a smooth surface and balanced weight for an authentic gaming experience without a metal core.",
+      },
+      {
+        title: "Customizable Chip Colors",
+        description:
+          "This set includes 300 chips in five colors, allowing players to customize denominations for Texas Hold'em, Blackjack, and more.",
+      },
+      {
+        title: "Comprehensive Game Comfort",
+        description:
+          "Includes two decks of 100% plastic playing cards, five dice, and a dealer button for a complete and seamless gaming experience.",
+      },
+      {
+        title: "Durable Aluminum Case",
+        description:
+          "The reinforced aluminum case with a soft interior keeps all game components secure, making it convenient for travel and long-lasting use.",
+      },
+    ],
+  },
+  {
+    title: "DA VINCI 200 Dice Stripe 11.5g Poker Chip Set with Dealer Button",
+    category: "Poker Equipment",
+    description:
+      "The DA VINCI 200 Dice Stripe 11.5g Poker Chip Set is an essential choice for casinos and gaming venues, providing high-quality, durable chips that enhance the gaming experience. This comprehensive set includes two decks of cards and a robust aluminum carrying case, making it a great investment for your business's entertainment needs.",
+    image: "/product/71PQQg9KE6L.webp",
+    images: [
+      "/product/51BAGxosNxL.webp",
+      "/product/31DTQ4G2AAL.webp",
+      "/product/310HDSJG3SL.webp",
+      "/product/31CADABV0BL.webp",
+      "/product/21K4HYOA6kL.webp",
+      "/product/31W3B6E1TXL.webp",
+    ],
+    image_names: [
+      "71PQQg9KE6L.webp",
+      "51BAGxosNxL.webp",
+      "31DTQ4G2AAL.webp",
+      "310HDSJG3SL.webp",
+      "31CADABV0BL.webp",
+      "21K4HYOA6kL.webp",
+      "31W3B6E1TXL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Chips",
+        description:
+          "Each chip is crafted from premium materials, ensuring long-lasting durability and a professional look that elevates the gaming atmosphere.",
+      },
+      {
+        title: "Complete Set",
+        description:
+          "This set includes 200 poker chips, two decks of cards, and essential accessories, providing everything you need for a successful gaming night.",
+      },
+      {
+        title: "Aluminum Case",
+        description:
+          "The heavy-duty aluminum carrying case offers optimal protection and portability, making it easy to transport and store your gaming accessories.",
+      },
+      {
+        title: "Custom Dealer Button",
+        description:
+          "Included is a custom dealer button, enhancing game play and organization, pivotal for any professional poker setup.",
+      },
+    ],
+  },
+  {
+    title: "Casino-Grade Poker Chips Set – 100 Durable Clay Chips with Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with our casino-grade poker chip set, featuring 100 high-quality chips weighing 14 grams each. Ideal for businesses looking to enhance entertainment offerings, this set includes a lightweight, durable carrying case and an easy-to-understand rule guide, making it perfect for both seasoned players and beginners alike.",
+    image: "/product/61ept9Br2ZL.webp",
+    images: [
+      "/product/41jthhfZVJL.webp",
+      "/product/51Nial3R3JL.webp",
+      "/product/51ny-tvk1SL.webp",
+      "/product/512WEBjNkRL.webp",
+      "/product/51AVi6FE0RL.webp",
+      "/product/51wWBo4jM2L.webp",
+      "/product/51bzXhwFJAL.webp",
+    ],
+    image_names: [
+      "61ept9Br2ZL.webp",
+      "41jthhfZVJL.webp",
+      "51Nial3R3JL.webp",
+      "51ny-tvk1SL.webp",
+      "512WEBjNkRL.webp",
+      "51AVi6FE0RL.webp",
+      "51wWBo4jM2L.webp",
+      "51bzXhwFJAL.webp",
+    ],
+    features: [
+      {
+        title: "Casino-Grade Quality",
+        description:
+          "Crafted from high-quality clay composite materials, these chips replicate the authentic casino feel for a professional gaming experience.",
+      },
+      {
+        title: "Optimal Weight",
+        description:
+          "Each chip weighs 14 grams, closely mimicking the standard casino weight to ensure a genuine and engaging gaming atmosphere.",
+      },
+      {
+        title: "Durable Case Included",
+        description:
+          "Packaged in a lightweight, crack-resistant polypropylene case designed for portability, this set is perfect for easy storage and transport.",
+      },
+      {
+        title: "Beginner-Friendly Guide",
+        description:
+          "Includes a comprehensive rule guide aimed at newcomers, ensuring an effortless introduction to the game for all skill levels.",
+      },
+    ],
+  },
+  {
+    title: "Professional Poker Chip Set - 300 Chips, 11.5g, Aluminum Case, Cards Included",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with our professional-grade Poker Chip Set, featuring 300 high-quality 11.5g casino-style chips, two decks of standard playing cards, and a sturdy aluminum case. Ideal for poker nights or corporate events, this set provides an authentic Vegas experience that will impress clients and colleagues alike.",
+    image: "/product/81H6DMvgV6L.webp",
+    images: [
+      "/product/51iza+TtvGL.webp",
+      "/product/41u8-3BSyML.webp",
+      "/product/51gPApH6XHL.webp",
+      "/product/51bV98u9ffL.webp",
+      "/product/51eG8MtWzFL.webp",
+      "/product/511jpAdM-NL.webp",
+    ],
+    image_names: [
+      "81H6DMvgV6L.webp",
+      "51iza+TtvGL.webp",
+      "41u8-3BSyML.webp",
+      "51gPApH6XHL.webp",
+      "51bV98u9ffL.webp",
+      "51eG8MtWzFL.webp",
+      "511jpAdM-NL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Chips",
+        description:
+          "Crafted from 11.5g composite resin, each chip simulates the authentic feel of real casino chips, ensuring a premium gaming experience.",
+      },
+      {
+        title: "Complete Set",
+        description:
+          "Includes 300 casino chips in three colors, two decks of cards, and a dealer button, making it perfect for Texas Hold'em and Blackjack games.",
+      },
+      {
+        title: "Secure Storage Solution",
+        description:
+          "The aluminum carrying case with a plush velvet interior protects your chips from dust, ensuring they remain in pristine condition for every game.",
+      },
+      {
+        title: "Versatile Gaming Use",
+        description:
+          "Transform any space into a thrilling casino atmosphere, ideal for corporate parties, client entertainment, or personal poker nights.",
+      },
+    ],
+  },
+  {
+    title: "Ladies Rose Casino Dice Poker Set (500 Pieces) - Perfect Gift",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with our Ladies Rose Casino Dice Poker Set, designed for family fun and special occasions. This meticulously packaged set includes vibrant, colorful chips ensuring an engaging poker experience for all skill levels. Ideal as a corporate gift or a high-quality addition for entertainment events, ensuring complete satisfaction with every purchase.",
+    image: "/product/41QITtP+uiL.webp",
+    images: ["/product/31lZmJoaUCL.webp"],
+    image_names: ["41QITtP+uiL.webp", "31lZmJoaUCL.webp"],
+    features: [
+      {
+        title: "Premium Quality Chips",
+        description:
+          "Our poker set features premium-quality chips with a smooth finish, designed for durability and extended use in both casual and competitive gaming settings.",
+      },
+      {
+        title: "Stylish Rose Design",
+        description:
+          "The elegant rose design adds a touch of sophistication to your gaming table, making it a visually appealing choice for upscale events and gatherings.",
+      },
+      {
+        title: "Comprehensive Set",
+        description:
+          "This 500-piece set includes everything needed for a full gaming experience, ensuring you have all essentials for entertaining friends and family or hosting corporate events.",
+      },
+      {
+        title: "Gift-Ready Packaging",
+        description:
+          "Carefully packaged to ensure a beautiful presentation, this set is ready for gifting, making it a perfect option for corporate promotions or special occasions.",
+      },
+    ],
+  },
+  {
+    title: "Monte Carlo 14gm 500 Chip Clay Poker Set with Aluminum Case & 3 Dealer Buttons",
+    category: "Poker Equipment",
+    description:
+      "Elevate your casino-themed events with the Monte Carlo Home Style 14gm 500 Poker Chip Set, expertly crafted from quality clay and packaged in a durable aluminum case. This complete set includes three dealer buttons and two decks of cards, making it perfect for hosting engaging poker nights or casino games for your business gatherings.",
+    image: "/product/81YQNgEeBfL.webp",
+    images: [
+      "/product/51X+k1F-NzL.webp",
+      "/product/61QUr8lUZ-L.webp",
+      "/product/51Zg6ejA6gL.webp",
+      "/product/51mPaKSr0FL.webp",
+      "/product/51QaeRIpPvL.webp",
+      "/product/51DEOKUIUgL.webp",
+      "/product/5158UJOZ2UL.webp",
+    ],
+    image_names: [
+      "81YQNgEeBfL.webp",
+      "51X+k1F-NzL.webp",
+      "61QUr8lUZ-L.webp",
+      "51Zg6ejA6gL.webp",
+      "51mPaKSr0FL.webp",
+      "51QaeRIpPvL.webp",
+      "51DEOKUIUgL.webp",
+      "5158UJOZ2UL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Clay Chips",
+        description:
+          "These 14g casino-style clay composite chips offer exceptional durability, ensuring a premium feel and performance during all your gaming activities.",
+      },
+      {
+        title: "Complete Gaming Set",
+        description:
+          "The set comes with 500 chips, two decks of cards, and three dealer buttons, making it a comprehensive solution for all your gaming needs.",
+      },
+      {
+        title: "Durable Aluminum Case",
+        description:
+          "Packaged in a sturdy aluminum case, this poker chip set is designed for easy transport and secure storage, perfect for corporate events or social gatherings.",
+      },
+      {
+        title: "Custom Color Options",
+        description:
+          "Personalize your chip set by selecting colors to match your brand or event theme, providing a tailored experience for your customers or guests.",
+      },
+    ],
+  },
+  {
+    title: "1000 Chip Eclipse Laser Clay Poker Set with Aluminum Case & 3 Dealer Buttons",
+    category: "Poker Equipment",
+    description:
+      "Enhance your casino supplies with this premium 1000 chip Eclipse laser clay poker set, featuring 14g chips, an aluminum carrying case, and 3 dealer buttons. Perfect for professional use in poker tournaments or casino nights, this set ensures quality and durability for your business rental or resale.",
+    image: "/product/81OxjW-Di-L.webp",
+    images: [
+      "/product/516ho3lDBYL.webp",
+      "/product/61smL++52sL.webp",
+      "/product/51aOicnIoDL.webp",
+      "/product/41n4EyxhV6L.webp",
+      "/product/61R3qrz04eL.webp",
+      "/product/51CuxCynfFL.webp",
+    ],
+    image_names: [
+      "81OxjW-Di-L.webp",
+      "516ho3lDBYL.webp",
+      "61smL++52sL.webp",
+      "51aOicnIoDL.webp",
+      "41n4EyxhV6L.webp",
+      "61R3qrz04eL.webp",
+      "51CuxCynfFL.webp",
+    ],
+    features: [
+      {
+        title: "Premium Quality Chips",
+        description:
+          "Our 14g laser clay chips are designed for durability and a professional feel, ideal for high-stakes games.",
+      },
+      {
+        title: "Complete Poker Set",
+        description:
+          "Includes 1000 chips, 2 decks of cards, and 3 dealer buttons, providing everything needed for organizing successful poker games.",
+      },
+      {
+        title: "Durable Aluminum Case",
+        description:
+          "The lightweight yet sturdy aluminum case ensures safe storage and easy transport for all poker enthusiasts.",
+      },
+      {
+        title: "Customizable Chip Options",
+        description:
+          "Order your chips in preferred denominations; we allow you to select each roll of 25 chips for personalized gameplay.",
+      },
+    ],
+  },
+  {
+    title: "John Wayne 100-Piece Poker Chip Set - Durable Casino Quality",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with the John Wayne 100-Piece Poker Chip Set, designed for professional use and perfect for card clubs, tournaments, and corporate events. Featuring officially licensed designs and durable materials, this set ensures quality and a touch of nostalgia for fans and players alike.",
+    image: "/product/81aIw3QS7KL.webp",
+    images: [
+      "/product/514E92loecL.webp",
+      "/product/51WTNcdq3GL.webp",
+      "/product/611PveJ6fRL.webp",
+      "/product/61y1KHK19qL.webp",
+    ],
+    image_names: [
+      "81aIw3QS7KL.webp",
+      "514E92loecL.webp",
+      "51WTNcdq3GL.webp",
+      "611PveJ6fRL.webp",
+      "61y1KHK19qL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Chips",
+        description:
+          "Crafted from durable materials, each poker chip is designed to withstand frequent use, ensuring longevity and a professional feel at every game.",
+      },
+      {
+        title: "Officially Licensed Designs",
+        description:
+          "Showcase your passion with chips featuring officially licensed John Wayne designs, ideal for fans who appreciate authenticity in their gaming supplies.",
+      },
+      {
+        title: "Versatile Use Cases",
+        description:
+          "This poker chip set is perfect for various games, including Texas Hold'em and Blackjack, making it a versatile addition to any card club or gaming event.",
+      },
+      {
+        title: "Convenient Storage Tray",
+        description:
+          "Packed in a sleek, black tray for easy storage and transport, this poker chip set allows businesses to maintain organization and professionalism during gaming events.",
+      },
+    ],
+  },
+  {
+    title: "DA VINCI Unicorn Clay Poker Chip Set - 300 Premium 9g Chips",
+    category: "Poker Equipment",
+    description:
+      "Elevate your casino game experience with the DA VINCI Unicorn Clay Poker Chip Set, featuring 300 authentic 9g clay casino chips, high-quality plastic cards, and a durable EVA carrying case. Perfect for businesses and retailers aiming to provide top-notch gaming products to their clientele.",
+    image: "/product/71wN+psOmqL.webp",
+    images: ["/product/51is7TGAodL.webp", "/product/419nDucyekL.webp"],
+    image_names: ["71wN+psOmqL.webp", "51is7TGAodL.webp", "419nDucyekL.webp"],
+    features: [
+      {
+        title: "Authentic Casino-Grade Chips",
+        description:
+          "Each chip weighs 9g, replicating the exact weight and feel of genuine casino chips, ensuring a premium playing experience.",
+      },
+      {
+        title: "High-Quality Materials",
+        description:
+          "Constructed from superior clay, these chips stack easily without slipping, enhancing gameplay reliability and aesthetics.",
+      },
+      {
+        title: "Durable EVA Case",
+        description:
+          "This lightweight yet robust EVA carrying case is designed for easy transport and protection, resembling high-end luggage quality.",
+      },
+      {
+        title: "Complete Gaming Package",
+        description:
+          "Included are two decks of high-grade plastic playing cards, dealer button, and cut cards, providing a fully equipped poker experience.",
+      },
+    ],
+  },
+  {
+    title: "Extguds Casino Game Set: Blackjack, Poker, Chips & Accessories",
+    category: "Poker Equipment",
+    description:
+      "The Extguds Entertainment Casino Game Set provides a comprehensive solution for businesses seeking quality entertainment options. Featuring 200 chips, 6 decks of cards, and a double-sided felt layout, this set ensures an engaging casino experience at parties, events, or establishments, perfect for enhancing guest satisfaction and retention.",
+    image: "/product/81-oB27LbUL.webp",
+    images: [
+      "/product/51TLgVWkQOL.webp",
+      "/product/51wi-QofCLL.webp",
+      "/product/51TJvYblgbL.webp",
+      "/product/51L+htehg4L.webp",
+      "/product/51dj7A-GQnL.webp",
+      "/product/51g7CZ60lnL.webp",
+    ],
+    image_names: [
+      "81-oB27LbUL.webp",
+      "51TLgVWkQOL.webp",
+      "51wi-QofCLL.webp",
+      "51TJvYblgbL.webp",
+      "51L+htehg4L.webp",
+      "51dj7A-GQnL.webp",
+      "51g7CZ60lnL.webp",
+    ],
+    features: [
+      {
+        title: "Versatile Gameplay",
+        description:
+          "Enjoy both Blackjack and Texas Hold'em poker with this versatile set, accommodating various gaming preferences and ensuring a lively atmosphere for your business gatherings.",
+      },
+      {
+        title: "Premium Double-Sided Felt",
+        description:
+          "The double-sided felt layout measures 23.6 x 47.2 inches, offering a smooth and durable playing surface that is easy to store and enhances the overall gaming experience.",
+      },
+      {
+        title: "Robust Quality Materials",
+        description:
+          "Constructed with high-quality materials, this poker set is designed to endure frequent use, providing a reliable and authentic casino experience for your customers.",
+      },
+      {
+        title: "Comprehensive Accessories Included",
+        description:
+          "The set includes 200 chips, 6 cards, and 10 cut cards, enabling multiple gaming options to cater to diverse preferences and maximize entertainment value.",
+      },
+    ],
+  },
+  {
+    title: "ARTGAME 14g Clay Poker Chip Set - 500 pcs with Storage Box",
+    category: "Poker Equipment",
+    description:
+      "Elevate your poker nights with the ARTGAME premium 14g clay poker chip set, featuring 500 vibrant chips in a stylish, protective storage box, making it an exceptional gift for gaming enthusiasts and ideal for any business or promotional event.",
+    image: "/product/71OPYG7xLlL.webp",
+    images: [
+      "/product/51gPLbqBiWL.webp",
+      "/product/51JcviqAhGL.webp",
+      "/product/51PFDVvZDuL.webp",
+      "/product/51kNwjhCaSL.webp",
+      "/product/51GlEvLysdL.webp",
+      "/product/51nMhB+RkSL.webp",
+    ],
+    image_names: [
+      "71OPYG7xLlL.webp",
+      "51gPLbqBiWL.webp",
+      "51JcviqAhGL.webp",
+      "51PFDVvZDuL.webp",
+      "51kNwjhCaSL.webp",
+      "51GlEvLysdL.webp",
+      "51nMhB+RkSL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Craftsmanship",
+        description:
+          "Each chip, weighing 14g with a double-injection iron core, ensures stability and a satisfying tactile experience during play.",
+      },
+      {
+        title: "Enhanced Game Experience",
+        description:
+          "The slightly matte finish allows for smooth stacking and shuffling, delivering a satisfying sound that enhances the poker experience.",
+      },
+      {
+        title: "Durable Storage Box",
+        description:
+          "The rugged storage case features dedicated compartments for chips and cards, ensuring easy transport and protection against wear and tear.",
+      },
+      {
+        title: "Vibrant Chip Variety",
+        description:
+          "The set includes an optimal mix of 500 chips in various colors, catering to diverse gameplay styles and preferences, perfect for tournaments or casual play.",
+      },
+    ],
+  },
+  {
+    title: "Funtime Gifts Travel Poker Set - Compact Tin Box for 2-4 Players, Multi-Color",
+    category: "Poker Equipment",
+    description:
+      "The Funtime Gifts Travel Poker Set is an ideal solution for businesses seeking a portable and engaging gaming experience. Perfect for team outings and corporate events, this compact tin box includes 52 high-quality playing cards and 108 poker chips, accommodating 2-4 players. Its durable design ensures long-lasting use, while the eye-catching colors make it a great gift option for clients and employees alike.",
+    image: "/product/71DkwwZRYtL.webp",
+    images: ["/product/51-XguPDeCL.webp", "/product/512qFyw+wSL.webp"],
+    image_names: ["71DkwwZRYtL.webp", "51-XguPDeCL.webp", "512qFyw+wSL.webp"],
+    features: [
+      {
+        title: "Complete Poker Set",
+        description:
+          "This set includes all necessary components, featuring 52 playing cards and 108 poker chips, ensuring an engaging experience for players.",
+      },
+      {
+        title: "Portable Design",
+        description:
+          "The compact tin box measures approximately 9.3 x 9.3 x 5 cm, making it easy to carry in bags or luggage for travel or events.",
+      },
+      {
+        title: "Versatile Play Options",
+        description:
+          "Designed for 2-4 players, this game is perfect for small gatherings, making it an excellent choice for team building and networking activities.",
+      },
+      {
+        title: "Attractive Gift Packaging",
+        description:
+          "The colorful design of the tin box enhances its appeal, making it a perfect corporate gift for clients, partners, or employees.",
+      },
+    ],
+  },
+  {
+    title: "Brybelly 14g Poker Chip Set - 500 Premium Clay Composite Chips in Aluminum Case",
+    category: "Poker Equipment",
+    description:
+      "Upgrade your gaming events with the Brybelly 14g Poker Chip Set, designed for professional-quality gameplay. This comprehensive 500-chip set, featuring unique textured designs for easy stacking and visual clarity, is perfect for poker nights, tournaments, and casino-themed events. Safeguarded in a durable aluminum case, this set ensures convenience and security for all your gaming needs.",
+    image: "/product/81O0Xtp2sLL.webp",
+    images: [
+      "/product/51LWq7nY-1L.webp",
+      "/product/51zIykxvFyL.webp",
+      "/product/51oeaHx39IL.webp",
+      "/product/51YRWvXTAhL.webp",
+      "/product/51ZF4W5WekL.webp",
+      "/product/51cYWbdJ2xL.webp",
+      "/product/51JHBnwX+ML.webp",
+    ],
+    image_names: [
+      "81O0Xtp2sLL.webp",
+      "51LWq7nY-1L.webp",
+      "51zIykxvFyL.webp",
+      "51oeaHx39IL.webp",
+      "51YRWvXTAhL.webp",
+      "51ZF4W5WekL.webp",
+      "51cYWbdJ2xL.webp",
+      "51JHBnwX+ML.webp",
+    ],
+    features: [
+      {
+        title: "Premium Clay Composite Chips",
+        description:
+          "Each chip weighs 14 grams, offering an authentic casino feel that enhances the overall gaming experience for players.",
+      },
+      {
+        title: "Unique Textured Design",
+        description:
+          "The chips feature distinctive textures for easy identification during play, ensuring smooth and efficient stacking and handling.",
+      },
+      {
+        title: "Versatile Chip Values",
+        description:
+          "Includes a range of chip values from $1 to $1000, catering to various poker games and accommodating different betting strategies.",
+      },
+      {
+        title: "Durable Aluminum Case",
+        description:
+          "Housed in a robust aluminum case with a foam interior and secure locking mechanism, providing safe storage and transport for all components.",
+      },
+    ],
+  },
+  {
+    title: "Waterproof Plastic Playing Cards Set - 2 Decks in Durable Case",
+    category: "Poker Equipment",
+    description:
+      "This premium set of waterproof plastic playing cards is perfect for businesses looking for long-lasting and easy-to-clean card solutions. Each set includes 2 standard-sized decks, manufactured in Taiwan, ensuring quality and durability for various applications, whether for events, entertainment, or business promotions.",
+    image: "/product/61-z4jgtLgL.webp",
+    images: ["/product/41j1-xNBG3L.webp"],
+    image_names: ["61-z4jgtLgL.webp", "41j1-xNBG3L.webp"],
+    features: [
+      {
+        title: "100% Waterproof Material",
+        description:
+          "Crafted from high-quality plastic, these cards are resistant to spills and easy to clean, ensuring longevity and consistent performance, even in challenging environments.",
+      },
+      {
+        title: "Standard Poker Size",
+        description:
+          "Measuring 2.5 x 3.5 inches, these cards provide an industry-standard size that is comfortable for handling and game play, ideal for various card games.",
+      },
+      {
+        title: "Includes Jokers",
+        description:
+          "Each deck comes with 2 jokers, enhancing game versatility and allowing for various playing styles, perfect for both casual and serious gamers.",
+      },
+      {
+        title: "Durable Storage Option",
+        description:
+          "The cards are packaged in a sturdy plastic case that protects against damage, making them easy to store and transport for events and gatherings.",
+      },
+    ],
+  },
+  {
+    title: "Premium 13.5g Clay Poker Chip Set with Aluminum Case for Casino Games",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with our premium 13.5g clay poker chip set that includes essential accessories for Texas Hold'em and Blackjack. This complete B2B solution offers durability, authenticity, and convenience, perfect for dealers and game enthusiasts seeking reliability in every play.",
+    image: "/product/71G-dj9OpML.webp",
+    images: [
+      "/product/51xr67vWUfL.webp",
+      "/product/41x39BCiyRL.webp",
+      "/product/51eiEAhQdNL.webp",
+      "/product/51N9SEWF1VL.webp",
+      "/product/51+FYiQ+D-L.webp",
+      "/product/51LugrQdj-L.webp",
+    ],
+    image_names: [
+      "71G-dj9OpML.webp",
+      "51xr67vWUfL.webp",
+      "41x39BCiyRL.webp",
+      "51eiEAhQdNL.webp",
+      "51N9SEWF1VL.webp",
+      "51+FYiQ+D-L.webp",
+      "51LugrQdj-L.webp",
+    ],
+    features: [
+      {
+        title: "Casino-Grade Chips",
+        description:
+          "Crafted from high-quality clay, these casino-grade poker chips ensure a professional feel and performance, enhancing your gaming event's overall experience.",
+      },
+      {
+        title: "Complete Accessory Set",
+        description:
+          "Includes two decks of plastic playing cards, acrylic dice, a dealer button, and more, providing everything needed for a comprehensive poker gaming experience.",
+      },
+      {
+        title: "Portable Protection Case",
+        description:
+          "The included aluminum case features soft padding to protect chips from damage, making it easy to transport and store your poker equipment securely.",
+      },
+      {
+        title: "Ideal for Gifting",
+        description:
+          "This premium poker set is a perfect corporate gift for clients or a thoughtful present for friends and family, catering to all poker enthusiasts with lasting enjoyment.",
+      },
+    ],
+  },
+  {
+    title: "Monte Carlo Poker Chip Set: 1000 High-Quality Tournament Chips",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming events with the Monte Carlo Poker Chip Set, featuring 1000 high-quality casino-style chips and a durable acrylic carrying case. Perfect for businesses hosting poker nights, this professional-grade set ensures an authentic gaming experience with multiple denominations to cater to high-stakes players.",
+    image: "/product/61EOK5QzU4L.webp",
+    images: [
+      "/product/41W9LZ4pYKL.webp",
+      "/product/41gXVLi6PyL.webp",
+      "/product/41jRhYrP1cL.webp",
+      "/product/41zwjbrdKxL.webp",
+      "/product/41gbrG50-YL.webp",
+      "/product/51w-eGUMS9L.webp",
+      "/product/51uWq3NMDML.webp",
+    ],
+    image_names: [
+      "61EOK5QzU4L.webp",
+      "41W9LZ4pYKL.webp",
+      "41gXVLi6PyL.webp",
+      "41jRhYrP1cL.webp",
+      "41zwjbrdKxL.webp",
+      "41gbrG50-YL.webp",
+      "51w-eGUMS9L.webp",
+      "51uWq3NMDML.webp",
+    ],
+    features: [
+      {
+        title: "Complete Tournament Set",
+        description:
+          "Includes 1000 chips with various denominations for a versatile gaming experience, perfect for serious poker tournaments.",
+      },
+      {
+        title: "Professional-Grade Quality",
+        description:
+          "Each chip weighs 14 grams, delivering the authentic feel of a casino, enhancing the overall player experience.",
+      },
+      {
+        title: "Convenient Storage Solution",
+        description:
+          "The durable acrylic carrying case ensures safe storage and easy transport, making it ideal for business meetings and events.",
+      },
+      {
+        title: "Multifunctional Usage",
+        description:
+          "Suitable for a variety of casino games including poker, blackjack, and roulette, enhancing entertainment at corporate gatherings.",
+      },
+    ],
+  },
+  {
+    title: "Brybelly 14g Poker Set - 500 Chips with Cards & Aluminum Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your casino nights with the Brybelly 14g poker set, featuring 500 high-quality clay composite chips, two decks of cards, and a dealer button, all housed in a durable aluminum case. Ideal for professional and amateur gaming experiences, this set enhances engagement and facilitates memorable gatherings for your clients or employees.",
+    image: "/product/71gwJwu-V-L.webp",
+    images: [
+      "/product/51P7Bivpy+L.webp",
+      "/product/51CYgichJvL.webp",
+      "/product/517j45xKSKL.webp",
+      "/product/41vaQNS7cqL.webp",
+      "/product/51Tl4AJN2LL.webp",
+      "/product/41seO+xcEjL.webp",
+      "/product/51nU8w3FmYL.webp",
+    ],
+    image_names: [
+      "71gwJwu-V-L.webp",
+      "51P7Bivpy+L.webp",
+      "51CYgichJvL.webp",
+      "517j45xKSKL.webp",
+      "41vaQNS7cqL.webp",
+      "51Tl4AJN2LL.webp",
+      "41seO+xcEjL.webp",
+      "51nU8w3FmYL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Poker Chips",
+        description:
+          "Each 14g poker chip offers a realistic feel and appearance, attracting both professionals and enthusiasts, ensuring an authentic gaming experience.",
+      },
+      {
+        title: "Distinctive Design",
+        description:
+          "With its laser-etched graphics and shiny inlays, these chips reflect the luxurious essence of Monte Carlo casinos, appealing to customers seeking quality.",
+      },
+      {
+        title: "Enhanced Visibility",
+        description:
+          "Featuring bright colors and clear index values, these chips are easy to differentiate during gameplay, catering to those with visual impairments.",
+      },
+      {
+        title: "Durable Aluminum Case",
+        description:
+          "The premium aluminum case is equipped with a clasp and handle, making it convenient for transport and storage, perfect for poker nights and events.",
+      },
+    ],
+  },
+  {
+    title: "Brybelly 1000-Piece Professional Poker Chip Set - 14g Clay Composite Chips",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with the Brybelly 1000-Piece Poker Chip Set, designed for professional tournaments and cash games. Each 14g chip provides a true casino feel, ensuring both durability and high-stakes play, while the acrylic display case allows for easy storage and elegant presentation, making it ideal for business suppliers in the gaming industry.",
+    image: "/product/91f04Tx9QtL.webp",
+    images: [
+      "/product/51Mc0u0uPlL.webp",
+      "/product/51pMC7B7U6L.webp",
+      "/product/51EjhKW2qaL.webp",
+      "/product/41qeWB8WqlL.webp",
+      "/product/51N-Xridb-L.webp",
+      "/product/41kQCrNsPAL.webp",
+    ],
+    image_names: [
+      "91f04Tx9QtL.webp",
+      "51Mc0u0uPlL.webp",
+      "51pMC7B7U6L.webp",
+      "51EjhKW2qaL.webp",
+      "41qeWB8WqlL.webp",
+      "51N-Xridb-L.webp",
+      "41kQCrNsPAL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Clay Composite",
+        description:
+          "Each poker chip is made from premium clay composite materials, ensuring a genuine casino experience that enhances gameplay and durability.",
+      },
+      {
+        title: "Unique Texture Inlays",
+        description:
+          "The distinctive and simple texture inlays on each denomination allow for easy stacking and quick identification during intense gaming sessions.",
+      },
+      {
+        title: "Robust Acrylic Display Case",
+        description:
+          "The transparent acrylic case offers a sturdy and stylish way to store chips, keeping them secure and organized while displaying them attractively.",
+      },
+      {
+        title: "Customizable Chip Options",
+        description:
+          "This set includes non-denominational chips, providing ultimate flexibility for cash games and tournaments, allowing businesses to cater to various gaming preferences.",
+      },
+    ],
+  },
+  {
+    title: "Premium Poker Chip Set with Aluminum Case - 500 Chips & Accessories",
+    category: "Poker Equipment",
+    description:
+      "Enhance your gaming experience with our Premium Poker Chip Set, featuring 500 high-quality chips and a durable aluminum case, perfect for hosting professional game nights or casino-themed events. This comprehensive set meets the demands of serious poker and blackjack players, ensuring a reliable, elegant solution for all your gaming needs.",
+    image: "/product/81p+SBph3QL.webp",
+    images: [
+      "/product/51IDNnY77fL.webp",
+      "/product/513cp1u+fCL.webp",
+      "/product/51WScmhyMEL.webp",
+      "/product/51Qeg+maBwL.webp",
+      "/product/41KV3zNicML.webp",
+      "/product/41vI9mfPuyL.webp",
+      "/product/51ldlcqfH-L.webp",
+    ],
+    image_names: [
+      "81p+SBph3QL.webp",
+      "51IDNnY77fL.webp",
+      "513cp1u+fCL.webp",
+      "51WScmhyMEL.webp",
+      "51Qeg+maBwL.webp",
+      "41KV3zNicML.webp",
+      "41vI9mfPuyL.webp",
+      "51ldlcqfH-L.webp",
+    ],
+    features: [
+      {
+        title: "Complete Accessory Package",
+        description:
+          "This poker chip set includes 500 chips, 5 dice, 2 decks of cards, and essential buttons for a professional gambling experience, ideal for poker and blackjack.",
+      },
+      {
+        title: "High-Quality Chips",
+        description:
+          "Crafted from premium materials with a textured finish, our chips provide an authentic casino feel, maximizing both comfort and durability for intense gaming sessions.",
+      },
+      {
+        title: "Durable Aluminum Case",
+        description:
+          "Designed for secure storage and portability, this lightweight aluminum case features plush cushioning and a locking mechanism, safeguarding your poker set during transport.",
+      },
+      {
+        title: "Thoughtful Gift Option",
+        description:
+          "This professional poker set makes an excellent gift for gaming enthusiasts, delivering a reliable and enjoyable experience for family and friends, perfect for any occasion.",
+      },
+    ],
+  },
+  {
+    title: "Secret Hitler: Fast-Paced Strategy Game for 5-10 Players",
+    category: "Poker Equipment",
+    description:
+      "Secret Hitler is an engaging deception and betrayal game that enhances team dynamics and encourages strategic thinking. Featuring high-quality wooden components and a solid game board with foil inlays, this product offers an immersive experience for businesses seeking to strengthen team cohesion through social interaction and critical thinking exercises.",
+    image: "/product/51FQfTXB+HL.webp",
+    images: ["/product/417i7scDsrL.webp", "/product/41mSToWyGvL.webp", "/product/41mZ7a20OML.webp"],
+    image_names: ["51FQfTXB+HL.webp", "417i7scDsrL.webp", "41mSToWyGvL.webp", "41mZ7a20OML.webp"],
+    features: [
+      {
+        title: "High-Quality Components",
+        description:
+          "Crafted with premium wooden materials, Secret Hitler ensures durability and longevity, making it an excellent investment for regular corporate events.",
+      },
+      {
+        title: "Engaging Gameplay",
+        description:
+          "Designed for 5 to 10 players, this fast-paced game promotes interaction and collaboration, fostering essential teamwork skills in a competitive yet fun environment.",
+      },
+      {
+        title: "Elegant Design",
+        description:
+          "Featuring a solid game board with foil inlays, Secret Hitler not only delivers an enjoyable gameplay experience but also serves as an attractive addition to any corporate game collection.",
+      },
+      {
+        title: "Strategic Thinking Enhancement",
+        description:
+          "This game encourages critical thinking and strategic decision-making, making it suitable for team-building activities where enhancing problem-solving skills is a priority.",
+      },
+    ],
+  },
+  {
+    title: "Professional Poker Chip Set - 300 Quality Chips with Storage & Accessories",
+    category: "Poker Equipment",
+    description:
+      "Enhance your gaming experience with our premium poker chip set, featuring 300 high-quality plastic chips in five colors, complemented by a gaming mat and a dealer button. Ideal for poker rooms, casinos, and corporate events, this set guarantees clarity and organization during gameplay, making it a must-have for any business-oriented game night.",
+    image: "/product/71gSMwEfvwL.webp",
+    images: [
+      "/product/512Ff+aapbL.webp",
+      "/product/4190r5UPtsL.webp",
+      "/product/41NpYXr+9VL.webp",
+      "/product/51nnb-xdk6L.webp",
+      "/product/51awwU4FWeL.webp",
+      "/product/51clqZb2BUL.webp",
+      "/product/51ulBIk8FAL.webp",
+    ],
+    image_names: [
+      "71gSMwEfvwL.webp",
+      "512Ff+aapbL.webp",
+      "4190r5UPtsL.webp",
+      "41NpYXr+9VL.webp",
+      "51nnb-xdk6L.webp",
+      "51awwU4FWeL.webp",
+      "51clqZb2BUL.webp",
+      "51ulBIk8FAL.webp",
+    ],
+    features: [
+      {
+        title: "Complete Chip Variety",
+        description:
+          "This set comes with 300 chips in five distinct colors, accommodating various denominations, ensuring seamless gameplay for multiple poker formats.",
+      },
+      {
+        title: "Durable Printing Technology",
+        description:
+          "Employing advanced UV color printing, our chips offer enhanced clarity, water resistance, and increased durability for long-lasting use in any gaming environment.",
+      },
+      {
+        title: "Convenient Storage Solution",
+        description:
+          "Included storage boxes keep your chips organized and traveling-friendly, making it easy to bring the excitement of poker anywhere, from corporate retreats to casual gatherings.",
+      },
+      {
+        title: "Bonus Accessories Included",
+        description:
+          "Enjoy added value with a complimentary gaming mat and dealer button, designed to elevate your gaming conditions and enhance player engagement.",
+      },
+    ],
+  },
+  {
+    title: "Brybelly 500 Count Poker Chip Set with Aluminum Case - 14g Clay Composites",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming events with the Brybelly 500 Count Poker Chip Set, featuring 14g clay composite chips for a premium casino experience. This comprehensive set includes playing cards and a dealer button, ideal for professional-grade poker nights or corporate events, ensuring your guests enjoy a thrilling and authentic gaming atmosphere.",
+    image: "/product/81Zaz4eVH-L.webp",
+    images: [
+      "/product/51PjtXHehKL.webp",
+      "/product/51pRJjK3AqL.webp",
+      "/product/51JmutG38QL.webp",
+      "/product/41bogQ9eU4L.webp",
+      "/product/51rNoWQ0E+L.webp",
+      "/product/41qJ5uVblHL.webp",
+    ],
+    image_names: [
+      "81Zaz4eVH-L.webp",
+      "51PjtXHehKL.webp",
+      "51pRJjK3AqL.webp",
+      "51JmutG38QL.webp",
+      "41bogQ9eU4L.webp",
+      "51rNoWQ0E+L.webp",
+      "41qJ5uVblHL.webp",
+    ],
+    features: [
+      {
+        title: "Premium Quality Chips",
+        description:
+          "Crafted from high-grade materials, these 14g poker chips deliver an authentic casino feel, enhancing any gaming experience.",
+      },
+      {
+        title: "Complete Gaming Accessories",
+        description:
+          "The set includes two decks of playing cards and a dealer button, allowing for seamless transitions between various game formats.",
+      },
+      {
+        title: "Easy Stack Design",
+        description:
+          "Featuring a textured inlay for enhanced grip and readability, these chips stack effortlessly for efficient gameplay.",
+      },
+      {
+        title: "Compact Storage Case",
+        description:
+          "All components are securely housed in a lightweight aluminum case with foam padding and a locking system for safe transport and storage.",
+      },
+    ],
+  },
+  {
+    title: "Copag 1546 Neoteric PVC Playing Cards - Durable Dual Deck Set",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with the Copag 1546 Neoteric Design Playing Cards, crafted from 100% durable PVC for longevity and easy maintenance. This dual deck set, featuring vibrant colors and large index design, is perfect for businesses seeking reliable and stylish card solutions for events or game nights.",
+    image: "/product/71mzWSZfIiL.webp",
+    images: [
+      "/product/41XmAYPTb2L.webp",
+      "/product/516ZK-Q98CL.webp",
+      "/product/51sphUIelqL.webp",
+      "/product/51OZvLBu1uL.webp",
+      "/product/51hiKNq2hLL.webp",
+      "/product/41hBF8aiCaL.webp",
+    ],
+    image_names: [
+      "71mzWSZfIiL.webp",
+      "41XmAYPTb2L.webp",
+      "516ZK-Q98CL.webp",
+      "51sphUIelqL.webp",
+      "51OZvLBu1uL.webp",
+      "51hiKNq2hLL.webp",
+      "41hBF8aiCaL.webp",
+    ],
+    features: [
+      {
+        title: "Durable PVC Material",
+        description:
+          "Constructed from 100% premium PVC plastic, these playing cards are built to withstand frequent use while ensuring easy cleaning and maintenance for long-lasting performance.",
+      },
+      {
+        title: "Standard Size Dimensions",
+        description:
+          "Each card is designed in standard dimensions of 3 7/16 inches x 2 1/2 inches, providing a familiar and comfortable handling experience for users of all ages.",
+      },
+      {
+        title: "Complete Dual Deck Set",
+        description:
+          "This package includes two full decks of 52 cards, with two jokers and a guarantee card, ensuring you have everything needed for a comprehensive card game experience.",
+      },
+      {
+        title: "Modern Aesthetic Design",
+        description:
+          "Featuring a stylish, contemporary design with a smooth finish, these playing cards not only perform well but also add visual appeal to any gaming session.",
+      },
+    ],
+  },
+  {
+    title: "Brybelly Poker Keno Game Set with Cards and Chips – Ideal for Family Game Nights",
+    category: "Poker Equipment",
+    description:
+      "The Brybelly Poker Keno Game Set provides an all-in-one gaming experience for businesses looking to enhance their entertainment offerings. Perfect for adult family gatherings or corporate events, this complete set includes 12 game boards, 200 bingo chips, and a deck of playing cards, ensuring memorable experiences for all participants.",
+    image: "/product/81N8YQb98EL.webp",
+    images: [
+      "/product/61c+8wbIBaL.webp",
+      "/product/51oWCoinwNL.webp",
+      "/product/61u8rHjUVgL.webp",
+      "/product/61ugs726E4L.webp",
+      "/product/51BLgSHTX0L.webp",
+      "/product/51GS6rxNb-L.webp",
+    ],
+    image_names: [
+      "81N8YQb98EL.webp",
+      "61c+8wbIBaL.webp",
+      "51oWCoinwNL.webp",
+      "61u8rHjUVgL.webp",
+      "61ugs726E4L.webp",
+      "51BLgSHTX0L.webp",
+      "51GS6rxNb-L.webp",
+    ],
+    features: [
+      {
+        title: "Comprehensive Gaming Experience",
+        description:
+          "This complete Poker Keno set allows for a seamless gaming experience with everything needed available right out of the box, making it ideal for company events and social gatherings.",
+      },
+      {
+        title: "Family-Friendly Fun",
+        description:
+          "Encourage bonding with family and colleagues through interactive gameplay, making this set an essential addition to any corporate or family game night.",
+      },
+      {
+        title: "Easy Setup and Instructions",
+        description:
+          "Designed for quick setup with straightforward instructions, this game can be played without complicated preparations, saving valuable time for businesses and households alike.",
+      },
+      {
+        title: "Versatile Game Options",
+        description:
+          "Featuring two rule variations, this set appeals to diverse player preferences, allowing customization to enhance excitement and engage different skill levels.",
+      },
+    ],
+  },
+  {
+    title: "Copag 100% Plastic Playing Cards - Standard Size, Jumbo Index, Red/Blue",
+    category: "Poker Equipment",
+    description:
+      "Discover the superior quality of Copag playing cards, crafted from 100% PVC plastic for unmatched durability and a paper-like feel. Perfect for B2B needs, these cards resist bending and damage, and can be easily cleaned, ensuring a longer lifespan than traditional paper cards—ideal for businesses hosting game nights or events.",
+    image: "/product/71C6BaBt55L.webp",
+    images: [
+      "/product/41uqARkN4WL.webp",
+      "/product/51tzm0J05uL.webp",
+      "/product/51sphUIelqL.webp",
+      "/product/51OZvLBu1uL.webp",
+      "/product/51hiKNq2hLL.webp",
+      "/product/41hBF8aiCaL.webp",
+    ],
+    image_names: [
+      "71C6BaBt55L.webp",
+      "41uqARkN4WL.webp",
+      "51tzm0J05uL.webp",
+      "51sphUIelqL.webp",
+      "51OZvLBu1uL.webp",
+      "51hiKNq2hLL.webp",
+      "41hBF8aiCaL.webp",
+    ],
+    features: [
+      {
+        title: "Premium PVC Material",
+        description:
+          "Manufactured with 100% PVC plastic, these cards offer enhanced durability and a smooth surface for seamless shuffling and handling.",
+      },
+      {
+        title: "Standard Size & Jumbo Index",
+        description:
+          "Designed in standard poker size (3 7/16 x 2 1/2 inches) with jumbo index lettering, ensuring optimal readability and accessibility for all players.",
+      },
+      {
+        title: "Easy to Clean",
+        description:
+          "Unlike paper cards, Copag playing cards are washable, allowing for easy maintenance and increased hygiene for frequent use.",
+      },
+      {
+        title: "Durable Storage Solution",
+        description:
+          "Packaged in a sturdy hard plastic box with a sleek design, these cards are easy to transport and store, perfect for organizations looking to host events.",
+      },
+    ],
+  },
+  {
+    title: "Twos Company Poker Set Gift Box with Chips, Buttons, and Cards",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming nights with the Twos Company Poker Set, a comprehensive package designed for professional gatherings. This exquisite gift box includes high-quality poker chips, dealer buttons, and playing cards, making it an ideal choice for B2B events, promotional gifts, or corporate entertainment.",
+    image: "/product/61YJFtZ+2vL.webp",
+    images: ["/product/51lgIvJQOCL.webp"],
+    image_names: ["61YJFtZ+2vL.webp", "51lgIvJQOCL.webp"],
+    features: [
+      {
+        title: "Premium Poker Chips",
+        description:
+          "Includes 100 durable chips in four colors, offering long-lasting use and an authentic gaming experience for your corporate events.",
+      },
+      {
+        title: "Complete Button Set",
+        description:
+          "Features big blind and small blind buttons to enhance gaming dynamics and professionalism during poker matches.",
+      },
+      {
+        title: "Compact Storage Box",
+        description:
+          "The elegant gift box measures 6 inches wide by 8.5 inches deep, providing a stylish and organized way to store your poker accessories.",
+      },
+      {
+        title: "Standard Card Dimensions",
+        description:
+          "Comes with two decks of playing cards, each measuring 2.5 inches wide by 3.5 inches deep, ensuring familiarity and convenience for all players.",
+      },
+    ],
+  },
+  {
+    title: "Brybelly Professional Poker Chip Set - 1000 Clay Composite Chips & Case",
+    category: "Poker Equipment",
+    description:
+      "Elevate your gaming experience with the Brybelly Professional Poker Chip Set, featuring 1000 high-quality 13.5g clay composite chips and an aluminum carrying case. Ideal for serious casinos or businesses hosting poker nights, this set offers durability, security, and a touch of authenticity, ensuring your events are unforgettable.",
+    image: "/product/71kcVXVMk4L.webp",
+    images: [
+      "/product/51Q7PzDSUPL.webp",
+      "/product/61wW3LzeAqL.webp",
+      "/product/41UH8pWoLeL.webp",
+      "/product/51bBuUT+4RL.webp",
+      "/product/51YmY-Beh9L.webp",
+      "/product/51FjsfIkOML.webp",
+      "/product/61FkrXNzNmL.webp",
+    ],
+    image_names: [
+      "71kcVXVMk4L.webp",
+      "51Q7PzDSUPL.webp",
+      "61wW3LzeAqL.webp",
+      "41UH8pWoLeL.webp",
+      "51bBuUT+4RL.webp",
+      "51YmY-Beh9L.webp",
+      "51FjsfIkOML.webp",
+      "61FkrXNzNmL.webp",
+    ],
+    features: [
+      {
+        title: "High-Quality Chips",
+        description:
+          "Featuring 13.5g clay composite construction, these chips provide a professional feel and durability, perfect for both home games and casino environments.",
+      },
+      {
+        title: "Unique Textured Design",
+        description:
+          "Each chip denomination is adorned with a distinct, easy-to-read texture, enhancing both aesthetics and stackability for seamless gameplay.",
+      },
+      {
+        title: "Comprehensive Value Range",
+        description:
+          "This set includes a full range of chip values from $1 to $1000, catering to diverse gaming requirements and ensuring flexibility for any poker game.",
+      },
+      {
+        title: "Secure Aluminum Case",
+        description:
+          "Packed in a robust aluminum case with foam padding and a secure lock, this set guarantees safe transport and storage, keeping all components organized and protected.",
+      },
+    ],
+  },
 ];

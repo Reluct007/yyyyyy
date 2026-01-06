@@ -16,8 +16,8 @@ export async function generateMetadata({ params }) {
     locales: SUPPORTED_LOCALES,
     defaultLocale: DEFAULT_LOCALE,
   });
-  const { title, description } = getSeoMeta('terms', locale);
-  
+  const { title, description } = getSeoMeta("terms", locale);
+
   return {
     title,
     description,
@@ -46,11 +46,11 @@ export async function generateMetadata({ params }) {
 
 export default function TermsOfServicePage({ params }) {
   const { locale } = params;
-  const content = getContent('terms', locale);
+  const content = getContent("terms", locale);
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8">{content.title || 'Terms of Service'}</h1>
+      <h1 className="mb-8 text-4xl font-bold">{content.title || "Terms of Service"}</h1>
       <div className="prose max-w-4xl" dangerouslySetInnerHTML={{ __html: content.content }} />
     </div>
   );

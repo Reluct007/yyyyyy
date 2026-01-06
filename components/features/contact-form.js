@@ -1,12 +1,18 @@
 "use client";
 
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { toast } from "sonner"
-import { useState } from 'react';
-import Link from 'next/link';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { toast } from "sonner";
+import { useState } from "react";
+import Link from "next/link";
 import axios from "axios";
 
 // 表单字段翻译
@@ -17,7 +23,7 @@ const formTranslations = {
     fr: "Nom",
     de: "Name",
     ja: "名前",
-    ko: "이름"
+    ko: "이름",
   },
   company: {
     en: "Company",
@@ -25,7 +31,7 @@ const formTranslations = {
     fr: "Entreprise",
     de: "Firma",
     ja: "会社",
-    ko: "회사"
+    ko: "회사",
   },
   email: {
     en: "Email",
@@ -33,7 +39,7 @@ const formTranslations = {
     fr: "E-mail",
     de: "E-Mail",
     ja: "メール",
-    ko: "이메일"
+    ko: "이메일",
   },
   phone: {
     en: "Phone",
@@ -41,7 +47,7 @@ const formTranslations = {
     fr: "Téléphone",
     de: "Telefon",
     ja: "電話",
-    ko: "전화"
+    ko: "전화",
   },
   quantity: {
     en: "Purchase Quantity",
@@ -49,7 +55,7 @@ const formTranslations = {
     fr: "Quantité d'Achat",
     de: "Kaufmenge",
     ja: "購入数量",
-    ko: "구매 수량"
+    ko: "구매 수량",
   },
   message: {
     en: "Message",
@@ -57,7 +63,7 @@ const formTranslations = {
     fr: "Message",
     de: "Nachricht",
     ja: "メッセージ",
-    ko: "메시지"
+    ko: "메시지",
   },
   select: {
     en: "Select",
@@ -65,7 +71,7 @@ const formTranslations = {
     fr: "Sélectionner",
     de: "Auswählen",
     ja: "選択",
-    ko: "선택"
+    ko: "선택",
   },
   other: {
     en: "Other",
@@ -73,7 +79,7 @@ const formTranslations = {
     fr: "Autre",
     de: "Andere",
     ja: "その他",
-    ko: "기타"
+    ko: "기타",
   },
   submit: {
     en: "Get Free Quote",
@@ -81,7 +87,7 @@ const formTranslations = {
     fr: "Obtenir un Devis Gratuit",
     de: "Kostenloses Angebot Erhalten",
     ja: "無料見積もりを取得",
-    ko: "무료 견적 받기"
+    ko: "무료 견적 받기",
   },
   viewPrivacy: {
     en: "View our",
@@ -89,7 +95,7 @@ const formTranslations = {
     fr: "Voir notre",
     de: "Unsere ansehen",
     ja: "当社の",
-    ko: "당사의"
+    ko: "당사의",
   },
   privacyPolicy: {
     en: "privacy policy",
@@ -97,7 +103,7 @@ const formTranslations = {
     fr: "politique de confidentialité",
     de: "Datenschutzrichtlinie",
     ja: "プライバシーポリシー",
-    ko: "개인정보 처리방침"
+    ko: "개인정보 처리방침",
   },
   namePlaceholder: {
     en: "Joe Average",
@@ -105,7 +111,7 @@ const formTranslations = {
     fr: "Jean Dupont",
     de: "Max Mustermann",
     ja: "山田太郎",
-    ko: "홍길동"
+    ko: "홍길동",
   },
   companyPlaceholder: {
     en: "Apple Corp",
@@ -113,7 +119,7 @@ const formTranslations = {
     fr: "Apple Corp",
     de: "Apple Corp",
     ja: "Apple Corp",
-    ko: "Apple Corp"
+    ko: "Apple Corp",
   },
   emailPlaceholder: {
     en: "name@company.com",
@@ -121,7 +127,7 @@ const formTranslations = {
     fr: "nom@entreprise.com",
     de: "name@firma.com",
     ja: "name@company.com",
-    ko: "name@company.com"
+    ko: "name@company.com",
   },
   phonePlaceholder: {
     en: "+1 (123) 456-7890",
@@ -129,7 +135,7 @@ const formTranslations = {
     fr: "+33 1 23 45 67 89",
     de: "+49 123 456789",
     ja: "+81 12-3456-7890",
-    ko: "+82 10-1234-5678"
+    ko: "+82 10-1234-5678",
   },
   messagePlaceholder: {
     en: "Please provide any additional details or specific requirements...",
@@ -137,20 +143,20 @@ const formTranslations = {
     fr: "Veuillez fournir tous les détails supplémentaires ou exigences spécifiques...",
     de: "Bitte geben Sie zusätzliche Details oder spezifische Anforderungen an...",
     ja: "追加の詳細や特定の要件を提供してください...",
-    ko: "추가 세부 정보나 특정 요구 사항을 제공해 주세요..."
-  }
+    ko: "추가 세부 정보나 특정 요구 사항을 제공해 주세요...",
+  },
 };
 
-export default function ContactForm({ locale = 'en' }) {
+export default function ContactForm({ locale = "en" }) {
   const t = (key) => formTranslations[key]?.[locale] || formTranslations[key]?.en || key;
-  
+
   const [data, setData] = useState({
     name: "",
     company: "",
     email: "",
     phone: "",
     quantity: "",
-    message: ""
+    message: "",
   });
 
   const onChangeHandler = (e) => {
@@ -158,15 +164,15 @@ export default function ContactForm({ locale = 'en' }) {
     const value = e.target.value;
     setData({
       ...data,
-      [name]: value
+      [name]: value,
     });
   };
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
-    
+
     // API 服务地址
-    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.yooyooy.com';
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.yooyooy.com";
 
     try {
       const response = await axios.post(`${API_URL}/api/contact`, {
@@ -175,7 +181,7 @@ export default function ContactForm({ locale = 'en' }) {
         email: data.email,
         phone: data.phone,
         quantity: data.quantity,
-        message: data.message
+        message: data.message,
       });
       if (response.data.success) {
         toast.success(response.data.msg);
@@ -185,7 +191,7 @@ export default function ContactForm({ locale = 'en' }) {
           email: "",
           phone: "",
           quantity: "",
-          message: ""
+          message: "",
         });
       } else {
         toast.error(response.data.msg);
@@ -203,7 +209,10 @@ export default function ContactForm({ locale = 'en' }) {
         <div className="grid grid-cols-2 gap-4">
           <div>
             <div className="mb-2.5 text-sm font-medium">
-              <label htmlFor="name">{t('name')}<span className="text-red-500 pl-1">*</span></label>
+              <label htmlFor="name">
+                {t("name")}
+                <span className="pl-1 text-red-500">*</span>
+              </label>
             </div>
             <Input
               onChange={onChangeHandler}
@@ -211,13 +220,13 @@ export default function ContactForm({ locale = 'en' }) {
               name="name"
               value={data.name}
               type="text"
-              placeholder={t('namePlaceholder')}
+              placeholder={t("namePlaceholder")}
               required
             />
           </div>
           <div>
             <div className="mb-2.5 text-sm font-medium">
-              <label htmlFor="company">{t('company')}</label>
+              <label htmlFor="company">{t("company")}</label>
             </div>
             <Input
               onChange={onChangeHandler}
@@ -225,14 +234,17 @@ export default function ContactForm({ locale = 'en' }) {
               name="company"
               value={data.company}
               type="text"
-              placeholder={t('companyPlaceholder')}
+              placeholder={t("companyPlaceholder")}
             />
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div>
             <div className="mb-2.5 text-sm font-medium">
-              <label htmlFor="email">{t('email')}<span className="text-red-500 pl-1">*</span></label>
+              <label htmlFor="email">
+                {t("email")}
+                <span className="pl-1 text-red-500">*</span>
+              </label>
             </div>
             <Input
               onChange={onChangeHandler}
@@ -240,13 +252,13 @@ export default function ContactForm({ locale = 'en' }) {
               name="email"
               value={data.email}
               type="email"
-              placeholder={t('emailPlaceholder')}
+              placeholder={t("emailPlaceholder")}
               required
             />
           </div>
           <div>
             <div className="mb-2.5 text-sm font-medium">
-              <label htmlFor="phone">{t('phone')}</label>
+              <label htmlFor="phone">{t("phone")}</label>
             </div>
             <Input
               onChange={onChangeHandler}
@@ -254,17 +266,20 @@ export default function ContactForm({ locale = 'en' }) {
               name="phone"
               value={data.phone}
               type="tel"
-              placeholder={t('phonePlaceholder')}
+              placeholder={t("phonePlaceholder")}
             />
           </div>
         </div>
         <div>
           <div className="mb-2.5 text-sm font-medium">
-            <label htmlFor="quantity">{t('quantity')}</label>
+            <label htmlFor="quantity">{t("quantity")}</label>
           </div>
-          <Select onValueChange={(value) => setData({ ...data, quantity: value })} value={data.quantity}>
+          <Select
+            onValueChange={(value) => setData({ ...data, quantity: value })}
+            value={data.quantity}
+          >
             <SelectTrigger id="quantity" name="quantity">
-              <SelectValue placeholder={t('select')} />
+              <SelectValue placeholder={t("select")} />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="300">300</SelectItem>
@@ -275,28 +290,35 @@ export default function ContactForm({ locale = 'en' }) {
               <SelectItem value="2000">2000</SelectItem>
               <SelectItem value="3000">3000</SelectItem>
               <SelectItem value="5000">5000</SelectItem>
-              <SelectItem value="other">{t('other')}</SelectItem>
+              <SelectItem value="other">{t("other")}</SelectItem>
             </SelectContent>
           </Select>
         </div>
         <div>
           <div className="mb-2.5 text-sm font-medium">
-            <label htmlFor="message">{t('message')}<span className="text-red-500 pl-1">*</span></label>
+            <label htmlFor="message">
+              {t("message")}
+              <span className="pl-1 text-red-500">*</span>
+            </label>
           </div>
           <Textarea
             onChange={onChangeHandler}
             id="message"
             name="message"
             value={data.message}
-            placeholder={t('messagePlaceholder')}
+            placeholder={t("messagePlaceholder")}
             className="min-h-[320px]"
             required
           />
         </div>
         <div className="flex w-full flex-col justify-end space-y-3 pt-2">
-          <Button type="submit">{t('submit')}</Button>
+          <Button type="submit">{t("submit")}</Button>
           <div className="text-xs text-muted-foreground">
-            {t('viewPrivacy')} <Link href={privacyUrl} className="underline">{t('privacyPolicy')}</Link>.
+            {t("viewPrivacy")}{" "}
+            <Link href={privacyUrl} className="underline">
+              {t("privacyPolicy")}
+            </Link>
+            .
           </div>
         </div>
       </div>

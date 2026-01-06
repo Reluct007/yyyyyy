@@ -1,48 +1,74 @@
-'use client';
+"use client";
 
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from '@/components/ui/navigation-menu';
-import { Button, buttonVariants } from '@/components/ui/button';
-import ContactForm from '@/components/features/contact-form';
-import { Menu } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import Link from 'next/link';
-import Image from 'next/image';
-import { basic } from '@/data/basic';
-import { products } from '@/data/products';
-import { useLanguage } from '@/lib/language-context';
-import slugify from 'slugify';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
+import { Button, buttonVariants } from "@/components/ui/button";
+import ContactForm from "@/components/features/contact-form";
+import { Menu } from "lucide-react";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import Image from "next/image";
+import { basic } from "@/data/basic";
+import { products } from "@/data/products";
+import { useLanguage } from "@/lib/language-context";
+import slugify from "slugify";
 
 export default function Navbar({ data = basic.navbar }) {
   const { translations, locale } = useLanguage();
   const urlPrefix = `/${locale}`;
-  
+
   const brandName = data.brand;
   const logo = data.logo;
-  
+
   // 从 products.js 获取分类列表
-  const categories = products.products.map(p => ({
+  const categories = products.products.map((p) => ({
     title: p.title,
     slug: slugify(p.title, { lower: true, strict: true }),
-    description: p.description.substring(0, 80) + '...'
+    description: p.description.substring(0, 80) + "...",
   }));
-  
+
   return (
-    <section className="shadow-sm py-4">
+    <section className="py-4 shadow-sm">
       <div className="container mx-auto">
         {/* Desktop Menu */}
-        <nav className="hidden lg:flex justify-between items-center" role="navigation" aria-label="Main navigation">
+        <nav
+          className="hidden items-center justify-between lg:flex"
+          role="navigation"
+          aria-label="Main navigation"
+        >
           <Link href={`${urlPrefix}/`} className="flex items-center gap-4">
             <Image src={logo} className="w-8" alt={`${brandName} logo`} width={100} height={100} />
             <span className="text-xl font-bold">{brandName}</span>
           </Link>
 
           <div className="flex items-center gap-2">
-            <Link href={`${urlPrefix}/`} className={cn(navigationMenuTriggerStyle(), buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
+            <Link
+              href={`${urlPrefix}/`}
+              className={cn(
+                navigationMenuTriggerStyle(),
+                buttonVariants({ variant: "ghost" }),
+                "text-base font-medium",
+              )}
+            >
               {translations.nav?.home || "Home"}
             </Link>
-            
+
             {/* Products 下拉菜单 */}
             <NavigationMenu>
               <NavigationMenuList>
@@ -58,11 +84,10 @@ export default function Navbar({ data = basic.navbar }) {
                             href={`${urlPrefix}/collection/`}
                             className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                           >
-                            <div className="mb-2 text-lg font-medium">
-                              All Products
-                            </div>
+                            <div className="mb-2 text-lg font-medium">All Products</div>
                             <p className="text-sm leading-tight text-muted-foreground">
-                              Browse our complete collection of poker sets, chips, tables, and accessories.
+                              Browse our complete collection of poker sets, chips, tables, and
+                              accessories.
                             </p>
                           </Link>
                         </NavigationMenuLink>
@@ -74,7 +99,9 @@ export default function Navbar({ data = basic.navbar }) {
                               href={`${urlPrefix}/collection/${category.slug}/`}
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                             >
-                              <div className="text-sm font-medium leading-none">{category.title}</div>
+                              <div className="text-sm font-medium leading-none">
+                                {category.title}
+                              </div>
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                 {category.description}
                               </p>
@@ -82,27 +109,41 @@ export default function Navbar({ data = basic.navbar }) {
                           </NavigationMenuLink>
                         </li>
                       ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
 
-            <Link href={`${urlPrefix}/about/`} className={cn(navigationMenuTriggerStyle(), buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
+            <Link
+              href={`${urlPrefix}/about/`}
+              className={cn(
+                navigationMenuTriggerStyle(),
+                buttonVariants({ variant: "ghost" }),
+                "text-base font-medium",
+              )}
+            >
               {translations.nav?.about || "About"}
             </Link>
-            <Link href={`${urlPrefix}/contact/`} className={cn(navigationMenuTriggerStyle(), buttonVariants({ variant: "ghost" }), "text-base font-medium")}>
+            <Link
+              href={`${urlPrefix}/contact/`}
+              className={cn(
+                navigationMenuTriggerStyle(),
+                buttonVariants({ variant: "ghost" }),
+                "text-base font-medium",
+              )}
+            >
               {translations.nav?.contact || "Contact"}
             </Link>
           </div>
 
           <Dialog>
             <DialogTrigger asChild>
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-6 py-2">
+              <Button className="bg-primary px-6 py-2 font-medium text-primary-foreground hover:bg-primary/90">
                 {translations.nav?.getQuote || data.buttonText}
               </Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[625px] p-8">
+            <DialogContent className="p-8 sm:max-w-[625px]">
               <DialogHeader>
                 <DialogTitle>{data.dialogTitle}</DialogTitle>
                 <DialogDescription>{data.dialogDescription}</DialogDescription>
@@ -116,7 +157,13 @@ export default function Navbar({ data = basic.navbar }) {
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
             <Link href={`${urlPrefix}/`} className="flex items-center gap-4">
-              <Image src={logo} className="w-8" alt={`${brandName} logo`} width={100} height={100} />
+              <Image
+                src={logo}
+                className="w-8"
+                alt={`${brandName} logo`}
+                width={100}
+                height={100}
+              />
               <span className="text-xl font-bold">{brandName}</span>
             </Link>
 
@@ -130,7 +177,13 @@ export default function Navbar({ data = basic.navbar }) {
                 <SheetHeader>
                   <SheetTitle>
                     <Link href={`${urlPrefix}/`} className="flex items-center gap-2">
-                      <Image src={logo} className="w-8" alt={`${brandName} logo`} width={100} height={100} />
+                      <Image
+                        src={logo}
+                        className="w-8"
+                        alt={`${brandName} logo`}
+                        width={100}
+                        height={100}
+                      />
                       <span className="text-xl font-bold">{brandName}</span>
                     </Link>
                   </SheetTitle>
@@ -140,17 +193,17 @@ export default function Navbar({ data = basic.navbar }) {
                   <Link href={`${urlPrefix}/`} className="text-base font-medium">
                     {translations.nav?.home || "Home"}
                   </Link>
-                  
+
                   {/* Products with subcategories */}
                   <div className="space-y-2">
                     <Link href={`${urlPrefix}/collection/`} className="text-base font-medium">
                       {translations.nav?.products || "Products"}
                     </Link>
-                    <div className="pl-4 space-y-2 border-l-2 border-muted">
+                    <div className="space-y-2 border-l-2 border-muted pl-4">
                       {categories.map((category) => (
-                        <Link 
+                        <Link
                           key={category.slug}
-                          href={`${urlPrefix}/collection/${category.slug}/`} 
+                          href={`${urlPrefix}/collection/${category.slug}/`}
                           className="block text-sm text-muted-foreground hover:text-foreground"
                         >
                           {category.title}
@@ -158,7 +211,7 @@ export default function Navbar({ data = basic.navbar }) {
                       ))}
                     </div>
                   </div>
-                  
+
                   <Link href={`${urlPrefix}/about/`} className="text-base font-medium">
                     {translations.nav?.about || "About"}
                   </Link>
@@ -172,7 +225,7 @@ export default function Navbar({ data = basic.navbar }) {
                     <DialogTrigger asChild>
                       <Button>{translations.nav?.getQuote || data.buttonText}</Button>
                     </DialogTrigger>
-                    <DialogContent className="sm:max-w-[625px] p-6 lg:p-8 rounded-lg">
+                    <DialogContent className="rounded-lg p-6 sm:max-w-[625px] lg:p-8">
                       <DialogHeader>
                         <DialogTitle>{data.dialogTitle}</DialogTitle>
                         <DialogDescription>{data.dialogDescription}</DialogDescription>

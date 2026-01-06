@@ -1,5 +1,5 @@
 import { contact } from "@/data/contact";
-import ContactClient from './contact-client';
+import ContactClient from "./contact-client";
 import { getSeoMeta } from "@/lib/metadata-translations";
 import { basic } from "@/data/basic";
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/data/i18n";
@@ -18,8 +18,8 @@ export async function generateMetadata({ params }) {
     defaultLocale: DEFAULT_LOCALE,
   });
   const canonicalUrl = alternates.canonical;
-  const { title, description } = getSeoMeta('contact', locale);
-  
+  const { title, description } = getSeoMeta("contact", locale);
+
   return {
     title,
     description,

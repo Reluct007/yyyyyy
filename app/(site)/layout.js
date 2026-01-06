@@ -24,9 +24,9 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   openGraph: {
@@ -50,25 +50,25 @@ export default function RootLayout({ children }) {
   const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": basic.info.brand,
-    "url": SITE_URL,
-    "logo": `${basic.seo.url}/logo1.webp`,
-    "description": basic.seo.description,
-    "contactPoint": {
+    name: basic.info.brand,
+    url: SITE_URL,
+    logo: `${basic.seo.url}/logo1.webp`,
+    description: basic.seo.description,
+    contactPoint: {
       "@type": "ContactPoint",
-      "contactType": "customer service",
-      "email": basic.info.email,
-      "url": `${SITE_URL}contact/`
+      contactType: "customer service",
+      email: basic.info.email,
+      url: `${SITE_URL}contact/`,
     },
-    "sameAs": [SITE_URL],
+    sameAs: [SITE_URL],
   };
 
   // Website Structured Data
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": basic.info.brand,
-    "url": SITE_URL,
+    name: basic.info.brand,
+    url: SITE_URL,
   };
 
   return (

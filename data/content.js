@@ -27,7 +27,7 @@ export const privacyContent = {
       
       <h2>4. Sharing Your Information</h2>
       <p>We only share information with your consent, to comply with laws, or to protect your rights.</p>
-    `
+    `,
   },
   es: {
     title: "Política de Privacidad",
@@ -51,7 +51,7 @@ export const privacyContent = {
       
       <h2>4. Compartir Su Información</h2>
       <p>Solo compartimos información con su consentimiento, para cumplir con las leyes o para proteger sus derechos.</p>
-    `
+    `,
   },
   fr: {
     title: "Politique de Confidentialité",
@@ -75,7 +75,7 @@ export const privacyContent = {
       
       <h2>4. Partage de Vos Informations</h2>
       <p>Nous ne partageons des informations qu'avec votre consentement, pour nous conformer aux lois ou pour protéger vos droits.</p>
-    `
+    `,
   },
   de: {
     title: "Datenschutzrichtlinie",
@@ -99,7 +99,7 @@ export const privacyContent = {
       
       <h2>4. Weitergabe Ihrer Informationen</h2>
       <p>Wir geben Informationen nur mit Ihrer Zustimmung weiter, um Gesetzen zu entsprechen oder um Ihre Rechte zu schützen.</p>
-    `
+    `,
   },
   ja: {
     title: "プライバシーポリシー",
@@ -123,7 +123,7 @@ export const privacyContent = {
       
       <h2>4. 情報の共有</h2>
       <p>お客様の同意がある場合、法律を遵守するため、またはお客様の権利を保護するためにのみ情報を共有します。</p>
-    `
+    `,
   },
   ko: {
     title: "개인정보 처리방침",
@@ -147,8 +147,8 @@ export const privacyContent = {
       
       <h2>4. 정보 공유</h2>
       <p>귀하의 동의가 있거나, 법률을 준수하거나, 귀하의 권리를 보호하기 위해서만 정보를 공유합니다.</p>
-    `
-  }
+    `,
+  },
 };
 
 export const termsContent = {
@@ -168,7 +168,7 @@ export const termsContent = {
       
       <h2>4. Limitations</h2>
       <p>In no event shall ${BRAND_NAME} or its suppliers be liable for any damages arising out of the use or inability to use the materials on our website.</p>
-    `
+    `,
   },
   es: {
     title: "Términos de Servicio",
@@ -186,7 +186,7 @@ export const termsContent = {
       
       <h2>4. Limitaciones</h2>
       <p>En ningún caso ${BRAND_NAME} o sus proveedores serán responsables de ningún daño que surja del uso o la imposibilidad de usar los materiales en nuestro sitio web.</p>
-    `
+    `,
   },
   fr: {
     title: "Conditions d'Utilisation",
@@ -204,7 +204,7 @@ export const termsContent = {
       
       <h2>4. Limitations</h2>
       <p>En aucun cas ${BRAND_NAME} ou ses fournisseurs ne seront responsables de tout dommage découlant de l'utilisation ou de l'impossibilité d'utiliser les matériaux sur notre site web.</p>
-    `
+    `,
   },
   de: {
     title: "Nutzungsbedingungen",
@@ -222,7 +222,7 @@ export const termsContent = {
       
       <h2>4. Einschränkungen</h2>
       <p>In keinem Fall haften ${BRAND_NAME} oder seine Lieferanten für Schäden, die sich aus der Nutzung oder der Unmöglichkeit der Nutzung der Materialien auf unserer Website ergeben.</p>
-    `
+    `,
   },
   ja: {
     title: "利用規約",
@@ -240,7 +240,7 @@ export const termsContent = {
       
       <h2>4. 制限事項</h2>
       <p>いかなる場合も、${BRAND_NAME}またはそのサプライヤーは、当社のウェブサイト上の資料の使用または使用不能から生じるいかなる損害についても責任を負いません。</p>
-    `
+    `,
   },
   ko: {
     title: "이용약관",
@@ -258,8 +258,8 @@ export const termsContent = {
       
       <h2>4. 제한 사항</h2>
       <p>어떠한 경우에도 ${BRAND_NAME} 또는 그 공급업체는 당사 웹사이트의 자료 사용 또는 사용 불능으로 인해 발생하는 손해에 대해 책임을 지지 않습니다.</p>
-    `
-  }
+    `,
+  },
 };
 
 export const faqContent = {
@@ -284,7 +284,7 @@ export const faqContent = {
       
       <h3>How long does shipping take?</h3>
       <p>Shipping times vary depending on your location. Typically 7-14 business days for international orders.</p>
-    `
+    `,
   },
   es: {
     title: "Preguntas Frecuentes",
@@ -307,7 +307,7 @@ export const faqContent = {
       
       <h3>¿Cuánto tiempo tarda el envío?</h3>
       <p>Los tiempos de envío varían según su ubicación. Típicamente 7-14 días hábiles para pedidos internacionales.</p>
-    `
+    `,
   },
   fr: {
     title: "Questions Fréquemment Posées",
@@ -330,7 +330,7 @@ export const faqContent = {
       
       <h3>Combien de temps prend la livraison?</h3>
       <p>Les délais d'expédition varient selon votre emplacement. Généralement 7-14 jours ouvrables pour les commandes internationales.</p>
-    `
+    `,
   },
   de: {
     title: "Häufig Gestellte Fragen",
@@ -353,7 +353,7 @@ export const faqContent = {
       
       <h3>Wie lange dauert der Versand?</h3>
       <p>Die Versandzeiten variieren je nach Ihrem Standort. Typischerweise 7-14 Werktage für internationale Bestellungen.</p>
-    `
+    `,
   },
   ja: {
     title: "よくあるご質問",
@@ -376,7 +376,7 @@ export const faqContent = {
       
       <h3>配送にはどのくらいかかりますか？</h3>
       <p>配送時間はお客様の所在地によって異なります。通常、国際注文の場合は7〜14営業日です。</p>
-    `
+    `,
   },
   ko: {
     title: "자주 묻는 질문",
@@ -399,8 +399,8 @@ export const faqContent = {
       
       <h3>배송은 얼마나 걸리나요?</h3>
       <p>배송 시간은 위치에 따라 다릅니다. 일반적으로 국제 주문의 경우 7-14 영업일이 소요됩니다.</p>
-    `
-  }
+    `,
+  },
 };
 
 export const shippingContent = {
@@ -420,7 +420,7 @@ export const shippingContent = {
       
       <h2>International Shipping</h2>
       <p>We ship worldwide. International customers are responsible for any customs duties or taxes.</p>
-    `
+    `,
   },
   es: {
     title: "Política de Envío",
@@ -438,7 +438,7 @@ export const shippingContent = {
       
       <h2>Envío Internacional</h2>
       <p>Enviamos a todo el mundo. Los clientes internacionales son responsables de los aranceles aduaneros o impuestos.</p>
-    `
+    `,
   },
   fr: {
     title: "Politique d'Expédition",
@@ -456,7 +456,7 @@ export const shippingContent = {
       
       <h2>Expédition Internationale</h2>
       <p>Nous expédions dans le monde entier. Les clients internationaux sont responsables des droits de douane ou des taxes.</p>
-    `
+    `,
   },
   de: {
     title: "Versandrichtlinie",
@@ -474,7 +474,7 @@ export const shippingContent = {
       
       <h2>Internationaler Versand</h2>
       <p>Wir versenden weltweit. Internationale Kunden sind für Zollgebühren oder Steuern verantwortlich.</p>
-    `
+    `,
   },
   ja: {
     title: "配送ポリシー",
@@ -492,7 +492,7 @@ export const shippingContent = {
       
       <h2>国際配送</h2>
       <p>世界中に配送しています。国際的なお客様は関税や税金の責任を負います。</p>
-    `
+    `,
   },
   ko: {
     title: "배송 정책",
@@ -510,8 +510,8 @@ export const shippingContent = {
       
       <h2>국제 배송</h2>
       <p>전 세계로 배송합니다. 국제 고객은 관세 또는 세금에 대한 책임이 있습니다.</p>
-    `
-  }
+    `,
+  },
 };
 
 export const returnContent = {
@@ -531,7 +531,7 @@ export const returnContent = {
       
       <h2>Non-Returnable Items</h2>
       <p>Custom orders and clearance items are final sale and cannot be returned.</p>
-    `
+    `,
   },
   es: {
     title: "Política de Devolución",
@@ -549,7 +549,7 @@ export const returnContent = {
       
       <h2>Artículos No Retornables</h2>
       <p>Los pedidos personalizados y los artículos en liquidación son venta final y no se pueden devolver.</p>
-    `
+    `,
   },
   fr: {
     title: "Politique de Retour",
@@ -567,7 +567,7 @@ export const returnContent = {
       
       <h2>Articles Non Retournables</h2>
       <p>Les commandes personnalisées et les articles en liquidation sont des ventes finales et ne peuvent pas être retournés.</p>
-    `
+    `,
   },
   de: {
     title: "Rückgabebedingungen",
@@ -585,7 +585,7 @@ export const returnContent = {
       
       <h2>Nicht Rückgabefähige Artikel</h2>
       <p>Kundenspezifische Bestellungen und Ausverkaufsartikel sind Endverkauf und können nicht zurückgegeben werden.</p>
-    `
+    `,
   },
   ja: {
     title: "返品ポリシー",
@@ -603,7 +603,7 @@ export const returnContent = {
       
       <h2>返品不可商品</h2>
       <p>カスタムオーダーおよびクリアランス商品は最終販売であり、返品できません。</p>
-    `
+    `,
   },
   ko: {
     title: "반품 정책",
@@ -621,23 +621,23 @@ export const returnContent = {
       
       <h2>반품 불가 상품</h2>
       <p>맞춤 주문 및 정리 상품은 최종 판매이며 반품할 수 없습니다.</p>
-    `
-  }
+    `,
+  },
 };
 
-export function getContent(type, locale = 'en') {
+export function getContent(type, locale = "en") {
   const contentMap = {
     privacy: privacyContent,
     terms: termsContent,
     faq: faqContent,
     shipping: shippingContent,
-    return: returnContent
+    return: returnContent,
   };
-  
+
   const content = contentMap[type];
   if (!content) {
-    return { title: 'Content Not Found', content: '<p>Content not available.</p>' };
+    return { title: "Content Not Found", content: "<p>Content not available.</p>" };
   }
-  
+
   return content[locale] || content.en;
 }

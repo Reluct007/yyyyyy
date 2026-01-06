@@ -43,30 +43,18 @@ export default function Home({ data = home }) {
   return (
     <>
       <Hero data={data.hero} />
-      
-      {data.categories && (
-        <ThreeColumn data={data.categories} />
-      )}
-      
-      {data.about && (
-        <TwoColumn data={data.about} />
-      )}
-      
-      {data.options && (
-        <FourColumn data={data.options} />
-      )}
-      
-      {data.process && (
-        <ThreeColumn data={data.process} />
-      )}
-      
-      {data.testimonials && (
-        <Testimonials data={data.testimonials} />
-      )}
-      
-      {data.faq && (
-        <FAQ data={data.faq} />
-      )}
+
+      {data.categories && <ThreeColumn data={data.categories} />}
+
+      {data.about && <TwoColumn data={data.about} />}
+
+      {data.options && <FourColumn data={data.options} />}
+
+      {data.process && <ThreeColumn data={data.process} />}
+
+      {data.testimonials && <Testimonials data={data.testimonials} />}
+
+      {data.faq && <FAQ data={data.faq} />}
     </>
   );
 }
