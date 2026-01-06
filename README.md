@@ -91,6 +91,9 @@ pnpm build
 # 输出到 out/ 目录
 # 构建会在产物中生成 sitemap.xml / robots.txt（Next.js Metadata Routes：`app/sitemap.js`、`app/robots.js`）
 # 说明：当前 build 使用 Turbopack（next build --turbo）
+
+# 基于 out/ 产物做离线 SEO 基础检查（title/description/canonical/hreflang/JSON-LD 等）
+pnpm seo:scan
 ```
 
 ### 5. 代码格式化
