@@ -18,7 +18,7 @@ async function prepareWorker() {
         }
 
         console.log("Copying worker.js to assets/_worker.js...");
-        await cp(workerSource, workerDest);
+        await cp(workerSource, workerDest, { dereference: true });
 
         // Copy all necessary directories to assets
         const dirsToCopy = [
@@ -34,7 +34,8 @@ async function prepareWorker() {
 
             if (existsSync(srcDir)) {
                 console.log(`Copying ${dir}/ to assets/${dir}/...`);
-                await cp(srcDir, destDir, { recursive: true });
+                // dereference: true follows symlinks and copies actual files
+                await cp(srcDir, destDir, { recursive: true, dereference: true });
             }
         }
 
