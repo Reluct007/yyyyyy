@@ -8,6 +8,9 @@
     "dev": "next dev --turbo",
     "dev:turbo": "pnpm dev",
     "build": "next build",
+    "build:worker": "opennextjs-cloudflare build",
+    "preview": "opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare deploy",
     "seo:scan": "node --no-warnings ./scripts/seo-checks.mjs",
     "start": "next start",
     "lint": "eslint --ext .js,.jsx,.mjs,.cjs \"app\" \"components\" \"lib\" \"pages\" \"data\" \"scripts\" \"next.config.mjs\" \"tailwind.config.mjs\" \"postcss.config.mjs\"",
@@ -39,12 +42,14 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.0.0",
     "eslint": "^8.57.1",
     "eslint-config-next": "15.5.9",
     "eslint-config-prettier": "^10.1.8",
     "postcss": "^8",
     "prettier": "^3.7.4",
     "prettier-plugin-tailwindcss": "^0.7.2",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "wrangler": "^4.58.0"
   }
 }
