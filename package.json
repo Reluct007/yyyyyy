@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "next dev --turbo",
     "dev:turbo": "pnpm dev",
-    "build": "next build && npx @cloudflare/next-on-pages",
+    "build": "next build",
+    "pages:build": "npx @cloudflare/next-on-pages",
     "seo:scan": "node --no-warnings ./scripts/seo-checks.mjs",
     "start": "next start",
     "lint": "eslint --ext .js,.jsx,.mjs,.cjs \"app\" \"components\" \"lib\" \"pages\" \"data\" \"scripts\" \"next.config.mjs\" \"tailwind.config.mjs\" \"postcss.config.mjs\"",
