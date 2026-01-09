@@ -1,13 +1,10 @@
-import "../globals.css";
-import RootChrome from "@/components/layout/root-chrome";
+import ClientProviders from "@/components/layout/client-providers";
 import { basic } from "@/data/basic";
 import { getSupportedLocales } from "@/lib/i18n";
 import { getSeoMeta } from "@/lib/metadata-translations";
 import { withTrailingSlash } from "@/lib/seo-url";
 import { openGraphImage, twitterMetadata } from "@/lib/shared-metadata";
 import { notFound } from "next/navigation";
-import { SettingsProvider } from "@/lib/settings-context";
-import ThemeInjector from "@/components/theme-injector";
 
 const SITE_URL = withTrailingSlash(basic.seo.url);
 
@@ -33,7 +30,6 @@ export async function generateMetadata({ params }) {
   const canonicalUrl = `${SITE_URL}${locale}/`;
 
   return {
-    metadataBase: new URL(SITE_URL),
     title,
     description,
     robots: {
@@ -57,6 +53,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
+// Child layout should NOT have html/body - only wraps content
 export default function LocaleLayout({ children, params }) {
   const { locale } = params;
   const supportedLocales = getSupportedLocales();
@@ -91,30 +88,16 @@ export default function LocaleLayout({ children, params }) {
   };
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-        />
-        <link rel="preload" href="/logo1.webp" as="image" />
-        <link rel="preload" href="/home/Cover-image.webp" as="image" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-      </head>
-      <body className="antialiased">
-        <SettingsProvider>
-          <ThemeInjector />
-          <RootChrome locale={locale}>{children}</RootChrome>
-        </SettingsProvider>
-      </body>
-    </html>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
+      <ClientProviders locale={locale}>{children}</ClientProviders>
+    </>
   );
 }
