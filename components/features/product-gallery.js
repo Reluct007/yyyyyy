@@ -19,10 +19,24 @@ export default function ProductGallery({ mainImage, images = [], title }) {
       return;
     }
 
-    const container = scrollContainerRef.current;
-    if (container) {
-      setShowScrollHint(container.scrollHeight > container.clientHeight);
-    }
+    const checkScrollable = () => {
+      const container = scrollContainerRef.current;
+      if (container) {
+        const isScrollable = container.scrollHeight > container.clientHeight + 10; // 添加10px容差
+        setShowScrollHint(isScrollable);
+      }
+    };
+
+    // 延迟检查以确保DOM已渲染
+    const timeoutId = setTimeout(checkScrollable, 100);
+
+    // 在窗口调整大小时重新检查
+    window.addEventListener('resize', checkScrollable);
+
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener('resize', checkScrollable);
+    };
   }, [allImages.length]);
 
   if (allImages.length === 0) return null;
@@ -89,18 +103,16 @@ export default function ProductGallery({ mainImage, images = [], title }) {
                 <button
                   key={index}
                   onClick={() => setSelectedIndex(index)}
-                  className={`aspect-square overflow-hidden rounded-lg bg-white transition-all ${
-                    selectedIndex === index
+                  className={`aspect-square overflow-hidden rounded-lg bg-white transition-all ${selectedIndex === index
                       ? "border-2 border-primary shadow-lg ring-4 ring-primary/20"
                       : "border border-border hover:border-primary/50"
-                  }`}
+                    }`}
                 >
                   <Image
                     src={image}
                     alt={`${title} - View ${index + 1}`}
-                    className={`h-full w-full object-contain transition-opacity ${
-                      selectedIndex === index ? "opacity-100" : "opacity-80 hover:opacity-100"
-                    }`}
+                    className={`h-full w-full object-contain transition-opacity ${selectedIndex === index ? "opacity-100" : "opacity-80 hover:opacity-100"
+                      }`}
                     width={400}
                     height={400}
                   />
@@ -173,9 +185,8 @@ export default function ProductGallery({ mainImage, images = [], title }) {
                 >
                   <span
                     aria-hidden="true"
-                    className={`h-2 rounded-full transition-all ${
-                      selectedIndex === index ? "w-4 bg-primary" : "w-2 bg-gray-300"
-                    }`}
+                    className={`h-2 rounded-full transition-all ${selectedIndex === index ? "w-4 bg-primary" : "w-2 bg-gray-300"
+                      }`}
                   />
                 </button>
               ))}
