@@ -1,4 +1,4 @@
-import { cp, rename } from "fs/promises";
+import { cp, writeFile } from "fs/promises";
 import { join } from "path";
 import { existsSync } from "fs";
 
@@ -39,9 +39,23 @@ async function prepareWorker() {
             }
         }
 
+        // Create _routes.json for Cloudflare Pages
+        console.log("Creating _routes.json...");
+        const routesConfig = {
+            version: 1,
+            include: ["/*"],
+            exclude: []
+        };
+
+        await writeFile(
+            join(assetsDir, "_routes.json"),
+            JSON.stringify(routesConfig, null, 2)
+        );
+
         console.log("✅ Worker prepared successfully!");
         console.log("   Output: .open-next/assets/_worker.js");
         console.log("   Dependencies copied to .open-next/assets/");
+        console.log("   Routes config: .open-next/assets/_routes.json");
     } catch (error) {
         console.error("❌ Preparation failed:", error);
         process.exit(1);
