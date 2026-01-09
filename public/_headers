@@ -9,3 +9,12 @@
 
 /*.html
   Content-Type: text/html; charset=utf-8
+
+/*.webp
+  Content-Type: image/webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/product/*.webp
+  Content-Type: image/webp
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
