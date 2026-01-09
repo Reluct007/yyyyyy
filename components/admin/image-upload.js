@@ -18,14 +18,16 @@ export default function ImageUpload({ value, onChange, placeholder = "Upload ima
         formData.append('file', file);
 
         try {
-            const res = await fetch('/api/upload', {
+            const res = await fetch('https://yyyyyy-upload-api.reluct007.workers.dev/upload', {
                 method: 'POST',
                 body: formData,
             });
             const data = await res.json();
 
             if (data.success) {
-                onChange(data.url);
+                // Worker returns full URL with /files/ prefix
+                const fullUrl = `https://yyyyyy-upload-api.reluct007.workers.dev${data.url}`;
+                onChange(fullUrl);
             } else {
                 alert('Upload failed: ' + (data.error || 'Unknown error'));
             }
