@@ -2,8 +2,8 @@
 name = "yyyyyy-production"
 compatibility_date = "2024-09-23"
 
-# Cloudflare Pages 必需属性
-pages_build_output_dir = ".open-next"
+# Cloudflare Pages 必需属性 - 指向包含 _worker.js 的目录
+pages_build_output_dir = ".open-next/assets"
 
 # 需要 Node.js 兼容模式
 compatibility_flags = ["nodejs_compat"]
