@@ -1,0 +1,7 @@
+name = "yyyyyy-upload-api"
+main = "src/index.js"
+compatibility_date = "2024-12-30"
+
+[[r2_buckets]]
+binding = "UPLOADS_BUCKET"
+bucket_name = "yyyyyy-uploads"
