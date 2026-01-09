@@ -1,4 +1,4 @@
 # Cloudflare Pages 项目配置
 name = "yyyyyy-production"
 compatibility_date = "2024-09-23"
-pages_build_output_dir = ".vercel/output/static"
+pages_build_output_dir = "out"
