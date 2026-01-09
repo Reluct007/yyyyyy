@@ -1,48 +1,66 @@
-# Poker Kit - Next.js 电商网站
+# Poker Kit - Next.js E-Commerce Website
 
-多语言扑克套装电商网站，部署在 Cloudflare Pages。
+Professional poker equipment B2B e-commerce website, deployed on Cloudflare Pages.
 
-## 技术栈
+## 🚀 Tech Stack
 
-- **框架**: Next.js 15 (静态导出)
-- **样式**: Tailwind CSS
-- **部署**: Cloudflare Pages
-- **文件上传**: Cloudflare Workers + R2
+- **Framework**: Next.js 15 (Static Export)
+- **Styling**: Tailwind CSS
+- **UI Components**: Radix UI + shadcn/ui
+- **Deployment**: Cloudflare Pages
+- **File Upload**: Cloudflare Workers + R2
+- **Language**: English (Single Language)
 
-## 本地开发
+## ✨ Features
+
+- ✅ **125 Static Pages** - Optimized for performance
+- ✅ **900+ Products** - Comprehensive poker equipment catalog
+- ✅ **Admin Dashboard** - Homepage customization and template management
+- ✅ **4 Layout Templates** - Classic Business, Modern SaaS, Creative Portfolio, Wheree Style
+- ✅ **File Upload** - R2 storage integration
+- ✅ **SEO Optimized** - Meta tags, structured data, sitemap
+- ✅ **Responsive Design** - Mobile-first approach
+- ✅ **Product Gallery** - Smart scroll hints for multiple images
+
+## 📦 Local Development
 
 ```bash
-# 安装依赖
+# Install dependencies
 pnpm install
 
-# 启动开发服务器
+# Start development server
 pnpm dev
 
-# 访问
+# Access at
 http://localhost:3000
 ```
 
-## 构建
+## 🏗️ Build
 
 ```bash
-# 构建静态网站
+# Build static website
 pnpm build
 
-# 输出目录: out/
+# Output directory: out/
+# Total pages: 125
 ```
 
-## 部署
+## 🌐 Deployment
 
-### 1. 主网站 (Cloudflare Pages)
+### 1. Main Website (Cloudflare Pages)
 
-**自动部署**：推送到 GitHub 自动触发
+**Automatic Deployment**: Push to GitHub triggers auto-deploy
 
-**手动配置**：
-- 构建命令: `pnpm build`
-- 构建输出: `out`
-- Node.js 版本: 20+
+**Manual Configuration**:
+- Build command: `pnpm build`
+- Build output: `out`
+- Node.js version: 20+
 
-### 2. 上传 API (Cloudflare Worker)
+**Important Files**:
+- `public/_headers` - MIME types and security headers
+- `public/_redirects` - URL redirects for .txt files
+
+### 2. Upload API (Cloudflare Worker)
 
 ```bash
 cd upload-worker
@@ -51,33 +69,79 @@ npx wrangler deploy
 
 **Worker URL**: `https://yyyyyy-upload-api.reluct007.workers.dev`
 
-**需要 R2 存储桶**: `yyyyyy-uploads`
+**Required R2 Bucket**: `yyyyyy-uploads`
 
-## 功能特性
+**API Endpoints**:
+- `POST /upload` - Upload files
+- `GET /files` - List files
+- `GET /files/:filename` - Get file
 
-- ✅ 多语言支持 (6 种语言)
-- ✅ 产品目录 (900+ 产品)
-- ✅ 管理后台
-- ✅ 文件上传 (R2 存储)
-- ✅ SEO 优化
-- ✅ 响应式设计
-
-## 项目结构
+## 📁 Project Structure
 
 ```
-├── app/              # Next.js App Router
-├── components/       # React 组件
-├── data/            # 产品数据
-├── lib/             # 工具函数
-├── public/          # 静态资源
-├── upload-worker/   # 上传 Worker
-└── out/             # 构建输出
+├── app/
+│   ├── (site)/          # Main website pages
+│   │   ├── product/     # Product detail pages
+│   │   ├── collection/  # Product collection pages
+│   │   └── admin/       # Admin dashboard
+│   └── layout.js        # Root layout
+├── components/
+│   ├── features/        # Feature components
+│   ├── templates/       # Layout templates (Wheree, etc.)
+│   └── ui/              # UI components (shadcn)
+├── data/
+│   ├── product.js       # Product data (900+ items)
+│   └── basic.js         # Site configuration
+├── lib/                 # Utilities and contexts
+├── public/
+│   ├── product/         # Product images
+│   ├── _headers         # Cloudflare headers config
+│   └── _redirects       # Cloudflare redirects config
+├── upload-worker/       # Separate upload Worker
+└── out/                 # Build output (static files)
 ```
 
-## 环境变量
+## 🔧 Configuration
 
-无需环境变量（静态网站）
+### Next.js Config (`next.config.mjs`)
 
-## 许可证
+```javascript
+const nextConfig = {
+  output: 'export',        // Static export mode
+  images: {
+    unoptimized: true,     // Required for static export
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+};
+```
+
+### Key Features Implemented
+
+1. **No Trailing Slash** - Clean URLs without trailing slashes
+2. **WebP Image Support** - Proper MIME types configured
+3. **Smart Scroll Hints** - Auto-detect scrollable image galleries
+4. **Navigation Z-Index Fix** - Dropdowns work correctly
+5. **Product Page Routing** - No `/*/index.html` issues
+
+## 🐛 Recent Fixes
+
+- ✅ Removed multi-language support (simplified to English only)
+- ✅ Fixed navigation dropdown z-index issues
+- ✅ Added Wheree-style modern template
+- ✅ Fixed product link locale prefix issues
+- ✅ Fixed product page routing (.txt redirect)
+- ✅ Fixed product image loading on Cloudflare Pages
+- ✅ Fixed URL pattern issues (removed trailingSlash)
+- ✅ Fixed inconsistent scroll button display
+
+## 📝 Environment Variables
+
+None required for static website.
+
+For upload Worker, configure R2 binding in `wrangler.toml`.
+
+## 📄 License
 
 MIT
