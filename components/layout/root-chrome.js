@@ -2,7 +2,6 @@
 
 import { usePathname } from 'next/navigation';
 import Navbar from "@/components/features/navbar";
-import CTA from "@/components/features/cta";
 import Footer from "@/components/features/footer";
 import ScrollToTop from "@/components/features/scroll-to-top";
 import { Toaster } from "@/components/ui/sonner";
@@ -10,7 +9,13 @@ import { LanguageProvider } from "@/lib/language-context";
 
 // 统一站点外壳：避免在多个 Root Layout 中重复 Navbar/Footer/Provider 结构
 export default function RootChrome({ children, locale }) {
-  const pathname = usePathname();
+  let pathname;
+  try {
+    pathname = usePathname();
+  } catch (e) {
+    // During static export, usePathname might fail for 404 page
+    pathname = null;
+  }
 
   // 检查是否在admin路径下
   const isAdminPath = pathname?.startsWith('/admin');

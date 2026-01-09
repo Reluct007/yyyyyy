@@ -10,7 +10,7 @@
     "build": "next build --turbo",
     "seo:scan": "node --no-warnings ./scripts/seo-checks.mjs",
     "start": "next start",
-    "lint": "eslint --ext .js,.jsx,.mjs,.cjs \"app\" \"components\" \"lib\" \"pages\" \"data\" \"scripts\" \"next.config.mjs\" \"tailwind.config.js\" \"postcss.config.mjs\"",
+    "lint": "eslint --ext .js,.jsx,.mjs,.cjs \"app\" \"components\" \"lib\" \"pages\" \"data\" \"scripts\" \"next.config.mjs\" \"tailwind.config.mjs\" \"postcss.config.mjs\"",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },

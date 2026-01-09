@@ -1006,7 +1006,7 @@ export default function AdminHomepage() {
                             <DialogDescription>
                                 您确定要删除这个模块吗? 此操作无法撤销。
                                 <br />
-                                注意: 删除操作将在您点击右上角的 "保存更改" 后生效。
+                                注意: 删除操作将在您点击右上角的 &ldquo;保存更改&rdquo; 后生效。
                             </DialogDescription>
                         </DialogHeader>
                         <DialogFooter>
