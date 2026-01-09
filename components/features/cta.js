@@ -3,12 +3,13 @@
 import SubscribeForm from "@/components/features/subscribe-form";
 import { basic } from "@/data/basic";
 import { useLanguage } from "@/lib/language-context";
+import { cn } from "@/lib/utils";
 
-export default function CTA({ data = basic.cta }) {
+export default function CTA({ data = basic.cta, className, buttonClassName }) {
   const { translations } = useLanguage();
 
   return (
-    <section className="bg-gradient-to-r from-primary/5 to-primary/10 px-4 py-16">
+    <section className={cn("px-4 py-16", className || "bg-gradient-to-r from-primary/5 to-primary/10")}>
       <div className="container mx-auto">
         <div className="flex w-full flex-col gap-8 overflow-hidden rounded-2xl border border-border/50 bg-card p-8 shadow-lg lg:flex-row lg:items-center lg:gap-12 lg:p-12">
           <div className="flex-1">
@@ -20,7 +21,7 @@ export default function CTA({ data = basic.cta }) {
             </p>
           </div>
           <div className="flex-shrink-0">
-            <SubscribeForm />
+            <SubscribeForm buttonClassName={buttonClassName} />
           </div>
         </div>
       </div>

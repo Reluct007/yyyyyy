@@ -7,10 +7,12 @@ import { useState } from "react";
 import Link from "next/link";
 import axios from "axios";
 import { useLanguage } from "@/lib/language-context";
+import { DEFAULT_LOCALE } from "@/data/i18n";
 
-export default function SubscribeForm() {
+export default function SubscribeForm({ buttonClassName }) {
   const [email, setEmail] = useState("");
   const { locale, translations } = useLanguage();
+  const urlPrefix = locale === DEFAULT_LOCALE ? "" : `/${locale}`;
 
   // Translations for subscribe form
   const t = {
@@ -58,7 +60,7 @@ export default function SubscribeForm() {
         />
         <Button
           type="submit"
-          className="h-12 rounded-xl bg-primary px-8 font-medium text-primary-foreground shadow-lg transition-all duration-300 hover:bg-primary/90 hover:shadow-xl"
+          className={`h-12 rounded-xl bg-primary px-8 font-medium text-primary-foreground shadow-lg transition-all duration-300 hover:bg-primary/90 hover:shadow-xl ${buttonClassName || ""}`}
         >
           {t.button}
         </Button>
@@ -66,7 +68,7 @@ export default function SubscribeForm() {
       <p className="mt-3 text-left text-sm text-muted-foreground">
         {t.privacyText}{" "}
         <Link
-          href={`/${locale}/privacy-policy/`}
+          href={`${urlPrefix}/privacy-policy/`}
           className="underline transition-colors hover:text-primary"
         >
           {t.privacyLink}

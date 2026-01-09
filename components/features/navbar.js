@@ -27,11 +27,12 @@ import Image from "next/image";
 import { basic } from "@/data/basic";
 import { products } from "@/data/products";
 import { useLanguage } from "@/lib/language-context";
+import { DEFAULT_LOCALE } from "@/data/i18n";
 import slugify from "slugify";
 
 export default function Navbar({ data = basic.navbar }) {
   const { translations, locale } = useLanguage();
-  const urlPrefix = `/${locale}`;
+  const urlPrefix = locale === DEFAULT_LOCALE ? "" : `/${locale}`;
 
   const brandName = data.brand;
   const logo = data.logo;

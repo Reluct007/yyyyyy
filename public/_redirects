@@ -1,28 +1,22 @@
 # 根路径统一跳转到默认语言（static export 下不可依赖 middleware）
-/                        /en/                         301
+# /                        /en/                         301
 
 # 旧英文无前缀路由统一跳转到 /en（仅匹配页面路由，避免影响 public/ 静态资源目录）
-/about                   /en/about/                   301
-/about/                  /en/about/                   301
-/contact                 /en/contact/                 301
-/contact/                /en/contact/                 301
-/collection              /en/collection/              301
-/collection/             /en/collection/              301
-/collection/*            /en/collection/:splat        301
-/privacy-policy          /en/privacy-policy/          301
-/privacy-policy/         /en/privacy-policy/          301
-/terms-of-service        /en/terms-of-service/        301
-/terms-of-service/       /en/terms-of-service/        301
-/faq                     /en/faq/                     301
-/faq/                    /en/faq/                     301
-/shipping-policy         /en/shipping-policy/         301
-/shipping-policy/        /en/shipping-policy/         301
-/return-policy           /en/return-policy/           301
-/return-policy/          /en/return-policy/           301
+# /about                   /en/about/                   301
+# /contact                 /en/contact/                 301
+# /collection              /en/collection/              301
+# /privacy-policy          /en/privacy-policy/          301
+# /terms-of-service        /en/terms-of-service/        301
+# /faq                     /en/faq/                     301
+# /shipping-policy         /en/shipping-policy/         301
+# /return-policy           /en/return-policy/           301
 
 # 旧 Terms 路径（历史遗留）
-/terms-and-conditions    /en/terms-of-service/        301
-/terms-and-conditions/   /en/terms-of-service/        301
+/terms-and-conditions    /terms-of-service/        301
+/terms-and-conditions/   /terms-of-service/        301
+
+# Redirect /en paths to root (Canonical English)
+/en/*                    /:splat                      301
 
 # Product（先排除静态图片资源，再迁移页面 URL）
 /product/*.webp          /product/:splat              200

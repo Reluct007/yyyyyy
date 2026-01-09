@@ -6,6 +6,8 @@ import { getSeoMeta } from "@/lib/metadata-translations";
 import { withTrailingSlash } from "@/lib/seo-url";
 import { openGraphImage, twitterMetadata } from "@/lib/shared-metadata";
 import { notFound } from "next/navigation";
+import { SettingsProvider } from "@/lib/settings-context";
+import ThemeInjector from "@/components/theme-injector";
 
 const SITE_URL = withTrailingSlash(basic.seo.url);
 
@@ -89,7 +91,7 @@ export default function LocaleLayout({ children, params }) {
   };
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
@@ -108,7 +110,10 @@ export default function LocaleLayout({ children, params }) {
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className="antialiased">
-        <RootChrome locale={locale}>{children}</RootChrome>
+        <SettingsProvider>
+          <ThemeInjector />
+          <RootChrome locale={locale}>{children}</RootChrome>
+        </SettingsProvider>
       </body>
     </html>
   );

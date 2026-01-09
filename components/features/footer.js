@@ -3,10 +3,11 @@
 import Link from "next/link";
 import { basic } from "@/data/basic";
 import { useLanguage } from "@/lib/language-context";
+import { DEFAULT_LOCALE } from "@/data/i18n";
 
 export default function Footer({ data = basic.info }) {
   const { translations, locale } = useLanguage();
-  const urlPrefix = `/${locale}`;
+  const urlPrefix = locale === DEFAULT_LOCALE ? "" : `/${locale}`;
 
   const brandName = data.brand;
   const termsUrl = `${urlPrefix}/terms-of-service/`;

@@ -3,6 +3,8 @@ import RootChrome from "@/components/layout/root-chrome";
 import { basic } from "@/data/basic";
 import { withTrailingSlash } from "@/lib/seo-url";
 import { openGraphImage, twitterMetadata } from "@/lib/shared-metadata";
+import { SettingsProvider } from "@/lib/settings-context";
+import ThemeInjector from "@/components/theme-injector";
 
 const SITE_URL = withTrailingSlash(basic.seo.url);
 
@@ -72,7 +74,7 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
@@ -91,7 +93,10 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className="antialiased">
-        <RootChrome locale="en">{children}</RootChrome>
+        <SettingsProvider>
+          <ThemeInjector />
+          <RootChrome locale="en">{children}</RootChrome>
+        </SettingsProvider>
       </body>
     </html>
   );
