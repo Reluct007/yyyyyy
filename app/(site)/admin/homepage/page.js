@@ -166,6 +166,41 @@ const TEMPLATES = {
                 }
             }
         }
+    },
+    wheree: {
+        name: 'Wheree Style',
+        description: 'Modern card-based layout',
+        theme: { primaryColor: '#f97316', accentColor: '#ea580c' }, // Orange
+        modules: {
+            hero: {
+                enabled: true, order: 1, title: 'Hero Section', type: 'hero', containerWidth: 'full',
+                content: {
+                    heading: "Find Your Perfect Poker Set",
+                    description: "Browse our collection of professional poker equipment and accessories",
+                    variant: "compact",
+                    ctaPrimary: "Shop Now",
+                    ctaSecondary: "Learn More"
+                }
+            },
+            productCarousel: {
+                enabled: true, order: 2, title: 'Featured Products', type: 'product-carousel', containerWidth: 'container',
+                content: {
+                    products: [
+                        { name: 'Professional Poker Set', description: 'Complete 500-piece set', badge: 'Best Seller', cta: 'View Details' },
+                        { name: 'Clay Poker Chips', description: 'Casino-grade quality', badge: 'Premium', cta: 'Shop now' },
+                        { name: 'Folding Poker Table', description: 'Professional felt surface', badge: 'New', cta: 'Shop now' }
+                    ]
+                }
+            },
+            promoBanner: {
+                enabled: true, order: 3, title: 'Feature Banner', type: 'promo-banner', containerWidth: 'full',
+                content: {
+                    heading: "Premium Quality Guaranteed",
+                    description: "All our poker sets are carefully selected and tested to ensure the best gaming experience.",
+                    ctas: ['Shop Collection', 'Learn More']
+                }
+            }
+        }
     }
 };
 
