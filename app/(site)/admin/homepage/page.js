@@ -10,7 +10,7 @@ import { Save, Eye, ChevronDown, ChevronUp, Plus, Trash2, GripVertical, Palette 
 import { Reorder, useDragControls } from "framer-motion";
 import { toast } from 'sonner';
 import ImageUpload from '@/components/admin/image-upload';
-import { productData } from '@/data/product';
+import { product as productData } from '@/data/product';
 import {
     Dialog,
     DialogContent,
