@@ -10,6 +10,7 @@ import { Save, Eye, ChevronDown, ChevronUp, Plus, Trash2, GripVertical, Palette 
 import { Reorder, useDragControls } from "framer-motion";
 import { toast } from 'sonner';
 import ImageUpload from '@/components/admin/image-upload';
+import { productData } from '@/data/product';
 import {
     Dialog,
     DialogContent,
@@ -288,6 +289,8 @@ export default function AdminHomepage() {
     const [selectedTemplate, setSelectedTemplate] = useState('classic');
     const [isSaving, setIsSaving] = useState(false);
     const [moduleToDelete, setModuleToDelete] = useState(null);
+    const [productSelectorOpen, setProductSelectorOpen] = useState(false);
+    const [currentModuleKey, setCurrentModuleKey] = useState(null);
 
     useEffect(() => {
         if (settings) {
@@ -868,14 +871,12 @@ export default function AdminHomepage() {
                             <Button
                                 size="sm"
                                 variant="outline"
-                                onClick={() => handleAddArrayItem(moduleKey, 'products', {
-                                    name: 'New Product',
-                                    description: 'Product description',
-                                    badge: 'New',
-                                    cta: 'Shop now'
-                                })}
+                                onClick={() => {
+                                    setCurrentModuleKey(moduleKey);
+                                    setProductSelectorOpen(true);
+                                }}
                             >
-                                <Plus className="w-3 h-3 mr-1" /> 添加产品
+                                <Plus className="w-3 h-3 mr-1" /> 从商品库选择
                             </Button>
                         </div>
                         {(content.products || []).map((product, idx) => (
@@ -937,6 +938,7 @@ export default function AdminHomepage() {
                                         onChange={(url) => handleArrayItemChange(moduleKey, 'products', idx, 'image', url)}
                                         placeholder="Upload product image..."
                                     />
+                                    <p className="text-xs text-slate-500 mt-1">💡 建议尺寸: 800x800px (1:1 正方形)，格式: JPG/WebP</p>
                                 </div>
                             </div>
                         ))}
@@ -1098,6 +1100,59 @@ export default function AdminHomepage() {
                                 确认删除
                             </Button>
                         </DialogFooter>
+                    </DialogContent>
+                </Dialog>
+
+                {/* Product Selector Dialog */}
+                <Dialog open={productSelectorOpen} onOpenChange={setProductSelectorOpen}>
+                    <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+                        <DialogHeader>
+                            <DialogTitle>选择产品</DialogTitle>
+                            <DialogDescription>从现有商品库中选择要添加到轮播的产品</DialogDescription>
+                        </DialogHeader>
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+                            {productData.map((product) => (
+                                <button
+                                    key={product.slug}
+                                    onClick={() => {
+                                        if (currentModuleKey) {
+                                            handleAddArrayItem(currentModuleKey, 'products', {
+                                                name: product.title,
+                                                description: product.description,
+                                                badge: product.badge || 'New',
+                                                cta: 'Shop now',
+                                                image: product.image
+                                            });
+                                            setProductSelectorOpen(false);
+                                            setCurrentModuleKey(null);
+                                            toast.success(`已添加产品: ${product.title}`);
+                                        }
+                                    }}
+                                    className="group border border-slate-200 rounded-lg p-3 hover:border-blue-500 hover:shadow-md transition-all text-left"
+                                >
+                                    {product.image && (
+                                        <div className="aspect-square bg-slate-100 rounded-md mb-2 overflow-hidden">
+                                            <img
+                                                src={product.image}
+                                                alt={product.title}
+                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                                            />
+                                        </div>
+                                    )}
+                                    <h4 className="font-semibold text-sm text-slate-900 line-clamp-2 mb-1">
+                                        {product.title}
+                                    </h4>
+                                    <p className="text-xs text-slate-500 line-clamp-2">
+                                        {product.description}
+                                    </p>
+                                    {product.badge && (
+                                        <span className="inline-block mt-2 px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium rounded">
+                                            {product.badge}
+                                        </span>
+                                    )}
+                                </button>
+                            ))}
+                        </div>
                     </DialogContent>
                 </Dialog>
             </div>
