@@ -46,7 +46,7 @@ export default function RenovexHero({ content, containerWidth = 'container' }) {
                                 {description}
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                <Button className="bg-[var(--color-primary)] hover:bg-[var(--color-accent)] text-white font-semibold px-8 py-6 text-lg rounded-md shadow-lg hover:shadow-xl transition-all">
+                                <Button className="!bg-[var(--color-primary)] hover:!bg-[var(--color-accent)] !text-white font-semibold px-8 py-6 text-lg rounded-md shadow-lg hover:shadow-xl transition-all">
                                     {ctaPrimary}
                                 </Button>
                                 <Button variant="outline" className="border-2 border-slate-300 text-slate-700 hover:bg-slate-100 font-semibold px-8 py-6 text-lg rounded-md">
@@ -135,7 +135,10 @@ export default function RenovexHero({ content, containerWidth = 'container' }) {
 
                                     {/* CTA */}
                                     <div className="p-5">
-                                        <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-base h-12 rounded-full">
+                                        <Button
+                                            variant="default"
+                                            className="w-full !bg-blue-600 hover:!bg-blue-700 !text-white font-bold text-base h-12 rounded-full"
+                                        >
                                             {card.cta || 'Learn More'}
                                         </Button>
                                     </div>
@@ -184,10 +187,10 @@ export default function RenovexHero({ content, containerWidth = 'container' }) {
                             </p>
 
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                <Button className="bg-white text-blue-600 hover:bg-blue-50 font-bold text-lg h-14 px-10 rounded-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+                                <Button className="!bg-white !text-blue-600 hover:!bg-blue-50 font-bold text-lg h-14 px-10 rounded-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105">
                                     {ctaPrimary}
                                 </Button>
-                                <Button variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white font-bold text-lg h-14 px-10 rounded-lg backdrop-blur-sm">
+                                <Button className="!bg-white/10 !text-white border-2 !border-white/30 hover:!bg-white/20 hover:!border-white font-bold text-lg h-14 px-10 rounded-lg backdrop-blur-sm">
                                     {ctaSecondary}
                                 </Button>
                             </div>

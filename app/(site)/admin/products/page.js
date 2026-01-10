@@ -19,14 +19,23 @@ export default function AdminProducts() {
 
     const handleSave = async () => {
         setIsSaving(true);
+
+        // 调试日志
+        console.log('💾 Saving products settings:', {
+            layout: localProducts.detailPage.layout,
+            fullProducts: localProducts
+        });
+
         const success = await saveSettings({
             ...settings,
             products: localProducts
         });
         setIsSaving(false);
         if (success) {
+            console.log('✅ Settings saved successfully');
             alert('✅ 产品设置保存成功!');
         } else {
+            console.error('❌ Failed to save settings');
             alert('❌ 保存失败,请重试');
         }
     };
@@ -157,10 +166,13 @@ export default function AdminProducts() {
                                 onChange={(e) => handleDetailChange('layout', e.target.value)}
                                 className="w-full border border-slate-300 rounded-md px-3 py-2"
                             >
-                                <option value="default">默认布局</option>
-                                <option value="split">分栏布局</option>
-                                <option value="full-width">全宽布局</option>
+                                <option value="default">默认布局 - 经典产品展示</option>
+                                <option value="technical">技术规格布局 - DigiKey风格 (B2B)</option>
+                                <option value="ecommerce">电商视觉布局 - AllFilters风格 (B2C)</option>
                             </select>
+                            <p className="text-xs text-slate-500 mt-1">
+                                选择适合您业务的产品详情页布局风格
+                            </p>
                         </div>
 
                         <div className="flex items-center justify-between">

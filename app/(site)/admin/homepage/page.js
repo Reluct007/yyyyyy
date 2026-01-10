@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useSettings } from '@/lib/settings-context';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -292,8 +292,29 @@ export default function AdminHomepage() {
     useEffect(() => {
         if (settings) {
             setLocalSettings(JSON.parse(JSON.stringify(settings)));
+
+            // 检测当前使用的模板
+            const currentTemplate = detectCurrentTemplate(settings);
+            setSelectedTemplate(currentTemplate);
         }
     }, [settings]);
+
+    // 根据 settings 检测当前模板
+    const detectCurrentTemplate = (settings) => {
+        const { theme, homepageModules } = settings;
+
+        // 遍历所有模板，找到匹配的
+        for (const [key, template] of Object.entries(TEMPLATES)) {
+            // 比较主题色
+            if (theme?.primaryColor === template.theme.primaryColor &&
+                theme?.accentColor === template.theme.accentColor) {
+                return key;
+            }
+        }
+
+        // 默认返回 classic
+        return 'classic';
+    };
 
     const handleTemplateChange = (templateKey) => {
         setSelectedTemplate(templateKey);
@@ -307,11 +328,18 @@ export default function AdminHomepage() {
 
     const handleSave = async () => {
         setIsSaving(true);
+        console.log('💾 Saving homepage template:', {
+            selectedTemplate,
+            theme: localSettings.theme,
+            modulesCount: Object.keys(localSettings.homepageModules || {}).length
+        });
         const success = await saveSettings(localSettings);
         setIsSaving(false);
         if (success) {
+            console.log('✅ Homepage template saved successfully');
             toast.success('设置保存成功!');
         } else {
+            console.error('❌ Failed to save homepage template');
             toast.error('保存失败,请重试');
         }
     };
@@ -486,6 +514,7 @@ export default function AdminHomepage() {
                         <div>
                             <label className="block text-sm font-semibold text-slate-900 mb-2">徽章文字 <span className="text-xs text-slate-400 font-normal">Badge</span></label>
                             <Input value={content.badge || ''} onChange={(e) => handleContentChange(moduleKey, 'badge', e.target.value)} />
+                            <p className="text-xs text-slate-500 mt-1">💡 建议 10-20 字符</p>
                         </div>
                         <div>
                             <label className="block text-sm font-semibold text-slate-900 mb-2">变体 <span className="text-xs text-slate-400 font-normal">Variant</span></label>
@@ -504,19 +533,23 @@ export default function AdminHomepage() {
                     <div>
                         <label className="block text-sm font-semibold text-slate-900 mb-2">主标题 <span className="text-xs text-slate-400 font-normal">Heading</span></label>
                         <Textarea value={content.heading || ''} onChange={(e) => handleContentChange(moduleKey, 'heading', e.target.value)} rows={2} />
+                        <p className="text-xs text-slate-500 mt-1">💡 建议 30-60 字符，简洁有力</p>
                     </div>
                     <div>
                         <label className="block text-sm font-semibold text-slate-900 mb-2">描述 <span className="text-xs text-slate-400 font-normal">Description</span></label>
                         <Textarea value={content.description || ''} onChange={(e) => handleContentChange(moduleKey, 'description', e.target.value)} rows={3} />
+                        <p className="text-xs text-slate-500 mt-1">💡 建议 80-150 字符，突出核心价值</p>
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                         <div>
                             <label className="block text-sm font-semibold text-slate-900 mb-2">主按钮 <span className="text-xs text-slate-400 font-normal">Primary CTA</span></label>
                             <Input value={content.ctaPrimary || ''} onChange={(e) => handleContentChange(moduleKey, 'ctaPrimary', e.target.value)} />
+                            <p className="text-xs text-slate-500 mt-1">💡 建议 10-20 字符，使用行动词</p>
                         </div>
                         <div>
                             <label className="block text-sm font-semibold text-slate-900 mb-2">次按钮 <span className="text-xs text-slate-400 font-normal">Secondary CTA</span></label>
                             <Input value={content.ctaSecondary || ''} onChange={(e) => handleContentChange(moduleKey, 'ctaSecondary', e.target.value)} />
+                            <p className="text-xs text-slate-500 mt-1">💡 建议 10-20 字符</p>
                         </div>
                     </div>
                     <div>
@@ -526,6 +559,7 @@ export default function AdminHomepage() {
                             onChange={(url) => handleContentChange(moduleKey, 'backgroundImage', url)}
                             placeholder="Upload banner image..."
                         />
+                        <p className="text-xs text-slate-500 mt-1">💡 建议尺寸: 1920x1080px (16:9) 或 2560x1440px，格式: JPG/WebP</p>
                     </div>
                 </>
             );
@@ -538,6 +572,7 @@ export default function AdminHomepage() {
                         <div>
                             <label className="block text-sm font-semibold text-slate-900 mb-2">标题 <span className="text-xs text-slate-400 font-normal">Section Title</span></label>
                             <Input value={content.sectionTitle || ''} onChange={(e) => handleContentChange(moduleKey, 'sectionTitle', e.target.value)} />
+                            <p className="text-xs text-slate-500 mt-1">💡 建议 20-40 字符</p>
                         </div>
                         <div>
                             <label className="block text-sm font-semibold text-slate-900 mb-2">变体 <span className="text-xs text-slate-400 font-normal">Variant</span></label>
@@ -575,12 +610,14 @@ export default function AdminHomepage() {
                                         placeholder="服务标题"
                                         className="font-semibold"
                                     />
+                                    <p className="text-xs text-slate-500">💡 建议 15-30 字符</p>
                                     <Textarea
                                         value={item.description}
                                         onChange={(e) => handleArrayItemChange(moduleKey, 'services', idx, 'description', e.target.value)}
                                         placeholder="服务描述"
                                         rows={2}
                                     />
+                                    <p className="text-xs text-slate-500">💡 建议 40-80 字符</p>
                                     <select
                                         value={item.icon || 'ruler'}
                                         onChange={(e) => handleArrayItemChange(moduleKey, 'services', idx, 'icon', e.target.value)}
@@ -681,10 +718,12 @@ export default function AdminHomepage() {
                     <div>
                         <label className="block text-sm font-semibold text-slate-900 mb-2">标题 <span className="text-xs text-slate-400 font-normal">Title</span></label>
                         <Input value={content.title || ''} onChange={(e) => handleContentChange(moduleKey, 'title', e.target.value)} />
+                        <p className="text-xs text-slate-500 mt-1">💡 建议 20-40 字符</p>
                     </div>
                     <div>
                         <label className="block text-sm font-semibold text-slate-900 mb-2">描述 <span className="text-xs text-slate-400 font-normal">Description</span></label>
                         <Textarea value={content.description || ''} onChange={(e) => handleContentChange(moduleKey, 'description', e.target.value)} rows={3} />
+                        <p className="text-xs text-slate-500 mt-1">💡 建议 60-120 字符</p>
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                         <div>
