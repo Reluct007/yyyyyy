@@ -1111,9 +1111,9 @@ export default function AdminHomepage() {
                             <DialogDescription>从现有商品库中选择要添加到轮播的产品</DialogDescription>
                         </DialogHeader>
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
-                            {productData.map((product) => (
+                            {productData.map((product, index) => (
                                 <button
-                                    key={product.slug}
+                                    key={index}
                                     onClick={() => {
                                         if (currentModuleKey) {
                                             handleAddArrayItem(currentModuleKey, 'products', {
