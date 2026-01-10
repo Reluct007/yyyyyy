@@ -758,10 +758,12 @@ export default function AdminHomepage() {
                     <div>
                         <label className="block text-sm font-semibold text-slate-900 mb-2">标题 <span className="text-xs text-slate-400 font-normal">Heading</span></label>
                         <Input value={content.heading || ''} onChange={(e) => handleContentChange(moduleKey, 'heading', e.target.value)} />
+                        <p className="text-xs text-slate-500 mt-1">💡 建议 30-50 字符，突出促销亮点</p>
                     </div>
                     <div>
                         <label className="block text-sm font-semibold text-slate-900 mb-2">描述 <span className="text-xs text-slate-400 font-normal">Description</span></label>
                         <Textarea value={content.description || ''} onChange={(e) => handleContentChange(moduleKey, 'description', e.target.value)} rows={3} />
+                        <p className="text-xs text-slate-500 mt-1">💡 建议 80-120 字符，说明促销详情</p>
                     </div>
 
                     {/* CTA Buttons Array */}
@@ -791,6 +793,7 @@ export default function AdminHomepage() {
                                     placeholder={`按钮 ${idx + 1}`}
                                     className="flex-1"
                                 />
+                                <p className="text-xs text-slate-500 ml-2">💡 10-15 字符</p>
                                 <Button
                                     size="sm"
                                     variant="ghost"
@@ -895,6 +898,7 @@ export default function AdminHomepage() {
                                         onChange={(e) => handleArrayItemChange(moduleKey, 'products', idx, 'name', e.target.value)}
                                         placeholder="Product Name"
                                     />
+                                    <p className="text-xs text-slate-500 mt-1">💡 建议 20-40 字符</p>
                                 </div>
                                 <div>
                                     <label className="block text-xs font-medium text-slate-700 mb-1">产品描述</label>
@@ -904,6 +908,7 @@ export default function AdminHomepage() {
                                         placeholder="Product description"
                                         rows={2}
                                     />
+                                    <p className="text-xs text-slate-500 mt-1">💡 建议 30-60 字符</p>
                                 </div>
                                 <div className="grid grid-cols-2 gap-2">
                                     <div>
@@ -913,6 +918,7 @@ export default function AdminHomepage() {
                                             onChange={(e) => handleArrayItemChange(moduleKey, 'products', idx, 'badge', e.target.value)}
                                             placeholder="e.g., New, Sale"
                                         />
+                                        <p className="text-xs text-slate-500 mt-1">💡 5-15 字符</p>
                                     </div>
                                     <div>
                                         <label className="block text-xs font-medium text-slate-700 mb-1">按钮文字</label>
@@ -921,6 +927,7 @@ export default function AdminHomepage() {
                                             onChange={(e) => handleArrayItemChange(moduleKey, 'products', idx, 'cta', e.target.value)}
                                             placeholder="Shop now"
                                         />
+                                        <p className="text-xs text-slate-500 mt-1">💡 8-15 字符</p>
                                     </div>
                                 </div>
                                 <div>
