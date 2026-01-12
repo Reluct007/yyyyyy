@@ -15,11 +15,13 @@ import {
     ChevronLeft,
     ChevronRight,
     Filter,
-    Upload
+    Upload,
+    Eye
 } from 'lucide-react';
 import { toast } from 'sonner';
 import ProductEditor from '@/components/admin/product-editor';
 import ProductImport from '@/components/admin/product-import';
+import ProductPreview from '@/components/admin/product-preview';
 
 export default function ProductManagement() {
     const { productList, addProduct, updateProduct, deleteProduct, deleteProducts, duplicateProduct } = useSettings();
@@ -32,6 +34,7 @@ export default function ProductManagement() {
     const [editingProduct, setEditingProduct] = useState(null);
     const [showEditor, setShowEditor] = useState(false);
     const [showImport, setShowImport] = useState(false);
+    const [previewProduct, setPreviewProduct] = useState(null);
 
     // Get unique categories
     const categories = useMemo(() => {
@@ -316,7 +319,16 @@ export default function ProductManagement() {
                                             </span>
                                         </td>
                                         <td className="px-4 py-3">
-                                            <div className="flex items-center justify-end gap-2">
+                                            <div className="flex items-center justify-end gap-1">
+                                                <Button
+                                                    onClick={() => setPreviewProduct(product)}
+                                                    size="sm"
+                                                    variant="ghost"
+                                                    className="h-8 w-8 p-0"
+                                                    title="预览产品"
+                                                >
+                                                    <Eye className="w-4 h-4" />
+                                                </Button>
                                                 <Button
                                                     onClick={() => handleEditProduct(product)}
                                                     size="sm"
@@ -402,6 +414,13 @@ export default function ProductManagement() {
                 <ProductImport
                     onImport={handleBatchImport}
                     onCancel={() => setShowImport(false)}
+                />
+            )}
+
+            {previewProduct && (
+                <ProductPreview
+                    product={previewProduct}
+                    onClose={() => setPreviewProduct(null)}
                 />
             )}
         </div>

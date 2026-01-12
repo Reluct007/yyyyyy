@@ -1,0 +1,8 @@
+const findProduct = (slug, productList = []) => {
+    const staticProduct = product.find((item) => slugify(item.title, { lower: true, strict: true }) === slug);
+    if (staticProduct) return staticProduct;
+    return productList.find((item) => {
+        const itemSlug = item.title.toLowerCase().replace(/[^a-z0-9\u4e00-\u9fa5]+/g, '-').replace(/^-+|-+$/g, '');
+        return itemSlug === slug;
+    });
+};

@@ -16,9 +16,21 @@ import { useSettings } from "@/lib/settings-context";
 
 const ROOT_URL = basic.seo.url;
 
-// 查找产品
-const findProduct = (slug) =>
-    product.find((item) => slugify(item.title, { lower: true, strict: true }) === slug);
+// 查找产品 - 支持静态产品和动态产品
+const findProduct = (slug, productList = []) => {
+    // 首先在静态产品中查找
+    const staticProduct = product.find((item) => slugify(item.title, { lower: true, strict: true }) === slug);
+    if (staticProduct) return staticProduct;
+    
+    // 如果没找到，在动态产品列表中查找
+    return productList.find((item) => {
+        const itemSlug = item.title
+            .toLowerCase()
+            .replace(/[^a-z0-9\u4e00-\u9fa5]+/g, '-')
+            .replace(/^-+|-+$/g, '');
+        return itemSlug === slug;
+    });
+};
 
 // 获取有效产品列表
 const getValidProducts = () =>

@@ -4,7 +4,10 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { X, Plus, Trash2, Image as ImageIcon } from 'lucide-react';
+import { X, Plus, Trash2, Image as ImageIcon, Upload, Loader2 } from 'lucide-react';
+import ImageUploadField from '@/components/admin/image-upload-field';
+import { uploadToR2 } from '@/lib/r2-upload';
+import { toast } from 'sonner';
 
 export default function ProductEditor({ product, onSave, onCancel }) {
     const [formData, setFormData] = useState({
@@ -18,6 +21,7 @@ export default function ProductEditor({ product, onSave, onCancel }) {
     });
 
     const [errors, setErrors] = useState({});
+    const [isUploadingGallery, setIsUploadingGallery] = useState(false);
 
     useEffect(() => {
         if (product) {
@@ -35,19 +39,19 @@ export default function ProductEditor({ product, onSave, onCancel }) {
 
     const validateForm = () => {
         const newErrors = {};
-        
+
         if (!formData.title.trim()) {
             newErrors.title = '产品标题不能为空';
         }
-        
+
         if (!formData.category.trim()) {
             newErrors.category = '产品分类不能为空';
         }
-        
+
         if (!formData.description.trim()) {
             newErrors.description = '产品描述不能为空';
         }
-        
+
         if (!formData.image.trim()) {
             newErrors.image = '主图片不能为空';
         }
@@ -58,7 +62,7 @@ export default function ProductEditor({ product, onSave, onCancel }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         if (validateForm()) {
             onSave(formData);
         }
@@ -91,16 +95,37 @@ export default function ProductEditor({ product, onSave, onCancel }) {
         }));
     };
 
-    const addImage = () => {
-        const imagePath = prompt('请输入图片路径 (例如: /product/image.webp):');
-        if (imagePath) {
-            const imageName = imagePath.split('/').pop();
-            setFormData(prev => ({
-                ...prev,
-                images: [...prev.images, imagePath],
-                image_names: [...prev.image_names, imageName]
-            }));
-        }
+    const addImage = async () => {
+        // Create file input
+        const input = document.createElement('input');
+        input.type = 'file';
+        input.accept = 'image/*';
+        input.onchange = async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            setIsUploadingGallery(true);
+            try {
+                const result = await uploadToR2(file, 'products');
+                if (result.success) {
+                    const imageName = result.path.split('/').pop();
+                    setFormData(prev => ({
+                        ...prev,
+                        images: [...prev.images, result.url],
+                        image_names: [...prev.image_names, imageName]
+                    }));
+                    toast.success('图片上传成功');
+                } else {
+                    throw new Error(result.error);
+                }
+            } catch (error) {
+                console.error('Upload error:', error);
+                toast.error('图片上传失败: ' + error.message);
+            } finally {
+                setIsUploadingGallery(false);
+            }
+        };
+        input.click();
     };
 
     const removeImage = (index) => {
@@ -129,7 +154,7 @@ export default function ProductEditor({ product, onSave, onCancel }) {
                 <form onSubmit={handleSubmit} className="p-6 space-y-6">
                     <div className="space-y-4">
                         <h3 className="text-lg font-semibold text-slate-900">基本信息</h3>
-                        
+
                         <div>
                             <label className="block text-sm font-medium text-slate-700 mb-2">
                                 产品标题 <span className="text-red-500">*</span>
@@ -179,21 +204,14 @@ export default function ProductEditor({ product, onSave, onCancel }) {
 
                     <div className="space-y-4">
                         <h3 className="text-lg font-semibold text-slate-900">图片管理</h3>
-                        
-                        <div>
-                            <label className="block text-sm font-medium text-slate-700 mb-2">
-                                主图片路径 <span className="text-red-500">*</span>
-                            </label>
-                            <Input
-                                value={formData.image}
-                                onChange={(e) => handleChange('image', e.target.value)}
-                                placeholder="/product/image.webp"
-                                className={errors.image ? 'border-red-500' : ''}
-                            />
-                            {errors.image && (
-                                <p className="text-red-500 text-sm mt-1">{errors.image}</p>
-                            )}
-                        </div>
+
+                        <ImageUploadField
+                            value={formData.image}
+                            onChange={(value) => handleChange('image', value)}
+                            label="主图片路径"
+                            required={true}
+                            error={errors.image}
+                        />
 
                         <div>
                             <div className="flex items-center justify-between mb-2">
@@ -205,9 +223,19 @@ export default function ProductEditor({ product, onSave, onCancel }) {
                                     onClick={addImage}
                                     size="sm"
                                     variant="outline"
+                                    disabled={isUploadingGallery}
                                 >
-                                    <Plus className="w-4 h-4 mr-1" />
-                                    添加图片
+                                    {isUploadingGallery ? (
+                                        <>
+                                            <Loader2 className="w-4 h-4 mr-1 animate-spin" />
+                                            上传中...
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Plus className="w-4 h-4 mr-1" />
+                                            添加图片
+                                        </>
+                                    )}
                                 </Button>
                             </div>
                             <div className="grid grid-cols-3 gap-3">
@@ -254,7 +282,7 @@ export default function ProductEditor({ product, onSave, onCancel }) {
                                     >
                                         <Trash2 className="w-4 h-4" />
                                     </button>
-                                    
+
                                     <div className="space-y-3 pr-8">
                                         <div>
                                             <label className="block text-sm font-medium text-slate-700 mb-1">
@@ -280,7 +308,7 @@ export default function ProductEditor({ product, onSave, onCancel }) {
                                     </div>
                                 </div>
                             ))}
-                            
+
                             {formData.features.length === 0 && (
                                 <div className="text-center py-8 text-slate-400">
                                     暂无产品特性，点击上方按钮添加
