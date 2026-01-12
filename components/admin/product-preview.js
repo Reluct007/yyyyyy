@@ -1,6 +1,7 @@
 'use client';
 
 import { X, Package } from 'lucide-react';
+import slugify from 'slugify';
 import { Button } from '@/components/ui/button';
 
 export default function ProductPreview({ product, onClose }) {
@@ -174,11 +175,7 @@ export default function ProductPreview({ product, onClose }) {
                 <div className="flex-shrink-0 border-t border-slate-200 px-6 py-4 flex items-center justify-between">
                     <Button
                         onClick={() => {
-                            // Generate product URL slug from title
-                            const slug = product.title
-                                .toLowerCase()
-                                .replace(/[^a-z0-9\u4e00-\u9fa5]+/g, '-')
-                                .replace(/^-+|-+$/g, '');
+                            const slug = slugify(product.title, { lower: true, strict: true });
                             window.open(`/product/${slug}`, '_blank');
                         }}
                         className="bg-gradient-to-r from-blue-600 to-blue-700"
