@@ -26,6 +26,8 @@ const TEMPLATES = {
         name: 'Classic Business',
         description: 'AT&T Style Corporate',
         theme: { primaryColor: '#0057B8', accentColor: '#00388F' }, // AT&T Blue
+        headerType: 'classic',
+        footerType: 'classic',
         modules: {
             hero: {
                 enabled: true, order: 1, title: 'Hero Banner', type: 'hero', containerWidth: 'full',
@@ -86,6 +88,8 @@ const TEMPLATES = {
         name: 'Modern SaaS',
         description: '现代科技风格',
         theme: { primaryColor: '#6366f1', accentColor: '#4f46e5' },
+        headerType: 'modern',
+        footerType: 'modern',
         modules: {
             hero: {
                 enabled: true, order: 1, title: '主横幅', type: 'hero', containerWidth: 'full',
@@ -129,6 +133,8 @@ const TEMPLATES = {
         name: 'Creative Portfolio',
         description: '创意作品集风格',
         theme: { primaryColor: '#f59e0b', accentColor: '#f97316' },
+        headerType: 'creative',
+        footerType: 'creative',
         modules: {
             hero: {
                 enabled: true, order: 1, title: '主横幅', type: 'hero', containerWidth: 'container',
@@ -172,6 +178,8 @@ const TEMPLATES = {
         name: 'Wheree Style',
         description: 'Modern card-based layout',
         theme: { primaryColor: '#f97316', accentColor: '#ea580c' }, // Orange
+        headerType: 'wheree',
+        footerType: 'wheree',
         modules: {
             hero: {
                 enabled: true, order: 1, title: 'Hero Section', type: 'hero', containerWidth: 'full',
@@ -199,6 +207,281 @@ const TEMPLATES = {
                     heading: "Premium Quality Guaranteed",
                     description: "All our poker sets are carefully selected and tested to ensure the best gaming experience.",
                     ctas: ['Shop Collection', 'Learn More']
+                }
+            }
+        }
+    },
+    maono: {
+        name: 'Maono Style',
+        description: 'Premium audio brand aesthetic',
+        theme: { primaryColor: '#000000', accentColor: '#333333' }, // Black/Gray
+        headerType: 'maono',
+        footerType: 'maono',
+        modules: {
+            maonoHero: {
+                enabled: true, order: 1, title: 'Hero Slider', type: 'maono-hero', containerWidth: 'full',
+                content: {
+                    slides: [
+                        {
+                            image: '/home/maono-hero-1.png',
+                            productName: 'PD200W Hybrid',
+                            tagline: 'New Product Launch',
+                            cta: 'SHOP NOW'
+                        },
+                        {
+                            image: '/home/maono-podcasting.png',
+                            productName: 'Wave T5',
+                            tagline: 'Wireless Freedom',
+                            cta: 'SHOP NOW'
+                        }
+                    ]
+                }
+            },
+            maonoTabbedProducts: {
+                enabled: true, order: 2, title: 'Featured Products', type: 'maono-tabbed-products', containerWidth: 'full',
+                content: {
+                    categories: [
+                        {
+                            name: 'Microphone',
+                            products: [
+                                {
+                                    label: 'Wave T5',
+                                    description: 'Wireless Microphone for Content Creators',
+                                    features: ['Noise Cancellation', 'XLR & USB', 'Dynamic'],
+                                    image: '/home/maono-product-pd400x.png',
+                                    price: '$299.99',
+                                    learnMoreUrl: '#',
+                                    orderNowUrl: '#'
+                                },
+                                {
+                                    label: 'PD400X',
+                                    description: 'Dynamic Microphone for Podcasting',
+                                    features: ['XLR', 'USB', 'RGB Lighting'],
+                                    image: '/home/banner-showcase.jpg',
+                                    price: '$199.99',
+                                    learnMoreUrl: '#',
+                                    orderNowUrl: '#'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'Audio Mixer',
+                            products: [
+                                {
+                                    label: 'Maonocaster E2',
+                                    description: 'All-in-One Audio Mixer',
+                                    features: ['4 Channels', 'Sound Effects', 'Bluetooth'],
+                                    image: '/home/maono-product-mixer.png',
+                                    price: '$149.99',
+                                    learnMoreUrl: '#',
+                                    orderNowUrl: '#'
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            maonoInterestGrid: {
+                enabled: true, order: 3, title: 'Shop By Interest', type: 'maono-interest-grid', containerWidth: 'full',
+                content: {
+                    title: 'Shop By Interest',
+                    categories: [
+                        { name: 'Gaming', image: '/home/maono-gaming.png', url: '#' },
+                        { name: 'Podcasting', image: '/home/maono-podcasting.png', url: '#' },
+                        { name: 'Streaming', image: '/home/maono-streaming.png', url: '#' },
+                        { name: 'Music Production', image: '/home/maono-music.png', url: '#' }
+                    ]
+                }
+            },
+            maonoValueProps: {
+                enabled: true, order: 4, title: 'Why Choose Us', type: 'maono-value-props', containerWidth: 'full',
+                content: {
+                    title: '5 Reasons Why Select Maono',
+                    values: [
+                        { icon: 'award', title: 'Premium Quality', description: 'Professional-grade audio equipment trusted by creators worldwide' },
+                        { icon: 'shield', title: 'Warranty Protection', description: '2-year warranty on all products with hassle-free replacement' },
+                        { icon: 'headphones', title: '24/7 Support', description: 'Expert technical support available whenever you need help' },
+                        { icon: 'truck', title: 'Fast Shipping', description: 'Free shipping on orders over $50 with tracking' },
+                        { icon: 'heart', title: 'Customer First', description: 'Your satisfaction is our top priority, always' }
+                    ]
+                }
+            }
+        }
+    },
+    fifine: {
+        name: 'Fifine Style',
+        description: 'Dark gaming aesthetic with vibrant red accents',
+        theme: { primaryColor: '#d22730', accentColor: '#b01f28' }, // Fifine Red
+        headerType: 'fifine',
+        footerType: 'fifine',
+        modules: {
+            fifineHero: {
+                enabled: true, order: 1, title: 'Hero Slider', type: 'fifine-hero', containerWidth: 'full',
+                content: {
+                    slides: [
+                        {
+                            image: '/home/fifine_hero_newyear.jpg',
+                            title: '15% OFF',
+                            subtitle: 'Find Your 2026 Audio Upgrade',
+                            description: 'The new year deserves a new sound. Get 15% off on our best-selling microphones, mixers, and headsets.',
+                            cta: 'Shop Bundle Deals',
+                            ctaLink: '#'
+                        }
+                    ]
+                }
+            },
+            fifineTabbedProducts: {
+                enabled: true, order: 2, title: 'Amazing Products', type: 'fifine-tabbed-products', containerWidth: 'full',
+                content: {
+                    title: 'FIFINE Amazing Products',
+                    subtitle: 'Try Them, You Might Like It',
+                    categories: [
+                        {
+                            id: 'bundle',
+                            name: 'MEGA Bundle Deal',
+                            products: [
+                                {
+                                    id: 1,
+                                    name: 'Wave T5',
+                                    price: '$299.99',
+                                    originalPrice: '$399.99',
+                                    image: '/home/fifine_microphones.jpg',
+                                    badge: 'HOT',
+                                    features: ['RGB Lighting', 'USB-C', 'Mute Button']
+                                },
+                                {
+                                    id: 2,
+                                    name: 'SC8 Mixer',
+                                    price: '$199.99',
+                                    image: '/home/fifine_mixers.png',
+                                    badge: 'NEW',
+                                    features: ['4 Channels', 'Bluetooth', 'Sound Effects']
+                                }
+                            ]
+                        },
+                        {
+                            id: 'bestselling',
+                            name: 'Best Selling',
+                            products: [
+                                {
+                                    id: 3,
+                                    name: 'H13 Headset',
+                                    price: '$79.99',
+                                    image: '/home/fifine_headsets.jpg',
+                                    features: ['7.1 Surround', 'RGB', 'Comfortable']
+                                },
+                                {
+                                    id: 4,
+                                    name: 'Boom Arm Stand',
+                                    price: '$49.99',
+                                    image: '/home/fifine_boom_arm.jpg',
+                                    features: ['Heavy Duty', 'Cable Management', 'Adjustable']
+                                }
+                            ]
+                        },
+                        {
+                            id: 'new',
+                            name: "What's NEW",
+                            products: [
+                                {
+                                    id: 5,
+                                    name: 'Accessories Kit',
+                                    price: '$39.99',
+                                    image: '/home/fifine_accessories.jpg',
+                                    badge: 'NEW',
+                                    features: ['Pop Filter', 'Shock Mount', 'Windscreen']
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            fifineCategoryGrid: {
+                enabled: true, order: 3, title: 'Find Your Match', type: 'fifine-category-grid', containerWidth: 'full',
+                content: {
+                    title: 'Find Your Perfect Match',
+                    subtitle: 'Explore our complete range of audio equipment',
+                    categories: [
+                        {
+                            id: 1,
+                            name: 'Microphones',
+                            image: '/home/fifine_microphones.jpg',
+                            link: '#',
+                            size: 'large'
+                        },
+                        {
+                            id: 2,
+                            name: 'Audio Mixers',
+                            image: '/home/fifine_mixers.png',
+                            link: '#',
+                            size: 'medium'
+                        },
+                        {
+                            id: 3,
+                            name: 'Gaming Headsets',
+                            image: '/home/fifine_headsets.jpg',
+                            link: '#',
+                            size: 'medium'
+                        },
+                        {
+                            id: 4,
+                            name: 'Accessories',
+                            image: '/home/fifine_accessories.jpg',
+                            link: '#',
+                            size: 'small'
+                        },
+                        {
+                            id: 5,
+                            name: 'Boom Arms & Stands',
+                            image: '/home/fifine_boom_arm.jpg',
+                            link: '#',
+                            size: 'small'
+                        }
+                    ]
+                }
+            },
+            fifineValueProps: {
+                enabled: true, order: 4, title: 'Why Choose Us', type: 'fifine-value-props', containerWidth: 'full',
+                content: {
+                    title: 'Why Choose FIFINE?',
+                    values: [
+                        {
+                            id: 1,
+                            icon: 'truck',
+                            title: 'Free Shipping',
+                            description: 'Free shipping on orders over $50'
+                        },
+                        {
+                            id: 2,
+                            icon: 'award',
+                            title: 'Quality Assurance',
+                            description: 'Premium audio equipment guaranteed'
+                        },
+                        {
+                            id: 3,
+                            icon: 'rotate',
+                            title: '30-Day Return',
+                            description: 'Easy returns within 30 days'
+                        },
+                        {
+                            id: 4,
+                            icon: 'shield',
+                            title: 'Secure Payment',
+                            description: '100% secure transactions'
+                        },
+                        {
+                            id: 5,
+                            icon: 'headphones',
+                            title: '24/7 Support',
+                            description: 'Always here to help you'
+                        },
+                        {
+                            id: 6,
+                            icon: 'badge',
+                            title: 'Warranty',
+                            description: '1-year manufacturer warranty'
+                        }
+                    ]
                 }
             }
         }
@@ -325,6 +608,8 @@ export default function AdminHomepage() {
         setLocalSettings({
             ...localSettings,
             theme: template.theme,
+            headerType: template.headerType,
+            footerType: template.footerType,
             homepageModules: template.modules
         });
     };

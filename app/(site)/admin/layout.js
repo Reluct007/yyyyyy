@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Home, Settings, FileText, Package, Palette } from 'lucide-react';
-import { Toaster } from 'sonner';
 
 export default function AdminLayout({ children }) {
     const pathname = usePathname();
@@ -17,15 +16,15 @@ export default function AdminLayout({ children }) {
     ];
 
     return (
-        <div className="min-h-screen bg-slate-50 flex">
-            {/* Sidebar */}
-            <div className="w-64 bg-white border-r border-slate-200 flex flex-col">
+        <div className="min-h-screen bg-slate-50">
+            {/* Fixed Sidebar */}
+            <div className="fixed left-0 top-0 h-screen w-64 bg-white border-r border-slate-200 flex flex-col z-40">
                 <div className="p-6 border-b border-slate-200">
                     <h1 className="text-xl font-bold text-slate-900">RNVX Admin</h1>
                     <p className="text-sm text-slate-500 mt-1">内容管理系统</p>
                 </div>
 
-                <nav className="flex-1 p-4 space-y-1">
+                <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
                     {navItems.map((item) => {
                         const Icon = item.icon;
                         const isActive = pathname === item.href;
@@ -55,10 +54,9 @@ export default function AdminLayout({ children }) {
                 </div>
             </div>
 
-            {/* Main Content */}
-            <div className="flex-1 overflow-auto">
+            {/* Main Content - with left margin to account for fixed sidebar */}
+            <div className="ml-64 min-h-screen">
                 {children}
-                <Toaster position="top-right" richColors />
             </div>
         </div>
     );

@@ -13,6 +13,16 @@ import RenovexRequestSamples from '@/components/renovex/request-samples';
 import CTA from "@/components/features/cta";
 import { useSettings } from '@/lib/settings-context';
 
+// Maono template components
+import MaonoHero from '@/components/templates/maono-hero';
+import MaonoTabbedProducts from '@/components/templates/maono-tabbed-products';
+import MaonoInterestGrid from '@/components/templates/maono-interest-grid';
+import MaonoValueProps from '@/components/templates/maono-value-props';
+import FifineHero from '@/components/templates/fifine-hero';
+import FifineTabbedProducts from '@/components/templates/fifine-tabbed-products';
+import FifineCategoryGrid from '@/components/templates/fifine-category-grid';
+import FifineValueProps from '@/components/templates/fifine-value-props';
+
 export default function DynamicHome() {
     const { homepageModules, isLoading } = useSettings();
 
@@ -42,7 +52,17 @@ export default function DynamicHome() {
         banner: RenovexBanner,
         newsletter: RenovexNewsletter,
         'request-samples': RenovexRequestSamples,
-        contactForm: RenovexContactForm
+        contactForm: RenovexContactForm,
+        // Maono template components
+        'maono-hero': MaonoHero,
+        'maono-tabbed-products': MaonoTabbedProducts,
+        'maono-interest-grid': MaonoInterestGrid,
+        'maono-value-props': MaonoValueProps,
+        // Fifine template components
+        'fifine-hero': FifineHero,
+        'fifine-tabbed-products': FifineTabbedProducts,
+        'fifine-category-grid': FifineCategoryGrid,
+        'fifine-value-props': FifineValueProps
     };
 
     return (

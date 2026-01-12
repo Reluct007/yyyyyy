@@ -2,10 +2,29 @@
 
 import { useState, useEffect, lazy, Suspense } from 'react';
 import { LanguageProvider } from "@/lib/language-context";
+import { useSettings } from '@/lib/settings-context';
 
-// Lazy load components to prevent them from being evaluated during SSR
-const Navbar = lazy(() => import("@/components/features/navbar"));
-const Footer = lazy(() => import("@/components/features/footer"));
+// Default components
+const DefaultNavbar = lazy(() => import("@/components/features/navbar"));
+const DefaultFooter = lazy(() => import("@/components/features/footer"));
+
+// Template-specific headers
+const ClassicHeader = lazy(() => import("@/components/templates/classic-header"));
+const ModernHeader = lazy(() => import("@/components/templates/modern-header"));
+const CreativeHeader = lazy(() => import("@/components/templates/creative-header"));
+const WhereeHeader = lazy(() => import("@/components/templates/wheree-header"));
+const FifineHeader = lazy(() => import("@/components/templates/fifine-header"));
+const MaonoHeader = lazy(() => import("@/components/templates/maono-header"));
+
+// Template-specific footers
+const ClassicFooter = lazy(() => import("@/components/templates/classic-footer"));
+const ModernFooter = lazy(() => import("@/components/templates/modern-footer"));
+const CreativeFooter = lazy(() => import("@/components/templates/creative-footer"));
+const WhereeFooter = lazy(() => import("@/components/templates/wheree-footer"));
+const FifineFooter = lazy(() => import("@/components/templates/fifine-footer"));
+const MaonoFooter = lazy(() => import("@/components/templates/maono-footer"));
+
+// Other components
 const ScrollToTop = lazy(() => import("@/components/features/scroll-to-top"));
 const ToasterWrapper = lazy(() => import("@/components/ui/sonner").then(m => ({ default: m.Toaster })));
 
@@ -13,6 +32,7 @@ const ToasterWrapper = lazy(() => import("@/components/ui/sonner").then(m => ({ 
 export default function RootChrome({ children, locale }) {
   const [isMounted, setIsMounted] = useState(false);
   const [isAdminPath, setIsAdminPath] = useState(false);
+  const { settings } = useSettings();
 
   useEffect(() => {
     setIsMounted(true);
@@ -21,6 +41,31 @@ export default function RootChrome({ children, locale }) {
       setIsAdminPath(window.location.pathname.startsWith('/admin'));
     }
   }, []);
+
+  // Component mapping
+  const headerComponents = {
+    'default': DefaultNavbar,
+    'classic': ClassicHeader,
+    'modern': ModernHeader,
+    'creative': CreativeHeader,
+    'wheree': WhereeHeader,
+    'fifine': FifineHeader,
+    'maono': MaonoHeader
+  };
+
+  const footerComponents = {
+    'default': DefaultFooter,
+    'classic': ClassicFooter,
+    'modern': ModernFooter,
+    'creative': CreativeFooter,
+    'wheree': WhereeFooter,
+    'fifine': FifineFooter,
+    'maono': MaonoFooter
+  };
+
+  // Get the appropriate components based on settings
+  const HeaderComponent = headerComponents[settings?.headerType] || DefaultNavbar;
+  const FooterComponent = footerComponents[settings?.footerType] || DefaultFooter;
 
   // During SSR/static export, render only children without Navbar/Footer
   // This prevents Radix UI components from being evaluated during prerendering
@@ -35,11 +80,11 @@ export default function RootChrome({ children, locale }) {
   return (
     <LanguageProvider initialLocale={locale}>
       <Suspense fallback={null}>
-        {!isAdminPath && <Navbar />}
+        {!isAdminPath && <HeaderComponent config={settings?.headerConfig} />}
       </Suspense>
       <main>{children}</main>
       <Suspense fallback={null}>
-        {!isAdminPath && <Footer />}
+        {!isAdminPath && <FooterComponent config={settings?.footerConfig} />}
       </Suspense>
       <Suspense fallback={null}>
         <ScrollToTop />
