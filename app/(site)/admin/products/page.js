@@ -5,6 +5,7 @@ import { useSettings } from '@/lib/settings-context';
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
 import { Save, Package } from 'lucide-react';
+import { toast } from 'sonner';
 
 export default function AdminProducts() {
     const { settings, saveSettings } = useSettings();
@@ -33,10 +34,10 @@ export default function AdminProducts() {
         setIsSaving(false);
         if (success) {
             console.log('✅ Settings saved successfully');
-            alert('✅ 产品设置保存成功!');
+            toast.success('产品设置保存成功!');
         } else {
             console.error('❌ Failed to save settings');
-            alert('❌ 保存失败,请重试');
+            toast.error('保存失败,请重试');
         }
     };
 

@@ -5,7 +5,8 @@ import { useSettings } from '@/lib/settings-context';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Save, Globe, FileText } from 'lucide-react';
+import { Save, Globe } from 'lucide-react';
+import { toast } from 'sonner';
 
 export default function AdminSEO() {
     const { settings, saveSettings } = useSettings();
@@ -27,9 +28,9 @@ export default function AdminSEO() {
         });
         setIsSaving(false);
         if (success) {
-            alert('✅ SEO设置保存成功!');
+            toast.success('SEO设置保存成功!');
         } else {
-            alert('❌ 保存失败,请重试');
+            toast.error('保存失败,请重试');
         }
     };
 
@@ -92,8 +93,8 @@ export default function AdminSEO() {
                         <button
                             onClick={() => setActiveTab('global')}
                             className={`flex-1 px-6 py-4 font-semibold transition-colors ${activeTab === 'global'
-                                    ? 'text-blue-600 border-b-2 border-blue-600'
-                                    : 'text-slate-600 hover:text-slate-900'
+                                ? 'text-blue-600 border-b-2 border-blue-600'
+                                : 'text-slate-600 hover:text-slate-900'
                                 }`}
                         >
                             全局SEO
@@ -101,8 +102,8 @@ export default function AdminSEO() {
                         <button
                             onClick={() => setActiveTab('pages')}
                             className={`flex-1 px-6 py-4 font-semibold transition-colors ${activeTab === 'pages'
-                                    ? 'text-blue-600 border-b-2 border-blue-600'
-                                    : 'text-slate-600 hover:text-slate-900'
+                                ? 'text-blue-600 border-b-2 border-blue-600'
+                                : 'text-slate-600 hover:text-slate-900'
                                 }`}
                         >
                             页面SEO

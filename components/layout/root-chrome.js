@@ -90,7 +90,7 @@ export default function RootChrome({ children, locale }) {
         <ScrollToTop />
       </Suspense>
       <Suspense fallback={null}>
-        <ToasterWrapper richColors position="top-right" />
+        <ToasterWrapper richColors position="top-center" />
       </Suspense>
     </LanguageProvider>
   );

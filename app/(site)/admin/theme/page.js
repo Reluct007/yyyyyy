@@ -5,6 +5,7 @@ import { useSettings } from '@/lib/settings-context';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Save, Palette } from 'lucide-react';
+import { toast } from 'sonner';
 
 export default function AdminTheme() {
     const { settings, saveSettings } = useSettings();
@@ -25,9 +26,9 @@ export default function AdminTheme() {
         });
         setIsSaving(false);
         if (success) {
-            alert('✅ 主题设置保存成功!');
+            toast.success('主题设置保存成功!');
         } else {
-            alert('❌ 保存失败,请重试');
+            toast.error('保存失败,请重试');
         }
     };
 

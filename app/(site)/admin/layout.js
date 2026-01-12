@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Settings, FileText, Package, Palette } from 'lucide-react';
+import { Home, Settings, FileText, Package, Palette, Box } from 'lucide-react';
 
 export default function AdminLayout({ children }) {
     const pathname = usePathname();
@@ -12,6 +12,7 @@ export default function AdminLayout({ children }) {
         { href: '/admin/seo', label: 'SEO设置', icon: Settings },
         { href: '/admin/pages', label: '页面管理', icon: FileText },
         { href: '/admin/products', label: '产品设置', icon: Package },
+        { href: '/admin/product-management', label: '产品管理', icon: Box },
         { href: '/admin/theme', label: '主题设置', icon: Palette }
     ];
 

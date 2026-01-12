@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Switch } from '@/components/ui/switch';
 import { Save, FileText, Plus } from 'lucide-react';
+import { toast } from 'sonner';
 
 export default function AdminPages() {
     const { settings, saveSettings } = useSettings();
@@ -26,9 +27,9 @@ export default function AdminPages() {
         });
         setIsSaving(false);
         if (success) {
-            alert('✅ 页面设置保存成功!');
+            toast.success('页面设置保存成功!');
         } else {
-            alert('❌ 保存失败,请重试');
+            toast.error('保存失败,请重试');
         }
     };
 
