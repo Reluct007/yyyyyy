@@ -2,6 +2,7 @@
 
 import { X, Package } from 'lucide-react';
 import slugify from 'slugify';
+import MarkdownRenderer from '@/components/ui/markdown-renderer';
 import { Button } from '@/components/ui/button';
 
 export default function ProductPreview({ product, onClose }) {
@@ -126,9 +127,10 @@ export default function ProductPreview({ product, onClose }) {
                                         <h4 className="font-semibold text-slate-900 mb-1">
                                             {feature.title}
                                         </h4>
-                                        <p className="text-sm text-slate-600">
-                                            {feature.description}
-                                        </p>
+                                        <MarkdownRenderer 
+                                            content={feature.description}
+                                            className="text-sm text-slate-600"
+                                        />
                                     </div>
                                 ))}
                             </div>

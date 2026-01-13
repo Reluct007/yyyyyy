@@ -13,6 +13,7 @@ import TechnicalLayout from "@/components/product/technical-layout";
 import EcommerceLayout from "@/components/product/ecommerce-layout";
 import { useEffect, useState } from "react";
 import { useSettings } from "@/lib/settings-context";
+import MarkdownRenderer from '@/components/ui/markdown-renderer';
 
 const ROOT_URL = basic.seo.url;
 
@@ -200,8 +201,6 @@ export default function ProductPageClient({ params }) {
 
                     {/* 描述 */}
                     <p className="max-w-4xl text-lg text-muted-foreground">{productItem.description}</p>
-
-                    {/* 特性和联系表单 */}
                     <h2 className="sr-only">Key Features</h2>
                     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                         <div className="col-span-2">
@@ -213,7 +212,10 @@ export default function ProductPageClient({ params }) {
                                     >
                                         <ArrowDownRight className="size-6" />
                                         <h3 className="text-lg font-medium">{feature.title}</h3>
-                                        <p className="text-base text-muted-foreground">{feature.description}</p>
+                                        <MarkdownRenderer 
+                                            content={feature.description}
+                                            className="text-base text-muted-foreground"
+                                        />
                                     </div>
                                 ))}
                             </div>

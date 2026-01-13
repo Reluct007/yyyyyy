@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { X, Plus, Trash2, Image as ImageIcon, Upload, Loader2 } from 'lucide-react';
 import ImageUploadField from '@/components/admin/image-upload-field';
+import RichTextEditor from '@/components/admin/rich-text-editor';
 import { uploadToR2 } from '@/lib/r2-upload';
 import { toast } from 'sonner';
 
@@ -298,11 +299,11 @@ export default function ProductEditor({ product, onSave, onCancel }) {
                                             <label className="block text-sm font-medium text-slate-700 mb-1">
                                                 特性描述
                                             </label>
-                                            <Textarea
+                                            <RichTextEditor
                                                 value={feature.description}
-                                                onChange={(e) => updateFeature(index, 'description', e.target.value)}
-                                                placeholder="输入特性描述"
-                                                rows={2}
+                                                onChange={(value) => updateFeature(index, 'description', value)}
+                                                placeholder="输入特性描述，支持粘贴图片"
+                                                rows={3}
                                             />
                                         </div>
                                     </div>
