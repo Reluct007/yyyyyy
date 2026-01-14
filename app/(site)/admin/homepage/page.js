@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Switch } from '@/components/ui/switch';
 import { Save, Eye, ChevronDown, ChevronUp, Plus, Trash2, GripVertical, Palette } from 'lucide-react';
-import { Reorder, useDragControls } from "framer-motion";
+import { Reorder, useDragControls, AnimatePresence, motion } from "framer-motion";
 import { toast } from 'sonner';
 import ImageUpload from '@/components/admin/image-upload';
 import { product as productData } from '@/data/product';
@@ -540,27 +540,35 @@ function SortableModuleItem({ uniqueKey, module, isExpanded, onExpand, onToggle,
                 </div>
             </div>
 
-            {isExpanded && (
-                <>
-                    <div className="px-6 py-4 bg-slate-50 border-b border-slate-100">
-                        <label className="block text-sm font-semibold text-slate-900 mb-2">
-                            容器宽度 <span className="text-xs text-slate-400 font-normal">Container Width</span>
-                        </label>
-                        <select
-                            value={module.containerWidth || 'container'}
-                            onChange={(e) => onUpdateContainerWidth(e.target.value)}
-                            className="w-full border border-slate-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        >
-                            <option value="container">容器宽度 (Container - max-w-7xl)</option>
-                            <option value="full">全屏宽度 (Full Width)</option>
-                        </select>
-                        <p className="text-xs text-slate-500 mt-2">
-                            💡 容器宽度适合内容聚焦,全屏宽度适合大气展示
-                        </p>
-                    </div>
-                    {children}
-                </>
-            )}
+            <AnimatePresence initial={false}>
+                {isExpanded && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.2, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                    >
+                        <div className="px-6 py-4 bg-slate-50 border-b border-slate-100">
+                            <label className="block text-sm font-semibold text-slate-900 mb-2">
+                                容器宽度 <span className="text-xs text-slate-400 font-normal">Container Width</span>
+                            </label>
+                            <select
+                                value={module.containerWidth || 'container'}
+                                onChange={(e) => onUpdateContainerWidth(e.target.value)}
+                                className="w-full border border-slate-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            >
+                                <option value="container">容器宽度 (Container - max-w-7xl)</option>
+                                <option value="full">全屏宽度 (Full Width)</option>
+                            </select>
+                            <p className="text-xs text-slate-500 mt-2">
+                                💡 容器宽度适合内容聚焦,全屏宽度适合大气展示
+                            </p>
+                        </div>
+                        {children}
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </Reorder.Item>
     );
 }
