@@ -100,19 +100,31 @@ export default function ProductCarousel({ products = [], containerWidth = 'conta
                             className="flex-none w-[280px] md:w-[300px] bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300"
                         >
                             {/* Product Image */}
-                            <div className="relative h-56 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                            <div className="relative h-56 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center overflow-hidden">
                                 {product.badge && (
-                                    <div className="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                                    <div className="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-full z-10">
                                         {product.badge}
                                     </div>
                                 )}
-                                {product.image && (
-                                    <div className="w-32 h-32 relative">
-                                        <div className="w-full h-full bg-gray-300 rounded-lg flex items-center justify-center text-gray-500 text-sm">
-                                            Product Image
-                                        </div>
-                                    </div>
-                                )}
+                                {product.image ? (
+                                    <img
+                                        src={product.image}
+                                        alt={product.name || 'Product'}
+                                        className="w-full h-full object-cover"
+                                        onError={(e) => {
+                                            // Fallback to placeholder on error
+                                            e.target.style.display = 'none';
+                                            e.target.nextElementSibling.style.display = 'flex';
+                                        }}
+                                    />
+                                ) : null}
+                                {/* Placeholder - shown when no image or on error */}
+                                <div
+                                    className="w-32 h-32 bg-gray-300 rounded-lg flex items-center justify-center text-gray-500 text-sm absolute"
+                                    style={{ display: product.image ? 'none' : 'flex' }}
+                                >
+                                    Product Image
+                                </div>
                             </div>
 
                             {/* Product Info */}

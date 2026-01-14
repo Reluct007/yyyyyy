@@ -80,7 +80,22 @@ export default function RenovexHero({ content, containerWidth = 'container' }) {
         const { productCards = [] } = content;
 
         return (
-            <section className="relative min-h-[60vh] bg-gradient-to-br from-white via-blue-50 to-cyan-50 overflow-hidden">
+            <section className="relative min-h-[60vh] overflow-hidden">
+                {/* Background Image */}
+                {backgroundImage && (
+                    <div
+                        className="absolute inset-0 bg-cover bg-center"
+                        style={{ backgroundImage: `url(${backgroundImage})` }}
+                    >
+                        {/* Semi-transparent overlay */}
+                        <div className="absolute inset-0 bg-white/80"></div>
+                    </div>
+                )}
+                {/* Fallback gradient if no background image */}
+                {!backgroundImage && (
+                    <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50 to-cyan-50"></div>
+                )}
+
                 {/* Curved Decorative Elements */}
                 <div className="absolute inset-0 overflow-hidden">
                     <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 1440 800" preserveAspectRatio="none">
@@ -113,16 +128,33 @@ export default function RenovexHero({ content, containerWidth = 'container' }) {
                                     transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
                                     className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                                 >
-                                    <div className="relative h-[320px] bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center">
+                                    <div className="relative h-[320px] bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center overflow-hidden">
                                         {/* Badge */}
                                         {card.badge && (
-                                            <div className="absolute top-4 left-4 bg-white text-blue-600 text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
+                                            <div className="absolute top-4 left-4 bg-white text-blue-600 text-xs font-bold px-3 py-1.5 rounded-full shadow-md z-10">
                                                 {card.badge}
                                             </div>
                                         )}
 
-                                        {/* Product Image Placeholder */}
-                                        <div className="text-white text-center p-6">
+                                        {/* Product Image or Placeholder */}
+                                        {card.image ? (
+                                            <img
+                                                src={card.image}
+                                                alt={card.title || 'Product'}
+                                                className="w-full h-full object-cover"
+                                                onError={(e) => {
+                                                    // Fallback to placeholder on image load error
+                                                    e.target.style.display = 'none';
+                                                    e.target.nextElementSibling.style.display = 'flex';
+                                                }}
+                                            />
+                                        ) : null}
+
+                                        {/* Placeholder - shown when no image or on error */}
+                                        <div
+                                            className="text-white text-center p-6 absolute inset-0 flex flex-col items-center justify-center"
+                                            style={{ display: card.image ? 'none' : 'flex' }}
+                                        >
                                             <div className="w-40 h-40 mx-auto mb-4 bg-white/20 rounded-3xl flex items-center justify-center backdrop-blur-sm">
                                                 <svg className="w-20 h-20" fill="currentColor" viewBox="0 0 20 20">
                                                     <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />

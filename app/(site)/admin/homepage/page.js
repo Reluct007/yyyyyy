@@ -815,6 +815,7 @@ export default function AdminHomepage() {
                                 <option value="compact">Compact (现代)</option>
                                 <option value="editorial">Editorial (创意)</option>
                                 <option value="pure-image">Pure Image (纯图)</option>
+                                <option value="att-style">AT&T Style (企业)</option>
                             </select>
                         </div>
                     </div>
@@ -849,6 +850,93 @@ export default function AdminHomepage() {
                         />
                         <p className="text-xs text-slate-500 mt-1">💡 建议尺寸: 1920x1080px (16:9) 或 2560x1440px，格式: JPG/WebP</p>
                     </div>
+
+                    {/* Product Cards Editor - Only for att-style variant */}
+                    {content.variant === 'att-style' && (
+                        <div className="space-y-4 pt-4 border-t border-slate-200">
+                            <div className="flex justify-between items-center">
+                                <label className="block text-sm font-semibold text-slate-900">产品卡片 <span className="text-xs text-slate-400 font-normal">Product Cards</span></label>
+                                <Button
+                                    size="sm"
+                                    variant="outline"
+                                    onClick={() => handleAddArrayItem(moduleKey, 'productCards', {
+                                        badge: 'New Badge',
+                                        title: 'Product Title',
+                                        subtitle: 'Product subtitle',
+                                        cta: 'Learn More',
+                                        image: ''
+                                    })}
+                                >
+                                    <Plus className="w-3 h-3 mr-1" /> 添加卡片
+                                </Button>
+                            </div>
+                            {(content.productCards || []).map((card, idx) => (
+                                <div key={idx} className="flex gap-2 items-start border p-3 rounded bg-slate-50">
+                                    <GripVertical className="w-4 h-4 text-slate-400 mt-2" />
+                                    <div className="flex-1 space-y-2">
+                                        <div>
+                                            <Input
+                                                value={card.badge || ''}
+                                                onChange={(e) => handleArrayItemChange(moduleKey, 'productCards', idx, 'badge', e.target.value)}
+                                                placeholder="徽章文本 (如: Get it for $0)"
+                                                className="text-sm"
+                                            />
+                                            <p className="text-xs text-slate-500 mt-1">💡 徽章文本，建议 10-20 字符</p>
+                                        </div>
+                                        <div>
+                                            <Input
+                                                value={card.title || ''}
+                                                onChange={(e) => handleArrayItemChange(moduleKey, 'productCards', idx, 'title', e.target.value)}
+                                                placeholder="主标题 (如: iPhone 17 Pro for $0)"
+                                                className="font-semibold"
+                                            />
+                                            <p className="text-xs text-slate-500 mt-1">💡 产品标题，建议 20-40 字符</p>
+                                        </div>
+                                        <div>
+                                            <Input
+                                                value={card.subtitle || ''}
+                                                onChange={(e) => handleArrayItemChange(moduleKey, 'productCards', idx, 'subtitle', e.target.value)}
+                                                placeholder="副标题 (如: with eligible trade-in)"
+                                                className="text-sm"
+                                            />
+                                            <p className="text-xs text-slate-500 mt-1">💡 副标题说明，建议 20-40 字符</p>
+                                        </div>
+                                        <div>
+                                            <Input
+                                                value={card.cta || ''}
+                                                onChange={(e) => handleArrayItemChange(moduleKey, 'productCards', idx, 'cta', e.target.value)}
+                                                placeholder="按钮文本 (如: Shop iPhone)"
+                                                className="text-sm"
+                                            />
+                                            <p className="text-xs text-slate-500 mt-1">💡 按钮文本，建议 10-20 字符</p>
+                                        </div>
+                                        <div>
+                                            <label className="block text-xs font-medium text-slate-700 mb-1">产品图片</label>
+                                            <ImageUpload
+                                                value={card.image || ''}
+                                                onChange={(url) => handleArrayItemChange(moduleKey, 'productCards', idx, 'image', url)}
+                                                placeholder="Upload product card image..."
+                                            />
+                                            <p className="text-xs text-slate-500 mt-1">💡 建议尺寸: 800x800px (1:1 正方形)，格式: JPG/WebP</p>
+                                        </div>
+                                    </div>
+                                    <Button
+                                        size="sm"
+                                        variant="ghost"
+                                        onClick={() => handleRemoveArrayItem(moduleKey, 'productCards', idx)}
+                                        className="text-red-500 hover:text-red-700 hover:bg-red-50"
+                                    >
+                                        <Trash2 className="w-4 h-4" />
+                                    </Button>
+                                </div>
+                            ))}
+                            {(!content.productCards || content.productCards.length === 0) && (
+                                <p className="text-sm text-slate-500 text-center py-4 bg-slate-50 rounded border border-dashed">
+                                    暂无产品卡片，点击"添加卡片"按钮创建
+                                </p>
+                            )}
+                        </div>
+                    )}
                 </>
             );
         }

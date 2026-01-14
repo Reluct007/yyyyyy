@@ -70,8 +70,23 @@ export default function PromoBanner({
                             transition={{ duration: 0.6, delay: 0.2 }}
                             className="relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden"
                         >
-                            {/* Placeholder for image */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                            {image ? (
+                                <img
+                                    src={image}
+                                    alt={heading || 'Promotional banner'}
+                                    className="w-full h-full object-cover"
+                                    onError={(e) => {
+                                        // Fallback to placeholder on error
+                                        e.target.style.display = 'none';
+                                        e.target.nextElementSibling.style.display = 'flex';
+                                    }}
+                                />
+                            ) : null}
+                            {/* Placeholder - shown when no image or on error */}
+                            <div
+                                className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center"
+                                style={{ display: image ? 'none' : 'flex' }}
+                            >
                                 <div className="text-white text-center">
                                     <div className="w-20 h-20 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center">
                                         <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
